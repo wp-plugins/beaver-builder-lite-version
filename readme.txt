@@ -1,4 +1,4 @@
-=== Beaver Builder (Lite Version) ===
+=== Beaver Builder - WordPress Page Builder ===
 Contributors: justinbusa, RobbyMcCullough, billyyoung
 Tags: builder, layout builder, page builder, website builder, site builder, front-end builder, drag and drop builder, editor, front-end editor, visual composer
 Requires at least: 3.6
@@ -7,37 +7,37 @@ Stable tag: trunk
 License: GPL2+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Beaver Builder is a drag and drop frontend page builder for WordPress that works with almost any theme!
+Beaver Builder is a drag and drop frontend WordPress page builder that works with almost any theme!
 
 == Description ==
 
-= What is Beaver Builder? =
+= What Is The Beaver Builder WordPress Page Builder? =
 
-Beaver Builder is a drag and drop page layout system that works on the frontend of WordPress and allows you to create beautiful layouts without having to write any code. If you haven't already, watch the video below or [try out the demo](http://demo.wpbeaverbuilder.com/) to see it in action!
+Beaver Builder is a drag and drop page builder that works on the frontend of WordPress and allows you to create beautiful layouts without having to write any code. If you haven't already, watch the video below or [try out the demo](http://demo.wpbeaverbuilder.com/) to see it in action!
 
 [youtube https://www.youtube.com/watch?v=CNJbH2gaACo]
 
-Head on over to [our website](http://www.wpbeaverbuilder.com/) to learn more about Beaver Builder and what it can do for you. 
+Head on over to [our website](http://www.wpbeaverbuilder.com/) to learn more about the Beaver Builder WordPress page builder and what it can do for you. 
 
 = Who Is Beaver Builder For? =
 
 Anyone that can learn WordPress can learn to use Beaver Builder. Developers that need a little more can build custom widgets using the WordPress plugin system to get the job done. Users of the [pro or agency versions](http://www.wpbeaverbuilder.com/pricing) also get access to premium documentation and support for extending the builder through the development of custom modules.
 
-= Works With Your Theme =
+= A WordPress Page Builder That Works With Your Theme =
 
-Yep, that's right! Beaver Builder was designed to work with almost any WordPress theme on the market. We say "almost" because it's impossible for us to test every theme that exists. Don't hesitate to let us know if you run into a compatibility issue with your theme so we can look into it and release a fix if possible.
+Yep, that's right! Beaver Builder was designed to work with almost any WordPress theme. We say "almost" because it's impossible for us to test every theme that exists. Don't hesitate to let us know if you run into a compatibility issue with your theme so we can look into it and release a fix if possible.
 
 = Modules And Widgets =
 
 We've loaded Beaver Builder up with a comprehensive set of content modules to aid you in building stunning layouts within an intuitive drag and drop system. In addition to content modules, Beaver Builder also supports core and third party WordPress widgets and shortcodes, making the number of things you can drop into a layout almost endless.
 
-= Optimized For Mobile =
+= A WordPress Page Builder That's Optimized For Mobile =
 
-Every part of a Beaver Builder layout is fully responsive and looks gorgeous on any screen size. Easily drop any number of columns onto the page that will adjust automagically as the screen gets smaller. Don't worry, if responsive sites aren't your thing, that functionality can be turned off at anytime in the main settings.
+Every part of a Beaver Builder layout is fully responsive and looks gorgeous on any screen size. Easily drop any number of columns onto the page that will adjust automagically as the screen gets smaller. Don't worry, if responsive sites aren't your thing, that functionality can be turned off at anytime in the global page builder settings.
 
-= Optimized For Performance =
+= A WordPress Page Builder That's Optimized For Performance =
 
-We've designed Beaver Builder to create layouts that load quickly. Many themes and plugins load in an ungodly number of scripts and stylesheets to every page on your site. Not the Beaver Builder! It only loads the assets needed for a given page, instead of slowing your site down by loading everything.
+We've designed Beaver Builder to create layouts that load quickly. Many page builders load in an ungodly number of scripts and stylesheets to every page on your site. Not the Beaver Builder! It only loads the assets needed for a given page, instead of slowing your site down by loading everything.
 
 = WordPress.org Support =
 
@@ -70,4 +70,3 @@ Visit our [change logs page](http://www.wpbeaverbuilder.com/change-logs/) for up
 == Upgrade Notice ==
 
 Visit our [change logs page](http://www.wpbeaverbuilder.com/change-logs) for up-to-date information on what has been going on with the development of Beaver Builder.
-
