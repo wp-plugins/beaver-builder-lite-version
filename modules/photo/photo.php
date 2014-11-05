@@ -103,6 +103,10 @@ class FLPhotoModule extends FLBuilderModule {
                 $ratio_1 = 1; 
                 $ratio_2 = 1;
             }
+            elseif($this->settings->crop == 'circle') {
+                $ratio_1 = 1; 
+                $ratio_2 = 1;
+            }
             
             // Get the new width or height.
             if($size['width'] / $size['height'] < $ratio_1) {
@@ -387,7 +391,8 @@ FLBuilder::register_module('FLPhotoModule', array(
                             'landscape'     => __('Landscape', 'fl-builder'),
                             'panorama'      => __('Panorama', 'fl-builder'),
                             'portrait'      => __('Portrait', 'fl-builder'),
-                            'square'        => __('Square', 'fl-builder')
+                            'square'        => __('Square', 'fl-builder'),
+                            'circle'        => __('Circle', 'fl-builder')
                         )
                     ),
                     'align'         => array(

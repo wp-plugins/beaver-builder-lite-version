@@ -675,9 +675,16 @@ final class FLBuilderModel {
 	    $post_data = self::get_post_data();
 	    
 	    if(isset($post_data['node_preview']) && isset($post_data['node_id']) && $post_data['node_id'] == $node->node) {
-            $settings = $post_data['node_preview'];
-            $settings = (object)array_merge((array)$node->settings, (array)$settings);
-            $settings = self::process_node_settings($node, $settings);
+    	    
+    	    if(!isset($post_data['node_preview_processed_settings'])) {
+                $settings = $post_data['node_preview'];
+                $settings = (object)array_merge((array)$node->settings, (array)$settings);
+                $settings = self::process_node_settings($node, $settings);
+                self::update_post_data('node_preview_processed_settings', $settings);
+            }
+            else {
+                $settings = $post_data['node_preview_processed_settings'];
+            }
         }
         else {
             $defaults = self::get_node_defaults($node);
@@ -1918,6 +1925,11 @@ final class FLBuilderModel {
 	    if(empty($data)) {
     	    $data = array();
 	    }
+	    
+	    // Clone the layout data to ensure the cache remains intact.
+	    foreach($data as $node_id => $node) {
+    	    $data[$node_id] = clone $node;
+	    }
 
         // Return the data.
 	    return $data;
@@ -1985,10 +1997,9 @@ final class FLBuilderModel {
      */	 
     static public function save_layout()
     {
-        $post_data      = self::get_post_data();
         $editor_content = FLBuilder::render_editor_content();
         $post_id        = self::get_post_id();
-        $data           = self::get_layout_data();
+        $data           = self::get_layout_data('draft', $post_id);
         
         // Delete the old published layout.
         self::delete_layout_data('published', $post_id);
@@ -2006,7 +2017,7 @@ final class FLBuilderModel {
         self::enable();
         
         // Get the post status.
-        $post_status = get_post_status($post_data['post_id']);
+        $post_status = get_post_status($post_id);
         $post_status = strstr($post_status, 'draft') ? 'publish' : $post_status;
         
         // Update the post with stripped down content.
@@ -2258,22 +2269,25 @@ final class FLBuilderModel {
         // Only move forward if we have template nodes.
         if(isset($template->nodes)) {
         
+            // Get new ids for the template nodes.
+            $template_data = self::generate_new_node_ids($template->nodes);
+        
             // Get the existing layout data.
             $layout_data = self::get_layout_data();
                 
             // Reposition rows?
             if($append) {
                 
-                foreach($template->nodes as $node_id => $node) {
+                foreach($template_data as $node_id => $node) {
                     
                     if($node->type == 'row') {
-                        $template->nodes[$node_id]->position += $row_position;
+                        $template_data[$node_id]->position += $row_position;
                     }   
                 }
             }
             
             // Merge the data.
-            $data = array_merge($layout_data, $template->nodes);
+            $data = array_merge($layout_data, $template_data);
                     
             // Update the layout data.
             self::update_layout_data($data);
@@ -2344,6 +2358,31 @@ final class FLBuilderModel {
 	    }
 	    else {
     	    return stripcslashes($value);
+	    }
+    }
+    
+	/**
+     * @method get_branding_icon
+     */	 
+    static public function get_branding_icon()
+    {
+    	$key        = '_fl_builder_branding_icon';
+    	$default    = FL_BUILDER_URL . 'img/beaver.png';
+	    
+	    // Get the value.
+    	if(is_network_admin() || class_exists('FLBuilderMultisiteSettings')) {
+        	$value = get_site_option($key);
+    	}
+        else {
+            $value = get_option($key);
+        }
+    	
+    	// Return the value.
+	    if($value === false) {
+    	    return $default;
+	    }
+	    else {
+    	    return $value;
 	    }
     }
     

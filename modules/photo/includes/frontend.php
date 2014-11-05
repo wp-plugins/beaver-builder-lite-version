@@ -6,7 +6,7 @@ $link   = $module->get_link();
 $alt    = $module->get_alt();
 
 ?>
-<div class="fl-photo fl-photo-align-<?php echo $settings->align; ?>" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo fl-photo-crop-<?php echo $settings->crop; ?> fl-photo-align-<?php echo $settings->align; ?>" itemscope itemtype="http://schema.org/ImageObject">
     <div class="fl-photo-content">
         <?php if(!empty($link)) : ?>
         <a href="<?php echo $link; ?>" target="<?php echo $settings->link_target; ?>" itemprop="url">

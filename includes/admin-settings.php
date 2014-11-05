@@ -1,8 +1,8 @@
 <div class="wrap<?php if(!class_exists('FLBuilderMultisiteSettings')) echo ' fl-settings-single-install'; ?>">
     
     <h2 class="fl-settings-heading">
-        <?php if(FLBuilderModel::get_branding() == __('Page Builder', 'fl-builder')) : ?>
-        <img src="<?php echo FL_BUILDER_URL; ?>/img/beaver.png" />
+        <?php if(FLBuilderModel::get_branding_icon() != '') : ?>
+        <img src="<?php echo FLBuilderModel::get_branding_icon(); ?>" />
         <?php endif; ?>
         <span><?php echo FLBuilderModel::get_branding() . ' ' . __('Settings', 'fl-builder'); ?></span>
     </h2>

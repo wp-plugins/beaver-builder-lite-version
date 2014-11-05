@@ -121,14 +121,14 @@ html.fl-builder-edit {
     padding: 7px 10px;
 }
 .fl-builder-bar-title img {
-    height: 30px;
-    margin-right: 1px;
-    vertical-align: middle;
+    height: 30px !important;
+    margin: 0 1px 0 0 !important;
+    vertical-align: middle !important;
 }
 .fl-builder-bar-title span {
     vertical-align: middle;
 }
-.fl-builder-bar-title.fl-builder-branding {
+.fl-builder-bar-title.fl-builder-bar-title-no-icon {
     padding: 12px;
 }
 .fl-builder-bar-actions {

@@ -152,9 +152,11 @@ final class FLBuilderAdminSettings {
 	{
         if(isset($_POST['fl-branding-nonce']) && wp_verify_nonce($_POST['fl-branding-nonce'], 'branding')) {
             
-            $branding = wp_kses_post($_POST['fl-branding']);
+            $branding       = wp_kses_post($_POST['fl-branding']);
+            $branding_icon  = sanitize_text_field($_POST['fl-branding-icon']);
             
             update_option('_fl_builder_branding', $branding);
+            update_option('_fl_builder_branding_icon', $branding_icon);
         }
     }
 	 

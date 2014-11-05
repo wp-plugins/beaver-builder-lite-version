@@ -5,14 +5,14 @@
             <img src="<?php echo FL_BUILDER_URL; ?>/img/beaver.png" />
             <span><?php _e('Page Builder Demo', 'fl-builder'); ?></span>
         </span>
-        <?php elseif(FLBuilderModel::get_branding() != __('Page Builder', 'fl-builder')) : ?>
-        <span class="fl-builder-bar-title fl-builder-branding">
+        <?php elseif(FLBuilderModel::get_branding_icon() == '') : ?>
+        <span class="fl-builder-bar-title fl-builder-bar-title-no-icon">
             <?php echo FLBuilderModel::get_branding(); ?>
         </span>
         <?php else : ?>
         <span class="fl-builder-bar-title">
-            <img src="<?php echo FL_BUILDER_URL; ?>/img/beaver.png" />
-            <span><?php _e('Page Builder', 'fl-builder'); ?></span>
+            <img src="<?php echo FLBuilderModel::get_branding_icon(); ?>" />
+            <span><?php echo FLBuilderModel::get_branding(); ?></span>
         </span>
         <?php endif; ?>
         <div class="fl-builder-bar-actions">

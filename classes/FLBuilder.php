@@ -544,7 +544,7 @@ final class FLBuilder {
             echo '<div class="fl-builder-content">';
             self::render_rows();
             echo '</div>';
-            $content = ob_get_clean();
+            $content = do_shortcode(ob_get_clean());
             
             // Reapply the builder's render_content filter.
             add_filter('the_content', 'FLBuilder::render_content');

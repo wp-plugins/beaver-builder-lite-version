@@ -248,6 +248,11 @@
     max-width: 100%;
     width: auto !important;
 }
+.fl-photo-crop-circle img {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
 .fl-photo-caption {
     font-size: 13px;
     line-height: 18px;

@@ -1,3 +1,16 @@
+<h4>1.3.7</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added circle crop option to the photo module.</li>
+    <li>Added icon setting for white labeling.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug with the posts module that kept shortcodes from rendering.</li>
+    <li>Fixed a bug that made it impossible to append the same template twice.</li>
+    <li>Fixed a bug that broke photo cropping.</li>
+</ul>
+
 <h4>1.3.6</h4>
 <p><strong>Enhancements</strong></p>
 <ul>

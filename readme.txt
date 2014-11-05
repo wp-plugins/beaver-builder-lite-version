@@ -70,3 +70,4 @@ Visit our [change logs page](http://www.wpbeaverbuilder.com/change-logs/) for up
 == Upgrade Notice ==
 
 Visit our [change logs page](http://www.wpbeaverbuilder.com/change-logs) for up-to-date information on what has been going on with the development of Beaver Builder.
+
