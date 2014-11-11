@@ -40,6 +40,12 @@ var FLBuilder;
         _dragging                   : false,
         
         /**
+         * @param _exitUrl
+         * @private
+         */ 
+        _exitUrl                    : null,
+        
+        /**
          * @param _lightbox
          * @private
          */ 
@@ -289,6 +295,7 @@ var FLBuilder;
         {
             /* Links */
             $('a').on('click', FLBuilder._linkClicked);
+            $('.fl-page-nav .nav a').on('click', FLBuilder._headerLinkClicked);
             
             /* Heartbeat */
             $(document).on('heartbeat-tick', FLBuilder._lockPost);
@@ -442,6 +449,21 @@ var FLBuilder;
         _linkClicked: function(e)
         {
             e.preventDefault();
+        },
+        
+        /**
+         * @method _headerLinkClicked
+         * @private
+         */
+        _headerLinkClicked: function(e)
+        {
+            var link = $(this),
+                href = link.attr('href');
+            
+            e.preventDefault();
+            
+            FLBuilder._exitUrl = href.indexOf('?') > -1 ? href : href + '?fl_builder';
+            FLBuilder._doneClicked();
         },
         
         /**
@@ -647,6 +669,7 @@ var FLBuilder;
          */
         _cancelButtonClicked: function()
         {
+            FLBuilder._exitUrl = null;
             FLBuilder._actionsLightbox.close();
         },
         
@@ -656,7 +679,9 @@ var FLBuilder;
          */
         _exit: function()
         {
-            window.location.href = window.location.href.replace('fl_builder', '');
+            var href = FLBuilder._exitUrl ? FLBuilder._exitUrl : window.location.href.replace('fl_builder', '');
+            
+            window.location.href = href;
         },
         
         /* Tools Actions
