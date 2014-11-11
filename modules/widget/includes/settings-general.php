@@ -1,20 +1,24 @@
 <?php 
+    
+global $wp_widget_factory;
 
 // Get builder post data.
 $post_data = FLBuilderModel::get_post_data();
 
-// Widget class
+// Widget slug
 if(isset($settings->widget)) {
-    $widget_class = $settings->widget;
+    $widget_slug = $settings->widget;
 }
 else if(isset($post_data['widget'])) {
-    $widget_class = $post_data['widget'];
+    $widget_slug = $post_data['widget'];
 }
 
-if(isset($widget_class) && class_exists($widget_class)) {
+if(isset($widget_slug) && isset($wp_widget_factory->widgets[$widget_slug])) {
 
     // Widget instance
-    $widget_instance = new $widget_class();
+    $factory_instance   = $wp_widget_factory->widgets[$widget_slug];
+    $widget_class       = get_class($factory_instance);
+    $widget_instance    = new $widget_class($factory_instance->id_base, $factory_instance->name, $factory_instance->widget_options);
     
     // Widget settings
     $settings_key = 'widget-' . $widget_instance->id_base;
@@ -30,13 +34,13 @@ if(isset($widget_class) && class_exists($widget_class)) {
     // Widget form
     echo '<div class="fl-field" data-preview=\'{"type":"widget"}\'>';
     $widget_instance->form($widget_settings);
-    echo '<input type="hidden" name="widget" value="' . $widget_class . '" />';   
+    echo '<input type="hidden" name="widget" value="' . $widget_slug . '" />';   
     echo '</div>';
 }
-else if(isset($widget_class)) {   
+else if(isset($widget_slug)) {   
 
     // Widget doesn't exist!
     echo '<div class="fl-builder-widget-missing">';
-    echo $widget_class . __(' no longer exists.');
+    echo $widget_slug . __(' no longer exists.');
     echo '</div>';
 }

@@ -2,10 +2,6 @@ var FLBuilderAdminPosts;
 
 (function($){
 
-    $(function(){
-        FLBuilderAdminPosts._init();
-    });
-
     /**
      * @class FLBuilderAdminPosts
      * @static
@@ -163,5 +159,9 @@ var FLBuilderAdminPosts;
             $('.fl-builder-loading').hide();
         }
     };
+
+    $(function(){
+        FLBuilderAdminPosts._init();
+    });
 
 })(jQuery);

@@ -1,6 +1,6 @@
 <script>
 
-FLBuilder.config = {
+var FLBuilderConfig = { 
     ajaxUrl: '<?php wp_reset_query(); global $post; echo get_permalink($post->ID); ?>',
     lite: <?php if(FL_BUILDER_LITE === true) echo 'true'; else echo 'false'; ?>,
     homeUrl:  '<?php echo home_url(); ?>',
@@ -9,7 +9,7 @@ FLBuilder.config = {
     enabledTemplates: '<?php echo FLBuilderModel::get_enabled_templates(); ?>'
 };
 
-FLBuilder.strings = {
+var FLBuilderStrings = {
     actionsLightboxTitle: '<?php _e('What would you like to do?', 'fl-builder'); ?>',
     cancel: '<?php _e('Cancel', 'fl-builder'); ?>',
     changeTemplate: '<?php _e('Change Template', 'fl-builder'); ?>',

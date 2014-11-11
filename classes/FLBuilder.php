@@ -656,7 +656,7 @@ final class FLBuilder {
             for($i = 0; $i < count($values); $i++) {
                 $value = $values[$i];
                 echo '<tr class="fl-builder-field-multiple" data-field="'. $arr_name .'">';
-                include FL_BUILDER_DIR . 'includes/fields.php';
+                include FL_BUILDER_DIR . 'includes/field.php';
                 echo '<td class="fl-builder-field-actions">';
                 echo '<i class="fl-builder-field-move fa fa-arrows"></i>';
                 echo '<i class="fl-builder-field-copy fa fa-copy"></i>';
@@ -681,7 +681,7 @@ final class FLBuilder {
         }
         else {
             echo '<tr id="fl-field-'. $name .'" class="fl-field" data-type="' . $field['type'] . '" data-preview=\'' . $preview . '\'>';
-            include FL_BUILDER_DIR . 'includes/fields.php';
+            include FL_BUILDER_DIR . 'includes/field.php';
             echo '</tr>';
         }
 	}
@@ -1583,7 +1583,7 @@ final class FLBuilder {
         
         // Call the FLBuilder._renderLayoutComplete method if we're currently editing.
         if(stristr($asset_info['js'], '-draft.js') || stristr($asset_info['js'], '-preview.js')) {
-            $js .= "; if(typeof FLBuilder !== 'undefined') FLBuilder._renderLayoutComplete();";
+            $js .= "; if(typeof FLBuilder !== 'undefined' && typeof FLBuilder._renderLayoutComplete !== 'undefined') FLBuilder._renderLayoutComplete();";
         }
         
         // Include FLJSMin

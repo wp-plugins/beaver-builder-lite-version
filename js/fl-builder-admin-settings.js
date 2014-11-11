@@ -1,9 +1,5 @@
 (function($){
 
-    $(function(){
-        FLBuilderAdminSettings.init();
-    });
-
     /**
      * @class FLBuilderAdminSettings
      */ 
@@ -159,5 +155,9 @@
             return false;
         }
     };
+
+    $(function(){
+        FLBuilderAdminSettings.init();
+    });
 
 })(jQuery);

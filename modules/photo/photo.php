@@ -29,6 +29,17 @@ class FLPhotoModule extends FLBuilderModule {
     }
 
     /** 
+     * @method enqueue_scripts
+     */  
+    public function enqueue_scripts()
+    {
+        if($this->settings && $this->settings->link_type == 'lightbox') {
+            $this->add_js('jquery-magnificpopup');
+            $this->add_css('jquery-magnificpopup');
+        }
+    }
+
+    /** 
      * @method update
      * @param $settings {object}
      */      
@@ -213,6 +224,9 @@ class FLPhotoModule extends FLBuilderModule {
         
         if($this->settings->link_type == 'url') {
             $link = $this->settings->link_url;
+        }
+        else if($this->settings->link_type == 'lightbox') {
+            $link = $photo->url;
         }
         else if($this->settings->link_type == 'file') {
             $link = $photo->url;
@@ -435,6 +449,7 @@ FLBuilder::register_module('FLPhotoModule', array(
                         'options'       => array(
                             ''              => __('None', 'fl-builder'),
                             'url'           => __('URL', 'fl-builder'),
+                            'lightbox'      => __('Lightbox', 'fl-builder'),
                             'file'          => __('Photo File', 'fl-builder'),
                             'page'          => __('Photo Page', 'fl-builder')
                         ),

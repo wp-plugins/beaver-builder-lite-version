@@ -1,3 +1,17 @@
+<h4>1.3.8</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Single photos can now be opened in a lightbox by choosing lightbox in the photo module's link settings.</li>
+    <li>Added the ability to define custom fields through actions. Developers should review the custom module docs and examples for detailed info on how that works.</li>
+    <li>Added the ability to duplicate rows.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug that made it so you could only have one text or code editor within a builder settings panel. Thanks to Nicholas Joannes for the fix!</li>
+    <li>Reworked the load order and definitions for the main builder JavaScript class to prevent issues with some minification plugins.</li>
+    <li>Fixed a bug with generating new builder node ids that was affecting templates in some cases.</li>
+</ul>
+
 <h4>1.3.7</h4>
 <p><strong>Enhancements</strong></p>
 <ul>

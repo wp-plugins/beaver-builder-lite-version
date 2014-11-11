@@ -582,7 +582,7 @@ final class FLBuilderModel {
             $nodes[$map[$node_id]]       = $node;
             $nodes[$map[$node_id]]->node = $map[$node_id];
             
-            if(!empty($node->parent)) {
+            if(!empty($node->parent) && isset($map[$node->parent])) {
                 $nodes[$map[$node_id]]->parent = $map[$node->parent];
             }
         }
@@ -934,6 +934,62 @@ final class FLBuilderModel {
         
         // Return the updated row.
         return self::get_node($row_node_id);
+    }
+	 
+	/**
+     * @method copy_row
+     */	
+    static public function copy_row($node_id = null)
+    {
+	    $post_data      = self::get_post_data();
+        $node_id        = isset($post_data['node_id']) ? $post_data['node_id'] : $node_id;
+        $layout_data    = self::get_layout_data();
+        $row            = self::get_node($node_id);
+        $new_row_id     = self::generate_node_id();
+        $col_groups     = self::get_child_nodes($node_id);
+        $new_nodes      = array();
+        
+        // Set the new row id.
+        $row->node = $new_row_id; 
+        
+        // Add the new row.
+        $layout_data[$new_row_id] = $row;
+        
+        // Get the new child nodes.
+        foreach($col_groups as $col_group_id => $col_group) {
+            
+            $new_nodes[$col_group_id]   = $col_group;
+            $cols                       = self::get_child_nodes($col_group_id);
+        
+            foreach($cols as $col_id => $col) {
+            
+                $new_nodes[$col_id]   = $col;
+                $modules              = self::get_child_nodes($col_id);
+            
+                foreach($modules as $module_id => $module) {
+                    $new_nodes[$module_id]   = $module;
+                }
+            }
+        }
+        
+		// Generate new child ids.
+        $new_nodes = self::generate_new_node_ids($new_nodes);
+        
+        // Set col group parent ids to the new row id.
+        foreach($new_nodes as $child_node_id => $child) {
+            if($child->type == 'column-group') {
+                $new_nodes[$child_node_id]->parent = $new_row_id;
+            }
+        }
+            
+        // Merge the child data.
+        $layout_data = array_merge($layout_data, $new_nodes);
+                
+        // Update the layout data.
+        self::update_layout_data($layout_data);
+        
+        // Position the new row.
+        self::reorder_node($new_row_id, $row->position + 1);
     }
     
     /** 
