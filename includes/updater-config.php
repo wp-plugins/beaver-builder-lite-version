@@ -2,9 +2,9 @@
 
 if(class_exists('FLUpdater')) {
     FLUpdater::add_product(array(
-        'name'      => 'FastLine Page Builder (Lite Version)', 
+        'name'      => 'Beaver Builder Plugin (Lite Version)', 
         'version'   => '1.3.8', 
-        'slug'      => 'fl-builder',
+        'slug'      => 'bb-plugin',
         'type'    	=> 'plugin'
     )); 
 }

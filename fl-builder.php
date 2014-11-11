@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: FastLine Page Builder (Lite Version)
+ * Plugin Name: Beaver Builder Plugin (Lite Version)
  * Plugin URI: http://www.wpbeaverbuilder.com
  * Description: A drag and drop frontend WordPress page builder plugin that works with almost any theme!
  * Version: 1.3.8
