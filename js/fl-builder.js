@@ -28,6 +28,12 @@ var FLBuilder;
         _addModuleAfterRowRender    : null,
         
         /**
+         * @param _contentClass
+         * @private
+         */ 
+        _contentClass               : false,
+        
+        /**
          * @param _dragEnabled
          * @private
          */ 
@@ -141,10 +147,8 @@ var FLBuilder;
          */
         _init: function()
         {
-            $('html').addClass('fl-builder-edit');
-            $('body').addClass('fl-builder');
-            
             FLBuilder._lockPost();
+            FLBuilder._initClassNames();
             FLBuilder._initMediaUploader();
             FLBuilder._initOverflowFix();
             FLBuilder._initScrollbars();
@@ -175,6 +179,22 @@ var FLBuilder;
         },
         
         /**
+         * @method _initClassNames
+         * @private
+         */
+        _initClassNames: function()
+        {
+            $('html').addClass('fl-builder-edit');
+            $('body').addClass('fl-builder');
+            
+            if(FLBuilderConfig.simpleUi) {
+                $('body').addClass('fl-builder-simple');
+            }
+            
+            FLBuilder._contentClass = '.fl-builder-content-' + FLBuilderConfig.postId;
+        },
+        
+        /**
          * @method _initMediaUploader
          * @private
          */
@@ -189,7 +209,7 @@ var FLBuilder;
          */
         _initOverflowFix: function()
         {
-            $('.fl-builder-content').parents().css('overflow', 'visible');
+            $(FLBuilder._contentClass).parents().css('overflow', 'visible');
         },
         
         /**
@@ -249,20 +269,20 @@ var FLBuilder;
             
             // Row layouts from the builder panel.
             $('.fl-builder-rows').sortable($.extend({}, defaults, {
-                connectWith: '.fl-builder-content, .fl-row-content',
+                connectWith: FLBuilder._contentClass + ', .fl-row-content',
                 items: '.fl-builder-block-row',
                 stop: FLBuilder._rowDragStop
             }));
             
             // Modules from the builder panel.
             $('.fl-builder-modules, .fl-builder-widgets').sortable($.extend({}, defaults, {
-                connectWith: '.fl-builder-content, .fl-row-content, .fl-col-content',
+                connectWith: FLBuilder._contentClass + ', .fl-row-content, .fl-col-content',
                 items: '.fl-builder-block-module',
                 stop: FLBuilder._moduleDragStop
             }));
             
             // Row position.
-            $('.fl-builder-content').sortable($.extend({}, defaults, {
+            $(FLBuilder._contentClass).sortable($.extend({}, defaults, {
                 handle: '.fl-row-overlay .fl-block-overlay-actions .fl-block-move',
                 helper: FLBuilder._rowDragHelper,
                 items: '.fl-row',
@@ -279,7 +299,7 @@ var FLBuilder;
             
             // Module position.
             $('.fl-col-content').sortable($.extend({}, defaults, {
-                connectWith: '.fl-builder-content, .fl-row-content, .fl-col-content',
+                connectWith: FLBuilder._contentClass + ', .fl-row-content, .fl-col-content',
                 handle: '.fl-module-overlay .fl-block-overlay-actions .fl-block-move',
                 helper: FLBuilder._moduleDragHelper,
                 items: '.fl-module',
@@ -407,6 +427,10 @@ var FLBuilder;
             
             /* Layout Fields */
             $('body').delegate('.fl-layout-field-option', 'click', FLBuilder._layoutFieldClicked);
+            
+            /* Links Fields */
+            $('body').delegate('.fl-link-field-select', 'click', FLBuilder._linkFieldSelectClicked);
+            $('body').delegate('.fl-link-field-search-cancel', 'click', FLBuilder._linkFieldSelectCancelClicked);
             
             /* Loop Builder */
             $('body').delegate('.fl-loop-builder select[name=post_type]', 'change', FLBuilder._loopBuilderPostTypeChange);
@@ -822,7 +846,7 @@ var FLBuilder;
          */
         _initTemplateSelector: function()
         {
-            var rows = $('.fl-builder-content').find('.fl-row');
+            var rows = $(FLBuilder._contentClass).find('.fl-row');
             
             if(rows.length === 0) {
                 FLBuilder._showTemplateSelector();
@@ -867,7 +891,7 @@ var FLBuilder;
             var template = $(this),
                 index 	 = template.closest('.fl-template-preview').attr('data-index');
             
-            if($('.fl-builder-content').children('.fl-row').length > 0) {
+            if($(FLBuilder._contentClass).children('.fl-row').length > 0) {
                 
                 if(index == 0) {
                     if(confirm(FLBuilderStrings.changeTemplateMessage)) {
@@ -895,7 +919,7 @@ var FLBuilder;
         {
             var id = $(this).attr('data-id');
                 
-            if($('.fl-builder-content').children('.fl-row').length > 0) {
+            if($(FLBuilder._contentClass).children('.fl-row').length > 0) {
             
                 if(id == 'blank') {
                     if(confirm(FLBuilderStrings.changeTemplateMessage)) {
@@ -1109,7 +1133,7 @@ var FLBuilder;
          */
         _setupEmptyLayout: function()
         {
-            var content = $('.fl-builder-content');
+            var content = $(FLBuilder._contentClass);
             
             content.removeClass('fl-builder-empty');
             content.find('.fl-builder-empty-message').remove();
@@ -1146,7 +1170,7 @@ var FLBuilder;
             var post    = $('#fl-post-id').val(),
                 head    = $('head').eq(0),
                 body    = $('body').eq(0),
-                content = $('.fl-builder-content'),
+                content = $(FLBuilder._contentClass),
                 loader  = $('<img src="' + data.css + '" />'),
                 oldCss  = $('#fl-builder-layout-' + post + '-css'),
                 oldJs   = $('script[src*="/fl-builder/' + post + '"]'),
@@ -1355,7 +1379,7 @@ var FLBuilder;
             FLBuilder._dragging = true;
             
             // Refresh sortables.
-            $('.fl-builder-content').sortable('refreshPositions');
+            $(FLBuilder._contentClass).sortable('refreshPositions');
             $('.fl-row-content').sortable('refreshPositions');
             $('.fl-col-content').sortable('refreshPositions');
         },
@@ -1389,7 +1413,7 @@ var FLBuilder;
                     title = FLBuilderStrings.newColumn;
                 }
             }
-            else if(parent.hasClass('fl-builder-content')) {
+            else if(parent.hasClass(FLBuilder._contentClass)) {
                 if(ui.item.hasClass('fl-builder-block-row')) {
                     title  = ui.item.text();
                 }
@@ -1613,7 +1637,7 @@ var FLBuilder;
          */     
         _addRowComplete: function(response)
         {
-            var content = $('.fl-builder-content'),
+            var content = $(FLBuilder._contentClass),
                 rows    = $('.fl-row'),
                 row     = $(response),
                 module  = null,
@@ -2000,7 +2024,7 @@ var FLBuilder;
             else if(ui.item.hasClass('fl-builder-block')) {
             
                 // A new module was dropped into a row position.
-                if(parent.hasClass('fl-builder-content')) {
+                if(parent.hasClass(FLBuilder._contentClass)) {
                     parentId = 0;
                 }
                 // A new module was dropped into a column position.
@@ -2019,7 +2043,7 @@ var FLBuilder;
                 ui.item.remove();
             }
             // A module was dropped into the main layout.
-            else if(parent.hasClass('fl-builder-content')) {
+            else if(parent.hasClass(FLBuilder._contentClass)) {
                 FLBuilder._addModuleAfterRowRender = ui.item;
                 FLBuilder._addRow('1-col', ui.item.index());
                 ui.item.remove();
@@ -2314,6 +2338,7 @@ var FLBuilder;
             FLBuilder._initSelectFields();
             FLBuilder._initMultipleFields();
             FLBuilder._initAutoSuggestFields();
+            FLBuilder._initLinkFields();
         },
         
         /**
@@ -3330,6 +3355,80 @@ var FLBuilder;
             option.siblings().removeClass('fl-layout-field-option-selected');
             option.addClass('fl-layout-field-option-selected');
             option.siblings('input').val(option.attr('data-value'));
+        },
+        
+        /* Link Fields
+        ----------------------------------------------------------*/
+        
+        /**
+         * @method _initLinkFields
+         * @private
+         */ 
+        _initLinkFields: function()
+        {
+            $('.fl-link-field').each(FLBuilder._initLinkField);
+        },
+        
+        /**
+         * @method _initLinkField
+         * @private
+         */ 
+        _initLinkField: function()
+        {
+            var wrap        = $(this),
+                searchInput = wrap.find('.fl-link-field-search-input');
+                
+            searchInput.autoSuggest(FLBuilder._ajaxUrl({ 
+                'fl_action'         : 'fl_builder_autosuggest',
+                'fl_as_action'      : 'fl_as_links'
+            }), {
+                asHtmlID                    : searchInput.attr('name'),
+                selectedItemProp            : 'name',
+                searchObjProps              : 'name',
+                minChars                    : 3,
+                keyDelay                    : 1000,
+                fadeOut                     : false,
+                usePlaceholder              : true,
+                emptyText                   : FLBuilderStrings.noResultsFound,
+                showResultListWhenNoMatch   : true,
+                queryParam                  : 'fl_as_query',
+                selectionLimit              : 1,
+                afterSelectionAdd           : FLBuilder._updateLinkField
+            });
+        },
+        
+        /**
+         * @method _updateLinkField
+         * @private
+         */ 
+        _updateLinkField: function(element, item, selections)
+        {
+            var wrap        = element.closest('.fl-link-field'),
+                search      = wrap.find('.fl-link-field-search'),
+                searchInput = wrap.find('.fl-link-field-search-input'),
+                field       = wrap.find('.fl-link-field-input');
+            
+            field.val(item.value).trigger('keyup');
+            searchInput.autoSuggest('remove', item.value);
+            search.hide();
+        },
+
+        /**
+         * @method _linkFieldSelectClicked
+         * @private
+         */ 
+        _linkFieldSelectClicked: function()
+        {
+            $(this).parent().find('.fl-link-field-search').show();
+        },
+
+        /**
+         * @method _linkFieldSelectCancelClicked
+         * @private
+         */ 
+        _linkFieldSelectCancelClicked: function()
+        {
+            $(this).parent().hide();
         },
         
         /* Loop Builder

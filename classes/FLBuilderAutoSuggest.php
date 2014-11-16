@@ -27,6 +27,10 @@ final class FLBuilderAutoSuggest {
         	    case 'fl_as_users':
         	    $data = self::users();
         	    break; 
+        	    
+        	    case 'fl_as_links':
+        	    $data = self::links();
+        	    break; 
     	    }
 	    
     	    if(isset($data)) {
@@ -75,7 +79,7 @@ final class FLBuilderAutoSuggest {
 	    global $wpdb;
 	    
 	    $data   = array();	    
-	    $like   = like_escape(esc_sql(urldecode($_REQUEST['fl_as_query'])));
+	    $like   = esc_sql($wpdb->esc_like(urldecode($_REQUEST['fl_as_query'])));
 	    $type   = esc_sql($_REQUEST['fl_as_action_data']);
 	    
 	    $posts  = $wpdb->get_results("
@@ -162,7 +166,7 @@ final class FLBuilderAutoSuggest {
 	    global $wpdb;
 	    
 	    $data  = array();
-	    $like  = like_escape(esc_sql(urldecode($_REQUEST['fl_as_query'])));
+	    $like  = esc_sql($wpdb->esc_like(urldecode($_REQUEST['fl_as_query'])));
 	    $users = $wpdb->get_results("SELECT * FROM {$wpdb->users} WHERE user_login LIKE '%{$like}%'");
 	    
 	    foreach($users as $user) {
@@ -188,6 +192,36 @@ final class FLBuilderAutoSuggest {
     	    foreach($users as $user) {
                 $data[] = array('name' => $user->user_login, 'value' => $user->ID);
             }
+        }
+        
+        return $data;
+	}
+	
+    /**
+     * @method links
+     */	 
+	static public function links()
+	{
+	    global $wpdb;
+	    
+	    $data   = array();	    
+	    $like   = esc_sql($wpdb->esc_like(urldecode($_REQUEST['fl_as_query'])));
+	    $types  = FLBuilderLoop::post_types();
+	    $slugs  = array();
+	    
+	    foreach($types as $slug => $type) {
+    	    $slugs[] = esc_sql($slug);
+	    }
+	    
+	    $posts  = $wpdb->get_results("
+	        SELECT ID, post_title FROM {$wpdb->posts} 
+	        WHERE post_title LIKE '%{$like}%'
+	        AND post_type IN ('" . implode("','", $slugs) . "')
+	        AND post_status = 'publish'
+        ");
+        
+        foreach($posts as $post) {
+            $data[] = array('name' => $post->post_title, 'value' => get_permalink($post->ID));
         }
         
         return $data;

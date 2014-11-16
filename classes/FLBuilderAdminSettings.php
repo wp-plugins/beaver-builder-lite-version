@@ -72,6 +72,7 @@ final class FLBuilderAdminSettings {
 		self::saveEnabledModules();
 		self::saveEnabledTemplates();
 		self::saveEnabledPostTypes();
+		self::saveEditingCapability();
 		self::saveBranding();
 		self::uninstall();
 	}
@@ -140,6 +141,26 @@ final class FLBuilderAdminSettings {
                 }
                 
                 update_option('_fl_builder_post_types', $post_types);
+            }
+        }
+    }
+	 
+	/**
+     * @method saveEditingCapability
+     * @private
+     */	 
+	static private function saveEditingCapability()
+	{
+        if(isset($_POST['fl-editing-nonce']) && wp_verify_nonce($_POST['fl-editing-nonce'], 'editing')) {
+            
+            if(class_exists('FLBuilderMultisiteSettings') && !isset($_POST['fl-override-ms'])) {
+                delete_option('_fl_builder_editing_capability');
+            }
+            else {
+                
+                $capability = sanitize_text_field($_POST['fl-editing-capability']);
+                
+                update_option('_fl_builder_editing_capability', $capability);
             }
         }
     }

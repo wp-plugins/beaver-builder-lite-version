@@ -30,6 +30,7 @@
             <?php endif; ?>
             
             <li><a href="#post-types"><?php _e('Post Types', 'fl-builder'); ?></a></li>
+            <li><a href="#editing"><?php _e('Editing', 'fl-builder'); ?></a></li>
             
             <?php if(!class_exists('FLBuilderMultisiteSettings') && file_exists(FL_BUILDER_DIR . 'includes/admin-branding.php')) : ?>
             <li><a href="#branding"><?php _e('Branding', 'fl-builder'); ?></a></li>
@@ -57,7 +58,7 @@
     
             <h3 class="fl-settings-form-header"><?php _e('Upgrade', 'fl-builder'); ?></h3>
             
-            <p style="max-width: 550px;"><?php _e('You are currently running the lite version of the Beaver Builder plugin. Upgrade today for access to premium features such as advanced modules, templates, support and more!', 'fl-builder'); ?></p>
+            <p><?php _e('You are currently running the lite version of the Beaver Builder plugin. Upgrade today for access to premium features such as advanced modules, templates, support and more!', 'fl-builder'); ?></p>
             
             <input type="button" class="button button-primary" value="<?php _e('Upgrade Now', 'fl-builder'); ?>" onclick="window.location.href='<?php echo FL_BUILDER_UPGRADE_URL; ?>';" style="margin-right: 10px;">
             
@@ -207,6 +208,35 @@
             </form>
         </div>
         <!-- POST TYPES -->
+	
+	    <!-- EDITING -->
+        <div id="fl-editing-form" class="fl-settings-form">
+    
+            <h3 class="fl-settings-form-header"><?php _e('Editing Settings', 'fl-builder'); ?></h3>
+            
+            <form id="editing-form" action="<?php echo admin_url('/options-general.php?page=fl-builder-settings#editing'); ?>" method="post">
+        
+                <?php if(class_exists('FLBuilderMultisiteSettings')) : ?>
+                <label>
+                    <input class="fl-override-ms-cb" type="checkbox" name="fl-override-ms" value="1" <?php if(get_option('_fl_builder_editing_capability')) echo 'checked="checked"'; ?> />
+                    <?php _e('Override network settings?', 'fl-builder'); ?>
+                </label>
+                <?php endif; ?>
+                
+                <div class="fl-settings-form-content">
+                    
+                    <p><?php echo sprintf(__('Set the <a href="%s" target="_blank">capability</a> required for users to access advanced builder editing such as adding, deleting or moving modules.', 'fl-builder'), 'http://codex.wordpress.org/Roles_and_Capabilities#Capability_vs._Role_Table'); ?></p>
+                    
+                    <input type="text" name="fl-editing-capability" value="<?php echo esc_html(FLBuilderModel::get_editing_capability()); ?>" class="regular-text" />
+                    
+                </div>
+                <p class="submit">
+                    <input type="submit" name="update" class="button-primary" value="Save Editing Settings" />
+                    <?php wp_nonce_field('editing', 'fl-editing-nonce'); ?>
+                </p>
+            </form>
+        </div>
+        <!-- EDITING -->
         
         <?php if(file_exists(FL_BUILDER_DIR . 'includes/admin-branding.php')) : ?>
         <!-- BRANDING -->
@@ -219,9 +249,9 @@
     
             <h3 class="fl-settings-form-header"><?php _e('Uninstall', 'fl-builder'); ?></h3>
 
-            <p style="max-width: 550px;"><?php _e('Clicking the button below will uninstall the page builder plugin and delete all of the data associated with it. You can uninstall or deactivate the page builder from the plugins page instead if you do not wish to delete the data.', 'fl-builder'); ?></p>
+            <p><?php _e('Clicking the button below will uninstall the page builder plugin and delete all of the data associated with it. You can uninstall or deactivate the page builder from the plugins page instead if you do not wish to delete the data.', 'fl-builder'); ?></p>
             
-            <p style="max-width: 550px;"><strong><?php _e('NOTE:'); ?></strong> <?php _e('The builder does not delete the post meta _fl_builder_data, _fl_builder_draft and _fl_builder_enabled in case you want to reinstall it later. If you do, the builder will rebuild all of its data using those meta values.', 'fl-builder'); ?></p>
+            <p><strong><?php _e('NOTE:'); ?></strong> <?php _e('The builder does not delete the post meta _fl_builder_data, _fl_builder_draft and _fl_builder_enabled in case you want to reinstall it later. If you do, the builder will rebuild all of its data using those meta values.', 'fl-builder'); ?></p>
             
             <?php if(is_multisite()) : ?>
             <p><strong style="color:#ff0000;"><?php _e('NOTE:'); ?></strong> <?php _e('This applies to all sites on the network.', 'fl-builder'); ?></p>

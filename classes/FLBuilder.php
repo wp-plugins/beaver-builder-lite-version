@@ -197,7 +197,8 @@ final class FLBuilder {
      */	 
 	static public function layout_styles_scripts()
 	{
-	    global $post;
+        global $wp_query;
+        global $post;
         
         $ver     = FL_BUILDER_VERSION;
         $css_url = FL_BUILDER_URL . 'css/';
@@ -230,11 +231,8 @@ final class FLBuilder {
         }
         
         // Enqueue assets for posts in the main query.
-        if(have_posts()) {
-            while(have_posts()) {
-                the_post();
-                self::enqueue_layout_styles_scripts();
-            }
+        foreach($wp_query->posts as $post) {
+            self::enqueue_layout_styles_scripts($post->ID);
         }
         
         // Enqueue assets for posts via the fl_builder_global_posts filter.
@@ -245,8 +243,7 @@ final class FLBuilder {
             $posts = get_posts(array('post__in' => $post_ids, 'post_type' => 'any'));
 
             foreach($posts as $post) {  
-                setup_postdata($post);
-                self::enqueue_layout_styles_scripts();
+                self::enqueue_layout_styles_scripts($post->ID);
             }
         }
  
@@ -257,11 +254,10 @@ final class FLBuilder {
 	/**
      * @method enqueue_layout_styles_scripts
      */	 
-	static public function enqueue_layout_styles_scripts()
+	static public function enqueue_layout_styles_scripts($post_id)
 	{
 	    if(FLBuilderModel::is_builder_enabled()) {
         
-            $post_id    = FLBuilderModel::get_post_id();
             $rows       = FLBuilderModel::get_nodes('row');
             $modules    = FLBuilderModel::get_all_modules();
             $asset_info = FLBuilderModel::get_asset_info();
@@ -384,6 +380,9 @@ final class FLBuilder {
     {
         if(FLBuilderModel::is_builder_enabled()) {
             $classes[] = 'fl-builder';
+        }
+        if(FLBuilderModel::is_builder_active() && !current_user_can(FLBuilderModel::get_editing_capability())) {
+            $classes[] = 'fl-builder-simple';
         }
         
         return $classes;
@@ -527,6 +526,7 @@ final class FLBuilder {
     {
         global $post;
         
+        $post_id        = FLBuilderModel::get_post_id();
         $enabled        = FLBuilderModel::is_builder_enabled();
         $ajax           = defined('DOING_AJAX');
         $global_posts   = FLBuilderModel::get_global_posts();
@@ -541,7 +541,7 @@ final class FLBuilder {
             
             // Render the content.
             ob_start();
-            echo '<div class="fl-builder-content">';
+            echo '<div class="fl-builder-content fl-builder-content-' . $post_id . '">';
             self::render_rows();
             echo '</div>';
             $content = do_shortcode(ob_get_clean());

@@ -71,6 +71,7 @@ h2.fl-settings-content-header {
 
 .fl-settings-form {
     display: none;
+    max-width: 450px;
 }
 .fl-settings-form-header {
     margin-bottom: 20px !important;

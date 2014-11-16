@@ -2,11 +2,13 @@
 
 var FLBuilderConfig = { 
     ajaxUrl: '<?php wp_reset_query(); global $post; echo get_permalink($post->ID); ?>',
-    lite: <?php if(FL_BUILDER_LITE === true) echo 'true'; else echo 'false'; ?>,
+    enabledTemplates: '<?php echo FLBuilderModel::get_enabled_templates(); ?>',
     homeUrl:  '<?php echo home_url(); ?>',
-    upgradeUrl: '<?php echo FL_BUILDER_UPGRADE_URL; ?>',
+    lite: <?php if(FL_BUILDER_LITE === true) echo 'true'; else echo 'false'; ?>,
+    postId: <?php echo FLBuilderModel::get_post_id(); ?>,
     postType: '<?php echo get_post_type(); ?>',
-    enabledTemplates: '<?php echo FLBuilderModel::get_enabled_templates(); ?>'
+    simpleUi: <?php if(!current_user_can(FLBuilderModel::get_editing_capability())) echo 'true'; else echo 'false'; ?>,
+    upgradeUrl: '<?php echo FL_BUILDER_UPGRADE_URL; ?>'
 };
 
 var FLBuilderStrings = {

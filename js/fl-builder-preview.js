@@ -126,8 +126,8 @@ var FLBuilderPreview;
             $.extend(this.classes, {
                 settings        : '.fl-builder-' + this.type + '-settings',
                 settingsHeader  : '.fl-builder-' + this.type + '-settings .fl-lightbox-header',
-                node            : '.fl-builder-content .fl-node-' + this.nodeId,
-                content         : '.fl-builder-content .fl-node-' + this.nodeId + ' ' + contentClass
+                node            : FLBuilder._contentClass + ' .fl-node-' + this.nodeId,
+                content         : FLBuilder._contentClass + ' .fl-node-' + this.nodeId + ' ' + contentClass
             });
             
             // Elements
@@ -206,7 +206,7 @@ var FLBuilderPreview;
             var post    = $('#fl-post-id').val(),
                 css     = $('#fl-builder-layout-' + post + '-css').attr('href'),
                 js      = $('script[src*="/fl-builder/' + post + '"]').attr('src'),
-                html    = $('.fl-builder-content').html();
+                html    = $(FLBuilder._contentClass).html();
                 
             this.state = {
                 css     : css,

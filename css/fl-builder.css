@@ -28,6 +28,19 @@ html.fl-builder-edit {
     z-index: 200000;
 }
 
+/* Simple UI
+------------------------------------------------------ */
+
+.fl-builder-simple .fl-builder-tools-button,
+.fl-builder-simple .fl-builder-add-content-button,
+.fl-builder-simple .fl-builder-panel,
+.fl-builder-simple .fl-block-overlay-actions .fl-block-move,
+.fl-builder-simple .fl-block-overlay-actions .fl-block-copy,
+.fl-builder-simple .fl-block-overlay-actions .fl-block-remove,
+.fl-builder-simple .fl-col-highlight {
+    display: none !important;
+}
+
 /* Responsive Utilities
 ------------------------------------------------------ */
 
@@ -88,6 +101,11 @@ html.fl-builder-edit {
     height: 30px;
     line-height: 28px !important;
     padding: 0 12px 2px;
+}
+.fl-builder-button-small {
+    font-size: 11px !important;
+    line-height: 24px !important;
+    height: 24px;
 }
 
 /* Builder Bar
@@ -763,12 +781,12 @@ form.fl-builder-settings {
 
 /* Text Field */
 .fl-builder-settings-fields input.text-full {
-    width: 100%;
+    width: 97%;
 }
 
 /* Textarea */
 .fl-builder-settings-fields textarea {
-    width: 100%;
+    width: 97%;
 }
 
 /* Color Picker */
@@ -1014,6 +1032,27 @@ form.fl-builder-settings {
 }
 .fl-layout-field-option img {
     max-width: 100%;
+}
+
+/* Link Field */
+.fl-link-field-input {
+    width: 244px !important;
+}
+.fl-link-field-search {
+    display: none;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin: 4px 0 0 0;
+    padding: 10px;
+}
+.fl-link-field-search-title { 
+    display: block;
+    margin: 0 0 3px 2px;
+}
+.fl-link-field-search-cancel {
+    margin-top: 6px;
 }
 
 /* Tooltips */

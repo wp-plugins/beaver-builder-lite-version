@@ -949,25 +949,26 @@ final class FLBuilderModel {
         $col_groups     = self::get_child_nodes($node_id);
         $new_nodes      = array();
         
-        // Set the new row id.
-        $row->node = $new_row_id; 
-        
         // Add the new row.
-        $layout_data[$new_row_id] = $row;
+        $layout_data[$new_row_id]           = clone $row;
+        $layout_data[$new_row_id]->settings = clone $row->settings;
+        $layout_data[$new_row_id]->node     = $new_row_id; 
         
         // Get the new child nodes.
         foreach($col_groups as $col_group_id => $col_group) {
             
-            $new_nodes[$col_group_id]   = $col_group;
-            $cols                       = self::get_child_nodes($col_group_id);
+            $new_nodes[$col_group_id] = clone $col_group;
+            $cols                     = self::get_child_nodes($col_group_id);
         
             foreach($cols as $col_id => $col) {
             
-                $new_nodes[$col_id]   = $col;
-                $modules              = self::get_child_nodes($col_id);
+                $new_nodes[$col_id]             = clone $col;
+                $new_nodes[$col_id]->settings   = clone $col->settings;
+                $modules                        = self::get_child_nodes($col_id);
             
                 foreach($modules as $module_id => $module) {
-                    $new_nodes[$module_id]   = $module;
+                    $new_nodes[$module_id]             = clone $module;
+                    $new_nodes[$module_id]->settings   = clone $module->settings;
                 }
             }
         }
@@ -2443,6 +2444,35 @@ final class FLBuilderModel {
     }
     
 	/**
+     * @method get_editing_capability
+     */	 
+    static public function get_editing_capability()
+    {
+    	$key        = '_fl_builder_editing_capability';
+    	$default    = 'edit_posts';
+	    
+	    // Get the value.
+    	if(is_network_admin()) {
+        	$value = get_site_option($key);
+    	}
+    	else if(class_exists('FLBuilderMultisiteSettings')) {
+        	$value = get_option($key);
+        	$value = !$value ? get_site_option($key) : $value;
+        }
+        else {
+            $value = get_option($key);
+        }
+    	
+    	// Return the value.
+	    if(!$value) {
+    	    return $default;
+	    }
+	    else {
+    	    return $value;
+	    }
+    }
+    
+	/**
      * We don't delete _fl_builder_enabled, _fl_builder_data and _fl_builder_draft 
      * so layouts can be recovered should the plugin be installed again.
      *
@@ -2458,6 +2488,7 @@ final class FLBuilderModel {
             delete_option('_fl_builder_enabled_templates');
             delete_option('_fl_builder_post_types');
             delete_option('_fl_builder_branding');
+            delete_option('_fl_builder_editing_capability');
 
             // Delete cache files and folders.
             $cache_dir 	 = self::get_cache_dir();

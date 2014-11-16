@@ -1,377 +1,623 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FastLine Page Builder\n"
-"POT-Creation-Date: 2014-06-26 17:41+0100\n"
-"PO-Revision-Date: 2014-06-26 17:41+0100\n"
+"POT-Creation-Date: 2014-11-14 09:08-0800\n"
+"PO-Revision-Date: 2014-11-14 09:10-0800\n"
 "Last-Translator: Alessandro Curci <hantarex@gmail.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.7\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ./\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../classes/FLBuilderAdmin.php:39
-#, php-format
-msgid ""
-"This version of the <strong>FastLine Page Builder</strong> plugin is not "
-"compatible with WordPress Multisite. <a href=\"%s\" target=\"_blank\">Please "
-"upgrade</a> to the Multisite version of this plugin."
+#: ../classes/FLBuilder.php:674
+msgid "Add"
 msgstr ""
 
-#: ../classes/FLBuilderAdmin.php:50
-msgid ""
-"The <strong>FastLine Page Builder</strong> plugin requires WordPress version "
-"3.5 or greater. Please update WordPress before activating the plugin."
-msgstr ""
-
-#: ../classes/FLBuilderAdmin.php:85
-#, php-format
-msgid ""
-"FastLine Page Builder activated! <a href=\"%s\">Click here</a> to enable "
-"remote updates."
-msgstr ""
-
-#: ../classes/FLBuilderAdmin.php:220 ../classes/FLBuilderAdmin.php:275
-#: ../classes/FLBuilder.php:351 ../includes/ui.php:3
-#: ../includes/admin-posts.php:4
-msgid "Page Builder"
-msgstr ""
-
-#: ../classes/FLBuilderAdmin.php:288
-msgid "Upgrade"
-msgstr ""
-
-#: ../classes/FLBuilder.php:567
+#: ../classes/FLBuilder.php:742
 msgid "Add New Layout Template"
 msgstr ""
 
-#: ../classes/FLBuilder.php:568
+#: ../classes/FLBuilder.php:743
 msgid "New Layout Template"
 msgstr ""
 
-#: ../classes/FLBuilder.php:569
+#: ../classes/FLBuilder.php:744
 msgid "Edit Layout Template"
 msgstr ""
 
-#: ../classes/FLBuilder.php:570
+#: ../classes/FLBuilder.php:745
 msgid "View Layout Template"
 msgstr ""
 
-#: ../classes/FLBuilder.php:571
+#: ../classes/FLBuilder.php:746
 msgid "All Layout Templates"
 msgstr ""
 
-#: ../classes/FLBuilder.php:572
+#: ../classes/FLBuilder.php:747
 msgid "Search Layout Templates"
 msgstr ""
 
-#: ../classes/FLBuilder.php:573
+#: ../classes/FLBuilder.php:748
 msgid "Parent Layout Templates:"
 msgstr ""
 
-#: ../classes/FLBuilder.php:574
+#: ../classes/FLBuilder.php:749
 msgid "No layout templates found."
 msgstr ""
 
-#: ../classes/FLBuilder.php:575
+#: ../classes/FLBuilder.php:750
 msgid "No layout templates found in Trash."
 msgstr ""
 
-#: ../classes/FLBuilder.php:858
+#: ../classes/FLBuilder.php:1086
 msgid " Settings"
 msgstr ""
 
-#: ../classes/FLBuilderPhoto.php:47 ../includes/js-config.php:30
-msgid "Full Size"
+#: ../classes/FLBuilderAdmin.php:39
+#, php-format
+msgid ""
+"This version of the <strong>Page Builder</strong> plugin is not compatible "
+"with WordPress Multisite. <a href=\"%s\" target=\"_blank\">Please upgrade</"
+"a> to the Multisite version of this plugin."
 msgstr ""
 
-#: ../classes/FLBuilderPhoto.php:48 ../modules/gallery/gallery.php:261
-#: ../modules/accordion/accordion.php:62 ../includes/js-config.php:32
-msgid "Large"
+#: ../classes/FLBuilderAdmin.php:49
+msgid ""
+"The <strong>Page Builder</strong> plugin requires WordPress version 3.5 or "
+"greater. Please update WordPress before activating the plugin."
 msgstr ""
 
-#: ../classes/FLBuilderPhoto.php:49 ../modules/gallery/gallery.php:260
-#: ../modules/accordion/accordion.php:61 ../includes/js-config.php:34
-#: ../includes/row-settings.php:269
-msgid "Medium"
+#: ../classes/FLBuilderAdmin.php:90
+#, php-format
+msgid ""
+"Page Builder activated! <a href=\"%s\">Click here</a> to enable remote "
+"updates."
 msgstr ""
 
-#: ../classes/FLBuilderPhoto.php:50 ../includes/js-config.php:55
-msgid "Thumbnail"
+#: ../classes/FLBuilderAdmin.php:181 ../includes/admin-settings.php:23
+#: ../includes/admin-settings.php:59
+msgid "Upgrade"
 msgstr ""
 
-#: ../classes/FLBuilderModel.php:1464
+#: ../classes/FLBuilderAdmin.php:194 ../classes/FLBuilderModel.php:2402
+msgid "Page Builder"
+msgstr ""
+
+#: ../classes/FLBuilderModel.php:1842
 msgid "Copy of "
 msgstr ""
 
-#: ../modules/button/button.php:14
-#: ../modules/content-slider/content-slider.php:595 ../modules/cta/cta.php:195
-#: ../modules/callout/callout.php:453
-msgid "Button"
+#: ../classes/FLBuilderPhoto.php:75 ../includes/js-config.php:33
+msgid "Full Size"
 msgstr ""
 
-#: ../modules/button/button.php:15
-msgid "A simple call to action button."
+#: ../classes/FLBuilderPhoto.php:76 ../includes/js-config.php:35
+#: ../modules/accordion/accordion.php:67 ../modules/gallery/gallery.php:265
+msgid "Large"
 msgstr ""
 
-#: ../modules/button/button.php:16 ../modules/map/map.php:16
-#: ../modules/contact-form/contact-form.php:16
-#: ../modules/content-slider/content-slider.php:16
-#: ../modules/woocommerce/woocommerce.php:18
-#: ../modules/social-buttons/social-buttons.php:16
-#: ../modules/sidebar/sidebar.php:16 ../modules/icon-group/icon-group.php:16
-#: ../modules/cta/cta.php:16 ../modules/html/html.php:16
-#: ../modules/icon/icon.php:16 ../modules/callout/callout.php:16
-#: ../modules/testimonials/testimonials.php:16
-#: ../modules/slideshow/slideshow.php:16 ../modules/gallery/gallery.php:16
-#: ../modules/accordion/accordion.php:16
-msgid "Advanced Modules"
+#: ../classes/FLBuilderPhoto.php:77 ../includes/js-config.php:37
+#: ../includes/row-settings.php:332 ../modules/accordion/accordion.php:66
+#: ../modules/gallery/gallery.php:264
+msgid "Medium"
 msgstr ""
 
-#: ../modules/button/button.php:28 ../modules/map/map.php:26
-#: ../modules/rich-text/rich-text.php:26
-#: ../modules/contact-form/contact-form.php:57
-#: ../modules/content-slider/content-slider.php:183
-#: ../modules/content-slider/content-slider.php:307
-#: ../modules/woocommerce/woocommerce.php:50
-#: ../modules/social-buttons/social-buttons.php:62
-#: ../modules/sidebar/sidebar.php:27 ../modules/icon-group/icon-group.php:124
-#: ../modules/cta/cta.php:64 ../modules/video/video.php:75
-#: ../modules/html/html.php:26 ../modules/widget/widget.php:27
-#: ../modules/icon/icon.php:29 ../modules/callout/callout.php:206
-#: ../modules/testimonials/testimonials.php:30
-#: ../modules/testimonials/testimonials.php:191 ../modules/photo/photo.php:313
-#: ../modules/slideshow/slideshow.php:256 ../modules/heading/heading.php:26
-#: ../modules/gallery/gallery.php:209 ../modules/accordion/accordion.php:86
-#: ../modules/separator/separator.php:27
-#: ../includes/user-template-settings.php:7 ../includes/global-settings.php:7
-msgid "General"
+#: ../classes/FLBuilderPhoto.php:78 ../includes/js-config.php:59
+msgid "Thumbnail"
 msgstr ""
 
-#: ../modules/button/button.php:35
-#: ../modules/content-slider/content-slider.php:375
-#: ../modules/content-slider/content-slider.php:610 ../modules/cta/cta.php:76
-#: ../modules/cta/cta.php:202 ../modules/callout/callout.php:218
-#: ../modules/callout/callout.php:452 ../modules/callout/callout.php:468
-#: ../includes/row-settings.php:42 ../includes/column-settings.php:23
-msgid "Text"
+#: ../classes/FLBuilderTemplates.php:28
+msgid "Page Builder Templates"
 msgstr ""
 
-#: ../modules/button/button.php:39 ../modules/icon-group/icon-group.php:36
-#: ../modules/icon-group/icon-group.php:131 ../modules/icon/icon.php:14
-#: ../modules/icon/icon.php:36 ../modules/callout/callout.php:303
-#: ../modules/callout/callout.php:350 ../modules/callout/callout.php:354
-msgid "Icon"
+#: ../includes/admin-branding.php:3 ../includes/admin-settings.php:36
+#: ../includes/multisite-settings.php:22
+msgid "Branding"
 msgstr ""
 
-#: ../modules/button/button.php:45 ../modules/button/button.php:49
-#: ../modules/content-slider/content-slider.php:566
-#: ../modules/content-slider/content-slider.php:570
-#: ../modules/content-slider/content-slider.php:594
-#: ../modules/icon-group/icon-group.php:135 ../modules/cta/cta.php:211
-#: ../modules/icon/icon.php:45 ../modules/callout/callout.php:424
-#: ../modules/callout/callout.php:428 ../modules/slideshow/slideshow.php:340
-#: ../modules/heading/heading.php:38 ../modules/heading/heading.php:42
-msgid "Link"
+#: ../includes/admin-branding.php:11
+msgid "White label the page builder by entering a custom name below."
 msgstr ""
 
-#: ../modules/button/button.php:54
-#: ../modules/content-slider/content-slider.php:576 ../modules/cta/cta.php:216
-#: ../modules/icon/icon.php:50 ../modules/callout/callout.php:434
-#: ../modules/photo/photo.php:416 ../modules/heading/heading.php:47
-msgid "Link Target"
+#: ../includes/admin-branding.php:14
+msgid ""
+"Additionally, you may also add a custom icon by entering the URL of an image "
+"below.<br />Leave the field blank if you do not wish to use an icon."
 msgstr ""
 
-#: ../modules/button/button.php:57
-#: ../modules/content-slider/content-slider.php:579 ../modules/cta/cta.php:219
-#: ../modules/icon/icon.php:53 ../modules/callout/callout.php:437
-#: ../modules/photo/photo.php:419 ../modules/heading/heading.php:50
-msgid "Same Window"
+#: ../includes/admin-edit-template.php:3
+msgid "Edit Template"
 msgstr ""
 
-#: ../modules/button/button.php:58
-#: ../modules/content-slider/content-slider.php:580 ../modules/cta/cta.php:220
-#: ../modules/icon/icon.php:54 ../modules/callout/callout.php:438
-#: ../modules/photo/photo.php:420 ../modules/heading/heading.php:51
-msgid "New Window"
+#: ../includes/admin-edit-template.php:8 ../includes/admin-templates.php:10
+#: ../includes/template-settings.php:14
+#: ../includes/user-template-settings.php:15
+#: ../modules/contact-form/includes/frontend.php:4
+msgid "Name"
 msgstr ""
 
-#: ../modules/button/button.php:66
-#: ../modules/content-slider/content-slider.php:418
-#: ../modules/icon-group/icon-group.php:46 ../modules/cta/cta.php:88
-#: ../modules/icon/icon.php:72 ../modules/callout/callout.php:230
-#: ../modules/heading/heading.php:59 ../modules/accordion/accordion.php:45
-#: ../modules/separator/separator.php:55 ../includes/row-settings.php:9
-#: ../includes/column-settings.php:7 ../includes/module-settings.php:74
-msgid "Style"
+#: ../includes/admin-edit-template.php:12 ../modules/callout/callout.php:304
+#: ../modules/post-grid/post-grid.php:113
+msgid "Image"
 msgstr ""
 
-#: ../modules/button/button.php:69 ../modules/icon-group/icon-group.php:49
-#: ../modules/cta/cta.php:168 ../modules/icon/icon.php:75
-#: ../modules/heading/heading.php:62
-msgid "Colors"
+#: ../includes/admin-edit-template.php:16 ../includes/row-settings.php:155
+#: ../includes/template-settings.php:23 ../modules/callout/callout.php:352
+#: ../modules/callout/callout.php:372
+#: ../modules/content-slider/content-slider.php:465
+#: ../modules/post-grid/post-grid.php:127
+msgid "Position"
 msgstr ""
 
-#: ../modules/button/button.php:73
-#: ../modules/content-slider/content-slider.php:356
-#: ../modules/content-slider/content-slider.php:619
-#: ../modules/icon-group/icon-group.php:63 ../modules/cta/cta.php:178
-#: ../modules/cta/cta.php:230 ../modules/icon/icon.php:89
-#: ../modules/callout/callout.php:386 ../modules/callout/callout.php:477
-#: ../includes/row-settings.php:93 ../includes/column-settings.php:33
-msgid "Background Color"
+#: ../includes/admin-edit-template.php:20 ../includes/admin-templates.php:12
+#: ../includes/template-settings.php:28
+msgid "Premium"
 msgstr ""
 
-#: ../modules/button/button.php:79
-#: ../modules/content-slider/content-slider.php:625
-#: ../modules/icon-group/icon-group.php:68 ../modules/cta/cta.php:236
-#: ../modules/icon/icon.php:94 ../modules/callout/callout.php:391
-#: ../modules/callout/callout.php:483
-msgid "Background Hover Color"
-msgstr ""
-
-#: ../modules/button/button.php:85
-#: ../modules/content-slider/content-slider.php:521
-#: ../modules/content-slider/content-slider.php:630
-#: ../modules/content-slider/content-slider.php:714 ../modules/cta/cta.php:172
-#: ../modules/cta/cta.php:242 ../modules/callout/callout.php:489
-#: ../modules/heading/heading.php:67
-msgid "Text Color"
-msgstr ""
-
-#: ../modules/button/button.php:91
-#: ../modules/content-slider/content-slider.php:636 ../modules/cta/cta.php:248
-#: ../modules/callout/callout.php:495
-msgid "Text Hover Color"
-msgstr ""
-
-#: ../modules/button/button.php:97
-#: ../modules/content-slider/content-slider.php:641
-#: ../modules/icon-group/icon-group.php:73 ../modules/cta/cta.php:254
-#: ../modules/icon/icon.php:99 ../modules/callout/callout.php:396
-#: ../modules/callout/callout.php:501
-msgid "Gradient"
-msgstr ""
-
-#: ../modules/button/button.php:100
+#: ../includes/admin-edit-template.php:23 ../includes/global-settings.php:18
+#: ../includes/global-settings.php:87 ../includes/row-settings.php:307
+#: ../includes/template-settings.php:31 ../modules/accordion/accordion.php:90
+#: ../modules/button/button.php:137 ../modules/callout/callout.php:419
+#: ../modules/callout/callout.php:535
 #: ../modules/content-slider/content-slider.php:202
 #: ../modules/content-slider/content-slider.php:216
 #: ../modules/content-slider/content-slider.php:250
 #: ../modules/content-slider/content-slider.php:259
 #: ../modules/content-slider/content-slider.php:530
-#: ../modules/content-slider/content-slider.php:644
-#: ../modules/social-buttons/social-buttons.php:103
-#: ../modules/social-buttons/social-buttons.php:112
-#: ../modules/social-buttons/social-buttons.php:121
-#: ../modules/icon-group/icon-group.php:76 ../modules/cta/cta.php:257
-#: ../modules/video/video.php:110 ../modules/video/video.php:119
-#: ../modules/icon/icon.php:102 ../modules/callout/callout.php:399
-#: ../modules/callout/callout.php:504
-#: ../modules/testimonials/testimonials.php:81
-#: ../modules/testimonials/testimonials.php:120
-#: ../modules/testimonials/testimonials.php:145
+#: ../modules/content-slider/content-slider.php:643 ../modules/cta/cta.php:289
+#: ../modules/icon-group/icon-group.php:82 ../modules/icon/icon.php:113
 #: ../modules/slideshow/slideshow.php:315
 #: ../modules/slideshow/slideshow.php:325
-#: ../modules/slideshow/slideshow.php:368
-#: ../modules/slideshow/slideshow.php:409
-#: ../modules/slideshow/slideshow.php:428
-#: ../modules/slideshow/slideshow.php:477
-#: ../modules/slideshow/slideshow.php:486
-#: ../modules/slideshow/slideshow.php:495
-#: ../modules/slideshow/slideshow.php:504
-#: ../modules/slideshow/slideshow.php:513
-#: ../modules/slideshow/slideshow.php:522
-#: ../modules/slideshow/slideshow.php:531
-#: ../modules/slideshow/slideshow.php:545
-#: ../modules/slideshow/slideshow.php:560
-#: ../modules/slideshow/slideshow.php:595
-#: ../modules/slideshow/slideshow.php:604
-#: ../modules/slideshow/slideshow.php:613
-#: ../modules/slideshow/slideshow.php:622 ../includes/row-settings.php:250
-#: ../includes/global-settings.php:18 ../includes/global-settings.php:87
+#: ../modules/slideshow/slideshow.php:376
+#: ../modules/slideshow/slideshow.php:417
+#: ../modules/slideshow/slideshow.php:439
+#: ../modules/slideshow/slideshow.php:488
+#: ../modules/slideshow/slideshow.php:497
+#: ../modules/slideshow/slideshow.php:506
+#: ../modules/slideshow/slideshow.php:515
+#: ../modules/slideshow/slideshow.php:524
+#: ../modules/slideshow/slideshow.php:533
+#: ../modules/slideshow/slideshow.php:542
+#: ../modules/slideshow/slideshow.php:556
+#: ../modules/slideshow/slideshow.php:571
+#: ../modules/slideshow/slideshow.php:606
+#: ../modules/slideshow/slideshow.php:618
+#: ../modules/slideshow/slideshow.php:630
+#: ../modules/slideshow/slideshow.php:642
+#: ../modules/social-buttons/social-buttons.php:111
+#: ../modules/social-buttons/social-buttons.php:120
+#: ../modules/social-buttons/social-buttons.php:129
+#: ../modules/testimonials/testimonials.php:85
+#: ../modules/testimonials/testimonials.php:124
+#: ../modules/testimonials/testimonials.php:154 ../modules/video/video.php:111
+#: ../modules/video/video.php:123
 msgid "No"
 msgstr ""
 
-#: ../modules/button/button.php:101
+#: ../includes/admin-edit-template.php:24 ../includes/global-settings.php:19
+#: ../includes/global-settings.php:88 ../includes/row-settings.php:308
+#: ../includes/template-settings.php:32 ../modules/accordion/accordion.php:89
+#: ../modules/button/button.php:138 ../modules/callout/callout.php:420
+#: ../modules/callout/callout.php:536
 #: ../modules/content-slider/content-slider.php:203
 #: ../modules/content-slider/content-slider.php:217
 #: ../modules/content-slider/content-slider.php:251
 #: ../modules/content-slider/content-slider.php:260
 #: ../modules/content-slider/content-slider.php:531
-#: ../modules/content-slider/content-slider.php:645
-#: ../modules/social-buttons/social-buttons.php:102
-#: ../modules/social-buttons/social-buttons.php:111
-#: ../modules/social-buttons/social-buttons.php:120
-#: ../modules/icon-group/icon-group.php:77 ../modules/cta/cta.php:258
-#: ../modules/video/video.php:111 ../modules/video/video.php:120
-#: ../modules/icon/icon.php:103 ../modules/callout/callout.php:400
-#: ../modules/callout/callout.php:505
-#: ../modules/testimonials/testimonials.php:82
-#: ../modules/testimonials/testimonials.php:121
-#: ../modules/testimonials/testimonials.php:146
+#: ../modules/content-slider/content-slider.php:644 ../modules/cta/cta.php:290
+#: ../modules/icon-group/icon-group.php:83 ../modules/icon/icon.php:114
 #: ../modules/slideshow/slideshow.php:316
 #: ../modules/slideshow/slideshow.php:326
-#: ../modules/slideshow/slideshow.php:369
-#: ../modules/slideshow/slideshow.php:410
-#: ../modules/slideshow/slideshow.php:429
-#: ../modules/slideshow/slideshow.php:478
-#: ../modules/slideshow/slideshow.php:487
-#: ../modules/slideshow/slideshow.php:496
-#: ../modules/slideshow/slideshow.php:505
-#: ../modules/slideshow/slideshow.php:514
-#: ../modules/slideshow/slideshow.php:523
-#: ../modules/slideshow/slideshow.php:532
-#: ../modules/slideshow/slideshow.php:546
-#: ../modules/slideshow/slideshow.php:561
-#: ../modules/slideshow/slideshow.php:596
-#: ../modules/slideshow/slideshow.php:605
-#: ../modules/slideshow/slideshow.php:614
-#: ../modules/slideshow/slideshow.php:623 ../includes/row-settings.php:251
-#: ../includes/global-settings.php:19 ../includes/global-settings.php:88
+#: ../modules/slideshow/slideshow.php:377
+#: ../modules/slideshow/slideshow.php:418
+#: ../modules/slideshow/slideshow.php:440
+#: ../modules/slideshow/slideshow.php:489
+#: ../modules/slideshow/slideshow.php:498
+#: ../modules/slideshow/slideshow.php:507
+#: ../modules/slideshow/slideshow.php:516
+#: ../modules/slideshow/slideshow.php:525
+#: ../modules/slideshow/slideshow.php:534
+#: ../modules/slideshow/slideshow.php:543
+#: ../modules/slideshow/slideshow.php:557
+#: ../modules/slideshow/slideshow.php:572
+#: ../modules/slideshow/slideshow.php:607
+#: ../modules/slideshow/slideshow.php:619
+#: ../modules/slideshow/slideshow.php:631
+#: ../modules/slideshow/slideshow.php:643
+#: ../modules/social-buttons/social-buttons.php:110
+#: ../modules/social-buttons/social-buttons.php:119
+#: ../modules/social-buttons/social-buttons.php:128
+#: ../modules/testimonials/testimonials.php:86
+#: ../modules/testimonials/testimonials.php:125
+#: ../modules/testimonials/testimonials.php:155 ../modules/video/video.php:112
+#: ../modules/video/video.php:124
 msgid "Yes"
 msgstr ""
 
-#: ../modules/button/button.php:107 ../modules/icon-group/icon-group.php:83
-#: ../modules/cta/cta.php:91 ../modules/icon/icon.php:109
-#: ../modules/callout/callout.php:233 ../modules/heading/heading.php:72
-msgid "Structure"
+#: ../includes/admin-edit-template.php:29 ../includes/admin-templates.php:11
+#: ../includes/template-settings.php:37
+msgid "Category"
 msgstr ""
 
-#: ../modules/button/button.php:111
-#: ../modules/content-slider/content-slider.php:476
-#: ../includes/row-settings.php:16
-msgid "Width"
+#: ../includes/admin-edit-template.php:32 ../includes/template-settings.php:40
+msgid "Landing Pages"
 msgstr ""
 
-#: ../modules/button/button.php:114
-#: ../modules/content-slider/content-slider.php:554
-#: ../modules/callout/callout.php:518
-msgid "Auto"
+#: ../includes/admin-edit-template.php:33 ../includes/template-settings.php:41
+msgid "Company Info"
 msgstr ""
 
-#: ../modules/button/button.php:115 ../modules/callout/callout.php:519
-#: ../includes/row-settings.php:20 ../includes/row-settings.php:35
-msgid "Full Width"
+#: ../includes/admin-edit-template.php:40
+msgid "Update Template"
 msgstr ""
 
-#: ../modules/button/button.php:116
-#: ../modules/content-slider/content-slider.php:442
-#: ../modules/social-buttons/social-buttons.php:72 ../modules/cta/cta.php:149
-#: ../modules/callout/callout.php:270 ../modules/heading/heading.php:103
-#: ../modules/heading/heading.php:130 ../modules/heading/heading.php:154
-msgid "Custom"
+#: ../includes/admin-posts.php:3 ../modules/rich-text/rich-text.php:14
+msgid "Text Editor"
 msgstr ""
 
-#: ../modules/button/button.php:130
-msgid "Custom Width"
+#: ../includes/admin-posts.php:7
+msgid "is currently active for this page."
 msgstr ""
 
-#: ../modules/button/button.php:134 ../modules/button/button.php:152
-#: ../modules/button/button.php:160 ../modules/button/button.php:168
+#: ../includes/admin-posts.php:8
+msgid "Launch"
+msgstr ""
+
+#: ../includes/admin-settings.php:7 ../includes/global-settings.php:4
+#: ../includes/js-config.php:55 ../includes/multisite-settings.php:7
+msgid "Settings"
+msgstr ""
+
+#: ../includes/admin-settings.php:12 ../includes/multisite-settings.php:12
+msgid "Settings updated!"
+msgstr ""
+
+#: ../includes/admin-settings.php:19 ../includes/multisite-settings.php:18
+msgid "License"
+msgstr ""
+
+#: ../includes/admin-settings.php:26 ../includes/global-settings.php:67
+#: ../includes/multisite-settings.php:19
+msgid "Modules"
+msgstr ""
+
+#: ../includes/admin-settings.php:29 ../includes/multisite-settings.php:20
+#: ../includes/ui.php:22
+msgid "Templates"
+msgstr ""
+
+#: ../includes/admin-settings.php:32 ../includes/admin-settings.php:163
+#: ../includes/multisite-settings.php:21
+#: ../includes/multisite-settings.php:111
+msgid "Post Types"
+msgstr ""
+
+#: ../includes/admin-settings.php:33
+msgid "Editing"
+msgstr ""
+
+#: ../includes/admin-settings.php:40 ../includes/admin-settings.php:278
+#: ../includes/admin-settings.php:290 ../includes/multisite-settings.php:23
+#: ../includes/multisite-settings.php:150
+#: ../includes/multisite-settings.php:162
+msgid "Uninstall"
+msgstr ""
+
+#: ../includes/admin-settings.php:61
+msgid ""
+"You are currently running the lite version of the Beaver Builder plugin. "
+"Upgrade today for access to premium features such as advanced modules, "
+"templates, support and more!"
+msgstr ""
+
+#: ../includes/admin-settings.php:63
+msgid "Upgrade Now"
+msgstr ""
+
+#: ../includes/admin-settings.php:65
+msgid "Learn More"
+msgstr ""
+
+#: ../includes/admin-settings.php:74 ../includes/multisite-settings.php:38
+msgid "Enabled Modules"
+msgstr ""
+
+#: ../includes/admin-settings.php:81 ../includes/admin-settings.php:132
+#: ../includes/admin-settings.php:170 ../includes/admin-settings.php:222
+msgid "Override network settings?"
+msgstr ""
+
+#: ../includes/admin-settings.php:87 ../includes/multisite-settings.php:44
+msgid "Check or uncheck modules below to enable or disable them."
+msgstr ""
+
+#: ../includes/admin-settings.php:96 ../includes/multisite-settings.php:53
+msgid "All"
+msgstr ""
+
+#: ../includes/admin-settings.php:125 ../includes/multisite-settings.php:81
+#: ../includes/template-settings.php:4
+msgid "Template Settings"
+msgstr ""
+
+#: ../includes/admin-settings.php:138 ../includes/multisite-settings.php:87
+msgid "Enable or disable templates using the options below."
+msgstr ""
+
+#: ../includes/admin-settings.php:145 ../includes/multisite-settings.php:94
+msgid "Enable All Templates"
+msgstr ""
+
+#: ../includes/admin-settings.php:146 ../includes/multisite-settings.php:95
+msgid "Enable Core Templates Only"
+msgstr ""
+
+#: ../includes/admin-settings.php:147 ../includes/multisite-settings.php:96
+msgid "Enable User Templates Only"
+msgstr ""
+
+#: ../includes/admin-settings.php:148 ../includes/multisite-settings.php:97
+msgid "Disable All Templates"
+msgstr ""
+
+#: ../includes/admin-settings.php:176
+msgid "Select the post types you would like the builder to work with."
+msgstr ""
+
+#: ../includes/admin-settings.php:177 ../includes/multisite-settings.php:116
+msgid "NOTE: Not all custom post types may be supported."
+msgstr ""
+
+#: ../includes/admin-settings.php:215
+msgid "Editing Settings"
+msgstr ""
+
+#: ../includes/admin-settings.php:228
+msgid ""
+"Toggling the settings below will enable or disable parts of the builder for "
+"everyone except for administrators."
+msgstr ""
+
+#: ../includes/admin-settings.php:232
+msgid "Enable or disable drag &amp; drop of rows or modules."
+msgstr ""
+
+#: ../includes/admin-settings.php:235
+msgid "Enable Drag &amp; Drop"
+msgstr ""
+
+#: ../includes/admin-settings.php:236
+msgid "Disable Drag &amp; Drop"
+msgstr ""
+
+#: ../includes/admin-settings.php:239
+msgid "Enable or disable deleting rows or modules."
+msgstr ""
+
+#: ../includes/admin-settings.php:242
+msgid "Enable Deleting"
+msgstr ""
+
+#: ../includes/admin-settings.php:243
+msgid "Disable Deleting"
+msgstr ""
+
+#: ../includes/admin-settings.php:246
+msgid "Enable or disable adding rows or modules."
+msgstr ""
+
+#: ../includes/admin-settings.php:249
+msgid "Enable Adding"
+msgstr ""
+
+#: ../includes/admin-settings.php:250
+msgid "Disable Adding"
+msgstr ""
+
+#: ../includes/admin-settings.php:253
+msgid "Enable or disable the tools menu."
+msgstr ""
+
+#: ../includes/admin-settings.php:256
+msgid "Enable Tools"
+msgstr ""
+
+#: ../includes/admin-settings.php:257
+msgid "Disable Tools"
+msgstr ""
+
+#: ../includes/admin-settings.php:280 ../includes/multisite-settings.php:152
+msgid ""
+"Clicking the button below will uninstall the page builder plugin and delete "
+"all of the data associated with it. You can uninstall or deactivate the page "
+"builder from the plugins page instead if you do not wish to delete the data."
+msgstr ""
+
+#: ../includes/admin-settings.php:282 ../includes/admin-settings.php:285
+#: ../includes/multisite-settings.php:154
+#: ../includes/multisite-settings.php:157
+#: ../includes/updater/includes/form.php:24
+msgid "NOTE:"
+msgstr ""
+
+#: ../includes/admin-settings.php:282 ../includes/multisite-settings.php:154
+msgid ""
+"The builder does not delete the post meta _fl_builder_data, "
+"_fl_builder_draft and _fl_builder_enabled in case you want to reinstall it "
+"later. If you do, the builder will rebuild all of its data using those meta "
+"values."
+msgstr ""
+
+#: ../includes/admin-settings.php:285 ../includes/multisite-settings.php:157
+#: ../includes/updater/includes/form.php:24
+msgid "This applies to all sites on the network."
+msgstr ""
+
+#: ../includes/admin-settings.php:304 ../includes/multisite-settings.php:176
+msgid ""
+"Please type \"uninstall\" in the box below to confirm that you really want "
+"to uninstall the page builder and all of its data."
+msgstr ""
+
+#: ../includes/admin-templates.php:3
+msgid "Page Builder Template"
+msgstr ""
+
+#: ../includes/admin-templates.php:25 ../includes/field-form.php:17
+#: ../includes/field-photo.php:12 ../includes/template-selector.php:83
+msgid "Edit"
+msgstr ""
+
+#: ../includes/admin-templates.php:27 ../includes/template-selector.php:84
+msgid "Delete"
+msgstr ""
+
+#: ../includes/column-settings.php:4 ../includes/js-config.php:19
+msgid "Column Settings"
+msgstr ""
+
+#: ../includes/column-settings.php:7 ../includes/module-settings.php:92
+#: ../includes/row-settings.php:9 ../modules/accordion/accordion.php:45
+#: ../modules/button/button.php:97 ../modules/callout/callout.php:240
+#: ../modules/content-slider/content-slider.php:418 ../modules/cta/cta.php:98
+#: ../modules/heading/heading.php:69 ../modules/icon-group/icon-group.php:46
+#: ../modules/icon/icon.php:77 ../modules/pricing-table/pricing-table.php:45
+#: ../modules/pricing-table/pricing-table.php:157
+#: ../modules/separator/separator.php:72 ../modules/tabs/tabs.php:45
+msgid "Style"
+msgstr ""
+
+#: ../includes/column-settings.php:14
+msgid "Column Width"
+msgstr ""
+
+#: ../includes/column-settings.php:16
+#: ../modules/content-slider/content-slider.php:478
+#: ../modules/content-slider/content-slider.php:546
+msgid "%"
+msgstr ""
+
+#: ../includes/column-settings.php:26 ../includes/row-settings.php:48
+#: ../modules/button/button.php:55 ../modules/callout/callout.php:224
+#: ../modules/callout/callout.php:477 ../modules/callout/callout.php:493
+#: ../modules/content-slider/content-slider.php:375
+#: ../modules/content-slider/content-slider.php:609 ../modules/cta/cta.php:81
+#: ../modules/cta/cta.php:218
+msgid "Text"
+msgstr ""
+
+#: ../includes/column-settings.php:30 ../includes/column-settings.php:43
+#: ../includes/column-settings.php:100 ../includes/row-settings.php:52
+#: ../includes/row-settings.php:69 ../includes/row-settings.php:109
+#: ../includes/row-settings.php:379 ../modules/callout/callout.php:390
+#: ../modules/content-slider/content-slider.php:330
+#: ../modules/icon-group/icon-group.php:53 ../modules/icon/icon.php:84
+#: ../modules/separator/separator.php:34
+msgid "Color"
+msgstr ""
+
+#: ../includes/column-settings.php:39 ../includes/row-settings.php:105
+#: ../modules/button/button.php:104 ../modules/callout/callout.php:403
+#: ../modules/callout/callout.php:502
+#: ../modules/content-slider/content-slider.php:356
+#: ../modules/content-slider/content-slider.php:618 ../modules/cta/cta.php:194
+#: ../modules/cta/cta.php:256 ../modules/icon-group/icon-group.php:66
+#: ../modules/icon/icon.php:97
+msgid "Background Color"
+msgstr ""
+
+#: ../includes/column-settings.php:51 ../includes/column-settings.php:108
+#: ../includes/row-settings.php:117 ../includes/row-settings.php:387
+#: ../modules/separator/separator.php:44
+msgid "Opacity"
+msgstr ""
+
+#: ../includes/column-settings.php:63 ../includes/row-settings.php:342
+msgid "Border"
+msgstr ""
+
+#: ../includes/column-settings.php:67 ../includes/row-settings.php:65
+#: ../includes/row-settings.php:346 ../modules/callout/callout.php:473
+#: ../modules/content-slider/content-slider.php:324
+#: ../modules/content-slider/content-slider.php:371
+#: ../modules/content-slider/content-slider.php:589
+#: ../modules/content-slider/content-slider.php:688
+#: ../modules/slideshow/slideshow.php:339
+msgid "Type"
+msgstr ""
+
+#: ../includes/column-settings.php:69 ../includes/row-settings.php:348
+msgid ""
+"The type of border to use. Double borders must have a width of at least 3px "
+"to render properly."
+msgstr ""
+
+#: ../includes/column-settings.php:71 ../includes/module-settings.php:94
+#: ../includes/row-settings.php:68 ../includes/row-settings.php:143
+#: ../includes/row-settings.php:191 ../includes/row-settings.php:276
+#: ../includes/row-settings.php:350 ../modules/callout/callout.php:314
+#: ../modules/callout/callout.php:342 ../modules/callout/callout.php:476
+#: ../modules/content-slider/content-slider.php:331
+#: ../modules/content-slider/content-slider.php:378
+#: ../modules/content-slider/content-slider.php:592
+#: ../modules/gallery/gallery.php:292 ../modules/photo/photo.php:404
+#: ../modules/photo/photo.php:450 ../modules/post-grid/post-grid.php:76
+#: ../modules/slideshow/slideshow.php:342
+#: ../modules/slideshow/slideshow.php:392
+#: ../modules/slideshow/slideshow.php:454
+msgid "None"
+msgstr ""
+
+#: ../includes/column-settings.php:72 ../includes/row-settings.php:351
+#: ../modules/separator/separator.php:75
+msgid "Solid"
+msgstr ""
+
+#: ../includes/column-settings.php:73 ../includes/row-settings.php:352
+#: ../modules/separator/separator.php:76
+msgid "Dashed"
+msgstr ""
+
+#: ../includes/column-settings.php:74 ../includes/row-settings.php:353
+#: ../modules/separator/separator.php:77
+msgid "Dotted"
+msgstr ""
+
+#: ../includes/column-settings.php:75 ../includes/row-settings.php:354
+#: ../modules/separator/separator.php:78
+msgid "Double"
+msgstr ""
+
+#: ../includes/column-settings.php:119 ../includes/row-settings.php:398
+msgid "Top Width"
+msgstr ""
+
+#: ../includes/column-settings.php:121 ../includes/column-settings.php:133
+#: ../includes/column-settings.php:145 ../includes/column-settings.php:157
+#: ../includes/column-settings.php:205 ../includes/column-settings.php:217
+#: ../includes/column-settings.php:229 ../includes/column-settings.php:241
+#: ../includes/column-settings.php:258 ../includes/column-settings.php:270
+#: ../includes/column-settings.php:282 ../includes/column-settings.php:294
+#: ../includes/global-settings.php:45 ../includes/global-settings.php:53
+#: ../includes/global-settings.php:61 ../includes/global-settings.php:75
+#: ../includes/global-settings.php:102 ../includes/module-settings.php:41
+#: ../includes/module-settings.php:53 ../includes/module-settings.php:65
+#: ../includes/module-settings.php:77 ../includes/row-settings.php:400
+#: ../includes/row-settings.php:412 ../includes/row-settings.php:424
+#: ../includes/row-settings.php:436 ../includes/row-settings.php:484
+#: ../includes/row-settings.php:496 ../includes/row-settings.php:508
+#: ../includes/row-settings.php:520 ../includes/row-settings.php:537
+#: ../includes/row-settings.php:549 ../includes/row-settings.php:561
+#: ../includes/row-settings.php:573 ../modules/button/button.php:171
+#: ../modules/button/button.php:189 ../modules/button/button.php:197
+#: ../modules/button/button.php:205 ../modules/callout/callout.php:297
+#: ../modules/callout/callout.php:434 ../modules/callout/callout.php:559
+#: ../modules/callout/callout.php:567 ../modules/callout/callout.php:575
 #: ../modules/content-slider/content-slider.php:194
 #: ../modules/content-slider/content-slider.php:274
 #: ../modules/content-slider/content-slider.php:456
@@ -379,135 +625,1382 @@ msgstr ""
 #: ../modules/content-slider/content-slider.php:494
 #: ../modules/content-slider/content-slider.php:502
 #: ../modules/content-slider/content-slider.php:510
-#: ../modules/content-slider/content-slider.php:659
-#: ../modules/content-slider/content-slider.php:667
-#: ../modules/content-slider/content-slider.php:675
-#: ../modules/icon-group/icon-group.php:91
-#: ../modules/icon-group/icon-group.php:99 ../modules/cta/cta.php:123
-#: ../modules/cta/cta.php:163 ../modules/cta/cta.php:272
-#: ../modules/cta/cta.php:280 ../modules/cta/cta.php:288
-#: ../modules/icon/icon.php:117 ../modules/callout/callout.php:284
-#: ../modules/callout/callout.php:414 ../modules/callout/callout.php:528
-#: ../modules/callout/callout.php:536 ../modules/callout/callout.php:544
-#: ../modules/testimonials/testimonials.php:69
+#: ../modules/content-slider/content-slider.php:658
+#: ../modules/content-slider/content-slider.php:666
+#: ../modules/content-slider/content-slider.php:674 ../modules/cta/cta.php:133
+#: ../modules/cta/cta.php:179 ../modules/cta/cta.php:304
+#: ../modules/cta/cta.php:312 ../modules/cta/cta.php:320
+#: ../modules/gallery/gallery.php:274 ../modules/heading/heading.php:137
+#: ../modules/heading/heading.php:197 ../modules/icon-group/icon-group.php:97
+#: ../modules/icon-group/icon-group.php:105 ../modules/icon/icon.php:128
+#: ../modules/post-grid/post-grid.php:96
+#: ../modules/post-grid/post-grid.php:104
+#: ../modules/pricing-table/pricing-table.php:64
+#: ../modules/pricing-table/pricing-table.php:104
+#: ../modules/pricing-table/pricing-table.php:126
+#: ../modules/pricing-table/pricing-table.php:188
 #: ../modules/slideshow/slideshow.php:298
-#: ../modules/slideshow/slideshow.php:583 ../modules/heading/heading.php:117
-#: ../modules/heading/heading.php:168 ../modules/gallery/gallery.php:270
-#: ../includes/row-settings.php:325 ../includes/row-settings.php:334
-#: ../includes/row-settings.php:343 ../includes/row-settings.php:352
-#: ../includes/row-settings.php:391 ../includes/row-settings.php:400
-#: ../includes/row-settings.php:409 ../includes/row-settings.php:418
-#: ../includes/row-settings.php:432 ../includes/row-settings.php:441
-#: ../includes/row-settings.php:450 ../includes/row-settings.php:459
-#: ../includes/column-settings.php:100 ../includes/column-settings.php:109
-#: ../includes/column-settings.php:118 ../includes/column-settings.php:127
-#: ../includes/column-settings.php:166 ../includes/column-settings.php:175
-#: ../includes/column-settings.php:184 ../includes/column-settings.php:193
-#: ../includes/column-settings.php:207 ../includes/column-settings.php:216
-#: ../includes/column-settings.php:225 ../includes/column-settings.php:234
-#: ../includes/global-settings.php:45 ../includes/global-settings.php:53
-#: ../includes/global-settings.php:61 ../includes/global-settings.php:75
-#: ../includes/global-settings.php:102 ../includes/module-settings.php:35
-#: ../includes/module-settings.php:44 ../includes/module-settings.php:53
-#: ../includes/module-settings.php:62
+#: ../modules/slideshow/slideshow.php:594
+#: ../modules/testimonials/testimonials.php:73
 msgid "px"
 msgstr ""
 
-#: ../modules/button/button.php:138
-#: ../modules/social-buttons/social-buttons.php:89
-#: ../modules/icon-group/icon-group.php:103 ../modules/cta/cta.php:109
-#: ../modules/icon/icon.php:121 ../modules/photo/photo.php:358
-#: ../modules/heading/heading.php:76 ../modules/heading/heading.php:126
-msgid "Alignment"
+#: ../includes/column-settings.php:131 ../includes/row-settings.php:410
+msgid "Bottom Width"
 msgstr ""
 
-#: ../modules/button/button.php:141
-#: ../modules/content-slider/content-slider.php:470
-#: ../modules/social-buttons/social-buttons.php:92
-#: ../modules/icon-group/icon-group.php:106 ../modules/cta/cta.php:113
-#: ../modules/icon/icon.php:124 ../modules/callout/callout.php:240
-#: ../modules/photo/photo.php:362 ../modules/heading/heading.php:80
-#: ../modules/heading/heading.php:144
-msgid "Center"
+#: ../includes/column-settings.php:143 ../includes/row-settings.php:422
+msgid "Left Width"
 msgstr ""
 
-#: ../modules/button/button.php:142
-#: ../modules/content-slider/content-slider.php:469
-#: ../modules/social-buttons/social-buttons.php:93
-#: ../modules/icon-group/icon-group.php:107 ../modules/cta/cta.php:112
-#: ../modules/icon/icon.php:125 ../modules/callout/callout.php:241
-#: ../modules/photo/photo.php:361 ../modules/heading/heading.php:79
-#: ../modules/heading/heading.php:143 ../includes/row-settings.php:407
-#: ../includes/row-settings.php:448 ../includes/column-settings.php:182
-#: ../includes/column-settings.php:223 ../includes/module-settings.php:51
+#: ../includes/column-settings.php:155 ../includes/row-settings.php:434
+msgid "Right Width"
+msgstr ""
+
+#: ../includes/column-settings.php:170 ../includes/module-settings.php:6
+#: ../includes/row-settings.php:449
+#: ../modules/content-slider/content-slider.php:266
+msgid "Advanced"
+msgstr ""
+
+#: ../includes/column-settings.php:177 ../includes/module-settings.php:13
+#: ../includes/row-settings.php:456
+msgid "CSS Class"
+msgstr ""
+
+#: ../includes/column-settings.php:178
+msgid ""
+"A custom CSS class that will be applied to this column. Spaces only, no dots."
+msgstr ""
+
+#: ../includes/column-settings.php:185 ../includes/module-settings.php:21
+#: ../includes/row-settings.php:464 ../modules/slideshow/slideshow.php:290
+msgid "Display"
+msgstr ""
+
+#: ../includes/column-settings.php:187 ../includes/module-settings.php:23
+#: ../includes/row-settings.php:466
+msgid "Always"
+msgstr ""
+
+#: ../includes/column-settings.php:188 ../includes/module-settings.php:24
+#: ../includes/row-settings.php:467
+msgid "Desktop Only"
+msgstr ""
+
+#: ../includes/column-settings.php:189 ../includes/module-settings.php:25
+#: ../includes/row-settings.php:468
+msgid "Mobile Only"
+msgstr ""
+
+#: ../includes/column-settings.php:191
+msgid ""
+"Choose whether to always show this column, only show it on the desktop view "
+"or only show it on the mobile view."
+msgstr ""
+
+#: ../includes/column-settings.php:199 ../includes/global-settings.php:41
+#: ../includes/global-settings.php:71 ../includes/module-settings.php:35
+#: ../includes/row-settings.php:478
+msgid "Margins"
+msgstr ""
+
+#: ../includes/column-settings.php:203 ../includes/column-settings.php:256
+#: ../includes/module-settings.php:39 ../includes/row-settings.php:482
+#: ../includes/row-settings.php:535 ../modules/slideshow/slideshow.php:475
+msgid "Top"
+msgstr ""
+
+#: ../includes/column-settings.php:215 ../includes/column-settings.php:268
+#: ../includes/module-settings.php:51 ../includes/row-settings.php:494
+#: ../includes/row-settings.php:547 ../modules/slideshow/slideshow.php:474
+msgid "Bottom"
+msgstr ""
+
+#: ../includes/column-settings.php:227 ../includes/column-settings.php:280
+#: ../includes/module-settings.php:63 ../includes/row-settings.php:506
+#: ../includes/row-settings.php:559 ../modules/button/button.php:179
+#: ../modules/callout/callout.php:251
+#: ../modules/content-slider/content-slider.php:469 ../modules/cta/cta.php:122
+#: ../modules/heading/heading.php:94 ../modules/heading/heading.php:166
+#: ../modules/icon-group/icon-group.php:113 ../modules/icon/icon.php:136
+#: ../modules/photo/photo.php:417
+#: ../modules/social-buttons/social-buttons.php:101
 msgid "Left"
 msgstr ""
 
-#: ../modules/button/button.php:143
-#: ../modules/content-slider/content-slider.php:471
-#: ../modules/social-buttons/social-buttons.php:94
-#: ../modules/icon-group/icon-group.php:108 ../modules/cta/cta.php:114
-#: ../modules/icon/icon.php:126 ../modules/callout/callout.php:242
-#: ../modules/photo/photo.php:363 ../modules/heading/heading.php:81
-#: ../modules/heading/heading.php:145 ../includes/row-settings.php:416
-#: ../includes/row-settings.php:457 ../includes/column-settings.php:191
-#: ../includes/column-settings.php:232 ../includes/module-settings.php:60
+#: ../includes/column-settings.php:239 ../includes/column-settings.php:292
+#: ../includes/module-settings.php:75 ../includes/row-settings.php:518
+#: ../includes/row-settings.php:571 ../modules/button/button.php:180
+#: ../modules/callout/callout.php:252
+#: ../modules/content-slider/content-slider.php:471 ../modules/cta/cta.php:124
+#: ../modules/heading/heading.php:96 ../modules/heading/heading.php:168
+#: ../modules/icon-group/icon-group.php:114 ../modules/icon/icon.php:137
+#: ../modules/photo/photo.php:419
+#: ../modules/social-buttons/social-buttons.php:102
 msgid "Right"
 msgstr ""
 
-#: ../modules/button/button.php:148
-#: ../modules/content-slider/content-slider.php:655 ../modules/cta/cta.php:268
-#: ../modules/callout/callout.php:524 ../modules/heading/heading.php:99
-#: ../modules/heading/heading.php:150
-msgid "Font Size"
-msgstr ""
-
-#: ../modules/button/button.php:156
-#: ../modules/content-slider/content-slider.php:663 ../modules/cta/cta.php:276
-#: ../modules/callout/callout.php:532 ../includes/row-settings.php:426
-#: ../includes/column-settings.php:201 ../includes/global-settings.php:49
+#: ../includes/column-settings.php:252 ../includes/global-settings.php:49
+#: ../includes/row-settings.php:531 ../modules/button/button.php:193
+#: ../modules/callout/callout.php:563
+#: ../modules/content-slider/content-slider.php:662 ../modules/cta/cta.php:308
 msgid "Padding"
 msgstr ""
 
-#: ../modules/button/button.php:164 ../modules/cta/cta.php:284
-#: ../modules/callout/callout.php:540
+#: ../includes/field-icon.php:2 ../includes/icon-selector.php:23
+msgid "Select Icon"
+msgstr ""
+
+#: ../includes/field-icon.php:5 ../includes/field-photo.php:13
+msgid "Replace"
+msgstr ""
+
+#: ../includes/field-icon.php:7 ../includes/js-config.php:47
+msgid "Remove"
+msgstr ""
+
+#: ../includes/field-link.php:3
+msgid "Select"
+msgstr ""
+
+#: ../includes/field-link.php:5
+msgid "Enter a post title to search."
+msgstr ""
+
+#: ../includes/field-link.php:6 ../includes/field-suggest.php:7
+msgid "Start typing..."
+msgstr ""
+
+#: ../includes/field-link.php:7 ../includes/icon-selector.php:48
+#: ../includes/js-config.php:15 ../includes/settings.php:63
+#: ../includes/template-selector.php:102
+msgid "Cancel"
+msgstr ""
+
+#: ../includes/field-multiple-photos.php:9
+msgid " Photo Selected"
+msgstr ""
+
+#: ../includes/field-multiple-photos.php:12
+msgid " Photos Selected"
+msgstr ""
+
+#: ../includes/field-multiple-photos.php:18
+msgid "Create Gallery"
+msgstr ""
+
+#: ../includes/field-multiple-photos.php:19
+msgid "Edit Gallery"
+msgstr ""
+
+#: ../includes/field-multiple-photos.php:20
+msgid "Add Photos"
+msgstr ""
+
+#: ../includes/field-photo.php:3 ../includes/js-config.php:52
+msgid "Select Photo"
+msgstr ""
+
+#: ../includes/field-video.php:3 ../includes/js-config.php:54
+msgid "Select Video"
+msgstr ""
+
+#: ../includes/field-video.php:17
+msgid "Replace Video"
+msgstr ""
+
+#: ../includes/global-settings.php:7 ../includes/template-settings.php:7
+#: ../includes/user-template-settings.php:7
+#: ../modules/accordion/accordion.php:110 ../modules/button/button.php:48
+#: ../modules/callout/callout.php:208
+#: ../modules/contact-form/contact-form.php:57
+#: ../modules/content-slider/content-slider.php:183
+#: ../modules/content-slider/content-slider.php:307 ../modules/cta/cta.php:64
+#: ../modules/gallery/gallery.php:213 ../modules/heading/heading.php:26
+#: ../modules/html/html.php:26 ../modules/icon-group/icon-group.php:130
+#: ../modules/icon/icon.php:29 ../modules/map/map.php:26
+#: ../modules/photo/photo.php:368
+#: ../modules/pricing-table/pricing-table.php:89
+#: ../modules/rich-text/rich-text.php:26 ../modules/separator/separator.php:27
+#: ../modules/sidebar/sidebar.php:27 ../modules/slideshow/slideshow.php:256
+#: ../modules/social-buttons/social-buttons.php:64 ../modules/tabs/tabs.php:77
+#: ../modules/testimonials/testimonials.php:30
+#: ../modules/testimonials/testimonials.php:200 ../modules/video/video.php:76
+#: ../modules/widget/widget.php:27 ../modules/woocommerce/woocommerce.php:50
+msgid "General"
+msgstr ""
+
+#: ../includes/global-settings.php:8
+msgid "Note: These settings apply to all posts and pages."
+msgstr ""
+
+#: ../includes/global-settings.php:11
+msgid "Default Page Heading"
+msgstr ""
+
+#: ../includes/global-settings.php:15 ../modules/post-grid/post-grid.php:116
+#: ../modules/post-grid/post-grid.php:149
+#: ../modules/post-grid/post-grid.php:158
+#: ../modules/post-grid/post-grid.php:187
+#: ../modules/post-grid/post-grid.php:201
+#: ../modules/post-grid/post-grid.php:215
+msgid "Show"
+msgstr ""
+
+#: ../includes/global-settings.php:26
+msgid ""
+"Choosing no will hide the default theme heading for the \"Page\" post type. "
+"You will also be required to enter some basic CSS for this to work if you "
+"choose no."
+msgstr ""
+
+#: ../includes/global-settings.php:30
+msgid "CSS Selector"
+msgstr ""
+
+#: ../includes/global-settings.php:32
+msgid "Enter a CSS selector for the default page heading to hide it."
+msgstr ""
+
+#: ../includes/global-settings.php:37
+msgid "Rows"
+msgstr ""
+
+#: ../includes/global-settings.php:57
+msgid "Max Width"
+msgstr ""
+
+#: ../includes/global-settings.php:62
+msgid ""
+"All rows will default to this width. You can override this and make a row "
+"full width in the settings for each row."
+msgstr ""
+
+#: ../includes/global-settings.php:80
+msgid "Mobile Layout"
+msgstr ""
+
+#: ../includes/global-settings.php:84
+msgid "Enabled"
+msgstr ""
+
+#: ../includes/global-settings.php:98
+msgid "Breakpoint"
+msgstr ""
+
+#: ../includes/icon-selector.php:25
+msgid "Filter: "
+msgstr ""
+
+#: ../includes/js-config.php:14
+msgid "What would you like to do?"
+msgstr ""
+
+#: ../includes/js-config.php:16
+msgid "Change Template"
+msgstr ""
+
+#: ../includes/js-config.php:17
+msgid ""
+"Warning! Changing the template will replace your existing layout. Do you "
+"really want to do this?"
+msgstr ""
+
+#: ../includes/js-config.php:18
+msgid "Column"
+msgstr ""
+
+#: ../includes/js-config.php:20
+msgid ""
+"Please select either a background layout or content layout before submitting."
+msgstr ""
+
+#: ../includes/js-config.php:21
+msgid "Do you really want to delete this item?"
+msgstr ""
+
+#: ../includes/js-config.php:22
+msgid ""
+"Do you really want to delete this module? All content data will be "
+"permanently deleted."
+msgstr ""
+
+#: ../includes/js-config.php:23
+msgid ""
+"Do you really want to delete this row? All content data will be permanently "
+"deleted."
+msgstr ""
+
+#: ../includes/js-config.php:24
+msgid "Do you really want to delete this template?"
+msgstr ""
+
+#: ../includes/js-config.php:25
+msgid "Discard Draft"
+msgstr ""
+
+#: ../includes/js-config.php:26
+msgid ""
+"Do you really want to discard this draft? All of your changes that are not "
+"published will be lost."
+msgstr ""
+
+#: ../includes/js-config.php:27
+msgid "Save Draft"
+msgstr ""
+
+#: ../includes/js-config.php:28
+msgid "Duplicate"
+msgstr ""
+
+#: ../includes/js-config.php:29
+msgid "Duplicate This Page"
+msgstr ""
+
+#: ../includes/js-config.php:30
+msgid "Duplicate This Template"
+msgstr ""
+
+#: ../includes/js-config.php:31
+msgid "Edit Global Settings"
+msgstr ""
+
+#: ../includes/js-config.php:32
+msgid "Drop a row layout or module to get started!"
+msgstr ""
+
+#: ../includes/js-config.php:34
+msgid "Insert"
+msgstr ""
+
+#: ../includes/js-config.php:36
+msgid "Manage Templates"
+msgstr ""
+
+#: ../includes/js-config.php:38
+msgid "Module"
+msgstr ""
+
+#: ../includes/js-config.php:39
+msgid "Move"
+msgstr ""
+
+#: ../includes/js-config.php:40
+msgid "New Column"
+msgstr ""
+
+#: ../includes/js-config.php:41
+msgid "New Row"
+msgstr ""
+
+#: ../includes/js-config.php:42
+msgid "No results found."
+msgstr ""
+
+#: ../includes/js-config.php:43
+msgid "Ok"
+msgstr ""
+
+#: ../includes/js-config.php:44
+msgid "Photo Selected"
+msgstr ""
+
+#: ../includes/js-config.php:45
+msgid "Photos Selected"
+msgstr ""
+
+#: ../includes/js-config.php:46
+msgid "Publish Changes"
+msgstr ""
+
+#: ../includes/js-config.php:48
+msgid "Row"
+msgstr ""
+
+#: ../includes/js-config.php:49 ../includes/row-settings.php:6
+msgid "Row Settings"
+msgstr ""
+
+#: ../includes/js-config.php:50
+msgid "Save Core Template"
+msgstr ""
+
+#: ../includes/js-config.php:51 ../includes/user-template-settings.php:4
+msgid "Save Template"
+msgstr ""
+
+#: ../includes/js-config.php:53
+msgid "Select Photos"
+msgstr ""
+
+#: ../includes/js-config.php:56
+msgid "Append New Layout"
+msgstr ""
+
+#: ../includes/js-config.php:57
+msgid "Replace Existing Layout"
+msgstr ""
+
+#: ../includes/js-config.php:58
+msgid "Template Saved!"
+msgstr ""
+
+#: ../includes/js-config.php:60
+msgid ""
+"The settings you are currently editing will not be saved if you navigate "
+"away from this page."
+msgstr ""
+
+#: ../includes/loop-settings.php:19
+msgid "Post Type"
+msgstr ""
+
+#: ../includes/loop-settings.php:25
+msgid "Order By"
+msgstr ""
+
+#: ../includes/loop-settings.php:27
+msgid "ID"
+msgstr ""
+
+#: ../includes/loop-settings.php:28 ../modules/post-grid/post-grid.php:155
+#: ../modules/woocommerce/woocommerce.php:189
+msgid "Date"
+msgstr ""
+
+#: ../includes/loop-settings.php:29
+msgid "Date Last Modified"
+msgstr ""
+
+#: ../includes/loop-settings.php:30
+#: ../modules/pricing-table/pricing-table.php:96
+msgid "Title"
+msgstr ""
+
+#: ../includes/loop-settings.php:31 ../modules/post-grid/post-grid.php:146
+msgid "Author"
+msgstr ""
+
+#: ../includes/loop-settings.php:32
+msgid "Comment Count"
+msgstr ""
+
+#: ../includes/loop-settings.php:33
+msgid "Menu Order"
+msgstr ""
+
+#: ../includes/loop-settings.php:34
+msgid "Random"
+msgstr ""
+
+#: ../includes/loop-settings.php:41
+msgid "Order"
+msgstr ""
+
+#: ../includes/loop-settings.php:43
+msgid "Descending"
+msgstr ""
+
+#: ../includes/loop-settings.php:44
+msgid "Ascending"
+msgstr ""
+
+#: ../includes/loop-settings.php:52
+msgid "Filter"
+msgstr ""
+
+#: ../includes/loop-settings.php:63
+#, php-format
+msgid "Enter a comma separated list of %s. Only these %s will be shown."
+msgstr ""
+
+#: ../includes/loop-settings.php:76
+#, php-format
+msgid ""
+"Enter a comma separated list of %s. Only posts with these %s will be shown."
+msgstr ""
+
+#: ../includes/loop-settings.php:90
+msgid "Authors"
+msgstr ""
+
+#: ../includes/loop-settings.php:91
+msgid ""
+"Enter a comma separated list of authors usernames. Only posts with these "
+"authors will be shown."
+msgstr ""
+
+#: ../includes/module-settings.php:14
+msgid ""
+"A custom CSS class that will be applied to this module. Spaces only, no dots."
+msgstr ""
+
+#: ../includes/module-settings.php:27
+msgid ""
+"Choose whether to always show this module, only show it on the desktop view "
+"or only show it on the mobile view."
+msgstr ""
+
+#: ../includes/module-settings.php:88
+msgid "Animation"
+msgstr ""
+
+#: ../includes/module-settings.php:95
+msgid "Fade In"
+msgstr ""
+
+#: ../includes/module-settings.php:96
+msgid "Slide Left"
+msgstr ""
+
+#: ../includes/module-settings.php:97
+msgid "Slide Right"
+msgstr ""
+
+#: ../includes/module-settings.php:98
+msgid "Slide Up"
+msgstr ""
+
+#: ../includes/module-settings.php:99
+msgid "Slide Down"
+msgstr ""
+
+#: ../includes/module-settings.php:107
+#: ../modules/content-slider/content-slider.php:222
+#: ../modules/testimonials/testimonials.php:91
+msgid "Delay"
+msgstr ""
+
+#: ../includes/module-settings.php:112
+msgid "The amount of time in seconds before this animation starts."
+msgstr ""
+
+#: ../includes/multisite-settings.php:115
+msgid ""
+"Enter a comma separated list of the post types you would like the builder to "
+"work with."
+msgstr ""
+
+#: ../includes/multisite-settings.php:131
+msgid "Example: page, post, product"
+msgstr ""
+
+#: ../includes/row-settings.php:16 ../modules/button/button.php:148
+#: ../modules/content-slider/content-slider.php:476
+msgid "Width"
+msgstr ""
+
+#: ../includes/row-settings.php:19 ../includes/row-settings.php:37
+#: ../includes/row-settings.php:179
+msgid "Fixed"
+msgstr ""
+
+#: ../includes/row-settings.php:20 ../includes/row-settings.php:38
+#: ../modules/button/button.php:152 ../modules/callout/callout.php:550
+msgid "Full Width"
+msgstr ""
+
+#: ../includes/row-settings.php:27
+msgid ""
+"Full width rows span the width of the page from edge to edge. Fixed rows are "
+"no wider than the Row Max Width set in the Global Settings."
+msgstr ""
+
+#: ../includes/row-settings.php:34
+msgid "Content Width"
+msgstr ""
+
+#: ../includes/row-settings.php:40
+msgid ""
+"Full width content spans the width of the page from edge to edge. Fixed "
+"content is no wider than the Row Max Width set in the Global Settings."
+msgstr ""
+
+#: ../includes/row-settings.php:61
+msgid "Background"
+msgstr ""
+
+#: ../includes/row-settings.php:70 ../includes/row-settings.php:133
+#: ../includes/row-settings.php:321 ../modules/callout/callout.php:315
+#: ../modules/callout/callout.php:331 ../modules/callout/callout.php:335
+#: ../modules/content-slider/content-slider.php:328
+#: ../modules/content-slider/content-slider.php:397
+#: ../modules/content-slider/content-slider.php:704
+#: ../modules/photo/photo.php:25 ../modules/photo/photo.php:392
+msgid "Photo"
+msgstr ""
+
+#: ../includes/row-settings.php:71 ../includes/row-settings.php:207
+#: ../modules/content-slider/content-slider.php:329
+#: ../modules/video/video.php:19
+msgid "Video"
+msgstr ""
+
+#: ../includes/row-settings.php:73 ../modules/slideshow/slideshow.php:14
+msgid "Slideshow"
+msgstr ""
+
+#: ../includes/row-settings.php:77
+msgid "Parallax"
+msgstr ""
+
+#: ../includes/row-settings.php:129
+#: ../modules/content-slider/content-slider.php:352
+msgid "Background Photo"
+msgstr ""
+
+#: ../includes/row-settings.php:140
+msgid "Repeat"
+msgstr ""
+
+#: ../includes/row-settings.php:144
+msgid "Tile"
+msgstr ""
+
+#: ../includes/row-settings.php:145 ../modules/tabs/tabs.php:55
+msgid "Horizontal"
+msgstr ""
+
+#: ../includes/row-settings.php:146 ../modules/tabs/tabs.php:56
+msgid "Vertical"
+msgstr ""
+
+#: ../includes/row-settings.php:148
+msgid ""
+"Repeat applies to how the image should display in the row background. "
+"Choosing none will display the image as uploaded. Tile will repeat the image "
+"as many times as needed to fill the row horizontally and vertically. You can "
+"also specify the image to only repeat horizontally or vertically."
+msgstr ""
+
+#: ../includes/row-settings.php:158
+msgid "Left Top"
+msgstr ""
+
+#: ../includes/row-settings.php:159
+msgid "Left Center"
+msgstr ""
+
+#: ../includes/row-settings.php:160
+msgid "Left Bottom"
+msgstr ""
+
+#: ../includes/row-settings.php:161
+msgid "Right Top"
+msgstr ""
+
+#: ../includes/row-settings.php:162
+msgid "Right Center"
+msgstr ""
+
+#: ../includes/row-settings.php:163
+msgid "Right Bottom"
+msgstr ""
+
+#: ../includes/row-settings.php:164
+msgid "Center Top"
+msgstr ""
+
+#: ../includes/row-settings.php:165
+msgid "Center Center"
+msgstr ""
+
+#: ../includes/row-settings.php:166
+msgid "Center Bottom"
+msgstr ""
+
+#: ../includes/row-settings.php:168
+msgid "Position will tell the image where it should sit in the row background."
+msgstr ""
+
+#: ../includes/row-settings.php:175
+msgid "Attachment"
+msgstr ""
+
+#: ../includes/row-settings.php:178 ../modules/post-grid/post-grid.php:75
+msgid "Scroll"
+msgstr ""
+
+#: ../includes/row-settings.php:181
+msgid ""
+"Attachment will specify how the image reacts when scrolling a page. When "
+"scrolling is selected, the image will scroll with page scrolling. This is "
+"the default setting. Fixed will allow the image to scroll within the row "
+"background if fill is selected in the scale setting."
+msgstr ""
+
+#: ../includes/row-settings.php:188
+msgid "Scale"
+msgstr ""
+
+#: ../includes/row-settings.php:192
+msgid "Fit"
+msgstr ""
+
+#: ../includes/row-settings.php:193
+msgid "Fill"
+msgstr ""
+
+#: ../includes/row-settings.php:195
+msgid ""
+"Scale applies to how the image should display in the row background. You can "
+"select either fill or fit to the row background."
+msgstr ""
+
+#: ../includes/row-settings.php:203
+msgid "Background Video"
+msgstr ""
+
+#: ../includes/row-settings.php:208
+msgid ""
+"An HTML5 video to use as the background of this row. Supported types are "
+"MP4, WebM and Ogg."
+msgstr ""
+
+#: ../includes/row-settings.php:215
+msgid "Fallback Photo"
+msgstr ""
+
+#: ../includes/row-settings.php:216
+msgid "A photo that will be displayed if the video fails to load."
+msgstr ""
+
+#: ../includes/row-settings.php:224
+msgid "Background Slideshow"
+msgstr ""
+
+#: ../includes/row-settings.php:228 ../modules/gallery/gallery.php:234
+#: ../modules/slideshow/slideshow.php:263
+msgid "Source"
+msgstr ""
+
+#: ../includes/row-settings.php:231 ../modules/gallery/gallery.php:237
+#: ../modules/photo/photo.php:378 ../modules/slideshow/slideshow.php:266
+#: ../modules/video/video.php:86
+msgid "Media Library"
+msgstr ""
+
+#: ../includes/row-settings.php:232 ../modules/gallery/gallery.php:238
+#: ../modules/slideshow/slideshow.php:267
+msgid "SmugMug"
+msgstr ""
+
+#: ../includes/row-settings.php:234 ../modules/gallery/gallery.php:240
+#: ../modules/slideshow/slideshow.php:269
+msgid ""
+"Pull images from the WordPress media library or a gallery on your SmugMug "
+"site by inserting the RSS feed URL from SmugMug. The RSS feed URL can be "
+"accessed by using the get a link function in your SmugMug gallery."
+msgstr ""
+
+#: ../includes/row-settings.php:249 ../modules/gallery/gallery.php:252
+#: ../modules/slideshow/slideshow.php:281
+msgid "Photos"
+msgstr ""
+
+#: ../includes/row-settings.php:256 ../modules/gallery/gallery.php:256
+#: ../modules/slideshow/slideshow.php:285
+msgid "Feed URL"
+msgstr ""
+
+#: ../includes/row-settings.php:263 ../includes/row-settings.php:328
+#: ../modules/slideshow/slideshow.php:382
+msgid "Speed"
+msgstr ""
+
+#: ../includes/row-settings.php:266 ../includes/row-settings.php:297
+#: ../modules/slideshow/slideshow.php:385
+#: ../modules/slideshow/slideshow.php:410
+#: ../modules/slideshow/slideshow.php:581
+msgid "seconds"
+msgstr ""
+
+#: ../includes/row-settings.php:273
+#: ../modules/content-slider/content-slider.php:230
+#: ../modules/slideshow/slideshow.php:389
+#: ../modules/testimonials/testimonials.php:99
+msgid "Transition"
+msgstr ""
+
+#: ../includes/row-settings.php:277 ../modules/slideshow/slideshow.php:393
+msgid "Fade"
+msgstr ""
+
+#: ../includes/row-settings.php:278 ../modules/slideshow/slideshow.php:394
+msgid "Ken Burns"
+msgstr ""
+
+#: ../includes/row-settings.php:279 ../modules/slideshow/slideshow.php:395
+msgid "Slide Horizontal"
+msgstr ""
+
+#: ../includes/row-settings.php:280 ../modules/slideshow/slideshow.php:396
+msgid "Slide Vertical"
+msgstr ""
+
+#: ../includes/row-settings.php:281 ../modules/slideshow/slideshow.php:397
+msgid "Blinds"
+msgstr ""
+
+#: ../includes/row-settings.php:282 ../modules/slideshow/slideshow.php:398
+msgid "Bars"
+msgstr ""
+
+#: ../includes/row-settings.php:283 ../modules/slideshow/slideshow.php:399
+msgid "Random Bars"
+msgstr ""
+
+#: ../includes/row-settings.php:284 ../modules/slideshow/slideshow.php:400
+msgid "Boxes"
+msgstr ""
+
+#: ../includes/row-settings.php:285 ../modules/slideshow/slideshow.php:401
+msgid "Random Boxes"
+msgstr ""
+
+#: ../includes/row-settings.php:286 ../modules/slideshow/slideshow.php:402
+msgid "Boxes Grow"
+msgstr ""
+
+#: ../includes/row-settings.php:294
+#: ../modules/content-slider/content-slider.php:239
+#: ../modules/slideshow/slideshow.php:407
+#: ../modules/testimonials/testimonials.php:108
+msgid "Transition Speed"
+msgstr ""
+
+#: ../includes/row-settings.php:304 ../modules/slideshow/slideshow.php:414
+msgid "Randomize Photos"
+msgstr ""
+
+#: ../includes/row-settings.php:317
+msgid "Background Parallax"
+msgstr ""
+
+#: ../includes/row-settings.php:331
+msgid "Fast"
+msgstr ""
+
+#: ../includes/row-settings.php:333
+msgid "Slow"
+msgstr ""
+
+#: ../includes/row-settings.php:457
+msgid "Add a custom CSS selector here to apply additional styling to this row."
+msgstr ""
+
+#: ../includes/row-settings.php:470
+msgid ""
+"Choose whether to always show this row, only show it on the desktop view or "
+"only show it on the mobile view."
+msgstr ""
+
+#: ../includes/settings.php:62
+msgid "Save"
+msgstr ""
+
+#: ../includes/template-selector.php:3
+msgid "Layout Templates"
+msgstr ""
+
+#: ../includes/template-selector.php:8
+msgid "Home Pages"
+msgstr ""
+
+#: ../includes/template-selector.php:9
+msgid "Content Pages"
+msgstr ""
+
+#: ../includes/template-selector.php:13
+msgid "Your Templates"
+msgstr ""
+
+#: ../includes/template-selector.php:47 ../includes/template-selector.php:77
+msgid "Blank"
+msgstr ""
+
+#: ../includes/template-selector.php:72
+msgid ""
+"You haven't saved any templates yet! To do so, create a layout and save it "
+"as a template under Tools > Save Template."
+msgstr ""
+
+#: ../includes/template-settings.php:18
+msgid "Image Filename"
+msgstr ""
+
+#: ../includes/template-settings.php:19
+msgid ""
+"The filename of the image such as thumb.jpg that resides in the \"img/"
+"templates/\" directory."
+msgstr ""
+
+#: ../includes/ui.php:6
+msgid "Page Builder Demo"
+msgstr ""
+
+#: ../includes/ui.php:19
+msgid "Done"
+msgstr ""
+
+#: ../includes/ui.php:20
+msgid "Tools"
+msgstr ""
+
+#: ../includes/ui.php:24
+msgid "Add Content"
+msgstr ""
+
+#: ../includes/ui.php:39
+msgid "Row Layouts"
+msgstr ""
+
+#: ../includes/ui.php:43
+msgid "1 Column"
+msgstr ""
+
+#: ../includes/ui.php:44
+msgid "2 Columns"
+msgstr ""
+
+#: ../includes/ui.php:45
+msgid "3 Columns"
+msgstr ""
+
+#: ../includes/ui.php:46
+msgid "4 Columns"
+msgstr ""
+
+#: ../includes/ui.php:47
+msgid "5 Columns"
+msgstr ""
+
+#: ../includes/ui.php:48
+msgid "6 Columns"
+msgstr ""
+
+#: ../includes/ui.php:49
+msgid "Left Sidebar"
+msgstr ""
+
+#: ../includes/ui.php:50
+msgid "Right Sidebar"
+msgstr ""
+
+#: ../includes/ui.php:51
+msgid "Left &amp; Right Sidebar"
+msgstr ""
+
+#: ../includes/ui.php:60 ../modules/widget/widget.php:16
+msgid "WordPress Widgets"
+msgstr ""
+
+#: ../includes/ui.php:78
+msgid "Buy Now!"
+msgstr ""
+
+#: ../includes/ui.php:85
+msgid "Upgrade Today!"
+msgstr ""
+
+#: ../includes/updater/includes/form.php:4
+msgid "Support &amp; Updates Subscription"
+msgstr ""
+
+#: ../includes/updater/includes/form.php:7
+msgid "Active!"
+msgstr ""
+
+#: ../includes/updater/includes/form.php:9
+msgid "Not Active!"
+msgstr ""
+
+#: ../includes/updater/includes/form.php:15
+msgid "Email address saved!"
+msgstr ""
+
+#: ../includes/updater/includes/form.php:20
+msgid ""
+"Enter the email address you used to signup to receive support and enable "
+"remote updates."
+msgstr ""
+
+#: ../includes/updater/includes/form.php:29
+msgid "email@yourwebsite.com"
+msgstr ""
+
+#: ../includes/updater/includes/form.php:32
+msgid "Save Subscription Settings"
+msgstr ""
+
+#: ../includes/user-template-settings.php:8
+msgid ""
+"Save the current layout as a template that can be reused under Templates > "
+"Your Templates."
+msgstr ""
+
+#: ../modules/accordion/accordion.php:14
+msgid "Accordion"
+msgstr ""
+
+#: ../modules/accordion/accordion.php:15
+msgid "Display a collapsible accordion of items."
+msgstr ""
+
+#: ../modules/accordion/accordion.php:16 ../modules/button/button.php:16
+#: ../modules/callout/callout.php:16
+#: ../modules/contact-form/contact-form.php:16
+#: ../modules/content-slider/content-slider.php:16 ../modules/cta/cta.php:16
+#: ../modules/gallery/gallery.php:16 ../modules/html/html.php:16
+#: ../modules/icon-group/icon-group.php:16 ../modules/icon/icon.php:16
+#: ../modules/map/map.php:16 ../modules/post-grid/post-grid.php:16
+#: ../modules/pricing-table/pricing-table.php:16
+#: ../modules/sidebar/sidebar.php:16 ../modules/slideshow/slideshow.php:16
+#: ../modules/social-buttons/social-buttons.php:16 ../modules/tabs/tabs.php:16
+#: ../modules/testimonials/testimonials.php:16
+#: ../modules/woocommerce/woocommerce.php:18
+msgid "Advanced Modules"
+msgstr ""
+
+#: ../modules/accordion/accordion.php:28 ../modules/tabs/tabs.php:28
+msgid "Items"
+msgstr ""
+
+#: ../modules/accordion/accordion.php:35 ../modules/tabs/tabs.php:35
+msgid "Item"
+msgstr ""
+
+#: ../modules/accordion/accordion.php:52 ../modules/tabs/tabs.php:61
+msgid "Border Color"
+msgstr ""
+
+#: ../modules/accordion/accordion.php:62
+msgid "Label Size"
+msgstr ""
+
+#: ../modules/accordion/accordion.php:65 ../modules/gallery/gallery.php:263
+msgid "Small"
+msgstr ""
+
+#: ../modules/accordion/accordion.php:75
+msgid "Item Spacing"
+msgstr ""
+
+#: ../modules/accordion/accordion.php:86
+msgid "Collapse Inactive"
+msgstr ""
+
+#: ../modules/accordion/accordion.php:92
+msgid ""
+"Choosing yes will keep only one item open at a time. Choosing no will allow "
+"multiple items to be open at the same time."
+msgstr ""
+
+#: ../modules/accordion/accordion.php:107 ../modules/tabs/tabs.php:74
+msgid "Add Item"
+msgstr ""
+
+#: ../modules/accordion/accordion.php:117 ../modules/tabs/tabs.php:84
+msgid "Label"
+msgstr ""
+
+#: ../modules/accordion/accordion.php:122
+#: ../modules/post-grid/post-grid.php:194
+#: ../modules/post-grid/post-grid.php:198
+#: ../modules/post-grid/post-grid.php:224 ../modules/tabs/tabs.php:89
+msgid "Content"
+msgstr ""
+
+#: ../modules/button/button.php:14 ../modules/callout/callout.php:478
+#: ../modules/content-slider/content-slider.php:594 ../modules/cta/cta.php:211
+msgid "Button"
+msgstr ""
+
+#: ../modules/button/button.php:15
+msgid "A simple call to action button."
+msgstr ""
+
+#: ../modules/button/button.php:56 ../modules/cta/cta.php:219
+msgid "Click Here"
+msgstr ""
+
+#: ../modules/button/button.php:64 ../modules/callout/callout.php:316
+#: ../modules/callout/callout.php:364 ../modules/callout/callout.php:368
+#: ../modules/icon-group/icon-group.php:36
+#: ../modules/icon-group/icon-group.php:137 ../modules/icon/icon.php:14
+#: ../modules/icon/icon.php:36
+msgid "Icon"
+msgstr ""
+
+#: ../modules/button/button.php:70 ../modules/button/button.php:74
+#: ../modules/callout/callout.php:444 ../modules/callout/callout.php:448
+#: ../modules/content-slider/content-slider.php:566
+#: ../modules/content-slider/content-slider.php:570
+#: ../modules/content-slider/content-slider.php:593 ../modules/cta/cta.php:232
+#: ../modules/heading/heading.php:43 ../modules/heading/heading.php:47
+#: ../modules/icon-group/icon-group.php:141 ../modules/icon/icon.php:45
+#: ../modules/slideshow/slideshow.php:343
+msgid "Link"
+msgstr ""
+
+#: ../modules/button/button.php:82 ../modules/callout/callout.php:456
+#: ../modules/content-slider/content-slider.php:575 ../modules/cta/cta.php:239
+#: ../modules/heading/heading.php:54 ../modules/icon/icon.php:52
+#: ../modules/photo/photo.php:478
+msgid "Link Target"
+msgstr ""
+
+#: ../modules/button/button.php:85 ../modules/callout/callout.php:459
+#: ../modules/content-slider/content-slider.php:578 ../modules/cta/cta.php:242
+#: ../modules/heading/heading.php:57 ../modules/icon/icon.php:55
+#: ../modules/photo/photo.php:481
+msgid "Same Window"
+msgstr ""
+
+#: ../modules/button/button.php:86 ../modules/callout/callout.php:460
+#: ../modules/content-slider/content-slider.php:579 ../modules/cta/cta.php:243
+#: ../modules/heading/heading.php:58 ../modules/icon/icon.php:56
+#: ../modules/photo/photo.php:482
+msgid "New Window"
+msgstr ""
+
+#: ../modules/button/button.php:100 ../modules/cta/cta.php:184
+#: ../modules/heading/heading.php:72 ../modules/icon-group/icon-group.php:49
+#: ../modules/icon/icon.php:80
+msgid "Colors"
+msgstr ""
+
+#: ../modules/button/button.php:110 ../modules/callout/callout.php:408
+#: ../modules/callout/callout.php:508
+#: ../modules/content-slider/content-slider.php:624 ../modules/cta/cta.php:262
+#: ../modules/icon-group/icon-group.php:71 ../modules/icon/icon.php:102
+msgid "Background Hover Color"
+msgstr ""
+
+#: ../modules/button/button.php:119 ../modules/callout/callout.php:517
+#: ../modules/content-slider/content-slider.php:521
+#: ../modules/content-slider/content-slider.php:629
+#: ../modules/content-slider/content-slider.php:713 ../modules/cta/cta.php:188
+#: ../modules/cta/cta.php:271 ../modules/heading/heading.php:77
+msgid "Text Color"
+msgstr ""
+
+#: ../modules/button/button.php:125 ../modules/callout/callout.php:523
+#: ../modules/content-slider/content-slider.php:635 ../modules/cta/cta.php:277
+msgid "Text Hover Color"
+msgstr ""
+
+#: ../modules/button/button.php:134 ../modules/callout/callout.php:416
+#: ../modules/callout/callout.php:532
+#: ../modules/content-slider/content-slider.php:640 ../modules/cta/cta.php:286
+#: ../modules/icon-group/icon-group.php:79 ../modules/icon/icon.php:110
+msgid "Gradient"
+msgstr ""
+
+#: ../modules/button/button.php:144 ../modules/callout/callout.php:243
+#: ../modules/cta/cta.php:101 ../modules/heading/heading.php:87
+#: ../modules/icon-group/icon-group.php:89 ../modules/icon/icon.php:120
+msgid "Structure"
+msgstr ""
+
+#: ../modules/button/button.php:151 ../modules/callout/callout.php:549
+#: ../modules/content-slider/content-slider.php:554
+msgid "Auto"
+msgstr ""
+
+#: ../modules/button/button.php:153 ../modules/callout/callout.php:283
+#: ../modules/content-slider/content-slider.php:442 ../modules/cta/cta.php:165
+#: ../modules/heading/heading.php:123 ../modules/heading/heading.php:150
+#: ../modules/heading/heading.php:180
+#: ../modules/social-buttons/social-buttons.php:74
+msgid "Custom"
+msgstr ""
+
+#: ../modules/button/button.php:167
+msgid "Custom Width"
+msgstr ""
+
+#: ../modules/button/button.php:175 ../modules/cta/cta.php:119
+#: ../modules/heading/heading.php:91 ../modules/heading/heading.php:146
+#: ../modules/icon-group/icon-group.php:109 ../modules/icon/icon.php:132
+#: ../modules/photo/photo.php:414
+#: ../modules/social-buttons/social-buttons.php:97
+msgid "Alignment"
+msgstr ""
+
+#: ../modules/button/button.php:178 ../modules/callout/callout.php:250
+#: ../modules/content-slider/content-slider.php:470 ../modules/cta/cta.php:123
+#: ../modules/heading/heading.php:95 ../modules/heading/heading.php:167
+#: ../modules/icon-group/icon-group.php:112 ../modules/icon/icon.php:135
+#: ../modules/photo/photo.php:418
+#: ../modules/social-buttons/social-buttons.php:100
+msgid "Center"
+msgstr ""
+
+#: ../modules/button/button.php:185 ../modules/callout/callout.php:555
+#: ../modules/content-slider/content-slider.php:654 ../modules/cta/cta.php:300
+#: ../modules/heading/heading.php:119 ../modules/heading/heading.php:176
+msgid "Font Size"
+msgstr ""
+
+#: ../modules/button/button.php:201 ../modules/callout/callout.php:571
+#: ../modules/cta/cta.php:316
 msgid "Round Corners"
 msgstr ""
 
-#: ../modules/map/map.php:14
-msgid "Map"
+#: ../modules/callout/callout.php:14
+msgid "Callout"
 msgstr ""
 
-#: ../modules/map/map.php:15
-msgid "Display a Google map."
+#: ../modules/callout/callout.php:15
+msgid "A heading and snippet of text with an optional link, icon and image."
 msgstr ""
 
-#: ../modules/map/map.php:33
-msgid "Address"
+#: ../modules/callout/callout.php:215
+#: ../modules/content-slider/content-slider.php:406
+#: ../modules/content-slider/content-slider.php:421 ../modules/cta/cta.php:71
+#: ../modules/heading/heading.php:14 ../modules/heading/heading.php:33
+#: ../modules/testimonials/testimonials.php:56
+#: ../modules/testimonials/testimonials.php:61
+msgid "Heading"
 msgstr ""
 
-#: ../modules/map/map.php:34
-msgid "1865 Winchester Blvd #202 Campbell, CA 95008"
+#: ../modules/callout/callout.php:247
+msgid "Overall Alignment"
 msgstr ""
 
-#: ../modules/map/map.php:38 ../modules/content-slider/content-slider.php:190
-#: ../modules/slideshow/slideshow.php:294
-#: ../modules/separator/separator.php:47
-msgid "Height"
+#: ../modules/callout/callout.php:254
+msgid "The alignment that will apply to all elements within the callout."
 msgstr ""
 
-#: ../modules/rich-text/rich-text.php:14 ../includes/admin-posts.php:3
-msgid "Text Editor"
+#: ../modules/callout/callout.php:262 ../modules/cta/cta.php:144
+msgid "Heading Structure"
 msgstr ""
 
-#: ../modules/rich-text/rich-text.php:15
-msgid "A WYSIWYG text editor."
+#: ../modules/callout/callout.php:266
+#: ../modules/content-slider/content-slider.php:425 ../modules/cta/cta.php:148
+msgid "Heading Tag"
 msgstr ""
 
-#: ../modules/rich-text/rich-text.php:16 ../modules/video/video.php:21
-#: ../modules/photo/photo.php:27 ../modules/heading/heading.php:16
-#: ../modules/separator/separator.php:16
-msgid "Basic Modules"
+#: ../modules/callout/callout.php:279
+#: ../modules/content-slider/content-slider.php:438
+#: ../modules/content-slider/content-slider.php:452 ../modules/cta/cta.php:161
+#: ../modules/testimonials/testimonials.php:69
+msgid "Heading Size"
+msgstr ""
+
+#: ../modules/callout/callout.php:282
+#: ../modules/content-slider/content-slider.php:441 ../modules/cta/cta.php:164
+#: ../modules/heading/heading.php:122 ../modules/heading/heading.php:149
+#: ../modules/heading/heading.php:179
+#: ../modules/woocommerce/woocommerce.php:186
+msgid "Default"
+msgstr ""
+
+#: ../modules/callout/callout.php:293 ../modules/cta/cta.php:175
+msgid "Heading Custom Size"
+msgstr ""
+
+#: ../modules/callout/callout.php:311
+msgid "Image Type"
+msgstr ""
+
+#: ../modules/callout/callout.php:339 ../modules/photo/photo.php:401
+#: ../modules/slideshow/slideshow.php:312
+msgid "Crop"
+msgstr ""
+
+#: ../modules/callout/callout.php:343 ../modules/photo/photo.php:405
+msgid "Landscape"
+msgstr ""
+
+#: ../modules/callout/callout.php:344 ../modules/photo/photo.php:406
+msgid "Panorama"
+msgstr ""
+
+#: ../modules/callout/callout.php:345 ../modules/photo/photo.php:407
+msgid "Portrait"
+msgstr ""
+
+#: ../modules/callout/callout.php:346 ../modules/photo/photo.php:408
+msgid "Square"
+msgstr ""
+
+#: ../modules/callout/callout.php:347 ../modules/photo/photo.php:409
+msgid "Circle"
+msgstr ""
+
+#: ../modules/callout/callout.php:355 ../modules/callout/callout.php:375
+msgid "Above Heading"
+msgstr ""
+
+#: ../modules/callout/callout.php:356 ../modules/callout/callout.php:376
+msgid "Below Heading"
+msgstr ""
+
+#: ../modules/callout/callout.php:357 ../modules/callout/callout.php:379
+msgid "Left of Text and Heading"
+msgstr ""
+
+#: ../modules/callout/callout.php:358 ../modules/callout/callout.php:380
+msgid "Right of Text and Heading"
+msgstr ""
+
+#: ../modules/callout/callout.php:377
+msgid "Left Heading"
+msgstr ""
+
+#: ../modules/callout/callout.php:378
+msgid "Right Heading"
+msgstr ""
+
+#: ../modules/callout/callout.php:386
+msgid "Icon Colors"
+msgstr ""
+
+#: ../modules/callout/callout.php:395 ../modules/icon-group/icon-group.php:58
+#: ../modules/icon/icon.php:89
+msgid "Hover Color"
+msgstr ""
+
+#: ../modules/callout/callout.php:426
+msgid "Icon Structure"
+msgstr ""
+
+#: ../modules/callout/callout.php:430 ../modules/icon-group/icon-group.php:93
+#: ../modules/icon/icon.php:124 ../modules/post-grid/post-grid.php:136
+msgid "Size"
+msgstr ""
+
+#: ../modules/callout/callout.php:441
+#: ../modules/content-slider/content-slider.php:563
+msgid "Call To Action"
+msgstr ""
+
+#: ../modules/callout/callout.php:449
+msgid ""
+"The link applies to the entire module. If choosing a call to action type "
+"below, this link will also be used for the text or button."
+msgstr ""
+
+#: ../modules/callout/callout.php:469
+#: ../modules/content-slider/content-slider.php:585 ../modules/cta/cta.php:14
+msgid "Call to Action"
+msgstr ""
+
+#: ../modules/callout/callout.php:498
+#: ../modules/content-slider/content-slider.php:614 ../modules/cta/cta.php:252
+msgid "Button Colors"
+msgstr ""
+
+#: ../modules/callout/callout.php:542
+#: ../modules/content-slider/content-slider.php:650 ../modules/cta/cta.php:296
+msgid "Button Structure"
+msgstr ""
+
+#: ../modules/callout/callout.php:546
+msgid "Button Width"
 msgstr ""
 
 #: ../modules/contact-form/contact-form.php:14
@@ -532,11 +2025,6 @@ msgstr ""
 
 #: ../modules/contact-form/contact-form.php:67
 msgid "The contact form will send to this e-mail"
-msgstr ""
-
-#: ../modules/contact-form/includes/frontend.php:4
-#: ../includes/user-template-settings.php:15
-msgid "Name"
 msgstr ""
 
 #: ../modules/contact-form/includes/frontend.php:5
@@ -571,6 +2059,12 @@ msgstr ""
 msgid "Displays multiple slides with an optional heading and call to action."
 msgstr ""
 
+#: ../modules/content-slider/content-slider.php:190 ../modules/map/map.php:41
+#: ../modules/separator/separator.php:58
+#: ../modules/slideshow/slideshow.php:294
+msgid "Height"
+msgstr ""
+
 #: ../modules/content-slider/content-slider.php:195
 msgid ""
 "This setting is the minimum height of the content slider. Content will "
@@ -578,8 +2072,8 @@ msgid ""
 msgstr ""
 
 #: ../modules/content-slider/content-slider.php:199
-#: ../modules/video/video.php:107 ../modules/testimonials/testimonials.php:78
-#: ../modules/slideshow/slideshow.php:365
+#: ../modules/slideshow/slideshow.php:373
+#: ../modules/testimonials/testimonials.php:82 ../modules/video/video.php:108
 msgid "Auto Play"
 msgstr ""
 
@@ -587,45 +2081,21 @@ msgstr ""
 msgid "Show Play/Pause"
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:222
-#: ../modules/testimonials/testimonials.php:87
-#: ../includes/module-settings.php:86
-msgid "Delay"
-msgstr ""
-
 #: ../modules/content-slider/content-slider.php:226
 #: ../modules/content-slider/content-slider.php:243
-#: ../modules/testimonials/testimonials.php:91
-#: ../modules/testimonials/testimonials.php:108
+#: ../modules/testimonials/testimonials.php:95
+#: ../modules/testimonials/testimonials.php:112
 msgid "Seconds"
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:230
-#: ../modules/testimonials/testimonials.php:95
-#: ../modules/slideshow/slideshow.php:381 ../includes/row-settings.php:222
-msgid "Transition"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:239
-#: ../modules/testimonials/testimonials.php:104
-#: ../modules/slideshow/slideshow.php:399 ../includes/row-settings.php:240
-msgid "Transition Speed"
-msgstr ""
-
 #: ../modules/content-slider/content-slider.php:247
-#: ../modules/testimonials/testimonials.php:117
+#: ../modules/testimonials/testimonials.php:121
 msgid "Show Arrows"
 msgstr ""
 
 #: ../modules/content-slider/content-slider.php:256
-#: ../modules/testimonials/testimonials.php:142
+#: ../modules/testimonials/testimonials.php:151
 msgid "Show Dots"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:266
-#: ../includes/row-settings.php:362 ../includes/column-settings.php:137
-#: ../includes/module-settings.php:6
-msgid "Advanced"
 msgstr ""
 
 #: ../modules/content-slider/content-slider.php:270
@@ -662,64 +2132,8 @@ msgstr ""
 msgid "Background Layout"
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:324
-#: ../modules/content-slider/content-slider.php:371
-#: ../modules/content-slider/content-slider.php:590
-#: ../modules/content-slider/content-slider.php:689
-#: ../modules/callout/callout.php:448 ../modules/slideshow/slideshow.php:336
-#: ../includes/row-settings.php:56 ../includes/row-settings.php:280
-#: ../includes/column-settings.php:55
-msgid "Type"
-msgstr ""
-
 #: ../modules/content-slider/content-slider.php:326
 msgid "This setting is for the entire background of your slide."
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:328
-#: ../modules/content-slider/content-slider.php:397
-#: ../modules/content-slider/content-slider.php:705
-#: ../modules/callout/callout.php:302 ../modules/callout/callout.php:318
-#: ../modules/callout/callout.php:322 ../modules/photo/photo.php:25
-#: ../modules/photo/photo.php:337 ../includes/row-settings.php:61
-#: ../includes/row-settings.php:115 ../includes/row-settings.php:261
-msgid "Photo"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:329
-#: ../modules/video/video.php:19 ../includes/row-settings.php:62
-#: ../includes/row-settings.php:174
-msgid "Video"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:330
-#: ../modules/icon-group/icon-group.php:53 ../modules/icon/icon.php:79
-#: ../modules/callout/callout.php:376 ../modules/separator/separator.php:34
-#: ../includes/row-settings.php:46 ../includes/row-settings.php:60
-#: ../includes/row-settings.php:97 ../includes/row-settings.php:310
-#: ../includes/column-settings.php:27 ../includes/column-settings.php:37
-#: ../includes/column-settings.php:85
-msgid "Color"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:331
-#: ../modules/content-slider/content-slider.php:378
-#: ../modules/content-slider/content-slider.php:593
-#: ../modules/callout/callout.php:301 ../modules/callout/callout.php:329
-#: ../modules/callout/callout.php:451 ../modules/photo/photo.php:349
-#: ../modules/photo/photo.php:394 ../modules/slideshow/slideshow.php:339
-#: ../modules/slideshow/slideshow.php:384
-#: ../modules/slideshow/slideshow.php:443 ../modules/gallery/gallery.php:288
-#: ../includes/row-settings.php:59 ../includes/row-settings.php:122
-#: ../includes/row-settings.php:161 ../includes/row-settings.php:225
-#: ../includes/row-settings.php:284 ../includes/column-settings.php:59
-#: ../includes/module-settings.php:76
-msgid "None"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:352
-#: ../includes/row-settings.php:111
-msgid "Background Photo"
 msgstr ""
 
 #: ../modules/content-slider/content-slider.php:361
@@ -749,54 +2163,14 @@ msgstr ""
 msgid "Video Embed Code"
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:406
-#: ../modules/content-slider/content-slider.php:421 ../modules/cta/cta.php:71
-#: ../modules/callout/callout.php:213
-#: ../modules/testimonials/testimonials.php:56
-#: ../modules/testimonials/testimonials.php:61
-#: ../modules/heading/heading.php:14 ../modules/heading/heading.php:33
-msgid "Heading"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:425 ../modules/cta/cta.php:132
-#: ../modules/callout/callout.php:253
-msgid "Heading Tag"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:438
-#: ../modules/content-slider/content-slider.php:452 ../modules/cta/cta.php:145
-#: ../modules/callout/callout.php:266
-#: ../modules/testimonials/testimonials.php:65
-msgid "Heading Size"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:441
-#: ../modules/woocommerce/woocommerce.php:192 ../modules/cta/cta.php:148
-#: ../modules/callout/callout.php:269 ../modules/heading/heading.php:102
-#: ../modules/heading/heading.php:129 ../modules/heading/heading.php:153
-msgid "Default"
-msgstr ""
-
 #: ../modules/content-slider/content-slider.php:461
 msgid "Text Position"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:465
-#: ../modules/callout/callout.php:338 ../modules/callout/callout.php:358
-#: ../includes/row-settings.php:131
-msgid "Position"
 msgstr ""
 
 #: ../modules/content-slider/content-slider.php:467
 msgid ""
 "The position will move the content layout selections left, right or center "
 "over the background of the slide."
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:478
-#: ../modules/content-slider/content-slider.php:546
-#: ../includes/column-settings.php:16
-msgid "%"
 msgstr ""
 
 #: ../modules/content-slider/content-slider.php:484
@@ -824,7 +2198,7 @@ msgid "Text Shadow"
 msgstr ""
 
 #: ../modules/content-slider/content-slider.php:536
-#: ../modules/content-slider/content-slider.php:720
+#: ../modules/content-slider/content-slider.php:719
 msgid "Text Background Color"
 msgstr ""
 
@@ -847,320 +2221,201 @@ msgid ""
 "will fit the overlay to the top and bottom of the slide."
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:563
-#: ../modules/callout/callout.php:421
-msgid "Call To Action"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:572
+#: ../modules/content-slider/content-slider.php:571
 msgid ""
 "The link applies to the entire slide. If choosing a call to action type "
 "below, this link will also be used for the text or button."
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:586 ../modules/cta/cta.php:14
-#: ../modules/callout/callout.php:444
-msgid "Call to Action"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:615 ../modules/cta/cta.php:226
-#: ../modules/callout/callout.php:473
-msgid "Button Colors"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:651 ../modules/cta/cta.php:264
-#: ../modules/callout/callout.php:511
-msgid "Button Structure"
-msgstr ""
-
-#: ../modules/content-slider/content-slider.php:671
+#: ../modules/content-slider/content-slider.php:670
 msgid "Border Radius"
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:682
+#: ../modules/content-slider/content-slider.php:681
 msgid "Mobile"
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:685
+#: ../modules/content-slider/content-slider.php:684
 msgid "Mobile Photo"
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:691
+#: ../modules/content-slider/content-slider.php:690
 msgid ""
 "You can choose a different photo that the slide will change to on mobile "
 "devices or no photo if desired."
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:693
+#: ../modules/content-slider/content-slider.php:692
 msgid "Use Main Photo"
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:694
+#: ../modules/content-slider/content-slider.php:693
 msgid "Choose Another Photo"
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:695
+#: ../modules/content-slider/content-slider.php:694
 msgid "No Photo"
 msgstr ""
 
-#: ../modules/content-slider/content-slider.php:710
+#: ../modules/content-slider/content-slider.php:709
 msgid "Mobile Text Colors"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:16
-msgid "WooCommerce"
+#: ../modules/cta/cta.php:15
+msgid "Display a heading, subheading and a button."
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:17
-msgid "Display products or categories from your WooCommerce store."
+#: ../modules/cta/cta.php:72
+msgid "Ready to find out more?"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:57 ../modules/cta/cta.php:95
+#: ../modules/cta/cta.php:87
+msgid "Drop us a line today for a free quote!"
+msgstr ""
+
+#: ../modules/cta/cta.php:105 ../modules/gallery/gallery.php:220
+#: ../modules/post-grid/post-grid.php:44 ../modules/tabs/tabs.php:52
 #: ../modules/testimonials/testimonials.php:37
-#: ../modules/gallery/gallery.php:216
+#: ../modules/woocommerce/woocommerce.php:57
 msgid "Layout"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:60
-msgid "Choose..."
+#: ../modules/cta/cta.php:108
+msgid "Inline"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:61
-msgid "Single Product"
+#: ../modules/cta/cta.php:109
+msgid "Stacked"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:62
-#: ../modules/woocommerce/woocommerce.php:119
-msgid "Multiple Products"
+#: ../modules/cta/cta.php:129 ../modules/icon-group/icon-group.php:101
+msgid "Spacing"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:63
-msgid "Add to Cart Button"
+#: ../modules/cta/cta.php:200
+msgid "Background Opacity"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:64
-msgid "Categories"
+#: ../modules/cta/cta.php:228
+msgid "Button Link"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:65
-msgid "Cart"
+#: ../modules/gallery/gallery.php:14 ../modules/post-grid/post-grid.php:55
+msgid "Gallery"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:66
-msgid "Checkout"
+#: ../modules/gallery/gallery.php:15
+msgid "Display multiple photos in a gallery view."
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:67
-msgid "View Order"
+#: ../modules/gallery/gallery.php:223
+msgid "Collage"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:68
-msgid "Pay"
+#: ../modules/gallery/gallery.php:224 ../modules/slideshow/slideshow.php:456
+#: ../modules/slideshow/slideshow.php:586
+msgid "Thumbs"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:69
-msgid "Thank You"
+#: ../modules/gallery/gallery.php:260
+msgid "Photo Size"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:70
-msgid "Order Tracking"
+#: ../modules/gallery/gallery.php:270
+msgid "Photo Spacing"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:71
-msgid "My Account"
+#: ../modules/gallery/gallery.php:278
+msgid "Show Captions"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:72
-msgid "Edit Address"
+#: ../modules/gallery/gallery.php:281 ../modules/photo/photo.php:432
+msgid "Never"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:73
-msgid "Change Password"
+#: ../modules/gallery/gallery.php:282 ../modules/photo/photo.php:433
+msgid "On Hover"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:74
-msgid "Lost Password"
+#: ../modules/gallery/gallery.php:283 ../modules/photo/photo.php:434
+msgid "Below Photo"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:93
-msgid "Product ID"
-msgstr ""
-
-#: ../modules/woocommerce/woocommerce.php:96
+#: ../modules/gallery/gallery.php:285
 msgid ""
-"As you add products in the WooCommerce Products area, each will be assigned "
-"a unique ID. You can find this unique product ID by visiting the Products "
-"area and rolling over the product. The unique ID will be the first attribute."
+"The caption pulls from whatever text you put in the caption area in the "
+"media manager for each image. The caption is also pulled directly from "
+"SmugMug if you have captions set in your gallery."
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:100
-msgid "Parent Category ID"
+#: ../modules/gallery/gallery.php:289 ../modules/slideshow/slideshow.php:335
+msgid "Click Action"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:103
-msgid ""
-"As you add product categories in the WooCommerce Products area, each will be "
-"assigned a unique ID. This ID can be found by hovering on the category in "
-"the categories area under Products and looking in the URL that is displayed "
-"in your browser. The ID will be the only number value in the URL."
+#: ../modules/gallery/gallery.php:293 ../modules/photo/photo.php:452
+msgid "Lightbox"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:107
-#: ../modules/woocommerce/woocommerce.php:178
-msgid "Columns"
+#: ../modules/gallery/gallery.php:294
+msgid "Photo Link"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:110
-#: ../modules/woocommerce/woocommerce.php:181
-msgid "1"
+#: ../modules/heading/heading.php:15
+msgid "Display a title/page heading."
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:111
-#: ../modules/woocommerce/woocommerce.php:182
-msgid "2"
+#: ../modules/heading/heading.php:16 ../modules/photo/photo.php:27
+#: ../modules/rich-text/rich-text.php:16 ../modules/separator/separator.php:16
+#: ../modules/video/video.php:21
+msgid "Basic Modules"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:112
-#: ../modules/woocommerce/woocommerce.php:183
-msgid "3"
+#: ../modules/heading/heading.php:106
+msgid "Tag"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:113
-#: ../modules/woocommerce/woocommerce.php:184
-msgid "4"
+#: ../modules/heading/heading.php:109
+msgid "h1"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:123
-msgid "Products Source"
+#: ../modules/heading/heading.php:110
+msgid "h2"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:126
-msgid "Products IDs"
+#: ../modules/heading/heading.php:111
+msgid "h3"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:127
-msgid "Product Category"
+#: ../modules/heading/heading.php:112
+msgid "h4"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:128
-msgid "Recent Products"
+#: ../modules/heading/heading.php:113
+msgid "h5"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:129
-msgid "Featured Products"
+#: ../modules/heading/heading.php:114
+msgid "h6"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:130
-msgid "Sale Products"
+#: ../modules/heading/heading.php:133 ../modules/heading/heading.php:193
+msgid "Custom Font Size"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:131
-msgid "Best Selling Products"
+#: ../modules/heading/heading.php:142
+msgid "Mobile Structure"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:132
-msgid "Top Rated Products"
+#: ../modules/heading/heading.php:163
+msgid "Custom Alignment"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:160
-msgid "Product IDs"
+#: ../modules/html/html.php:14
+msgid "HTML"
 msgstr ""
 
-#: ../modules/woocommerce/woocommerce.php:162
-msgid ""
-"As you add products in the WooCommerce Products area, each will be assigned "
-"a unique ID. You can find this unique product ID by visiting the Products "
-"area and rolling over the product. The unique ID will be the first attribute "
-"and you can add several here separated by a comma."
-msgstr ""
-
-#: ../modules/woocommerce/woocommerce.php:166
-msgid "Category Slug"
-msgstr ""
-
-#: ../modules/woocommerce/woocommerce.php:168
-msgid ""
-"As you add product categories in the WooCommerce Products area, each will be "
-"assigned a unique slug or you can edit and add your own. These slugs can be "
-"found in the Categories area under WooCommerce Products. Several can be "
-"added here separated by a comma."
-msgstr ""
-
-#: ../modules/woocommerce/woocommerce.php:172
-msgid "Number of Products"
-msgstr ""
-
-#: ../modules/woocommerce/woocommerce.php:189
-msgid "Sort By"
-msgstr ""
-
-#: ../modules/woocommerce/woocommerce.php:193
-msgid "Popularity"
-msgstr ""
-
-#: ../modules/woocommerce/woocommerce.php:194
-msgid "Rating"
-msgstr ""
-
-#: ../modules/woocommerce/woocommerce.php:195
-msgid "Date"
-msgstr ""
-
-#: ../modules/woocommerce/woocommerce.php:196
-msgid "Price: Low to High"
-msgstr ""
-
-#: ../modules/woocommerce/woocommerce.php:197
-msgid "Price: High to Low"
-msgstr ""
-
-#: ../modules/social-buttons/social-buttons.php:14
-msgid "Social Buttons"
-msgstr ""
-
-#: ../modules/social-buttons/social-buttons.php:15
-msgid "Displays social buttons."
-msgstr ""
-
-#: ../modules/social-buttons/social-buttons.php:69
-msgid "Target URL"
-msgstr ""
-
-#: ../modules/social-buttons/social-buttons.php:73
-msgid "Current Page"
-msgstr ""
-
-#: ../modules/social-buttons/social-buttons.php:80
-msgid ""
-"The Target URL field correlates to the page you would like your social icons "
-"to interface with. For example, if you show Facebook, the user will \"Like\" "
-"whatever you put in this field."
-msgstr ""
-
-#: ../modules/social-buttons/social-buttons.php:84
-msgid "Custom URL"
-msgstr ""
-
-#: ../modules/social-buttons/social-buttons.php:99
-msgid "Show Facebook"
-msgstr ""
-
-#: ../modules/social-buttons/social-buttons.php:108
-msgid "Show Twitter"
-msgstr ""
-
-#: ../modules/social-buttons/social-buttons.php:117
-msgid "Show Google+"
-msgstr ""
-
-#: ../modules/sidebar/sidebar.php:14
-#: ../modules/sidebar/includes/settings-general.php:5
-msgid "Sidebar"
-msgstr ""
-
-#: ../modules/sidebar/sidebar.php:15
-msgid ""
-"Display a WordPress sidebar that has been registered by the current theme."
+#: ../modules/html/html.php:15
+msgid "Display raw HTML code."
 msgstr ""
 
 #: ../modules/icon-group/icon-group.php:14
@@ -1175,327 +2430,294 @@ msgstr ""
 msgid "Icons"
 msgstr ""
 
-#: ../modules/icon-group/icon-group.php:58 ../modules/icon/icon.php:84
-#: ../modules/callout/callout.php:381
-msgid "Hover Color"
-msgstr ""
-
-#: ../modules/icon-group/icon-group.php:87 ../modules/icon/icon.php:113
-#: ../modules/callout/callout.php:410
-msgid "Size"
-msgstr ""
-
-#: ../modules/icon-group/icon-group.php:95 ../modules/cta/cta.php:119
-msgid "Spacing"
-msgstr ""
-
-#: ../modules/icon-group/icon-group.php:121
+#: ../modules/icon-group/icon-group.php:127
 msgid "Add Icon"
-msgstr ""
-
-#: ../modules/cta/cta.php:15
-msgid "Display a heading, subheading and a button."
-msgstr ""
-
-#: ../modules/cta/cta.php:98
-msgid "Inline"
-msgstr ""
-
-#: ../modules/cta/cta.php:99
-msgid "Stacked"
-msgstr ""
-
-#: ../modules/cta/cta.php:128 ../modules/callout/callout.php:249
-msgid "Heading Structure"
-msgstr ""
-
-#: ../modules/cta/cta.php:159 ../modules/callout/callout.php:280
-msgid "Heading Custom Size"
-msgstr ""
-
-#: ../modules/cta/cta.php:184
-msgid "Background Opacity"
-msgstr ""
-
-#: ../modules/cta/cta.php:207
-msgid "Button Link"
-msgstr ""
-
-#: ../modules/video/video.php:20
-msgid "Render a WordPress or embedable video."
-msgstr ""
-
-#: ../modules/video/video.php:82
-msgid "Video Type"
-msgstr ""
-
-#: ../modules/video/video.php:85 ../modules/photo/photo.php:323
-#: ../modules/slideshow/slideshow.php:266 ../modules/gallery/gallery.php:233
-#: ../includes/row-settings.php:192
-msgid "Media Library"
-msgstr ""
-
-#: ../modules/video/video.php:86
-msgid "Embed"
-msgstr ""
-
-#: ../modules/video/video.php:116
-msgid "Loop"
-msgstr ""
-
-#: ../modules/html/html.php:14
-msgid "HTML"
-msgstr ""
-
-#: ../modules/html/html.php:15
-msgid "Display raw HTML code."
-msgstr ""
-
-#: ../modules/widget/widget.php:14
-msgid "Widget"
-msgstr ""
-
-#: ../modules/widget/widget.php:15
-msgid "Display a WordPress widget."
-msgstr ""
-
-#: ../modules/widget/widget.php:16 ../includes/ui.php:46
-msgid "WordPress Widgets"
-msgstr ""
-
-#: ../modules/widget/includes/frontend.php:20
-msgid " no longer exists."
 msgstr ""
 
 #: ../modules/icon/icon.php:15
 msgid "Display a Font Awesome icon and optional title."
 msgstr ""
 
-#: ../modules/callout/callout.php:14
-msgid "Callout"
+#: ../modules/map/map.php:14
+msgid "Map"
 msgstr ""
 
-#: ../modules/callout/callout.php:15
-msgid "A heading and snippet of text with an optional link, icon and image."
+#: ../modules/map/map.php:15
+msgid "Display a Google map."
 msgstr ""
 
-#: ../modules/callout/callout.php:237
-msgid "Overall Alignment"
+#: ../modules/map/map.php:33
+msgid "Address"
 msgstr ""
 
-#: ../modules/callout/callout.php:244
-msgid "The alignment that will apply to all elements within the callout."
-msgstr ""
-
-#: ../modules/callout/callout.php:291
-msgid "Image"
-msgstr ""
-
-#: ../modules/callout/callout.php:298
-msgid "Image Type"
-msgstr ""
-
-#: ../modules/callout/callout.php:326 ../modules/photo/photo.php:346
-#: ../modules/slideshow/slideshow.php:312
-msgid "Crop"
-msgstr ""
-
-#: ../modules/callout/callout.php:330 ../modules/photo/photo.php:350
-msgid "Landscape"
-msgstr ""
-
-#: ../modules/callout/callout.php:331 ../modules/photo/photo.php:351
-msgid "Panorama"
-msgstr ""
-
-#: ../modules/callout/callout.php:332 ../modules/photo/photo.php:352
-msgid "Portrait"
-msgstr ""
-
-#: ../modules/callout/callout.php:333 ../modules/photo/photo.php:353
-msgid "Square"
-msgstr ""
-
-#: ../modules/callout/callout.php:341 ../modules/callout/callout.php:361
-msgid "Above Heading"
-msgstr ""
-
-#: ../modules/callout/callout.php:342 ../modules/callout/callout.php:362
-msgid "Below Heading"
-msgstr ""
-
-#: ../modules/callout/callout.php:343 ../modules/callout/callout.php:365
-msgid "Left of Text and Heading"
-msgstr ""
-
-#: ../modules/callout/callout.php:344 ../modules/callout/callout.php:366
-msgid "Right of Text and Heading"
-msgstr ""
-
-#: ../modules/callout/callout.php:363
-msgid "Left Heading"
-msgstr ""
-
-#: ../modules/callout/callout.php:364
-msgid "Right Heading"
-msgstr ""
-
-#: ../modules/callout/callout.php:372
-msgid "Icon Colors"
-msgstr ""
-
-#: ../modules/callout/callout.php:406
-msgid "Icon Structure"
-msgstr ""
-
-#: ../modules/callout/callout.php:430
-msgid ""
-"The link applies to the entire module. If choosing a call to action type "
-"below, this link will also be used for the text or button."
-msgstr ""
-
-#: ../modules/callout/callout.php:515
-msgid "Button Width"
-msgstr ""
-
-#: ../modules/testimonials/testimonials.php:14
-#: ../modules/testimonials/testimonials.php:165
-msgid "Testimonials"
-msgstr ""
-
-#: ../modules/testimonials/testimonials.php:15
-msgid "An animated tesimonials area."
-msgstr ""
-
-#: ../modules/testimonials/testimonials.php:40
-msgid "Wide"
-msgstr ""
-
-#: ../modules/testimonials/testimonials.php:41
-msgid "Compact"
-msgstr ""
-
-#: ../modules/testimonials/testimonials.php:51
-msgid "Wide is for 1 column rows, compact is for multi-column rows."
-msgstr ""
-
-#: ../modules/testimonials/testimonials.php:74
-msgid "Slider Settings"
-msgstr ""
-
-#: ../modules/testimonials/testimonials.php:131
-msgid "Arrow Color"
-msgstr ""
-
-#: ../modules/testimonials/testimonials.php:156
-msgid "Dot Color"
-msgstr ""
-
-#: ../modules/testimonials/testimonials.php:172
-msgid "Testimonial"
-msgstr ""
-
-#: ../modules/testimonials/testimonials.php:188
-msgid "Add Testimonial"
+#: ../modules/map/map.php:34
+msgid "1865 Winchester Blvd #202 Campbell, CA 95008"
 msgstr ""
 
 #: ../modules/photo/photo.php:26
 msgid "Upload a photo or display one from the media library."
 msgstr ""
 
-#: ../modules/photo/photo.php:320
+#: ../modules/photo/photo.php:375
 msgid "Photo Source"
 msgstr ""
 
-#: ../modules/photo/photo.php:324 ../modules/photo/photo.php:395
+#: ../modules/photo/photo.php:379 ../modules/photo/photo.php:451
 msgid "URL"
 msgstr ""
 
-#: ../modules/photo/photo.php:341
+#: ../modules/photo/photo.php:396
 msgid "Photo URL"
 msgstr ""
 
-#: ../modules/photo/photo.php:373
+#: ../modules/photo/photo.php:429
 msgid "Show Caption"
 msgstr ""
 
-#: ../modules/photo/photo.php:376 ../modules/gallery/gallery.php:277
-msgid "Never"
-msgstr ""
-
-#: ../modules/photo/photo.php:377 ../modules/gallery/gallery.php:278
-msgid "On Hover"
-msgstr ""
-
-#: ../modules/photo/photo.php:378 ../modules/gallery/gallery.php:279
-msgid "Below Photo"
-msgstr ""
-
-#: ../modules/photo/photo.php:383
+#: ../modules/photo/photo.php:439
 msgid "Caption"
 msgstr ""
 
-#: ../modules/photo/photo.php:392
+#: ../modules/photo/photo.php:448
 msgid "Link Type"
 msgstr ""
 
-#: ../modules/photo/photo.php:396
+#: ../modules/photo/photo.php:453
 msgid "Photo File"
 msgstr ""
 
-#: ../modules/photo/photo.php:397
+#: ../modules/photo/photo.php:454
 msgid "Photo Page"
 msgstr ""
 
-#: ../modules/photo/photo.php:407
+#: ../modules/photo/photo.php:464
 msgid ""
 "Link type applies to how the image should be linked on click. You can choose "
 "a specific URL, the individual photo or a separate page with the photo."
 msgstr ""
 
-#: ../modules/photo/photo.php:411 ../modules/slideshow/slideshow.php:350
+#: ../modules/photo/photo.php:471 ../modules/slideshow/slideshow.php:356
 msgid "Link URL"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:14 ../includes/row-settings.php:64
-msgid "Slideshow"
+#: ../modules/post-grid/includes/frontend.php:41
+msgid "No posts found."
+msgstr ""
+
+#: ../modules/post-grid/includes/post-feed.php:11
+#: ../modules/post-grid/includes/post-grid.php:21
+msgid "By "
+msgstr ""
+
+#: ../modules/post-grid/includes/post-feed.php:49
+#: ../modules/post-grid/includes/post-grid.php:42
+msgid "Read More"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:14
+msgid "Posts"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:15
+msgid "Display a grid of your WordPress posts."
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:51
+msgid "Layout Style"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:54 ../modules/post-grid/post-grid.php:88
+msgid "Grid"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:56
+msgid "Feed"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:71
+msgid "Pagination Style"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:74
+msgid "Numbers"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:81
+msgid "Posts Per Page"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:92
+msgid "Post Width"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:100
+msgid "Post Spacing"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:109
+msgid "Featured Image"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:117
+#: ../modules/post-grid/post-grid.php:150
+#: ../modules/post-grid/post-grid.php:159
+#: ../modules/post-grid/post-grid.php:188
+#: ../modules/post-grid/post-grid.php:202
+#: ../modules/post-grid/post-grid.php:216
+msgid "Hide"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:130
+msgid "Above Text"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:131
+msgid "Beside Text"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:142
+msgid "Post Info"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:169
+msgid "Date Format"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:184
+msgid "Comments"
+msgstr ""
+
+#: ../modules/post-grid/post-grid.php:212
+msgid "More Link"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:14
+msgid "Pricing Table"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:15
+msgid "A simple pricing table generator."
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:28
+msgid "Pricing Boxes"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:35
+msgid "Pricing Box"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:52
+msgid "Box Spacing"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:55
+#: ../modules/pricing-table/pricing-table.php:72
+#: ../modules/testimonials/testimonials.php:40
+msgid "Wide"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:56
+#: ../modules/pricing-table/pricing-table.php:73
+msgid "Tight"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:61
+msgid "Features Min Height"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:65
+msgid ""
+"Use this to normalize the height of your boxes when they have different "
+"numbers of features."
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:69
+msgid "Border Size"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:86
+msgid "Add Pricing Column"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:100
+msgid "Title Size"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:113
+msgid "Price"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:117
+msgid "Duration"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:122
+msgid "Price Size"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:135
+msgid "Button Text"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:139
+msgid "Button URL"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:149
+msgid "One feature per line. HTML is okay!"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:164
+msgid "Box Background"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:169
+msgid "Box Foreground"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:175
+msgid "Accent Color"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:180
+msgid "Accent Text Color"
+msgstr ""
+
+#: ../modules/pricing-table/pricing-table.php:184
+msgid "Box Top Margin"
+msgstr ""
+
+#: ../modules/rich-text/rich-text.php:15
+msgid "A WYSIWYG text editor."
+msgstr ""
+
+#: ../modules/separator/separator.php:14
+msgid "Separator"
+msgstr ""
+
+#: ../modules/separator/separator.php:15
+msgid "A divider line to separate content."
+msgstr ""
+
+#: ../modules/separator/separator.php:85
+msgid ""
+"The type of border to use. Double borders must have a height of at least 3px "
+"to render properly."
+msgstr ""
+
+#: ../modules/sidebar/includes/settings-general.php:5
+#: ../modules/sidebar/sidebar.php:14
+msgid "Sidebar"
+msgstr ""
+
+#: ../modules/sidebar/sidebar.php:15
+msgid ""
+"Display a WordPress sidebar that has been registered by the current theme."
 msgstr ""
 
 #: ../modules/slideshow/slideshow.php:15
 msgid "Display multiple photos in a slideshow view."
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:263 ../modules/gallery/gallery.php:230
-#: ../includes/row-settings.php:189
-msgid "Source"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:267 ../modules/gallery/gallery.php:234
-#: ../includes/row-settings.php:193
-msgid "SmugMug"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:269 ../modules/gallery/gallery.php:236
-#: ../includes/row-settings.php:195
-msgid ""
-"Pull images from the WordPress media library or a gallery on your SmugMug "
-"site by inserting the RSS feed URL from SmugMug. The RSS feed URL can be "
-"accessed by using the get a link function in your SmugMug gallery."
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:281 ../modules/gallery/gallery.php:248
-#: ../includes/row-settings.php:207
-msgid "Photos"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:285 ../modules/gallery/gallery.php:252
-#: ../includes/row-settings.php:211
-msgid "Feed URL"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:290 ../includes/row-settings.php:374
-#: ../includes/column-settings.php:149 ../includes/module-settings.php:18
-msgid "Display"
 msgstr ""
 
 #: ../modules/slideshow/slideshow.php:302
@@ -1528,1135 +2750,404 @@ msgstr ""
 msgid "Disable Right-Click"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:332 ../modules/gallery/gallery.php:285
-msgid "Click Action"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:358
+#: ../modules/slideshow/slideshow.php:366
 msgid "Playback"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:374 ../includes/row-settings.php:215
-#: ../includes/row-settings.php:265
-msgid "Speed"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:377
-#: ../modules/slideshow/slideshow.php:402
-#: ../modules/slideshow/slideshow.php:570 ../includes/row-settings.php:218
-#: ../includes/row-settings.php:243
-msgid "seconds"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:385 ../includes/row-settings.php:226
-msgid "Fade"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:386 ../includes/row-settings.php:227
-msgid "Ken Burns"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:387 ../includes/row-settings.php:228
-msgid "Slide Horizontal"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:388 ../includes/row-settings.php:229
-msgid "Slide Vertical"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:389 ../includes/row-settings.php:230
-msgid "Blinds"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:390 ../includes/row-settings.php:231
-msgid "Bars"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:391 ../includes/row-settings.php:232
-msgid "Random Bars"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:392 ../includes/row-settings.php:233
-msgid "Boxes"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:393 ../includes/row-settings.php:234
-msgid "Random Boxes"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:394 ../includes/row-settings.php:235
-msgid "Boxes Grow"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:406 ../includes/row-settings.php:247
-msgid "Randomize Photos"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:418
+#: ../modules/slideshow/slideshow.php:429
 msgid "Controls"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:425
-#: ../modules/slideshow/slideshow.php:474
+#: ../modules/slideshow/slideshow.php:436
+#: ../modules/slideshow/slideshow.php:485
 msgid "Navigation Arrows"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:431
+#: ../modules/slideshow/slideshow.php:442
 msgid ""
 "Navigational arrows allow the visitor to freely move through the images in "
 "your slideshow. These are larger arrows that overlay your slideshow images "
 "and are separate from the control bar navigational arrows."
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:436
+#: ../modules/slideshow/slideshow.php:447
 msgid "Control Bar"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:440
+#: ../modules/slideshow/slideshow.php:451
 msgid "Nav Type"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:444
+#: ../modules/slideshow/slideshow.php:455
 msgid "Buttons"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:445
-#: ../modules/slideshow/slideshow.php:575
-msgid "Thumbs"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:460
+#: ../modules/slideshow/slideshow.php:471
 msgid "Nav Position"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:463 ../includes/row-settings.php:398
-#: ../includes/row-settings.php:439 ../includes/column-settings.php:173
-#: ../includes/column-settings.php:214 ../includes/module-settings.php:42
-msgid "Bottom"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:464 ../includes/row-settings.php:389
-#: ../includes/row-settings.php:430 ../includes/column-settings.php:164
-#: ../includes/column-settings.php:205 ../includes/module-settings.php:33
-msgid "Top"
-msgstr ""
-
-#: ../modules/slideshow/slideshow.php:470
+#: ../modules/slideshow/slideshow.php:481
 msgid "Control Bar Buttons"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:483
+#: ../modules/slideshow/slideshow.php:494
 msgid "Play Button"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:492
+#: ../modules/slideshow/slideshow.php:503
 msgid "Fullscreen Button"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:501
+#: ../modules/slideshow/slideshow.php:512
 msgid "Photo Count"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:510
+#: ../modules/slideshow/slideshow.php:521
 msgid "Thumbs Button"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:519
+#: ../modules/slideshow/slideshow.php:530
 msgid "Caption Button"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:528
+#: ../modules/slideshow/slideshow.php:539
 msgid "Social Button"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:538
+#: ../modules/slideshow/slideshow.php:549
 msgid "Control Bar Overlay"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:542
+#: ../modules/slideshow/slideshow.php:553
 msgid "Overlay Enabled"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:553
+#: ../modules/slideshow/slideshow.php:564
 msgid ""
 "Control bar overlay specifies if the control bar buttons you choose overlay "
 "your slideshow images or site below the slideshow completely."
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:557
+#: ../modules/slideshow/slideshow.php:568
 msgid "Overlay Hide"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:563
+#: ../modules/slideshow/slideshow.php:574
 msgid ""
 "Overlay hide will hide the control bar after however many seconds you "
 "specify below. They will reappear upon mouse over."
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:567
+#: ../modules/slideshow/slideshow.php:578
 msgid "Overlay Hide Delay"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:579
+#: ../modules/slideshow/slideshow.php:590
 msgid "Thumbs Size"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:588
+#: ../modules/slideshow/slideshow.php:599
 msgid "Social"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:592
+#: ../modules/slideshow/slideshow.php:603
 msgid "Facebook Button"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:601
+#: ../modules/slideshow/slideshow.php:615
 msgid "Twitter Button"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:610
+#: ../modules/slideshow/slideshow.php:627
 msgid "Google Plus Button"
 msgstr ""
 
-#: ../modules/slideshow/slideshow.php:619
+#: ../modules/slideshow/slideshow.php:639
 msgid "Pinterest Button"
 msgstr ""
 
-#: ../modules/heading/heading.php:15
-msgid "Display a title/page heading."
+#: ../modules/social-buttons/social-buttons.php:14
+msgid "Social Buttons"
 msgstr ""
 
-#: ../modules/heading/heading.php:86
-msgid "Tag"
+#: ../modules/social-buttons/social-buttons.php:15
+msgid "Displays social buttons."
 msgstr ""
 
-#: ../modules/heading/heading.php:89
-msgid "h1"
+#: ../modules/social-buttons/social-buttons.php:71
+msgid "Target URL"
 msgstr ""
 
-#: ../modules/heading/heading.php:90
-msgid "h2"
+#: ../modules/social-buttons/social-buttons.php:75
+msgid "Current Page"
 msgstr ""
 
-#: ../modules/heading/heading.php:91
-msgid "h3"
-msgstr ""
-
-#: ../modules/heading/heading.php:92
-msgid "h4"
-msgstr ""
-
-#: ../modules/heading/heading.php:93
-msgid "h5"
-msgstr ""
-
-#: ../modules/heading/heading.php:94
-msgid "h6"
-msgstr ""
-
-#: ../modules/heading/heading.php:113 ../modules/heading/heading.php:164
-msgid "Custom Font Size"
-msgstr ""
-
-#: ../modules/heading/heading.php:122
-msgid "Mobile Structure"
-msgstr ""
-
-#: ../modules/heading/heading.php:140
-msgid "Custom Alignment"
-msgstr ""
-
-#: ../modules/gallery/gallery.php:14
-msgid "Gallery"
-msgstr ""
-
-#: ../modules/gallery/gallery.php:15
-msgid "Display multiple photos in a gallery view."
-msgstr ""
-
-#: ../modules/gallery/gallery.php:219
-msgid "Collage"
-msgstr ""
-
-#: ../modules/gallery/gallery.php:220
-msgid "Grid"
-msgstr ""
-
-#: ../modules/gallery/gallery.php:256
-msgid "Photo Size"
-msgstr ""
-
-#: ../modules/gallery/gallery.php:259 ../modules/accordion/accordion.php:60
-msgid "Small"
-msgstr ""
-
-#: ../modules/gallery/gallery.php:266
-msgid "Photo Spacing"
-msgstr ""
-
-#: ../modules/gallery/gallery.php:274
-msgid "Show Captions"
-msgstr ""
-
-#: ../modules/gallery/gallery.php:281
+#: ../modules/social-buttons/social-buttons.php:82
 msgid ""
-"The caption pulls from whatever text you put in the caption area in the "
-"media manager for each image. The caption is also pulled directly from "
-"SmugMug if you have captions set in your gallery."
+"The Target URL field correlates to the page you would like your social icons "
+"to interface with. For example, if you show Facebook, the user will \"Like\" "
+"whatever you put in this field."
 msgstr ""
 
-#: ../modules/gallery/gallery.php:289
-msgid "Lightbox"
+#: ../modules/social-buttons/social-buttons.php:89
+msgid "Custom URL"
 msgstr ""
 
-#: ../modules/gallery/gallery.php:290
-msgid "Photo Link"
+#: ../modules/social-buttons/social-buttons.php:107
+msgid "Show Facebook"
 msgstr ""
 
-#: ../modules/accordion/accordion.php:14
-msgid "Accordion"
+#: ../modules/social-buttons/social-buttons.php:116
+msgid "Show Twitter"
 msgstr ""
 
-#: ../modules/accordion/accordion.php:15
-msgid "Display a collapsible accordion of items."
+#: ../modules/social-buttons/social-buttons.php:125
+msgid "Show Google+"
 msgstr ""
 
-#: ../modules/accordion/accordion.php:28
-msgid "Items"
+#: ../modules/tabs/tabs.php:14
+msgid "Tabs"
 msgstr ""
 
-#: ../modules/accordion/accordion.php:35
-msgid "Item"
+#: ../modules/tabs/tabs.php:15
+msgid "Display a collection of tabbed content."
 msgstr ""
 
-#: ../modules/accordion/accordion.php:52
-msgid "Border Color"
+#: ../modules/testimonials/testimonials.php:14
+#: ../modules/testimonials/testimonials.php:174
+msgid "Testimonials"
 msgstr ""
 
-#: ../modules/accordion/accordion.php:57
-msgid "Label Size"
+#: ../modules/testimonials/testimonials.php:15
+msgid "An animated tesimonials area."
 msgstr ""
 
-#: ../modules/accordion/accordion.php:67
-msgid "Item Spacing"
+#: ../modules/testimonials/testimonials.php:41
+msgid "Compact"
 msgstr ""
 
-#: ../modules/accordion/accordion.php:83
-msgid "Add Item"
+#: ../modules/testimonials/testimonials.php:51
+msgid "Wide is for 1 column rows, compact is for multi-column rows."
 msgstr ""
 
-#: ../modules/accordion/accordion.php:93
-msgid "Label"
+#: ../modules/testimonials/testimonials.php:78
+msgid "Slider Settings"
 msgstr ""
 
-#: ../modules/accordion/accordion.php:98
-msgid "Content"
+#: ../modules/testimonials/testimonials.php:135
+msgid "Arrow Color"
 msgstr ""
 
-#: ../modules/separator/separator.php:14
-msgid "Separator"
+#: ../modules/testimonials/testimonials.php:165
+msgid "Dot Color"
 msgstr ""
 
-#: ../modules/separator/separator.php:15
-msgid "A divider line to separate content."
+#: ../modules/testimonials/testimonials.php:181
+msgid "Testimonial"
 msgstr ""
 
-#: ../modules/separator/separator.php:39 ../includes/row-settings.php:102
-#: ../includes/row-settings.php:315 ../includes/column-settings.php:42
-#: ../includes/column-settings.php:90
-msgid "Opacity"
+#: ../modules/testimonials/testimonials.php:197
+msgid "Add Testimonial"
 msgstr ""
 
-#: ../modules/separator/separator.php:58 ../includes/row-settings.php:285
-#: ../includes/column-settings.php:60
-msgid "Solid"
+#: ../modules/video/video.php:20
+msgid "Render a WordPress or embedable video."
 msgstr ""
 
-#: ../modules/separator/separator.php:59 ../includes/row-settings.php:286
-#: ../includes/column-settings.php:61
-msgid "Dashed"
+#: ../modules/video/video.php:83
+msgid "Video Type"
 msgstr ""
 
-#: ../modules/separator/separator.php:60 ../includes/row-settings.php:287
-#: ../includes/column-settings.php:62
-msgid "Dotted"
+#: ../modules/video/video.php:87
+msgid "Embed"
 msgstr ""
 
-#: ../modules/separator/separator.php:61 ../includes/row-settings.php:288
-#: ../includes/column-settings.php:63
-msgid "Double"
+#: ../modules/video/video.php:120
+msgid "Loop"
 msgstr ""
 
-#: ../modules/separator/separator.php:63
+#: ../modules/widget/includes/frontend.php:35
+#: ../modules/widget/includes/settings-general.php:44
+msgid " no longer exists."
+msgstr ""
+
+#: ../modules/widget/widget.php:14
+msgid "Widget"
+msgstr ""
+
+#: ../modules/widget/widget.php:15
+msgid "Display a WordPress widget."
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:16
+msgid "WooCommerce"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:17
+msgid "Display products or categories from your WooCommerce store."
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:60
+msgid "Choose..."
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:61
+msgid "Single Product"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:62
+#: ../modules/woocommerce/woocommerce.php:113
+msgid "Multiple Products"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:63
+msgid "Add to Cart Button"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:64
+msgid "Categories"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:65
+msgid "Cart"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:66
+msgid "Checkout"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:67
+msgid "Order Tracking"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:68
+msgid "My Account"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:87
+msgid "Product ID"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:90
 msgid ""
-"The type of border to use. Double borders must have a height of at least 3px "
-"to render properly."
+"As you add products in the WooCommerce Products area, each will be assigned "
+"a unique ID. You can find this unique product ID by visiting the Products "
+"area and rolling over the product. The unique ID will be the first attribute."
 msgstr ""
 
-#: ../includes/user-template-settings.php:4 ../includes/js-config.php:47
-msgid "Save Template"
+#: ../modules/woocommerce/woocommerce.php:94
+msgid "Parent Category ID"
 msgstr ""
 
-#: ../includes/user-template-settings.php:8
+#: ../modules/woocommerce/woocommerce.php:97
 msgid ""
-"Save the current layout as a template that can be reused under Tools > "
-"Manage Templates."
+"As you add product categories in the WooCommerce Products area, each will be "
+"assigned a unique ID. This ID can be found by hovering on the category in "
+"the categories area under Products and looking in the URL that is displayed "
+"in your browser. The ID will be the only number value in the URL."
 msgstr ""
 
-#: ../includes/js-config.php:11
-msgid "What would you like to do?"
+#: ../modules/woocommerce/woocommerce.php:101
+#: ../modules/woocommerce/woocommerce.php:172
+msgid "Columns"
 msgstr ""
 
-#: ../includes/js-config.php:12 ../includes/icon-selector.php:48
-#: ../includes/template-selector.php:76 ../includes/settings.php:110
-msgid "Cancel"
+#: ../modules/woocommerce/woocommerce.php:104
+#: ../modules/woocommerce/woocommerce.php:175
+msgid "1"
 msgstr ""
 
-#: ../includes/js-config.php:13
-msgid "Change Template"
+#: ../modules/woocommerce/woocommerce.php:105
+#: ../modules/woocommerce/woocommerce.php:176
+msgid "2"
 msgstr ""
 
-#: ../includes/js-config.php:14
+#: ../modules/woocommerce/woocommerce.php:106
+#: ../modules/woocommerce/woocommerce.php:177
+msgid "3"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:107
+#: ../modules/woocommerce/woocommerce.php:178
+msgid "4"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:117
+msgid "Products Source"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:120
+msgid "Products IDs"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:121
+msgid "Product Category"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:122
+msgid "Recent Products"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:123
+msgid "Featured Products"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:124
+msgid "Sale Products"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:125
+msgid "Best Selling Products"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:126
+msgid "Top Rated Products"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:154
+msgid "Product IDs"
+msgstr ""
+
+#: ../modules/woocommerce/woocommerce.php:156
 msgid ""
-"Warning! Changing the template will replace your existing layout. Do you "
-"really want to do this?"
+"As you add products in the WooCommerce Products area, each will be assigned "
+"a unique ID. You can find this unique product ID by visiting the Products "
+"area and rolling over the product. The unique ID will be the first attribute "
+"and you can add several here separated by a comma."
 msgstr ""
 
-#: ../includes/js-config.php:15
-msgid "Column"
+#: ../modules/woocommerce/woocommerce.php:160
+msgid "Category Slug"
 msgstr ""
 
-#: ../includes/js-config.php:16 ../includes/column-settings.php:4
-msgid "Column Settings"
-msgstr ""
-
-#: ../includes/js-config.php:17
+#: ../modules/woocommerce/woocommerce.php:162
 msgid ""
-"Please select either a background layout or content layout before submitting."
+"As you add product categories in the WooCommerce Products area, each will be "
+"assigned a unique slug or you can edit and add your own. These slugs can be "
+"found in the Categories area under WooCommerce Products. Several can be "
+"added here separated by a comma."
 msgstr ""
 
-#: ../includes/js-config.php:18
-msgid "Do you really want to delete this item?"
+#: ../modules/woocommerce/woocommerce.php:166
+msgid "Number of Products"
 msgstr ""
 
-#: ../includes/js-config.php:19
-msgid ""
-"Do you really want to delete this module? All content data will be "
-"permanently deleted."
+#: ../modules/woocommerce/woocommerce.php:183
+msgid "Sort By"
 msgstr ""
 
-#: ../includes/js-config.php:20
-msgid ""
-"Do you really want to delete this row? All content data will be permanently "
-"deleted."
+#: ../modules/woocommerce/woocommerce.php:187
+msgid "Popularity"
 msgstr ""
 
-#: ../includes/js-config.php:21
-msgid "Do you really want to delete this template?"
+#: ../modules/woocommerce/woocommerce.php:188
+msgid "Rating"
 msgstr ""
 
-#: ../includes/js-config.php:22
-msgid "Discard Draft"
+#: ../modules/woocommerce/woocommerce.php:190
+msgid "Price: Low to High"
 msgstr ""
 
-#: ../includes/js-config.php:23
-msgid ""
-"Do you really want to discard this draft? All of your changes that are not "
-"published will be lost."
-msgstr ""
-
-#: ../includes/js-config.php:24
-msgid "Save Draft"
-msgstr ""
-
-#: ../includes/js-config.php:25
-msgid "Duplicate"
-msgstr ""
-
-#: ../includes/js-config.php:26
-msgid "Duplicate This Page"
-msgstr ""
-
-#: ../includes/js-config.php:27
-msgid "Duplicate This Template"
-msgstr ""
-
-#: ../includes/js-config.php:28
-msgid "Edit Global Settings"
-msgstr ""
-
-#: ../includes/js-config.php:29
-msgid "Drop a row layout or module to get started!"
-msgstr ""
-
-#: ../includes/js-config.php:31
-msgid "Insert"
-msgstr ""
-
-#: ../includes/js-config.php:33
-msgid "Manage Templates"
-msgstr ""
-
-#: ../includes/js-config.php:35
-msgid "Module"
-msgstr ""
-
-#: ../includes/js-config.php:36
-msgid "Move"
-msgstr ""
-
-#: ../includes/js-config.php:37
-msgid "New Column"
-msgstr ""
-
-#: ../includes/js-config.php:38
-msgid "New Row"
-msgstr ""
-
-#: ../includes/js-config.php:39
-msgid "Ok"
-msgstr ""
-
-#: ../includes/js-config.php:40
-msgid "Photo Selected"
-msgstr ""
-
-#: ../includes/js-config.php:41
-msgid "Photos Selected"
-msgstr ""
-
-#: ../includes/js-config.php:42
-msgid "Publish Changes"
-msgstr ""
-
-#: ../includes/js-config.php:43 ../includes/fields.php:139
-msgid "Remove"
-msgstr ""
-
-#: ../includes/js-config.php:44
-msgid "Row"
-msgstr ""
-
-#: ../includes/js-config.php:45 ../includes/row-settings.php:6
-msgid "Row Settings"
-msgstr ""
-
-#: ../includes/js-config.php:46
-msgid "Save Core Template"
-msgstr ""
-
-#: ../includes/js-config.php:48 ../includes/fields.php:65
-msgid "Select Photo"
-msgstr ""
-
-#: ../includes/js-config.php:49
-msgid "Select Photos"
-msgstr ""
-
-#: ../includes/js-config.php:50 ../includes/fields.php:111
-msgid "Select Video"
-msgstr ""
-
-#: ../includes/js-config.php:51
-msgid "Settings"
-msgstr ""
-
-#: ../includes/js-config.php:52
-msgid "Append New Layout"
-msgstr ""
-
-#: ../includes/js-config.php:53
-msgid "Replace Existing Layout"
-msgstr ""
-
-#: ../includes/js-config.php:54
-msgid "Template Saved!"
-msgstr ""
-
-#: ../includes/js-config.php:56
-msgid ""
-"The settings you are currently editing will not be saved if you navigate "
-"away from this page."
-msgstr ""
-
-#: ../includes/fields.php:74 ../includes/fields.php:165
-#: ../includes/template-selector.php:60
-msgid "Edit"
-msgstr ""
-
-#: ../includes/fields.php:75 ../includes/fields.php:137
-msgid "Replace"
-msgstr ""
-
-#: ../includes/fields.php:92
-msgid " Photo Selected"
-msgstr ""
-
-#: ../includes/fields.php:95
-msgid " Photos Selected"
-msgstr ""
-
-#: ../includes/fields.php:101
-msgid "Create Gallery"
-msgstr ""
-
-#: ../includes/fields.php:102
-msgid "Edit Gallery"
-msgstr ""
-
-#: ../includes/fields.php:103
-msgid "Add Photos"
-msgstr ""
-
-#: ../includes/fields.php:125
-msgid "Replace Video"
-msgstr ""
-
-#: ../includes/fields.php:134 ../includes/icon-selector.php:23
-msgid "Select Icon"
-msgstr ""
-
-#: ../includes/fields.php:273
-msgid "All Categories"
-msgstr ""
-
-#: ../includes/icon-selector.php:25
-msgid "Filter: "
-msgstr ""
-
-#: ../includes/ui.php:5
-msgid "Done"
-msgstr ""
-
-#: ../includes/ui.php:6
-msgid "Tools"
-msgstr ""
-
-#: ../includes/ui.php:8
-msgid "Templates"
-msgstr ""
-
-#: ../includes/ui.php:10
-msgid "Add Content"
-msgstr ""
-
-#: ../includes/ui.php:25
-msgid "Row Layouts"
-msgstr ""
-
-#: ../includes/ui.php:29
-msgid "1 Column"
-msgstr ""
-
-#: ../includes/ui.php:30
-msgid "2 Columns"
-msgstr ""
-
-#: ../includes/ui.php:31
-msgid "3 Columns"
-msgstr ""
-
-#: ../includes/ui.php:32
-msgid "4 Columns"
-msgstr ""
-
-#: ../includes/ui.php:33
-msgid "5 Columns"
-msgstr ""
-
-#: ../includes/ui.php:34
-msgid "6 Columns"
-msgstr ""
-
-#: ../includes/ui.php:35
-msgid "Left Sidebar"
-msgstr ""
-
-#: ../includes/ui.php:36
-msgid "Right Sidebar"
-msgstr ""
-
-#: ../includes/ui.php:37
-msgid "Left &amp; Right Sidebar"
-msgstr ""
-
-#: ../includes/ui.php:64
-msgid "Purchase the Page Builder"
-msgstr ""
-
-#: ../includes/row-settings.php:19 ../includes/row-settings.php:34
-#: ../includes/row-settings.php:152
-msgid "Fixed"
-msgstr ""
-
-#: ../includes/row-settings.php:27
-msgid ""
-"Full width rows span the width of the page from edge to edge. Fixed rows are "
-"no wider than the Row Max Width set in the Global Settings."
-msgstr ""
-
-#: ../includes/row-settings.php:31
-msgid "Content Width"
-msgstr ""
-
-#: ../includes/row-settings.php:37
-msgid ""
-"Full width content spans the width of the page from edge to edge. Fixed "
-"content is no wider than the Row Max Width set in the Global Settings."
-msgstr ""
-
-#: ../includes/row-settings.php:52
-msgid "Background"
-msgstr ""
-
-#: ../includes/row-settings.php:68
-msgid "Parallax"
-msgstr ""
-
-#: ../includes/row-settings.php:119
-msgid "Repeat"
-msgstr ""
-
-#: ../includes/row-settings.php:123
-msgid "Tile"
-msgstr ""
-
-#: ../includes/row-settings.php:124
-msgid "Horizontal"
-msgstr ""
-
-#: ../includes/row-settings.php:125
-msgid "Vertical"
-msgstr ""
-
-#: ../includes/row-settings.php:127
-msgid ""
-"Repeat applies to how the image should display in the row background. "
-"Choosing none will display the image as uploaded. Tile will repeat the image "
-"as many times as needed to fill the row horizontally and vertically. You can "
-"also specify the image to only repeat horizontally or vertically."
-msgstr ""
-
-#: ../includes/row-settings.php:134
-msgid "Left Top"
-msgstr ""
-
-#: ../includes/row-settings.php:135
-msgid "Left Center"
-msgstr ""
-
-#: ../includes/row-settings.php:136
-msgid "Left Bottom"
-msgstr ""
-
-#: ../includes/row-settings.php:137
-msgid "Right Top"
-msgstr ""
-
-#: ../includes/row-settings.php:138
-msgid "Right Center"
-msgstr ""
-
-#: ../includes/row-settings.php:139
-msgid "Right Bottom"
-msgstr ""
-
-#: ../includes/row-settings.php:140
-msgid "Center Top"
-msgstr ""
-
-#: ../includes/row-settings.php:141
-msgid "Center Center"
-msgstr ""
-
-#: ../includes/row-settings.php:142
-msgid "Center Bottom"
-msgstr ""
-
-#: ../includes/row-settings.php:144
-msgid "Position will tell the image where it should sit in the row background."
-msgstr ""
-
-#: ../includes/row-settings.php:148
-msgid "Attachment"
-msgstr ""
-
-#: ../includes/row-settings.php:151
-msgid "Scroll"
-msgstr ""
-
-#: ../includes/row-settings.php:154
-msgid ""
-"Attachment will specify how the image reacts when scrolling a page. When "
-"scrolling is selected, the image will scroll with page scrolling. This is "
-"the default setting. Fixed will allow the image to scroll within the row "
-"background if fill is selected in the scale setting."
-msgstr ""
-
-#: ../includes/row-settings.php:158
-msgid "Scale"
-msgstr ""
-
-#: ../includes/row-settings.php:162
-msgid "Fit"
-msgstr ""
-
-#: ../includes/row-settings.php:163
-msgid "Fill"
-msgstr ""
-
-#: ../includes/row-settings.php:165
-msgid ""
-"Scale applies to how the image should display in the row background. You can "
-"select either fill or fit to the row background."
-msgstr ""
-
-#: ../includes/row-settings.php:170
-msgid "Background Video"
-msgstr ""
-
-#: ../includes/row-settings.php:175
-msgid ""
-"An HTML5 video to use as the background of this row. Supported types are "
-"MP4, WebM and Ogg."
-msgstr ""
-
-#: ../includes/row-settings.php:179
-msgid "Fallback Photo"
-msgstr ""
-
-#: ../includes/row-settings.php:180
-msgid "A photo that will be displayed if the video fails to load."
-msgstr ""
-
-#: ../includes/row-settings.php:185
-msgid "Background Slideshow"
-msgstr ""
-
-#: ../includes/row-settings.php:257
-msgid "Background Parallax"
-msgstr ""
-
-#: ../includes/row-settings.php:268
-msgid "Fast"
-msgstr ""
-
-#: ../includes/row-settings.php:270
-msgid "Slow"
-msgstr ""
-
-#: ../includes/row-settings.php:276 ../includes/column-settings.php:51
-msgid "Border"
-msgstr ""
-
-#: ../includes/row-settings.php:282 ../includes/column-settings.php:57
-msgid ""
-"The type of border to use. Double borders must have a width of at least 3px "
-"to render properly."
-msgstr ""
-
-#: ../includes/row-settings.php:323 ../includes/column-settings.php:98
-msgid "Top Width"
-msgstr ""
-
-#: ../includes/row-settings.php:332 ../includes/column-settings.php:107
-msgid "Bottom Width"
-msgstr ""
-
-#: ../includes/row-settings.php:341 ../includes/column-settings.php:116
-msgid "Left Width"
-msgstr ""
-
-#: ../includes/row-settings.php:350 ../includes/column-settings.php:125
-msgid "Right Width"
-msgstr ""
-
-#: ../includes/row-settings.php:369 ../includes/column-settings.php:144
-#: ../includes/module-settings.php:13
-msgid "CSS Class"
-msgstr ""
-
-#: ../includes/row-settings.php:370
-msgid "Add a custom CSS selector here to apply additional styling to this row."
-msgstr ""
-
-#: ../includes/row-settings.php:376 ../includes/column-settings.php:151
-#: ../includes/module-settings.php:20
-msgid "Always"
-msgstr ""
-
-#: ../includes/row-settings.php:377 ../includes/column-settings.php:152
-#: ../includes/module-settings.php:21
-msgid "Desktop Only"
-msgstr ""
-
-#: ../includes/row-settings.php:378 ../includes/column-settings.php:153
-#: ../includes/module-settings.php:22
-msgid "Mobile Only"
-msgstr ""
-
-#: ../includes/row-settings.php:380
-msgid ""
-"Choose whether to always show this row, only show it on the desktop view or "
-"only show it on the mobile view."
-msgstr ""
-
-#: ../includes/row-settings.php:385 ../includes/column-settings.php:160
-#: ../includes/global-settings.php:41 ../includes/global-settings.php:71
-#: ../includes/module-settings.php:29
-msgid "Margins"
-msgstr ""
-
-#: ../includes/column-settings.php:14
-msgid "Column Width"
-msgstr ""
-
-#: ../includes/column-settings.php:145
-msgid ""
-"A custom CSS class that will be applied to this column. Spaces only, no dots."
-msgstr ""
-
-#: ../includes/column-settings.php:155
-msgid ""
-"Choose whether to always show this column, only show it on the desktop view "
-"or only show it on the mobile view."
-msgstr ""
-
-#: ../includes/template-selector.php:3
-msgid "Layout Templates"
-msgstr ""
-
-#: ../includes/template-selector.php:6
-msgid "Home Pages"
-msgstr ""
-
-#: ../includes/template-selector.php:7
-msgid "Content Pages"
-msgstr ""
-
-#: ../includes/template-selector.php:8
-msgid "Your Templates"
-msgstr ""
-
-#: ../includes/template-selector.php:49
-msgid ""
-"You haven't saved any templates yet! To do so, create a layout and save it "
-"as a template under Tools > Save Template."
-msgstr ""
-
-#: ../includes/template-selector.php:54
-msgid "Blank"
-msgstr ""
-
-#: ../includes/template-selector.php:61
-msgid "Delete"
-msgstr ""
-
-#: ../includes/settings.php:79
-msgid "Add"
-msgstr ""
-
-#: ../includes/settings.php:106
-msgid "Save &amp; Finish"
-msgstr ""
-
-#: ../includes/settings.php:108
-msgid "Save &amp; Preview"
-msgstr ""
-
-#: ../includes/global-settings.php:4 ../includes/admin-settings.php:4
-msgid "Page Builder Settings"
-msgstr ""
-
-#: ../includes/global-settings.php:8
-msgid ""
-"These settings apply to all posts and pages where the builder is active."
-msgstr ""
-
-#: ../includes/global-settings.php:11
-msgid "Default Page Heading"
-msgstr ""
-
-#: ../includes/global-settings.php:15
-msgid "Show"
-msgstr ""
-
-#: ../includes/global-settings.php:26
-msgid ""
-"Choosing no will hide the default theme heading for the \"Page\" post type. "
-"You will also be required to enter some basic CSS for this to work if you "
-"choose no."
-msgstr ""
-
-#: ../includes/global-settings.php:30
-msgid "CSS Selector"
-msgstr ""
-
-#: ../includes/global-settings.php:32
-msgid "Enter a CSS selector for the default page heading to hide it."
-msgstr ""
-
-#: ../includes/global-settings.php:37
-msgid "Rows"
-msgstr ""
-
-#: ../includes/global-settings.php:57
-msgid "Max Width"
-msgstr ""
-
-#: ../includes/global-settings.php:62
-msgid ""
-"All rows will default to this width. You can override this and make a row "
-"full width in the settings for each row."
-msgstr ""
-
-#: ../includes/global-settings.php:67 ../includes/admin-settings.php:9
-msgid "Modules"
-msgstr ""
-
-#: ../includes/global-settings.php:80
-msgid "Mobile Layout"
-msgstr ""
-
-#: ../includes/global-settings.php:84
-msgid "Enabled"
-msgstr ""
-
-#: ../includes/global-settings.php:98
-msgid "Breakpoint"
-msgstr ""
-
-#: ../includes/admin-settings.php:8
-msgid "License"
-msgstr ""
-
-#: ../includes/admin-settings.php:10 ../includes/admin-settings.php:58
-msgid "Post Types"
-msgstr ""
-
-#: ../includes/admin-settings.php:11 ../includes/admin-settings.php:99
-#: ../includes/admin-settings.php:111
-msgid "Uninstall"
-msgstr ""
-
-#: ../includes/admin-settings.php:26
-msgid "Enabled Modules"
-msgstr ""
-
-#: ../includes/admin-settings.php:27
-msgid "Check or uncheck modules below to enable or disable them."
-msgstr ""
-
-#: ../includes/admin-settings.php:59
-msgid "Select the post types you would like the builder to work with."
-msgstr ""
-
-#: ../includes/admin-settings.php:60
-msgid "NOTE: Not all custom post types may be supported."
-msgstr ""
-
-#: ../includes/admin-settings.php:101
-msgid ""
-"Clicking the button below will uninstall the page builder plugin and delete "
-"all of its data, including all database tables and meta associated with it. "
-"You can uninstall or deactivate the page builder from the plugins page "
-"instead if you do not wish to delete the data."
-msgstr ""
-
-#: ../includes/admin-settings.php:103 ../includes/admin-settings.php:106
-msgid "NOTE:"
-msgstr ""
-
-#: ../includes/admin-settings.php:103
-msgid ""
-"The builder does not delete the post meta \"_fl_builder_layout_export\" and "
-"\"_fl_builder_enabled\" in case you want to reinstall it later. If you do, "
-"the builder will rebuild all of its data using those meta values."
-msgstr ""
-
-#: ../includes/admin-settings.php:106
-msgid "This applies to all sites on the network."
-msgstr ""
-
-#: ../includes/admin-settings.php:122
-msgid ""
-"Please type \"uninstall\" in the box below to confirm that you really want "
-"to uninstall the page builder and all of its data."
-msgstr ""
-
-#: ../includes/admin-posts.php:7
-msgid "The Page Builder is currently active for this page."
-msgstr ""
-
-#: ../includes/admin-posts.php:8
-msgid "Launch the Page Builder"
-msgstr ""
-
-#: ../includes/module-settings.php:14
-msgid ""
-"A custom CSS class that will be applied to this module. Spaces only, no dots."
-msgstr ""
-
-#: ../includes/module-settings.php:24
-msgid ""
-"Choose whether to always show this module, only show it on the desktop view "
-"or only show it on the mobile view."
-msgstr ""
-
-#: ../includes/module-settings.php:70
-msgid "Animation"
-msgstr ""
-
-#: ../includes/module-settings.php:77
-msgid "Fade In"
-msgstr ""
-
-#: ../includes/module-settings.php:78
-msgid "Slide Left"
-msgstr ""
-
-#: ../includes/module-settings.php:79
-msgid "Slide Right"
-msgstr ""
-
-#: ../includes/module-settings.php:80
-msgid "Slide Up"
-msgstr ""
-
-#: ../includes/module-settings.php:81
-msgid "Slide Down"
-msgstr ""
-
-#: ../includes/module-settings.php:91
-msgid "The amount of time in seconds before this animation starts."
-msgstr ""
-
-#: ../includes/updater/includes/form.php:4
-msgid "FastLine Themes Subscription"
-msgstr ""
-
-#: ../includes/updater/includes/form.php:7
-msgid "Active!"
-msgstr ""
-
-#: ../includes/updater/includes/form.php:9
-msgid "Not Active!"
-msgstr ""
-
-#: ../includes/updater/includes/form.php:15
-msgid "Email address saved!"
-msgstr ""
-
-#: ../includes/updater/includes/form.php:20
-msgid ""
-"Enter the email address you used to signup for <a href=\"http://themes."
-"fastlinemedia.com\" target=\"_blank\">FastLine Themes</a> to enable remote "
-"updates."
-msgstr ""
-
-#: ../includes/updater/includes/form.php:24
-msgid "email@yourwebsite.com"
-msgstr ""
-
-#: ../includes/updater/includes/form.php:27
-msgid "Save Subscription Settings"
+#: ../modules/woocommerce/woocommerce.php:191
+msgid "Price: High to Low"
 msgstr ""

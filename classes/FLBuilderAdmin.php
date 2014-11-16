@@ -131,7 +131,7 @@ final class FLBuilderAdmin {
         if(file_exists($ms_class)) {
             require_once $ms_class;
         }
-        if(file_exists($ms_settings_class) && !FL_BUILDER_VERSION == '{FL_BUILDER_VERSION}') {
+        if(file_exists($ms_settings_class) && FL_BUILDER_VERSION != '{FL_BUILDER_VERSION}') {
             require_once $ms_settings_class;
         }
         
@@ -182,5 +182,33 @@ final class FLBuilderAdmin {
     	}
     	
     	return $actions;
+    }
+	
+	/**
+     * @method white_label_plugins_page
+     */	 
+	static public function white_label_plugins_page($plugins) 
+    {
+        $branding = FLBuilderModel::get_branding();
+        
+        if($branding != __('Page Builder', 'fl-builder')) {
+            
+            if(isset($plugins['fl-builder/fl-builder.php'])) {
+                $plugins['fl-builder/fl-builder.php']['Name']       = $branding;
+                $plugins['fl-builder/fl-builder.php']['Title']      = $branding;
+                $plugins['fl-builder/fl-builder.php']['Author']     = '';
+                $plugins['fl-builder/fl-builder.php']['AuthorName'] = '';
+                $plugins['fl-builder/fl-builder.php']['PluginURI']  = '';
+            }
+            else if(isset($plugins['bb-plugin/fl-builder.php'])) {
+                $plugins['bb-plugin/fl-builder.php']['Name']        = $branding;
+                $plugins['bb-plugin/fl-builder.php']['Title']       = $branding;
+                $plugins['bb-plugin/fl-builder.php']['Author']      = '';
+                $plugins['bb-plugin/fl-builder.php']['AuthorName']  = '';
+                $plugins['bb-plugin/fl-builder.php']['PluginURI']   = '';
+            }
+        }
+        
+        return $plugins;
     }
 }

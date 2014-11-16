@@ -467,9 +467,8 @@ FLBuilder::register_module('FLPhotoModule', array(
                         )
                     ),
                     'link_url'     => array(
-                        'type'          => 'text',
+                        'type'          => 'link',
                         'label'         => __('Link URL', 'fl-builder'),
-                        'placeholder'   => 'http://www.example.com',
                         'preview'         => array(
                             'type'            => 'none'
                         )
