@@ -1413,7 +1413,7 @@ var FLBuilder;
                     title = FLBuilderStrings.newColumn;
                 }
             }
-            else if(parent.hasClass(FLBuilder._contentClass)) {
+            else if(parent.hasClass('fl-builder-content')) {
                 if(ui.item.hasClass('fl-builder-block-row')) {
                     title  = ui.item.text();
                 }
@@ -2024,7 +2024,7 @@ var FLBuilder;
             else if(ui.item.hasClass('fl-builder-block')) {
             
                 // A new module was dropped into a row position.
-                if(parent.hasClass(FLBuilder._contentClass)) {
+                if(parent.hasClass('fl-builder-content')) {
                     parentId = 0;
                 }
                 // A new module was dropped into a column position.
@@ -2043,7 +2043,7 @@ var FLBuilder;
                 ui.item.remove();
             }
             // A module was dropped into the main layout.
-            else if(parent.hasClass(FLBuilder._contentClass)) {
+            else if(parent.hasClass('fl-builder-content')) {
                 FLBuilder._addModuleAfterRowRender = ui.item;
                 FLBuilder._addRow('1-col', ui.item.index());
                 ui.item.remove();
