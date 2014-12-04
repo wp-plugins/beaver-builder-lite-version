@@ -231,8 +231,10 @@ final class FLBuilder {
         }
         
         // Enqueue assets for posts in the main query.
-        foreach($wp_query->posts as $post) {
-            self::enqueue_layout_styles_scripts($post->ID);
+        if ( isset( $wp_query->posts ) ) {
+            foreach ( $wp_query->posts as $post ) {
+                self::enqueue_layout_styles_scripts( $post->ID );
+            }
         }
         
         // Enqueue assets for posts via the fl_builder_global_posts filter.
@@ -420,6 +422,8 @@ final class FLBuilder {
      */
     static public function render_ui()
     {
+        global $post;
+            
         if(FLBuilderModel::is_builder_active()) {
         
             wp_reset_query();
@@ -584,7 +588,7 @@ final class FLBuilder {
                                 $module->settings->crop = false;
                             }
                             
-                            FLBuilder::render_module_html($module->settings->type, $module->settings);
+                            FLBuilder::render_module_html($module->settings->type, $module->settings, $module);
                         }
                     }
                 }
@@ -1094,7 +1098,7 @@ final class FLBuilder {
     /**
      * @method render_module_html
      */
-    static public function render_module_html($type, $settings)
+    static public function render_module_html($type, $settings, $module = null)
     {
         // Settings
         $defaults = FLBuilderModel::get_module_defaults($type);
@@ -1186,8 +1190,11 @@ final class FLBuilder {
         
         // Responsive css
         if($global_settings->responsive_enabled) {
+            $css .= '@media (max-width: '. $global_settings->medium_breakpoint .'px) { ';
+            $css .= file_get_contents(FL_BUILDER_DIR . '/css/fl-builder-layout-medium.css');
+            $css .= ' }';
             $css .= '@media (max-width: '. $global_settings->responsive_breakpoint .'px) { ';
-            $css .= file_get_contents(FL_BUILDER_DIR . '/css/fl-builder-responsive.css');
+            $css .= file_get_contents(FL_BUILDER_DIR . '/css/fl-builder-layout-responsive.css');
             $css .= ' }';
         }
         

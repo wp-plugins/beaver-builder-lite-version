@@ -1,4 +1,21 @@
 <div class="fl-builder-bar">
+    
+    <?php if(get_post_type() == 'fl-builder-template') : ?>
+    
+    <div class="fl-builder-bar-content">
+        <span class="fl-builder-bar-title fl-builder-bar-title-no-icon">
+            <?php echo sprintf(__('Template: %s', 'fl-builder'), get_the_title($post->ID)); ?>
+        </span>
+        <div class="fl-builder-bar-actions">
+            <span class="fl-builder-save-edit-template-button fl-builder-button fl-builder-button-primary"><?php _e('Save Template', 'fl-builder'); ?></span>
+            <span class="fl-builder-cancel-edit-template-button fl-builder-button"><?php _e('Cancel', 'fl-builder'); ?></span>
+            <div class="fl-clear"></div>
+        </div>
+        <div class="fl-clear"></div>
+    </div>
+    
+    <?php else : ?>
+    
     <div class="fl-builder-bar-content">
         <?php if(stristr(home_url(), 'demo.wpbeaverbuilder.com')) : ?>
         <span class="fl-builder-bar-title">
@@ -18,7 +35,7 @@
         <div class="fl-builder-bar-actions">
             <span class="fl-builder-done-button fl-builder-button fl-builder-button-primary"><?php _e('Done', 'fl-builder'); ?></span>
             <span class="fl-builder-tools-button fl-builder-button"><?php _e('Tools', 'fl-builder'); ?></span>
-            <?php if(get_post_type() != 'fl-builder-template' && FL_BUILDER_LITE !== true && $enabled_templates != 'disabled') : ?>
+            <?php if(FL_BUILDER_LITE !== true && $enabled_templates != 'disabled') : ?>
             <span class="fl-builder-templates-button fl-builder-button"><?php _e('Templates', 'fl-builder'); ?></span>
             <?php endif; ?>
             <span class="fl-builder-add-content-button fl-builder-button"><?php _e('Add Content', 'fl-builder'); ?></span>
@@ -26,6 +43,9 @@
         </div>
         <div class="fl-clear"></div>
     </div>
+    
+    <?php endif; ?>
+    
 </div>
 <div class="fl-builder-panel">
     <div class="fl-builder-panel-actions">

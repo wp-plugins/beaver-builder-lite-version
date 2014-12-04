@@ -23,3 +23,25 @@
     border-right-width: <?php echo is_numeric($col->settings->border_right) ? $col->settings->border_right : '0'; ?>px;
 }
 <?php endif; ?>
+
+<?php if($global_settings->responsive_enabled) : ?>
+
+    <?php if($col->settings->medium_size == 'custom') : ?>
+    @media(max-width: <?php echo $global_settings->medium_breakpoint; ?>px) {
+        .fl-builder-content .fl-node-<?php echo $col->node; ?> {
+            width: <?php echo $col->settings->custom_medium_size; ?>% !important;
+        }
+    }
+    <?php endif; ?>
+    
+    <?php if($col->settings->responsive_size == 'custom') : ?>
+    @media(max-width: <?php echo $global_settings->responsive_breakpoint; ?>px) {
+        .fl-builder-content .fl-node-<?php echo $col->node; ?> {
+            clear: none;
+            float: left;
+            width: <?php echo $col->settings->custom_responsive_size; ?>% !important;
+        }
+    }
+    <?php endif; ?>
+    
+<?php endif; ?>

@@ -269,14 +269,17 @@ var FLBuilder;
             
             // Row layouts from the builder panel.
             $('.fl-builder-rows').sortable($.extend({}, defaults, {
-                connectWith: FLBuilder._contentClass + ', .fl-row-content',
+                connectWith: FLBuilder._contentClass + ', ' + 
+                             FLBuilder._contentClass + ' .fl-row-content',
                 items: '.fl-builder-block-row',
                 stop: FLBuilder._rowDragStop
             }));
             
             // Modules from the builder panel.
             $('.fl-builder-modules, .fl-builder-widgets').sortable($.extend({}, defaults, {
-                connectWith: FLBuilder._contentClass + ', .fl-row-content, .fl-col-content',
+                connectWith: FLBuilder._contentClass + ', ' + 
+                             FLBuilder._contentClass + ' .fl-row-content, ' + 
+                             FLBuilder._contentClass + ' .fl-col-content',
                 items: '.fl-builder-block-module',
                 stop: FLBuilder._moduleDragStop
             }));
@@ -290,7 +293,7 @@ var FLBuilder;
             }));
             
             // Column group position.
-            $('.fl-row-content').sortable($.extend({}, defaults, {
+            $(FLBuilder._contentClass + ' .fl-row-content').sortable($.extend({}, defaults, {
                 handle: '.fl-row-overlay .fl-block-overlay-actions .fl-block-move',
                 helper: FLBuilder._rowDragHelper,
                 items: '.fl-col-group',
@@ -298,8 +301,10 @@ var FLBuilder;
             }));
             
             // Module position.
-            $('.fl-col-content').sortable($.extend({}, defaults, {
-                connectWith: FLBuilder._contentClass + ', .fl-row-content, .fl-col-content',
+            $(FLBuilder._contentClass + ' .fl-col-content').sortable($.extend({}, defaults, {
+                connectWith: FLBuilder._contentClass + ', ' + 
+                             FLBuilder._contentClass + ' .fl-row-content, ' + 
+                             FLBuilder._contentClass + ' .fl-col-content',
                 handle: '.fl-module-overlay .fl-block-overlay-actions .fl-block-move',
                 helper: FLBuilder._moduleDragHelper,
                 items: '.fl-module',
@@ -363,6 +368,10 @@ var FLBuilder;
             
             /* User Template Settings */
             $('body').delegate('.fl-builder-user-template-settings .fl-builder-settings-save', 'click', FLBuilder._saveUserTemplateSettings);
+            
+            /* Edit User Template */
+            $('body').delegate('.fl-builder-cancel-edit-template-button', 'click', FLBuilder._cancelEditUserTemplate);
+            $('body').delegate('.fl-builder-save-edit-template-button', 'click', FLBuilder._saveEditUserTemplate);
             
             /* Rows */
             $('body').delegate('.fl-row-overlay .fl-block-remove', 'click', FLBuilder._deleteRowClicked);
@@ -442,13 +451,15 @@ var FLBuilder;
          */
         _bindOverlayEvents: function()
         {
-            $('body').delegate('.fl-row', 'mouseenter', FLBuilder._rowMouseenter);
-            $('body').delegate('.fl-row', 'mouseleave', FLBuilder._rowMouseleave);
-            $('body').delegate('.fl-row-overlay', 'mouseleave', FLBuilder._rowMouseleave);
-            $('body').delegate('.fl-col', 'mouseenter', FLBuilder._colMouseenter);
-            $('body').delegate('.fl-col', 'mouseleave', FLBuilder._colMouseleave);
-            $('body').delegate('.fl-module', 'mouseenter', FLBuilder._moduleMouseenter);
-            $('body').delegate('.fl-module', 'mouseleave', FLBuilder._moduleMouseleave);
+            var content = $(FLBuilder._contentClass);
+            
+            content.delegate('.fl-row', 'mouseenter', FLBuilder._rowMouseenter);
+            content.delegate('.fl-row', 'mouseleave', FLBuilder._rowMouseleave);
+            content.delegate('.fl-row-overlay', 'mouseleave', FLBuilder._rowMouseleave);
+            content.delegate('.fl-col', 'mouseenter', FLBuilder._colMouseenter);
+            content.delegate('.fl-col', 'mouseleave', FLBuilder._colMouseleave);
+            content.delegate('.fl-module', 'mouseenter', FLBuilder._moduleMouseenter);
+            content.delegate('.fl-module', 'mouseleave', FLBuilder._moduleMouseleave);
         },
         
         /**
@@ -457,13 +468,15 @@ var FLBuilder;
          */
         _destroyOverlayEvents: function()
         {
-            $('body').undelegate('.fl-row', 'mouseenter', FLBuilder._rowMouseenter);
-            $('body').undelegate('.fl-row', 'mouseleave', FLBuilder._rowMouseleave);
-            $('body').undelegate('.fl-row-overlay', 'mouseleave', FLBuilder._rowMouseleave);
-            $('body').undelegate('.fl-col', 'mouseenter', FLBuilder._colMouseenter);
-            $('body').undelegate('.fl-col', 'mouseleave', FLBuilder._colMouseleave);
-            $('body').undelegate('.fl-module', 'mouseenter', FLBuilder._moduleMouseenter);
-            $('body').undelegate('.fl-module', 'mouseleave', FLBuilder._moduleMouseleave);
+            var content = $(FLBuilder._contentClass);
+            
+            content.undelegate('.fl-row', 'mouseenter', FLBuilder._rowMouseenter);
+            content.undelegate('.fl-row', 'mouseleave', FLBuilder._rowMouseleave);
+            content.undelegate('.fl-row-overlay', 'mouseleave', FLBuilder._rowMouseleave);
+            content.undelegate('.fl-col', 'mouseenter', FLBuilder._colMouseenter);
+            content.undelegate('.fl-col', 'mouseleave', FLBuilder._colMouseleave);
+            content.undelegate('.fl-module', 'mouseenter', FLBuilder._moduleMouseenter);
+            content.undelegate('.fl-module', 'mouseleave', FLBuilder._moduleMouseleave);
         },
         
         /**
@@ -646,7 +659,7 @@ var FLBuilder;
             $('.fl-builder-loading').show();
             
             FLBuilder.ajax({
-                action: 'fl_builder_update',
+                action: 'fl_builder_save',
                 method: 'save_layout',
                 render_assets: 0
             }, FLBuilder._exit);
@@ -678,7 +691,7 @@ var FLBuilder;
                 $('.fl-builder-loading').show();
                 
                 FLBuilder.ajax({
-                    action: 'fl_builder_update',
+                    action: 'fl_builder_save',
                     method: 'clear_draft_layout',
                     render_assets: 0
                 }, FLBuilder._exit);
@@ -721,7 +734,7 @@ var FLBuilder;
             $('.fl-builder-loading').show();
             
             FLBuilder.ajax({
-                action: 'fl_builder_update',
+                action: 'fl_builder_save',
                 method: 'duplicate_post'
             }, FLBuilder._duplicatePageComplete);
         },
@@ -828,7 +841,7 @@ var FLBuilder;
                 $('.fl-builder-loading').show();
                 
                 FLBuilder.ajax({
-                    action: 'fl_builder_update',
+                    action: 'fl_builder_save',
                     method: 'save_global_settings',
                     settings: settings
                 }, FLBuilder._updateLayout);
@@ -962,7 +975,7 @@ var FLBuilder;
             if(confirm(FLBuilderStrings.deleteTemplate)) {
                 
                 FLBuilder.ajax({
-                    action: 'fl_builder_update',
+                    action: 'fl_builder_save',
                     method: 'delete_user_template',
                     template_id: template.attr('data-id')
                 });
@@ -1042,7 +1055,7 @@ var FLBuilder;
             if(type == 'core') {
         
                 FLBuilder.ajax({
-                    action: 'fl_builder_update',
+                    action: 'fl_builder_save',
                     method: 'apply_template',
                     index: id,
                     append: append
@@ -1051,7 +1064,7 @@ var FLBuilder;
             else {
             
                 FLBuilder.ajax({
-                    action: 'fl_builder_update',
+                    action: 'fl_builder_save',
                     method: 'apply_user_template',
                     template_id: id,
                     append: append
@@ -1092,7 +1105,7 @@ var FLBuilder;
                 $('.fl-builder-loading').show();
                 
                 FLBuilder.ajax({
-                    action: 'fl_builder_update',
+                    action: 'fl_builder_save',
                     method: 'save_user_template',
                     template_name: settings.name
                 }, FLBuilder._saveUserTemplateSettingsComplete);
@@ -1108,6 +1121,62 @@ var FLBuilder;
         _saveUserTemplateSettingsComplete: function()
         {
             FLBuilder._alert(FLBuilderStrings.templateSaved);
+        },
+
+        /* Edit User Template
+        ----------------------------------------------------------*/
+        
+        /**
+         * @method _cancelEditUserTemplate
+         * @private
+         */
+        _cancelEditUserTemplate: function()
+        {
+            var result = confirm(FLBuilderStrings.discardMessage);
+            
+            if(result) {
+            
+                $('.fl-builder-loading').show();
+                
+                FLBuilder.ajax({
+                    action: 'fl_builder_save',
+                    method: 'clear_draft_layout',
+                    render_assets: 0
+                }, FLBuilder._cancelEditUserTemplateComplete);
+            }
+        },
+        
+        /**
+         * @method _cancelEditUserTemplateComplete
+         * @private
+         */
+        _cancelEditUserTemplateComplete: function()
+        {
+            window.close();
+        },
+        
+        /**
+         * @method _saveEditUserTemplate
+         * @private
+         */
+        _saveEditUserTemplate: function()
+        {
+            $('.fl-builder-loading').show();
+            
+            FLBuilder.ajax({
+                action: 'fl_builder_save',
+                method: 'save_layout',
+                render_assets: 0
+            }, FLBuilder._saveEditUserTemplateComplete);
+        },
+        
+        /**
+         * @method _saveEditUserTemplateComplete
+         * @private
+         */
+        _saveEditUserTemplateComplete: function()
+        {
+            window.close();
         },
         
         /* Template Settings
@@ -1203,8 +1272,8 @@ var FLBuilder;
                     oldCss.remove();
                     oldJs.remove();
                     
-                    // Remove jQuery if added by third party plugins.
-                    newHtml.find('script[src*="jquery.js"]').remove();
+                    // Clean the new content.
+                    newHtml = FLBuilder._renderLayoutCleanContent(newHtml);
                     
                     // Add the new content.
                     content.append(newHtml);
@@ -1229,6 +1298,28 @@ var FLBuilder;
             });
             
             body.append(loader);
+        },
+        
+        /**
+         * Remove scripts added by third party plugins
+         * that are already present on the page.
+         *
+         * @method _renderLayoutCleanContent
+         * @private
+         */
+        _renderLayoutCleanContent: function(newHtml)
+        {
+            var i = 0;
+            
+            for( ; i < newHtml.length; i++) {
+                if(newHtml[i].nodeName.toUpperCase() == 'SCRIPT') {
+                    if($('script[src="' + newHtml[i].src + '"]').length > 0) {
+                        newHtml.splice(i, 1);
+                    }
+                }
+            }
+            
+            return newHtml;
         },
         
         /**
@@ -1352,11 +1443,11 @@ var FLBuilder;
             $('.fl-builder-empty-message').hide();
             
             // Highlight rows.
-            $('.fl-row').addClass('fl-row-highlight');
+            $(FLBuilder._contentClass + ' .fl-row').addClass('fl-row-highlight');
             
             // Highlight modules.
             if(item.hasClass('fl-module') || item.hasClass('fl-builder-block-module')) {
-                $('.fl-col').addClass('fl-col-highlight');
+                $(FLBuilder._contentClass + ' .fl-col').addClass('fl-col-highlight');
             }
             
             // Clean up the UI for dragging.
@@ -1380,8 +1471,8 @@ var FLBuilder;
             
             // Refresh sortables.
             $(FLBuilder._contentClass).sortable('refreshPositions');
-            $('.fl-row-content').sortable('refreshPositions');
-            $('.fl-col-content').sortable('refreshPositions');
+            $(FLBuilder._contentClass + ' .fl-row-content').sortable('refreshPositions');
+            $(FLBuilder._contentClass + ' .fl-col-content').sortable('refreshPositions');
         },
         
         /**
@@ -1437,16 +1528,19 @@ var FLBuilder;
             var parent     = ui.item.parent(),
                 initialPos = parent.offset().top - $(window).scrollTop();
 
+            // Show the panel? 
             if(parent.hasClass('fl-builder-blocks-section-content')) {
                 FLBuilder._showPanel();
             }
             
+            // Finish dragging. 
             FLBuilder._dragEnabled = false;
             FLBuilder._dragging = false;
             FLBuilder._bindOverlayEvents();
             FLBuilder._highlightEmptyCols();
             $('.fl-builder-empty-message').show();
             
+            // Scroll the page back to where it was. 
             scrollTo(0, parent.offset().top - initialPos);
         },
         
@@ -1488,8 +1582,8 @@ var FLBuilder;
          */
         _highlightEmptyCols: function()
         {
-            var rows = $('.fl-row'),
-            	cols = $('.fl-col');
+            var rows = $(FLBuilder._contentClass + ' .fl-row'),
+            	cols = $(FLBuilder._contentClass + ' .fl-col');
             
             rows.removeClass('fl-row-highlight');
             cols.removeClass('fl-col-highlight');
@@ -1563,39 +1657,50 @@ var FLBuilder;
          */
         _rowDragStop: function(e, ui)
         {
+            var item   = ui.item,
+                parent = item.parent();
+                
             FLBuilder._blockDragStop(e, ui);
 
             // A row was dropped back into the row list.
-            if(ui.item.parent().hasClass('fl-builder-rows')) {
-                ui.item.remove();
+            if(parent.hasClass('fl-builder-rows')) {
+                item.remove();
                 return;
             }
             // Add a new row.
-            else if(ui.item.hasClass('fl-builder-block')) {
+            else if(item.hasClass('fl-builder-block')) {
             
                 // A row was dropped into another row.
-                if(ui.item.parent().hasClass('fl-row-content')) {
+                if(parent.hasClass('fl-row-content')) {
                     FLBuilder._addColGroup(
-                        ui.item.closest('.fl-row').attr('data-node'),
-                        ui.item.attr('data-cols'), 
-                        ui.item.index()
+                        item.closest('.fl-row').attr('data-node'),
+                        item.attr('data-cols'), 
+                        parent.children('.fl-col-group, .fl-builder-block').index(item)
                     );
-                    FLBuilder._showPanel();
-                    $('.fl-builder-modules').siblings('.fl-builder-blocks-section-title').eq(0).trigger('click');
                 }
                 // A row was dropped into the main layout.
                 else {  
-                    FLBuilder._addRow(ui.item.attr('data-cols'), ui.item.parent().find('.fl-row, .fl-builder-block').index(ui.item));
-                    FLBuilder._showPanel();
-                    $('.fl-builder-modules').siblings('.fl-builder-blocks-section-title').eq(0).trigger('click');
+                    FLBuilder._addRow(
+                        item.attr('data-cols'), 
+                        parent.children('.fl-row, .fl-builder-block').index(item)
+                    );
                 }
 
                 // Remove the helper.
-                ui.item.remove();
+                item.remove();
+                
+                // Show the builder panel.
+                FLBuilder._showPanel();
+                
+                // Show the module list.
+                $('.fl-builder-modules').siblings('.fl-builder-blocks-section-title').eq(0).trigger('click');
             }
             // Reorder a row.
             else {
-                 FLBuilder._reorderRow(ui.item.attr('data-node'), ui.item.parent().find('.fl-row').index(ui.item));
+                FLBuilder._reorderRow(
+                    item.attr('data-node'), 
+                    parent.children('.fl-row').index(item)
+                );
             }
         },
         
@@ -1606,7 +1711,7 @@ var FLBuilder;
         _reorderRow: function(node_id, position)
         {
             FLBuilder.ajax({
-                action: 'fl_builder_update',
+                action: 'fl_builder_save',
                 method: 'reorder_node',
                 node_id: node_id,
                 position: position,
@@ -1638,7 +1743,7 @@ var FLBuilder;
         _addRowComplete: function(response)
         {
             var content = $(FLBuilder._contentClass),
-                rows    = $('.fl-row'),
+                rows    = content.find('.fl-row'),
                 row     = $(response),
                 module  = null,
                 form    = null;
@@ -1700,9 +1805,10 @@ var FLBuilder;
         _deleteRow: function(row)
         {
             FLBuilder.ajax({
-                action: 'fl_builder_update',
+                action: 'fl_builder_save',
                 method: 'delete_node',
                 node_id: row.attr('data-node'),
+                render_assets: 0,
                 silent: true
             });
             
@@ -1725,7 +1831,7 @@ var FLBuilder;
             FLBuilder._removeAllOverlays();
             
             FLBuilder.ajax({
-                action: 'fl_builder_update',
+                action: 'fl_builder_save',
                 method: 'copy_row',
                 node_id: nodeId
             }, FLBuilder._updateLayout);
@@ -1883,11 +1989,12 @@ var FLBuilder;
                 groupCols.css('width', width + '%');
             
                 FLBuilder.ajax({
-                    action      : 'fl_builder_update',
-                    method      : 'delete_col',
-                    node_id     : col.attr('data-node'),
-                    new_width   : width,
-                    silent      : true
+                    action          : 'fl_builder_save',
+                    method          : 'delete_col',
+                    node_id         : col.attr('data-node'),
+                    new_width       : width,
+                    render_assets   : 0,
+                    silent          : true
                 });
             }
         },
@@ -2010,57 +2117,60 @@ var FLBuilder;
          */
         _moduleDragStop: function(e, ui)
         {
-            var parent   = ui.item.parent(),
+            var item     = ui.item,
+                parent   = item.parent(),
+                position = 0,
                 parentId = 0;
             
             FLBuilder._blockDragStop(e, ui);
             
             // A module was dropped back into the module list.
             if(parent.hasClass('fl-builder-modules') || parent.hasClass('fl-builder-widgets')) {
-                ui.item.remove();
+                item.remove();
                 return;
             }
             // A new module was dropped.
-            else if(ui.item.hasClass('fl-builder-block')) {
+            else if(item.hasClass('fl-builder-block')) {
             
                 // A new module was dropped into a row position.
                 if(parent.hasClass('fl-builder-content')) {
+                    position = parent.children('.fl-row, .fl-builder-block').index(item);
                     parentId = 0;
                 }
                 // A new module was dropped into a column position.
                 else if(parent.hasClass('fl-row-content')) {
-                    parentId = ui.item.closest('.fl-row').attr('data-node');
+                    position = parent.children('.fl-col-group, .fl-builder-block').index(item);
+                    parentId = item.closest('.fl-row').attr('data-node');
                 }
                 // A new module was dropped into a column.
                 else {
-                    parentId = ui.item.closest('.fl-col').attr('data-node');
+                    position = parent.children('.fl-module, .fl-builder-block').index(item);
+                    parentId = item.closest('.fl-col').attr('data-node');
                 }
                 
                 // Add the new module.
-                FLBuilder._addModule(parentId, ui.item.attr('data-type'), ui.item.index(), ui.item.attr('data-widget'))
+                FLBuilder._addModule(parentId, item.attr('data-type'), position, item.attr('data-widget'))
                 
                 // Remove the drag helper.
                 ui.item.remove();
             }
             // A module was dropped into the main layout.
             else if(parent.hasClass('fl-builder-content')) {
-                FLBuilder._addModuleAfterRowRender = ui.item;
-                FLBuilder._addRow('1-col', ui.item.index());
-                ui.item.remove();
+                position = parent.children('.fl-row, .fl-module').index(item);
+                FLBuilder._addModuleAfterRowRender = item;
+                FLBuilder._addRow('1-col', position);
+                item.remove();
             }
             // A module was dropped into a column position.
             else if(parent.hasClass('fl-row-content')) {
-                FLBuilder._addModuleAfterRowRender = ui.item;
-                FLBuilder._addColGroup(
-                    ui.item.closest('.fl-row').attr('data-node'),
-                    '1-col', 
-                    ui.item.index()
-                );
-                ui.item.remove();
+                position = parent.children('.fl-col-group, .fl-module').index(item);
+                FLBuilder._addModuleAfterRowRender = item;
+                FLBuilder._addColGroup(item.closest('.fl-row').attr('data-node'), '1-col', position);
+                item.remove();
             }
             // A module was dropped into another column.
             else {
-                FLBuilder._reorderModule(ui.item);
+                FLBuilder._reorderModule(item);
             }
             
             FLBuilder._resizeLayout();
@@ -2079,7 +2189,7 @@ var FLBuilder;
                  
             if(newParent == oldParent) {
                 FLBuilder.ajax({
-                    action: 'fl_builder_update',
+                    action: 'fl_builder_save',
                     method: 'reorder_node',
                     node_id: node_id,
                     position: position,
@@ -2090,7 +2200,7 @@ var FLBuilder;
                 module.attr('data-parent', newParent);
             
                 FLBuilder.ajax({
-                    action: 'fl_builder_update',
+                    action: 'fl_builder_save',
                     method: 'move_node',
                     new_parent: newParent,
                     node_id: node_id,
@@ -2126,9 +2236,10 @@ var FLBuilder;
             var row = module.closest('.fl-row');
 
             FLBuilder.ajax({
-                action: 'fl_builder_update',
+                action: 'fl_builder_save',
                 method: 'delete_node',
                 node_id: module.attr('data-node'),
+                render_assets: 0,
                 silent: true
             });
             
@@ -2152,7 +2263,7 @@ var FLBuilder;
             FLBuilder._removeAllOverlays();
             
             FLBuilder.ajax({
-                action: 'fl_builder_update',
+                action: 'fl_builder_save',
                 method: 'copy_module',
                 node_id: module.attr('data-node')
             }, FLBuilder._updateLayout);
@@ -2526,7 +2637,7 @@ var FLBuilder;
             
             // Make the AJAX call.
             FLBuilder.ajax({
-                action          : 'fl_builder_update',
+                action          : 'fl_builder_save',
                 method          : 'save_settings',
                 node_id         : nodeId,
                 settings        : settings,

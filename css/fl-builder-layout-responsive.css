@@ -1,22 +1,12 @@
-/* Grid
------------------------------------------------------- */
-
-.fl-col {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto !important;
-}
-.fl-col-small {
-    max-width: 400px;
-}
-
 /* Responsive Utilities
 ------------------------------------------------------ */
 
-.fl-visible-desktop {
+.fl-visible-desktop,
+.fl-visible-desktop-medium,
+.fl-visible-medium {
     display: none;
 }
+.fl-visible-medium-mobile,
 .fl-visible-mobile {
     display: block;
 }
@@ -45,6 +35,16 @@
 /* Columns
 ------------------------------------------------------ */
 
+.fl-col {
+    clear: both;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto !important;
+}
+.fl-col-small {
+    max-width: 400px;
+}
 .fl-col-content {
     border-left: none !important;
     border-right: none !important;

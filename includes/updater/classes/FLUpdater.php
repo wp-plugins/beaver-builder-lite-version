@@ -28,16 +28,17 @@ final class FLUpdater {
 	/**
 	 * @method __construct
 	 */
-	public function __construct($settings = array())
+	public function __construct( $settings = array() )
 	{
 		$this->settings = $settings;
 		
-		if($settings['type'] == 'plugin') {
-			add_filter('pre_set_site_transient_update_plugins', array($this, 'update_check'));
-			add_filter('plugins_api', array($this, 'plugin_info'), 10, 3);
+		if ( 'plugin' == $settings['type'] ) {
+			add_filter( 'pre_set_site_transient_update_plugins', array( $this, 'update_check' ) );
+			add_filter( 'plugins_api', array( $this, 'plugin_info' ), 10, 3 );
+			add_action( 'in_plugin_update_message-' . self::get_plugin_file( $settings['slug'] ), array( $this, 'update_message' ), 1, 2 );
 		}
-		else if($settings['type'] == 'theme') {
-			add_filter('pre_set_site_transient_update_themes', array($this, 'update_check'));
+		else if ( $settings['type'] == 'theme' ) {
+			add_filter( 'pre_set_site_transient_update_themes', array( $this, 'update_check' ) );
 		}
 	}
 
@@ -55,20 +56,15 @@ final class FLUpdater {
 	        'email'         => FLUpdater::get_subscription_email(),
 	        'domain'        => network_home_url(),
 	        'product'       => $this->settings['name'],
-	        'slug'          => $this->settings['slug']
+	        'slug'          => $this->settings['slug'],
+	        'version'       => $this->settings['version']
 	    ));
 	    
         if(isset($response) && $response !== false && is_object($response) && !isset($response->errors)) {
         
             if($this->settings['type'] == 'plugin') {
-            
-                if($this->settings['slug'] == 'bb-plugin') {
-                    $plugin = $this->settings['slug'] . '/fl-builder.php';
-                }
-                else {
-                    $plugin = $this->settings['slug'] . '/' . $this->settings['slug'] . '.php';
-                }
-            
+                    
+                $plugin   = self::get_plugin_file($this->settings['slug']);
                 $new_ver  = $response->new_version;
     			$curr_ver = $this->settings['version'];
     			
@@ -93,6 +89,23 @@ final class FLUpdater {
 
 		return $transient;
 	}
+
+	/**
+	 * @method update_message
+	 */
+	public function update_message( $plugin_data, $response )
+	{
+    	if ( empty( $response->package ) ) {
+        	echo '<p style="padding:10px 20px; margin-top: 10px; background: #d54e21; color: #fff;">';
+            echo __('<strong>UPDATE UNAVAILABLE!</strong>');
+        	echo '&nbsp;&nbsp;&nbsp;';
+            echo __('Please subscribe to enable automatic updates for this plugin.', 'fl-builder');
+            echo ' <a href="' . $plugin_data['PluginURI'] . '" target="_blank" style="color: #fff; text-decoration: underline;">';
+            echo __('Subscribe Now', 'fl-builder');
+            echo ' &raquo;</a>';
+        	echo '</p>';
+    	}
+    }
 
 	/**
 	 * @method plugin_info
@@ -194,7 +207,7 @@ final class FLUpdater {
 	 */
 	static public function save_subscription_email($email)
 	{
-		update_site_option('fl_themes_subscription_email', sanitize_email($email));
+		update_site_option('fl_themes_subscription_email', $email);
 	}
 
 	/**
@@ -213,6 +226,23 @@ final class FLUpdater {
 	    }
 	    
 	    return false;
+	}
+	
+	/**
+	 * @method get_plugin_file
+	 * @static
+	 * @private
+	 */
+	static private function get_plugin_file( $slug )
+	{
+    	if ( 'bb-plugin' == $slug ) {
+            $file = $slug . '/fl-builder.php';
+        }
+        else {
+            $file = $slug . '/' . $slug . '.php';
+        }
+        
+        return $file;
 	}
 	
 	/**

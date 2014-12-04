@@ -45,8 +45,11 @@ html.fl-builder-edit {
 ------------------------------------------------------ */
 
 .fl-visible-desktop,
+.fl-visible-desktop-medium,
+.fl-visible-medium,
+.fl-visible-medium-mobile,
 .fl-visible-mobile {
-    display: block !important;
+    display: block;
 }
 
 /* Builder Buttons
