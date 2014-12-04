@@ -463,11 +463,14 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'select',
                             'label'         => __('Display', 'fl-builder'),
                             'options'       => array(
-                                ''              => __('Always', 'fl-builder'),
-                                'desktop'       => __('Desktop Only', 'fl-builder'),
-                                'mobile'        => __('Mobile Only', 'fl-builder'),
+                                ''                  => __('Always', 'fl-builder'),
+                                'desktop'           => __('Large Devices Only', 'fl-builder'),
+                                'desktop-medium'    => __('Large &amp; Medium Devices Only', 'fl-builder'),
+                                'medium'            => __('Medium Devices Only', 'fl-builder'),
+                                'medium-mobile'     => __('Medium &amp; Small Devices Only', 'fl-builder'),
+                                'mobile'            => __('Small Devices Only', 'fl-builder'),
                             ),
-                            'help'          => __('Choose whether to always show this row, only show it on the desktop view or only show it on the mobile view.'),
+                            'help'          => __('Choose whether to show or hide this row at different device sizes.'),
                             'preview'         => array(
                                 'type'            => 'none'
                             )

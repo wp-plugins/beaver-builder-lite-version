@@ -1,3 +1,24 @@
+<h4>1.4.1</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added a new responsive breakpoint in the global settings for medium devices.</li>
+    <li>Added new column width settings for medium and small devices.</li>
+    <li>Added the ability to hide rows, columns and modules at a number of new breakpoints.</li>
+    <li>Improved the UI/UX for editing user defined templates.</li>
+    <li>User defined templates are now ordered by title instead of id.</li>
+    <li>Optimized the loading of images for the gallery module's collage layout.</li>
+    <li>White label settings for Agency members are now available on single site installs.</li>
+    <li>Updated the custom modules docs and examples with info on the new link field type.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug that kept some third party widgets from being styled correctly.</li>
+    <li>Fixed bugs that caused a secondary layout on a page to be editable when it shouldn't be.</li>
+    <li>Replaced the word update with save in AJAX requests to prevent mod security from blocking them.</li>
+    <li>Fixed a bug where publishing a layout in multiple tabs caused it to disappear.</li>
+    <li>Fixed a bug causing the builder to break in rare cases when canceling out of a preview.</li>
+</ul>
+
 <h4>1.4.0</h4>
 <p><strong>Bug Fixes</strong></p>
 <ul>

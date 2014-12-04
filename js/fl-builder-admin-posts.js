@@ -34,10 +34,9 @@ var FLBuilderAdminPosts;
             
             $('.fl-builder-admin-tabs a').removeClass('fl-active');
             $(this).addClass('fl-active');
-            $(window).resize();
             
             FLBuilderAdminPosts.ajax({
-                action: 'fl_builder_update',
+                action: 'fl_builder_save',
                 method: 'disable',
             }, FLBuilderAdminPosts._enableEditorComplete);
         },
@@ -49,6 +48,7 @@ var FLBuilderAdminPosts;
         _enableEditorComplete: function()
         {
             $('body').removeClass('fl-builder-enabled');
+            $(window).resize();
         },
 
         /**
@@ -110,7 +110,7 @@ var FLBuilderAdminPosts;
                 $('.fl-builder-loading').show();
                 
                 FLBuilderAdminPosts.ajax({
-                    action: 'fl_builder_update',
+                    action: 'fl_builder_save',
                     method: 'duplicate_wpml_layout',
                     original_post_id: originalPostId
                 }, FLBuilderAdminPosts._wpmlCopyComplete);

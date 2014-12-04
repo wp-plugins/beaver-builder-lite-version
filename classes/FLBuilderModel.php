@@ -2045,8 +2045,17 @@ final class FLBuilderModel {
      */	 
     static public function clear_draft_layout()
     {
+        $post_id = self::get_post_id();
+        $data    = self::get_layout_data('published', $post_id);
+        
+        // Delete the old draft layout.
         self::delete_layout_data('draft');
-        self::delete_asset_cache();
+        
+        // Save the new draft layout.
+        self::update_layout_data($data, 'draft', $post_id);
+        
+        // Clear the asset cache. 
+        self::delete_all_asset_cache($post_id);
     }
     
 	/**
@@ -2063,9 +2072,6 @@ final class FLBuilderModel {
         
         // Save the new published layout.
         self::update_layout_data($data, 'published', $post_id);
-        
-        // Delete the draft layout.
-        self::delete_layout_data('draft', $post_id);
         
         // Clear the asset cache. 
         self::delete_all_asset_cache($post_id);
@@ -2180,7 +2186,7 @@ final class FLBuilderModel {
      */	 
     static public function get_user_templates()
     {
-        return get_posts('post_type=fl-builder-template&orderby=ID&order=ASC&posts_per_page=-1');
+        return get_posts('post_type=fl-builder-template&orderby=title&order=ASC&posts_per_page=-1');
     }
     
 	/**

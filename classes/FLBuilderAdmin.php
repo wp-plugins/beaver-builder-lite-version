@@ -128,11 +128,14 @@ final class FLBuilderAdmin {
         if(file_exists($templates_class)) {
             require_once $templates_class;
         }
-        if(file_exists($ms_class)) {
-            require_once $ms_class;
-        }
-        if(file_exists($ms_settings_class) && FL_BUILDER_VERSION != '{FL_BUILDER_VERSION}') {
-            require_once $ms_settings_class;
+        if(is_multisite()) {
+            
+            if(file_exists($ms_class)) {
+                require_once $ms_class;
+            }
+            if(file_exists($ms_settings_class) && FL_BUILDER_VERSION != '{FL_BUILDER_VERSION}') {
+                require_once $ms_settings_class;
+            }
         }
         
         require_once FL_BUILDER_DIR . 'classes/FLBuilderAdminSettings.php';

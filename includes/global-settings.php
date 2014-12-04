@@ -76,8 +76,8 @@ FLBuilder::register_settings_form('global', array(
                         )
                     )
                 ),
-                'mobile'        => array(
-                    'title'         => __('Mobile Layout', 'fl-builder'),
+                'responsive'    => array(
+                    'title'         => __('Responsive Layout', 'fl-builder'),
                     'fields'        => array(
                         'responsive_enabled'   => array(
                             'type'                 => 'select',
@@ -89,17 +89,27 @@ FLBuilder::register_settings_form('global', array(
                             ),
                             'toggle'               => array(
                                 '1'                    => array(
-                                    'fields'               => array('responsive_breakpoint')
+                                    'fields'               => array('responsive_breakpoint', 'medium_breakpoint')
                                 )
                             )
                         ),
+                        'medium_breakpoint' => array(
+                            'type'              => 'text',
+                            'label'             => __('Medium Device Breakpoint', 'fl-builder'),
+                            'default'           => '992',
+                            'maxlength'         => '4',
+                            'size'              => '5',
+                            'description'       => __('px', 'fl-builder'),
+                            'help'              => __('The browser width at which the layout will adjust for medium devices such as tablets.', 'fl-builder')
+                        ),
                         'responsive_breakpoint' => array(
                             'type'              => 'text',
-                            'label'             => __('Breakpoint', 'fl-builder'),
+                            'label'             => __('Small Device Breakpoint', 'fl-builder'),
                             'default'           => '768',
                             'maxlength'         => '4',
                             'size'              => '5',
-                            'description'       => __('px', 'fl-builder')
+                            'description'       => __('px', 'fl-builder'),
+                            'help'              => __('The browser width at which the layout will adjust for small devices such as phones.', 'fl-builder')
                         )
                     )
                 )
