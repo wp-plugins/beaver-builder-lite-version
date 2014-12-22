@@ -1244,8 +1244,7 @@ var FLBuilder;
                 oldCss  = $('#fl-builder-layout-' + post + '-css'),
                 oldJs   = $('script[src*="/fl-builder/' + post + '"]'),
                 newCss  = $('<link rel="stylesheet" id="fl-builder-layout-' + post + '-css"  href="'+ data.css +'" />'),
-                newJs   = $('<script src="'+ data.js +'"></script>'),
-                newHtml = $(data.html);
+                newJs   = $('<script src="'+ data.js +'"></script>');
                 
             // Image onerror hack to check if the stylesheet has been loaded.
             loader.on('error', function() 
@@ -1272,11 +1271,8 @@ var FLBuilder;
                     oldCss.remove();
                     oldJs.remove();
                     
-                    // Clean the new content.
-                    newHtml = FLBuilder._renderLayoutCleanContent(newHtml);
-                    
                     // Add the new content.
-                    content.append(newHtml);
+                    content.append( FLBuilder._renderLayoutCleanContent( data.html ) );
                     
                     // Add the new layout js.
                     setTimeout(function(){
@@ -1307,19 +1303,23 @@ var FLBuilder;
          * @method _renderLayoutCleanContent
          * @private
          */
-        _renderLayoutCleanContent: function(newHtml)
+        _renderLayoutCleanContent: function( html )
         {
-            var i = 0;
+            var cleaned = $( '<div id="fl-cleaned-content">' + html + '</div>' ),
+                src     = '',
+                script  = null;
             
-            for( ; i < newHtml.length; i++) {
-                if(newHtml[i].nodeName.toUpperCase() == 'SCRIPT') {
-                    if($('script[src="' + newHtml[i].src + '"]').length > 0) {
-                        newHtml.splice(i, 1);
-                    }
+            cleaned.find( 'script' ).each( function() {
+                
+                src     = $( this ).attr( 'src' );
+                script  = $( 'script[src="' + src + '"]' );
+                
+                if ( script.length > 0 ) {
+                    $( this ).remove();
                 }
-            }
+            });
             
-            return newHtml;
+            return cleaned.html();
         },
         
         /**
@@ -3633,17 +3633,17 @@ var FLBuilder;
                 FLBuilder._silentUpdate = true;
             }
             
-            // Tell the server to use cached nodes and files.
-            data.fl_use_cache = 1;
-            
             // Send the post id to the server. 
             data.post_id = $('#fl-post-id').val();
+            
+            // Tell the server that the builder is active.
+            data.fl_builder = 1;
             
             // Append the builder namespace to the action.
             data.fl_action = data.action;
             
-            // Stringify the data.
-            data = { fl_builder_data: JSON.stringify(data) };
+            // Store the data in a single variable to avoid conflicts.
+            data = { fl_builder_data: data };
             
             // Do the ajax call.
             return $.post(FLBuilder._ajaxUrl(), data, function(response) {

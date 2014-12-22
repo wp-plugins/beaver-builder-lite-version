@@ -4,7 +4,7 @@
     
     <div class="fl-builder-bar-content">
         <span class="fl-builder-bar-title fl-builder-bar-title-no-icon">
-            <?php echo sprintf(__('Template: %s', 'fl-builder'), get_the_title($post->ID)); ?>
+            <?php echo sprintf(__('Template: %s', 'fl-builder'), get_the_title($post_id)); ?>
         </span>
         <div class="fl-builder-bar-actions">
             <span class="fl-builder-save-edit-template-button fl-builder-button fl-builder-button-primary"><?php _e('Save Template', 'fl-builder'); ?></span>
@@ -115,5 +115,5 @@
 <div class="fl-builder-hidden-editor">
     <?php wp_editor(' ', 'flhiddeneditor', array('wpautop' => true)); ?>
 </div>
-<input type="hidden" id="fl-post-id" value="<?php echo FLBuilderModel::get_post_id(); ?>" />
+<input type="hidden" id="fl-post-id" value="<?php echo $post_id; ?>" />
 <input type="hidden" id="fl-admin-url" value="<?php echo admin_url(); ?>" />

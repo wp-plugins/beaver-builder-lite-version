@@ -3,7 +3,7 @@
  * Plugin Name: Beaver Builder Plugin (Lite Version)
  * Plugin URI: http://www.wpbeaverbuilder.com
  * Description: A drag and drop frontend WordPress page builder plugin that works with almost any theme!
- * Version: 1.4.1
+ * Version: 1.4.2
  * Author: The Beaver Builder Team
  * Author URI: http://www.wpbeaverbuilder.com
  * Copyright: (c) 2014 Beaver Builder
@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: fl-builder
  */
-define('FL_BUILDER_VERSION', '1.4.1');
+define('FL_BUILDER_VERSION', '1.4.2');
 define('FL_BUILDER_DIR', plugin_dir_path(__FILE__));
 define('FL_BUILDER_URL', plugins_url('/', __FILE__));
 define('FL_BUILDER_LITE', true);
@@ -99,7 +99,6 @@ add_action('admin_bar_menu',                                   'FLBuilder::admin
 add_filter('template_include',                                 'FLBuilder::render_template', 999);
 add_action('wp_footer',                                        'FLBuilder::include_jquery');
 add_action('wp_footer',                                        'FLBuilder::render_ui');
-add_action('wp_footer',                                        'FLBuilder::render_js_config');
 
 /* Filters */
 add_filter('body_class',                                       'FLBuilder::body_class');

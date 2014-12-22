@@ -1,11 +1,11 @@
 <script>
 
 var FLBuilderConfig = { 
-    ajaxUrl: '<?php wp_reset_query(); global $post; echo get_permalink($post->ID); ?>',
-    enabledTemplates: '<?php echo FLBuilderModel::get_enabled_templates(); ?>',
+    ajaxUrl: '<?php echo get_permalink( $post_id ); ?>',
+    enabledTemplates: '<?php echo $enabled_templates; ?>',
     homeUrl:  '<?php echo home_url(); ?>',
     lite: <?php if(FL_BUILDER_LITE === true) echo 'true'; else echo 'false'; ?>,
-    postId: <?php echo FLBuilderModel::get_post_id(); ?>,
+    postId: <?php echo $post_id; ?>,
     postType: '<?php echo get_post_type(); ?>',
     simpleUi: <?php if(!current_user_can(FLBuilderModel::get_editing_capability())) echo 'true'; else echo 'false'; ?>,
     upgradeUrl: '<?php echo FL_BUILDER_UPGRADE_URL; ?>'

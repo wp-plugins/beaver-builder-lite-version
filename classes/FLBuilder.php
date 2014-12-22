@@ -51,10 +51,7 @@ final class FLBuilder {
      * @method init
      */	 
     static public function init()
-    {
-        // Init the data model.
-        FLBuilderModel::init();
-        
+    {   
         // Enable editing if the builder is active.
         if(FLBuilderModel::is_builder_active()) {
         
@@ -223,7 +220,7 @@ final class FLBuilder {
         wp_register_script('jquery-wookmark',       $js_url . 'jquery.wookmark.min.js', array('jquery'), $ver, true);
         
         // YUI 3 (Needed for the slideshow)
-        if(is_ssl()) {
+        if(FLBuilderModel::is_ssl()) {
             wp_register_script('yui3', 'https://yui-s.yahooapis.com/3.5.1/build/yui/yui-min.js', array(), '3.5.1', false);
         }
         else {
@@ -395,25 +392,15 @@ final class FLBuilder {
      */
     static public function admin_bar_menu($wp_admin_bar)
     {
-        if(FLBuilderModel::is_post_editable()) {
+        global $wp_the_query;
         
-            wp_reset_query();
+        if ( FLBuilderModel::is_post_editable() ) {
         
-            $wp_admin_bar->add_node(array(
+            $wp_admin_bar->add_node( array(
                 'id'    => 'fl-builder-frontend-edit-link',
-                'title' => '<style> #wp-admin-bar-fl-builder-frontend-edit-link .ab-icon:before { content: "\f116" !important; top: 2px; margin-right: 3px; } </style><span class="ab-icon"></span>' . __(FLBuilderModel::get_branding(), 'fl-builder'),
-                'href'  => FLBuilderModel::get_edit_url()
+                'title' => '<style> #wp-admin-bar-fl-builder-frontend-edit-link .ab-icon:before { content: "\f116" !important; top: 2px; margin-right: 3px; } </style><span class="ab-icon"></span>' . __( FLBuilderModel::get_branding(), 'fl-builder' ),
+                'href'  => FLBuilderModel::get_edit_url( $wp_the_query->post->ID )
             ));
-        }
-    }
-    
-    /**
-     * @method render_js_config
-     */
-    static public function render_js_config()
-    {
-        if(FLBuilderModel::is_builder_active()) {
-            include FL_BUILDER_DIR . 'includes/js-config.php';
         }
     }
     
@@ -422,16 +409,16 @@ final class FLBuilder {
      */
     static public function render_ui()
     {
-        global $post;
-            
-        if(FLBuilderModel::is_builder_active()) {
+        global $wp_the_query;
         
-            wp_reset_query();
+        if ( FLBuilderModel::is_builder_active() ) {
         
-        	$categories = FLBuilderModel::get_categorized_modules();
-        	$enabled_templates = FLBuilderModel::get_enabled_templates();
+            $post_id            = $wp_the_query->post->ID;
+        	$categories         = FLBuilderModel::get_categorized_modules();
+        	$enabled_templates  = FLBuilderModel::get_enabled_templates();
         
             include FL_BUILDER_DIR . 'includes/ui.php';
+            include FL_BUILDER_DIR . 'includes/js-config.php';
         }
     }
     
