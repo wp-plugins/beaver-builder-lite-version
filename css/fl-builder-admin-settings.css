@@ -1,0 +1,272 @@
+/* Heading
+----------------------------------------------------------- */
+
+.fl-settings-heading img {
+    height: 40px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.fl-settings-heading span {
+    vertical-align: middle;
+}
+
+/* Nav
+----------------------------------------------------------- */
+
+.fl-settings-nav {
+    float: left;
+    margin: 15px 2% 0 0;
+    width: 19%;
+}
+.fl-settings-nav ul {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+.fl-settings-nav ul li {
+    display: block;
+    margin: 0;
+}
+.fl-settings-nav ul li a {
+    border-bottom: 1px solid #eee;
+    display: block;
+    padding: 10px;
+}
+.fl-settings-nav ul li a:hover,
+.fl-settings-nav ul li a.fl-active {
+    background: #f5f5f5;
+}
+.fl-settings-nav ul li:last-child a {
+    border-bottom: none;
+}
+.fl-settings-nav a {
+    text-decoration: none;
+}
+.fl-settings-nav .fl-settings-save {
+	padding: 0 2px;
+}
+.fl-settings-nav .button-primary {
+	width: 100%;
+}
+
+/* Content
+----------------------------------------------------------- */
+
+.fl-settings-content {
+    float: left;
+    margin-top: 15px;
+    width: 78%;
+}
+h2.fl-settings-content-header {
+    padding-top: 0;
+    font-size: 20px;
+}
+.fl-settings-content .fl-settings-save {
+	float: right;
+}
+
+/* Settings Forms
+----------------------------------------------------------- */
+
+.fl-settings-form {
+    display: none;
+    max-width: 450px;
+}
+.fl-settings-form-header {
+    margin-bottom: 20px !important;
+}
+.fl-settings-form .form-table {
+    margin: 12px 0;
+}
+.fl-settings-form th {
+    font-weight: bold;
+    vertical-align: middle;
+}
+.fl-settings-form th,
+.fl-settings-form td {
+    font-size: 13px;
+    font-weight: normal;
+    padding: 12px;
+}
+.fl-settings-form-content {
+    display: none;
+}
+.fl-settings-network-admin .fl-settings-form-content,
+.fl-settings-single-install .fl-settings-form-content {
+    display: block;
+}
+
+/* Settings Form Sections
+----------------------------------------------------------- */
+
+.fl-settings-section {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin-bottom: 20px;
+}
+.fl-settings-section-header {
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Settings Form Fields
+----------------------------------------------------------- */
+
+.fl-settings-section input,
+.fl-settings-section select {
+    margin-right: 10px;
+}
+
+/* Tooltips */
+.fl-tooltip {
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+    top: 6px;
+}
+.fl-tooltip-icon {
+    background: url(../img/help.png) center center no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+.fl-tooltip-text {
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    display: none;
+    font-weight: normal;
+    left: 23px;
+    padding: 10px 13px;
+    position: absolute;
+    top: -6px;
+    width: 250px;
+}
+
+/* Help After */
+.fl-help-after {
+    display: inline-block;
+    padding-top: 10px;
+}
+
+/* Hidden */
+.fl-hidden {
+    display: none;
+}
+
+/* Textarea */
+.fl-settings-form textarea {
+    width: 100%;
+}
+
+/* Code editors */
+.ace_editor {
+	border: 1px solid #e5e5e5;
+}
+
+/* Images */
+.fl-img-wrap {
+	display: inline;
+}
+.fl-img {
+    display: block;
+    margin-bottom: 7px;
+    max-height: 75px;
+}
+.fl-img-empty .fl-img-select,
+.fl-img-replace {
+    display: inline;
+}
+.fl-img-select,
+.fl-img-empty .fl-img,
+.fl-img-empty .fl-img-replace {
+    display: none;
+}
+
+/* Color Picker */
+.fl-color-picker {
+    cursor: pointer;
+	height: 30px;
+	width: 48px;
+}
+.fl-color-picker.fl-empty .fl-color-picker-color {
+    background: url(../img/eyedropper.png) center center no-repeat;
+}
+.fl-color-picker .fl-color-picker-color {
+    border: 1px solid #ccc;
+    float: left;
+	height: 30px;
+	width: 30px;
+}
+.fl-color-picker.fl-empty .fl-color-picker-clear {
+    display: none;
+}
+.fl-color-picker .fl-color-picker-clear {
+    background: url(../img/x.png) center center no-repeat;
+    border: 1px solid #ccc;
+    border-left: none;
+    float: left;
+	height: 30px;
+	width: 15px;
+}
+.fl-color-picker .fl-color-picker-clear:hover {
+    background-color: #ededed;
+}
+.colorpicker input {
+	border: none;
+	color: #fff;
+}
+
+/* Media Query - Max Width 900px
+----------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    /* Nav
+    ----------------------------------------------------------- */
+    
+    .fl-settings-nav {
+        float: none;
+        margin: 15px 0 0 0;
+        width: 100%;
+    }
+
+    /* Content
+    ----------------------------------------------------------- */
+    
+    .fl-settings-content {
+        float: none;
+        margin-top: 15px;
+        width: 100%;
+    }
+	.fl-settings-content .fl-settings-save {
+		float: none;
+        width: 100%;
+	}
+	.fl-settings-content .fl-settings-save .button-primary {
+		width: 100%;
+	}
+}
+
+/* Media Query - Max Width 782px
+----------------------------------------------------------- */
+
+@media (max-width: 782px) {
+    
+    /* Settings Forms
+    ----------------------------------------------------------- */
+    
+    .fl-settings-form th,
+    .fl-settings-form td {
+        padding: 5px 17px;
+    }
+}
