@@ -173,28 +173,28 @@ var FLLightbox;
                     win       = $(window),
                     winHeight = win.height(),
                     winWidth  = win.width(),
-                    top       = this._draggable ? 'top' : 'margin-top',
-                    left      = this._draggable ? 'left' : 'margin-left';
+                    top       = '0px',
+                    left      = ((winWidth - boxWidth)/2 - 30) + 'px';
                 
                 // Zero out margins and position.
-                lightbox.css('margin', '0px');
-                lightbox.css('top', '0px');
-                lightbox.css('left', '0px');
+                lightbox.css({
+                    'margin' : '0px',
+                    'top'    : 'auto',
+                    'left'   : 'auto'
+                });
                 
-                // Set the lightbox top position. 
+                // Get the top position. 
                 if(winHeight - 80 > boxHeight) {
-                    lightbox.css(top, ((winHeight - boxHeight)/2 - 40) + 'px');
-                }
-                else {
-                    lightbox.css(top, '0px');
+                    top = ((winHeight - boxHeight)/2 - 40) + 'px';
                 }
                 
-                // Set the lightbox left position. 
+                // Set the positions.
                 if(this._draggable) {
-                    lightbox.css('margin', '0px');
-                    lightbox.css('left', ((winWidth - boxWidth)/2 - 30) + 'px');
+                    lightbox.css('top', top);
+                    lightbox.css('left', FLBuilderConfig.isRtl ? '-' + left : left);
                 }
                 else {
+                    lightbox.css('margin-top', top);
                     lightbox.css('margin-left', 'auto');
                     lightbox.css('margin-right', 'auto');
                 }

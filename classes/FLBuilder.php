@@ -203,6 +203,7 @@ final class FLBuilder {
 	    
         // Register additional CSS
         wp_register_style('font-awesome',           $css_url . 'font-awesome.min.css', array(), $ver);
+        wp_register_style('foundation-icons',       $css_url . 'foundation-icons.css', array(), $ver);
         wp_register_style('fl-slideshow',           $css_url . 'fl-slideshow.css', array(), $ver);
         wp_register_style('jquery-bxslider',        $css_url . 'jquery.bxslider.css', array(), $ver);
         wp_register_style('jquery-magnificpopup',   $css_url . 'jquery.magnificpopup.css', array(), $ver);
@@ -274,6 +275,7 @@ final class FLBuilder {
             // Enqueue required module CSS and JS
             foreach($modules as $module) {
             
+                $module->enqueue_icon_styles();
                 $module->enqueue_scripts();
             
                 foreach($module->css as $handle => $props) {
@@ -318,7 +320,9 @@ final class FLBuilder {
             wp_deregister_script('jquery-ui-sortable');
         
             /* Frontend builder styles */
+    		wp_enqueue_style('dashicons');
     		wp_enqueue_style('font-awesome');
+    		wp_enqueue_style('foundation-icons');
     		wp_enqueue_style('jquery-nanoscroller',     $css_url . 'jquery.nanoscroller.css', array(), $ver);
     		wp_enqueue_style('jquery-autosuggest',      $css_url . 'jquery.autoSuggest.min.css', array(), $ver);
     		wp_enqueue_style('jquery-tiptip',           $css_url . 'jquery.tiptip.css', array(), $ver);
@@ -326,6 +330,11 @@ final class FLBuilder {
     		wp_enqueue_style('fl-lightbox',             $css_url . 'fl-lightbox.css', array(), $ver);
     		wp_enqueue_style('fl-icon-selector',        $css_url . 'fl-icon-selector.css', array(), $ver);
             wp_enqueue_style('fl-builder',              $css_url . 'fl-builder.css', array(), $ver);
+            
+            /* RTL Support */
+            if(is_rtl()) {
+                wp_enqueue_style('fl-builder-rtl',      $css_url . 'fl-builder-rtl.css', array(), $ver);
+            }
         
             /* Frontend builder scripts */
             wp_enqueue_media();
@@ -809,6 +818,8 @@ final class FLBuilder {
      */	 
 	static public function render_icon_selector()
 	{
+    	$icon_sets = FLBuilderIcons::get_sets();
+    	
         include FL_BUILDER_DIR . 'includes/icon-selector.php';
         
         if(defined('DOING_AJAX')) {
@@ -1096,6 +1107,9 @@ final class FLBuilder {
         $class = get_class(FLBuilderModel::$modules[$type]);
         $module = new $class();        
         $module->settings = $settings;
+        
+        // Shorthand reference to the module's id.
+        $id = $module->node;
     
         include $module->dir .'includes/frontend.php';
     }

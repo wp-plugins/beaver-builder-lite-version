@@ -4,7 +4,7 @@
 
     if(isset($field['preview_text']) && is_object($value)) {
 
-        if(stristr($value->$field['preview_text'], 'fa fa-')) {
+        if('icon' == $field['preview_text']) {
             echo '<i class="' . $value->$field['preview_text'] . '"></i>';
         }
         else if(isset($value->$field['preview_text']) && !empty($value->$field['preview_text'])) {

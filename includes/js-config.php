@@ -4,6 +4,7 @@ var FLBuilderConfig = {
     ajaxUrl: '<?php echo get_permalink( $post_id ); ?>',
     enabledTemplates: '<?php echo $enabled_templates; ?>',
     homeUrl:  '<?php echo home_url(); ?>',
+    isRtl:  <?php if(is_rtl()) echo 'true'; else echo 'false'; ?>,
     lite: <?php if(FL_BUILDER_LITE === true) echo 'true'; else echo 'false'; ?>,
     postId: <?php echo $post_id; ?>,
     postType: '<?php echo get_post_type(); ?>',

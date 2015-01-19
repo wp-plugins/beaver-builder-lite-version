@@ -1,46 +1,25 @@
-<?php
-
-$icons = json_decode(file_get_contents(FL_BUILDER_DIR . 'json/font-awesome.json'));
-$categories = array();
-
-foreach($icons->icons as $icon) {
-    
-    $name = $icon->categories[0];
-    $id   = strtolower(str_replace(' ', '-', $name));
-    
-    if(!isset($categories[$id])) {
-        $categories[$id] = new stdClass();
-        $categories[$id]->id = $id;
-        $categories[$id]->name = $name;
-        $categories[$id]->icons = array();
-    }
-    
-    $categories[$id]->icons[] = $icon->id;
-}
-
-?>
 <div class="fl-lightbox-header">
-    <h1><?php _e('Select Icon', 'fl-builder'); ?></h1>
+    <h1><?php _e( 'Select Icon', 'fl-builder' ); ?></h1>
     <div class="fl-icons-filter">
-        <?php _e('Filter: ', 'fl-builder'); ?>
+        <?php _e( 'Filter: ', 'fl-builder' ); ?>
         <select>
-            <option value="all">All</option>
-            <?php foreach($categories as $cat) : ?>
-            <option value="<?php echo $cat->id; ?>"><?php echo $cat->name; ?></option>
+            <?php foreach ( $icon_sets as $set_key => $set_data ) : ?>
+            <option value="<?php echo $set_key; ?>"><?php echo $set_data['name']; ?></option>
             <?php endforeach; ?>
         </select>
     </div>
 </div>
 <div class="fl-icons-list">
-    <?php foreach($categories as $cat) : ?>
-    <div class="fl-icons-section fl-<?php echo $cat->id; ?>">
-    
-		<h2><?php echo $cat->name; ?></h2>
-		
-        <?php foreach($cat->icons as $icon) : ?>
-        <i class="fa fa-<?php echo $icon; ?>"></i>
+    <?php foreach ( $icon_sets as $set_key => $set_data ) : ?>
+    <div class="fl-icons-section fl-<?php echo $set_key; ?>">
+		<h2><?php echo $set_data['name']; ?></h2>
+        <?php foreach( $set_data['icons'] as $icon ) : ?>
+            <?php if ( ! empty( $set_data['prefix'] ) ) : ?>
+            <i class="<?php echo $set_data['prefix'] . ' ' . $icon; ?>"></i>
+            <?php else : ?>
+            <i class="<?php echo $icon; ?>"></i>
+            <?php endif; ?>
         <?php endforeach; ?>
-        
     </div>
     <?php endforeach; ?>
 </div>

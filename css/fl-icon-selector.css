@@ -37,7 +37,8 @@
     padding: 0 0 10px 0 !important;
     text-align: left;
 }
-.fl-icons-list i {
+.fl-icons-list i,
+.fl-icons-list i:before {
     cursor: pointer;
     display: inline-block;
     font-size: 32px;

@@ -656,7 +656,7 @@ var FLBuilder;
          */
         _publishButtonClicked: function()
         {
-            $('.fl-builder-loading').show();
+            FLBuilder.showAjaxLoader();
             
             FLBuilder.ajax({
                 action: 'fl_builder_save',
@@ -673,7 +673,7 @@ var FLBuilder;
          */
         _draftButtonClicked: function()
         {
-            $('.fl-builder-loading').show();
+            FLBuilder.showAjaxLoader();
             FLBuilder._actionsLightbox.close();
             FLBuilder._exit();
         },
@@ -688,7 +688,7 @@ var FLBuilder;
             
             if(result) {
             
-                $('.fl-builder-loading').show();
+                FLBuilder.showAjaxLoader();
                 
                 FLBuilder.ajax({
                     action: 'fl_builder_save',
@@ -731,7 +731,7 @@ var FLBuilder;
         _duplicatePageClicked: function()
         {
             FLBuilder._actionsLightbox.close();
-            $('.fl-builder-loading').show();
+            FLBuilder.showAjaxLoader();
             
             FLBuilder.ajax({
                 action: 'fl_builder_save',
@@ -838,7 +838,7 @@ var FLBuilder;
                     settings[data[i].name] = data[i].value;
                 }
                 
-                $('.fl-builder-loading').show();
+                FLBuilder.showAjaxLoader();
                 
                 FLBuilder.ajax({
                     action: 'fl_builder_save',
@@ -1050,7 +1050,7 @@ var FLBuilder;
             type    = typeof type === 'undefined' ? 'core' : type;
             
             FLBuilder._lightbox.close();
-            $('.fl-builder-loading').show();
+            FLBuilder.showAjaxLoader();
         
             if(type == 'core') {
         
@@ -1102,7 +1102,7 @@ var FLBuilder;
                 
             if(valid) {
                      
-                $('.fl-builder-loading').show();
+                FLBuilder.showAjaxLoader();
                 
                 FLBuilder.ajax({
                     action: 'fl_builder_save',
@@ -1136,7 +1136,7 @@ var FLBuilder;
             
             if(result) {
             
-                $('.fl-builder-loading').show();
+                FLBuilder.showAjaxLoader();
                 
                 FLBuilder.ajax({
                     action: 'fl_builder_save',
@@ -1161,7 +1161,7 @@ var FLBuilder;
          */
         _saveEditUserTemplate: function()
         {
-            $('.fl-builder-loading').show();
+            FLBuilder.showAjaxLoader();
             
             FLBuilder.ajax({
                 action: 'fl_builder_save',
@@ -1220,7 +1220,7 @@ var FLBuilder;
          */
         _updateLayout: function()
         {
-            $('.fl-builder-loading').show();
+            FLBuilder.showAjaxLoader();
             
             FLBuilder.ajax({
                 action: 'fl_builder_render_layout',
@@ -1283,7 +1283,7 @@ var FLBuilder;
                     FLBuilder._removeAllOverlays();
                     
                     // Hide the loader.
-                    $('.fl-builder-loading').hide();
+                    FLBuilder.hideAjaxLoader();
                     
                     // Run the callback.
                     if(typeof callback != 'undefined') {
@@ -1725,7 +1725,7 @@ var FLBuilder;
          */     
         _addRow: function(cols, position)
         {
-            $('.fl-builder-loading').show();
+            FLBuilder.showAjaxLoader();
         
             FLBuilder._newRowPosition = position;
             
@@ -1826,7 +1826,7 @@ var FLBuilder;
         {
             var nodeId = $(this).closest('.fl-row-overlay').attr('data-node');
             
-            $('.fl-builder-loading').show();
+            FLBuilder.showAjaxLoader();
             
             FLBuilder._removeAllOverlays();
             
@@ -2005,7 +2005,7 @@ var FLBuilder;
          */
         _addColGroup: function(nodeId, cols, position)
         {
-            $('.fl-builder-loading').show();
+            FLBuilder.showAjaxLoader();
             
             FLBuilder._newColGroupParent = $('.fl-node-' + nodeId + ' .fl-row-content');
             FLBuilder._newColGroupPosition = position;
@@ -2258,8 +2258,7 @@ var FLBuilder;
         {
             var module = $(this).closest('.fl-module');
             
-            $('.fl-builder-loading').show();
-            
+            FLBuilder.showAjaxLoader();
             FLBuilder._removeAllOverlays();
             
             FLBuilder.ajax({
@@ -2384,7 +2383,7 @@ var FLBuilder;
          */ 
         _addModule: function(parentId, type, position, widget)
         {
-            $('.fl-builder-loading').show();
+            FLBuilder.showAjaxLoader();
             
             FLBuilder.ajax({
                 action          : 'fl_builder_render_new_module_settings',
@@ -2633,7 +2632,7 @@ var FLBuilder;
                 settings = FLBuilder._getSettings(form);
         
             // Show the loader.
-            $('.fl-builder-loading').show();
+            FLBuilder.showAjaxLoader();
             
             // Make the AJAX call.
             FLBuilder.ajax({
@@ -2741,7 +2740,8 @@ var FLBuilder;
             var multiples = $('.fl-builder-field-multiples'),
                 multiple  = null,
                 fields    = null,
-                i         = 0;
+                i         = 0,
+                cursorAt  = FLBuilderConfig.isRtl ? { left: 10 } : { right: 10 };
                 
             for( ; i < multiples.length; i++) {
             
@@ -2759,9 +2759,7 @@ var FLBuilder;
             $('.fl-builder-field-multiples').sortable({
                 items: '.fl-builder-field-multiple',
                 cursor: 'move',
-                cursorAt: {
-                    right: 10
-                },
+                cursorAt: cursorAt,
                 distance: 5,
                 opacity: 0.5,
                 helper: FLBuilder._fieldDragHelper,
@@ -2877,11 +2875,11 @@ var FLBuilder;
          */ 
         _settingsSelectChanged: function()
         {
-            var val     = null,
-                toggle  = $(this).attr('data-toggle'),
-                hide    = $(this).attr('data-hide'),
-                trigger = $(this).attr('data-trigger'),
-                val     = $(this).val(),
+            var select  = $(this),
+                toggle  = select.attr('data-toggle'),
+                hide    = select.attr('data-hide'),
+                trigger = select.attr('data-trigger'),
+                val     = select.val(),
                 i       = 0,
                 k       = 0;
             
@@ -3621,7 +3619,7 @@ var FLBuilder;
             // Show the loader and save the data for
             // later if a silent update is running.
             if(FLBuilder._silentUpdate) {
-                $('.fl-builder-loading').show();
+                FLBuilder.showAjaxLoader();
                 FLBuilder._silentUpdateCallbackData = [data, callback];
                 return;
             }
@@ -3671,16 +3669,16 @@ var FLBuilder;
             // Do an ajax request that was stopped 
             // by a silent ajax request.
             if(FLBuilder._silentUpdateCallbackData !== null) {
+                FLBuilder.showAjaxLoader();
                 data = FLBuilder._silentUpdateCallbackData[0];
                 callback = FLBuilder._silentUpdateCallbackData[1];
                 FLBuilder._silentUpdateCallbackData = null;
                 FLBuilder.ajax(data, callback);
-                $('.fl-builder-loading').show();
             }
             
             // We're done, hide the loader incase it's showing.
             else {
-                $('.fl-builder-loading').hide();
+                FLBuilder.hideAjaxLoader();
             }
         },
 
@@ -3702,6 +3700,24 @@ var FLBuilder;
             }
         
             return url;
+        },
+
+        /**
+         * @method showAjaxLoader
+         */   
+        showAjaxLoader: function()
+        {
+            if( 0 === $( '.fl-builder-lightbox-loading' ).length ) {
+                $( '.fl-builder-loading' ).show();
+            }
+        },
+
+        /**
+         * @method hideAjaxLoader
+         */   
+        hideAjaxLoader: function()
+        {
+            $( '.fl-builder-loading' ).hide();
         },
         
         /* Lightboxes

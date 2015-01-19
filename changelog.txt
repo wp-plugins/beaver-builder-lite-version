@@ -1,3 +1,17 @@
+<h4>1.4.3</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added Foundation Icons and WordPress Dashicons to the icon selector.</li>
+    <li>Added icons for buttons in the Callout, Call To Action, and Content Slider modules.</li>
+    <li>Added support for right-to-left languages.</li>
+    <li>Read more text can now be customized in posts module.</li>
+    <li>Module ids are now accessible in frontend.php using the $id variable.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug with WordPress installs where core files are installed in a subdirectoy and the index file is in the root.</li>
+</ul>
+
 <h4>1.4.2</h4>
 <p><strong>Bug Fixes</strong></p>
 <ul>

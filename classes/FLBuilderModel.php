@@ -1435,6 +1435,7 @@ final class FLBuilderModel {
                 $instances[$i]->position    = $module->position;
                 $instances[$i]->settings    = $module->settings;
                 $instances[$i]->type        = 'module';
+                $instances[$i]->form        = self::$modules[$module->settings->type]->form;
                 $i++;
             }
         }
@@ -1652,6 +1653,28 @@ final class FLBuilderModel {
     static public function register_settings_form($id, $form)
     {
         self::$settings_forms[$id] = $form;
+    }
+    
+	/**
+     * @method get_settings_form_fields
+     */	 
+    static public function get_settings_form_fields($form)
+    {
+        $fields = array();
+        
+        foreach ( $form as $tab ) {
+            if ( isset( $tab['sections'] ) ) {
+                foreach ( $tab['sections'] as $section ) {
+                    if ( isset( $section['fields'] ) ) {
+                        foreach ( $section['fields'] as $name => $field ) {
+                            $fields[ $name ] = $field;
+                        }
+                    }
+                }
+            }
+        }
+        
+        return $fields;
     }
     
     /**

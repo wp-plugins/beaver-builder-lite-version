@@ -27,6 +27,14 @@ html.fl-builder-edit {
 #tiptip_holder {
     z-index: 200000;
 }
+.screen-reader-text{
+    position: absolute;
+    left: -1000em;
+    top: -1000em;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
 
 /* Simple UI
 ------------------------------------------------------ */
@@ -942,7 +950,6 @@ form.fl-builder-settings {
 }
 .fl-icon-field .fl-icon-preview i {
     display: inline-block;
-    font-family: FontAwesome;
     font-size: 28px;
     margin: 10px 10px 9px 2px;
     vertical-align: middle;

@@ -147,7 +147,7 @@ class FLBuilderModule {
         if(stristr($dir_path, 'wp-content/themes')) {
             $parts     = explode('/wp-content', str_ireplace($_SERVER['DOCUMENT_ROOT'], '', $dir_path));
             $folder    = array_shift($parts);
-            $this->url = str_ireplace($_SERVER['DOCUMENT_ROOT'] . $folder, home_url(), $dir_path) . '/';
+            $this->url = str_ireplace($_SERVER['DOCUMENT_ROOT'] . $folder, site_url(), $dir_path) . '/';
             $this->dir = $dir_path . '/';
         }
         else {                
@@ -177,6 +177,17 @@ class FLBuilderModule {
     public function add_js($handle, $src = null, $deps = null, $ver = null, $in_footer = null)
     {
         $this->js[$handle] = array($src, $deps, $ver, $in_footer);
+    }
+
+    /** 
+     * Enqueues the needed styles for any icon fields
+     * in this module.
+     *
+     * @method enqueue_icon_styles
+     */      
+    public function enqueue_icon_styles()
+    {
+        FLBuilderIcons::enqueue_styles_for_module( $this );
     }
 
     /** 

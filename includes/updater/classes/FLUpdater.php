@@ -121,7 +121,8 @@ final class FLUpdater {
 	        'email'         => FLUpdater::get_subscription_email(),
 	        'domain'        => network_home_url(),
 	        'product'       => $this->settings['name'],
-	        'slug'          => $this->settings['slug']
+	        'slug'          => $this->settings['slug'],
+	        'version'       => $this->settings['version']
 	    ));
 	    
 	    if(isset($response) && is_object($response) && $response !== false) {

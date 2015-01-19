@@ -188,10 +188,12 @@
 .fl-builder-content .fl-button-right {
     text-align: right;
 }
-.fl-builder-content .fl-button i.fa {
+.fl-builder-content .fl-button i {
     font-size: 1.3em;
+    height: auto;
     margin-right:8px;
     vertical-align: middle;
+    width: auto;
 }
 .fl-builder-content .fl-button-has-icon .fl-button-text {
     vertical-align: middle;
