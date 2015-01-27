@@ -144,11 +144,14 @@ class FLBuilderModule {
         $this->enabled          = isset($params['enabled']) ? $params['enabled'] : true;
         $this->editor_export    = isset($params['editor_export']) ? $params['editor_export'] : true;
         
-        if(stristr($dir_path, 'wp-content/themes')) {
-            $parts     = explode('/wp-content', str_ireplace($_SERVER['DOCUMENT_ROOT'], '', $dir_path));
-            $folder    = array_shift($parts);
-            $this->url = str_ireplace($_SERVER['DOCUMENT_ROOT'] . $folder, site_url(), $dir_path) . '/';
+        if(is_child_theme() && stristr($dir_path, get_stylesheet_directory())) {
+	        $this->url = str_replace(get_stylesheet_directory(), get_stylesheet_directory_uri(), $dir_path) . '/';
+	        $this->dir = $dir_path . '/';
+        }
+        else if(stristr($dir_path, get_template_directory())) {
+            $this->url = str_replace(get_template_directory(), get_template_directory_uri(), $dir_path) . '/';
             $this->dir = $dir_path . '/';
+            error_log($this->url);
         }
         else {                
             $this->url = isset($params['url']) ? $params['url'] : FL_BUILDER_URL . 'modules/' . $this->slug . '/';

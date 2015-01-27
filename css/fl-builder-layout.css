@@ -215,6 +215,9 @@
 .fl-icon i {
     float: left;
 }
+.fl-icon i:before {
+    border: none !important;
+}
 .fl-icon-text {
     display: table-cell;
     text-align: left;

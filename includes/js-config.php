@@ -1,6 +1,6 @@
 <script>
 
-var FLBuilderConfig = { 
+var FLBuilderConfig = {
     ajaxUrl: '<?php echo get_permalink( $post_id ); ?>',
     enabledTemplates: '<?php echo $enabled_templates; ?>',
     homeUrl:  '<?php echo home_url(); ?>',
@@ -27,7 +27,7 @@ var FLBuilderStrings = {
     discard: '<?php _e('Discard Draft', 'fl-builder'); ?>',
     discardMessage: '<?php _e('Do you really want to discard this draft? All of your changes that are not published will be lost.', 'fl-builder'); ?>',
     draft: '<?php _e('Save Draft', 'fl-builder'); ?>',
-    duplicate: '<?php _e('Duplicate', 'fl-builder'); ?>',
+    duplicate: '<?php _ex( 'Duplicate', 'Duplicate page/post action label.', 'fl-builder' ); ?>',
     duplicatePage: '<?php _e('Duplicate This Page', 'fl-builder'); ?>',
     duplicateTemplate: '<?php _e('Duplicate This Template', 'fl-builder'); ?>',
     editGlobalSettings: '<?php _e('Edit Global Settings', 'fl-builder'); ?>',
@@ -42,7 +42,8 @@ var FLBuilderStrings = {
     newColumn: '<?php _e('New Column', 'fl-builder') ?>',
     newRow: '<?php _e('New Row', 'fl-builder') ?>',
     noResultsFound: '<?php _e('No results found.', 'fl-builder') ?>',
-    ok: '<?php _e('Ok', 'fl-builder'); ?>',
+    ok: '<?php _e( 'OK', 'fl-builder' ); ?>',
+    photoPage: '<?php _e('Photo Page', 'fl-builder'); ?>',
     photoSelected: '<?php _e('Photo Selected', 'fl-builder'); ?>',
     photosSelected: '<?php _e('Photos Selected', 'fl-builder'); ?>',
     publish: '<?php _e('Publish Changes', 'fl-builder'); ?>',
@@ -54,7 +55,7 @@ var FLBuilderStrings = {
     selectPhoto: '<?php _e('Select Photo', 'fl-builder'); ?>',
     selectPhotos: '<?php _e('Select Photos', 'fl-builder'); ?>',
     selectVideo: '<?php _e('Select Video', 'fl-builder'); ?>',
-    settings: '<?php _e('Settings', 'fl-builder') ?>',
+    settings: '<?php _ex( '%s Settings', '%s stands for module name.', 'fl-builder' ); ?>',
     templateAppend: '<?php _e('Append New Layout', 'fl-builder'); ?>',
     templateReplace: '<?php _e('Replace Existing Layout', 'fl-builder'); ?>',
     templateSaved: '<?php _e('Template Saved!', 'fl-builder'); ?>',

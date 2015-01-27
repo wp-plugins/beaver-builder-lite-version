@@ -33,6 +33,11 @@
         </span>
         <?php endif; ?>
         <div class="fl-builder-bar-actions">
+            <?php if(stristr(home_url(), 'demo.wpbeaverbuilder.com')) : ?>
+        	<span class="fl-builder-upgrade-button fl-builder-button"><?php _e('Buy Now!', 'fl-builder'); ?></span>
+            <?php elseif(FL_BUILDER_LITE === true) : ?>
+        	<span class="fl-builder-upgrade-button fl-builder-button"><?php _e('Upgrade!', 'fl-builder'); ?></span>
+            <?php endif; ?>
             <span class="fl-builder-done-button fl-builder-button fl-builder-button-primary"><?php _e('Done', 'fl-builder'); ?></span>
             <span class="fl-builder-tools-button fl-builder-button"><?php _e('Tools', 'fl-builder'); ?></span>
             <?php if(FL_BUILDER_LITE !== true && $enabled_templates != 'disabled') : ?>
@@ -92,21 +97,6 @@
                     <?php endif; ?>
             	</div>
             	<?php endforeach; ?>
-                <?php if(stristr(home_url(), 'demo.wpbeaverbuilder.com')) : ?>
-            	<div class="fl-builder-blocks-section">
-                    <span class="fl-builder-blocks-section-title fl-builder-block-upgrade">
-                        <?php _e('Buy Now!', 'fl-builder'); ?>
-                        <i class="fa fa-external-link-square"></i>
-                    </span>
-            	</div>
-                <?php elseif(FL_BUILDER_LITE === true) : ?>
-            	<div class="fl-builder-blocks-section">
-                    <span class="fl-builder-blocks-section-title fl-builder-block-upgrade">
-                        <?php _e('Upgrade Today!', 'fl-builder'); ?>
-                        <i class="fa fa-external-link-square"></i>
-                    </span>
-            	</div>
-                <?php endif; ?>
             </div>
         </div>
     </div>

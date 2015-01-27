@@ -172,6 +172,23 @@ html.fl-builder-edit {
     display: none;
 }
 
+/* Upgrade button */
+.fl-builder-upgrade-button {
+    background: #f7951e;
+    border-color: #de7c04;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,177,82,.5),0 1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 1px 0 rgba(255,177,82,.5),0 1px 0 rgba(0,0,0,.15);
+    color: #fff !important;
+    text-decoration: none;
+}
+.fl-builder-upgrade-button:hover {
+    background: #de861b;
+    border-color: #c46e04;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,177,82,.5),0 1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 1px 0 rgba(255,177,82,.5),0 1px 0 rgba(0,0,0,.15);
+    color: #fff !important;
+}
+
 /* Builder Panel
 ------------------------------------------------------ */
 
@@ -286,11 +303,6 @@ html.fl-builder-edit {
     background: #0074a1;
     color: #fff;
     cursor: move;
-}
-
-/* Upgrade block */
-.fl-builder-block-upgrade {
-    font-weight: bold !important;
 }
 
 /* Drag and Drop

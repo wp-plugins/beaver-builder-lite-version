@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $global_settings = FLBuilderModel::get_global_settings();
 
@@ -65,16 +65,16 @@ FLBuilder::register_settings_form('row', array(
                             'label'         => __('Type', 'fl-builder'),
                             'default'       => 'none',
                             'options'       => array(
-                                'none'          => __('None', 'fl-builder'),
-                                'color'         => __('Color', 'fl-builder'),
-                                'photo'         => __('Photo', 'fl-builder'),
-                                'video'         => __('Video', 'fl-builder'),
+                                'none'          => _x( 'None', 'Background type.', 'fl-builder' ),
+                                'color'         => _x( 'Color', 'Background type.', 'fl-builder' ),
+                                'photo'         => _x( 'Photo', 'Background type.', 'fl-builder' ),
+                                'video'         => _x( 'Video', 'Background type.', 'fl-builder' ),
                                 'slideshow'     => array(
-                                    'label'         => __('Slideshow', 'fl-builder'),
+                                    'label'         => _x( 'Slideshow', 'Background type.', 'fl-builder' ),
                                     'premium'       => true
                                 ),
                                 'parallax'     => array(
-                                    'label'         => __('Parallax', 'fl-builder'),
+                                    'label'         => _x( 'Parallax', 'Background type.', 'fl-builder' ),
                                     'premium'       => true
                                 )
                             ),
@@ -123,7 +123,7 @@ FLBuilder::register_settings_form('row', array(
                                 'type'            => 'none'
                             )
                         )
-                    )   
+                    )
                 ),
                 'bg_photo'     => array(
                     'title'         => __('Background Photo', 'fl-builder'),
@@ -140,10 +140,10 @@ FLBuilder::register_settings_form('row', array(
                             'label'         => __('Repeat', 'fl-builder'),
                             'default'       => 'none',
                             'options'       => array(
-                                'no-repeat'     => __('None', 'fl-builder'),
-                                'repeat'        => __('Tile', 'fl-builder'),
-                                'repeat-x'      => __('Horizontal', 'fl-builder'),
-                                'repeat-y'      => __('Vertical', 'fl-builder')
+                                'no-repeat'     => _x( 'None', 'Background repeat.', 'fl-builder' ),
+                                'repeat'        => _x( 'Tile', 'Background repeat.', 'fl-builder' ),
+                                'repeat-x'      => _x( 'Horizontal', 'Background repeat.', 'fl-builder' ),
+                                'repeat-y'      => _x( 'Vertical', 'Background repeat.', 'fl-builder' )
                             ),
                             'help'          => __('Repeat applies to how the image should display in the row background. Choosing none will display the image as uploaded. Tile will repeat the image as many times as needed to fill the row horizontally and vertically. You can also specify the image to only repeat horizontally or vertically.', 'fl-builder'),
                             'preview'         => array(
@@ -162,7 +162,7 @@ FLBuilder::register_settings_form('row', array(
                                 'right center'  => __('Right Center', 'fl-builder'),
                                 'right bottom'  => __('Right Bottom', 'fl-builder'),
                                 'center top'    => __('Center Top', 'fl-builder'),
-                                'center center' => __('Center Center', 'fl-builder'),
+                                'center center' => __( 'Center', 'fl-builder' ),
                                 'center bottom' => __('Center Bottom', 'fl-builder')
                             ),
                             'help'          => __('Position will tell the image where it should sit in the row background.', 'fl-builder'),
@@ -175,8 +175,8 @@ FLBuilder::register_settings_form('row', array(
                             'label'         => __('Attachment', 'fl-builder'),
                             'default'       => 'scroll',
                             'options'       => array(
-                                'scroll'        => __('Scroll', 'fl-builder'),
-                                'fixed'         => __('Fixed', 'fl-builder')
+                                'scroll'        => __( 'Scroll', 'fl-builder' ),
+                                'fixed'         => __( 'Fixed', 'fl-builder' )
                             ),
                             'help'          => __('Attachment will specify how the image reacts when scrolling a page. When scrolling is selected, the image will scroll with page scrolling. This is the default setting. Fixed will allow the image to scroll within the row background if fill is selected in the scale setting.', 'fl-builder'),
                             'preview'         => array(
@@ -188,9 +188,9 @@ FLBuilder::register_settings_form('row', array(
                             'label'         => __('Scale', 'fl-builder'),
                             'default'       => 'cover',
                             'options'       => array(
-                                ''              => __('None', 'fl-builder'),
-                                'contain'       => __('Fit', 'fl-builder'),
-                                'cover'         => __('Fill', 'fl-builder')
+                                ''              => _x( 'None', 'Background scale.', 'fl-builder' ),
+                                'contain'       => __( 'Fit', 'fl-builder'),
+                                'cover'         => __( 'Fill', 'fl-builder')
                             ),
                             'help'          => __('Scale applies to how the image should display in the row background. You can select either fill or fit to the row background.', 'fl-builder'),
                             'preview'         => array(
@@ -229,7 +229,7 @@ FLBuilder::register_settings_form('row', array(
                             'default'       => 'wordpress',
                             'options'       => array(
                                 'wordpress'     => __('Media Library', 'fl-builder'),
-                                'smugmug'       => __('SmugMug', 'fl-builder')
+                                'smugmug'       => 'SmugMug'
                             ),
     						'help'          => __('Pull images from the WordPress media library or a gallery on your SmugMug site by inserting the RSS feed URL from SmugMug. The RSS feed URL can be accessed by using the get a link function in your SmugMug gallery.', 'fl-builder'),
                             'toggle'        => array(
@@ -263,7 +263,7 @@ FLBuilder::register_settings_form('row', array(
                             'label'         => __('Speed', 'fl-builder'),
                             'default'       => '3',
                             'size'          => '5',
-                            'description'   => __('seconds', 'fl-builder'),
+                            'description'   => _x( 'seconds', 'Value unit for form field of time in seconds. Such as: "5 seconds"', 'fl-builder' ),
                             'preview'         => array(
                                 'type'            => 'none'
                             )
@@ -273,7 +273,7 @@ FLBuilder::register_settings_form('row', array(
                             'label'         => __('Transition', 'fl-builder'),
                             'default'       => 'fade',
                             'options'       => array(
-                                'none'              => __('None', 'fl-builder'),
+                                'none'              => _x( 'None', 'Slideshow transition type.', 'fl-builder' ),
                                 'fade'              => __('Fade', 'fl-builder'),
                                 'kenBurns'          => __('Ken Burns', 'fl-builder'),
                                 'slideHorizontal'   => __('Slide Horizontal', 'fl-builder'),
@@ -294,7 +294,7 @@ FLBuilder::register_settings_form('row', array(
                             'label'         => __('Transition Speed', 'fl-builder'),
                             'default'       => '1',
                             'size'          => '5',
-                            'description'   => __('seconds', 'fl-builder'),
+                            'description'   => _x( 'seconds', 'Value unit for form field of time in seconds. Such as: "5 seconds"', 'fl-builder' ),
                             'preview'         => array(
                                 'type'            => 'none'
                             )
@@ -329,7 +329,7 @@ FLBuilder::register_settings_form('row', array(
                             'default'       => 'fast',
                             'options'       => array(
                                 '2'             => __('Fast', 'fl-builder'),
-                                '5'             => __('Medium', 'fl-builder'),
+                                '5'             => _x( 'Medium', 'Speed.', 'fl-builder' ),
                                 '8'             => __('Slow', 'fl-builder')
                             ),
                             'preview'         => array(
@@ -347,11 +347,11 @@ FLBuilder::register_settings_form('row', array(
                             'default'       => '',
                             'help'          => __('The type of border to use. Double borders must have a width of at least 3px to render properly.', 'fl-builder'),
                             'options'       => array(
-                                ''              => __('None', 'fl-builder'),
-                                'solid'         => __('Solid', 'fl-builder'),
-                                'dashed'        => __('Dashed', 'fl-builder'),
-                                'dotted'        => __('Dotted', 'fl-builder'),
-                                'double'        => __('Double', 'fl-builder')
+                                ''              => _x( 'None', 'Border type.', 'fl-builder' ),
+                                'solid'         => _x( 'Solid', 'Border type.', 'fl-builder' ),
+                                'dashed'        => _x( 'Dashed', 'Border type.', 'fl-builder' ),
+                                'dotted'        => _x( 'Dotted', 'Border type.', 'fl-builder' ),
+                                'double'        => _x( 'Double', 'Border type.', 'fl-builder' )
                             ),
                             'toggle'        => array(
                                 ''              => array(
@@ -397,7 +397,7 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'text',
                             'label'         => __('Top Width', 'fl-builder'),
                             'default'       => '1',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '3',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -409,7 +409,7 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'text',
                             'label'         => __('Bottom Width', 'fl-builder'),
                             'default'       => '1',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '3',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -421,7 +421,7 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'text',
                             'label'         => __('Left Width', 'fl-builder'),
                             'default'       => '0',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '3',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -433,7 +433,7 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'text',
                             'label'         => __('Right Width', 'fl-builder'),
                             'default'       => '0',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '3',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -470,7 +470,7 @@ FLBuilder::register_settings_form('row', array(
                                 'medium-mobile'     => __('Medium &amp; Small Devices Only', 'fl-builder'),
                                 'mobile'            => __('Small Devices Only', 'fl-builder'),
                             ),
-                            'help'          => __('Choose whether to show or hide this row at different device sizes.'),
+                            'help'          => __( 'Choose whether to show or hide this row at different device sizes.', 'fl-builder' ),
                             'preview'         => array(
                                 'type'            => 'none'
                             )
@@ -484,7 +484,7 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'text',
                             'label'         => __('Top', 'fl-builder'),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => $global_settings->row_margins,
@@ -496,7 +496,7 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'text',
                             'label'         => __('Bottom', 'fl-builder'),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => $global_settings->row_margins,
@@ -508,7 +508,7 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'text',
                             'label'         => __('Left', 'fl-builder'),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => $global_settings->row_margins,
@@ -520,7 +520,7 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'text',
                             'label'         => __('Right', 'fl-builder'),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => $global_settings->row_margins,
@@ -537,7 +537,7 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'text',
                             'label'         => __('Top', 'fl-builder'),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => $global_settings->row_padding,
@@ -549,7 +549,7 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'text',
                             'label'         => __('Bottom', 'fl-builder'),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => $global_settings->row_padding,
@@ -561,7 +561,7 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'text',
                             'label'         => __('Left', 'fl-builder'),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => $global_settings->row_padding,
@@ -573,7 +573,7 @@ FLBuilder::register_settings_form('row', array(
                             'type'          => 'text',
                             'label'         => __('Right', 'fl-builder'),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => $global_settings->row_padding,

@@ -6,11 +6,18 @@
 final class FLUpdater {
 
 	/**
-	 * @property $_api_url
+	 * @property $_store_api_url
 	 * @static
 	 * @private
 	 */
-	static private $_api_url = 'http://www.wpbeaverbuilder.com/';
+	static private $_store_api_url = 'http://www.wpbeaverbuilder.com/';
+
+	/**
+	 * @property $_updates_api_url
+	 * @static
+	 * @private
+	 */
+	static private $_updates_api_url = 'http://updates.wpbeaverbuilder.com/';
 
 	/**
 	 * @property $_products
@@ -31,7 +38,7 @@ final class FLUpdater {
 	public function __construct( $settings = array() )
 	{
 		$this->settings = $settings;
-		
+
 		if ( 'plugin' == $settings['type'] ) {
 			add_filter( 'pre_set_site_transient_update_plugins', array( $this, 'update_check' ) );
 			add_filter( 'plugins_api', array( $this, 'plugin_info' ), 10, 3 );
@@ -50,8 +57,8 @@ final class FLUpdater {
         if(empty($transient->checked)) {
             return $transient;
         }
-	    
-        $response = FLUpdater::api_request(array(
+
+        $response = FLUpdater::api_request(self::$_updates_api_url, array(
 	        'fl-api-method' => 'update_check',
 	        'email'         => FLUpdater::get_subscription_email(),
 	        'domain'        => network_home_url(),
@@ -59,24 +66,24 @@ final class FLUpdater {
 	        'slug'          => $this->settings['slug'],
 	        'version'       => $this->settings['version']
 	    ));
-	    
+
         if(isset($response) && $response !== false && is_object($response) && !isset($response->errors)) {
-        
+
             if($this->settings['type'] == 'plugin') {
-                    
+
                 $plugin   = self::get_plugin_file($this->settings['slug']);
                 $new_ver  = $response->new_version;
     			$curr_ver = $this->settings['version'];
-    			
+
     			if(version_compare($new_ver, $curr_ver, '>')) {
     			    $transient->response[$plugin] = $response;
     			}
             }
             else if($this->settings['type'] == 'theme') {
-                
+
                 $new_ver  = $response->new_version;
     			$curr_ver = $this->settings['version'];
-    			
+
     			if(version_compare($new_ver, $curr_ver, '>')) {
     			    $transient->response[$this->settings['slug']] = array(
     					'new_version' 	=> $response->new_version,
@@ -97,7 +104,7 @@ final class FLUpdater {
 	{
     	if ( empty( $response->package ) ) {
         	echo '<p style="padding:10px 20px; margin-top: 10px; background: #d54e21; color: #fff;">';
-            echo __('<strong>UPDATE UNAVAILABLE!</strong>');
+            echo __( '<strong>UPDATE UNAVAILABLE!</strong>', 'fl-builder' );
         	echo '&nbsp;&nbsp;&nbsp;';
             echo __('Please subscribe to enable automatic updates for this plugin.', 'fl-builder');
             echo ' <a href="' . $plugin_data['PluginURI'] . '" target="_blank" style="color: #fff; text-decoration: underline;">';
@@ -115,8 +122,8 @@ final class FLUpdater {
 		if(!isset($args->slug) || $args->slug != $this->settings['slug']) {
             return $false;
 		}
-		
-		$response = FLUpdater::api_request(array(
+
+		$response = FLUpdater::api_request(self::$_updates_api_url, array(
 	        'fl-api-method' => 'plugin_info',
 	        'email'         => FLUpdater::get_subscription_email(),
 	        'domain'        => network_home_url(),
@@ -124,16 +131,16 @@ final class FLUpdater {
 	        'slug'          => $this->settings['slug'],
 	        'version'       => $this->settings['version']
 	    ));
-	    
+
 	    if(isset($response) && is_object($response) && $response !== false) {
 	        $response->name     = $this->settings['name'];
 	        $response->sections = (array)$response->sections;
     	    return $response;
 	    }
-	        
+
 	    return $false;
 	}
-	
+
 	/**
 	 * @method init
 	 * @static
@@ -141,14 +148,14 @@ final class FLUpdater {
 	static public function init()
 	{
 	    include FL_UPDATER_DIR . 'includes/config.php';
-	    
+
 	    foreach($config as $path) {
     	    if(file_exists($path)) {
         	    require_once $path;
     	    }
 	    }
 	}
-	
+
 	/**
 	 * @method add_product
 	 * @static
@@ -156,7 +163,7 @@ final class FLUpdater {
 	static public function add_product($args = array())
 	{
 		if(is_array($args) && isset($args['slug'])) {
-		
+
 		    if($args['type'] == 'plugin') {
     		    if(file_exists(WP_CONTENT_DIR . '/plugins/' . $args['slug'])) {
         		    self::$_products[$args['name']] = $args;
@@ -171,22 +178,22 @@ final class FLUpdater {
 		    }
 		}
 	}
-	
+
 	/**
      * @method render_form
 	 * @static
      */
-	static public function render_form() 
+	static public function render_form()
 	{
 		// Activate a subscription?
         if(isset($_POST['fl-updater-nonce'])) {
         	if(wp_verify_nonce($_POST['fl-updater-nonce'], 'updater-nonce')) {
-				self::save_subscription_email($_POST['email']); 
+				self::save_subscription_email($_POST['email']);
 			}
         }
-        
+
         $status = self::get_subscription_status();
-        
+
         // Include the form ui.
 		include FL_UPDATER_DIR . 'includes/form.php';
 	}
@@ -198,7 +205,7 @@ final class FLUpdater {
 	static public function get_subscription_email()
 	{
 		$value = get_site_option('fl_themes_subscription_email');
-		
+
 		return $value ? $value : '';
 	}
 
@@ -217,18 +224,18 @@ final class FLUpdater {
 	 */
 	static public function get_subscription_status()
 	{
-	    $status = self::api_request(array(
+	    $status = self::api_request(self::$_store_api_url, array(
 	        'fl-api-method' => 'subscription_status',
 	        'email'         => FLUpdater::get_subscription_email()
 	    ));
-	    
+
 	    if(isset($status->active) && $status->active) {
     	    return $status;
 	    }
-	    
+
 	    return false;
 	}
-	
+
 	/**
 	 * @method get_plugin_file
 	 * @static
@@ -242,24 +249,29 @@ final class FLUpdater {
         else {
             $file = $slug . '/' . $slug . '.php';
         }
-        
+
         return $file;
 	}
-	
+
 	/**
 	 * @method api_request
 	 * @static
 	 * @private
 	 */
-	static private function api_request($args = array())
+	static private function api_request($api_url = false, $args = array())
 	{
-	    $params = array();
-	    
-	    foreach($args as $key => $val) {
-    	    $params[] = $key . '=' . urlencode($val);
-	    }
+		if($api_url) {
 
-	    return self::remote_get(self::$_api_url . '?' . implode('&', $params));
+		    $params = array();
+
+		    foreach($args as $key => $val) {
+	    	    $params[] = $key . '=' . urlencode($val);
+		    }
+
+		    return self::remote_get($api_url . '?' . implode('&', $params));
+		}
+
+		return false;
 	}
 
 	/**
@@ -277,13 +289,13 @@ final class FLUpdater {
 		if(wp_remote_retrieve_response_code($request) != 200) {
 		    return false;
         }
-		  
+
         $response = json_decode(wp_remote_retrieve_body($request));
-			
+
 		if(isset($response->error)) {
-			return false;	
+			return false;
 		}
-		
+
 		return $response;
     }
 }

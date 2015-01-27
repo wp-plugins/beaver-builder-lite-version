@@ -3,7 +3,7 @@
  * Plugin Name: Beaver Builder Plugin (Lite Version)
  * Plugin URI: http://www.wpbeaverbuilder.com
  * Description: A drag and drop frontend WordPress page builder plugin that works with almost any theme!
- * Version: 1.4.3
+ * Version: 1.4.5
  * Author: The Beaver Builder Team
  * Author URI: http://www.wpbeaverbuilder.com
  * Copyright: (c) 2014 Beaver Builder
@@ -11,29 +11,29 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: fl-builder
  */
-define('FL_BUILDER_VERSION', '1.4.3');
+define('FL_BUILDER_VERSION', '1.4.5');
 define('FL_BUILDER_DIR', plugin_dir_path(__FILE__));
 define('FL_BUILDER_URL', plugins_url('/', __FILE__));
 define('FL_BUILDER_LITE', true);
-define('FL_BUILDER_SUPPORT_URL', 'http://www.wpbeaverbuilder.com/support');
-define('FL_BUILDER_UPGRADE_URL', 'http://www.wpbeaverbuilder.com/pricing/?upgrade');
+define('FL_BUILDER_SUPPORT_URL', 'https://www.wpbeaverbuilder.com/support');
+define('FL_BUILDER_UPGRADE_URL', 'https://www.wpbeaverbuilder.com/pricing/?upgrade');
 define('FL_BUILDER_DEMO_URL', 'http://demos.wpbeaverbuilder.com');
 define('FL_BUILDER_OLD_DEMO_URL', 'http://demos.fastlinemedia.com');
 define('FL_BUILDER_DEMO_CACHE_URL', 'http://demos.wpbeaverbuilder.com/wp-content/uploads/fl-builder/');
 
 /* Classes */
-require_once 'classes/FLBuilder.php';
-require_once 'classes/FLBuilderAdmin.php';
-require_once 'classes/FLBuilderAdminPosts.php';
-require_once 'classes/FLBuilderAutoSuggest.php';
-require_once 'classes/FLBuilderColor.php';
-require_once 'classes/FLBuilderIcons.php';
-require_once 'classes/FLBuilderLoop.php';
-require_once 'classes/FLBuilderModel.php';
-require_once 'classes/FLBuilderModule.php';
-require_once 'classes/FLBuilderPhoto.php';
-require_once 'classes/FLBuilderUpdate.php';
-require_once 'classes/FLBuilderUtils.php';
+require_once 'classes/class-fl-builder.php';
+require_once 'classes/class-fl-builder-admin.php';
+require_once 'classes/class-fl-builder-admin-posts.php';
+require_once 'classes/class-fl-builder-auto-suggest.php';
+require_once 'classes/class-fl-builder-color.php';
+require_once 'classes/class-fl-builder-icons.php';
+require_once 'classes/class-fl-builder-loop.php';
+require_once 'classes/class-fl-builder-model.php';
+require_once 'classes/class-fl-builder-module.php';
+require_once 'classes/class-fl-builder-photo.php';
+require_once 'classes/class-fl-builder-update.php';
+require_once 'classes/class-fl-builder-utils.php';
 
 /* Includes */
 require_once 'includes/compatibility.php';

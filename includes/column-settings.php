@@ -1,5 +1,5 @@
 <?php
-       
+
 FLBuilder::register_settings_form('col', array(
     'title' => __('Column Settings', 'fl-builder'),
     'tabs'  => array(
@@ -13,7 +13,7 @@ FLBuilder::register_settings_form('col', array(
                             'type'          => 'text',
                             'label'         => __('Column Width', 'fl-builder'),
                             'default'       => '',
-                            'description'   => __('%', 'fl-builder'),
+							'description'   => '%',
                             'maxlength'     => '5',
                             'size'          => '6',
                             'preview'         => array(
@@ -57,7 +57,7 @@ FLBuilder::register_settings_form('col', array(
                                 'type'            => 'none'
                             )
                         )
-                    )   
+                    )
                 ),
                 'border'       => array(
                     'title'         => __('Border', 'fl-builder'),
@@ -68,11 +68,11 @@ FLBuilder::register_settings_form('col', array(
                             'default'       => '',
                             'help'          => __('The type of border to use. Double borders must have a width of at least 3px to render properly.', 'fl-builder'),
                             'options'       => array(
-                                ''              => __('None', 'fl-builder'),
-                                'solid'         => __('Solid', 'fl-builder'),
-                                'dashed'        => __('Dashed', 'fl-builder'),
-                                'dotted'        => __('Dotted', 'fl-builder'),
-                                'double'        => __('Double', 'fl-builder')
+								''       => _x( 'None', 'Border type.', 'fl-builder' ),
+								'solid'  => _x( 'Solid', 'Border type.', 'fl-builder' ),
+								'dashed' => _x( 'Dashed', 'Border type.', 'fl-builder' ),
+								'dotted' => _x( 'Dotted', 'Border type.', 'fl-builder' ),
+								'double' => _x( 'Double', 'Border type.', 'fl-builder' )
                             ),
                             'toggle'        => array(
                                 ''              => array(
@@ -118,7 +118,7 @@ FLBuilder::register_settings_form('col', array(
                             'type'          => 'text',
                             'label'         => __('Top Width', 'fl-builder'),
                             'default'       => '1',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '3',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -130,7 +130,7 @@ FLBuilder::register_settings_form('col', array(
                             'type'          => 'text',
                             'label'         => __('Bottom Width', 'fl-builder'),
                             'default'       => '1',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '3',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -142,7 +142,7 @@ FLBuilder::register_settings_form('col', array(
                             'type'          => 'text',
                             'label'         => __('Left Width', 'fl-builder'),
                             'default'       => '1',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '3',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -154,7 +154,7 @@ FLBuilder::register_settings_form('col', array(
                             'type'          => 'text',
                             'label'         => __('Right Width', 'fl-builder'),
                             'default'       => '1',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '3',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -175,7 +175,7 @@ FLBuilder::register_settings_form('col', array(
                         'class'         => array(
                             'type'          => 'text',
                             'label'         => __('CSS Class', 'fl-builder'),
-                            'help'          => __('A custom CSS class that will be applied to this column. Spaces only, no dots.'),
+                            'help'          => __( 'A custom CSS class that will be applied to this column. Spaces only, no dots.', 'fl-builder' ),
                             'preview'         => array(
                                 'type'            => 'none'
                             )
@@ -183,7 +183,7 @@ FLBuilder::register_settings_form('col', array(
                     )
                 ),
                 'responsive'    => array(
-                    'title'         => __('Responsive', 'fl-builder'),
+                    'title'         => __('Responsive Layout', 'fl-builder'),
                     'fields'        => array(
                         'responsive_display' => array(
                             'type'          => 'select',
@@ -196,7 +196,7 @@ FLBuilder::register_settings_form('col', array(
                                 'medium-mobile'     => __('Medium &amp; Small Devices Only', 'fl-builder'),
                                 'mobile'            => __('Small Devices Only', 'fl-builder'),
                             ),
-                            'help'          => __('Choose whether to show or hide this column at different device sizes.'),
+                            'help'          => __( 'Choose whether to show or hide this column at different device sizes.', 'fl-builder' ),
                             'preview'         => array(
                                 'type'            => 'none'
                             )
@@ -204,7 +204,7 @@ FLBuilder::register_settings_form('col', array(
                         'medium_size'   => array(
                             'type'          => 'select',
                             'label'         => __('Medium Device Width', 'fl-builder'),
-                            'help'          => __('The width of this column on medium devices such as tablets.'),
+                            'help'          => __( 'The width of this column on medium devices such as tablets.', 'fl-builder' ),
                             'options'       => array(
                                 'default'       => __('Default', 'fl-builder'),
                                 'custom'        => __('Custom', 'fl-builder'),
@@ -222,7 +222,7 @@ FLBuilder::register_settings_form('col', array(
                             'type'          => 'text',
                             'label'         => __('Custom Medium Device Width', 'fl-builder'),
                             'default'       => '100',
-                            'description'   => __('%', 'fl-builder'),
+                            'description'   => '%',
                             'maxlength'     => '5',
                             'size'          => '6',
                             'preview'         => array(
@@ -232,7 +232,7 @@ FLBuilder::register_settings_form('col', array(
                         'responsive_size' => array(
                             'type'          => 'select',
                             'label'         => __('Small Device Width', 'fl-builder'),
-                            'help'          => __('The width of this column on small devices such as phones.'),
+                            'help'          => __( 'The width of this column on small devices such as phones.', 'fl-builder' ),
                             'options'       => array(
                                 'default'       => __('Default', 'fl-builder'),
                                 'custom'        => __('Custom', 'fl-builder'),
@@ -248,9 +248,9 @@ FLBuilder::register_settings_form('col', array(
                         ),
                         'custom_responsive_size' => array(
                             'type'          => 'text',
-                            'label'         => 'Custom Small Device Width',
+                            'label'         => __( 'Custom Small Device Width', 'fl-builder' ),
                             'default'       => '100',
-                            'description'   => __('%', 'fl-builder'),
+                            'description'   => '%',
                             'maxlength'     => '5',
                             'size'          => '6',
                             'preview'         => array(
@@ -264,9 +264,9 @@ FLBuilder::register_settings_form('col', array(
                     'fields'        => array(
                         'margin_top'    => array(
                             'type'          => 'text',
-                            'label'         => __('Top', 'fl-builder'),
+                            'label'         => __( 'Top', 'fl-builder' ),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -276,9 +276,9 @@ FLBuilder::register_settings_form('col', array(
                         ),
                         'margin_bottom' => array(
                             'type'          => 'text',
-                            'label'         => __('Bottom', 'fl-builder'),
+                            'label'         => __( 'Bottom', 'fl-builder' ),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -288,9 +288,9 @@ FLBuilder::register_settings_form('col', array(
                         ),
                         'margin_left'   => array(
                             'type'          => 'text',
-                            'label'         => __('Left', 'fl-builder'),
+                            'label'         => __( 'Left', 'fl-builder' ),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -300,9 +300,9 @@ FLBuilder::register_settings_form('col', array(
                         ),
                         'margin_right'  => array(
                             'type'          => 'text',
-                            'label'         => __('Right', 'fl-builder'),
+                            'label'         => __( 'Right', 'fl-builder' ),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -317,9 +317,9 @@ FLBuilder::register_settings_form('col', array(
                     'fields'        => array(
                         'padding_top'   => array(
                             'type'          => 'text',
-                            'label'         => __('Top', 'fl-builder'),
+                            'label'         => __( 'Top', 'fl-builder' ),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -329,9 +329,9 @@ FLBuilder::register_settings_form('col', array(
                         ),
                         'padding_bottom' => array(
                             'type'          => 'text',
-                            'label'         => __('Bottom', 'fl-builder'),
+                            'label'         => __( 'Bottom', 'fl-builder' ),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -341,9 +341,9 @@ FLBuilder::register_settings_form('col', array(
                         ),
                         'padding_left'  => array(
                             'type'          => 'text',
-                            'label'         => __('Left', 'fl-builder'),
+                            'label'         => __( 'Left', 'fl-builder' ),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => '0',
@@ -353,9 +353,9 @@ FLBuilder::register_settings_form('col', array(
                         ),
                         'padding_right' => array(
                             'type'          => 'text',
-                            'label'         => __('Right', 'fl-builder'),
+                            'label'         => __( 'Right', 'fl-builder' ),
                             'default'       => '',
-                            'description'   => __('px', 'fl-builder'),
+                            'description'   => 'px',
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => '0',

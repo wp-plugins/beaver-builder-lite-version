@@ -1,4 +1,31 @@
-<h4>1.4.3</h4>
+<h4>1.4.5 - 01/26/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added a search field to the icon selector.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug introduced in 1.4.4 that caused PHP warnings when creating new pages.</li>
+</ul>
+
+<h4>1.4.4 - 01/26/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Major improvements to how translations are handled. A huge thanks to Oliver Juhas of <a href="http://www.webmandesign.eu/" target="_blank">WebMan Design</a> for making that happen. <strong>Please Note:</strong> Older translations are not compatible with this update need to be redone. Please get in touch with us if you're interested in helping with that.</li>
+    <li>Widgets in the builder now run the widget update method.</li>
+    <li>Content for the tabs module now scrolls into view on smaller devices.</li>
+    <li>Added filters for working with custom css classes on rows, columns and modules.</li>
+    <li>Updated class filenames to follow WordPress standards.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed icon hover color.</li>
+    <li>Fixed a bug with slideshows showing up in the header on archive pages.</li>
+    <li>Fixed a bug causing the heading module color to not work when linked.</li>
+    <li>Fixed a bug with overriding modules in a theme when the name of the wp-content directory is changed.</li>
+</ul>
+
+<h4>1.4.3 - 01/11/2015</h4>
 <p><strong>Enhancements</strong></p>
 <ul>
     <li>Added Foundation Icons and WordPress Dashicons to the icon selector.</li>

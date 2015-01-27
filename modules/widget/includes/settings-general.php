@@ -1,5 +1,5 @@
-<?php 
-    
+<?php
+
 global $wp_widget_factory;
 
 // Get builder post data.
@@ -19,28 +19,28 @@ if(isset($widget_slug) && isset($wp_widget_factory->widgets[$widget_slug])) {
     $factory_instance   = $wp_widget_factory->widgets[$widget_slug];
     $widget_class       = get_class($factory_instance);
     $widget_instance    = new $widget_class($factory_instance->id_base, $factory_instance->name, $factory_instance->widget_options);
-    
+
     // Widget settings
     $settings_key = 'widget-' . $widget_instance->id_base;
     $widget_settings = array();
-    
+
     if(isset($settings->$settings_key)) {
         $widget_settings = (array)$settings->$settings_key;
     }
 
     // Widget title
     echo '<h3 class="fl-builder-settings-title">' . $widget_instance->name . '</h3>';
-    
+
     // Widget form
     echo '<div class="fl-field" data-preview=\'{"type":"widget"}\'>';
     $widget_instance->form($widget_settings);
-    echo '<input type="hidden" name="widget" value="' . $widget_slug . '" />';   
+    echo '<input type="hidden" name="widget" value="' . $widget_slug . '" />';
     echo '</div>';
 }
-else if(isset($widget_slug)) {   
+else if(isset($widget_slug)) {
 
     // Widget doesn't exist!
     echo '<div class="fl-builder-widget-missing">';
-    echo $widget_slug . __(' no longer exists.');
+	printf( _x( '%s no longer exists.', '%s stands for widget slug.', 'fl-builder' ), $widget_slug );
     echo '</div>';
 }

@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 FLBuilder::register_settings_form('global', array(
-    'title' => FLBuilderModel::get_branding() . ' ' . __('Settings', 'fl-builder'),
+	'title' => sprintf( _x( '%s Settings', '%s stands for custom branded "Page Builder" name.', 'fl-builder' ), FLBuilderModel::get_branding() ),
     'tabs' => array(
         'general'  => array(
             'title'         => __('General', 'fl-builder'),
@@ -12,7 +12,7 @@ FLBuilder::register_settings_form('global', array(
                     'fields'        => array(
                         'show_default_heading' => array(
                             'type'                 => 'select',
-                            'label'                => __('Show', 'fl-builder'),
+                            'label'                => _x( 'Show', 'General settings form field label. Intended meaning: "Show page heading?"', 'fl-builder' ),
                             'default'              => '0',
                             'options'              => array(
                                 '0'                     => __('No', 'fl-builder'),
@@ -42,7 +42,7 @@ FLBuilder::register_settings_form('global', array(
                             'default'           => '0',
                             'maxlength'         => '3',
                             'size'              => '5',
-                            'description'       => __('px', 'fl-builder')
+                            'description'       => 'px'
                         ),
                     	'row_padding'       => array(
                             'type'              => 'text',
@@ -50,7 +50,7 @@ FLBuilder::register_settings_form('global', array(
                             'default'           => '20',
                             'maxlength'         => '3',
                             'size'              => '5',
-                            'description'       => __('px', 'fl-builder')
+                            'description'       => 'px'
                         ),
                         'row_width'         => array(
                             'type'              => 'text',
@@ -58,7 +58,7 @@ FLBuilder::register_settings_form('global', array(
                             'default'           => '1100',
                             'maxlength'         => '4',
                             'size'              => '5',
-                            'description'       => __('px', 'fl-builder'),
+                            'description'       => 'px',
                             'help'                     => __('All rows will default to this width. You can override this and make a row full width in the settings for each row.', 'fl-builder')
                         )
                     )
@@ -72,7 +72,7 @@ FLBuilder::register_settings_form('global', array(
                             'default'           => '20',
                             'maxlength'         => '3',
                             'size'              => '5',
-                            'description'       => __('px', 'fl-builder')
+                            'description'       => 'px'
                         )
                     )
                 ),
@@ -81,7 +81,7 @@ FLBuilder::register_settings_form('global', array(
                     'fields'        => array(
                         'responsive_enabled'   => array(
                             'type'                 => 'select',
-                            'label'                => __('Enabled', 'fl-builder'),
+                            'label'                => _x( 'Enabled', 'General settings form field label. Intended meaning: "Responsive layout enabled?"', 'fl-builder' ),
                             'default'              => '1',
                             'options'              => array(
                                 '0'                     => __('No', 'fl-builder'),
@@ -99,7 +99,7 @@ FLBuilder::register_settings_form('global', array(
                             'default'           => '992',
                             'maxlength'         => '4',
                             'size'              => '5',
-                            'description'       => __('px', 'fl-builder'),
+                            'description'       => 'px',
                             'help'              => __('The browser width at which the layout will adjust for medium devices such as tablets.', 'fl-builder')
                         ),
                         'responsive_breakpoint' => array(
@@ -108,7 +108,7 @@ FLBuilder::register_settings_form('global', array(
                             'default'           => '768',
                             'maxlength'         => '4',
                             'size'              => '5',
-                            'description'       => __('px', 'fl-builder'),
+                            'description'       => 'px',
                             'help'              => __('The browser width at which the layout will adjust for small devices such as phones.', 'fl-builder')
                         )
                     )

@@ -2,9 +2,20 @@
     height: 100%;
 }
 .fl-icons-filter {
-    position: absolute;
+	height: auto !important;
+	margin: 0 !important;
+    position: absolute !important;
     right: 10px;
     top: 10px;
+}
+.fl-icons-filter select {
+	vertical-align: middle;
+	width: 160px;
+}
+.fl-icons-filter input {
+	line-height: 18px;
+	vertical-align: middle;
+	width: 160px;
 }
 .fl-icons-list {
     bottom: 52px;

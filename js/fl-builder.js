@@ -333,11 +333,11 @@ var FLBuilder;
             $('.fl-builder-done-button').on('click', FLBuilder._doneClicked);
             $('.fl-builder-add-content-button').on('click', FLBuilder._showPanel);
             $('.fl-builder-templates-button').on('click', FLBuilder._changeTemplateClicked);
+            $('.fl-builder-upgrade-button').on('click', FLBuilder._upgradeClicked);
             
             /* Panel */
             $('.fl-builder-panel-actions .fl-builder-panel-close').on('click', FLBuilder._closePanel);
             $('.fl-builder-blocks-section-title').on('click', FLBuilder._blockSectionTitleClicked);
-            $('.fl-builder-block-upgrade').on('click', FLBuilder._blockUpgradeClicked);
             
             /* Drag and Drop */
             $('body').delegate('.fl-builder-block', 'mousedown', FLBuilder._blockDragInit);
@@ -619,6 +619,15 @@ var FLBuilder;
         },
         
         /**
+         * @method _upgradeClicked
+         * @private
+         */
+        _upgradeClicked: function()
+        {
+            window.open(FLBuilderConfig.upgradeUrl);
+        },
+        
+        /**
          * @method _blockSectionTitleClicked
          * @private
          */
@@ -636,15 +645,6 @@ var FLBuilder;
             }
             
             FLBuilder._initScrollbars();
-        },
-        
-        /**
-         * @method _blockUpgradeClicked
-         * @private
-         */
-        _blockUpgradeClicked: function()
-        {
-            window.open(FLBuilderConfig.upgradeUrl);
         },
         
         /* Save Actions
@@ -2074,7 +2074,7 @@ var FLBuilder;
                 }
             
                 module.addClass('fl-block-overlay-active');
-                module.append('<div class="fl-module-overlay fl-block-overlay"><div class="fl-block-overlay-header"><div class="fl-block-overlay-actions"><div class="fl-block-overlay-title">'+ moduleName +'</div><i class="fl-block-move fa fa-arrows fl-tip" title="' + FLBuilderStrings.move + '"></i><i class="fl-block-settings fa fa-wrench fl-tip" title="' + moduleName + ' ' + FLBuilderStrings.settings + '"></i><i class="fl-block-copy fa fa-copy fl-tip" title="' + FLBuilderStrings.duplicate + '"></i><i class="fl-block-columns fa fa-columns fl-tip" title="' + FLBuilderStrings.columnSettings + '"></i><i class="fl-block-remove fa fa-times fl-tip" title="' + FLBuilderStrings.remove + '"></i></div><div class="fl-clear"></div></div></div>');
+                module.append('<div class="fl-module-overlay fl-block-overlay"><div class="fl-block-overlay-header"><div class="fl-block-overlay-actions"><div class="fl-block-overlay-title">'+ moduleName +'</div><i class="fl-block-move fa fa-arrows fl-tip" title="' + FLBuilderStrings.move + '"></i><i class="fl-block-settings fa fa-wrench fl-tip" title="' + FLBuilderStrings.settings.replace( '%s', moduleName ) + '"></i><i class="fl-block-copy fa fa-copy fl-tip" title="' + FLBuilderStrings.duplicate + '"></i><i class="fl-block-columns fa fa-columns fl-tip" title="' + FLBuilderStrings.columnSettings + '"></i><i class="fl-block-remove fa fa-times fl-tip" title="' + FLBuilderStrings.remove + '"></i></div><div class="fl-clear"></div></div></div>');
                 FLBuilder._initTipTips();
             }
             

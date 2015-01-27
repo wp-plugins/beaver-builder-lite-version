@@ -71,19 +71,19 @@ final class FLBuilderPhoto {
      */
     static public function get_src_options($selected, $photo)
     {
-        $titles = array(
-            'full'      => __('Full Size', 'fl-builder'),
-            'large'     => __('Large', 'fl-builder'),
-            'medium'    => __('Medium', 'fl-builder'),
-            'thumbnail' => __('Thumbnail', 'fl-builder')
-        );
+		$titles = array(
+			'full'      => _x( 'Full Size', 'Image size.', 'fl-builder' ),
+			'large'     => _x( 'Large', 'Image size.', 'fl-builder' ),
+			'medium'    => _x( 'Medium', 'Image size.', 'fl-builder' ),
+			'thumbnail' => _x( 'Thumbnail', 'Image size.', 'fl-builder' )
+		);
 
         foreach($photo->sizes as $key => $val) {
-        
+
             if(!isset($titles[$key])) {
                 $titles[$key] = ucwords(str_replace(array('_', '-'), ' ', $key));
             }
-            
+
             echo '<option value="' . $val->url . '" ' . selected($selected, $val->url) . '>' . $titles[$key]  . ' - ' . $val->width . ' x ' . $val->height . '</option>';
         }
     }

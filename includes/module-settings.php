@@ -1,7 +1,7 @@
 <?php
 
 $global_settings = FLBuilderModel::get_global_settings();
-        
+
 FLBuilder::register_settings_form('module-advanced', array(
     'title'         => __('Advanced', 'fl-builder'),
     'sections'      => array(
@@ -11,7 +11,7 @@ FLBuilder::register_settings_form('module-advanced', array(
                 'class'         => array(
                     'type'          => 'text',
                     'label'         => __('CSS Class', 'fl-builder'),
-                    'help'          => __('A custom CSS class that will be applied to this module. Spaces only, no dots.'),
+                    'help'          => __( 'A custom CSS class that will be applied to this module. Spaces only, no dots.', 'fl-builder' ),
                     'preview'         => array(
                         'type'            => 'none'
                     )
@@ -39,9 +39,9 @@ FLBuilder::register_settings_form('module-advanced', array(
             'fields'        => array(
                 'margin_top'    => array(
                     'type'          => 'text',
-                    'label'         => __('Top', 'fl-builder'),
+                    'label'         => __( 'Top', 'fl-builder' ),
                     'default'       => '',
-                    'description'   => __('px', 'fl-builder'),
+                    'description'   => 'px',
                     'maxlength'     => '4',
                     'size'          => '5',
                     'placeholder'   => $global_settings->module_margins,
@@ -51,9 +51,9 @@ FLBuilder::register_settings_form('module-advanced', array(
                 ),
                 'margin_bottom' => array(
                     'type'          => 'text',
-                    'label'         => __('Bottom', 'fl-builder'),
+                    'label'         => __( 'Bottom', 'fl-builder' ),
                     'default'       => '',
-                    'description'   => __('px', 'fl-builder'),
+                    'description'   => 'px',
                     'maxlength'     => '4',
                     'size'          => '5',
                     'placeholder'   => $global_settings->module_margins,
@@ -63,9 +63,9 @@ FLBuilder::register_settings_form('module-advanced', array(
                 ),
                 'margin_left'   => array(
                     'type'          => 'text',
-                    'label'         => __('Left', 'fl-builder'),
+                    'label'         => __( 'Left', 'fl-builder' ),
                     'default'       => '',
-                    'description'   => __('px', 'fl-builder'),
+                    'description'   => 'px',
                     'maxlength'     => '4',
                     'size'          => '5',
                     'placeholder'   => $global_settings->module_margins,
@@ -75,9 +75,9 @@ FLBuilder::register_settings_form('module-advanced', array(
                 ),
                 'margin_right'  => array(
                     'type'          => 'text',
-                    'label'         => __('Right', 'fl-builder'),
+                    'label'         => __( 'Right', 'fl-builder' ),
                     'default'       => '',
-                    'description'   => __('px', 'fl-builder'),
+                    'description'   => 'px',
                     'maxlength'     => '4',
                     'size'          => '5',
                     'placeholder'   => $global_settings->module_margins,
@@ -94,12 +94,12 @@ FLBuilder::register_settings_form('module-advanced', array(
                     'type'          => 'select',
                     'label'         => __('Style', 'fl-builder'),
                     'options'       => array(
-                        ''              => __('None', 'fl-builder'),
-                        'fade-in'       => __('Fade In', 'fl-builder'),
-                        'slide-left'    => __('Slide Left', 'fl-builder'),
-                        'slide-right'   => __('Slide Right', 'fl-builder'),
-                        'slide-up'      => __('Slide Up', 'fl-builder'),
-                        'slide-down'    => __('Slide Down', 'fl-builder'),
+                        ''              => _x( 'None', 'Animation style.', 'fl-builder' ),
+                        'fade-in'       => _x( 'Fade In', 'Animation style.', 'fl-builder' ),
+                        'slide-left'    => _x( 'Slide Left', 'Animation style.', 'fl-builder' ),
+                        'slide-right'   => _x( 'Slide Right', 'Animation style.', 'fl-builder' ),
+                        'slide-up'      => _x( 'Slide Up', 'Animation style.', 'fl-builder' ),
+                        'slide-down'    => _x( 'Slide Down', 'Animation style.', 'fl-builder' ),
                     ),
                     'preview'         => array(
                         'type'            => 'none'
@@ -111,7 +111,7 @@ FLBuilder::register_settings_form('module-advanced', array(
                     'default'       => '0.0',
                     'maxlength'     => '4',
                     'size'          => '5',
-                    'description'   => 'seconds',
+                    'description'   => _x( 'seconds', 'Value unit for form field of time in seconds. Such as: "5 seconds"', 'fl-builder' ),
                     'help'          => __('The amount of time in seconds before this animation starts.', 'fl-builder'),
                     'preview'         => array(
                         'type'            => 'none'

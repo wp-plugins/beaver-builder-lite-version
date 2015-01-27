@@ -5,14 +5,14 @@
  */
 class FLVideoModule extends FLBuilderModule {
 
-    /** 
+    /**
      * @property $data
-     */  
+     */
     public $data = null;
 
-    /** 
+    /**
      * @method __construct
-     */  
+     */
     public function __construct()
     {
         parent::__construct(array(
@@ -20,7 +20,7 @@ class FLVideoModule extends FLBuilderModule {
             'description'   => __('Render a WordPress or embedable video.', 'fl-builder'),
             'category'		=> __('Basic Modules', 'fl-builder')
         ));
-        
+
         $this->add_js('jquery-fitvids');
     }
 
@@ -30,7 +30,7 @@ class FLVideoModule extends FLBuilderModule {
     public function get_data()
     {
         if(!$this->data) {
-        
+
             $this->data = FLBuilderPhoto::get_attachment_data($this->settings->video);
 
             if(!$this->data && isset($this->settings->data)) {
@@ -38,32 +38,32 @@ class FLVideoModule extends FLBuilderModule {
             }
             if($this->data) {
                 $parts                  = explode('.', $this->data->filename);
-                $this->data->extension  = array_pop($parts);   
+                $this->data->extension  = array_pop($parts);
                 $this->data->poster     = isset($this->settings->poster_src) ? $this->settings->poster_src : '';
                 $this->data->loop       = isset($this->settings->loop) && $this->settings->loop ? ' loop="yes"' : '';
                 $this->data->autoplay   = isset($this->settings->autoplay) && $this->settings->autoplay ? ' autoplay="yes"' : '';
             }
         }
-        
+
         return $this->data;
     }
 
-    /** 
+    /**
      * @method update
      * @param $settings {object}
-     */      
+     */
     public function update($settings)
     {
         // Cache the attachment data.
         if($settings->video_type == 'media_library') {
-        
+
             $video = FLBuilderPhoto::get_attachment_data($settings->video);
 
             if($video) {
                 $settings->data = $video;
             }
         }
-        
+
         return $settings;
     }
 }
@@ -97,11 +97,11 @@ FLBuilder::register_module('FLVideoModule', array(
                     ),
                     'video'          => array(
                         'type'          => 'video',
-                        'label'         => 'Video'
+                        'label'         => __( 'Video', 'fl-builder' )
                     ),
                     'poster'         => array(
                         'type'          => 'photo',
-                        'label'         => 'Poster'
+                        'label'         => _x( 'Poster', 'Video preview/fallback image.', 'fl-builder' )
                     ),
                     'autoplay'       => array(
                         'type'          => 'select',
@@ -129,7 +129,7 @@ FLBuilder::register_module('FLVideoModule', array(
                     ),
                     'embed_code'     => array(
                         'type'          => 'textarea',
-                        'label'         => 'Embed Code',
+                        'label'         => __( 'Video Embed Code', 'fl-builder' ),
                         'rows'          => '6'
                     )
                 )
