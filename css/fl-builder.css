@@ -73,10 +73,10 @@ html.fl-builder-edit {
     display: inline-block;
     text-decoration: none;
     font-size: 13px !important;
-    line-height: 26px !important;
+    line-height: 13px !important;
     height: 28px;
     margin: 0;
-    padding: 0 10px 1px;
+    padding: 7px 10px;
     cursor: pointer;
     border-width: 1px;
     border-style: solid;
@@ -110,12 +110,12 @@ html.fl-builder-edit {
 }
 .fl-builder-button-large {
     height: 30px;
-    line-height: 28px !important;
+    line-height: 30px !important;
     padding: 0 12px 2px;
 }
 .fl-builder-button-small {
     font-size: 11px !important;
-    line-height: 24px !important;
+    line-height: 11px !important;
     height: 24px;
 }
 
@@ -1145,6 +1145,13 @@ form.fl-builder-settings {
 .fl-builder-field-dd-zone {
     border: 1px dashed #cccccc;
     height: 30px;
+}
+.fl-builder-field-actions-single {
+	width: auto;
+}
+.fl-builder-field-actions-single i.fl-builder-field-delete,
+.fl-builder-field-actions-single i.fl-builder-field-move {
+	display: none;
 }
 
 /* Wordpress Widgets */

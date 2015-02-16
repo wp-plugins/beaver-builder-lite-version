@@ -13,15 +13,15 @@ Beaver Builder is a drag and drop frontend WordPress page builder that works wit
 
 = What Is The Beaver Builder WordPress Page Builder? =
 
-Beaver Builder is a drag and drop page builder that works on the frontend of WordPress and allows you to create beautiful layouts without having to write any code. If you haven't already, watch the video below or [try out the demo](http://demo.wpbeaverbuilder.com/) to see it in action!
+Beaver Builder is a drag and drop page builder that works on the frontend of WordPress and allows you to create beautiful layouts without having to write any code. If you haven't already, watch the video below or [try out the demo](http://demo.wpbeaverbuilder.com/?utm_source=external&utm_medium=wp-repo&utm_campaign=builder-description) to see it in action!
 
 [youtube https://www.youtube.com/watch?v=CNJbH2gaACo]
 
-Head on over to [our website](http://www.wpbeaverbuilder.com/) to learn more about the Beaver Builder WordPress page builder and what it can do for you. 
+Head on over to [our website](https://www.wpbeaverbuilder.com/?utm_source=external&utm_medium=wp-repo&utm_campaign=builder-description) to learn more about the Beaver Builder WordPress page builder and what it can do for you. 
 
 = Who Is Beaver Builder For? =
 
-Anyone that can learn WordPress can learn to use Beaver Builder. Developers that need a little more can build custom widgets using the WordPress plugin system to get the job done. Users of the [pro or agency versions](http://www.wpbeaverbuilder.com/pricing) also get access to premium documentation and support for extending the builder through the development of custom modules.
+Anyone that can learn WordPress can learn to use Beaver Builder. Developers that need a little more can build custom widgets using the WordPress plugin system to get the job done. Users of the [pro or agency versions](https://www.wpbeaverbuilder.com/pricing/?utm_source=external&utm_medium=wp-repo&utm_campaign=builder-description) also get access to premium documentation and support for extending the builder through the development of custom modules.
 
 = A WordPress Page Builder That Works With Your Theme =
 
@@ -41,7 +41,7 @@ We've designed Beaver Builder to create layouts that load quickly. Many page bui
 
 = WordPress.org Support =
 
-> As this is the lite version of [Beaver Builder](http://www.wpbeaverbuilder.com), the only support we offer through these forums is for bugs. Support for questions regarding working with or extending the Beaver Builder is available as part of either the [standard, pro or agency versions](http://www.wpbeaverbuilder.com/pricing) on our website.
+> As this is the lite version of [Beaver Builder](https://www.wpbeaverbuilder.com/?utm_source=external&utm_medium=wp-repo&utm_campaign=builder-support), the only support we offer through these forums is for bugs. Support for questions regarding working with or extending the Beaver Builder is available as part of either the [standard, pro or agency versions](https://www.wpbeaverbuilder.com/pricing/?utm_source=external&utm_medium=wp-repo&utm_campaign=builder-support) on our website.
 
 == Installation ==
 
@@ -51,11 +51,11 @@ We've designed Beaver Builder to create layouts that load quickly. Many page bui
 
 3. Beaver Builder will now be available to use for any of the post types you chose. 
 
-Visit our [documentation pages](http://www.wpbeaverbuilder.com/documentation/) for more information on working with Beaver Builder. Please note that not all features described in the documentation are available in this version of the Beaver Builder plugin. 
+Visit our [documentation pages](https://www.wpbeaverbuilder.com/documentation/?utm_source=external&utm_medium=wp-repo&utm_campaign=builder-installation) for more information on working with Beaver Builder. Please note that not all features described in the documentation are available in this version of the Beaver Builder plugin. 
 
 == Frequently Asked Questions ==
 
-Visit our [documentation pages](http://www.wpbeaverbuilder.com/documentation/) for more information on working with Beaver Builder. Please note that not all features described in the documentation are available in this version of the Beaver Builder plugin.
+Visit our [documentation pages](https://www.wpbeaverbuilder.com/documentation/?utm_source=external&utm_medium=wp-repo&utm_campaign=builder-faq) for more information on working with Beaver Builder. Please note that not all features described in the documentation are available in this version of the Beaver Builder plugin.
 
 == Screenshots ==
 
@@ -65,9 +65,9 @@ Visit our [documentation pages](http://www.wpbeaverbuilder.com/documentation/) f
 
 == Changelog ==
 
-Visit our [change logs page](http://www.wpbeaverbuilder.com/change-logs/) for up-to-date information on what has been going on with the development of Beaver Builder.
+Visit our [change logs page](https://www.wpbeaverbuilder.com/change-logs/?utm_source=external&utm_medium=wp-repo&utm_campaign=builder-changelog) for up-to-date information on what has been going on with the development of Beaver Builder.
 
 == Upgrade Notice ==
 
-Visit our [change logs page](http://www.wpbeaverbuilder.com/change-logs) for up-to-date information on what has been going on with the development of Beaver Builder.
+Visit our [change logs page](https://www.wpbeaverbuilder.com/change-logs/?utm_source=external&utm_medium=wp-repo&utm_campaign=builder-changelog) for up-to-date information on what has been going on with the development of Beaver Builder.
 

@@ -1,3 +1,22 @@
+<h4>1.4.6 - 02/15/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added the ability to upload Icomoon and Fontello font icons under Settings > Page Builder > Icons.</li>
+    <li>Added the ability to disable core font icons.</li>
+    <li>Added an ID field to row, column and module settings.</li>
+    <li>Added French translation.</li>
+    <li>Added Itailian translation.</li>
+    <li>Added fl_builder_upgrade_url filter. This filter can be used by theme developers to add their affiliate link to the upgrade buttons in the lite version.</li>
+    <li>Added fl_builder_settings_form_defaults filter for overriding default form settings.</li>
+    <li>Enhanced SSL check for servers behind load balancers.</li>
+    <li>Single repeater fields can now be duplicated.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Row text color no longer overrides heading text color.</li>
+    <li>Preview text for form fields now shows the option label for select inputs instead of the option value.</li>
+</ul>
+
 <h4>1.4.5 - 01/26/2015</h4>
 <p><strong>Enhancements</strong></p>
 <ul>

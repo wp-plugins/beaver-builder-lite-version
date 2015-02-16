@@ -55,6 +55,11 @@ final class FLBuilderUpdate {
             self::v_1_2_8();
         }
         
+        // Update to 1.4.6 or greater.
+        if(version_compare($version, '1.4.6', '<')) {
+            self::v_1_4_6();
+        }
+        
         // Clear all asset cache.
         FLBuilderModel::delete_all_asset_cache();
         
@@ -347,4 +352,22 @@ final class FLBuilderUpdate {
         
         return $settings;
     }
+
+    /** 
+     * Update to version 1.4.6 or later.
+     *
+     * @method v_1_4_6
+     * @private
+     */
+    static private function v_1_4_6()
+    {
+	    // Remove the old fl-builder uploads folder.
+		$filesystem  = FLBuilderUtils::get_filesystem();
+		$upload_dir  = wp_upload_dir();
+		$path		 = trailingslashit( $upload_dir['basedir'] ) . 'fl-builder';
+		
+		if ( file_exists( $path ) ) {
+			$filesystem->rmdir( $path, true );
+		}
+	}
 }

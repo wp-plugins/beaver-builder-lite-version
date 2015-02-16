@@ -36,7 +36,8 @@ final class FLBuilderAdmin {
                 }
                 // This version doesn't have multisite support.
                 else {
-					self::show_activate_error( sprintf( __( 'This version of the <strong>Page Builder</strong> plugin is not compatible with WordPress Multisite. <a%s>Please upgrade</a> to the Multisite version of this plugin.', 'fl-builder' ), ' href="' . esc_url( FL_BUILDER_UPGRADE_URL ) . '" target="_blank"' ) );
+	                $url = FLBuilderModel::get_upgrade_url( array( 'utm_source' => 'external', 'utm_medium' => 'builder', 'utm_campaign' => 'no-multisite-support' ) );
+					self::show_activate_error( sprintf( __( 'This version of the <strong>Page Builder</strong> plugin is not compatible with WordPress Multisite. <a%s>Please upgrade</a> to the Multisite version of this plugin.', 'fl-builder' ), ' href="' . $url . '" target="_blank"' ) );
                 }
             }
             // No multisite, standard install.
@@ -60,9 +61,9 @@ final class FLBuilderAdmin {
      */
     static public function show_activate_error($message)
     {
-        deactivate_plugins(plugin_basename(FL_BUILDER_DIR . 'fl-builder.php'), false, is_network_admin());
+        deactivate_plugins( FLBuilderModel::plugin_basename(), false, is_network_admin() );
 
-        die($message);
+        die( $message );
     }
 
 	/**
@@ -84,8 +85,13 @@ final class FLBuilderAdmin {
      */
     static public function activate_notice()
     {
-    	$href = esc_url(admin_url('/options-general.php?page=fl-builder-settings#license'));
-
+	    if ( class_exists('FLBuilderMultisiteSettings') && is_multisite() && current_user_can( 'manage_network_plugins' ) ) {
+		    $href = esc_url( network_admin_url( '/settings.php?page=fl-builder-multisite-settings#license' ) );
+	    }
+	    else {
+		    $href = esc_url( admin_url( '/options-general.php?page=fl-builder-settings#license' ) );
+	    }
+    	
     	echo '<div class="updated" style="background: #d3ebc1;">';
 		echo '<p><strong>' . sprintf( __( 'Page Builder activated! <a%s>Click here</a> to enable remote updates.', 'fl-builder' ), ' href="' . esc_url( $href ) . '"' ) . '</strong></p>';
 	    echo '</div>';
@@ -109,11 +115,11 @@ final class FLBuilderAdmin {
      */
     static public function init()
     {
-        self::show_activate_notice();
         self::init_classes();
         self::init_settings();
         self::init_multisite();
         self::init_templates();
+        self::show_activate_notice();
     }
 
     /**
@@ -133,7 +139,7 @@ final class FLBuilderAdmin {
             if(file_exists($ms_class)) {
                 require_once $ms_class;
             }
-            if(file_exists($ms_settings_class) && FL_BUILDER_VERSION != '{FL_BUILDER_VERSION}') {
+            if(file_exists($ms_settings_class)) {
                 require_once $ms_settings_class;
             }
         }
@@ -181,7 +187,8 @@ final class FLBuilderAdmin {
 	static public function render_plugin_action_links($actions)
     {
     	if(FL_BUILDER_LITE === true) {
-			$actions[] = '<a href="' . FL_BUILDER_UPGRADE_URL . '" style="color:#3db634;" target="_blank">' . _x( 'Upgrade', 'Plugin action link label.', 'fl-builder' ) . '</a>';
+	    	$url = FLBuilderModel::get_upgrade_url( array( 'utm_source' => 'external', 'utm_medium' => 'builder', 'utm_campaign' => 'plugins-page' ) );
+			$actions[] = '<a href="' . $url . '" style="color:#3db634;" target="_blank">' . _x( 'Upgrade', 'Plugin action link label.', 'fl-builder' ) . '</a>';
     	}
 
     	return $actions;
@@ -192,24 +199,16 @@ final class FLBuilderAdmin {
      */
 	static public function white_label_plugins_page($plugins)
     {
+	    $default  = __( 'Page Builder', 'fl-builder' );
         $branding = FLBuilderModel::get_branding();
+        $key	  = FLBuilderModel::plugin_basename();
 
-        if($branding != __('Page Builder', 'fl-builder')) {
-
-            if(isset($plugins['fl-builder/fl-builder.php'])) {
-                $plugins['fl-builder/fl-builder.php']['Name']       = $branding;
-                $plugins['fl-builder/fl-builder.php']['Title']      = $branding;
-                $plugins['fl-builder/fl-builder.php']['Author']     = '';
-                $plugins['fl-builder/fl-builder.php']['AuthorName'] = '';
-                $plugins['fl-builder/fl-builder.php']['PluginURI']  = '';
-            }
-            else if(isset($plugins['bb-plugin/fl-builder.php'])) {
-                $plugins['bb-plugin/fl-builder.php']['Name']        = $branding;
-                $plugins['bb-plugin/fl-builder.php']['Title']       = $branding;
-                $plugins['bb-plugin/fl-builder.php']['Author']      = '';
-                $plugins['bb-plugin/fl-builder.php']['AuthorName']  = '';
-                $plugins['bb-plugin/fl-builder.php']['PluginURI']   = '';
-            }
+        if ( isset( $plugins[ $key ] ) && $branding != $default ) {
+            $plugins[ $key ]['Name']       = $branding;
+            $plugins[ $key ]['Title']      = $branding;
+            $plugins[ $key ]['Author']     = '';
+            $plugins[ $key ]['AuthorName'] = '';
+            $plugins[ $key ]['PluginURI']  = '';
         }
 
         return $plugins;

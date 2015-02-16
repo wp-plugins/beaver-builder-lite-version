@@ -3,7 +3,7 @@
     <?php if(!$status) : ?>
     <p style="padding:10px 20px; background: #d54e21; color: #fff;">
         <?php _e('UPDATES UNAVAILABLE! Please subscribe or enter your licence key below to enable automatic updates.', 'fl-builder'); ?>
-        &nbsp;<a style="color: #fff;" href="http://www.wpbeaverbuilder.com/" target="_blank"><?php _e('Subscribe Now', 'fl-builder'); ?> &raquo;</a>
+        &nbsp;<a style="color: #fff;" href="<?php echo FLBuilderModel::get_upgrade_url( array( 'utm_source' => 'external', 'utm_medium' => 'builder', 'utm_campaign' => 'settings-page' ) ); ?>" target="_blank"><?php _e('Subscribe Now', 'fl-builder'); ?> &raquo;</a>
     </p>
     <?php endif; ?>
 
@@ -24,7 +24,7 @@
     <?php endif; ?>
 
 	<p>
-		<?php echo sprintf( __( 'Enter your <a%s>licence key</a> to enable remote updates and support.', 'fl-builder' ), ' href="http://www.wpbeaverbuilder.com/my-account/" target="_blank"' ) ?>
+		<?php echo sprintf( __( 'Enter your <a%s>licence key</a> to enable remote updates and support.', 'fl-builder' ), ' href="https://www.wpbeaverbuilder.com/my-account/?utm_source=external&utm_medium=builder&utm_campaign=settings-page" target="_blank"' ) ?>
 	</p>
 	<?php if(is_multisite()) : ?>
     <p>

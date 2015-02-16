@@ -8,17 +8,17 @@
         echo $field['label']; 
         
         if(isset($i)) {
-            echo ' <span>' . ($i + 1) . '</span>';
+            echo ' <span class="fl-builder-field-index">' . ($i + 1) . '</span>';
         }
         
         ?>
-        </label>
         <?php if(isset($field['help'])) : ?>
     	<span class="fl-help-tooltip">
             <i class="fl-help-tooltip-icon fa fa-question-circle"></i>
             <span class="fl-help-tooltip-text"><?php echo $field['help']; ?></span>
     	</span>
         <?php endif; ?>
+        </label>
     </th>
 <td>
 <?php endif; ?>

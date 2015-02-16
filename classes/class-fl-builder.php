@@ -25,7 +25,7 @@ final class FLBuilder {
 		$mofile_global = trailingslashit( WP_LANG_DIR ) . 'plugins/beaver-builder/' . $locale . '.mo';
 
 		if ( file_exists( $mofile_local ) ) {
-		//Look in local /wp-content/plugins/beaver-builder/languages/ folder
+			//Look in local /wp-content/plugins/beaver-builder/languages/ folder
 			return load_textdomain( 'fl-builder', $mofile_local );
 		} 
 		else if ( file_exists( $mofile_global ) ) {
@@ -352,6 +352,9 @@ final class FLBuilder {
     		wp_enqueue_style('fl-lightbox',             $css_url . 'fl-lightbox.css', array(), $ver);
     		wp_enqueue_style('fl-icon-selector',        $css_url . 'fl-icon-selector.css', array(), $ver);
             wp_enqueue_style('fl-builder',              $css_url . 'fl-builder.css', array(), $ver);
+            
+            /* Custom Icons */
+            FLBuilderIcons::enqueue_all_custom_icons_styles();
 
             /* RTL Support */
             if(is_rtl()) {
@@ -716,14 +719,14 @@ final class FLBuilder {
 	    $post_data  = FLBuilderModel::get_post_data();
         $type       = isset($post_data['type']) ? $post_data['type'] : $type;
         $settings   = isset($post_data['settings']) ? $post_data['settings'] : $settings;
-        $form       = FLBuilderModel::$settings_forms[$type];
+        $form       = FLBuilderModel::get_settings_form( $type );
 
         if(isset($settings) && !empty($settings)) {
-            $defaults = FLBuilderModel::get_settings_form_defaults($form['tabs']);
+            $defaults = FLBuilderModel::get_settings_form_defaults( $type );
             $settings = (object)array_merge((array)$defaults, (array)$settings);
         }
         else {
-            $settings = FLBuilderModel::get_settings_form_defaults($form['tabs']);
+            $settings = FLBuilderModel::get_settings_form_defaults( $type );
         }
 
         self::render_settings(array(
@@ -806,8 +809,8 @@ final class FLBuilder {
      */
     static public function render_user_template_settings()
     {
-        $defaults = FLBuilderModel::get_settings_form_defaults(FLBuilderModel::$settings_forms['user_template']['tabs']);
-        $form     = FLBuilderModel::$settings_forms['user_template'];
+        $defaults = FLBuilderModel::get_settings_form_defaults( 'user_template' );
+        $form     = FLBuilderModel::get_settings_form( 'user_template' );
 
         FLBuilder::render_settings(array(
             'class'   => 'fl-builder-user-template-settings',
@@ -889,41 +892,34 @@ final class FLBuilder {
 	}
 
 	/**
-     * @method render_row_class
+     * @method render_row_attributes
      */
-	static public function render_row_class($row)
+	static public function render_row_attributes( $row )
 	{
-	    echo 'fl-row';
+		// ID
+		if ( ! empty( $row->settings->id ) ) {
+			echo ' id="' . $row->settings->id . '"';
+		}
+		
+		// Class
+	    echo ' class="fl-row';
 	    echo ' fl-row-' . $row->settings->width . '-width';
 	    echo ' fl-row-bg-' . $row->settings->bg_type;
 	    echo ' fl-node-' . $row->node;
 
-	    if(!empty($row->settings->class)) {
+	    if ( ! empty( $row->settings->class ) ) {
 		    echo apply_filters( 'fl_builder_row_custom_class', ' ' . $row->settings->class, $row );
 	    }
-	    if(!empty($row->settings->responsive_display)) {
+	    if ( ! empty( $row->settings->responsive_display ) ) {
 	        echo ' fl-visible-' . $row->settings->responsive_display;
 	    }
-	}
-
-	/**
-     * @method render_row_content_class
-     */
-	static public function render_row_content_class($row)
-	{
-	    echo 'fl-row-content';
-	    echo ' fl-row-' . $row->settings->content_width . '-width';
-	    echo ' fl-node-content';
-	}
-
-	/**
-     * @method render_row_data_attrs
-     */
-	static public function render_row_data_attrs($row)
-	{
+	    
+	    echo '"';
+		
+		// Data
 	    echo ' data-node="' . $row->node . '"';
 
-	    if($row->settings->bg_type == 'parallax' && !empty($row->settings->bg_parallax_image_src)) {
+	    if ( $row->settings->bg_type == 'parallax' && ! empty( $row->settings->bg_parallax_image_src ) ) {
 	        echo ' data-parallax-speed="' . $row->settings->bg_parallax_speed . '"';
 	        echo ' data-parallax-image="' . $row->settings->bg_parallax_image_src . '"';
 	    }
@@ -945,6 +941,16 @@ final class FLBuilder {
 	    else if($row->settings->bg_type == 'slideshow') {
 	        echo '<div class="fl-bg-slideshow"></div>';
 	    }
+	}
+
+	/**
+     * @method render_row_content_class
+     */
+	static public function render_row_content_class($row)
+	{
+	    echo 'fl-row-content';
+	    echo ' fl-row-' . $row->settings->content_width . '-width';
+	    echo ' fl-node-content';
 	}
 
 	/**
@@ -995,6 +1001,15 @@ final class FLBuilder {
 	}
 
 	/**
+     * @method render_column_group_attributes
+     */
+	static public function render_column_group_attributes( $group )
+	{
+		echo ' class="fl-col-group fl-node-' . $group->node . '"'; 
+		echo ' data-node="' . $group->node . '"';
+	}
+
+	/**
      * @method render_column_settings
      */
 	static public function render_column_settings($node_id = null)
@@ -1014,23 +1029,38 @@ final class FLBuilder {
 	}
 
 	/**
-     * @method render_column_class
+     * @method render_column_attributes
      */
-	static public function render_column_class($col)
+	static public function render_column_attributes( $col )
 	{
-	    echo 'fl-col';
+		// ID
+		if ( ! empty( $col->settings->id ) ) {
+			echo ' id="' . $col->settings->id . '"';
+		}
+		
+		// Class
+	    echo ' class="fl-col';
 
-	    if($col->settings->size <= 50) {
+	    if ( $col->settings->size <= 50 ) {
 	        echo ' fl-col-small';
         }
-        if(!empty($col->settings->class)) {
+        
+        echo ' fl-node-' . $col->node;
+        
+        if ( ! empty( $col->settings->class ) ) {
 		    echo apply_filters( 'fl_builder_column_custom_class', ' ' . $col->settings->class, $col );
 	    }
-	    if(!empty($col->settings->responsive_display)) {
+	    if ( ! empty( $col->settings->responsive_display ) ) {
 	        echo ' fl-visible-' . $col->settings->responsive_display;
 	    }
-
-	    echo ' fl-node-' . $col->node;
+	    
+	    echo '"';
+	    
+	    // Width
+	    echo ' style="width: ' . $col->settings->size . '%;"';
+	    
+	    // Data
+	    echo ' data-node="' . $col->node . '"';
 	}
 
     /**
@@ -1122,7 +1152,6 @@ final class FLBuilder {
     {
         // Settings
         $defaults = FLBuilderModel::get_module_defaults($type);
-        $settings = FLBuilderUtils::array_to_object($settings);
         $settings = (object)array_merge((array)$defaults, (array)$settings);
 
         // Module
@@ -1137,34 +1166,37 @@ final class FLBuilder {
     }
 
 	/**
-     * @method render_module_class
+     * @method render_module_attributes
      */
-	static public function render_module_class($module)
+	static public function render_module_attributes( $module )
 	{
-	    echo 'fl-module';
+		// ID
+		if ( ! empty( $module->settings->id ) ) {
+			echo ' id="' . $module->settings->id . '"';
+		}
+		
+		// Class
+		echo ' class="fl-module';
 	    echo ' fl-module-' . $module->settings->type;
 	    echo ' fl-node-' . $module->node;
 
-	    if(!empty($module->settings->class)) {
+	    if ( ! empty( $module->settings->class ) ) {
 	        echo apply_filters( 'fl_builder_module_custom_class', ' ' . $module->settings->class, $module );
 	    }
-	    if(!empty($module->settings->responsive_display)) {
+	    if ( ! empty( $module->settings->responsive_display ) ) {
 	        echo ' fl-visible-' . $module->settings->responsive_display;
 	    }
-	    if(!empty($module->settings->animation)) {
+	    if ( ! empty( $module->settings->animation ) ) {
 	        echo ' fl-animation fl-' . $module->settings->animation;
 	    }
-	}
-
-	/**
-     * @method render_module_data_attrs
-     */
-	static public function render_module_data_attrs($module)
-	{
+	    
+	    echo '"';
+		
+		// Data
         echo ' data-node="' . $module->node . '" ';
         echo ' data-animation-delay="' . $module->settings->animation_delay . '" ';
 
-	    if(FLBuilderModel::is_builder_active()) {
+	    if ( FLBuilderModel::is_builder_active() ) {
 	        echo ' data-parent="' . $module->parent . '" ';
 	        echo ' data-type="' . $module->settings->type . '" ';
 	        echo ' data-name="' . $module->name . '" ';
@@ -1179,7 +1211,6 @@ final class FLBuilder {
         // Settings
         $global_settings = FLBuilderModel::get_global_settings();
         $defaults = FLBuilderModel::get_module_defaults($type);
-        $settings = FLBuilderUtils::array_to_object($settings);
         $settings = (object)array_merge((array)$defaults, (array)$settings);
 
         // Module

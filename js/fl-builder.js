@@ -147,7 +147,9 @@ var FLBuilder;
          */
         _init: function()
         {
-            FLBuilder._lockPost();
+	        FLBuilder._initJQueryReadyFix();
+	        FLBuilder._initGlobalErrorHandling();
+            FLBuilder._initPostLock();
             FLBuilder._initClassNames();
             FLBuilder._initMediaUploader();
             FLBuilder._initOverflowFix();
@@ -163,10 +165,58 @@ var FLBuilder;
         },
         
         /**
-         * @method _lockPost
+	     * Prevent errors thrown in jQuery's ready function
+	     * from breaking subsequent ready calls. 
+	     *
+         * @method _initJQueryReadyFix
          * @private
          */
-        _lockPost: function()
+        _initJQueryReadyFix: function()
+        {
+	        if ( FLBuilderConfig.debug ) {
+		        return;
+	        }
+	        
+			jQuery.fn.oldReady = jQuery.fn.ready;
+	        
+	        jQuery.fn.ready = function( fn ) {
+		        return jQuery.fn.oldReady( function() {
+			        try {
+			        	if ( 'function' == typeof fn ) {
+				        	fn();
+			        	}
+			        }
+			        catch ( e ){
+				        FLBuilder.logError( e );
+			        }
+		        });
+	        };
+	    },
+        
+        /**
+	     * Try to prevent errors from third party plugins
+	     * from breaking the builder.
+	     *
+         * @method _initGlobalErrorHandling
+         * @private
+         */
+        _initGlobalErrorHandling: function()
+        {
+	        if ( FLBuilderConfig.debug ) {
+		        return;
+	        }
+	        
+        	window.onerror = function( message, file, line, col, error ) {
+	        	FLBuilder.logGlobalError( message, file, line, col, error );
+				return true;
+			};
+        },
+        
+        /**
+         * @method _initPostLock
+         * @private
+         */
+        _initPostLock: function()
         {
             if(typeof wp.heartbeat != 'undefined') {
             
@@ -323,7 +373,7 @@ var FLBuilder;
             $('.fl-page-nav .nav a').on('click', FLBuilder._headerLinkClicked);
             
             /* Heartbeat */
-            $(document).on('heartbeat-tick', FLBuilder._lockPost);
+            $(document).on('heartbeat-tick', FLBuilder._initPostLock);
             
             /* Unload Warning */
             $(window).on('beforeunload', FLBuilder._warnBeforeUnload);  
@@ -1242,7 +1292,7 @@ var FLBuilder;
                 content = $(FLBuilder._contentClass),
                 loader  = $('<img src="' + data.css + '" />'),
                 oldCss  = $('#fl-builder-layout-' + post + '-css'),
-                oldJs   = $('script[src*="/fl-builder/' + post + '"]'),
+                oldJs   = $('script[src*="/cache/' + post + '"]'),
                 newCss  = $('<link rel="stylesheet" id="fl-builder-layout-' + post + '-css"  href="'+ data.css +'" />'),
                 newJs   = $('<script src="'+ data.js +'"></script>');
                 
@@ -2749,10 +2799,10 @@ var FLBuilder;
                 fields = multiple.find('.fl-builder-field-multiple');
                 
                 if(fields.length === 1) {
-                    fields.eq(0).find('.fl-builder-field-actions').hide();
+                    fields.eq(0).find('.fl-builder-field-actions').addClass('fl-builder-field-actions-single');
                 }
                 else {
-                    fields.find('.fl-builder-field-actions').show();
+                    fields.find('.fl-builder-field-actions').removeClass('fl-builder-field-actions-single');
                 }
             }
             
@@ -2779,9 +2829,9 @@ var FLBuilder;
                 fieldName   = button.attr('data-field'),
                 fieldRow    = button.closest('tr').siblings('tr[data-field='+ fieldName +']').last(),
                 clone       = fieldRow.clone(),
-                index       = parseInt(fieldRow.find('label span').html(), 10) + 1;
+                index       = parseInt(fieldRow.find('label span.fl-builder-field-index').html(), 10) + 1;
                 
-            clone.find('th label span').html(index);
+            clone.find('th label span.fl-builder-field-index').html(index);
             clone.find('.fl-form-field-preview-text').html('');
             clone.find('input, textarea, select').val('');
             fieldRow.after(clone);
@@ -2797,12 +2847,13 @@ var FLBuilder;
             var button      = $(this),
                 row         = button.closest('tr'),
                 clone       = row.clone(),
-                index       = parseInt(row.find('label span').html(), 10) + 1;
+                index       = parseInt(row.find('label span.fl-builder-field-index').html(), 10) + 1;
                 
-            clone.find('th label span').html(index);
+            clone.find('th label span.fl-builder-field-index').html(index);
             row.after(clone);
             FLBuilder._renumberFields(row.parent());
             FLBuilder._initMultipleFields();
+			FLBuilder.preview.delayPreview();
         },
         
         /**
@@ -2833,7 +2884,7 @@ var FLBuilder;
                 i    = 0;
                 
             for( ; i < rows.length; i++) {
-                rows.eq(i).find('th label span').html(i + 1);
+                rows.eq(i).find('th label span.fl-builder-field-index').html(i + 1);
             }
         },
         
@@ -3402,17 +3453,21 @@ var FLBuilder;
          */  
         _saveFormFieldClicked: function()
         {
-            var form        = $(this).closest('.fl-builder-settings'),
-                lightboxId  = $(this).closest('.fl-lightbox-wrap').attr('data-instance-id'),
-                type        = form.attr('data-type'),
-                settings    = FLBuilder._getSettings(form),
-                helper      = FLBuilder._moduleHelpers[type],
-                link        = $('.fl-builder-settings #fl-' + lightboxId),
-                preview     = link.parent().attr('data-preview-text'),
-                previewText = settings[preview],
-                tmp         = document.createElement('div'),
-                valid       = true;
+            var form          = $(this).closest('.fl-builder-settings'),
+                lightboxId    = $(this).closest('.fl-lightbox-wrap').attr('data-instance-id'),
+                type          = form.attr('data-type'),
+                settings      = FLBuilder._getSettings(form),
+                helper        = FLBuilder._moduleHelpers[type],
+                link          = $('.fl-builder-settings #fl-' + lightboxId),
+                preview       = link.parent().attr('data-preview-text'),
+                previewText   = settings[preview],
+                selectPreview = $( 'select[name="' + preview + '"]' ),
+                tmp           = document.createElement('div'),
+                valid         = true;
                 
+            if ( selectPreview.length > 0 ) {
+	            previewText = selectPreview.find( 'option[value="' + settings[ preview ] + '"]' ).text();
+            }  
             if(typeof helper !== 'undefined') {
                 
                 form.find('label.error').remove();
@@ -3808,6 +3863,62 @@ var FLBuilder;
                 html = '<div class="fl-lightbox-message">' + message + '</div><div class="fl-lightbox-footer"><span class="fl-builder-settings-cancel fl-builder-button fl-builder-button-large fl-builder-button-primary" href="javascript:void(0);">' + FLBuilderStrings.ok + '</span></div>';
             
             alert.open(html);
+        },
+        
+        /* Console Logging
+        ----------------------------------------------------------*/
+        
+        /**
+         * @method log
+         */
+        log: function( message )
+        {
+	        if ( 'undefined' == typeof window.console || 'undefined' == typeof window.console.log ) {
+				return;
+			}
+			
+			console.log( message );
+        },
+        
+        /**
+         * @method logError
+         */
+        logError: function( error )
+        {
+	        var message = null;
+	        
+	        if ( 'undefined' == typeof error ) {
+		        return;
+	        }
+	        else if ( 'undefined' != typeof error.stack ) {
+		        message = error.stack;
+	        }
+	        else if ( 'undefined' != typeof error.message ) {
+		        message = error.message;
+	        }
+	        
+	        if ( message ) {
+		        FLBuilder.log( '************************************************************************' );
+		        FLBuilder.log( FLBuilderStrings.errorMessage );
+		        FLBuilder.log( message );
+		        FLBuilder.log( '************************************************************************' );
+			}
+        },
+        
+        /**
+         * @method logGlobalError
+         * @private
+         */
+        logGlobalError: function( message, file, line, col, error )
+        {
+        	FLBuilder.log( '************************************************************************' );
+		    FLBuilder.log( FLBuilderStrings.errorMessage );
+			FLBuilder.log( FLBuilderStrings.globalErrorMessage.replace( '{message}', message ).replace( '{line}', line ).replace( '{file}', file ) );
+			
+			if ( 'undefined' != typeof error && 'undefined' != typeof error.stack ) {
+				FLBuilder.log( error.stack );
+				FLBuilder.log( '************************************************************************' );
+			}
         }
     };
 

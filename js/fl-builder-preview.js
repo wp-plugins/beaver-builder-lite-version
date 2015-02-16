@@ -205,7 +205,7 @@ var FLBuilderPreview;
         {
             var post    = $('#fl-post-id').val(),
                 css     = $('#fl-builder-layout-' + post + '-css').attr('href'),
-                js      = $('script[src*="/fl-builder/' + post + '"]').attr('src'),
+                js      = $('script[src*="/cache/' + post + '"]').attr('src'),
                 html    = $(FLBuilder._contentClass).html();
                 
             this.state = {
@@ -296,6 +296,9 @@ var FLBuilderPreview;
             
             // Remove the loading graphic.
             $('.fl-builder-preview-loader').remove();
+            
+            // Send the preview event.
+            $( FLBuilder._contentClass ).trigger( 'preview-rendered' );
         },
     
         /**

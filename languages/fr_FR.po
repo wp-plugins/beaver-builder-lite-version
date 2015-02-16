@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: {FL_BUILDER_NAME}\n"
-"POT-Creation-Date: 2015-02-12 10:28-0800\n"
-"PO-Revision-Date: 2015-02-12 10:28-0800\n"
-"Last-Translator: WebMan - Oliver Juhas <webmandesigneu@gmail.com>\n"
-"Language-Team: \n"
-"Language: en_US\n"
+"Project-Id-Version: Beaver Builder Plugin (Pro Version)\n"
+"POT-Creation-Date: 2015-01-31 23:42-0500\n"
+"PO-Revision-Date: 2015-02-02 23:57-0500\n"
+"Last-Translator: Gérard Godin <Gerard@getgointernetcoaching.com>\n"
+"Language-Team: Gerard Godin <gerard@getgointernetcoaching.com>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,445 +15,729 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: classes/class-fl-builder-admin-settings.php:93
-#: includes/global-settings.php:4
-#, php-format
-msgctxt "%s stands for custom branded \"Page Builder\" name."
-msgid "%s Settings"
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:107
-msgid "Settings updated!"
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:118
-msgid "License"
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:122
-#: includes/admin-settings-upgrade.php:3
-msgid "Upgrade"
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:126
-#: includes/global-settings.php:67
-msgid "Modules"
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:130 includes/ui.php:44
-msgid "Templates"
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:134
-#: includes/admin-settings-post-types.php:3
-msgid "Post Types"
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:138
-#: modules/icon-group/icon-group.php:27
-msgid "Icons"
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:142
-msgid "Editing"
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:146
-#: includes/admin-settings-branding.php:3
-msgid "Branding"
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:150
-#: includes/admin-settings-uninstall.php:3
-#: includes/admin-settings-uninstall.php:15
-msgid "Uninstall"
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:368
-msgid "Error! You must have at least one icon set enabled."
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:410
-msgid "Error! Could not unzip file."
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:444
-msgid "Error! Please upload an icon set from either Icomoon or Fontello."
-msgstr ""
-
-#: classes/class-fl-builder-admin.php:40
+#: classes/class-fl-builder-admin.php:39
 #, php-format
 msgid ""
 "This version of the <strong>Page Builder</strong> plugin is not compatible "
 "with WordPress Multisite. <a%s>Please upgrade</a> to the Multisite version "
 "of this plugin."
 msgstr ""
+"Cette version de l'extension <strong>Beaver Builder</strong> n'est pas "
+"compatible avec WordPress multisite. <a%s> S'il vous plaît, mettre à niveau "
+"vers la version multisite de cet extension."
 
-#: classes/class-fl-builder-admin.php:50
+#: classes/class-fl-builder-admin.php:49
 msgid ""
 "The <strong>Page Builder</strong> plugin requires WordPress version 3.5 or "
 "greater. Please update WordPress before activating the plugin."
 msgstr ""
+"L'extension <strong>Beaver Builder</strong> nécessite la version 3.5 ou "
+"supérieure. S'il vous plaît, mettre à jour WordPress avant d'activer le "
+"plugin."
 
-#: classes/class-fl-builder-admin.php:96
+#: classes/class-fl-builder-admin.php:90
 #, php-format
 msgid "Page Builder activated! <a%s>Click here</a> to enable remote updates."
 msgstr ""
+"Beaver Builder activé! <a%s> Cliquez ici</a> pour activer les mises à jour "
+"automatique."
 
-#: classes/class-fl-builder-admin.php:191
+#: classes/class-fl-builder-admin.php:184
 msgctxt "Plugin action link label."
 msgid "Upgrade"
-msgstr ""
+msgstr "Mettre à niveau"
 
-#: classes/class-fl-builder-admin.php:202
-#: classes/class-fl-builder-model.php:2538
+#: classes/class-fl-builder-admin.php:197
+#: classes/class-fl-builder-model.php:2437
 msgid "Page Builder"
-msgstr ""
+msgstr "Beaver Builder"
 
-#: classes/class-fl-builder-model.php:1363
-#, php-format
-msgctxt "%s stands for the module filename"
-msgid ""
-"A module with the filename %s.php already exists! Please namespace your "
-"module filenames to ensure compatibility with Beaver Builder."
-msgstr ""
-
-#: classes/class-fl-builder-model.php:1953
+#: classes/class-fl-builder-model.php:1852
 #, php-format
 msgctxt "%s stands for post/page title."
 msgid "Copy of %s"
-msgstr ""
+msgstr "Copie de %s"
 
 #: classes/class-fl-builder-photo.php:75
 msgctxt "Image size."
 msgid "Full Size"
-msgstr ""
+msgstr "Pleine largeur"
 
 #: classes/class-fl-builder-photo.php:76
 msgctxt "Image size."
 msgid "Large"
-msgstr ""
+msgstr "Grande"
 
 #: classes/class-fl-builder-photo.php:77
 msgctxt "Image size."
 msgid "Medium"
-msgstr ""
+msgstr "Moyenne"
 
 #: classes/class-fl-builder-photo.php:78
 msgctxt "Image size."
 msgid "Thumbnail"
-msgstr ""
+msgstr "Vignette"
 
-#: classes/class-fl-builder-templates.php:28
-msgid "Page Builder Templates"
-msgstr ""
-
-#: classes/class-fl-builder.php:702
+#: classes/class-fl-builder.php:699
 #, php-format
 msgctxt "Field name to add."
 msgid "Add %s"
-msgstr ""
+msgstr "Ajouter %s"
 
-#: classes/class-fl-builder.php:765 classes/class-fl-builder.php:767
+#: classes/class-fl-builder.php:762 classes/class-fl-builder.php:764
 msgctxt "Custom post type label."
 msgid "Layout Templates"
-msgstr ""
+msgstr "Modèles de mise en page"
 
-#: classes/class-fl-builder.php:766 classes/class-fl-builder.php:768
+#: classes/class-fl-builder.php:763 classes/class-fl-builder.php:765
 msgctxt "Custom post type label."
 msgid "Layout Template"
-msgstr ""
+msgstr "Modèle de mise en page"
+
+#: classes/class-fl-builder.php:766
+msgctxt "Custom post type label."
+msgid "Add New"
+msgstr "Ajouter"
+
+#: classes/class-fl-builder.php:767
+msgctxt "Custom post type label."
+msgid "Add New Layout Template"
+msgstr "Ajouter un nouveau modèle de mise en page"
+
+#: classes/class-fl-builder.php:768
+msgctxt "Custom post type label."
+msgid "New Layout Template"
+msgstr "Nouveau modèle de mise en page"
 
 #: classes/class-fl-builder.php:769
 msgctxt "Custom post type label."
-msgid "Add New"
-msgstr ""
+msgid "Edit Layout Template"
+msgstr "Modifier le modèle de mise en page"
 
 #: classes/class-fl-builder.php:770
 msgctxt "Custom post type label."
-msgid "Add New Layout Template"
-msgstr ""
+msgid "View Layout Template"
+msgstr "Visualiser le modèle de mise en page"
 
 #: classes/class-fl-builder.php:771
 msgctxt "Custom post type label."
-msgid "New Layout Template"
-msgstr ""
+msgid "All Layout Templates"
+msgstr "Tous les modèles de mise en page"
 
 #: classes/class-fl-builder.php:772
 msgctxt "Custom post type label."
-msgid "Edit Layout Template"
-msgstr ""
+msgid "Search Layout Templates"
+msgstr "Recherchez des modèles de mise en page"
 
 #: classes/class-fl-builder.php:773
 msgctxt "Custom post type label."
-msgid "View Layout Template"
-msgstr ""
+msgid "Parent Layout Templates:"
+msgstr "Modèles parent de mise en page:"
 
 #: classes/class-fl-builder.php:774
 msgctxt "Custom post type label."
-msgid "All Layout Templates"
-msgstr ""
+msgid "No layout templates found."
+msgstr "Aucun modèles de mise en page trouvé."
 
 #: classes/class-fl-builder.php:775
 msgctxt "Custom post type label."
-msgid "Search Layout Templates"
-msgstr ""
-
-#: classes/class-fl-builder.php:776
-msgctxt "Custom post type label."
-msgid "Parent Layout Templates:"
-msgstr ""
-
-#: classes/class-fl-builder.php:777
-msgctxt "Custom post type label."
-msgid "No layout templates found."
-msgstr ""
-
-#: classes/class-fl-builder.php:778
-msgctxt "Custom post type label."
 msgid "No layout templates found in Trash."
-msgstr ""
+msgstr "Aucun modèles de mise en page trouvés dans la corbeille."
 
-#: classes/class-fl-builder.php:1143 includes/js-config.php:61
+#: classes/class-fl-builder.php:1113 includes/js-config.php:58
 #, php-format
 msgctxt "%s stands for module name."
 msgid "%s Settings"
-msgstr ""
+msgstr "Réglages pour %s"
 
 #: includes/admin-posts.php:3 modules/rich-text/rich-text.php:14
 msgid "Text Editor"
-msgstr ""
+msgstr "Éditeur de texte"
 
 #: includes/admin-posts.php:7
 #, php-format
 msgctxt "%s stands for custom branded \"Page Builder\" name."
 msgid "%s is currently active for this page."
-msgstr ""
+msgstr "%s est actuellement actif pour cette page."
 
 #: includes/admin-posts.php:8
 #, php-format
 msgctxt "%s stands for custom branded \"Page Builder\" name."
 msgid "Launch %s"
-msgstr ""
+msgstr "Lancer %s"
 
-#: includes/admin-settings-branding.php:7
-msgid "White label the page builder by entering a custom name below."
-msgstr ""
+#: includes/admin-settings.php:7 includes/global-settings.php:4
+#, php-format
+msgctxt "%s stands for custom branded \"Page Builder\" name."
+msgid "%s Settings"
+msgstr "Réglages %s"
 
-#: includes/admin-settings-branding.php:10
+#: includes/admin-settings.php:12
+msgid "Settings updated!"
+msgstr "Réglages mis à jour!"
+
+#: includes/admin-settings.php:19
+msgid "License"
+msgstr "Licence"
+
+#: includes/admin-settings.php:23 includes/admin-settings.php:59
+msgid "Upgrade"
+msgstr "Mettre à niveau"
+
+#: includes/admin-settings.php:26 includes/global-settings.php:67
+msgid "Modules"
+msgstr "Modules"
+
+#: includes/admin-settings.php:29 includes/ui.php:44
+msgid "Templates"
+msgstr "Modèles"
+
+#: includes/admin-settings.php:32 includes/admin-settings.php:163
+msgid "Post Types"
+msgstr "Types d'articles"
+
+#: includes/admin-settings.php:33
+msgid "Editing"
+msgstr "En modification"
+
+#: includes/admin-settings.php:36
+msgid "Branding"
+msgstr "Marquage (Branding)"
+
+#: includes/admin-settings.php:40 includes/admin-settings.php:250
+#: includes/admin-settings.php:262
+msgid "Uninstall"
+msgstr "Désinstaller"
+
+#: includes/admin-settings.php:61
 msgid ""
-"Additionally, you may also add a custom icon by entering the URL of an image "
-"below. Leave the field blank if you do not wish to use an icon."
+"You are currently running the lite version of the Beaver Builder plugin. "
+"Upgrade today for access to premium features such as advanced modules, "
+"templates, support and more!"
 msgstr ""
+"Vous utilisez actuellement la version lite de l'extension \"Beaver Builder"
+"\". Mettez à niveau dès aujourd'hui pour l'accès aux fonctionnalités "
+"premium, tels que des modules de pointe, modèles, soutien et plus encore!"
 
-#: includes/admin-settings-branding.php:14
-msgid "Save Branding"
-msgstr ""
+#: includes/admin-settings.php:63
+msgid "Upgrade Now"
+msgstr "Mettre à niveau maintenant"
 
-#: includes/admin-settings-editing.php:3
-msgid "Editing Settings"
-msgstr ""
+#: includes/admin-settings.php:65
+msgid "Learn More"
+msgstr "En savoir plus"
 
-#: includes/admin-settings-editing.php:10 includes/admin-settings-icons.php:27
-#: includes/admin-settings-modules.php:10
-#: includes/admin-settings-post-types.php:10
-#: includes/admin-settings-templates.php:10
+#: includes/admin-settings.php:74
+msgid "Enabled Modules"
+msgstr "Modules activés"
+
+#: includes/admin-settings.php:81 includes/admin-settings.php:132
+#: includes/admin-settings.php:170 includes/admin-settings.php:222
 msgid "Override network settings?"
-msgstr ""
+msgstr "Remplacer les paramètres de réseau?"
 
-#: includes/admin-settings-editing.php:16
+#: includes/admin-settings.php:87
+msgid "Check or uncheck modules below to enable or disable them."
+msgstr ""
+"Cochez ou décochez les modules ci-dessous pour les activer ou désactiver."
+
+#: includes/admin-settings.php:96
+msgctxt "Plugin setup page: Modules."
+msgid "All"
+msgstr "Tous"
+
+#: includes/admin-settings.php:114
+msgid "Save Module Settings"
+msgstr "Enregistrer les réglages du module"
+
+#: includes/admin-settings.php:125
+msgid "Template Settings"
+msgstr "Réglages du modèle"
+
+#: includes/admin-settings.php:138
+msgid "Enable or disable templates using the options below."
+msgstr "Activer ou désactiver les modèles en utilisant les options ci-dessous."
+
+#: includes/admin-settings.php:145
+msgid "Enable All Templates"
+msgstr "Activer tous les modèles"
+
+#: includes/admin-settings.php:146
+msgid "Enable Core Templates Only"
+msgstr "Activer les modèles de base seulement"
+
+#: includes/admin-settings.php:147
+msgid "Enable User Templates Only"
+msgstr "Activer les modèles de l'utilisateur seulement"
+
+#: includes/admin-settings.php:148
+msgid "Disable All Templates"
+msgstr "Désactiver tous les modèles"
+
+#: includes/admin-settings.php:152
+msgid "Save Template Settings"
+msgstr "Enregistrer les réglages de modèle"
+
+#: includes/admin-settings.php:176
+msgid "Select the post types you would like the builder to work with."
+msgstr ""
+"Sélectionnez les types d'article que vous souhaitez utilisez avec \"Beaver "
+"Builder\"."
+
+#: includes/admin-settings.php:177
+msgid "NOTE: Not all custom post types may be supported."
+msgstr ""
+"REMARQUE: Tous les types de poste personnalisé peuvent être pris en charge."
+
+#: includes/admin-settings.php:205
+msgid "Save Post Types"
+msgstr "Enregistrer les types de poste"
+
+#: includes/admin-settings.php:215
+msgid "Editing Settings"
+msgstr "En modification des réglages"
+
+#: includes/admin-settings.php:228
 #, php-format
 msgid ""
 "Set the <a%s>capability</a> required for users to access advanced builder "
 "editing such as adding, deleting or moving modules."
 msgstr ""
+"Réglez le <a%s> capacité requise</a> pour les utilisateurs d'accéder à "
+"l'édition de constructeur de pointe telles que l'ajout, la suppression ou le "
+"déplacement des modules."
 
-#: includes/admin-settings-editing.php:22
+#: includes/admin-settings.php:234
 msgid "Save Editing Settings"
-msgstr ""
+msgstr "Enregistrer les paramètres de modification"
 
-#: includes/admin-settings-icons.php:3
-msgid "Icon Settings"
-msgstr ""
-
-#: includes/admin-settings-icons.php:13
-msgid "Icons for the main site must be managed in the network admin."
-msgstr ""
-
-#: includes/admin-settings-icons.php:33
-#, php-format
-msgid ""
-"Enable or disable icon sets using the options below or upload a custom icon "
-"set from either <a%s>Icomoon</a> or <a%s>Fontello</a>."
-msgstr ""
-
-#: includes/admin-settings-icons.php:48
-msgctxt "Plugin setup page: Delete icon set."
-msgid "Delete"
-msgstr ""
-
-#: includes/admin-settings-icons.php:59
-msgid "Upload Icon Set"
-msgstr ""
-
-#: includes/admin-settings-icons.php:60
-msgid "Save Icon Settings"
-msgstr ""
-
-#: includes/admin-settings-js-config.php:4
-msgid "Select File"
-msgstr ""
-
-#: includes/admin-settings-js-config.php:5
-msgid ""
-"Please type \"uninstall\" in the box below to confirm that you really want "
-"to uninstall the page builder and all of its data."
-msgstr ""
-
-#: includes/admin-settings-modules.php:3
-msgid "Enabled Modules"
-msgstr ""
-
-#: includes/admin-settings-modules.php:16
-msgid "Check or uncheck modules below to enable or disable them."
-msgstr ""
-
-#: includes/admin-settings-modules.php:25
-msgctxt "Plugin setup page: Modules."
-msgid "All"
-msgstr ""
-
-#: includes/admin-settings-modules.php:43
-msgid "Save Module Settings"
-msgstr ""
-
-#: includes/admin-settings-post-types.php:18
-msgid ""
-"Enter a comma separated list of the post types you would like the builder to "
-"work with."
-msgstr ""
-
-#: includes/admin-settings-post-types.php:19
-#: includes/admin-settings-post-types.php:39
-msgid "NOTE: Not all custom post types may be supported."
-msgstr ""
-
-#: includes/admin-settings-post-types.php:34
-msgid "Example: page, post, product"
-msgstr ""
-
-#: includes/admin-settings-post-types.php:38
-msgid "Select the post types you would like the builder to work with."
-msgstr ""
-
-#: includes/admin-settings-post-types.php:70
-msgid "Save Post Types"
-msgstr ""
-
-#: includes/admin-settings-templates.php:3 includes/template-settings.php:4
-msgid "Template Settings"
-msgstr ""
-
-#: includes/admin-settings-templates.php:16
-msgid "Enable or disable templates using the options below."
-msgstr ""
-
-#: includes/admin-settings-templates.php:23
-msgid "Enable All Templates"
-msgstr ""
-
-#: includes/admin-settings-templates.php:24
-msgid "Enable Core Templates Only"
-msgstr ""
-
-#: includes/admin-settings-templates.php:25
-msgid "Enable User Templates Only"
-msgstr ""
-
-#: includes/admin-settings-templates.php:26
-msgid "Disable All Templates"
-msgstr ""
-
-#: includes/admin-settings-templates.php:30
-msgid "Save Template Settings"
-msgstr ""
-
-#: includes/admin-settings-uninstall.php:5
+#: includes/admin-settings.php:252
 msgid ""
 "Clicking the button below will uninstall the page builder plugin and delete "
 "all of the data associated with it. You can uninstall or deactivate the page "
 "builder from the plugins page instead if you do not wish to delete the data."
 msgstr ""
+"Cliquer le bouton ci-dessous permet de désinstaller \"Beaver Builder\" et de "
+"supprimer toutes les données qui lui sont associés. Vous pouvez désinstaller "
+"ou désactiver \"Beaver Builder\" à partir de la page des extensions "
+"(plugins) à la place, si vous ne souhaitez pas supprimer les données."
 
-#: includes/admin-settings-uninstall.php:7
-#: includes/admin-settings-uninstall.php:10
+#: includes/admin-settings.php:254 includes/admin-settings.php:257
 #: includes/updater/includes/form.php:31
 msgid "NOTE:"
-msgstr ""
+msgstr "REMARQUE :"
 
-#: includes/admin-settings-uninstall.php:7
+#: includes/admin-settings.php:254
 msgid ""
 "The builder does not delete the post meta <code>_fl_builder_data</code>, "
 "<code>_fl_builder_draft</code> and <code>_fl_builder_enabled</code> in case "
 "you want to reinstall it later. If you do, the builder will rebuild all of "
 "its data using those meta values."
 msgstr ""
+"Le constructeur ne supprime pas le méta <code>_fl_builder_data</code> , "
+"<code>_fl_builder_draft</code> et <code>_fl_builder_enabled</code> des "
+"articles, au cas où vous souhaitiez réinstaller plus tard. Si vous le "
+"faites, le constructeur va rebâtir l'ensemble de ses données à l'aide de ces "
+"valeurs méta."
 
-#: includes/admin-settings-uninstall.php:10
-#: includes/updater/includes/form.php:31
+#: includes/admin-settings.php:257 includes/updater/includes/form.php:31
 msgid "This applies to all sites on the network."
-msgstr ""
+msgstr "Ceci s'applique à tous les sites du réseau."
 
-#: includes/admin-settings-upgrade.php:5
+# Is there a french word instead of uninstall ?
+#: includes/admin-settings.php:276
 msgid ""
-"You are currently running the lite version of the Beaver Builder plugin. "
-"Upgrade today for access to premium features such as advanced modules, "
-"templates, support and more!"
+"Please type \"uninstall\" in the box below to confirm that you really want "
+"to uninstall the page builder and all of its data."
 msgstr ""
+"S'il vous plaît, saisissez \"uninstall\" dans la zone ci-dessous pour "
+"confirmer que vous voulez vraiment désinstaller \"Beaver Builder\" et toutes "
+"ses données."
 
-#: includes/admin-settings-upgrade.php:7
-msgid "Upgrade Now"
+#: includes/column-settings.php:4 includes/js-config.php:21
+msgid "Column Settings"
+msgstr "Réglages de colonne"
+
+#: includes/column-settings.php:7 includes/module-settings.php:95
+#: includes/row-settings.php:9 modules/accordion/accordion.php:45
+#: modules/button/button.php:95 modules/callout/callout.php:239
+#: modules/content-slider/content-slider.php:419 modules/cta/cta.php:99
+#: modules/heading/heading.php:69 modules/icon-group/icon-group.php:44
+#: modules/icon/icon.php:75 modules/pricing-table/pricing-table.php:43
+#: modules/pricing-table/pricing-table.php:155
+#: modules/separator/separator.php:72 modules/tabs/tabs.php:45
+msgid "Style"
+msgstr "Style"
+
+#: includes/column-settings.php:14
+msgid "Column Width"
+msgstr "Largeur de cette colonne"
+
+#: includes/column-settings.php:26 includes/row-settings.php:48
+#: modules/button/button.php:53 modules/callout/callout.php:223
+#: modules/callout/callout.php:476 modules/callout/callout.php:492
+#: modules/content-slider/content-slider.php:376
+#: modules/content-slider/content-slider.php:610 modules/cta/cta.php:82
+#: modules/cta/cta.php:219
+msgid "Text"
+msgstr "Texte"
+
+#: includes/column-settings.php:30 includes/column-settings.php:43
+#: includes/column-settings.php:100 includes/row-settings.php:52
+#: includes/row-settings.php:109 includes/row-settings.php:379
+#: modules/callout/callout.php:389
+#: modules/content-slider/content-slider.php:331
+#: modules/icon-group/icon-group.php:51 modules/icon/icon.php:82
+#: modules/separator/separator.php:34
+msgid "Color"
+msgstr "Couleur"
+
+#: includes/column-settings.php:39 includes/row-settings.php:105
+#: modules/button/button.php:102 modules/callout/callout.php:402
+#: modules/callout/callout.php:506
+#: modules/content-slider/content-slider.php:357
+#: modules/content-slider/content-slider.php:624 modules/cta/cta.php:195
+#: modules/cta/cta.php:262 modules/icon-group/icon-group.php:64
+#: modules/icon/icon.php:95
+msgid "Background Color"
+msgstr "Couleur de l'arrière-plan"
+
+#: includes/column-settings.php:51 includes/column-settings.php:108
+#: includes/row-settings.php:117 includes/row-settings.php:387
+#: modules/separator/separator.php:44
+msgid "Opacity"
+msgstr "Opacité"
+
+#: includes/column-settings.php:63 includes/row-settings.php:342
+msgid "Border"
+msgstr "Bordure"
+
+#: includes/column-settings.php:67 includes/row-settings.php:65
+#: includes/row-settings.php:346 modules/callout/callout.php:472
+#: modules/content-slider/content-slider.php:325
+#: modules/content-slider/content-slider.php:372
+#: modules/content-slider/content-slider.php:590
+#: modules/content-slider/content-slider.php:694
+#: modules/slideshow/slideshow.php:339
+msgid "Type"
+msgstr "Type"
+
+#: includes/column-settings.php:69 includes/row-settings.php:348
+msgid ""
+"The type of border to use. Double borders must have a width of at least 3px "
+"to render properly."
 msgstr ""
+"Le type de bordure à utiliser. Double doit avoir une largeur d'au moins 3px "
+"afin de rendre correctement."
 
-#: includes/admin-settings-upgrade.php:9
-msgid "Learn More"
+#: includes/column-settings.php:71 includes/row-settings.php:350
+msgctxt "Border type."
+msgid "None"
+msgstr "Aucun"
+
+#: includes/column-settings.php:72 includes/row-settings.php:351
+#: modules/separator/separator.php:75
+msgctxt "Border type."
+msgid "Solid"
+msgstr "Solide"
+
+#: includes/column-settings.php:73 includes/row-settings.php:352
+#: modules/separator/separator.php:76
+msgctxt "Border type."
+msgid "Dashed"
+msgstr "Tirets"
+
+#: includes/column-settings.php:74 includes/row-settings.php:353
+#: modules/separator/separator.php:77
+msgctxt "Border type."
+msgid "Dotted"
+msgstr "Pointillé"
+
+#: includes/column-settings.php:75 includes/row-settings.php:354
+#: modules/separator/separator.php:78
+msgctxt "Border type."
+msgid "Double"
+msgstr "Double"
+
+#: includes/column-settings.php:119 includes/row-settings.php:398
+msgid "Top Width"
+msgstr "Largeur du haut"
+
+#: includes/column-settings.php:131 includes/row-settings.php:410
+msgid "Bottom Width"
+msgstr "Largeur du bas"
+
+#: includes/column-settings.php:143 includes/row-settings.php:422
+msgid "Left Width"
+msgstr "Largeur gauche"
+
+#: includes/column-settings.php:155 includes/row-settings.php:434
+msgid "Right Width"
+msgstr "Largeur droite"
+
+#: includes/column-settings.php:170 includes/module-settings.php:6
+#: includes/row-settings.php:449 modules/content-slider/content-slider.php:267
+msgid "Advanced"
+msgstr "Avancé"
+
+#: includes/column-settings.php:177 includes/module-settings.php:13
+#: includes/row-settings.php:456
+msgid "CSS Class"
+msgstr "Classe CSS"
+
+#: includes/column-settings.php:178
+msgid ""
+"A custom CSS class that will be applied to this column. Spaces only, no dots."
 msgstr ""
+"Une classe CSS personnalisé sera appliqué à cette colonne. Espaces "
+"seulement, pas de points."
 
-#: includes/admin-templates-edit.php:3
-msgid "Edit Template"
+#: includes/column-settings.php:186 includes/global-settings.php:80
+msgid "Responsive Layout"
+msgstr "Mise en page adaptative (Responsive)"
+
+#: includes/column-settings.php:190 includes/module-settings.php:21
+#: includes/row-settings.php:464 modules/slideshow/slideshow.php:290
+msgid "Display"
+msgstr "Affichage"
+
+#: includes/column-settings.php:192 includes/module-settings.php:23
+#: includes/row-settings.php:466
+msgid "Always"
+msgstr "Toujours"
+
+#: includes/column-settings.php:193 includes/module-settings.php:24
+#: includes/row-settings.php:467
+msgid "Large Devices Only"
+msgstr "Appareils grands seulement"
+
+#: includes/column-settings.php:194 includes/module-settings.php:25
+#: includes/row-settings.php:468
+msgid "Large &amp; Medium Devices Only"
+msgstr "Appareils grands et moyens seulement"
+
+#: includes/column-settings.php:195 includes/module-settings.php:26
+#: includes/row-settings.php:469
+msgid "Medium Devices Only"
+msgstr "Appareils moyens seulement"
+
+#: includes/column-settings.php:196 includes/module-settings.php:27
+#: includes/row-settings.php:470
+msgid "Medium &amp; Small Devices Only"
+msgstr "Appareils moyens et petits seulement"
+
+#: includes/column-settings.php:197 includes/module-settings.php:28
+#: includes/row-settings.php:471
+msgid "Small Devices Only"
+msgstr "Appareils petits seulement"
+
+#: includes/column-settings.php:199
+msgid "Choose whether to show or hide this column at different device sizes."
 msgstr ""
+"Choisissez si vous voulez afficher ou masquer cette colonne à des tailles "
+"différentes de l'appareil."
 
-#: includes/admin-templates-edit.php:8
-msgctxt "Template edit form field label. Template name."
-msgid "Name"
+#: includes/column-settings.php:206
+msgid "Medium Device Width"
+msgstr "Largeur moyenne d'appareil"
+
+#: includes/column-settings.php:207
+msgid "The width of this column on medium devices such as tablets."
 msgstr ""
+"La largeur de cette colonne sur des appareils moyens tels que des tablettes."
 
-#: includes/admin-templates-edit.php:12 modules/callout/callout.php:303
-#: modules/post-grid/post-grid.php:113
-msgid "Image"
+#: includes/column-settings.php:209 includes/column-settings.php:237
+#: modules/callout/callout.php:281
+#: modules/content-slider/content-slider.php:442 modules/cta/cta.php:165
+#: modules/heading/heading.php:117 modules/heading/heading.php:144
+#: modules/heading/heading.php:174
+msgid "Default"
+msgstr "Par défaut"
+
+#: includes/column-settings.php:210 includes/column-settings.php:238
+#: modules/button/button.php:151 modules/callout/callout.php:282
+#: modules/content-slider/content-slider.php:443 modules/cta/cta.php:166
+#: modules/heading/heading.php:118 modules/heading/heading.php:145
+#: modules/heading/heading.php:175
+#: modules/social-buttons/social-buttons.php:74
+msgid "Custom"
+msgstr "Personalisé"
+
+#: includes/column-settings.php:223
+msgid "Custom Medium Device Width"
+msgstr "Largeur personalisée sur appareils moyens"
+
+#: includes/column-settings.php:234
+msgid "Small Device Width"
+msgstr "Largeur sur petit appareil"
+
+#: includes/column-settings.php:235
+msgid "The width of this column on small devices such as phones."
 msgstr ""
+"La largeur de cette colonne sur les petits appareils tels que les téléphones."
 
-#: includes/admin-templates-edit.php:16 includes/row-settings.php:155
-#: includes/template-settings.php:23 modules/callout/callout.php:351
-#: modules/callout/callout.php:371
-#: modules/content-slider/content-slider.php:466
-#: modules/post-grid/post-grid.php:127
-msgid "Position"
-msgstr ""
+#: includes/column-settings.php:251
+msgid "Custom Small Device Width"
+msgstr "Largeur personnalisée sur petit appareil"
 
-#: includes/admin-templates-edit.php:20 includes/template-settings.php:28
-msgctxt "Template edit form field label. Is template premium one?"
-msgid "Premium"
-msgstr ""
+#: includes/column-settings.php:263 includes/global-settings.php:41
+#: includes/global-settings.php:71 includes/module-settings.php:38
+#: includes/row-settings.php:481
+msgid "Margins"
+msgstr "Marges"
 
-#: includes/admin-templates-edit.php:23 includes/admin-templates.php:30
+#: includes/column-settings.php:267 includes/column-settings.php:320
+#: includes/module-settings.php:42 includes/row-settings.php:485
+#: includes/row-settings.php:538 modules/slideshow/slideshow.php:475
+msgid "Top"
+msgstr "Haut"
+
+#: includes/column-settings.php:279 includes/column-settings.php:332
+#: includes/module-settings.php:54 includes/row-settings.php:497
+#: includes/row-settings.php:550 modules/slideshow/slideshow.php:474
+msgid "Bottom"
+msgstr "Bas"
+
+#: includes/column-settings.php:291 includes/column-settings.php:344
+#: includes/module-settings.php:66 includes/row-settings.php:509
+#: includes/row-settings.php:562 modules/button/button.php:177
+#: modules/callout/callout.php:250
+#: modules/content-slider/content-slider.php:470 modules/cta/cta.php:123
+#: modules/heading/heading.php:89 modules/heading/heading.php:161
+#: modules/icon-group/icon-group.php:111 modules/icon/icon.php:134
+#: modules/photo/photo.php:417 modules/social-buttons/social-buttons.php:101
+msgid "Left"
+msgstr "Gauche"
+
+#: includes/column-settings.php:303 includes/column-settings.php:356
+#: includes/module-settings.php:78 includes/row-settings.php:521
+#: includes/row-settings.php:574 modules/button/button.php:178
+#: modules/callout/callout.php:251
+#: modules/content-slider/content-slider.php:472 modules/cta/cta.php:125
+#: modules/heading/heading.php:91 modules/heading/heading.php:163
+#: modules/icon-group/icon-group.php:112 modules/icon/icon.php:135
+#: modules/photo/photo.php:419 modules/social-buttons/social-buttons.php:102
+msgid "Right"
+msgstr "Droite"
+
+#: includes/column-settings.php:316 includes/global-settings.php:49
+#: includes/row-settings.php:534 modules/button/button.php:191
+#: modules/callout/callout.php:567
+#: modules/content-slider/content-slider.php:668 modules/cta/cta.php:314
+msgid "Padding"
+msgstr "Marge intérieure"
+
+#: includes/field-form.php:17
+#, php-format
+msgctxt "%s stands for form field label."
+msgid "Edit %s"
+msgstr "Modifier %s"
+
+#: includes/field-icon.php:2 includes/icon-selector.php:2
+msgid "Select Icon"
+msgstr "Choisir une icône"
+
+#: includes/field-icon.php:5 includes/field-photo.php:13
+msgid "Replace"
+msgstr "Remplacer"
+
+#: includes/field-icon.php:7 includes/js-config.php:50
+msgid "Remove"
+msgstr "Supprimer"
+
+#: includes/field-link.php:3
+msgid "Select"
+msgstr "Sélectionner"
+
+#: includes/field-link.php:5
+msgid "Enter a post title to search."
+msgstr "Veuillez entrer le titre d'un article de journal à rechercher."
+
+#: includes/field-link.php:6 includes/field-suggest.php:7
+msgid "Start typing..."
+msgstr "Commencez à taper ..."
+
+#: includes/field-link.php:7 includes/icon-selector.php:28
+#: includes/js-config.php:17 includes/settings.php:63
+#: includes/template-selector.php:102 includes/ui.php:11
+msgid "Cancel"
+msgstr "Annuler"
+
+#: includes/field-multiple-photos.php:8
+#, php-format
+msgid "1 Photo Selected"
+msgid_plural "%d Photos Selected"
+msgstr[0] "Une photo sélectionnée"
+msgstr[1] "%d photos sélectionnées"
+
+#: includes/field-multiple-photos.php:13
+msgid "Create Gallery"
+msgstr "Créer une galerie"
+
+#: includes/field-multiple-photos.php:14
+msgid "Edit Gallery"
+msgstr "Modifier la galerie"
+
+#: includes/field-multiple-photos.php:15
+msgid "Add Photos"
+msgstr "Ajouter des photos"
+
+#: includes/field-photo.php:3 includes/js-config.php:55
+msgid "Select Photo"
+msgstr "Sélectionner la photo"
+
+#: includes/field-photo.php:12 includes/template-selector.php:83
+msgid "Edit"
+msgstr "Modifier"
+
+#: includes/field-video.php:3 includes/js-config.php:57
+msgid "Select Video"
+msgstr "Sélectionnez Vidéo"
+
+#: includes/field-video.php:17
+msgid "Replace Video"
+msgstr "Remplacer vidéo"
+
+#: includes/global-settings.php:7 includes/user-template-settings.php:7
+#: modules/accordion/accordion.php:110 modules/button/button.php:46
+#: modules/callout/callout.php:207 modules/contact-form/contact-form.php:57
+#: modules/content-slider/content-slider.php:184
+#: modules/content-slider/content-slider.php:308 modules/cta/cta.php:65
+#: modules/gallery/gallery.php:213 modules/heading/heading.php:26
+#: modules/html/html.php:26 modules/icon-group/icon-group.php:128
+#: modules/icon/icon.php:27 modules/map/map.php:26 modules/photo/photo.php:368
+#: modules/pricing-table/pricing-table.php:87
+#: modules/rich-text/rich-text.php:26 modules/separator/separator.php:27
+#: modules/sidebar/sidebar.php:27 modules/slideshow/slideshow.php:256
+#: modules/social-buttons/social-buttons.php:64 modules/tabs/tabs.php:77
+#: modules/testimonials/testimonials.php:30
+#: modules/testimonials/testimonials.php:200 modules/video/video.php:76
+#: modules/widget/widget.php:64 modules/woocommerce/woocommerce.php:50
+msgid "General"
+msgstr "Général"
+
+#: includes/global-settings.php:8
+msgid "Note: These settings apply to all posts and pages."
+msgstr "Remarque: Ces paramètres s'appliquent à tous les messages et pages."
+
+#: includes/global-settings.php:11
+msgid "Default Page Heading"
+msgstr "Titre de page par défaut"
+
+#: includes/global-settings.php:15
+msgctxt ""
+"General settings form field label. Intended meaning: \"Show page heading?\""
+msgid "Show"
+msgstr "Montrer"
+
 #: includes/global-settings.php:18 includes/global-settings.php:87
-#: includes/row-settings.php:307 includes/template-settings.php:31
-#: modules/accordion/accordion.php:90 modules/button/button.php:135
-#: modules/callout/callout.php:418 modules/callout/callout.php:539
+#: includes/row-settings.php:307 modules/accordion/accordion.php:90
+#: modules/button/button.php:135 modules/callout/callout.php:418
+#: modules/callout/callout.php:539
 #: modules/content-slider/content-slider.php:203
 #: modules/content-slider/content-slider.php:217
 #: modules/content-slider/content-slider.php:251
@@ -478,13 +762,12 @@ msgstr ""
 #: modules/testimonials/testimonials.php:154 modules/video/video.php:111
 #: modules/video/video.php:123
 msgid "No"
-msgstr ""
+msgstr "Non"
 
-#: includes/admin-templates-edit.php:24 includes/admin-templates.php:30
 #: includes/global-settings.php:19 includes/global-settings.php:88
-#: includes/row-settings.php:308 includes/template-settings.php:32
-#: modules/accordion/accordion.php:89 modules/button/button.php:136
-#: modules/callout/callout.php:419 modules/callout/callout.php:540
+#: includes/row-settings.php:308 modules/accordion/accordion.php:89
+#: modules/button/button.php:136 modules/callout/callout.php:419
+#: modules/callout/callout.php:540
 #: modules/content-slider/content-slider.php:204
 #: modules/content-slider/content-slider.php:218
 #: modules/content-slider/content-slider.php:252
@@ -509,440 +792,7 @@ msgstr ""
 #: modules/testimonials/testimonials.php:155 modules/video/video.php:112
 #: modules/video/video.php:124
 msgid "Yes"
-msgstr ""
-
-#: includes/admin-templates-edit.php:29 includes/template-settings.php:37
-msgid "Category"
-msgstr ""
-
-#: includes/admin-templates-edit.php:32 includes/template-settings.php:40
-msgctxt "Templates category label."
-msgid "Landing Pages"
-msgstr ""
-
-#: includes/admin-templates-edit.php:33 includes/template-settings.php:41
-msgctxt "Templates category label."
-msgid "Company Info"
-msgstr ""
-
-#: includes/admin-templates-edit.php:40
-msgid "Update Template"
-msgstr ""
-
-#: includes/admin-templates.php:3
-msgid "Page Builder Template"
-msgstr ""
-
-#: includes/admin-templates.php:10
-msgctxt "Templates list column label."
-msgid "Name"
-msgstr ""
-
-#: includes/admin-templates.php:11
-msgctxt "Templates list column label."
-msgid "Category"
-msgstr ""
-
-#: includes/admin-templates.php:12
-msgctxt "Templates list column label. Is template premium one?"
-msgid "Premium"
-msgstr ""
-
-#: includes/admin-templates.php:25 includes/field-photo.php:12
-#: includes/template-selector.php:83
-msgid "Edit"
-msgstr ""
-
-#: includes/admin-templates.php:27 includes/template-selector.php:84
-msgid "Delete"
-msgstr ""
-
-#: includes/admin-templates.php:40 includes/js-config.php:27
-msgid "Do you really want to delete this template?"
-msgstr ""
-
-#: includes/column-settings.php:4 includes/js-config.php:22
-msgid "Column Settings"
-msgstr ""
-
-#: includes/column-settings.php:7 includes/module-settings.php:87
-#: includes/row-settings.php:9 modules/accordion/accordion.php:45
-#: modules/button/button.php:95 modules/callout/callout.php:239
-#: modules/content-slider/content-slider.php:419 modules/cta/cta.php:99
-#: modules/heading/heading.php:69 modules/icon-group/icon-group.php:44
-#: modules/icon/icon.php:75 modules/pricing-table/pricing-table.php:43
-#: modules/pricing-table/pricing-table.php:155
-#: modules/separator/separator.php:72 modules/tabs/tabs.php:45
-msgid "Style"
-msgstr ""
-
-#: includes/column-settings.php:14
-msgid "Column Width"
-msgstr ""
-
-#: includes/column-settings.php:26 includes/row-settings.php:48
-#: modules/button/button.php:53 modules/callout/callout.php:223
-#: modules/callout/callout.php:476 modules/callout/callout.php:492
-#: modules/content-slider/content-slider.php:376
-#: modules/content-slider/content-slider.php:610 modules/cta/cta.php:82
-#: modules/cta/cta.php:219
-msgid "Text"
-msgstr ""
-
-#: includes/column-settings.php:30 includes/column-settings.php:43
-#: includes/column-settings.php:100 includes/row-settings.php:52
-#: includes/row-settings.php:109 includes/row-settings.php:379
-#: modules/callout/callout.php:389
-#: modules/content-slider/content-slider.php:331
-#: modules/icon-group/icon-group.php:51 modules/icon/icon.php:82
-#: modules/separator/separator.php:34
-msgid "Color"
-msgstr ""
-
-#: includes/column-settings.php:39 includes/row-settings.php:105
-#: modules/button/button.php:102 modules/callout/callout.php:402
-#: modules/callout/callout.php:506
-#: modules/content-slider/content-slider.php:357
-#: modules/content-slider/content-slider.php:624 modules/cta/cta.php:195
-#: modules/cta/cta.php:262 modules/icon-group/icon-group.php:64
-#: modules/icon/icon.php:95
-msgid "Background Color"
-msgstr ""
-
-#: includes/column-settings.php:51 includes/column-settings.php:108
-#: includes/row-settings.php:117 includes/row-settings.php:387
-#: modules/separator/separator.php:44
-msgid "Opacity"
-msgstr ""
-
-#: includes/column-settings.php:63 includes/row-settings.php:342
-msgid "Border"
-msgstr ""
-
-#: includes/column-settings.php:67 includes/row-settings.php:65
-#: includes/row-settings.php:346 modules/callout/callout.php:472
-#: modules/content-slider/content-slider.php:325
-#: modules/content-slider/content-slider.php:372
-#: modules/content-slider/content-slider.php:590
-#: modules/content-slider/content-slider.php:694
-#: modules/slideshow/slideshow.php:339
-msgid "Type"
-msgstr ""
-
-#: includes/column-settings.php:69 includes/row-settings.php:348
-msgid ""
-"The type of border to use. Double borders must have a width of at least 3px "
-"to render properly."
-msgstr ""
-
-#: includes/column-settings.php:71 includes/row-settings.php:350
-msgctxt "Border type."
-msgid "None"
-msgstr ""
-
-#: includes/column-settings.php:72 includes/row-settings.php:351
-#: modules/separator/separator.php:75
-msgctxt "Border type."
-msgid "Solid"
-msgstr ""
-
-#: includes/column-settings.php:73 includes/row-settings.php:352
-#: modules/separator/separator.php:76
-msgctxt "Border type."
-msgid "Dashed"
-msgstr ""
-
-#: includes/column-settings.php:74 includes/row-settings.php:353
-#: modules/separator/separator.php:77
-msgctxt "Border type."
-msgid "Dotted"
-msgstr ""
-
-#: includes/column-settings.php:75 includes/row-settings.php:354
-#: modules/separator/separator.php:78
-msgctxt "Border type."
-msgid "Double"
-msgstr ""
-
-#: includes/column-settings.php:119 includes/row-settings.php:398
-msgid "Top Width"
-msgstr ""
-
-#: includes/column-settings.php:131 includes/row-settings.php:410
-msgid "Bottom Width"
-msgstr ""
-
-#: includes/column-settings.php:143 includes/row-settings.php:422
-msgid "Left Width"
-msgstr ""
-
-#: includes/column-settings.php:155 includes/row-settings.php:434
-msgid "Right Width"
-msgstr ""
-
-#: includes/column-settings.php:170 includes/module-settings.php:6
-#: includes/row-settings.php:449 modules/content-slider/content-slider.php:267
-msgid "Advanced"
-msgstr ""
-
-#: includes/column-settings.php:173 includes/global-settings.php:41
-#: includes/global-settings.php:71 includes/module-settings.php:9
-#: includes/row-settings.php:452
-msgid "Margins"
-msgstr ""
-
-#: includes/column-settings.php:177 includes/column-settings.php:230
-#: includes/module-settings.php:13 includes/row-settings.php:456
-#: includes/row-settings.php:509 modules/slideshow/slideshow.php:475
-msgid "Top"
-msgstr ""
-
-#: includes/column-settings.php:189 includes/column-settings.php:242
-#: includes/module-settings.php:25 includes/row-settings.php:468
-#: includes/row-settings.php:521 modules/slideshow/slideshow.php:474
-msgid "Bottom"
-msgstr ""
-
-#: includes/column-settings.php:201 includes/column-settings.php:254
-#: includes/module-settings.php:37 includes/row-settings.php:480
-#: includes/row-settings.php:533 modules/button/button.php:177
-#: modules/callout/callout.php:250
-#: modules/content-slider/content-slider.php:470 modules/cta/cta.php:123
-#: modules/heading/heading.php:89 modules/heading/heading.php:161
-#: modules/icon-group/icon-group.php:111 modules/icon/icon.php:134
-#: modules/photo/photo.php:417 modules/social-buttons/social-buttons.php:101
-msgid "Left"
-msgstr ""
-
-#: includes/column-settings.php:213 includes/column-settings.php:266
-#: includes/module-settings.php:49 includes/row-settings.php:492
-#: includes/row-settings.php:545 modules/button/button.php:178
-#: modules/callout/callout.php:251
-#: modules/content-slider/content-slider.php:472 modules/cta/cta.php:125
-#: modules/heading/heading.php:91 modules/heading/heading.php:163
-#: modules/icon-group/icon-group.php:112 modules/icon/icon.php:135
-#: modules/photo/photo.php:419 modules/social-buttons/social-buttons.php:102
-msgid "Right"
-msgstr ""
-
-#: includes/column-settings.php:226 includes/global-settings.php:49
-#: includes/row-settings.php:505 modules/button/button.php:191
-#: modules/callout/callout.php:567
-#: modules/content-slider/content-slider.php:668 modules/cta/cta.php:314
-msgid "Padding"
-msgstr ""
-
-#: includes/column-settings.php:279 includes/global-settings.php:80
-#: includes/module-settings.php:62 includes/row-settings.php:558
-msgid "Responsive Layout"
-msgstr ""
-
-#: includes/column-settings.php:283 includes/module-settings.php:66
-#: includes/row-settings.php:562 modules/slideshow/slideshow.php:290
-msgid "Display"
-msgstr ""
-
-#: includes/column-settings.php:285 includes/module-settings.php:68
-#: includes/row-settings.php:564
-msgid "Always"
-msgstr ""
-
-#: includes/column-settings.php:286 includes/module-settings.php:69
-#: includes/row-settings.php:565
-msgid "Large Devices Only"
-msgstr ""
-
-#: includes/column-settings.php:287 includes/module-settings.php:70
-#: includes/row-settings.php:566
-msgid "Large &amp; Medium Devices Only"
-msgstr ""
-
-#: includes/column-settings.php:288 includes/module-settings.php:71
-#: includes/row-settings.php:567
-msgid "Medium Devices Only"
-msgstr ""
-
-#: includes/column-settings.php:289 includes/module-settings.php:72
-#: includes/row-settings.php:568
-msgid "Medium &amp; Small Devices Only"
-msgstr ""
-
-#: includes/column-settings.php:290 includes/module-settings.php:73
-#: includes/row-settings.php:569
-msgid "Small Devices Only"
-msgstr ""
-
-#: includes/column-settings.php:292
-msgid "Choose whether to show or hide this column at different device sizes."
-msgstr ""
-
-#: includes/column-settings.php:299
-msgid "Medium Device Width"
-msgstr ""
-
-#: includes/column-settings.php:300
-msgid "The width of this column on medium devices such as tablets."
-msgstr ""
-
-#: includes/column-settings.php:302 includes/column-settings.php:330
-#: modules/callout/callout.php:281
-#: modules/content-slider/content-slider.php:442 modules/cta/cta.php:165
-#: modules/heading/heading.php:117 modules/heading/heading.php:144
-#: modules/heading/heading.php:174
-msgid "Default"
-msgstr ""
-
-#: includes/column-settings.php:303 includes/column-settings.php:331
-#: modules/button/button.php:151 modules/callout/callout.php:282
-#: modules/content-slider/content-slider.php:443 modules/cta/cta.php:166
-#: modules/heading/heading.php:118 modules/heading/heading.php:145
-#: modules/heading/heading.php:175
-#: modules/social-buttons/social-buttons.php:74
-msgid "Custom"
-msgstr ""
-
-#: includes/column-settings.php:316
-msgid "Custom Medium Device Width"
-msgstr ""
-
-#: includes/column-settings.php:327
-msgid "Small Device Width"
-msgstr ""
-
-#: includes/column-settings.php:328
-msgid "The width of this column on small devices such as phones."
-msgstr ""
-
-#: includes/column-settings.php:344
-msgid "Custom Small Device Width"
-msgstr ""
-
-#: includes/column-settings.php:356 includes/module-settings.php:115
-#: includes/row-settings.php:579
-msgid "CSS Selectors"
-msgstr ""
-
-#: includes/column-settings.php:360 includes/loop-settings.php:27
-#: includes/module-settings.php:119 includes/row-settings.php:583
-msgid "ID"
-msgstr ""
-
-#: includes/column-settings.php:361
-msgid ""
-"A unique ID that will be applied to this column's HTML. Must start with a "
-"letter and only contain dashes, underscores, letters or numbers. No spaces."
-msgstr ""
-
-#: includes/column-settings.php:368
-msgid "CSS Class"
-msgstr ""
-
-#: includes/column-settings.php:369
-msgid ""
-"A class that will be applied to this column's HTML. Must start with a letter "
-"and only contain dashes, underscores, letters or numbers. Separate multiple "
-"classes with spaces."
-msgstr ""
-
-#: includes/field-form.php:28
-#, php-format
-msgctxt "%s stands for form field label."
-msgid "Edit %s"
-msgstr ""
-
-#: includes/field-icon.php:2 includes/icon-selector.php:2
-msgid "Select Icon"
-msgstr ""
-
-#: includes/field-icon.php:5 includes/field-photo.php:13
-msgid "Replace"
-msgstr ""
-
-#: includes/field-icon.php:7 includes/js-config.php:53
-msgid "Remove"
-msgstr ""
-
-#: includes/field-link.php:3
-msgid "Select"
-msgstr ""
-
-#: includes/field-link.php:5
-msgid "Enter a post title to search."
-msgstr ""
-
-#: includes/field-link.php:6 includes/field-suggest.php:7
-msgid "Start typing..."
-msgstr ""
-
-#: includes/field-link.php:7 includes/icon-selector.php:28
-#: includes/js-config.php:18 includes/settings.php:63
-#: includes/template-selector.php:102 includes/ui.php:11
-msgid "Cancel"
-msgstr ""
-
-#: includes/field-multiple-photos.php:8
-#, php-format
-msgid "1 Photo Selected"
-msgid_plural "%d Photos Selected"
-msgstr[0] ""
-msgstr[1] ""
-
-#: includes/field-multiple-photos.php:13
-msgid "Create Gallery"
-msgstr ""
-
-#: includes/field-multiple-photos.php:14
-msgid "Edit Gallery"
-msgstr ""
-
-#: includes/field-multiple-photos.php:15
-msgid "Add Photos"
-msgstr ""
-
-#: includes/field-photo.php:3 includes/js-config.php:58
-msgid "Select Photo"
-msgstr ""
-
-#: includes/field-video.php:3 includes/js-config.php:60
-msgid "Select Video"
-msgstr ""
-
-#: includes/field-video.php:17
-msgid "Replace Video"
-msgstr ""
-
-#: includes/global-settings.php:7 includes/template-settings.php:7
-#: includes/user-template-settings.php:7 modules/accordion/accordion.php:110
-#: modules/button/button.php:46 modules/callout/callout.php:207
-#: modules/contact-form/contact-form.php:57
-#: modules/content-slider/content-slider.php:184
-#: modules/content-slider/content-slider.php:308 modules/cta/cta.php:65
-#: modules/gallery/gallery.php:213 modules/heading/heading.php:26
-#: modules/html/html.php:26 modules/icon-group/icon-group.php:128
-#: modules/icon/icon.php:27 modules/map/map.php:26 modules/photo/photo.php:368
-#: modules/pricing-table/pricing-table.php:87
-#: modules/rich-text/rich-text.php:26 modules/separator/separator.php:27
-#: modules/sidebar/sidebar.php:27 modules/slideshow/slideshow.php:256
-#: modules/social-buttons/social-buttons.php:64 modules/tabs/tabs.php:77
-#: modules/testimonials/testimonials.php:30
-#: modules/testimonials/testimonials.php:200 modules/video/video.php:76
-#: modules/widget/widget.php:64 modules/woocommerce/woocommerce.php:50
-msgid "General"
-msgstr ""
-
-#: includes/global-settings.php:8
-msgid "Note: These settings apply to all posts and pages."
-msgstr ""
-
-#: includes/global-settings.php:11
-msgid "Default Page Heading"
-msgstr ""
-
-#: includes/global-settings.php:15
-msgctxt ""
-"General settings form field label. Intended meaning: \"Show page heading?\""
-msgid "Show"
-msgstr ""
+msgstr "Oui"
 
 #: includes/global-settings.php:26
 msgid ""
@@ -950,370 +800,403 @@ msgid ""
 "You will also be required to enter some basic CSS for this to work if you "
 "choose no."
 msgstr ""
+"Sélectionner Non ne cachera pas le titre par défaut pour le type d'article "
+"\"Page\". Vous devrez aussi saisir du code CSS de base afin de faire "
+"fonctionner ceci si vous sélectionnez Non."
 
 #: includes/global-settings.php:30
 msgid "CSS Selector"
-msgstr ""
+msgstr "Sélecteur CSS"
 
 #: includes/global-settings.php:32
 msgid "Enter a CSS selector for the default page heading to hide it."
-msgstr ""
+msgstr "Entrez un sélecteur CSS afin que la page par défaut le cache."
 
 #: includes/global-settings.php:37
 msgid "Rows"
-msgstr ""
+msgstr "Rangées"
 
 #: includes/global-settings.php:57
 msgid "Max Width"
-msgstr ""
+msgstr "Largeur maximale"
 
 #: includes/global-settings.php:62
 msgid ""
 "All rows will default to this width. You can override this and make a row "
 "full width in the settings for each row."
 msgstr ""
+"Toutes les rangées seront à cette largeur par défaut. Vous pouvez l'annuler "
+"et sélectionner une rangée pleine largeur dans les réglages pour chaque "
+"ligne individuellement."
 
 #: includes/global-settings.php:84
 msgctxt ""
 "General settings form field label. Intended meaning: \"Responsive layout "
 "enabled?\""
 msgid "Enabled"
-msgstr ""
+msgstr "Activé"
 
 #: includes/global-settings.php:98
 msgid "Medium Device Breakpoint"
-msgstr ""
+msgstr "Point de rupture sur appareil de largeur moyenne"
 
 #: includes/global-settings.php:103
 msgid ""
 "The browser width at which the layout will adjust for medium devices such as "
 "tablets."
 msgstr ""
+"La largeur du navigateur au cours de laquelle la mise en page s'ajustera "
+"pour les appareils de taille moyenne telles que les tablettes."
 
 #: includes/global-settings.php:107
 msgid "Small Device Breakpoint"
-msgstr ""
+msgstr "Point de rupture sur petits appareils"
 
 #: includes/global-settings.php:112
 msgid ""
 "The browser width at which the layout will adjust for small devices such as "
 "phones."
 msgstr ""
+"La largeur du navigateur au cours de laquelle la mise en page s'ajustera "
+"pour les petits appareils tels que les téléphones."
 
 #: includes/icon-selector.php:5
 msgctxt "Select option for showing all icon libraries."
 msgid "All Libraries"
-msgstr ""
+msgstr "Toutes les bibliothèques"
 
-#: includes/js-config.php:17
+#: includes/js-config.php:16
 msgid "What would you like to do?"
-msgstr ""
+msgstr "Que voulez-vous faire ?"
+
+#: includes/js-config.php:18
+msgid "Change Template"
+msgstr "Changer de modèle"
 
 #: includes/js-config.php:19
-msgid "Change Template"
-msgstr ""
-
-#: includes/js-config.php:20
 msgid ""
 "Warning! Changing the template will replace your existing layout. Do you "
 "really want to do this?"
 msgstr ""
+"Attention! La modification du modèle remplacera votre mise en page "
+"existante. Voulez-vous vraiment faire ceci?"
 
-#: includes/js-config.php:21
+#: includes/js-config.php:20
 msgid "Column"
-msgstr ""
+msgstr "Colonne"
 
-#: includes/js-config.php:23
+#: includes/js-config.php:22
 msgid ""
 "Please select either a background layout or content layout before submitting."
 msgstr ""
+"S'il vous plaît, sélectionner une mise en page du fond, ou du contenu, avant "
+"de le soumettre."
+
+#: includes/js-config.php:23
+msgid "Do you really want to delete this item?"
+msgstr "Souhaitez-vous réellement supprimer cette élément ?"
 
 #: includes/js-config.php:24
-msgid "Do you really want to delete this item?"
-msgstr ""
-
-#: includes/js-config.php:25
 msgid ""
 "Do you really want to delete this module? All content data will be "
 "permanently deleted."
 msgstr ""
+"Voulez-vous vraiment supprimer ce module ? Toutes les données relatives au "
+"contenu seront définitivement supprimés."
 
-#: includes/js-config.php:26
+#: includes/js-config.php:25
 msgid ""
 "Do you really want to delete this row? All content data will be permanently "
 "deleted."
 msgstr ""
+"Voulez-vous vraiment supprimer cette rangée ? Toutes les données relatives "
+"au contenu seront définitivement supprimés."
+
+#: includes/js-config.php:26
+msgid "Do you really want to delete this template?"
+msgstr "Souhaitez-vous réellement supprimer ce modèle ?"
+
+#: includes/js-config.php:27
+msgid "Discard Draft"
+msgstr "Abandonner le brouillon"
 
 #: includes/js-config.php:28
-msgid "Discard Draft"
-msgstr ""
-
-#: includes/js-config.php:29
 msgid ""
 "Do you really want to discard this draft? All of your changes that are not "
 "published will be lost."
 msgstr ""
+"Voulez-vous vraiment supprimer ce brouillon ? Toutes vos modifications qui "
+"ne sont pas publiées seront perdues."
+
+#: includes/js-config.php:29
+msgid "Save Draft"
+msgstr "Enregistrer le brouillon"
 
 #: includes/js-config.php:30
-msgid "Save Draft"
-msgstr ""
-
-#: includes/js-config.php:31
 msgctxt "Duplicate page/post action label."
 msgid "Duplicate"
-msgstr ""
+msgstr "Dupliquer"
+
+#: includes/js-config.php:31
+msgid "Duplicate This Page"
+msgstr "Dupliquer cette page"
 
 #: includes/js-config.php:32
-msgid "Duplicate This Page"
-msgstr ""
+msgid "Duplicate This Template"
+msgstr "Dupliquer ce modèle"
 
 #: includes/js-config.php:33
-msgid "Duplicate This Template"
-msgstr ""
+msgid "Edit Global Settings"
+msgstr "Modifier les réglages globaux"
 
 #: includes/js-config.php:34
-msgid "Edit Global Settings"
-msgstr ""
+msgid "Drop a row layout or module to get started!"
+msgstr "Déposez une rangée ou un module pour débuter!"
 
 #: includes/js-config.php:35
-msgid "Drop a row layout or module to get started!"
-msgstr ""
+msgid "Full Size"
+msgstr "Pleine largeur"
 
 #: includes/js-config.php:36
-msgid ""
-"Beaver Builder caught the following JavaScript error. If Beaver Builder is "
-"not functioning as expected the cause is most likely this error. Please help "
-"us by disabling all plugins and testing Beaver Builder while reactivating "
-"each to determine if the issue is related to a third party plugin."
-msgstr ""
+msgid "Insert"
+msgstr "Insérer"
 
 #: includes/js-config.php:37
-msgid "Full Size"
-msgstr ""
+msgid "Large"
+msgstr "Grande"
 
 #: includes/js-config.php:38
-msgid "\"{message}\" on line {line} of {file}."
-msgstr ""
+msgid "Manage Templates"
+msgstr "Gérer les modèles"
 
 #: includes/js-config.php:39
-msgid "Insert"
-msgstr ""
+msgid "Medium"
+msgstr "Moyenne"
 
 #: includes/js-config.php:40
-msgid "Large"
-msgstr ""
+msgid "Module"
+msgstr "Module"
 
 #: includes/js-config.php:41
-msgid "Manage Templates"
-msgstr ""
+msgid "Move"
+msgstr "Déplacer"
 
 #: includes/js-config.php:42
-msgid "Medium"
-msgstr ""
+msgid "New Column"
+msgstr "Nouvelle colonne"
 
 #: includes/js-config.php:43
-msgid "Module"
-msgstr ""
+msgid "New Row"
+msgstr "Nouvelle rangée"
 
 #: includes/js-config.php:44
-msgid "Move"
-msgstr ""
+msgid "No results found."
+msgstr "Aucun résultat trouvé"
 
 #: includes/js-config.php:45
-msgid "New Column"
-msgstr ""
+msgid "OK"
+msgstr "OK"
 
-#: includes/js-config.php:46
-msgid "New Row"
-msgstr ""
+#: includes/js-config.php:46 modules/photo/photo.php:454
+msgid "Photo Page"
+msgstr "Page photos"
 
 #: includes/js-config.php:47
-msgid "No results found."
-msgstr ""
+msgid "Photo Selected"
+msgstr "Photo sélectionnée"
 
 #: includes/js-config.php:48
-msgid "OK"
-msgstr ""
+msgid "Photos Selected"
+msgstr "Photos sélectionnées"
 
-#: includes/js-config.php:49 modules/photo/photo.php:454
-msgid "Photo Page"
-msgstr ""
-
-#: includes/js-config.php:50
-msgid "Photo Selected"
-msgstr ""
+#: includes/js-config.php:49
+msgid "Publish Changes"
+msgstr "Publier les modifications"
 
 #: includes/js-config.php:51
-msgid "Photos Selected"
-msgstr ""
-
-#: includes/js-config.php:52
-msgid "Publish Changes"
-msgstr ""
-
-#: includes/js-config.php:54
 msgid "Row"
-msgstr ""
+msgstr "Rangée"
 
-#: includes/js-config.php:55 includes/row-settings.php:6
+#: includes/js-config.php:52 includes/row-settings.php:6
 msgid "Row Settings"
-msgstr ""
+msgstr "Réglages de rangée"
 
-#: includes/js-config.php:56
+#: includes/js-config.php:53
 msgid "Save Core Template"
-msgstr ""
+msgstr "Enregistrer le modèle de base"
 
-#: includes/js-config.php:57 includes/ui.php:10
+#: includes/js-config.php:54 includes/ui.php:10
 #: includes/user-template-settings.php:4
 msgid "Save Template"
-msgstr ""
+msgstr "Enregistrer le modèle (template)"
+
+#: includes/js-config.php:56
+msgid "Select Photos"
+msgstr "Sélectionnez Photos"
 
 #: includes/js-config.php:59
-msgid "Select Photos"
-msgstr ""
+msgid "Append New Layout"
+msgstr "Ajouter une autre mise en page"
+
+#: includes/js-config.php:60
+msgid "Replace Existing Layout"
+msgstr "Remplacer le modèle existant"
+
+#: includes/js-config.php:61
+msgid "Template Saved!"
+msgstr "Modèle enregistré!"
 
 #: includes/js-config.php:62
-msgid "Append New Layout"
-msgstr ""
+msgid "Thumbnail"
+msgstr "Vignette"
 
 #: includes/js-config.php:63
-msgid "Replace Existing Layout"
-msgstr ""
-
-#: includes/js-config.php:64
-msgid "Template Saved!"
-msgstr ""
-
-#: includes/js-config.php:65
-msgid "Thumbnail"
-msgstr ""
-
-#: includes/js-config.php:66
 msgid ""
 "The settings you are currently editing will not be saved if you navigate "
 "away from this page."
 msgstr ""
+"Les réglages en cours de modification ne seront pas enregistrés si vous "
+"quittez cette page."
 
 #: includes/loop-settings.php:19
 msgid "Post Type"
-msgstr ""
+msgstr "Type d'article"
 
 #: includes/loop-settings.php:25
 msgid "Order By"
-msgstr ""
+msgstr "Trier par"
+
+#: includes/loop-settings.php:27
+msgid "ID"
+msgstr "ID"
 
 #: includes/loop-settings.php:28 modules/post-grid/post-grid.php:155
 #: modules/woocommerce/woocommerce.php:189
 msgid "Date"
-msgstr ""
+msgstr "﻿Date"
 
 #: includes/loop-settings.php:29
 msgid "Date Last Modified"
-msgstr ""
+msgstr "Date de la dernière modification"
 
 #: includes/loop-settings.php:30 modules/pricing-table/pricing-table.php:90
 #: modules/pricing-table/pricing-table.php:94
 msgid "Title"
-msgstr ""
+msgstr "Titre"
 
 #: includes/loop-settings.php:31 modules/post-grid/post-grid.php:146
 msgid "Author"
-msgstr ""
+msgstr "Auteur"
 
 #: includes/loop-settings.php:32
 msgid "Comment Count"
-msgstr ""
+msgstr "compte de commentaires"
 
 #: includes/loop-settings.php:33
 msgid "Menu Order"
-msgstr ""
+msgstr "Ordre du menu"
 
 #: includes/loop-settings.php:34
 msgid "Random"
-msgstr ""
+msgstr "Aléatoire"
 
 #: includes/loop-settings.php:41
 msgid "Order"
-msgstr ""
+msgstr "Ordre"
 
 #: includes/loop-settings.php:43
 msgid "Descending"
-msgstr ""
+msgstr "Décroissant"
 
 #: includes/loop-settings.php:44
 msgid "Ascending"
-msgstr ""
+msgstr "Croissant"
 
 #: includes/loop-settings.php:52
 msgid "Filter"
-msgstr ""
+msgstr "Filtre"
 
 #: includes/loop-settings.php:63
 #, php-format
 msgid "Enter a comma separated list of %s. Only these %s will be shown."
 msgstr ""
+"Entrez une liste séparée par des virgules des %s. Seulement ces %s seront "
+"montrés."
 
 #: includes/loop-settings.php:76
 #, php-format
 msgid ""
 "Enter a comma separated list of %s. Only posts with these %s will be shown."
 msgstr ""
+"Entrez une liste séparée par des virgules des %s. Seuls les postes avec ces "
+"%s seront montrés."
 
 #: includes/loop-settings.php:90
 msgid "Authors"
-msgstr ""
+msgstr "Auteurs"
 
 #: includes/loop-settings.php:91
 msgid ""
 "Enter a comma separated list of authors usernames. Only posts with these "
 "authors will be shown."
 msgstr ""
+"Entrez une liste séparée par des virgules des noms d'auteurs. Seuls les "
+"postes avec ces auteurs seront affichés."
 
-#: includes/module-settings.php:75
+#: includes/module-settings.php:14
+msgid ""
+"A custom CSS class that will be applied to this module. Spaces only, no dots."
+msgstr ""
+"Une classe CSS personnalisée sera appliquée à ce module. Espaces seulement, "
+"pas de points."
+
+#: includes/module-settings.php:30
 msgid "Choose whether to show or hide this module at different device sizes."
 msgstr ""
-
-#: includes/module-settings.php:83
-msgid "Animation"
-msgstr ""
-
-#: includes/module-settings.php:89
-msgctxt "Animation style."
-msgid "None"
-msgstr ""
-
-#: includes/module-settings.php:90
-msgctxt "Animation style."
-msgid "Fade In"
-msgstr ""
+"Choisissez si vous voulez afficher ou masquer ce module à des tailles "
+"différentes d'appareils."
 
 #: includes/module-settings.php:91
+msgid "Animation"
+msgstr "Animation"
+
+#: includes/module-settings.php:97
+msgctxt "Animation style."
+msgid "None"
+msgstr "Aucune"
+
+#: includes/module-settings.php:98
+msgctxt "Animation style."
+msgid "Fade In"
+msgstr "Ouverture en fondu"
+
+#: includes/module-settings.php:99
 msgctxt "Animation style."
 msgid "Slide Left"
-msgstr ""
+msgstr "Glissement vers la gauche"
 
-#: includes/module-settings.php:92
+#: includes/module-settings.php:100
 msgctxt "Animation style."
 msgid "Slide Right"
-msgstr ""
+msgstr "Glissement vers la droite"
 
-#: includes/module-settings.php:93
+#: includes/module-settings.php:101
 msgctxt "Animation style."
 msgid "Slide Up"
-msgstr ""
-
-#: includes/module-settings.php:94
-msgctxt "Animation style."
-msgid "Slide Down"
-msgstr ""
+msgstr "Glissement vers le haut"
 
 #: includes/module-settings.php:102
+msgctxt "Animation style."
+msgid "Slide Down"
+msgstr "Glissement vers le bas"
+
+#: includes/module-settings.php:110
 #: modules/content-slider/content-slider.php:223
 #: modules/testimonials/testimonials.php:91
 msgid "Delay"
-msgstr ""
+msgstr "Différer"
 
-#: includes/module-settings.php:106 includes/row-settings.php:266
+#: includes/module-settings.php:114 includes/row-settings.php:266
 #: includes/row-settings.php:297 modules/content-slider/content-slider.php:227
 #: modules/content-slider/content-slider.php:244
 #: modules/slideshow/slideshow.php:385 modules/slideshow/slideshow.php:410
@@ -1322,97 +1205,86 @@ msgstr ""
 #: modules/testimonials/testimonials.php:112
 msgctxt "Value unit for form field of time in seconds. Such as: \"5 seconds\""
 msgid "seconds"
-msgstr ""
+msgstr "secondes"
 
-#: includes/module-settings.php:107
+#: includes/module-settings.php:115
 msgid "The amount of time in seconds before this animation starts."
-msgstr ""
-
-#: includes/module-settings.php:120
-msgid ""
-"A unique ID that will be applied to this module's HTML. Must start with a "
-"letter and only contain dashes, underscores, letters or numbers. No spaces."
-msgstr ""
-
-#: includes/module-settings.php:127 includes/row-settings.php:591
-msgid "Class"
-msgstr ""
-
-#: includes/module-settings.php:128
-msgid ""
-"A class that will be applied to this module's HTML. Must start with a letter "
-"and only contain dashes, underscores, letters or numbers. Separate multiple "
-"classes with spaces."
-msgstr ""
+msgstr "La durée en secondes avant le lancement de cette animation."
 
 #: includes/row-settings.php:16 modules/button/button.php:146
 #: modules/content-slider/content-slider.php:477
 msgid "Width"
-msgstr ""
+msgstr "Largeur"
 
 #: includes/row-settings.php:19 includes/row-settings.php:37
 #: includes/row-settings.php:179
 msgid "Fixed"
-msgstr ""
+msgstr "Fixe"
 
 #: includes/row-settings.php:20 includes/row-settings.php:38
 #: modules/button/button.php:150 modules/callout/callout.php:554
 msgid "Full Width"
-msgstr ""
+msgstr "Pleine largeur"
 
 #: includes/row-settings.php:27
 msgid ""
 "Full width rows span the width of the page from edge to edge. Fixed rows are "
 "no wider than the Row Max Width set in the Global Settings."
 msgstr ""
+"Rangées pleine largeur couvrent la l'étendue de la page de bord à bord. Les "
+"rangées fixes ne sont pas plus larges que la valeur \"Largeur maximale\" "
+"définie dans les paramètres globaux."
 
 #: includes/row-settings.php:34
 msgid "Content Width"
-msgstr ""
+msgstr "Largeur contenu"
 
 #: includes/row-settings.php:40
 msgid ""
 "Full width content spans the width of the page from edge to edge. Fixed "
 "content is no wider than the Row Max Width set in the Global Settings."
 msgstr ""
+"Les rangées pleine largeur couvrent l'étendue de la page, de bord à bord. "
+"Les rangées fixes ne sont pas plus larges que la valeur \"Largeur maximale\" "
+"définie dans les réglages globaux."
 
 #: includes/row-settings.php:61
 msgid "Background"
-msgstr ""
+msgstr "Arrière-plan"
 
 #: includes/row-settings.php:68 modules/content-slider/content-slider.php:332
 msgctxt "Background type."
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: includes/row-settings.php:69
 msgctxt "Background type."
 msgid "Color"
-msgstr ""
+msgstr "Couleur"
 
 #: includes/row-settings.php:70
 msgctxt "Background type."
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 #: includes/row-settings.php:71
 msgctxt "Background type."
 msgid "Video"
-msgstr ""
+msgstr "Vidéo"
 
 #: includes/row-settings.php:73
 msgctxt "Background type."
 msgid "Slideshow"
-msgstr ""
+msgstr "Diaporama"
 
 #: includes/row-settings.php:77
 msgctxt "Background type."
 msgid "Parallax"
-msgstr ""
+msgstr "Parallaxe"
 
 #: includes/row-settings.php:129 modules/content-slider/content-slider.php:353
 msgid "Background Photo"
-msgstr ""
+msgstr "Arrière-plan Photo"
 
 #: includes/row-settings.php:133 includes/row-settings.php:321
 #: modules/callout/callout.php:314 modules/callout/callout.php:330
@@ -1422,31 +1294,31 @@ msgstr ""
 #: modules/content-slider/content-slider.php:710 modules/photo/photo.php:25
 #: modules/photo/photo.php:392
 msgid "Photo"
-msgstr ""
+msgstr "Photo"
 
 #: includes/row-settings.php:140
 msgid "Repeat"
-msgstr ""
+msgstr "Répéter"
 
 #: includes/row-settings.php:143
 msgctxt "Background repeat."
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: includes/row-settings.php:144
 msgctxt "Background repeat."
 msgid "Tile"
-msgstr ""
+msgstr "Mosaïque"
 
 #: includes/row-settings.php:145
 msgctxt "Background repeat."
 msgid "Horizontal"
-msgstr ""
+msgstr "Horizontal"
 
 #: includes/row-settings.php:146
 msgctxt "Background repeat."
 msgid "Vertical"
-msgstr ""
+msgstr "Vertical"
 
 #: includes/row-settings.php:148
 msgid ""
@@ -1455,34 +1327,46 @@ msgid ""
 "as many times as needed to fill the row horizontally and vertically. You can "
 "also specify the image to only repeat horizontally or vertically."
 msgstr ""
+"Répétition s'applique à comment l'image doit s'afficher à l'arrière-plan de "
+"la rangée. La sélection de Aucun affichera l'image téléchargée telle quelle. "
+"Mosaïque répétera l'image autant de fois que nécessaire pour remplir la "
+"rangée horizontalement et verticalement. Vous pouvez également spécifier que "
+"l'image ne se répète que horizontalement ou verticalement."
+
+#: includes/row-settings.php:155 modules/callout/callout.php:351
+#: modules/callout/callout.php:371
+#: modules/content-slider/content-slider.php:466
+#: modules/post-grid/post-grid.php:127
+msgid "Position"
+msgstr "Position"
 
 #: includes/row-settings.php:158
 msgid "Left Top"
-msgstr ""
+msgstr "Gauche haut"
 
 #: includes/row-settings.php:159
 msgid "Left Center"
-msgstr ""
+msgstr "Gauche centre"
 
 #: includes/row-settings.php:160
 msgid "Left Bottom"
-msgstr ""
+msgstr "Gauche bas"
 
 #: includes/row-settings.php:161
 msgid "Right Top"
-msgstr ""
+msgstr "Droite haut"
 
 #: includes/row-settings.php:162
 msgid "Right Center"
-msgstr ""
+msgstr "Droite centre"
 
 #: includes/row-settings.php:163
 msgid "Right Bottom"
-msgstr ""
+msgstr "Droite bas"
 
 #: includes/row-settings.php:164
 msgid "Center Top"
-msgstr ""
+msgstr "Centre haut"
 
 #: includes/row-settings.php:165 modules/button/button.php:176
 #: modules/callout/callout.php:249
@@ -1491,23 +1375,25 @@ msgstr ""
 #: modules/icon-group/icon-group.php:110 modules/icon/icon.php:133
 #: modules/photo/photo.php:418 modules/social-buttons/social-buttons.php:100
 msgid "Center"
-msgstr ""
+msgstr "Centre"
 
 #: includes/row-settings.php:166
 msgid "Center Bottom"
-msgstr ""
+msgstr "Centre bas"
 
 #: includes/row-settings.php:168
 msgid "Position will tell the image where it should sit in the row background."
 msgstr ""
+"La position indique à l'image où elle doit se situer dans l'arrière-plan de "
+"la rangée."
 
 #: includes/row-settings.php:175
 msgid "Attachment"
-msgstr ""
+msgstr "Fixation"
 
 #: includes/row-settings.php:178 modules/post-grid/post-grid.php:75
 msgid "Scroll"
-msgstr ""
+msgstr "Déroulement"
 
 #: includes/row-settings.php:181
 msgid ""
@@ -1516,67 +1402,79 @@ msgid ""
 "the default setting. Fixed will allow the image to scroll within the row "
 "background if fill is selected in the scale setting."
 msgstr ""
+"Fixation spécifiera comment l'image réagit quand on déroule la page. Quand "
+"Dérouler est sélectionnée, l'image déroule lorsque la page déroule. C'est le "
+"réglage par défaut. Fixe permettra à l\"image de dérouler à l'intérieur de "
+"l'arrière-plan de la rangée si Remplissage est sélectionné dans le réglage "
+"de la mise à l'échelle. "
 
 #: includes/row-settings.php:188
 msgid "Scale"
-msgstr ""
+msgstr "Mettre à l'échelle"
 
 #: includes/row-settings.php:191
 msgctxt "Background scale."
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
+# Not sure…
 #: includes/row-settings.php:192
 msgid "Fit"
-msgstr ""
+msgstr "Adaptation"
 
 #: includes/row-settings.php:193
 msgid "Fill"
-msgstr ""
+msgstr "Remplissage"
 
 #: includes/row-settings.php:195
+#, fuzzy
 msgid ""
 "Scale applies to how the image should display in the row background. You can "
 "select either fill or fit to the row background."
 msgstr ""
+"\"Mettre à l'échelle\" détermine comment l'image se produira dans l'arrière-"
+"plan de la rangée. Vous pouvez aussi sélectionner remplissage ou ajustage à "
+"l'arrière plan."
 
 #: includes/row-settings.php:203
 msgid "Background Video"
-msgstr ""
+msgstr "Arrière-plan vidéo"
 
 #: includes/row-settings.php:207 modules/content-slider/content-slider.php:330
 #: modules/video/video.php:19 modules/video/video.php:100
 msgid "Video"
-msgstr ""
+msgstr "Vidéo"
 
 #: includes/row-settings.php:208
 msgid ""
 "An HTML5 video to use as the background of this row. Supported types are "
 "MP4, WebM and Ogg."
 msgstr ""
+"Une vidéo HTML5 pour servir d'arrière-plan à cette rangée. Les formats "
+"supportés sont MP4, WebM et Ogg."
 
 #: includes/row-settings.php:215
 msgid "Fallback Photo"
-msgstr ""
+msgstr "Photo de secours"
 
 #: includes/row-settings.php:216
 msgid "A photo that will be displayed if the video fails to load."
-msgstr ""
+msgstr "Une photo qui sera affichée si la vidéo ne se charge pas."
 
 #: includes/row-settings.php:224
 msgid "Background Slideshow"
-msgstr ""
+msgstr "Diaporama d'images d'arrière-plan"
 
 #: includes/row-settings.php:228 modules/gallery/gallery.php:234
 #: modules/slideshow/slideshow.php:263
 msgid "Source"
-msgstr ""
+msgstr "Source"
 
 #: includes/row-settings.php:231 modules/gallery/gallery.php:237
 #: modules/photo/photo.php:378 modules/slideshow/slideshow.php:266
 #: modules/video/video.php:86
 msgid "Media Library"
-msgstr ""
+msgstr "Médiathèque"
 
 #: includes/row-settings.php:234 modules/gallery/gallery.php:240
 #: modules/slideshow/slideshow.php:269
@@ -1585,295 +1483,299 @@ msgid ""
 "site by inserting the RSS feed URL from SmugMug. The RSS feed URL can be "
 "accessed by using the get a link function in your SmugMug gallery."
 msgstr ""
+"Obtenez vos images à partir de la médiathèque de WordPress, ou d'une galerie "
+"sur SmugMug en insérant le lien de son flux RSS. Le lien du flux RSS peut "
+"être obtenu en utilisant la fonction \"Get A Link\" dans votre galerie "
+"SmugMug."
 
 #: includes/row-settings.php:249 modules/gallery/gallery.php:252
 #: modules/slideshow/slideshow.php:281
 msgid "Photos"
-msgstr ""
+msgstr "Photos"
 
 #: includes/row-settings.php:256 modules/gallery/gallery.php:256
 #: modules/slideshow/slideshow.php:285
 msgid "Feed URL"
-msgstr ""
+msgstr "URL du flux"
 
 #: includes/row-settings.php:263 includes/row-settings.php:328
 #: modules/slideshow/slideshow.php:382
 msgid "Speed"
-msgstr ""
+msgstr "Vitesse"
 
 #: includes/row-settings.php:273 modules/content-slider/content-slider.php:231
 #: modules/slideshow/slideshow.php:389
 #: modules/testimonials/testimonials.php:99
 msgid "Transition"
-msgstr ""
+msgstr "Transition"
 
 #: includes/row-settings.php:276
 msgctxt "Slideshow transition type."
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: includes/row-settings.php:277 modules/content-slider/content-slider.php:235
 #: modules/slideshow/slideshow.php:393
 #: modules/testimonials/testimonials.php:103
 msgid "Fade"
-msgstr ""
+msgstr "Fondu"
 
 #: includes/row-settings.php:278 modules/slideshow/slideshow.php:394
 msgid "Ken Burns"
-msgstr ""
+msgstr "Ken Burns"
 
 #: includes/row-settings.php:279 modules/slideshow/slideshow.php:395
 msgid "Slide Horizontal"
-msgstr ""
+msgstr "Diapo Horizontale"
 
 #: includes/row-settings.php:280 modules/slideshow/slideshow.php:396
 msgid "Slide Vertical"
-msgstr ""
+msgstr "Diapo Verticale"
 
 #: includes/row-settings.php:281 modules/slideshow/slideshow.php:397
 msgid "Blinds"
-msgstr ""
+msgstr "Stores"
 
 #: includes/row-settings.php:282 modules/slideshow/slideshow.php:398
 msgid "Bars"
-msgstr ""
+msgstr "Barres"
 
 #: includes/row-settings.php:283 modules/slideshow/slideshow.php:399
 msgid "Random Bars"
-msgstr ""
+msgstr "Barres aléatoires"
 
 #: includes/row-settings.php:284 modules/slideshow/slideshow.php:400
 msgid "Boxes"
-msgstr ""
+msgstr "Boîtes"
 
 #: includes/row-settings.php:285 modules/slideshow/slideshow.php:401
 msgid "Random Boxes"
-msgstr ""
+msgstr "Boîtes aléatoires"
 
 #: includes/row-settings.php:286 modules/slideshow/slideshow.php:402
 msgid "Boxes Grow"
-msgstr ""
+msgstr "Boîtes qui croissent"
 
 #: includes/row-settings.php:294 modules/content-slider/content-slider.php:240
 #: modules/slideshow/slideshow.php:407
 #: modules/testimonials/testimonials.php:108
 msgid "Transition Speed"
-msgstr ""
+msgstr "Vitesse de transition"
 
 #: includes/row-settings.php:304 modules/slideshow/slideshow.php:414
 msgid "Randomize Photos"
-msgstr ""
+msgstr "Photos en mode aléatoire"
 
 #: includes/row-settings.php:317
 msgid "Background Parallax"
-msgstr ""
+msgstr "Arrière-plan en parallaxe"
 
 #: includes/row-settings.php:331
 msgid "Fast"
-msgstr ""
+msgstr "Rapide"
 
 #: includes/row-settings.php:332
 msgctxt "Speed."
 msgid "Medium"
-msgstr ""
+msgstr "Moyenne"
 
 #: includes/row-settings.php:333
 msgid "Slow"
-msgstr ""
+msgstr "Lente"
 
-#: includes/row-settings.php:571
+#: includes/row-settings.php:457
+msgid "Add a custom CSS selector here to apply additional styling to this row."
+msgstr ""
+"Ajouter un sélecteur CSS personnalisé pour appliquer un style supplémentaire "
+"pour cette rangée."
+
+#: includes/row-settings.php:473
 msgid "Choose whether to show or hide this row at different device sizes."
 msgstr ""
-
-#: includes/row-settings.php:584
-msgid ""
-"A unique ID that will be applied to this row's HTML. Must start with a "
-"letter and only contain dashes, underscores, letters or numbers. No spaces."
-msgstr ""
-
-#: includes/row-settings.php:592
-msgid ""
-"A class that will be applied to this row's HTML. Must start with a letter "
-"and only contain dashes, underscores, letters or numbers. Separate multiple "
-"classes with spaces."
-msgstr ""
+"Choisissez si vous voulez afficher ou masquer cette colonne à des tailles "
+"différentes d'appareils."
 
 #: includes/settings.php:62
 msgid "Save"
-msgstr ""
+msgstr "Enregistrer"
 
 #: includes/template-selector.php:3
 msgid "Layout Templates"
-msgstr ""
+msgstr "Modèles de mise en page"
 
 #: includes/template-selector.php:8
 msgid "Home Pages"
-msgstr ""
+msgstr "Pages d'accueil"
 
 #: includes/template-selector.php:9
 msgid "Content Pages"
-msgstr ""
+msgstr "Pages de contenu"
 
 #: includes/template-selector.php:13
 msgid "Your Templates"
-msgstr ""
+msgstr "Vos modèles"
 
 #: includes/template-selector.php:47 includes/template-selector.php:77
 msgctxt "Template name."
 msgid "Blank"
-msgstr ""
+msgstr "Vierge"
 
 #: includes/template-selector.php:72
 msgid ""
 "You haven't saved any templates yet! To do so, create a layout and save it "
 "as a template under <strong>Tools &rarr; Save Template</strong>."
 msgstr ""
+"Vous n'avez pas encore enregistré de modèles! Pour ce faire, créer une mise "
+"en page et l'enregistrer comme un modèle sous <strong>Outils → Enregistrer "
+"le modèle.</strong>"
 
-#: includes/template-settings.php:14 includes/user-template-settings.php:15
-msgctxt "Template name."
-msgid "Name"
-msgstr ""
-
-#: includes/template-settings.php:18
-msgid "Image Filename"
-msgstr ""
-
-#: includes/template-settings.php:19
-msgid ""
-"The filename of the image such as \"thumb.jpg\" that resides in the \"img/"
-"templates/\" directory."
-msgstr ""
+#: includes/template-selector.php:84
+msgid "Delete"
+msgstr "Supprimer"
 
 #: includes/ui.php:7
 #, php-format
 msgid "Template: %s"
-msgstr ""
+msgstr "Modèle : %s"
 
 #: includes/ui.php:23
 msgid "Page Builder Demo"
-msgstr ""
+msgstr "Démo du \"Beaver Builder\""
 
 #: includes/ui.php:37
 msgid "Buy Now!"
-msgstr ""
+msgstr "Acheter maintenant!"
 
 #: includes/ui.php:39
 msgid "Upgrade!"
-msgstr ""
+msgstr "Mettre à niveau!"
 
 #: includes/ui.php:41
 msgid "Done"
-msgstr ""
+msgstr "Terminé"
 
 #: includes/ui.php:42
 msgid "Tools"
-msgstr ""
+msgstr "Outils"
 
 #: includes/ui.php:46
 msgid "Add Content"
-msgstr ""
+msgstr "Ajouter du contenu"
 
 #: includes/ui.php:64
 msgid "Row Layouts"
-msgstr ""
+msgstr "Mises en pages des rangées"
 
 #: includes/ui.php:68
 msgid "1 Column"
-msgstr ""
+msgstr "1 colonne"
 
 #: includes/ui.php:69
 msgid "2 Columns"
-msgstr ""
+msgstr "2 colonnes"
 
 #: includes/ui.php:70
 msgid "3 Columns"
-msgstr ""
+msgstr "3 colonnes"
 
 #: includes/ui.php:71
 msgid "4 Columns"
-msgstr ""
+msgstr "4 colonnes"
 
 #: includes/ui.php:72
 msgid "5 Columns"
-msgstr ""
+msgstr "5 colonnes"
 
 #: includes/ui.php:73
 msgid "6 Columns"
-msgstr ""
+msgstr "6 colonnes"
 
 #: includes/ui.php:74
 msgid "Left Sidebar"
-msgstr ""
+msgstr "Barre latérale de gauche"
 
 #: includes/ui.php:75
 msgid "Right Sidebar"
-msgstr ""
+msgstr "Barre latérale de droite"
 
 #: includes/ui.php:76
 msgid "Left &amp; Right Sidebar"
-msgstr ""
+msgstr "Barre latérale de gauche et droite"
 
 #: includes/ui.php:85 modules/widget/widget.php:16
 msgid "WordPress Widgets"
-msgstr ""
+msgstr "Widgets WordPress"
 
 #: includes/updater/classes/class-fl-updater.php:107
 msgid "<strong>UPDATE UNAVAILABLE!</strong>"
-msgstr ""
+msgstr "<strong>MISE À JOUR NON DISPONIBLE !</strong>"
 
 #: includes/updater/classes/class-fl-updater.php:109
 msgid "Please subscribe to enable automatic updates for this plugin."
 msgstr ""
+"Veuillez vous inscrire pour activer les mises à jour automatiques pour cette "
+"extension."
 
 #: includes/updater/classes/class-fl-updater.php:111
 #: includes/updater/includes/form.php:6
 msgid "Subscribe Now"
-msgstr ""
+msgstr "Abonnez-vous maintenant"
 
 #: includes/updater/includes/form.php:5
 msgid ""
 "UPDATES UNAVAILABLE! Please subscribe or enter your licence key below to "
 "enable automatic updates."
 msgstr ""
+"MISES À JOUR NON DISPONIBLES ! S'il vous plaît vous inscrire ou entrer votre "
+"clé de licence ci-dessous pour activer les mises à jour automatiques."
 
 #: includes/updater/includes/form.php:11
 msgid "Updates &amp; Support Subscription"
-msgstr ""
+msgstr "Mises à jour et abonnement de soutien"
 
 #: includes/updater/includes/form.php:14
 msgid "Active!"
-msgstr ""
+msgstr "Actif!"
 
 #: includes/updater/includes/form.php:16
 msgid "Not Active!"
-msgstr ""
+msgstr "Inactif!"
 
 #: includes/updater/includes/form.php:22
 msgid "Email address saved!"
-msgstr ""
+msgstr "Adresse de courriel enregistrée !"
 
 #: includes/updater/includes/form.php:27
 #, php-format
 msgid "Enter your <a%s>licence key</a> to enable remote updates and support."
 msgstr ""
+"Entrez votre <a%s>clé de licence</a> pour activer les mises à jour "
+"automatique et le soutien."
 
 #: includes/updater/includes/form.php:39
 msgid "Save Subscription Settings"
-msgstr ""
+msgstr "Enregistrer les paramètres d'abonnement"
 
 #: includes/user-template-settings.php:8
 msgid ""
 "Save the current layout as a template that can be reused under "
 "<strong>Templates &rarr; Your Templates</strong>."
 msgstr ""
+"Enregistrer la mise en page actuelle comme modèle qui peut être réutilisé "
+"sous <strong>Modèles → vos modèles</strong>."
+
+#: includes/user-template-settings.php:15
+msgctxt "Template name."
+msgid "Name"
+msgstr "Nom"
 
 #: modules/accordion/accordion.php:14
 msgid "Accordion"
-msgstr ""
+msgstr "Accordéon"
 
 #: modules/accordion/accordion.php:15
 msgid "Display a collapsible accordion of items."
-msgstr ""
+msgstr "Afficher un accordéon pliant d'éléments."
 
 #: modules/accordion/accordion.php:16 modules/button/button.php:16
 #: modules/callout/callout.php:16 modules/contact-form/contact-form.php:16
@@ -1887,80 +1789,82 @@ msgstr ""
 #: modules/testimonials/testimonials.php:16
 #: modules/woocommerce/woocommerce.php:18
 msgid "Advanced Modules"
-msgstr ""
+msgstr "Modules avancées"
 
 #: modules/accordion/accordion.php:28 modules/tabs/tabs.php:28
 msgid "Items"
-msgstr ""
+msgstr "Éléments"
 
 #: modules/accordion/accordion.php:35 modules/tabs/tabs.php:35
 msgid "Item"
-msgstr ""
+msgstr "Élément"
 
 #: modules/accordion/accordion.php:52 modules/tabs/tabs.php:61
 msgid "Border Color"
-msgstr ""
+msgstr "Couleur des bordures"
 
 #: modules/accordion/accordion.php:62
 msgid "Label Size"
-msgstr ""
+msgstr "Taille de l'étiquette"
 
 #: modules/accordion/accordion.php:65
 msgctxt "Label size."
 msgid "Small"
-msgstr ""
+msgstr "Petite"
 
 #: modules/accordion/accordion.php:66
 msgctxt "Label size."
 msgid "Medium"
-msgstr ""
+msgstr "Moyen"
 
 #: modules/accordion/accordion.php:67
 msgctxt "Label size."
 msgid "Large"
-msgstr ""
+msgstr "Grand"
 
 #: modules/accordion/accordion.php:75
 msgid "Item Spacing"
-msgstr ""
+msgstr "Espacement de l'élément"
 
 #: modules/accordion/accordion.php:86
 msgid "Collapse Inactive"
-msgstr ""
+msgstr "Écrasement des inactifs"
 
 #: modules/accordion/accordion.php:92
 msgid ""
 "Choosing yes will keep only one item open at a time. Choosing no will allow "
 "multiple items to be open at the same time."
 msgstr ""
+"Choisir Oui ne gardera qu'un seul élément ouvert à la fois. Choisir non "
+"permettra à plusieurs éléments d'être ouverts en même temps."
 
 #: modules/accordion/accordion.php:107 modules/tabs/tabs.php:74
 msgid "Add Item"
-msgstr ""
+msgstr "Ajouter un élément"
 
 #: modules/accordion/accordion.php:117 modules/tabs/tabs.php:84
 msgid "Label"
-msgstr ""
+msgstr "Étiquette"
 
 #: modules/accordion/accordion.php:122 modules/post-grid/post-grid.php:195
 #: modules/post-grid/post-grid.php:199 modules/post-grid/post-grid.php:235
 #: modules/tabs/tabs.php:89
 msgid "Content"
-msgstr ""
+msgstr "Contenu"
 
 #: modules/button/button.php:14 modules/callout/callout.php:477
 #: modules/content-slider/content-slider.php:595 modules/cta/cta.php:212
 #: modules/pricing-table/pricing-table.php:129
 msgid "Button"
-msgstr ""
+msgstr "Bouton"
 
 #: modules/button/button.php:15
 msgid "A simple call to action button."
-msgstr ""
+msgstr "Un simple bouton d'appel à l'action."
 
 #: modules/button/button.php:54 modules/cta/cta.php:220
 msgid "Click Here"
-msgstr ""
+msgstr "Cliquez ici"
 
 #: modules/button/button.php:62 modules/callout/callout.php:315
 #: modules/callout/callout.php:363 modules/callout/callout.php:367
@@ -1968,7 +1872,7 @@ msgstr ""
 #: modules/icon-group/icon-group.php:135 modules/icon/icon.php:14
 #: modules/icon/icon.php:34
 msgid "Icon"
-msgstr ""
+msgstr "Icône"
 
 #: modules/button/button.php:68 modules/button/button.php:72
 #: modules/callout/callout.php:443 modules/callout/callout.php:447
@@ -1979,45 +1883,45 @@ msgstr ""
 #: modules/icon-group/icon-group.php:139 modules/icon/icon.php:43
 #: modules/slideshow/slideshow.php:343
 msgid "Link"
-msgstr ""
+msgstr "Lien"
 
 #: modules/button/button.php:73
 msgid "http://www.example.com"
-msgstr ""
+msgstr "http://www.exemple.com/"
 
 #: modules/button/button.php:80 modules/callout/callout.php:455
 #: modules/content-slider/content-slider.php:576 modules/cta/cta.php:245
 #: modules/heading/heading.php:54 modules/icon/icon.php:50
 #: modules/photo/photo.php:478
 msgid "Link Target"
-msgstr ""
+msgstr "Cible du lien"
 
 #: modules/button/button.php:83 modules/callout/callout.php:458
 #: modules/content-slider/content-slider.php:579 modules/cta/cta.php:248
 #: modules/heading/heading.php:57 modules/icon/icon.php:53
 #: modules/photo/photo.php:481
 msgid "Same Window"
-msgstr ""
+msgstr "Même fenêtre"
 
 #: modules/button/button.php:84 modules/callout/callout.php:459
 #: modules/content-slider/content-slider.php:580 modules/cta/cta.php:249
 #: modules/heading/heading.php:58 modules/icon/icon.php:54
 #: modules/photo/photo.php:482
 msgid "New Window"
-msgstr ""
+msgstr "Nouvelle fenêtre"
 
 #: modules/button/button.php:98 modules/cta/cta.php:185
 #: modules/heading/heading.php:72 modules/icon-group/icon-group.php:47
 #: modules/icon/icon.php:78
 msgid "Colors"
-msgstr ""
+msgstr "Couleurs"
 
 #: modules/button/button.php:108 modules/callout/callout.php:407
 #: modules/callout/callout.php:512
 #: modules/content-slider/content-slider.php:630 modules/cta/cta.php:268
 #: modules/icon-group/icon-group.php:69 modules/icon/icon.php:100
 msgid "Background Hover Color"
-msgstr ""
+msgstr "Couleur d'arrière-plan lors du survol"
 
 #: modules/button/button.php:117 modules/callout/callout.php:521
 #: modules/content-slider/content-slider.php:522
@@ -2025,60 +1929,60 @@ msgstr ""
 #: modules/content-slider/content-slider.php:719 modules/cta/cta.php:189
 #: modules/cta/cta.php:277 modules/heading/heading.php:77
 msgid "Text Color"
-msgstr ""
+msgstr "Couleur du texte"
 
 #: modules/button/button.php:123 modules/callout/callout.php:527
 #: modules/content-slider/content-slider.php:641 modules/cta/cta.php:283
 msgid "Text Hover Color"
-msgstr ""
+msgstr "Couleur du texte lors du survol"
 
 #: modules/button/button.php:132 modules/callout/callout.php:415
 #: modules/callout/callout.php:536
 #: modules/content-slider/content-slider.php:646 modules/cta/cta.php:292
 #: modules/icon-group/icon-group.php:77 modules/icon/icon.php:108
 msgid "Gradient"
-msgstr ""
+msgstr "Dégradé de couleurs"
 
 #: modules/button/button.php:142 modules/callout/callout.php:242
 #: modules/cta/cta.php:102 modules/heading/heading.php:82
 #: modules/icon-group/icon-group.php:87 modules/icon/icon.php:118
 msgid "Structure"
-msgstr ""
+msgstr "Structure"
 
 #: modules/button/button.php:149 modules/callout/callout.php:553
 msgctxt "Width."
 msgid "Auto"
-msgstr ""
+msgstr "Automatique"
 
 #: modules/button/button.php:165
 msgid "Custom Width"
-msgstr ""
+msgstr "Largeur personnalisée"
 
 #: modules/button/button.php:173 modules/cta/cta.php:120
 #: modules/heading/heading.php:86 modules/heading/heading.php:141
 #: modules/icon-group/icon-group.php:107 modules/icon/icon.php:130
 #: modules/photo/photo.php:414 modules/social-buttons/social-buttons.php:97
 msgid "Alignment"
-msgstr ""
+msgstr "Alignement"
 
 #: modules/button/button.php:183 modules/callout/callout.php:559
 #: modules/content-slider/content-slider.php:660 modules/cta/cta.php:306
 #: modules/heading/heading.php:114 modules/heading/heading.php:171
 msgid "Font Size"
-msgstr ""
+msgstr "Taille de la police"
 
 #: modules/button/button.php:199 modules/callout/callout.php:575
 #: modules/cta/cta.php:322
 msgid "Round Corners"
-msgstr ""
+msgstr "Coins arrondis"
 
 #: modules/callout/callout.php:14
 msgid "Callout"
-msgstr ""
+msgstr "Légende"
 
 #: modules/callout/callout.php:15
 msgid "A heading and snippet of text with an optional link, icon and image."
-msgstr ""
+msgstr "Un titre et extrait de texte avec l'option de  lien, icône et image."
 
 #: modules/callout/callout.php:214
 #: modules/content-slider/content-slider.php:407
@@ -2087,321 +1991,333 @@ msgstr ""
 #: modules/testimonials/testimonials.php:56
 #: modules/testimonials/testimonials.php:61
 msgid "Heading"
-msgstr ""
+msgstr "Titre"
 
 #: modules/callout/callout.php:246
 msgid "Overall Alignment"
-msgstr ""
+msgstr "Alignement général"
 
 #: modules/callout/callout.php:253
 msgid "The alignment that will apply to all elements within the callout."
-msgstr ""
+msgstr "L'alignement qui s'appliquera à tous les éléments dans la légende."
 
 #: modules/callout/callout.php:261 modules/cta/cta.php:145
 msgid "Heading Structure"
-msgstr ""
+msgstr "Structure du titre"
 
 #: modules/callout/callout.php:265
 #: modules/content-slider/content-slider.php:426 modules/cta/cta.php:149
 msgid "Heading Tag"
-msgstr ""
+msgstr "Balise titre"
 
 #: modules/callout/callout.php:278
 #: modules/content-slider/content-slider.php:439
 #: modules/content-slider/content-slider.php:453 modules/cta/cta.php:162
 #: modules/testimonials/testimonials.php:69
 msgid "Heading Size"
-msgstr ""
+msgstr "Taille du titre"
 
 #: modules/callout/callout.php:292 modules/cta/cta.php:176
 msgid "Heading Custom Size"
-msgstr ""
+msgstr "Taille personnalisée du titre"
+
+#: modules/callout/callout.php:303 modules/post-grid/post-grid.php:113
+msgid "Image"
+msgstr "Image"
 
 #: modules/callout/callout.php:310
 msgid "Image Type"
-msgstr ""
+msgstr "Type d'image"
 
 #: modules/callout/callout.php:313
 msgctxt "Image type."
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: modules/callout/callout.php:338 modules/photo/photo.php:401
 #: modules/slideshow/slideshow.php:312
 msgid "Crop"
-msgstr ""
+msgstr "Recâdrage"
 
 #: modules/callout/callout.php:341
 msgctxt "Crop"
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: modules/callout/callout.php:342 modules/photo/photo.php:405
 msgid "Landscape"
-msgstr ""
+msgstr "Paysage"
 
 #: modules/callout/callout.php:343 modules/photo/photo.php:406
 msgid "Panorama"
-msgstr ""
+msgstr "Panorama"
 
 #: modules/callout/callout.php:344 modules/photo/photo.php:407
 msgid "Portrait"
-msgstr ""
+msgstr "Portrait"
 
 #: modules/callout/callout.php:345 modules/photo/photo.php:408
 msgid "Square"
-msgstr ""
+msgstr "Carré"
 
 #: modules/callout/callout.php:346 modules/photo/photo.php:409
 msgid "Circle"
-msgstr ""
+msgstr "Cercle"
 
 #: modules/callout/callout.php:354 modules/callout/callout.php:374
 msgid "Above Heading"
-msgstr ""
+msgstr "Au-dessus du titre"
 
 #: modules/callout/callout.php:355 modules/callout/callout.php:375
 msgid "Below Heading"
-msgstr ""
+msgstr "Sous le titre"
 
 #: modules/callout/callout.php:356 modules/callout/callout.php:378
 msgid "Left of Text and Heading"
-msgstr ""
+msgstr "Gauche du texte et du titre"
 
 #: modules/callout/callout.php:357 modules/callout/callout.php:379
 msgid "Right of Text and Heading"
-msgstr ""
+msgstr "Droite du texte et du titre"
 
 #: modules/callout/callout.php:376
 msgid "Left of Heading"
-msgstr ""
+msgstr "Gauche du titre"
 
 #: modules/callout/callout.php:377
 msgid "Right of Heading"
-msgstr ""
+msgstr "Droite du titre"
 
 #: modules/callout/callout.php:385
 msgid "Icon Colors"
-msgstr ""
+msgstr "Couleurs de l'icône"
 
 #: modules/callout/callout.php:394 modules/icon-group/icon-group.php:56
 #: modules/icon/icon.php:87
 msgid "Hover Color"
-msgstr ""
+msgstr "Couleur lors du survol"
 
 #: modules/callout/callout.php:425
 msgid "Icon Structure"
-msgstr ""
+msgstr "Structure de l'icône"
 
 #: modules/callout/callout.php:429 modules/icon-group/icon-group.php:91
 #: modules/icon/icon.php:122 modules/post-grid/post-grid.php:136
 msgid "Size"
-msgstr ""
+msgstr "Taille"
 
 #: modules/callout/callout.php:440
 #: modules/content-slider/content-slider.php:564
 msgid "Call To Action"
-msgstr ""
+msgstr "Appel à l'action"
 
 #: modules/callout/callout.php:448
 msgid ""
 "The link applies to the entire module. If choosing a call to action type "
 "below, this link will also be used for the text or button."
 msgstr ""
+"Le lien s'applique à la totalité du module. Si vous choisissez un type "
+"d'appel à l'action ci-dessous, ce lien servira également pour le texte ou le "
+"bouton."
 
 #: modules/callout/callout.php:468
 #: modules/content-slider/content-slider.php:586 modules/cta/cta.php:14
 msgid "Call to Action"
-msgstr ""
+msgstr "Appel à l'action"
 
 #: modules/callout/callout.php:475
 #: modules/content-slider/content-slider.php:593
 msgctxt "Call to action."
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: modules/callout/callout.php:496
 #: modules/content-slider/content-slider.php:614
 msgid "Button Icon"
-msgstr ""
+msgstr "Icône du bouton"
 
 #: modules/callout/callout.php:502
 #: modules/content-slider/content-slider.php:620 modules/cta/cta.php:258
 msgid "Button Colors"
-msgstr ""
+msgstr "Couleurs du bouton"
 
 #: modules/callout/callout.php:546
 #: modules/content-slider/content-slider.php:656 modules/cta/cta.php:302
 msgid "Button Structure"
-msgstr ""
+msgstr "Structure du bouton"
 
 #: modules/callout/callout.php:550
 msgid "Button Width"
-msgstr ""
+msgstr "Largeur du bouton"
 
 #: modules/contact-form/contact-form.php:14
 msgid "Contact Form"
-msgstr ""
+msgstr "Formulaire de contact"
 
 #: modules/contact-form/contact-form.php:15
 msgid "A very simple contact form."
-msgstr ""
+msgstr "Un formulaire de contact très simple."
 
 #: modules/contact-form/contact-form.php:36
 msgid "Contact Form Submission"
-msgstr ""
+msgstr "Envoi du formulaire de contact"
 
 #: modules/contact-form/contact-form.php:64
 msgid "Send To Email"
-msgstr ""
+msgstr "Envoyez à un courriel"
 
 #: modules/contact-form/contact-form.php:66
 msgid "example@mail.com"
-msgstr ""
+msgstr "exemple@courriel.com"
 
 #: modules/contact-form/contact-form.php:67
 msgid "The contact form will send to this e-mail"
-msgstr ""
+msgstr "Le formulaire de contact enverra à ce courriel"
 
 #: modules/contact-form/includes/frontend.php:4
 msgctxt "Contact form field label."
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: modules/contact-form/includes/frontend.php:5
 msgid "Please enter your name."
-msgstr ""
+msgstr "Veuillez entrer votre nom."
 
 #: modules/contact-form/includes/frontend.php:6
 msgid "Your name"
-msgstr ""
+msgstr "Votre nom"
 
 #: modules/contact-form/includes/frontend.php:10
 msgid "Email"
-msgstr ""
+msgstr "Courriel"
 
 #: modules/contact-form/includes/frontend.php:11
 msgid "Please enter a valid email."
-msgstr ""
+msgstr "Merci d'entrer une adresse courriel valide."
 
 #: modules/contact-form/includes/frontend.php:12
 msgid "Your email"
-msgstr ""
+msgstr "Votre courriel"
 
 #: modules/contact-form/includes/frontend.php:16
 msgid "Your Message"
-msgstr ""
+msgstr "Votre message"
 
 #: modules/contact-form/includes/frontend.php:17
 msgid "Please enter a message."
-msgstr ""
+msgstr "Veuillez entrer un message."
 
 #: modules/contact-form/includes/frontend.php:18
 msgid "Your message"
-msgstr ""
+msgstr "Votre message"
 
 #: modules/contact-form/includes/frontend.php:23
 msgid "Send"
-msgstr ""
+msgstr "Envoyer"
 
 #: modules/contact-form/includes/frontend.php:24
 msgid "Message Sent!"
-msgstr ""
+msgstr "Message envoyé !"
 
 #: modules/contact-form/includes/frontend.php:25
 msgid "Message failed. Please try again."
-msgstr ""
+msgstr "L'envoi du message a échouée. Merci d'essayer à nouveau."
 
 #: modules/content-slider/content-slider.php:14
 msgid "Content Slider"
-msgstr ""
+msgstr "Diaporama de contenu"
 
 #: modules/content-slider/content-slider.php:15
 msgid "Displays multiple slides with an optional heading and call to action."
 msgstr ""
+"Affiche plusieurs diapositives avec un titre facultatif et appel à l'action."
 
 #: modules/content-slider/content-slider.php:191 modules/map/map.php:41
 #: modules/separator/separator.php:58 modules/slideshow/slideshow.php:294
 msgid "Height"
-msgstr ""
+msgstr "Hauteur"
 
 #: modules/content-slider/content-slider.php:196
 msgid ""
 "This setting is the minimum height of the content slider. Content will "
 "expand the height automatically."
 msgstr ""
+"Ce réglage est la hauteur minimale du diaporama de contenu. Le contenu "
+"s'étendra automatiquement à la hauteur maximale."
 
 #: modules/content-slider/content-slider.php:200
 #: modules/slideshow/slideshow.php:373
 #: modules/testimonials/testimonials.php:82 modules/video/video.php:108
 msgid "Auto Play"
-msgstr ""
+msgstr "Lecture automatique"
 
 #: modules/content-slider/content-slider.php:214
 msgid "Show Play/Pause"
-msgstr ""
+msgstr "Afficher Lecture / Pause"
 
 #: modules/content-slider/content-slider.php:234
 #: modules/testimonials/testimonials.php:102
 msgctxt "Transition type."
 msgid "Slide"
-msgstr ""
+msgstr "Glissement"
 
 #: modules/content-slider/content-slider.php:248
 #: modules/testimonials/testimonials.php:121
 msgid "Show Arrows"
-msgstr ""
+msgstr "Afficher les flèches"
 
 #: modules/content-slider/content-slider.php:257
 #: modules/testimonials/testimonials.php:151
 msgid "Show Dots"
-msgstr ""
+msgstr "Afficher les points"
 
 #: modules/content-slider/content-slider.php:271
 msgid "Max Content Width"
-msgstr ""
+msgstr "Largeur maximale du contenu"
 
 #: modules/content-slider/content-slider.php:276
 msgid "The max width that the content area will be within your slides."
-msgstr ""
+msgstr "La largeur maximale de la zone de contenu dans vos diapositives."
 
 #: modules/content-slider/content-slider.php:283
 msgid "Slides"
-msgstr ""
+msgstr "Diapositives"
 
 #: modules/content-slider/content-slider.php:290
 msgid "Slide"
-msgstr ""
+msgstr "Diapositive"
 
 #: modules/content-slider/content-slider.php:305
 msgid "Slide Settings"
-msgstr ""
+msgstr "Réglages de diapositive"
 
 #: modules/content-slider/content-slider.php:315
 msgid "Slide Label"
-msgstr ""
+msgstr "Étiquette de la diapositive"
 
 #: modules/content-slider/content-slider.php:316
 msgid ""
 "A label to identify this slide on the Slides tab of the Content Slider "
 "settings."
 msgstr ""
+"Une étiquette pour identifier cette diapositive sous l'onglet diapositives "
+"des réglages du diaporama de contenu."
 
 #: modules/content-slider/content-slider.php:321
 msgid "Background Layout"
-msgstr ""
+msgstr "Mise en page de l'arrière-plan"
 
 #: modules/content-slider/content-slider.php:327
 msgid "This setting is for the entire background of your slide."
-msgstr ""
+msgstr "Ce réglage est pour l'arrière-plan complet de votre diapositive."
 
 #: modules/content-slider/content-slider.php:362
 msgid "Background Video Code"
-msgstr ""
+msgstr "Code  pour arrière-plan vidéo"
 
 #: modules/content-slider/content-slider.php:368
 msgid "Content Layout"
-msgstr ""
+msgstr "Mise en page du contenu"
 
 #: modules/content-slider/content-slider.php:374
 msgid ""
@@ -2409,808 +2325,863 @@ msgid ""
 "selection above. The location of the content layout can be selected in the "
 "style tab."
 msgstr ""
+"Ceci permet d'ajouter au contenu en cours, ou en plus du choix de fond ci-"
+"dessus. L'emplacement de la mise en page du contenu peut être sélectionné "
+"dans l'onglet style."
 
 #: modules/content-slider/content-slider.php:377
 msgid "Text &amp; Photo"
-msgstr ""
+msgstr "Texte et photo"
 
 #: modules/content-slider/content-slider.php:378
 msgid "Text &amp; Video"
-msgstr ""
+msgstr "Texte et vidéo"
 
 #: modules/content-slider/content-slider.php:379
 msgctxt "Content type."
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: modules/content-slider/content-slider.php:402 modules/video/video.php:132
 msgid "Video Embed Code"
-msgstr ""
+msgstr "Code d'intégration du vidéo"
 
 #: modules/content-slider/content-slider.php:462
 msgid "Text Position"
-msgstr ""
+msgstr "Position du texte"
 
 #: modules/content-slider/content-slider.php:468
 msgid ""
 "The position will move the content layout selections left, right or center "
 "over the background of the slide."
 msgstr ""
+"La position déplacera les sélections de mise en page à gauche, droite ou "
+"centrée sur l'arrière-plan de la diapositive."
 
 #: modules/content-slider/content-slider.php:485
 msgid "Top Margin"
-msgstr ""
+msgstr "Marge du haut"
 
 #: modules/content-slider/content-slider.php:493
 msgid "Bottom Margin"
-msgstr ""
+msgstr "Marge du bas"
 
 #: modules/content-slider/content-slider.php:501
 msgid "Left Margin"
-msgstr ""
+msgstr "Marge de gauche"
 
 #: modules/content-slider/content-slider.php:509
 msgid "Right Margin"
-msgstr ""
+msgstr "Marge de droite"
 
 #: modules/content-slider/content-slider.php:518
 msgid "Text Colors"
-msgstr ""
+msgstr "Couleurs de texte"
 
 #: modules/content-slider/content-slider.php:528
 msgid "Text Shadow"
-msgstr ""
+msgstr "Ombre du texte"
 
 #: modules/content-slider/content-slider.php:537
 #: modules/content-slider/content-slider.php:725
 msgid "Text Background Color"
-msgstr ""
+msgstr "Couleur d'arrière-plan du texte"
 
 #: modules/content-slider/content-slider.php:538
 msgid ""
 "The color applies to the overlay behind text over the background selections."
 msgstr ""
+"La couleur s'applique à la superposition derrière le texte sur les "
+"sélections de l'arrière-plan."
 
 #: modules/content-slider/content-slider.php:543
 msgid "Text Background Opacity"
-msgstr ""
+msgstr "Opacité de fond de texte"
 
 #: modules/content-slider/content-slider.php:551
 msgid "Text Background Height"
-msgstr ""
+msgstr "Hauteur de fond de texte"
 
 #: modules/content-slider/content-slider.php:553
 msgid ""
 "Auto will allow the overlay to fit however long the text content is. 100% "
 "will fit the overlay to the top and bottom of the slide."
 msgstr ""
+"Auto permettra la superposition de s'ajuster, qu'importes la longueur du "
+"contenu de texte. Un réglage à 100 % adaptera la superposition au haut et au "
+"bas de la diapositive."
 
 #: modules/content-slider/content-slider.php:555
 msgctxt "Background height."
 msgid "Auto"
-msgstr ""
+msgstr "Automatique"
 
 #: modules/content-slider/content-slider.php:572
 msgid ""
 "The link applies to the entire slide. If choosing a call to action type "
 "below, this link will also be used for the text or button."
 msgstr ""
+"Le lien s'applique à l'ensemble de la diapositive. Si vous choisissez un "
+"appel à l'action ci-dessous, ce lien servira également pour le texte ou le "
+"bouton."
 
 #: modules/content-slider/content-slider.php:676
 msgid "Border Radius"
-msgstr ""
+msgstr "Coins arrondis de la bordure"
 
 #: modules/content-slider/content-slider.php:687
 msgctxt "Module settings form tab. Display on mobile devices."
 msgid "Mobile"
-msgstr ""
+msgstr "Portable"
 
 #: modules/content-slider/content-slider.php:690
 msgid "Mobile Photo"
-msgstr ""
+msgstr "Photo à partir du portable"
 
 #: modules/content-slider/content-slider.php:696
 msgid ""
 "You can choose a different photo that the slide will change to on mobile "
 "devices or no photo if desired."
 msgstr ""
+"Vous pouvez choisir une photo différente pour la diapositive sur différents "
+"appareils mobiles, ou pas de photo si vous le souhaitez."
 
 #: modules/content-slider/content-slider.php:698
 msgid "Use Main Photo"
-msgstr ""
+msgstr "Utiliser la Photo principale"
 
 #: modules/content-slider/content-slider.php:699
 msgid "Choose Another Photo"
-msgstr ""
+msgstr "Sélectionner une autre Photo"
 
 #: modules/content-slider/content-slider.php:700
 msgid "No Photo"
-msgstr ""
+msgstr "Pas de Photo"
 
 #: modules/content-slider/content-slider.php:715
 msgid "Mobile Text Colors"
-msgstr ""
+msgstr "Couleurs de texte pour mobile"
 
 #: modules/cta/cta.php:15
 msgid "Display a heading, subheading and a button."
-msgstr ""
+msgstr "Afficher un titre, sous-titre et un bouton."
 
 #: modules/cta/cta.php:73
 msgid "Ready to find out more?"
-msgstr ""
+msgstr "Prêt à en savoir plus ?"
 
 #: modules/cta/cta.php:88
 msgid "Drop us a line today for a free quote!"
-msgstr ""
+msgstr "Écrivez-nous aujourd'hui pour un devis gratuit !"
 
 #: modules/cta/cta.php:106 modules/gallery/gallery.php:220
 #: modules/post-grid/post-grid.php:44 modules/tabs/tabs.php:52
 #: modules/testimonials/testimonials.php:37
 #: modules/woocommerce/woocommerce.php:57
 msgid "Layout"
-msgstr ""
+msgstr "Mise en page"
 
 #: modules/cta/cta.php:109
 msgid "Inline"
-msgstr ""
+msgstr "En ligne"
 
 #: modules/cta/cta.php:110
 msgid "Stacked"
-msgstr ""
+msgstr "Empilé"
 
 #: modules/cta/cta.php:130 modules/icon-group/icon-group.php:99
 msgid "Spacing"
-msgstr ""
+msgstr "Espacement"
 
 #: modules/cta/cta.php:201
 msgid "Background Opacity"
-msgstr ""
+msgstr "Opacité de l'arrière-plan"
 
 #: modules/cta/cta.php:234
 msgid "Button Link"
-msgstr ""
+msgstr "Lien du bouton"
 
 #: modules/gallery/gallery.php:14 modules/post-grid/post-grid.php:55
 msgid "Gallery"
-msgstr ""
+msgstr "Galerie"
 
 #: modules/gallery/gallery.php:15
 msgid "Display multiple photos in a gallery view."
-msgstr ""
+msgstr "Afficher plusieurs photos dans un affichage de galerie."
 
 #: modules/gallery/gallery.php:223
 msgid "Collage"
-msgstr ""
+msgstr "Collage"
 
 #: modules/gallery/gallery.php:224
 msgctxt "Gallery layout: thumbnails."
 msgid "Thumbs"
-msgstr ""
+msgstr "Miniatures"
 
 #: modules/gallery/gallery.php:260
 msgid "Photo Size"
-msgstr ""
+msgstr "Taille de la photo"
 
 #: modules/gallery/gallery.php:263
 msgctxt "Photo size."
 msgid "Small"
-msgstr ""
+msgstr "Petite"
 
 #: modules/gallery/gallery.php:264
 msgctxt "Photo size."
 msgid "Medium"
-msgstr ""
+msgstr "Moyenne"
 
 #: modules/gallery/gallery.php:265
 msgctxt "Photo size."
 msgid "Large"
-msgstr ""
+msgstr "Grande"
 
 #: modules/gallery/gallery.php:270
 msgid "Photo Spacing"
-msgstr ""
+msgstr "Espacement de photo"
 
 #: modules/gallery/gallery.php:278
 msgid "Show Captions"
-msgstr ""
+msgstr "Afficher les légendes"
 
 #: modules/gallery/gallery.php:281 modules/photo/photo.php:432
 msgid "Never"
-msgstr ""
+msgstr "Jamais"
 
 #: modules/gallery/gallery.php:282 modules/photo/photo.php:433
 msgid "On Hover"
-msgstr ""
+msgstr "Au survol"
 
 #: modules/gallery/gallery.php:283 modules/photo/photo.php:434
 msgid "Below Photo"
-msgstr ""
+msgstr "Sous la photo"
 
 #: modules/gallery/gallery.php:285
+#, fuzzy
 msgid ""
 "The caption pulls from whatever text you put in the caption area in the "
 "media manager for each image. The caption is also pulled directly from "
 "SmugMug if you have captions set in your gallery."
 msgstr ""
+"Le sous-titre est obtenu à partir de l'entrée dans la case sous-titre de "
+"l'image dans la médiathèque. Le sous-titre sera aussi obtenu directement de "
+"SmugMug si vous utilisez les sous-titres dans votre galerie SmugMug."
 
 #: modules/gallery/gallery.php:289 modules/slideshow/slideshow.php:335
 msgid "Click Action"
-msgstr ""
+msgstr "Action du clic"
 
 #: modules/gallery/gallery.php:292
 msgctxt "Click action."
 msgid "None"
-msgstr ""
+msgstr "Aucune"
 
 #: modules/gallery/gallery.php:293 modules/photo/photo.php:452
 msgid "Lightbox"
-msgstr ""
+msgstr "Visionneuse"
 
 #: modules/gallery/gallery.php:294
 msgid "Photo Link"
-msgstr ""
+msgstr "Lien photo"
 
 #: modules/heading/heading.php:15
 msgid "Display a title/page heading."
-msgstr ""
+msgstr "Afficher un titre."
 
 #: modules/heading/heading.php:16 modules/photo/photo.php:27
 #: modules/rich-text/rich-text.php:16 modules/separator/separator.php:16
 #: modules/video/video.php:21
 msgid "Basic Modules"
-msgstr ""
+msgstr "Modules de base"
 
 #: modules/heading/heading.php:101
 msgid "HTML Tag"
-msgstr ""
+msgstr "Balise HTML"
 
 #: modules/heading/heading.php:128 modules/heading/heading.php:188
 msgid "Custom Font Size"
-msgstr ""
+msgstr "Taille de police personnalisée"
 
 #: modules/heading/heading.php:137
 msgid "Mobile Structure"
-msgstr ""
+msgstr "Structure pour mobile"
 
 #: modules/heading/heading.php:158
 msgid "Custom Alignment"
-msgstr ""
+msgstr "Alignement personnalisé"
 
 #: modules/html/html.php:14
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: modules/html/html.php:15
 msgid "Display raw HTML code."
-msgstr ""
+msgstr "Afficher le code HTML brut."
 
 #: modules/icon-group/icon-group.php:14
 msgid "Icon Group"
-msgstr ""
+msgstr "Groupe d'icônes"
 
 #: modules/icon-group/icon-group.php:15
 msgid "Display a group of linked Font Awesome icons."
-msgstr ""
+msgstr "Afficher un groupe de polices \"Font Awesome\" reliées."
+
+#: modules/icon-group/icon-group.php:27
+msgid "Icons"
+msgstr "Icônes"
 
 #: modules/icon-group/icon-group.php:125
 msgid "Add Icon"
-msgstr ""
+msgstr "Ajouter une icône"
 
 #: modules/icon/icon.php:15
 msgid "Display an icon and optional title."
-msgstr ""
+msgstr "Afficher une icône et le titre facultatif."
 
 #: modules/map/map.php:14
 msgid "Map"
-msgstr ""
+msgstr "Carte"
 
 #: modules/map/map.php:15
 msgid "Display a Google map."
-msgstr ""
+msgstr "Afficher une carte Google."
 
 #: modules/map/map.php:33
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
 #: modules/map/map.php:34
 msgid "1865 Winchester Blvd #202 Campbell, CA 95008"
-msgstr ""
+msgstr "1865 Winchester Blvd #202 Campbell, CA 95008"
 
 #: modules/photo/photo.php:26
 msgid "Upload a photo or display one from the media library."
-msgstr ""
+msgstr "Téléchargez une photo ou en afficher une de la médiathèque."
 
 #: modules/photo/photo.php:375
 msgid "Photo Source"
-msgstr ""
+msgstr "Source de la photo"
 
 #: modules/photo/photo.php:379 modules/photo/photo.php:451
 msgid "URL"
-msgstr ""
+msgstr "Lien (URL)"
 
 #: modules/photo/photo.php:396
 msgid "Photo URL"
-msgstr ""
+msgstr "Lien (URL) de la photo"
 
 #: modules/photo/photo.php:397
 msgid "http://www.example.com/my-photo.jpg"
-msgstr ""
+msgstr "http://www.exemple.com/ma-photo.jpg"
 
 #: modules/photo/photo.php:404
 msgctxt "Crop."
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: modules/photo/photo.php:425 modules/photo/photo.php:439
 msgid "Caption"
-msgstr ""
+msgstr "Légende"
 
 #: modules/photo/photo.php:429
 msgid "Show Caption"
-msgstr ""
+msgstr "Afficher la Légende"
 
 #: modules/photo/photo.php:448
 msgid "Link Type"
-msgstr ""
+msgstr "Type de lien"
 
 #: modules/photo/photo.php:450
 msgctxt "Link type."
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: modules/photo/photo.php:453
 msgid "Photo File"
-msgstr ""
+msgstr "Fichier photo"
 
 #: modules/photo/photo.php:464
 msgid ""
 "Link type applies to how the image should be linked on click. You can choose "
 "a specific URL, the individual photo or a separate page with the photo."
 msgstr ""
+"Type de lien s'applique à comment l'image doit être liée au clic. Vous "
+"pouvez choisir un lien (URL) spécifique, la photo individuelle ou une autre "
+"page avec la photo."
 
 #: modules/photo/photo.php:471 modules/slideshow/slideshow.php:356
 msgid "Link URL"
-msgstr ""
+msgstr "URL du lien"
 
 #: modules/post-grid/includes/frontend.php:41
 msgid "No posts found."
-msgstr ""
+msgstr "Aucun article trouvé"
 
 #: modules/post-grid/includes/post-feed.php:14
 #: modules/post-grid/includes/post-grid.php:24
 #, php-format
 msgctxt "%s stands for author name."
 msgid "By %s"
-msgstr ""
+msgstr "Par %s"
 
 #: modules/post-grid/post-grid.php:14
 msgid "Posts"
-msgstr ""
+msgstr "Articles"
 
 #: modules/post-grid/post-grid.php:15
 msgid "Display a grid of your WordPress posts."
-msgstr ""
+msgstr "Afficher une grille de vos articles de WordPress."
 
 #: modules/post-grid/post-grid.php:51
 msgid "Layout Style"
-msgstr ""
+msgstr "Style de mise en page"
 
 #: modules/post-grid/post-grid.php:54 modules/post-grid/post-grid.php:88
 msgid "Grid"
-msgstr ""
+msgstr "Grille"
 
 #: modules/post-grid/post-grid.php:56
 msgid "Feed"
-msgstr ""
+msgstr "Flux"
 
 #: modules/post-grid/post-grid.php:71
 msgid "Pagination Style"
-msgstr ""
+msgstr "Style de pagination"
 
 #: modules/post-grid/post-grid.php:74
 msgid "Numbers"
-msgstr ""
+msgstr "Nombres"
 
 #: modules/post-grid/post-grid.php:76
 msgctxt "Pagination style."
 msgid "None"
-msgstr ""
+msgstr "Aucune"
 
 #: modules/post-grid/post-grid.php:81
 msgid "Posts Per Page"
-msgstr ""
+msgstr "Articles par page"
 
 #: modules/post-grid/post-grid.php:92
 msgid "Post Width"
-msgstr ""
+msgstr "Largeur de l'article"
 
 #: modules/post-grid/post-grid.php:100
 msgid "Post Spacing"
-msgstr ""
+msgstr "Espacement de l'article"
 
 #: modules/post-grid/post-grid.php:109
 msgid "Featured Image"
-msgstr ""
+msgstr "Image à la une"
 
 #: modules/post-grid/post-grid.php:116 modules/post-grid/post-grid.php:149
 #: modules/post-grid/post-grid.php:158 modules/post-grid/post-grid.php:188
 #: modules/post-grid/post-grid.php:202 modules/post-grid/post-grid.php:216
 msgid "Show"
-msgstr ""
+msgstr "Afficher"
 
 #: modules/post-grid/post-grid.php:117 modules/post-grid/post-grid.php:150
 #: modules/post-grid/post-grid.php:159 modules/post-grid/post-grid.php:189
 #: modules/post-grid/post-grid.php:203 modules/post-grid/post-grid.php:217
 msgid "Hide"
-msgstr ""
+msgstr "Cacher"
 
 #: modules/post-grid/post-grid.php:130
 msgid "Above Text"
-msgstr ""
+msgstr "Au-dessus du texte"
 
 #: modules/post-grid/post-grid.php:131
 msgid "Beside Text"
-msgstr ""
+msgstr "À côté du texte"
 
 #: modules/post-grid/post-grid.php:142
 msgid "Post Info"
-msgstr ""
+msgstr "Info de l'article"
 
 #: modules/post-grid/post-grid.php:169
 msgid "Date Format"
-msgstr ""
+msgstr "Format de la date"
 
 #: modules/post-grid/post-grid.php:185
 msgid "Comments"
-msgstr ""
+msgstr "Commentaires"
 
 #: modules/post-grid/post-grid.php:213
 msgid "More Link"
-msgstr ""
+msgstr "Lien \"Plus\""
 
 #: modules/post-grid/post-grid.php:227
 msgid "More Link Text"
-msgstr ""
+msgstr "Texte \"More link?\""
 
 #: modules/post-grid/post-grid.php:228
 msgid "Read More"
-msgstr ""
+msgstr "Lire la suite"
 
 #: modules/pricing-table/pricing-table.php:14
 msgid "Pricing Table"
-msgstr ""
+msgstr "Tableau des prix"
 
 #: modules/pricing-table/pricing-table.php:15
 msgid "A simple pricing table generator."
-msgstr ""
+msgstr "Un simple générateur de tableau des prix."
 
+# Boîte?
 #: modules/pricing-table/pricing-table.php:26
 msgid "Pricing Boxes"
-msgstr ""
+msgstr "Boîtes de prix"
 
+# Boîte?
 #: modules/pricing-table/pricing-table.php:33
 msgid "Pricing Box"
-msgstr ""
+msgstr "Boîte de prix"
 
 #: modules/pricing-table/pricing-table.php:50
 msgid "Box Spacing"
-msgstr ""
+msgstr "Espacement de la boîte"
 
 #: modules/pricing-table/pricing-table.php:53
 #: modules/testimonials/testimonials.php:40
 msgid "Wide"
-msgstr ""
+msgstr "Large"
 
 #: modules/pricing-table/pricing-table.php:54
 msgid "Tight"
-msgstr ""
+msgstr "Étroit"
 
 #: modules/pricing-table/pricing-table.php:59
 msgid "Features Min Height"
-msgstr ""
+msgstr "Hauteur minimum"
 
 #: modules/pricing-table/pricing-table.php:63
 msgid ""
 "Use this to normalize the height of your boxes when they have different "
 "numbers of features."
 msgstr ""
+"Utiliser ceci afin de normaliser la hauteur de vos boîtes, quand elles ont "
+"un nombre différent de caractéristiques."
 
 #: modules/pricing-table/pricing-table.php:67
 msgid "Border Size"
-msgstr ""
+msgstr "Taille de la bordure"
 
 #: modules/pricing-table/pricing-table.php:70
 msgctxt "Border size."
 msgid "Wide"
-msgstr ""
+msgstr "Large"
 
 #: modules/pricing-table/pricing-table.php:71
 msgctxt "Border size."
 msgid "Tight"
-msgstr ""
+msgstr "Étroite"
 
 #: modules/pricing-table/pricing-table.php:84
 msgid "Add Pricing Box"
-msgstr ""
+msgstr "Ajouter une boîte de prix"
 
 #: modules/pricing-table/pricing-table.php:98
 msgid "Title Size"
-msgstr ""
+msgstr "Taille du titre"
 
 #: modules/pricing-table/pricing-table.php:107
 msgid "Price Box"
-msgstr ""
+msgstr "Boîte de prix"
 
 #: modules/pricing-table/pricing-table.php:111
 msgid "Price"
-msgstr ""
+msgstr "Prix"
 
 #: modules/pricing-table/pricing-table.php:115
 msgid "Duration"
-msgstr ""
+msgstr "Durée"
 
 #: modules/pricing-table/pricing-table.php:116
 msgid "per Year"
-msgstr ""
+msgstr "par an"
 
 #: modules/pricing-table/pricing-table.php:120
 msgid "Price Size"
-msgstr ""
+msgstr "Taille du prix"
 
 #: modules/pricing-table/pricing-table.php:133
 msgid "Button Text"
-msgstr ""
+msgstr "Texte du bouton"
 
 #: modules/pricing-table/pricing-table.php:137
 msgid "Button URL"
-msgstr ""
+msgstr "Lien (URL) du bouton"
 
 #: modules/pricing-table/pricing-table.php:142
 msgctxt "Price features displayed in pricing box."
 msgid "Features"
-msgstr ""
+msgstr "Caractéristiques"
 
 #: modules/pricing-table/pricing-table.php:147
 msgid "One feature per line. HTML is okay."
-msgstr ""
+msgstr "Une caractéristique par ligne. HTML est permis."
 
 #: modules/pricing-table/pricing-table.php:162
 msgid "Box Background"
-msgstr ""
+msgstr "Arrière-plan de la boîte"
 
 #: modules/pricing-table/pricing-table.php:167
 msgid "Box Foreground"
-msgstr ""
+msgstr "Avant-plan de la boîte"
 
 #: modules/pricing-table/pricing-table.php:173
 msgid "Accent Color"
-msgstr ""
+msgstr "Couleur d'accent"
 
 #: modules/pricing-table/pricing-table.php:178
 msgid "Accent Text Color"
-msgstr ""
+msgstr "Couleur d'accent du texte"
 
 #: modules/pricing-table/pricing-table.php:182
 msgid "Box Top Margin"
-msgstr ""
+msgstr "Marge supérieure de la boîte"
 
 #: modules/rich-text/rich-text.php:15
 msgid "A WYSIWYG text editor."
-msgstr ""
+msgstr "Éditeur de texte (WYSIWYG)"
 
 #: modules/separator/separator.php:14
 msgid "Separator"
-msgstr ""
+msgstr "Séparateur"
 
 #: modules/separator/separator.php:15
 msgid "A divider line to separate content."
-msgstr ""
+msgstr "Une ligne de séparation pour séparer le contenu."
 
 #: modules/separator/separator.php:85
 msgid ""
 "The type of border to use. Double borders must have a height of at least 3px "
 "to render properly."
 msgstr ""
+"Le type de bordure à utiliser. Double doit avoir une largeur d'au moins 3px "
+"afin de rendre correctement."
 
 #: modules/sidebar/includes/settings-general.php:5
 #: modules/sidebar/sidebar.php:14
 msgid "Sidebar"
-msgstr ""
+msgstr "Barre latérale"
 
 #: modules/sidebar/sidebar.php:15
 msgid ""
 "Display a WordPress sidebar that has been registered by the current theme."
 msgstr ""
+"Afficher une barre latérale de WordPress qui a été enregistrée par le thème "
+"actuel."
 
 #: modules/slideshow/slideshow.php:14
 msgid "Slideshow"
-msgstr ""
+msgstr "Diaporama"
 
 #: modules/slideshow/slideshow.php:15
 msgid "Display multiple photos in a slideshow view."
-msgstr ""
+msgstr "Afficher plusieurs photos dans un affichage du diaporama."
 
 #: modules/slideshow/slideshow.php:302
 msgid "Skin Color"
-msgstr ""
+msgstr "Couleur de la peau humaine"
 
 #: modules/slideshow/slideshow.php:305
 msgctxt "Color."
 msgid "Light"
-msgstr ""
+msgstr "Clair"
 
 #: modules/slideshow/slideshow.php:306
 msgctxt "Color."
 msgid "Dark"
-msgstr ""
+msgstr "Foncé"
 
 #: modules/slideshow/slideshow.php:308
 msgid ""
 "If your overall theme/images are lighter in color, light will display "
 "buttons in a darker color scheme and vice versa for dark."
 msgstr ""
+"Si votre thème/images globales sont de couleur plus claire, l'option \"clair"
+"\" ajuste les boutons dans un jeu de couleurs plus foncé et vice versa pour "
+"la noirceur."
 
 #: modules/slideshow/slideshow.php:318
+#, fuzzy
 msgid ""
 "Crop set to no will fit the slideshow images to the height you specify and "
 "keep the width proportional, whereas crop set to yes will fit the slideshow "
 "images to all sides of the content area while cropping the left and right to "
 "fit the height you specify."
 msgstr ""
+"Le recâdrage mis à \"Non\" fera que l'image s'ajustera à la hauteur que vous "
+"avez spécifié et gardera sa largeur en proportion. \"Oui\" ajustera l'image "
+"afin qu'elle se rende aux quatre côtés du contenu en recâdrant et coupant "
+"les côtés gauche et droit pour ajuster l'image à la hauteur choisie."
 
 #: modules/slideshow/slideshow.php:322
 msgid "Disable Right-Click"
-msgstr ""
+msgstr "Désactiver le clic droit"
 
 #: modules/slideshow/slideshow.php:342
 msgctxt "Click action type."
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: modules/slideshow/slideshow.php:366
 msgid "Playback"
-msgstr ""
+msgstr "Lecture"
 
 #: modules/slideshow/slideshow.php:392
 msgctxt "Slideshow transition."
 msgid "None"
-msgstr ""
+msgstr "Aucune"
 
 #: modules/slideshow/slideshow.php:429
 msgid "Controls"
-msgstr ""
+msgstr "Contrôles"
 
 #: modules/slideshow/slideshow.php:436 modules/slideshow/slideshow.php:485
 msgid "Navigation Arrows"
-msgstr ""
+msgstr "Flèches de navigation"
 
 #: modules/slideshow/slideshow.php:442
+#, fuzzy
 msgid ""
 "Navigational arrows allow the visitor to freely move through the images in "
 "your slideshow. These are larger arrows that overlay your slideshow images "
 "and are separate from the control bar navigational arrows."
 msgstr ""
+"Les flèches de navigation permettent aux visiteurs de se déplacer librement "
+"parmi les images de votre diaporama. Celles-ci sont de grosses flèches qui "
+"se superposent à vos images, indépendamment des flèches de navigation de la "
+"barre de contrôle."
 
 #: modules/slideshow/slideshow.php:447
 msgid "Control Bar"
-msgstr ""
+msgstr "Barre de contrôle"
 
 #: modules/slideshow/slideshow.php:451
 msgid "Nav Type"
-msgstr ""
+msgstr "Type de navigation"
 
 #: modules/slideshow/slideshow.php:454
 msgctxt "Nav type."
 msgid "None"
-msgstr ""
+msgstr "Aucune"
 
 #: modules/slideshow/slideshow.php:455
 msgid "Buttons"
-msgstr ""
+msgstr "Boutons"
 
 #: modules/slideshow/slideshow.php:456 modules/slideshow/slideshow.php:586
 msgid "Thumbs"
-msgstr ""
+msgstr "Miniatures"
 
 #: modules/slideshow/slideshow.php:471
 msgid "Nav Position"
-msgstr ""
+msgstr "Position de la navigation"
 
 #: modules/slideshow/slideshow.php:481
 msgid "Control Bar Buttons"
-msgstr ""
+msgstr "Boutons de la barre de contrôle"
 
 #: modules/slideshow/slideshow.php:494
 msgid "Play Button"
-msgstr ""
+msgstr "Bouton de lecture"
 
 #: modules/slideshow/slideshow.php:503
 msgid "Fullscreen Button"
-msgstr ""
+msgstr "Bouton Plein écran"
 
 #: modules/slideshow/slideshow.php:512
 msgid "Photo Count"
-msgstr ""
+msgstr "Compte de photo"
 
 #: modules/slideshow/slideshow.php:521
 msgid "Thumbs Button"
-msgstr ""
+msgstr "Bouton des miniatures"
 
 #: modules/slideshow/slideshow.php:530
 msgid "Caption Button"
-msgstr ""
+msgstr "Bouton de légende"
 
 #: modules/slideshow/slideshow.php:539
 msgid "Social Button"
-msgstr ""
+msgstr "Bouton de réseaux sociaux"
 
 #: modules/slideshow/slideshow.php:549
 msgid "Control Bar Overlay"
-msgstr ""
+msgstr "Superposition de la barre de contrôle"
 
 #: modules/slideshow/slideshow.php:553
 msgid "Overlay Enabled"
-msgstr ""
+msgstr "Superposition activée"
 
 #: modules/slideshow/slideshow.php:564
+#, fuzzy
 msgid ""
 "Control bar overlay specifies if the control bar buttons you choose overlay "
 "your slideshow images or site below the slideshow completely."
 msgstr ""
+"Barre de contrôle en superposition spécifie si la barre de contrôle des "
+"boutons sélectionnée sera mise en superposition sur vos diapositives, ou "
+"bien se situera en dessous du diaporama complètement."
 
 #: modules/slideshow/slideshow.php:568
 msgid "Overlay Hide"
-msgstr ""
+msgstr "Cacher la superposition"
 
 #: modules/slideshow/slideshow.php:574
+#, fuzzy
 msgid ""
 "Overlay hide will hide the control bar after however many seconds you "
 "specify below. They will reappear upon mouse over."
 msgstr ""
+"\"Cacher superposition\" va cacher la barre de contrôle après le nombre de "
+"secondes spécifiées plus bas. Un survol de la souris fera réapparaître le "
+"tout."
 
 #: modules/slideshow/slideshow.php:578
 msgid "Overlay Hide Delay"
-msgstr ""
+msgstr "Différer la disparition de la superposition"
 
 #: modules/slideshow/slideshow.php:590
 msgid "Thumbs Size"
-msgstr ""
+msgstr "Taille des miniatures"
 
 #: modules/slideshow/slideshow.php:599
 msgid "Social"
-msgstr ""
+msgstr "Social"
 
 #: modules/slideshow/slideshow.php:603
 msgid "Facebook Button"
-msgstr ""
+msgstr "Bouton Facebook"
 
 #: modules/slideshow/slideshow.php:615
 msgid "Twitter Button"
-msgstr ""
+msgstr "Bouton Twitter ?"
 
 #: modules/slideshow/slideshow.php:627
 msgid "Google Plus Button"
-msgstr ""
+msgstr "Bouton Google+ ?"
 
 #: modules/slideshow/slideshow.php:639
 msgid "Pinterest Button"
-msgstr ""
+msgstr "Bouton Pinterest"
 
 #: modules/social-buttons/social-buttons.php:14
 msgid "Social Buttons"
-msgstr ""
+msgstr "Boutons de réseaux sociaux"
 
 #: modules/social-buttons/social-buttons.php:15
 msgid "Displays social buttons."
-msgstr ""
+msgstr "Affiche les boutons sociaux."
 
 #: modules/social-buttons/social-buttons.php:71
 msgid "Target URL"
-msgstr ""
+msgstr "Lien cible (URL)"
 
 #: modules/social-buttons/social-buttons.php:75
 msgid "Current Page"
-msgstr ""
+msgstr "Page en cours"
 
 #: modules/social-buttons/social-buttons.php:82
 msgid ""
@@ -3218,161 +3189,166 @@ msgid ""
 "to interface with. For example, if you show Facebook, the user will \"Like\" "
 "whatever you put in this field."
 msgstr ""
+"Correspond à la page que vous souhaitez référencer avec vos icônes de "
+"réseaux sociaux. Par exemple, si vous montrez Facebook, l'utilisateur fera "
+"un \"Like\" de la page que vous choisissez ici."
 
 #: modules/social-buttons/social-buttons.php:89
 msgid "Custom URL"
-msgstr ""
+msgstr "Lien (URL) personnalisé"
 
 #: modules/social-buttons/social-buttons.php:107
 msgid "Show Facebook"
-msgstr ""
+msgstr "Afficher Facebook"
 
 #: modules/social-buttons/social-buttons.php:116
 msgid "Show Twitter"
-msgstr ""
+msgstr "Afficher Twitter"
 
 #: modules/social-buttons/social-buttons.php:125
 msgid "Show Google+"
-msgstr ""
+msgstr "Afficher Google+ ?"
 
 #: modules/tabs/tabs.php:14
 msgid "Tabs"
-msgstr ""
+msgstr "Onglets"
 
 #: modules/tabs/tabs.php:15
 msgid "Display a collection of tabbed content."
-msgstr ""
+msgstr "Afficher une collection de contenu par onglets."
 
 #: modules/tabs/tabs.php:55
 msgid "Horizontal"
-msgstr ""
+msgstr "Horizontal"
 
 #: modules/tabs/tabs.php:56
 msgid "Vertical"
-msgstr ""
+msgstr "Vertical"
 
 #: modules/testimonials/testimonials.php:14
 #: modules/testimonials/testimonials.php:60
 #: modules/testimonials/testimonials.php:174
 msgid "Testimonials"
-msgstr ""
+msgstr "Témoignages"
 
 #: modules/testimonials/testimonials.php:15
 msgid "An animated tesimonials area."
-msgstr ""
+msgstr "Une zone de témoignages animée"
 
 #: modules/testimonials/testimonials.php:41
 msgid "Compact"
-msgstr ""
+msgstr "Compact"
 
 #: modules/testimonials/testimonials.php:51
 msgid "Wide is for 1 column rows, compact is for multi-column rows."
 msgstr ""
+"Large est pour les rangées à 1 colonne, compact est pour les rangées à "
+"plusieurs colonnes."
 
 #: modules/testimonials/testimonials.php:78
 msgid "Slider Settings"
-msgstr ""
+msgstr "Réglages du diaporama"
 
 #: modules/testimonials/testimonials.php:135
 msgid "Arrow Color"
-msgstr ""
+msgstr "Couleur de la flèche"
 
 #: modules/testimonials/testimonials.php:165
 msgid "Dot Color"
-msgstr ""
+msgstr "Couleur du point"
 
 #: modules/testimonials/testimonials.php:181
 msgid "Testimonial"
-msgstr ""
+msgstr "Témoignage"
 
 #: modules/testimonials/testimonials.php:197
 msgid "Add Testimonial"
-msgstr ""
+msgstr "Ajouter un témoignage"
 
 #: modules/video/video.php:20
 msgid "Render a WordPress or embedable video."
-msgstr ""
+msgstr "Rendre un vidéo local ou intégré."
 
 #: modules/video/video.php:83
 msgid "Video Type"
-msgstr ""
+msgstr "Type de vidéo"
 
 #: modules/video/video.php:87
 msgid "Embed"
-msgstr ""
+msgstr "Intégrer"
 
 #: modules/video/video.php:104
 msgctxt "Video preview/fallback image."
 msgid "Poster"
-msgstr ""
+msgstr "L'affiche"
 
 #: modules/video/video.php:120
 msgid "Loop"
-msgstr ""
+msgstr "Boucle"
 
 #: modules/widget/includes/frontend.php:35
 #: modules/widget/includes/settings-general.php:44
 #, php-format
 msgctxt "%s stands for widget slug."
 msgid "%s no longer exists."
-msgstr ""
+msgstr "%s n'existe plus."
 
 #: modules/widget/widget.php:14
 msgid "Widget"
-msgstr ""
+msgstr "Widget"
 
 #: modules/widget/widget.php:15
 msgid "Display a WordPress widget."
-msgstr ""
+msgstr "Afficher un Widget WordPress."
 
 #: modules/woocommerce/woocommerce.php:16
 msgid "WooCommerce"
-msgstr ""
+msgstr "WooCommerce"
 
 #: modules/woocommerce/woocommerce.php:17
 msgid "Display products or categories from your WooCommerce store."
-msgstr ""
+msgstr "Afficher les produits ou catégories de votre boutique WooCommerce."
 
 #: modules/woocommerce/woocommerce.php:60
 msgid "Choose..."
-msgstr ""
+msgstr "Choisir..."
 
 #: modules/woocommerce/woocommerce.php:61
 msgid "Single Product"
-msgstr ""
+msgstr "Produit seul"
 
 #: modules/woocommerce/woocommerce.php:62
 #: modules/woocommerce/woocommerce.php:113
 msgid "Multiple Products"
-msgstr ""
+msgstr "Produits multiples"
 
 #: modules/woocommerce/woocommerce.php:63
 msgid "\"Add to Cart\" Button"
-msgstr ""
+msgstr "Bouton \"Ajouter au panier\""
 
 #: modules/woocommerce/woocommerce.php:64
 msgid "Categories"
-msgstr ""
+msgstr "Catégories"
 
 #: modules/woocommerce/woocommerce.php:65
 msgid "Cart"
-msgstr ""
+msgstr "Panier"
 
 #: modules/woocommerce/woocommerce.php:66
 msgid "Checkout"
-msgstr ""
+msgstr "Validez la commande"
 
 #: modules/woocommerce/woocommerce.php:67
 msgid "Order Tracking"
-msgstr ""
+msgstr "Suivi de commandes"
 
 #: modules/woocommerce/woocommerce.php:68
 msgid "My Account"
-msgstr ""
+msgstr "Mon compte"
 
 #: modules/woocommerce/woocommerce.php:87
 msgid "Product ID"
-msgstr ""
+msgstr "ID du produit"
 
 #: modules/woocommerce/woocommerce.php:90
 msgid ""
@@ -3380,10 +3356,14 @@ msgid ""
 "a unique ID. You can find this unique product ID by visiting the Products "
 "area and rolling over the product. The unique ID will be the first attribute."
 msgstr ""
+"Lorsque vous ajoutez des produits dans le domaine des produits WooCommerce, "
+"chacun sera assigné un identifiant unique. Vous pouvez trouver cet ID de "
+"produit unique en visitant la zone produits et planant sur le produit. L'ID "
+"unique sera le premier attribut."
 
 #: modules/woocommerce/woocommerce.php:94
 msgid "Parent Category ID"
-msgstr ""
+msgstr "ID de catégorie parente"
 
 #: modules/woocommerce/woocommerce.php:97
 msgid ""
@@ -3392,47 +3372,52 @@ msgid ""
 "the categories area under Products and looking in the URL that is displayed "
 "in your browser. The ID will be the only number value in the URL."
 msgstr ""
+"Lorsque vous ajoutez des catégories de produits dans le domaine des produits "
+"WooCommerce, chacun sera assigné un identifiant unique. Cet ID se trouvent "
+"en planant sur la catégorie dans la zone de catégories sous produits et en "
+"regardant dans l'URL qui s'affiche dans votre navigateur. L'ID sera la seule "
+"valeur dans l'URL."
 
 #: modules/woocommerce/woocommerce.php:101
 #: modules/woocommerce/woocommerce.php:172
 msgid "Columns"
-msgstr ""
+msgstr "Colonnes"
 
 #: modules/woocommerce/woocommerce.php:117
 msgid "Products Source"
-msgstr ""
+msgstr "Source des produits?"
 
 #: modules/woocommerce/woocommerce.php:120
 msgid "Products IDs"
-msgstr ""
+msgstr "IDs des produits"
 
 #: modules/woocommerce/woocommerce.php:121
 msgid "Product Category"
-msgstr ""
+msgstr "Catégorie de produit"
 
 #: modules/woocommerce/woocommerce.php:122
 msgid "Recent Products"
-msgstr ""
+msgstr "Produits récents"
 
 #: modules/woocommerce/woocommerce.php:123
 msgid "Featured Products"
-msgstr ""
+msgstr "Produits vedettes"
 
 #: modules/woocommerce/woocommerce.php:124
 msgid "Sale Products"
-msgstr ""
+msgstr "Produits en vente"
 
 #: modules/woocommerce/woocommerce.php:125
 msgid "Best Selling Products"
-msgstr ""
+msgstr "Produits vendant le mieux"
 
 #: modules/woocommerce/woocommerce.php:126
 msgid "Top Rated Products"
-msgstr ""
+msgstr "Les produits les mieux notés"
 
 #: modules/woocommerce/woocommerce.php:154
 msgid "Product IDs"
-msgstr ""
+msgstr "IDs des produits"
 
 #: modules/woocommerce/woocommerce.php:156
 msgid ""
@@ -3441,11 +3426,17 @@ msgid ""
 "area and rolling over the product. The unique ID will be the first attribute "
 "and you can add several here separated by a comma."
 msgstr ""
+"Lorsque vous ajoutez des produits dans le domaine des produits WooCommerce, "
+"chacun sera assigné un identifiant unique. Vous pouvez trouver cet ID de "
+"produit unique en visitant la zone produits et planant sur le produit. L'ID "
+"unique sera le premier attribut, et vous pouvez ajouter plusieurs ici "
+"séparés par une virgule."
 
 #: modules/woocommerce/woocommerce.php:160
 msgid "Category Slug"
-msgstr ""
+msgstr "Identifiant (slug) de catégorie"
 
+# slug?
 #: modules/woocommerce/woocommerce.php:162
 msgid ""
 "As you add product categories in the WooCommerce Products area, each will be "
@@ -3453,32 +3444,37 @@ msgid ""
 "found in the Categories area under WooCommerce Products. Several can be "
 "added here separated by a comma."
 msgstr ""
+"Lorsque vous ajoutez des catégories de produits dans le domaine des produits "
+"WooCommerce, chacun sera assigné un identifiant (slug) unique, ou vous "
+"pouvez modifier et ajouter les vôtres. Ces \"slugs\" se trouvent dans la "
+"zone de catégories sous les produits WooCommerce. Plusieurs peuvent être "
+"ajoutés ici séparés par une virgule."
 
 #: modules/woocommerce/woocommerce.php:166
 msgid "Number of Products"
-msgstr ""
+msgstr "Nombre de produits"
 
 #: modules/woocommerce/woocommerce.php:183
 msgid "Sort By"
-msgstr ""
+msgstr "Classer par"
 
 #: modules/woocommerce/woocommerce.php:186
 msgctxt "Sort by."
 msgid "Default"
-msgstr ""
+msgstr "Par défaut"
 
 #: modules/woocommerce/woocommerce.php:187
 msgid "Popularity"
-msgstr ""
+msgstr "Popularité"
 
 #: modules/woocommerce/woocommerce.php:188
 msgid "Rating"
-msgstr ""
+msgstr "Evaluation"
 
 #: modules/woocommerce/woocommerce.php:190
 msgid "Price: Low to High"
-msgstr ""
+msgstr "Prix : Faible à élevé"
 
 #: modules/woocommerce/woocommerce.php:191
 msgid "Price: High to Low"
-msgstr ""
+msgstr "Prix : Élevé à faible"

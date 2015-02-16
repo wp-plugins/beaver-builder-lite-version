@@ -169,96 +169,6 @@ FLBuilder::register_settings_form('col', array(
         'advanced'      => array(
             'title'         => __('Advanced', 'fl-builder'),
             'sections'      => array(
-                'general'       => array(
-                    'title'         => '',
-                    'fields'        => array(
-                        'class'         => array(
-                            'type'          => 'text',
-                            'label'         => __('CSS Class', 'fl-builder'),
-                            'help'          => __( 'A custom CSS class that will be applied to this column. Spaces only, no dots.', 'fl-builder' ),
-                            'preview'         => array(
-                                'type'            => 'none'
-                            )
-                        )
-                    )
-                ),
-                'responsive'    => array(
-                    'title'         => __('Responsive Layout', 'fl-builder'),
-                    'fields'        => array(
-                        'responsive_display' => array(
-                            'type'          => 'select',
-                            'label'         => __('Display', 'fl-builder'),
-                            'options'       => array(
-                                ''                  => __('Always', 'fl-builder'),
-                                'desktop'           => __('Large Devices Only', 'fl-builder'),
-                                'desktop-medium'    => __('Large &amp; Medium Devices Only', 'fl-builder'),
-                                'medium'            => __('Medium Devices Only', 'fl-builder'),
-                                'medium-mobile'     => __('Medium &amp; Small Devices Only', 'fl-builder'),
-                                'mobile'            => __('Small Devices Only', 'fl-builder'),
-                            ),
-                            'help'          => __( 'Choose whether to show or hide this column at different device sizes.', 'fl-builder' ),
-                            'preview'         => array(
-                                'type'            => 'none'
-                            )
-                        ),
-                        'medium_size'   => array(
-                            'type'          => 'select',
-                            'label'         => __('Medium Device Width', 'fl-builder'),
-                            'help'          => __( 'The width of this column on medium devices such as tablets.', 'fl-builder' ),
-                            'options'       => array(
-                                'default'       => __('Default', 'fl-builder'),
-                                'custom'        => __('Custom', 'fl-builder'),
-                            ),
-                            'toggle'               => array(
-                                'custom'               => array(
-                                    'fields'               => array('custom_medium_size')
-                                )
-                            ),
-                            'preview'         => array(
-                                'type'            => 'none'
-                            )
-                        ),
-                        'custom_medium_size' => array(
-                            'type'          => 'text',
-                            'label'         => __('Custom Medium Device Width', 'fl-builder'),
-                            'default'       => '100',
-                            'description'   => '%',
-                            'maxlength'     => '5',
-                            'size'          => '6',
-                            'preview'         => array(
-                                'type'            => 'none'
-                            )
-                        ),
-                        'responsive_size' => array(
-                            'type'          => 'select',
-                            'label'         => __('Small Device Width', 'fl-builder'),
-                            'help'          => __( 'The width of this column on small devices such as phones.', 'fl-builder' ),
-                            'options'       => array(
-                                'default'       => __('Default', 'fl-builder'),
-                                'custom'        => __('Custom', 'fl-builder'),
-                            ),
-                            'toggle'               => array(
-                                'custom'               => array(
-                                    'fields'               => array('custom_responsive_size')
-                                )
-                            ),
-                            'preview'         => array(
-                                'type'            => 'none'
-                            )
-                        ),
-                        'custom_responsive_size' => array(
-                            'type'          => 'text',
-                            'label'         => __( 'Custom Small Device Width', 'fl-builder' ),
-                            'default'       => '100',
-                            'description'   => '%',
-                            'maxlength'     => '5',
-                            'size'          => '6',
-                            'preview'         => array(
-                                'type'            => 'none'
-                            )
-                        )
-                    )
-                ),
                 'margins'       => array(
                     'title'         => __('Margins', 'fl-builder'),
                     'fields'        => array(
@@ -359,6 +269,104 @@ FLBuilder::register_settings_form('col', array(
                             'maxlength'     => '4',
                             'size'          => '5',
                             'placeholder'   => '0',
+                            'preview'         => array(
+                                'type'            => 'none'
+                            )
+                        )
+                    )
+                ),
+                'responsive'    => array(
+                    'title'         => __('Responsive Layout', 'fl-builder'),
+                    'fields'        => array(
+                        'responsive_display' => array(
+                            'type'          => 'select',
+                            'label'         => __('Display', 'fl-builder'),
+                            'options'       => array(
+                                ''                  => __('Always', 'fl-builder'),
+                                'desktop'           => __('Large Devices Only', 'fl-builder'),
+                                'desktop-medium'    => __('Large &amp; Medium Devices Only', 'fl-builder'),
+                                'medium'            => __('Medium Devices Only', 'fl-builder'),
+                                'medium-mobile'     => __('Medium &amp; Small Devices Only', 'fl-builder'),
+                                'mobile'            => __('Small Devices Only', 'fl-builder'),
+                            ),
+                            'help'          => __( 'Choose whether to show or hide this column at different device sizes.', 'fl-builder' ),
+                            'preview'         => array(
+                                'type'            => 'none'
+                            )
+                        ),
+                        'medium_size'   => array(
+                            'type'          => 'select',
+                            'label'         => __('Medium Device Width', 'fl-builder'),
+                            'help'          => __( 'The width of this column on medium devices such as tablets.', 'fl-builder' ),
+                            'options'       => array(
+                                'default'       => __('Default', 'fl-builder'),
+                                'custom'        => __('Custom', 'fl-builder'),
+                            ),
+                            'toggle'               => array(
+                                'custom'               => array(
+                                    'fields'               => array('custom_medium_size')
+                                )
+                            ),
+                            'preview'         => array(
+                                'type'            => 'none'
+                            )
+                        ),
+                        'custom_medium_size' => array(
+                            'type'          => 'text',
+                            'label'         => __('Custom Medium Device Width', 'fl-builder'),
+                            'default'       => '100',
+                            'description'   => '%',
+                            'maxlength'     => '5',
+                            'size'          => '6',
+                            'preview'         => array(
+                                'type'            => 'none'
+                            )
+                        ),
+                        'responsive_size' => array(
+                            'type'          => 'select',
+                            'label'         => __('Small Device Width', 'fl-builder'),
+                            'help'          => __( 'The width of this column on small devices such as phones.', 'fl-builder' ),
+                            'options'       => array(
+                                'default'       => __('Default', 'fl-builder'),
+                                'custom'        => __('Custom', 'fl-builder'),
+                            ),
+                            'toggle'               => array(
+                                'custom'               => array(
+                                    'fields'               => array('custom_responsive_size')
+                                )
+                            ),
+                            'preview'         => array(
+                                'type'            => 'none'
+                            )
+                        ),
+                        'custom_responsive_size' => array(
+                            'type'          => 'text',
+                            'label'         => __( 'Custom Small Device Width', 'fl-builder' ),
+                            'default'       => '100',
+                            'description'   => '%',
+                            'maxlength'     => '5',
+                            'size'          => '6',
+                            'preview'         => array(
+                                'type'            => 'none'
+                            )
+                        )
+                    )
+                ),
+                'css_selectors' => array(
+                    'title'         => __('CSS Selectors', 'fl-builder'),
+                    'fields'        => array(
+		                'id'         	=> array(
+		                    'type'          => 'text',
+		                    'label'         => __('ID', 'fl-builder'),
+		                    'help'          => __( "A unique ID that will be applied to this column's HTML. Must start with a letter and only contain dashes, underscores, letters or numbers. No spaces.", 'fl-builder' ),
+		                    'preview'         => array(
+		                        'type'            => 'none'
+		                    )
+		                ),
+                        'class'         => array(
+                            'type'          => 'text',
+                            'label'         => __('CSS Class', 'fl-builder'),
+                            'help'          => __( "A class that will be applied to this column's HTML. Must start with a letter and only contain dashes, underscores, letters or numbers. Separate multiple classes with spaces.", 'fl-builder' ),
                             'preview'         => array(
                                 'type'            => 'none'
                             )

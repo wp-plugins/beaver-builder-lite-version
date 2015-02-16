@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: {FL_BUILDER_NAME}\n"
-"POT-Creation-Date: 2015-01-26 09:21-0800\n"
-"PO-Revision-Date: 2015-01-26 18:35+0100\n"
+"POT-Creation-Date: 2015-02-12 10:28-0800\n"
+"PO-Revision-Date: 2015-02-12 21:02+0100\n"
 "Last-Translator: WebMan - Oliver Juhas <webmandesigneu@gmail.com>\n"
 "Language-Team: WebMan Design <webmandesigneu@gmail.com>\n"
 "Language: sk_SK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -18,7 +18,73 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: classes/class-fl-builder-admin.php:39
+#: classes/class-fl-builder-admin-settings.php:93
+#: includes/global-settings.php:4
+#, php-format
+msgctxt "%s stands for custom branded \"Page Builder\" name."
+msgid "%s Settings"
+msgstr "Nastavenia pre %s"
+
+#: classes/class-fl-builder-admin-settings.php:107
+msgid "Settings updated!"
+msgstr "Nastavenia boli aktualizované!"
+
+#: classes/class-fl-builder-admin-settings.php:118
+msgid "License"
+msgstr "Licencia"
+
+#: classes/class-fl-builder-admin-settings.php:122
+#: includes/admin-settings-upgrade.php:3
+msgid "Upgrade"
+msgstr "Aktualizácia"
+
+#: classes/class-fl-builder-admin-settings.php:126
+#: includes/global-settings.php:67
+msgid "Modules"
+msgstr "Moduly"
+
+#: classes/class-fl-builder-admin-settings.php:130 includes/ui.php:44
+msgid "Templates"
+msgstr "Šablóny"
+
+#: classes/class-fl-builder-admin-settings.php:134
+#: includes/admin-settings-post-types.php:3
+msgid "Post Types"
+msgstr "Typy obsahu"
+
+#: classes/class-fl-builder-admin-settings.php:138
+#: modules/icon-group/icon-group.php:27
+msgid "Icons"
+msgstr "Ikonky"
+
+#: classes/class-fl-builder-admin-settings.php:142
+msgid "Editing"
+msgstr "Editácia"
+
+#: classes/class-fl-builder-admin-settings.php:146
+#: includes/admin-settings-branding.php:3
+msgid "Branding"
+msgstr "Značka"
+
+#: classes/class-fl-builder-admin-settings.php:150
+#: includes/admin-settings-uninstall.php:3
+#: includes/admin-settings-uninstall.php:15
+msgid "Uninstall"
+msgstr "Odinštalovať"
+
+#: classes/class-fl-builder-admin-settings.php:368
+msgid "Error! You must have at least one icon set enabled."
+msgstr "Chyba! Musíte povoliť aspon jednu sadu ikoniek."
+
+#: classes/class-fl-builder-admin-settings.php:410
+msgid "Error! Could not unzip file."
+msgstr "Chyba! Nepodarilo sa rozbalit súbor."
+
+#: classes/class-fl-builder-admin-settings.php:444
+msgid "Error! Please upload an icon set from either Icomoon or Fontello."
+msgstr "Chyba! Prosíme, nahrajte sadu ikoniek z Icomoon alebo Fontello."
+
+#: classes/class-fl-builder-admin.php:40
 #, php-format
 msgid ""
 "This version of the <strong>Page Builder</strong> plugin is not compatible "
@@ -29,7 +95,7 @@ msgstr ""
 "sieťovou inštaláciou WordPress (Multisite). <a%s>Aktualizujte modul</a> na "
 "jeho sieťovú verziu."
 
-#: classes/class-fl-builder-admin.php:49
+#: classes/class-fl-builder-admin.php:50
 msgid ""
 "The <strong>Page Builder</strong> plugin requires WordPress version 3.5 or "
 "greater. Please update WordPress before activating the plugin."
@@ -37,23 +103,33 @@ msgstr ""
 "Modul <strong>Editora stránok</strong> vyžaduje WordPress aspoň vo verzii "
 "3.5. Aktualizujte WordPress pred aktiváciou modulu."
 
-#: classes/class-fl-builder-admin.php:90
+#: classes/class-fl-builder-admin.php:96
 #, php-format
 msgid "Page Builder activated! <a%s>Click here</a> to enable remote updates."
 msgstr ""
 "Editor stránok bol aktivovaný! <a%s>Zapnite automatické aktualizácie.</a>"
 
-#: classes/class-fl-builder-admin.php:184
+#: classes/class-fl-builder-admin.php:191
 msgctxt "Plugin action link label."
 msgid "Upgrade"
 msgstr "Aktualizovať"
 
-#: classes/class-fl-builder-admin.php:197
-#: classes/class-fl-builder-model.php:2435
+#: classes/class-fl-builder-admin.php:202
+#: classes/class-fl-builder-model.php:2538
 msgid "Page Builder"
 msgstr "Editor stránok"
 
-#: classes/class-fl-builder-model.php:1852
+#: classes/class-fl-builder-model.php:1363
+#, php-format
+msgctxt "%s stands for the module filename"
+msgid ""
+"A module with the filename %s.php already exists! Please namespace your "
+"module filenames to ensure compatibility with Beaver Builder."
+msgstr ""
+"Súbor %s.php modulu už existuje! Prosíme, použite predponu v názvoch súborov "
+"vlastných modulov aby bola zachovaná kompatibilita s Beaver Builder modulom."
+
+#: classes/class-fl-builder-model.php:1953
 #, php-format
 msgctxt "%s stands for post/page title."
 msgid "Copy of %s"
@@ -83,88 +159,99 @@ msgstr "Miniatúra"
 msgid "Page Builder Templates"
 msgstr "Šablóny Editora stránok"
 
-#: classes/class-fl-builder.php:699
+#: classes/class-fl-builder.php:702
 #, php-format
 msgctxt "Field name to add."
 msgid "Add %s"
 msgstr "%s &rarr; pridať"
 
-#: classes/class-fl-builder.php:762 classes/class-fl-builder.php:764
+#: classes/class-fl-builder.php:765 classes/class-fl-builder.php:767
 msgctxt "Custom post type label."
 msgid "Layout Templates"
 msgstr "Šablóny rozloženia"
 
-#: classes/class-fl-builder.php:763 classes/class-fl-builder.php:765
+#: classes/class-fl-builder.php:766 classes/class-fl-builder.php:768
 msgctxt "Custom post type label."
 msgid "Layout Template"
 msgstr "Šablóna rozloženia"
 
-#: classes/class-fl-builder.php:766
+#: classes/class-fl-builder.php:769
 msgctxt "Custom post type label."
 msgid "Add New"
 msgstr "Pridať novú"
 
-#: classes/class-fl-builder.php:767
+#: classes/class-fl-builder.php:770
 msgctxt "Custom post type label."
 msgid "Add New Layout Template"
 msgstr "Pridať novú šablónu rozloženia"
 
-#: classes/class-fl-builder.php:768
+#: classes/class-fl-builder.php:771
 msgctxt "Custom post type label."
 msgid "New Layout Template"
 msgstr "Nová šablóna rozloženia"
 
-#: classes/class-fl-builder.php:769
+#: classes/class-fl-builder.php:772
 msgctxt "Custom post type label."
 msgid "Edit Layout Template"
 msgstr "Upraviť šablónu rozloženia"
 
-#: classes/class-fl-builder.php:770
+#: classes/class-fl-builder.php:773
 msgctxt "Custom post type label."
 msgid "View Layout Template"
 msgstr "Zobraziť šablónu rozloženia"
 
-#: classes/class-fl-builder.php:771
+#: classes/class-fl-builder.php:774
 msgctxt "Custom post type label."
 msgid "All Layout Templates"
 msgstr "Všetky šablóny rozloženia"
 
-#: classes/class-fl-builder.php:772
+#: classes/class-fl-builder.php:775
 msgctxt "Custom post type label."
 msgid "Search Layout Templates"
 msgstr "Hľadať šablóny rozloženia"
 
-#: classes/class-fl-builder.php:773
+#: classes/class-fl-builder.php:776
 msgctxt "Custom post type label."
 msgid "Parent Layout Templates:"
 msgstr "Nadradené šablóny rozloženia:"
 
-#: classes/class-fl-builder.php:774
+#: classes/class-fl-builder.php:777
 msgctxt "Custom post type label."
 msgid "No layout templates found."
 msgstr "Nenašli sa žiadne šablóny rozloženia."
 
-#: classes/class-fl-builder.php:775
+#: classes/class-fl-builder.php:778
 msgctxt "Custom post type label."
 msgid "No layout templates found in Trash."
 msgstr "V koši sa nenašli žiadne šablóny rozloženia."
 
-#: classes/class-fl-builder.php:1113 includes/js-config.php:58
+#: classes/class-fl-builder.php:1143 includes/js-config.php:61
 #, php-format
 msgctxt "%s stands for module name."
 msgid "%s Settings"
 msgstr "%s &rarr; Nastavenia"
 
-#: includes/admin-branding.php:3 includes/admin-settings.php:36
-#: includes/multisite-settings.php:23
-msgid "Branding"
-msgstr "Značka"
+#: includes/admin-posts.php:3 modules/rich-text/rich-text.php:14
+msgid "Text Editor"
+msgstr "Textový editor"
 
-#: includes/admin-branding.php:11
+#: includes/admin-posts.php:7
+#, php-format
+msgctxt "%s stands for custom branded \"Page Builder\" name."
+msgid "%s is currently active for this page."
+msgstr "Na tejto stránke sa používa %s."
+
+#: includes/admin-posts.php:8
+#, php-format
+msgctxt "%s stands for custom branded \"Page Builder\" name."
+msgid "Launch %s"
+msgstr "Spustiť %s"
+
+#: includes/admin-settings-branding.php:7
 msgid "White label the page builder by entering a custom name below."
 msgstr "Zmeňte značku editora stránok zadaním vlastného mena, názvu editora."
 
-#: includes/admin-branding.php:14
+#: includes/admin-settings-branding.php:10
 msgid ""
 "Additionally, you may also add a custom icon by entering the URL of an image "
 "below. Leave the field blank if you do not wish to use an icon."
@@ -172,25 +259,215 @@ msgstr ""
 "Dodatočne môžete pridať aj vlastnú ikonku zadaním URL adresy obrázku. Ak "
 "ikonku nechcete použiť, ponechajte pole prázdne."
 
-#: includes/admin-branding.php:18
+#: includes/admin-settings-branding.php:14
 msgid "Save Branding"
 msgstr "Uložiť nastavenie značky"
 
-#: includes/admin-edit-template.php:3
+#: includes/admin-settings-editing.php:3
+msgid "Editing Settings"
+msgstr "Nastavenia editácie"
+
+#: includes/admin-settings-editing.php:10 includes/admin-settings-icons.php:27
+#: includes/admin-settings-modules.php:10
+#: includes/admin-settings-post-types.php:10
+#: includes/admin-settings-templates.php:10
+msgid "Override network settings?"
+msgstr "Ignorovať sieťové nastavenia?"
+
+#: includes/admin-settings-editing.php:16
+#, php-format
+msgid ""
+"Set the <a%s>capability</a> required for users to access advanced builder "
+"editing such as adding, deleting or moving modules."
+msgstr ""
+"Nastavte <a%s>oprávnenia</a> vyžadované k pokročilej editácii stránok, ako "
+"je pridávanie, odstraňovanie alebo presun modulov."
+
+#: includes/admin-settings-editing.php:22
+msgid "Save Editing Settings"
+msgstr "Uložiť nastavenia editácie"
+
+#: includes/admin-settings-icons.php:3
+msgid "Icon Settings"
+msgstr "Nastavenia ikoniek"
+
+#: includes/admin-settings-icons.php:13
+msgid "Icons for the main site must be managed in the network admin."
+msgstr "Ikonky pre hlavnú stránku musíte nastaviť v administrácii siete."
+
+#: includes/admin-settings-icons.php:33
+#, php-format
+msgid ""
+"Enable or disable icon sets using the options below or upload a custom icon "
+"set from either <a%s>Icomoon</a> or <a%s>Fontello</a>."
+msgstr ""
+"Povoľte alebo zakážte sady ikoniek alebo nahrajte vlastnú sadu ikoniek zo "
+"stránky <a%s>Icomoon</a> alebo <a%s>Fontello</a>."
+
+#: includes/admin-settings-icons.php:48
+msgctxt "Plugin setup page: Delete icon set."
+msgid "Delete"
+msgstr "Vymazať"
+
+#: includes/admin-settings-icons.php:59
+msgid "Upload Icon Set"
+msgstr "Nahrať sadu ikoniek"
+
+#: includes/admin-settings-icons.php:60
+msgid "Save Icon Settings"
+msgstr "Uložiť nastavenia ikoniek"
+
+#: includes/admin-settings-js-config.php:4
+msgid "Select File"
+msgstr "Zvoliť súbor"
+
+#: includes/admin-settings-js-config.php:5
+msgid ""
+"Please type \"uninstall\" in the box below to confirm that you really want "
+"to uninstall the page builder and all of its data."
+msgstr ""
+"Zadajte \"uninstall\" pre potvrdenie odinštalovania editora stránok a "
+"odstránenia všetkých jeho dát."
+
+#: includes/admin-settings-modules.php:3
+msgid "Enabled Modules"
+msgstr "Aktivované moduly"
+
+#: includes/admin-settings-modules.php:16
+msgid "Check or uncheck modules below to enable or disable them."
+msgstr ""
+"Zaškrtnite alebo odškrtnite doleuvedené moduly pre ich aktiváciu alebo "
+"deaktiváciu."
+
+#: includes/admin-settings-modules.php:25
+msgctxt "Plugin setup page: Modules."
+msgid "All"
+msgstr "Všetky"
+
+#: includes/admin-settings-modules.php:43
+msgid "Save Module Settings"
+msgstr "Uložiť nastavenia modulov"
+
+#: includes/admin-settings-post-types.php:18
+msgid ""
+"Enter a comma separated list of the post types you would like the builder to "
+"work with."
+msgstr ""
+"Zadajte čiarkou oddelený zoznam typov článkou, s ktorými chcete editor "
+"stránok používať."
+
+#: includes/admin-settings-post-types.php:19
+#: includes/admin-settings-post-types.php:39
+msgid "NOTE: Not all custom post types may be supported."
+msgstr "UPOZORNENIE: Nie všetky vlastné typy článkov môžu byť podporované."
+
+#: includes/admin-settings-post-types.php:34
+msgid "Example: page, post, product"
+msgstr "Napríklad: page, post, product"
+
+#: includes/admin-settings-post-types.php:38
+msgid "Select the post types you would like the builder to work with."
+msgstr ""
+"Zvoľte typy obsahu (článkov), s ktorými chcete editor stránok používať."
+
+#: includes/admin-settings-post-types.php:70
+msgid "Save Post Types"
+msgstr "Uložiť typy obsahu"
+
+#: includes/admin-settings-templates.php:3 includes/template-settings.php:4
+msgid "Template Settings"
+msgstr "Nastavenia šablón"
+
+#: includes/admin-settings-templates.php:16
+msgid "Enable or disable templates using the options below."
+msgstr "Aktivujte alebo deaktivujte šablóny pomocou doleuvedených možností."
+
+#: includes/admin-settings-templates.php:23
+msgid "Enable All Templates"
+msgstr "Sprístupniť všetky šablóny"
+
+#: includes/admin-settings-templates.php:24
+msgid "Enable Core Templates Only"
+msgstr "Sprístupniť iba základné šablóny"
+
+#: includes/admin-settings-templates.php:25
+msgid "Enable User Templates Only"
+msgstr "Sprístupniť iba užívateľské šablóny"
+
+#: includes/admin-settings-templates.php:26
+msgid "Disable All Templates"
+msgstr "Zakázať všetky šablóny"
+
+#: includes/admin-settings-templates.php:30
+msgid "Save Template Settings"
+msgstr "Uložiť nastavenia šablón"
+
+#: includes/admin-settings-uninstall.php:5
+msgid ""
+"Clicking the button below will uninstall the page builder plugin and delete "
+"all of the data associated with it. You can uninstall or deactivate the page "
+"builder from the plugins page instead if you do not wish to delete the data."
+msgstr ""
+"Kliknutím na tlačidlo odinštalujete modul editora stránok a odstránite "
+"všetky dáta s ním asociované. Editor stránok môžete odinštalovať alebo "
+"deaktivovať aj v sekcii modulov, ak si neprajete odstrániť dáta."
+
+#: includes/admin-settings-uninstall.php:7
+#: includes/admin-settings-uninstall.php:10
+#: includes/updater/includes/form.php:31
+msgid "NOTE:"
+msgstr "UPOZORNENIE:"
+
+#: includes/admin-settings-uninstall.php:7
+msgid ""
+"The builder does not delete the post meta <code>_fl_builder_data</code>, "
+"<code>_fl_builder_draft</code> and <code>_fl_builder_enabled</code> in case "
+"you want to reinstall it later. If you do, the builder will rebuild all of "
+"its data using those meta values."
+msgstr ""
+"Nebudú odstránené <code>_fl_builder_data</code>, <code>_fl_builder_draft</"
+"code> a <code>_fl_builder_enabled</code> meta dáta článov pre prípad, že sa "
+"rozhodnete znovu Editor stránok nainštalovať. V takom prípade sa dáta "
+"použijú na obnovenie rozloženia stránok."
+
+#: includes/admin-settings-uninstall.php:10
+#: includes/updater/includes/form.php:31
+msgid "This applies to all sites on the network."
+msgstr "Toto nastavenie sa aplikuje na všetky stránky v sieti."
+
+#: includes/admin-settings-upgrade.php:5
+msgid ""
+"You are currently running the lite version of the Beaver Builder plugin. "
+"Upgrade today for access to premium features such as advanced modules, "
+"templates, support and more!"
+msgstr ""
+"Používate odľahčenú (Lite) verziu modulu Beaver Builder. Aktualizujte na Pro "
+"verziu pre získanie pokročilých modulov, šablón, technickej podpory a iných "
+"prémiových vylepšení!"
+
+#: includes/admin-settings-upgrade.php:7
+msgid "Upgrade Now"
+msgstr "Aktualizovať"
+
+#: includes/admin-settings-upgrade.php:9
+msgid "Learn More"
+msgstr "Dozvedieť sa viac"
+
+#: includes/admin-templates-edit.php:3
 msgid "Edit Template"
 msgstr "Upraviť šablónu"
 
-#: includes/admin-edit-template.php:8
+#: includes/admin-templates-edit.php:8
 msgctxt "Template edit form field label. Template name."
 msgid "Name"
 msgstr "Názov"
 
-#: includes/admin-edit-template.php:12 modules/callout/callout.php:303
+#: includes/admin-templates-edit.php:12 modules/callout/callout.php:303
 #: modules/post-grid/post-grid.php:113
 msgid "Image"
 msgstr "Obrázok"
 
-#: includes/admin-edit-template.php:16 includes/row-settings.php:155
+#: includes/admin-templates-edit.php:16 includes/row-settings.php:155
 #: includes/template-settings.php:23 modules/callout/callout.php:351
 #: modules/callout/callout.php:371
 #: modules/content-slider/content-slider.php:466
@@ -198,12 +475,12 @@ msgstr "Obrázok"
 msgid "Position"
 msgstr "Pozícia"
 
-#: includes/admin-edit-template.php:20 includes/template-settings.php:28
+#: includes/admin-templates-edit.php:20 includes/template-settings.php:28
 msgctxt "Template edit form field label. Is template premium one?"
 msgid "Premium"
 msgstr "Prémiová"
 
-#: includes/admin-edit-template.php:23 includes/admin-templates.php:30
+#: includes/admin-templates-edit.php:23 includes/admin-templates.php:30
 #: includes/global-settings.php:18 includes/global-settings.php:87
 #: includes/row-settings.php:307 includes/template-settings.php:31
 #: modules/accordion/accordion.php:90 modules/button/button.php:135
@@ -234,7 +511,7 @@ msgstr "Prémiová"
 msgid "No"
 msgstr "Nie"
 
-#: includes/admin-edit-template.php:24 includes/admin-templates.php:30
+#: includes/admin-templates-edit.php:24 includes/admin-templates.php:30
 #: includes/global-settings.php:19 includes/global-settings.php:88
 #: includes/row-settings.php:308 includes/template-settings.php:32
 #: modules/accordion/accordion.php:89 modules/button/button.php:136
@@ -265,225 +542,23 @@ msgstr "Nie"
 msgid "Yes"
 msgstr "Áno"
 
-#: includes/admin-edit-template.php:29 includes/template-settings.php:37
+#: includes/admin-templates-edit.php:29 includes/template-settings.php:37
 msgid "Category"
 msgstr "Kategória"
 
-#: includes/admin-edit-template.php:32 includes/template-settings.php:40
+#: includes/admin-templates-edit.php:32 includes/template-settings.php:40
 msgctxt "Templates category label."
 msgid "Landing Pages"
 msgstr "Vstupné stránky"
 
-#: includes/admin-edit-template.php:33 includes/template-settings.php:41
+#: includes/admin-templates-edit.php:33 includes/template-settings.php:41
 msgctxt "Templates category label."
 msgid "Company Info"
 msgstr "Informačné"
 
-#: includes/admin-edit-template.php:40
+#: includes/admin-templates-edit.php:40
 msgid "Update Template"
 msgstr "Aktualizovať šablónu"
-
-#: includes/admin-posts.php:3 modules/rich-text/rich-text.php:14
-msgid "Text Editor"
-msgstr "Textový editor"
-
-#: includes/admin-posts.php:7
-#, php-format
-msgctxt "%s stands for custom branded \"Page Builder\" name."
-msgid "%s is currently active for this page."
-msgstr "Na tejto stránke sa používa %s."
-
-#: includes/admin-posts.php:8
-#, php-format
-msgctxt "%s stands for custom branded \"Page Builder\" name."
-msgid "Launch %s"
-msgstr "Spustiť %s"
-
-#: includes/admin-settings.php:7 includes/global-settings.php:4
-#: includes/multisite-settings.php:7
-#, php-format
-msgctxt "%s stands for custom branded \"Page Builder\" name."
-msgid "%s Settings"
-msgstr "Nastavenia pre %s"
-
-#: includes/admin-settings.php:12 includes/multisite-settings.php:12
-msgid "Settings updated!"
-msgstr "Nastavenia boli aktualizované!"
-
-#: includes/admin-settings.php:19 includes/multisite-settings.php:18
-msgid "License"
-msgstr "Licencia"
-
-#: includes/admin-settings.php:23 includes/admin-settings.php:59
-msgid "Upgrade"
-msgstr "Aktualizácia"
-
-#: includes/admin-settings.php:26 includes/global-settings.php:67
-#: includes/multisite-settings.php:19
-msgid "Modules"
-msgstr "Moduly"
-
-#: includes/admin-settings.php:29 includes/multisite-settings.php:20
-#: includes/ui.php:44
-msgid "Templates"
-msgstr "Šablóny"
-
-#: includes/admin-settings.php:32 includes/admin-settings.php:163
-#: includes/multisite-settings.php:21 includes/multisite-settings.php:112
-msgid "Post Types"
-msgstr "Typy obsahu"
-
-#: includes/admin-settings.php:33 includes/multisite-settings.php:22
-msgid "Editing"
-msgstr "Editácia"
-
-#: includes/admin-settings.php:40 includes/admin-settings.php:250
-#: includes/admin-settings.php:262 includes/multisite-settings.php:24
-#: includes/multisite-settings.php:172 includes/multisite-settings.php:184
-msgid "Uninstall"
-msgstr "Odinštalovať"
-
-#: includes/admin-settings.php:61
-msgid ""
-"You are currently running the lite version of the Beaver Builder plugin. "
-"Upgrade today for access to premium features such as advanced modules, "
-"templates, support and more!"
-msgstr ""
-"Používate odľahčenú (Lite) verziu modulu Beaver Builder. Aktualizujte na Pro "
-"verziu pre získanie pokročilých modulov, šablón, technickej podpory a iných "
-"prémiových vylepšení!"
-
-#: includes/admin-settings.php:63
-msgid "Upgrade Now"
-msgstr "Aktualizovať"
-
-#: includes/admin-settings.php:65
-msgid "Learn More"
-msgstr "Dozvedieť sa viac"
-
-#: includes/admin-settings.php:74 includes/multisite-settings.php:39
-msgid "Enabled Modules"
-msgstr "Aktivované moduly"
-
-#: includes/admin-settings.php:81 includes/admin-settings.php:132
-#: includes/admin-settings.php:170 includes/admin-settings.php:222
-msgid "Override network settings?"
-msgstr "Ignorovať sieťové nastavenia?"
-
-#: includes/admin-settings.php:87 includes/multisite-settings.php:45
-msgid "Check or uncheck modules below to enable or disable them."
-msgstr ""
-"Zaškrtnite alebo odškrtnite doleuvedené moduly pre ich aktiváciu alebo "
-"deaktiváciu."
-
-#: includes/admin-settings.php:96 includes/multisite-settings.php:54
-msgctxt "Plugin setup page: Modules."
-msgid "All"
-msgstr "Všetky"
-
-#: includes/admin-settings.php:114 includes/multisite-settings.php:72
-msgid "Save Module Settings"
-msgstr "Uložiť nastavenia modulov"
-
-#: includes/admin-settings.php:125 includes/multisite-settings.php:82
-#: includes/template-settings.php:4
-msgid "Template Settings"
-msgstr "Nastavenia šablón"
-
-#: includes/admin-settings.php:138 includes/multisite-settings.php:88
-msgid "Enable or disable templates using the options below."
-msgstr "Aktivujte alebo deaktivujte šablóny pomocou doleuvedených možností."
-
-#: includes/admin-settings.php:145 includes/multisite-settings.php:95
-msgid "Enable All Templates"
-msgstr "Sprístupniť všetky šablóny"
-
-#: includes/admin-settings.php:146 includes/multisite-settings.php:96
-msgid "Enable Core Templates Only"
-msgstr "Sprístupniť iba základné šablóny"
-
-#: includes/admin-settings.php:147 includes/multisite-settings.php:97
-msgid "Enable User Templates Only"
-msgstr "Sprístupniť iba užívateľské šablóny"
-
-#: includes/admin-settings.php:148 includes/multisite-settings.php:98
-msgid "Disable All Templates"
-msgstr "Zakázať všetky šablóny"
-
-#: includes/admin-settings.php:152 includes/multisite-settings.php:102
-msgid "Save Template Settings"
-msgstr "Uložiť nastavenia šablón"
-
-#: includes/admin-settings.php:176
-msgid "Select the post types you would like the builder to work with."
-msgstr ""
-"Zvoľte typy obsahu (článkov), s ktorými chcete editor stránok používať."
-
-#: includes/admin-settings.php:177 includes/multisite-settings.php:117
-msgid "NOTE: Not all custom post types may be supported."
-msgstr "UPOZORNENIE: Nie všetky vlastné typy článkov môžu byť podporované."
-
-#: includes/admin-settings.php:205 includes/multisite-settings.php:135
-msgid "Save Post Types"
-msgstr "Uložiť typy obsahu"
-
-#: includes/admin-settings.php:215 includes/multisite-settings.php:145
-msgid "Editing Settings"
-msgstr "Nastavenia editácie"
-
-#: includes/admin-settings.php:228 includes/multisite-settings.php:150
-#, php-format
-msgid ""
-"Set the <a%s>capability</a> required for users to access advanced builder "
-"editing such as adding, deleting or moving modules."
-msgstr ""
-"Nastavte <a%s>oprávnenia</a> vyžadované k pokročilej editácii stránok, ako "
-"je pridávanie, odstraňovanie alebo presun modulov."
-
-#: includes/admin-settings.php:234 includes/multisite-settings.php:156
-msgid "Save Editing Settings"
-msgstr "Uložiť nastavenia editácie"
-
-#: includes/admin-settings.php:252 includes/multisite-settings.php:174
-msgid ""
-"Clicking the button below will uninstall the page builder plugin and delete "
-"all of the data associated with it. You can uninstall or deactivate the page "
-"builder from the plugins page instead if you do not wish to delete the data."
-msgstr ""
-"Kliknutím na tlačidlo odinštalujete modul editora stránok a odstránite "
-"všetky dáta s ním asociované. Editor stránok môžete odinštalovať alebo "
-"deaktivovať aj v sekcii modulov, ak si neprajete odstrániť dáta."
-
-#: includes/admin-settings.php:254 includes/admin-settings.php:257
-#: includes/multisite-settings.php:176 includes/multisite-settings.php:179
-#: includes/updater/includes/form.php:31
-msgid "NOTE:"
-msgstr "UPOZORNENIE:"
-
-#: includes/admin-settings.php:254 includes/multisite-settings.php:176
-msgid ""
-"The builder does not delete the post meta <code>_fl_builder_data</code>, "
-"<code>_fl_builder_draft</code> and <code>_fl_builder_enabled</code> in case "
-"you want to reinstall it later. If you do, the builder will rebuild all of "
-"its data using those meta values."
-msgstr ""
-"Nebudú odstránené <code>_fl_builder_data</code>, <code>_fl_builder_draft</"
-"code> a <code>_fl_builder_enabled</code> meta dáta článov pre prípad, že sa "
-"rozhodnete znovu Editor stránok nainštalovať. V takom prípade sa dáta "
-"použijú na obnovenie rozloženia stránok."
-
-#: includes/admin-settings.php:257 includes/multisite-settings.php:179
-#: includes/updater/includes/form.php:31
-msgid "This applies to all sites on the network."
-msgstr "Toto nastavenie sa aplikuje na všetky stránky v sieti."
-
-#: includes/admin-settings.php:276 includes/multisite-settings.php:198
-msgid ""
-"Please type \"uninstall\" in the box below to confirm that you really want "
-"to uninstall the page builder and all of its data."
-msgstr ""
-"Zadajte \"uninstall\" pre potvrdenie odinštalovania editora stránok a "
-"odstránenia všetkých jeho dát."
 
 #: includes/admin-templates.php:3
 msgid "Page Builder Template"
@@ -513,15 +588,15 @@ msgstr "Upraviť"
 msgid "Delete"
 msgstr "Odstrániť"
 
-#: includes/admin-templates.php:40 includes/js-config.php:26
+#: includes/admin-templates.php:40 includes/js-config.php:27
 msgid "Do you really want to delete this template?"
 msgstr "Naozaj chcete túto šablónu vymazať?"
 
-#: includes/column-settings.php:4 includes/js-config.php:21
+#: includes/column-settings.php:4 includes/js-config.php:22
 msgid "Column Settings"
 msgstr "Nastavenia stĺpca"
 
-#: includes/column-settings.php:7 includes/module-settings.php:95
+#: includes/column-settings.php:7 includes/module-settings.php:87
 #: includes/row-settings.php:9 modules/accordion/accordion.php:45
 #: modules/button/button.php:95 modules/callout/callout.php:239
 #: modules/content-slider/content-slider.php:419 modules/cta/cta.php:99
@@ -643,124 +718,27 @@ msgstr "Šírka vpravo"
 msgid "Advanced"
 msgstr "Pokročilé"
 
-#: includes/column-settings.php:177 includes/module-settings.php:13
-#: includes/row-settings.php:456
-msgid "CSS Class"
-msgstr "Trieda CSS"
-
-#: includes/column-settings.php:178
-msgid ""
-"A custom CSS class that will be applied to this column. Spaces only, no dots."
-msgstr ""
-"Vlastná trieda CSS aplikovaná na tento stĺpec. Povolené sú iba medzery, "
-"žiadne bodky."
-
-#: includes/column-settings.php:186 includes/global-settings.php:80
-msgid "Responsive Layout"
-msgstr "Responzívne rozloženie"
-
-#: includes/column-settings.php:190 includes/module-settings.php:21
-#: includes/row-settings.php:464 modules/slideshow/slideshow.php:290
-msgid "Display"
-msgstr "Zobrazenie"
-
-#: includes/column-settings.php:192 includes/module-settings.php:23
-#: includes/row-settings.php:466
-msgid "Always"
-msgstr "Vždy"
-
-#: includes/column-settings.php:193 includes/module-settings.php:24
-#: includes/row-settings.php:467
-msgid "Large Devices Only"
-msgstr "Iba na veľkých zariadeniach"
-
-#: includes/column-settings.php:194 includes/module-settings.php:25
-#: includes/row-settings.php:468
-msgid "Large &amp; Medium Devices Only"
-msgstr "Iba na veľkých a stredných zariadeniach"
-
-#: includes/column-settings.php:195 includes/module-settings.php:26
-#: includes/row-settings.php:469
-msgid "Medium Devices Only"
-msgstr "Iba na stredných zariadeniach"
-
-#: includes/column-settings.php:196 includes/module-settings.php:27
-#: includes/row-settings.php:470
-msgid "Medium &amp; Small Devices Only"
-msgstr "Iba na stredných a malých zariadeniach"
-
-#: includes/column-settings.php:197 includes/module-settings.php:28
-#: includes/row-settings.php:471
-msgid "Small Devices Only"
-msgstr "Iba na malých zariadeniach"
-
-#: includes/column-settings.php:199
-msgid "Choose whether to show or hide this column at different device sizes."
-msgstr ""
-"Zvoľte, či sa má tento stĺpec zobraziť na zariadeniach rôznych veľkostí."
-
-#: includes/column-settings.php:206
-msgid "Medium Device Width"
-msgstr "Šírka pre stredne veľké zariadenia"
-
-#: includes/column-settings.php:207
-msgid "The width of this column on medium devices such as tablets."
-msgstr "Šírka tohto stĺpca na stredne veľkých zariadeniach, ako sú tablety."
-
-#: includes/column-settings.php:209 includes/column-settings.php:237
-#: modules/callout/callout.php:281
-#: modules/content-slider/content-slider.php:442 modules/cta/cta.php:165
-#: modules/heading/heading.php:117 modules/heading/heading.php:144
-#: modules/heading/heading.php:174
-msgid "Default"
-msgstr "Prednastavené"
-
-#: includes/column-settings.php:210 includes/column-settings.php:238
-#: modules/button/button.php:151 modules/callout/callout.php:282
-#: modules/content-slider/content-slider.php:443 modules/cta/cta.php:166
-#: modules/heading/heading.php:118 modules/heading/heading.php:145
-#: modules/heading/heading.php:175
-#: modules/social-buttons/social-buttons.php:74
-msgid "Custom"
-msgstr "Vlastné"
-
-#: includes/column-settings.php:223
-msgid "Custom Medium Device Width"
-msgstr "Vlastná šírka na stredne veľkých zariadeniach"
-
-#: includes/column-settings.php:234
-msgid "Small Device Width"
-msgstr "Šírka pre malé zariadenia"
-
-#: includes/column-settings.php:235
-msgid "The width of this column on small devices such as phones."
-msgstr "Šírka tohto stĺpca na malých zariadeniach, ako sú telefóny."
-
-#: includes/column-settings.php:251
-msgid "Custom Small Device Width"
-msgstr "Vlastná šírka na malých zariadeniach"
-
-#: includes/column-settings.php:263 includes/global-settings.php:41
-#: includes/global-settings.php:71 includes/module-settings.php:38
-#: includes/row-settings.php:481
+#: includes/column-settings.php:173 includes/global-settings.php:41
+#: includes/global-settings.php:71 includes/module-settings.php:9
+#: includes/row-settings.php:452
 msgid "Margins"
 msgstr "Odsadenie"
 
-#: includes/column-settings.php:267 includes/column-settings.php:320
-#: includes/module-settings.php:42 includes/row-settings.php:485
-#: includes/row-settings.php:538 modules/slideshow/slideshow.php:475
+#: includes/column-settings.php:177 includes/column-settings.php:230
+#: includes/module-settings.php:13 includes/row-settings.php:456
+#: includes/row-settings.php:509 modules/slideshow/slideshow.php:475
 msgid "Top"
 msgstr "Hore"
 
-#: includes/column-settings.php:279 includes/column-settings.php:332
-#: includes/module-settings.php:54 includes/row-settings.php:497
-#: includes/row-settings.php:550 modules/slideshow/slideshow.php:474
+#: includes/column-settings.php:189 includes/column-settings.php:242
+#: includes/module-settings.php:25 includes/row-settings.php:468
+#: includes/row-settings.php:521 modules/slideshow/slideshow.php:474
 msgid "Bottom"
 msgstr "Dole"
 
-#: includes/column-settings.php:291 includes/column-settings.php:344
-#: includes/module-settings.php:66 includes/row-settings.php:509
-#: includes/row-settings.php:562 modules/button/button.php:177
+#: includes/column-settings.php:201 includes/column-settings.php:254
+#: includes/module-settings.php:37 includes/row-settings.php:480
+#: includes/row-settings.php:533 modules/button/button.php:177
 #: modules/callout/callout.php:250
 #: modules/content-slider/content-slider.php:470 modules/cta/cta.php:123
 #: modules/heading/heading.php:89 modules/heading/heading.php:161
@@ -769,9 +747,9 @@ msgstr "Dole"
 msgid "Left"
 msgstr "Vľavo"
 
-#: includes/column-settings.php:303 includes/column-settings.php:356
-#: includes/module-settings.php:78 includes/row-settings.php:521
-#: includes/row-settings.php:574 modules/button/button.php:178
+#: includes/column-settings.php:213 includes/column-settings.php:266
+#: includes/module-settings.php:49 includes/row-settings.php:492
+#: includes/row-settings.php:545 modules/button/button.php:178
 #: modules/callout/callout.php:251
 #: modules/content-slider/content-slider.php:472 modules/cta/cta.php:125
 #: modules/heading/heading.php:91 modules/heading/heading.php:163
@@ -780,14 +758,131 @@ msgstr "Vľavo"
 msgid "Right"
 msgstr "Vpravo"
 
-#: includes/column-settings.php:316 includes/global-settings.php:49
-#: includes/row-settings.php:534 modules/button/button.php:191
+#: includes/column-settings.php:226 includes/global-settings.php:49
+#: includes/row-settings.php:505 modules/button/button.php:191
 #: modules/callout/callout.php:567
 #: modules/content-slider/content-slider.php:668 modules/cta/cta.php:314
 msgid "Padding"
 msgstr "Vnútorné odsadenie"
 
-#: includes/field-form.php:17
+#: includes/column-settings.php:279 includes/global-settings.php:80
+#: includes/module-settings.php:62 includes/row-settings.php:558
+msgid "Responsive Layout"
+msgstr "Responzívne rozloženie"
+
+#: includes/column-settings.php:283 includes/module-settings.php:66
+#: includes/row-settings.php:562 modules/slideshow/slideshow.php:290
+msgid "Display"
+msgstr "Zobrazenie"
+
+#: includes/column-settings.php:285 includes/module-settings.php:68
+#: includes/row-settings.php:564
+msgid "Always"
+msgstr "Vždy"
+
+#: includes/column-settings.php:286 includes/module-settings.php:69
+#: includes/row-settings.php:565
+msgid "Large Devices Only"
+msgstr "Iba na veľkých zariadeniach"
+
+#: includes/column-settings.php:287 includes/module-settings.php:70
+#: includes/row-settings.php:566
+msgid "Large &amp; Medium Devices Only"
+msgstr "Iba na veľkých a stredných zariadeniach"
+
+#: includes/column-settings.php:288 includes/module-settings.php:71
+#: includes/row-settings.php:567
+msgid "Medium Devices Only"
+msgstr "Iba na stredných zariadeniach"
+
+#: includes/column-settings.php:289 includes/module-settings.php:72
+#: includes/row-settings.php:568
+msgid "Medium &amp; Small Devices Only"
+msgstr "Iba na stredných a malých zariadeniach"
+
+#: includes/column-settings.php:290 includes/module-settings.php:73
+#: includes/row-settings.php:569
+msgid "Small Devices Only"
+msgstr "Iba na malých zariadeniach"
+
+#: includes/column-settings.php:292
+msgid "Choose whether to show or hide this column at different device sizes."
+msgstr ""
+"Zvoľte, či sa má tento stĺpec zobraziť na zariadeniach rôznych veľkostí."
+
+#: includes/column-settings.php:299
+msgid "Medium Device Width"
+msgstr "Šírka pre stredne veľké zariadenia"
+
+#: includes/column-settings.php:300
+msgid "The width of this column on medium devices such as tablets."
+msgstr "Šírka tohto stĺpca na stredne veľkých zariadeniach, ako sú tablety."
+
+#: includes/column-settings.php:302 includes/column-settings.php:330
+#: modules/callout/callout.php:281
+#: modules/content-slider/content-slider.php:442 modules/cta/cta.php:165
+#: modules/heading/heading.php:117 modules/heading/heading.php:144
+#: modules/heading/heading.php:174
+msgid "Default"
+msgstr "Prednastavené"
+
+#: includes/column-settings.php:303 includes/column-settings.php:331
+#: modules/button/button.php:151 modules/callout/callout.php:282
+#: modules/content-slider/content-slider.php:443 modules/cta/cta.php:166
+#: modules/heading/heading.php:118 modules/heading/heading.php:145
+#: modules/heading/heading.php:175
+#: modules/social-buttons/social-buttons.php:74
+msgid "Custom"
+msgstr "Vlastné"
+
+#: includes/column-settings.php:316
+msgid "Custom Medium Device Width"
+msgstr "Vlastná šírka na stredne veľkých zariadeniach"
+
+#: includes/column-settings.php:327
+msgid "Small Device Width"
+msgstr "Šírka pre malé zariadenia"
+
+#: includes/column-settings.php:328
+msgid "The width of this column on small devices such as phones."
+msgstr "Šírka tohto stĺpca na malých zariadeniach, ako sú telefóny."
+
+#: includes/column-settings.php:344
+msgid "Custom Small Device Width"
+msgstr "Vlastná šírka na malých zariadeniach"
+
+#: includes/column-settings.php:356 includes/module-settings.php:115
+#: includes/row-settings.php:579
+msgid "CSS Selectors"
+msgstr "CSS selektor"
+
+#: includes/column-settings.php:360 includes/loop-settings.php:27
+#: includes/module-settings.php:119 includes/row-settings.php:583
+msgid "ID"
+msgstr "ID"
+
+#: includes/column-settings.php:361
+msgid ""
+"A unique ID that will be applied to this column's HTML. Must start with a "
+"letter and only contain dashes, underscores, letters or numbers. No spaces."
+msgstr ""
+"Unikátne ID aplikované na HTML tohto stĺpca. Musí začínať písmenom a "
+"obsahovať iba pomlčky, podtržníky, písmená a čísla. Medzery nie sú povolené."
+
+#: includes/column-settings.php:368
+msgid "CSS Class"
+msgstr "Trieda CSS"
+
+#: includes/column-settings.php:369
+msgid ""
+"A class that will be applied to this column's HTML. Must start with a letter "
+"and only contain dashes, underscores, letters or numbers. Separate multiple "
+"classes with spaces."
+msgstr ""
+"Trieda aplikovaná na HTML tohto stĺpca. Musí začínať písmenom a obsahovať "
+"iba pomlčky, podtržníky, písmená a čísla. Viaceré triedy oddeľte medzerami."
+
+#: includes/field-form.php:28
 #, php-format
 msgctxt "%s stands for form field label."
 msgid "Edit %s"
@@ -801,7 +896,7 @@ msgstr "Zvoliť ikonku"
 msgid "Replace"
 msgstr "Nahradiť"
 
-#: includes/field-icon.php:7 includes/js-config.php:50
+#: includes/field-icon.php:7 includes/js-config.php:53
 msgid "Remove"
 msgstr "Odstrániť"
 
@@ -817,8 +912,8 @@ msgstr "Zadajte názov hľadaného článku."
 msgid "Start typing..."
 msgstr "Začnite písať..."
 
-#: includes/field-link.php:7 includes/icon-selector.php:27
-#: includes/js-config.php:17 includes/settings.php:63
+#: includes/field-link.php:7 includes/icon-selector.php:28
+#: includes/js-config.php:18 includes/settings.php:63
 #: includes/template-selector.php:102 includes/ui.php:11
 msgid "Cancel"
 msgstr "Zrušiť"
@@ -843,11 +938,11 @@ msgstr "Upraviť galériu"
 msgid "Add Photos"
 msgstr "Pridať obrázky"
 
-#: includes/field-photo.php:3 includes/js-config.php:55
+#: includes/field-photo.php:3 includes/js-config.php:58
 msgid "Select Photo"
 msgstr "Zvoliť obrázok"
 
-#: includes/field-video.php:3 includes/js-config.php:57
+#: includes/field-video.php:3 includes/js-config.php:60
 msgid "Select Video"
 msgstr "Zvoliť video"
 
@@ -953,19 +1048,20 @@ msgstr ""
 "Šírka internetového prehliadača, v ktorej sa rozloženie nastaví do režimu "
 "pre malých zariadení, ako sú telefóny."
 
-#: includes/icon-selector.php:4
-msgid "Filter: "
-msgstr "Filter: "
+#: includes/icon-selector.php:5
+msgctxt "Select option for showing all icon libraries."
+msgid "All Libraries"
+msgstr "Všetky knižnice"
 
-#: includes/js-config.php:16
+#: includes/js-config.php:17
 msgid "What would you like to do?"
 msgstr "Čo si prajete urobiť?"
 
-#: includes/js-config.php:18
+#: includes/js-config.php:19
 msgid "Change Template"
 msgstr "Zmeniť šablónu"
 
-#: includes/js-config.php:19
+#: includes/js-config.php:20
 msgid ""
 "Warning! Changing the template will replace your existing layout. Do you "
 "really want to do this?"
@@ -973,38 +1069,38 @@ msgstr ""
 "Pozor! Zmenou šablóny nahradíte existujúce rozloženie. Naozaj to chcete "
 "urobiť?"
 
-#: includes/js-config.php:20
+#: includes/js-config.php:21
 msgid "Column"
 msgstr "Stĺpec"
 
-#: includes/js-config.php:22
+#: includes/js-config.php:23
 msgid ""
 "Please select either a background layout or content layout before submitting."
 msgstr "Najskôr zvoľte rozloženie pozadia alebo obsahu."
 
-#: includes/js-config.php:23
+#: includes/js-config.php:24
 msgid "Do you really want to delete this item?"
 msgstr "Naozaj chcete túto položku odstrániť?"
 
-#: includes/js-config.php:24
+#: includes/js-config.php:25
 msgid ""
 "Do you really want to delete this module? All content data will be "
 "permanently deleted."
 msgstr ""
 "Naozaj chcete tento modul odstrániť? Všetky dáta jeho obsahu budu vymazané."
 
-#: includes/js-config.php:25
+#: includes/js-config.php:26
 msgid ""
 "Do you really want to delete this row? All content data will be permanently "
 "deleted."
 msgstr ""
 "Naozaj chcete odstrániť tento riadok? Všetok obsah riadku bude vymazaný."
 
-#: includes/js-config.php:27
+#: includes/js-config.php:28
 msgid "Discard Draft"
 msgstr "Zahodiť koncept"
 
-#: includes/js-config.php:28
+#: includes/js-config.php:29
 msgid ""
 "Do you really want to discard this draft? All of your changes that are not "
 "published will be lost."
@@ -1012,129 +1108,146 @@ msgstr ""
 "Naozaj chcete zahodiť vytvorený koncept? Stratíte všetky zmeny, ktoré nie sú "
 "publikované."
 
-#: includes/js-config.php:29
+#: includes/js-config.php:30
 msgid "Save Draft"
 msgstr "Uložiť koncept"
 
-#: includes/js-config.php:30
+#: includes/js-config.php:31
 msgctxt "Duplicate page/post action label."
 msgid "Duplicate"
 msgstr "Duplikovať"
 
-#: includes/js-config.php:31
+#: includes/js-config.php:32
 msgid "Duplicate This Page"
 msgstr "Duplikovať túto stránku"
 
-#: includes/js-config.php:32
+#: includes/js-config.php:33
 msgid "Duplicate This Template"
 msgstr "Duplikovať túto šablónu"
 
-#: includes/js-config.php:33
+#: includes/js-config.php:34
 msgid "Edit Global Settings"
 msgstr "Upraviť globálne nastavenia"
 
-#: includes/js-config.php:34
+#: includes/js-config.php:35
 msgid "Drop a row layout or module to get started!"
 msgstr "Začnite vložením riadku alebo modulu!"
 
-#: includes/js-config.php:35
+#: includes/js-config.php:36
+msgid ""
+"Beaver Builder caught the following JavaScript error. If Beaver Builder is "
+"not functioning as expected the cause is most likely this error. Please help "
+"us by disabling all plugins and testing Beaver Builder while reactivating "
+"each to determine if the issue is related to a third party plugin."
+msgstr ""
+"Beaver Builder zaznamenal nasledovnú JavaScript chybu. Ak Beaver Builder "
+"nefunguje správne, dôvodom je pravdepodobne táto chyba. Pomôžte nám "
+"deaktiváciou ostatných modulov a otestovaním Beaver Builder modulu počas "
+"opätovnej, postupnej aktivácie ostatných modulov pre zistenie, či je problém "
+"spôsobený jedným z týchto modulov."
+
+#: includes/js-config.php:37
 msgid "Full Size"
 msgstr "Pôvodná veľkosť"
 
-#: includes/js-config.php:36
+#: includes/js-config.php:38
+msgid "\"{message}\" on line {line} of {file}."
+msgstr "\"{message}\" na riadku {line} súboru {file}."
+
+#: includes/js-config.php:39
 msgid "Insert"
 msgstr "Vložiť"
 
-#: includes/js-config.php:37
+#: includes/js-config.php:40
 msgid "Large"
 msgstr "Veľké"
 
-#: includes/js-config.php:38
+#: includes/js-config.php:41
 msgid "Manage Templates"
 msgstr "Správa šablón"
 
-#: includes/js-config.php:39
+#: includes/js-config.php:42
 msgid "Medium"
 msgstr "Stredné"
 
-#: includes/js-config.php:40
+#: includes/js-config.php:43
 msgid "Module"
 msgstr "Modul"
 
-#: includes/js-config.php:41
+#: includes/js-config.php:44
 msgid "Move"
 msgstr "Presunúť"
 
-#: includes/js-config.php:42
+#: includes/js-config.php:45
 msgid "New Column"
 msgstr "Nový stĺpec"
 
-#: includes/js-config.php:43
+#: includes/js-config.php:46
 msgid "New Row"
 msgstr "Nový riadok"
 
-#: includes/js-config.php:44
+#: includes/js-config.php:47
 msgid "No results found."
 msgstr "Nenašli sa žiadne záznamy."
 
-#: includes/js-config.php:45
+#: includes/js-config.php:48
 msgid "OK"
 msgstr "OK"
 
-#: includes/js-config.php:46 modules/photo/photo.php:454
+#: includes/js-config.php:49 modules/photo/photo.php:454
 msgid "Photo Page"
 msgstr "Stránka obrázku"
 
-#: includes/js-config.php:47
+#: includes/js-config.php:50
 msgid "Photo Selected"
 msgstr "Obrázok bol zvolený"
 
-#: includes/js-config.php:48
+#: includes/js-config.php:51
 msgid "Photos Selected"
 msgstr "Obrázky boli zvolené"
 
-#: includes/js-config.php:49
+#: includes/js-config.php:52
 msgid "Publish Changes"
 msgstr "Publikovať zmeny"
 
-#: includes/js-config.php:51
+#: includes/js-config.php:54
 msgid "Row"
 msgstr "Riadok"
 
-#: includes/js-config.php:52 includes/row-settings.php:6
+#: includes/js-config.php:55 includes/row-settings.php:6
 msgid "Row Settings"
 msgstr "Nastavenia riadku"
 
-#: includes/js-config.php:53
+#: includes/js-config.php:56
 msgid "Save Core Template"
 msgstr "Uložiť základnú šablónu"
 
-#: includes/js-config.php:54 includes/ui.php:10
+#: includes/js-config.php:57 includes/ui.php:10
 #: includes/user-template-settings.php:4
 msgid "Save Template"
 msgstr "Uložiť šablónu"
 
-#: includes/js-config.php:56
+#: includes/js-config.php:59
 msgid "Select Photos"
 msgstr "Zvoliť obrázky"
 
-#: includes/js-config.php:59
+#: includes/js-config.php:62
 msgid "Append New Layout"
 msgstr "Pridať nové rozloženie"
 
-#: includes/js-config.php:60
+#: includes/js-config.php:63
 msgid "Replace Existing Layout"
 msgstr "Nahradiť existujúce rozloženie"
 
-#: includes/js-config.php:61
+#: includes/js-config.php:64
 msgid "Template Saved!"
 msgstr "Šablóna bola uložená!"
 
-#: includes/js-config.php:62
+#: includes/js-config.php:65
 msgid "Thumbnail"
 msgstr "Miniatúra"
 
-#: includes/js-config.php:63
+#: includes/js-config.php:66
 msgid ""
 "The settings you are currently editing will not be saved if you navigate "
 "away from this page."
@@ -1148,10 +1261,6 @@ msgstr "Typ článku"
 #: includes/loop-settings.php:25
 msgid "Order By"
 msgstr "Zoradit podľa"
-
-#: includes/loop-settings.php:27
-msgid "ID"
-msgstr "ID"
 
 #: includes/loop-settings.php:28 modules/post-grid/post-grid.php:155
 #: modules/woocommerce/woocommerce.php:189
@@ -1224,60 +1333,53 @@ msgstr ""
 "Zadajte čiarkou oddelený zoznam užívateľských mien autorov. Zobrazia sa iba "
 "články od týchto autorov."
 
-#: includes/module-settings.php:14
-msgid ""
-"A custom CSS class that will be applied to this module. Spaces only, no dots."
-msgstr ""
-"Vlastná trieda CSS aplikovaná na tento modul. Nepoužívajte bodky, iba "
-"medzery."
-
-#: includes/module-settings.php:30
+#: includes/module-settings.php:75
 msgid "Choose whether to show or hide this module at different device sizes."
 msgstr ""
 "Vyberte, či chcete zobraziť alebo skryť tento modul na zariadeniach rôznych "
 "veľkostí."
 
-#: includes/module-settings.php:91
+#: includes/module-settings.php:83
 msgid "Animation"
 msgstr "Animácia"
 
-#: includes/module-settings.php:97
+#: includes/module-settings.php:89
 msgctxt "Animation style."
 msgid "None"
 msgstr "Žiadny"
 
-#: includes/module-settings.php:98
+#: includes/module-settings.php:90
 msgctxt "Animation style."
 msgid "Fade In"
 msgstr "Pozvoľna zobraziť"
 
-#: includes/module-settings.php:99
+#: includes/module-settings.php:91
 msgctxt "Animation style."
 msgid "Slide Left"
 msgstr "Vkĺznuť doľava"
 
-#: includes/module-settings.php:100
+#: includes/module-settings.php:92
 msgctxt "Animation style."
 msgid "Slide Right"
 msgstr "Vkĺznuť doprava"
 
-#: includes/module-settings.php:101
+#: includes/module-settings.php:93
 msgctxt "Animation style."
 msgid "Slide Up"
 msgstr "Vkĺznuť hore"
 
-#: includes/module-settings.php:102
+#: includes/module-settings.php:94
 msgctxt "Animation style."
 msgid "Slide Down"
 msgstr "Vkĺznut dole"
 
-#: includes/module-settings.php:110
+#: includes/module-settings.php:102
 #: modules/content-slider/content-slider.php:223
 #: modules/testimonials/testimonials.php:91
 msgid "Delay"
 msgstr "Oneskorenie"
 
-#: includes/module-settings.php:114 includes/row-settings.php:266
+#: includes/module-settings.php:106 includes/row-settings.php:266
 #: includes/row-settings.php:297 modules/content-slider/content-slider.php:227
 #: modules/content-slider/content-slider.php:244
 #: modules/slideshow/slideshow.php:385 modules/slideshow/slideshow.php:410
@@ -1288,21 +1390,30 @@ msgctxt "Value unit for form field of time in seconds. Such as: \"5 seconds\""
 msgid "seconds"
 msgstr "(v sekundách)"
 
-#: includes/module-settings.php:115
+#: includes/module-settings.php:107
 msgid "The amount of time in seconds before this animation starts."
 msgstr "Čas v sekundách pred tým ako sa spustí animácia."
 
-#: includes/multisite-settings.php:116
+#: includes/module-settings.php:120
 msgid ""
-"Enter a comma separated list of the post types you would like the builder to "
-"work with."
+"A unique ID that will be applied to this module's HTML. Must start with a "
+"letter and only contain dashes, underscores, letters or numbers. No spaces."
 msgstr ""
-"Zadajte čiarkou oddelený zoznam typov článkou, s ktorými chcete editor "
-"stránok používať."
+"Unikátne ID aplikované na HTML tohto modulu. Musí začínať písmenom a "
+"obsahovať iba pomlčky, podtržníky, písmená a čísla. Medzery nie sú povolené."
 
-#: includes/multisite-settings.php:132
-msgid "Example: page, post, product"
-msgstr "Napríklad: page, post, product"
+#: includes/module-settings.php:127 includes/row-settings.php:591
+msgid "Class"
+msgstr "Trieda"
+
+#: includes/module-settings.php:128
+msgid ""
+"A class that will be applied to this module's HTML. Must start with a letter "
+"and only contain dashes, underscores, letters or numbers. Separate multiple "
+"classes with spaces."
+msgstr ""
+"Trieda aplikovaná na HTML tohto modulu. Musí začínať písmenom a obsahovať "
+"iba pomlčky, podtržníky, písmená a čísla. Viaceré triedy oddeľte medzerami."
 
 #: includes/row-settings.php:16 modules/button/button.php:146
 #: modules/content-slider/content-slider.php:477
@@ -1662,16 +1773,27 @@ msgstr "Stredne"
 msgid "Slow"
 msgstr "Pomaly"
 
-#: includes/row-settings.php:457
-msgid "Add a custom CSS selector here to apply additional styling to this row."
-msgstr ""
-"Zadajte vlastný CSS selector pre aplikáciu dodatočných štýlov na tento "
-"riadok."
-
-#: includes/row-settings.php:473
+#: includes/row-settings.php:571
 msgid "Choose whether to show or hide this row at different device sizes."
 msgstr ""
 "Zvoľte, či sa má tento riadok zobraziť na zariadeniach rôznych veľkostí."
+
+#: includes/row-settings.php:584
+msgid ""
+"A unique ID that will be applied to this row's HTML. Must start with a "
+"letter and only contain dashes, underscores, letters or numbers. No spaces."
+msgstr ""
+"Unikátne ID aplikované na HTML tohto riadka. Musí začínať písmenom a "
+"obsahovať iba pomlčky, podtržníky, písmená a čísla. Medzery nie sú povolené."
+
+#: includes/row-settings.php:592
+msgid ""
+"A class that will be applied to this row's HTML. Must start with a letter "
+"and only contain dashes, underscores, letters or numbers. Separate multiple "
+"classes with spaces."
+msgstr ""
+"Trieda aplikovaná na HTML tohto riadka. Musí začínať písmenom a obsahovať "
+"iba pomlčky, podtržníky, písmená a čísla. Viaceré triedy oddeľte medzerami."
 
 #: includes/settings.php:62
 msgid "Save"
@@ -2699,10 +2821,6 @@ msgstr "Skupina ikoniek"
 msgid "Display a group of linked Font Awesome icons."
 msgstr "Zobrazí zvolenú skupinu ikoniek Font Awesome."
 
-#: modules/icon-group/icon-group.php:27
-msgid "Icons"
-msgstr "Ikonky"
-
 #: modules/icon-group/icon-group.php:125
 msgid "Add Icon"
 msgstr "Pridať ikonku"
@@ -3535,6 +3653,33 @@ msgstr "Ceny: od najnižšej po najvyššiu"
 #: modules/woocommerce/woocommerce.php:191
 msgid "Price: High to Low"
 msgstr "Ceny: od najvyššej po najnižšiu"
+
+#~ msgctxt "Fontello icon set with no name."
+#~ msgid "Fontello (Unnamed)"
+#~ msgstr "Fontello (nepomenované)"
+
+#~ msgid ""
+#~ "A custom CSS class that will be applied to this column. Spaces only, no "
+#~ "dots."
+#~ msgstr ""
+#~ "Vlastná trieda CSS aplikovaná na tento stĺpec. Povolené sú iba medzery, "
+#~ "žiadne bodky."
+
+#~ msgid "Filter: "
+#~ msgstr "Filter: "
+
+#~ msgid ""
+#~ "A custom CSS class that will be applied to this module. Spaces only, no "
+#~ "dots."
+#~ msgstr ""
+#~ "Vlastná trieda CSS aplikovaná na tento modul. Nepoužívajte bodky, iba "
+#~ "medzery."
+
+#~ msgid ""
+#~ "Add a custom CSS selector here to apply additional styling to this row."
+#~ msgstr ""
+#~ "Zadajte vlastný CSS selector pre aplikáciu dodatočných štýlov na tento "
+#~ "riadok."
 
 #~ msgid "Upgrade Today!"
 #~ msgstr "Aktualizovať!"

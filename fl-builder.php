@@ -1,25 +1,25 @@
 <?php
 /**
  * Plugin Name: Beaver Builder Plugin (Lite Version)
- * Plugin URI: http://www.wpbeaverbuilder.com
+ * Plugin URI: https://www.wpbeaverbuilder.com/?utm_source=external&utm_medium=builder&utm_campaign=plugins-page
  * Description: A drag and drop frontend WordPress page builder plugin that works with almost any theme!
- * Version: 1.4.5
+ * Version: 1.4.6
  * Author: The Beaver Builder Team
- * Author URI: http://www.wpbeaverbuilder.com
+ * Author URI: https://www.wpbeaverbuilder.com/?utm_source=external&utm_medium=builder&utm_campaign=plugins-page
  * Copyright: (c) 2014 Beaver Builder
  * License: GNU General Public License v2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: fl-builder
  */
-define('FL_BUILDER_VERSION', '1.4.5');
+define('FL_BUILDER_VERSION', '1.4.6');
 define('FL_BUILDER_DIR', plugin_dir_path(__FILE__));
 define('FL_BUILDER_URL', plugins_url('/', __FILE__));
 define('FL_BUILDER_LITE', true);
-define('FL_BUILDER_SUPPORT_URL', 'https://www.wpbeaverbuilder.com/support');
-define('FL_BUILDER_UPGRADE_URL', 'https://www.wpbeaverbuilder.com/pricing/?upgrade');
+define('FL_BUILDER_SUPPORT_URL', 'https://www.wpbeaverbuilder.com/support/');
+define('FL_BUILDER_UPGRADE_URL', 'https://www.wpbeaverbuilder.com/pricing/');
 define('FL_BUILDER_DEMO_URL', 'http://demos.wpbeaverbuilder.com');
 define('FL_BUILDER_OLD_DEMO_URL', 'http://demos.fastlinemedia.com');
-define('FL_BUILDER_DEMO_CACHE_URL', 'http://demos.wpbeaverbuilder.com/wp-content/uploads/fl-builder/');
+define('FL_BUILDER_DEMO_CACHE_URL', 'http://demos.wpbeaverbuilder.com/wp-content/uploads/bb-plugin/cache/');
 
 /* Classes */
 require_once 'classes/class-fl-builder.php';
@@ -49,8 +49,8 @@ add_action('plugins_loaded',                                   'FLBuilder::load_
 add_action('init',                                             'FLBuilderUpdate::init');
 
 /* Load Settings and Modules */
-add_action('init',                                             'FLBuilderModel::load_settings', 10);
-add_action('init',                                             'FLBuilderModel::load_modules', 11);
+add_action('init',                                             'FLBuilderModel::load_settings', 1);
+add_action('init',                                             'FLBuilderModel::load_modules', 2);
 
 /* Admin AJAX Actions */
 add_action('wp_ajax_fl_builder_save',                          'FLBuilderModel::update');

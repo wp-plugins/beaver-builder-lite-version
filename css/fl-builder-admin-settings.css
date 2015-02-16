@@ -58,13 +58,6 @@
     margin-top: 15px;
     width: 78%;
 }
-h2.fl-settings-content-header {
-    padding-top: 0;
-    font-size: 20px;
-}
-.fl-settings-content .fl-settings-save {
-	float: right;
-}
 
 /* Settings Forms
 ----------------------------------------------------------- */
@@ -97,133 +90,11 @@ h2.fl-settings-content-header {
     display: block;
 }
 
-/* Settings Form Sections
+/* Icons
 ----------------------------------------------------------- */
 
-.fl-settings-section {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
-    box-shadow: 0 1px 1px rgba(0,0,0,.04);
-    margin-bottom: 20px;
-}
-.fl-settings-section-header {
-    border-bottom: 1px solid #eee;
-    font-size: 14px;
-    padding: 8px 12px;
-    margin: 0;
-    line-height: 1.4;
-}
-
-/* Settings Form Fields
------------------------------------------------------------ */
-
-.fl-settings-section input,
-.fl-settings-section select {
-    margin-right: 10px;
-}
-
-/* Tooltips */
-.fl-tooltip {
-    display: inline-block;
-    margin: 0 5px;
-    position: relative;
-    top: 6px;
-}
-.fl-tooltip-icon {
-    background: url(../img/help.png) center center no-repeat;
-    cursor: pointer;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-}
-.fl-tooltip-text {
-    background: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px #ccc;
-    -moz-box-shadow: 0 0 5px #ccc;
-    -webkit-box-shadow: 0 0 5px #ccc;
-    display: none;
-    font-weight: normal;
-    left: 23px;
-    padding: 10px 13px;
-    position: absolute;
-    top: -6px;
-    width: 250px;
-}
-
-/* Help After */
-.fl-help-after {
-    display: inline-block;
-    padding-top: 10px;
-}
-
-/* Hidden */
-.fl-hidden {
-    display: none;
-}
-
-/* Textarea */
-.fl-settings-form textarea {
-    width: 100%;
-}
-
-/* Code editors */
-.ace_editor {
-	border: 1px solid #e5e5e5;
-}
-
-/* Images */
-.fl-img-wrap {
-	display: inline;
-}
-.fl-img {
-    display: block;
-    margin-bottom: 7px;
-    max-height: 75px;
-}
-.fl-img-empty .fl-img-select,
-.fl-img-replace {
-    display: inline;
-}
-.fl-img-select,
-.fl-img-empty .fl-img,
-.fl-img-empty .fl-img-replace {
-    display: none;
-}
-
-/* Color Picker */
-.fl-color-picker {
-    cursor: pointer;
-	height: 30px;
-	width: 48px;
-}
-.fl-color-picker.fl-empty .fl-color-picker-color {
-    background: url(../img/eyedropper.png) center center no-repeat;
-}
-.fl-color-picker .fl-color-picker-color {
-    border: 1px solid #ccc;
-    float: left;
-	height: 30px;
-	width: 30px;
-}
-.fl-color-picker.fl-empty .fl-color-picker-clear {
-    display: none;
-}
-.fl-color-picker .fl-color-picker-clear {
-    background: url(../img/x.png) center center no-repeat;
-    border: 1px solid #ccc;
-    border-left: none;
-    float: left;
-	height: 30px;
-	width: 15px;
-}
-.fl-color-picker .fl-color-picker-clear:hover {
-    background-color: #ededed;
-}
-.colorpicker input {
-	border: none;
-	color: #fff;
+.fl-delete-icon-set {
+	color: #d34e2a;
 }
 
 /* Media Query - Max Width 900px

@@ -151,7 +151,6 @@ class FLBuilderModule {
         else if(stristr($dir_path, get_template_directory())) {
             $this->url = str_replace(get_template_directory(), get_template_directory_uri(), $dir_path) . '/';
             $this->dir = $dir_path . '/';
-            error_log($this->url);
         }
         else {                
             $this->url = isset($params['url']) ? $params['url'] : FL_BUILDER_URL . 'modules/' . $this->slug . '/';

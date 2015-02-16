@@ -31,6 +31,12 @@ final class FLBuilderModel {
     static public $settings_forms = array();
 
     /**
+     * @property $settings_form_defaults
+     * @type array
+     */
+    static public $settings_form_defaults = array();
+
+    /**
      * @property $modules
      * @type array
      */
@@ -141,6 +147,16 @@ final class FLBuilderModel {
         return set_url_scheme( $url );
     }
 
+    /**
+     * @method get_upgrade_url
+     */
+    static public function get_upgrade_url( $params = array() )
+    {
+		$url = FL_BUILDER_UPGRADE_URL . '?' . http_build_query( $params, '', '&' );
+		
+		return apply_filters( 'fl_builder_upgrade_url', $url );
+    }
+
 	/**
      * @method get_post_data
      */
@@ -242,7 +258,17 @@ final class FLBuilderModel {
      */
     static public function is_ssl()
     {
-        return is_ssl() || 0 === stripos( get_option( 'siteurl' ), 'https://' );
+	    if ( is_ssl() ) {
+		    return true;
+	    }
+	    else if ( 0 === stripos( get_option( 'siteurl' ), 'https://' ) ) {
+		    return true;
+	    }
+	    else if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && 'https' == $_SERVER['HTTP_X_FORWARDED_PROTO'] ) {
+		    return true;
+	    }
+	    
+        return false;
     }
 
     /**
@@ -408,26 +434,59 @@ final class FLBuilderModel {
 	}
 
 	/**
-     * @method get_cache_dir
+     * @method get_upload_dir
      */
-	static public function get_cache_dir()
+	static public function get_upload_dir()
 	{
-        $wp_info = wp_upload_dir();
+        $wp_info  = wp_upload_dir();
+        $dir_name = basename( FL_BUILDER_DIR );
+        
+        // We use bb-plugin for the lite version as well.
+        if ( $dir_name == 'beaver-builder-lite-version' ) {
+	        $dir_name = 'bb-plugin';
+        }
 
         // SSL workaround.
-        if(self::is_ssl()) {
-            $wp_info['baseurl'] = str_ireplace('http://', 'https://', $wp_info['baseurl']);
+        if ( self::is_ssl() ) {
+            $wp_info['baseurl'] = str_ireplace( 'http://', 'https://', $wp_info['baseurl'] );
         }
 
         // Build the paths.
         $dir_info = array(
-            'path'   => $wp_info['basedir'] . '/fl-builder/',
-            'url'    => $wp_info['baseurl'] . '/fl-builder/'
+            'path'   => $wp_info['basedir'] . '/' . $dir_name . '/',
+            'url'    => $wp_info['baseurl'] . '/' . $dir_name . '/'
+        );
+
+        // Create the upload dir if it doesn't exist.
+        if ( ! file_exists( $dir_info['path'] ) ) {
+            mkdir( $dir_info['path'] );
+        }
+
+        return $dir_info;
+    }
+
+	/**
+     * @method get_cache_dir
+     */
+	static public function get_cache_dir( $name = 'cache' )
+	{
+        $upload_info = self::get_upload_dir();
+        $allowed     = array( 'cache', 'icons' );
+        
+        // Make sure the dir name is allowed.
+        if ( ! in_array( $name, $allowed ) ) {
+	        return false;
+        }
+
+        // Build the paths.
+        $dir_info = array(
+            'path'   => $upload_info['path'] . $name . '/',
+            'url'    => $upload_info['url'] . $name . '/'
         );
 
         // Create the cache dir if it doesn't exist.
-        if(!file_exists($dir_info['path'])) {
-            mkdir($dir_info['path']);
+        if( ! file_exists( $dir_info['path'] ) ) {
+            mkdir( $dir_info['path'] );
         }
 
         return $dir_info;
@@ -985,7 +1044,7 @@ final class FLBuilderModel {
      */
     static public function get_row_defaults()
     {
-        return self::get_settings_form_defaults(self::$settings_forms['row']['tabs']);
+        return self::get_settings_form_defaults( 'row' );
     }
 
     /**
@@ -1248,7 +1307,7 @@ final class FLBuilderModel {
      */
     static public function get_col_defaults()
     {
-        return self::get_settings_form_defaults(self::$settings_forms['col']['tabs']);
+        return self::get_settings_form_defaults( 'col' );
     }
 
 	/**
@@ -1298,16 +1357,25 @@ final class FLBuilderModel {
 
             // Create a new instance of the module.
             $instance = new $class();
+              
+            // Log an error if a module with this slug already exists.
+            if ( isset( self::$modules[ $instance->slug ] ) ) {
+	            error_log( sprintf( _x( 'A module with the filename %s.php already exists! Please namespace your module filenames to ensure compatibility with Beaver Builder.', '%s stands for the module filename', 'fl-builder' ), $instance->slug ) );
+	            return;
+            }
+            
+            // See if the module is enabled or not. 
+            $enabled = apply_filters( 'fl_builder_register_module', $instance->enabled, $instance );
 
             // Only register modules that are enabled.
-            if($instance->enabled) {
+            if( $enabled ) {
 
                 // Save the instance in the modules array.
                 self::$modules[$instance->slug] = $instance;
 
                 // Add the form to the instance.
                 self::$modules[$instance->slug]->form = $form;
-                self::$modules[$instance->slug]->form['advanced'] = self::$settings_forms['module-advanced'];
+                self::$modules[$instance->slug]->form['advanced'] = self::$settings_forms['module_advanced'];
             }
         }
     }
@@ -1369,7 +1437,7 @@ final class FLBuilderModel {
 				if(!isset($categories[$module->category])) {
 					$categories[$module->category] = array();
 				}
-
+				
 				$categories[$module->category][$module->name] = $module;
 			}
 			else {
@@ -1591,7 +1659,7 @@ final class FLBuilderModel {
         $defaults = new StdClass();
 
         if(isset(self::$modules[$type]->form)) {
-            $defaults = self::get_settings_form_defaults(self::$modules[$type]->form);
+            $defaults = self::get_settings_form_defaults( $type );
             $defaults->type = $type;
         }
 
@@ -1656,6 +1724,14 @@ final class FLBuilderModel {
     }
 
 	/**
+     * @method get_settings_form
+     */
+    static public function get_settings_form( $id )
+    {
+        return self::$settings_forms[ $id ];
+    }
+
+	/**
      * @method get_settings_form_fields
      */
     static public function get_settings_form_fields($form)
@@ -1680,10 +1756,32 @@ final class FLBuilderModel {
     /**
      * @method get_settings_form_defaults
      */
-    static public function get_settings_form_defaults($tabs = array())
+    static public function get_settings_form_defaults( $type )
     {
-        $defaults = new StdClass();
-
+	    // Check to see if the defaults are cached first.
+	    if ( isset( self::$settings_form_defaults[ $type ] ) ) {
+		    return self::$settings_form_defaults[ $type ];
+	    }
+	    
+	    // They aren't cached, let's get them.
+	    $defaults = new StdClass();
+	    
+	    // Check the registered forms first.
+	    if ( isset( self::$settings_forms[ $type ] ) ) {
+		    $form_type = $type;
+		    $tabs = self::$settings_forms[ $type ]['tabs'];
+	    }
+	    // If it's not a registered form, it must be a module form. 
+	    else if ( isset( self::$modules[ $type ] ) ) {
+		    $form_type = $type . '-module';
+		    $tabs = self::$modules[ $type ]->form;
+	    }
+	    // The form can't be found. 
+	    else {
+		    return $defaults;
+	    }
+	    
+	    // Loop through the tabs and get the defaults.
         foreach($tabs as $tab) {
             if(isset($tab['sections'])) {
                 foreach($tab['sections'] as $section) {
@@ -1705,8 +1803,11 @@ final class FLBuilderModel {
                 }
             }
         }
+        
+        // Cache the defaults.
+        self::$settings_form_defaults[ $type ] = apply_filters( 'fl_builder_settings_form_defaults', $defaults, $form_type );
 
-        return $defaults;
+        return self::$settings_form_defaults[ $type ];
     }
 
     /**
@@ -1796,7 +1897,7 @@ final class FLBuilderModel {
      */
     static public function get_global_defaults()
     {
-        return self::get_settings_form_defaults(self::$settings_forms['global']['tabs']);
+        return self::get_settings_form_defaults( 'global' );
     }
 
     /**
@@ -2479,6 +2580,35 @@ final class FLBuilderModel {
     }
 
 	/**
+     * @method get_enabled_icons
+     */
+    static public function get_enabled_icons()
+    {
+    	$key        = '_fl_builder_enabled_icons';
+    	$default    = array( 'font-awesome', 'foundation-icons', 'dashicons' );
+
+	    // Get the value.
+    	if(is_network_admin()) {
+        	$value = get_site_option($key);
+    	}
+    	else if(class_exists('FLBuilderMultisiteSettings')) {
+        	$value = get_option($key);
+        	$value = !$value ? get_site_option($key) : $value;
+        }
+        else {
+            $value = get_option($key);
+        }
+
+    	// Return the value.
+	    if(!$value) {
+    	    return $default;
+	    }
+	    else {
+    	    return $value;
+	    }
+    }
+
+	/**
      * @method get_editing_capability
      */
     static public function get_editing_capability()
@@ -2508,6 +2638,14 @@ final class FLBuilderModel {
     }
 
 	/**
+     * @method plugin_basename
+     */
+    static public function plugin_basename()
+    {
+	    return plugin_basename( FL_BUILDER_DIR . 'fl-builder.php' );
+	}
+
+	/**
      * We don't delete _fl_builder_enabled, _fl_builder_data and _fl_builder_draft
      * so layouts can be recovered should the plugin be installed again.
      *
@@ -2522,25 +2660,23 @@ final class FLBuilderModel {
             delete_option('_fl_builder_enabled_modules');
             delete_option('_fl_builder_enabled_templates');
             delete_option('_fl_builder_post_types');
+            delete_option('_fl_builder_enabled_icons');
             delete_option('_fl_builder_branding');
             delete_option('_fl_builder_editing_capability');
 
-            // Delete cache files and folders.
-            $cache_dir 	 = self::get_cache_dir();
-            $cache_files = glob($cache_dir['path'] . '*', GLOB_MARK);
-
-            foreach($cache_files as $file) {
-                unlink($file);
-            }
-
-            rmdir($cache_dir['path']);
+            // Delete uploaded files and folders.
+            $upload_dir  = self::get_upload_dir();
+            $filesystem  = FLBuilderUtils::get_filesystem();
+            $filesystem->rmdir( $upload_dir['path'], true );
 
             // Deactivate and delete the plugin.
-            deactivate_plugins(array('fl-builder/fl-builder.php'), false, is_network_admin());
-            delete_plugins(array('fl-builder/fl-builder.php'));
+            deactivate_plugins(array(self::plugin_basename()), false, is_network_admin());
+            delete_plugins(array(self::plugin_basename()));
 
             // Redirect to the plugins page.
             wp_redirect(admin_url('plugins.php?deleted=true&plugin_status=all&paged=1&s='));
+            
+            exit;
         }
     }
 }

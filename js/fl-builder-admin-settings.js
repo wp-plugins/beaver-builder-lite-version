@@ -4,6 +4,12 @@
      * @class FLBuilderAdminSettings
      */ 
     FLBuilderAdminSettings = {
+	    
+	    /**
+		 * @property _iconUploader
+		 * @private
+		 */
+		_iconUploader: null,
     
 	    /**
 	     * @method init
@@ -25,6 +31,8 @@
             $('.fl-module-all-cb').on('click', FLBuilderAdminSettings._moduleAllCheckboxClicked);
             $('.fl-module-cb').on('click', FLBuilderAdminSettings._moduleCheckboxClicked);
             $('.fl-override-ms-cb').on('click', FLBuilderAdminSettings._overrideCheckboxClicked);
+            $('input[name=fl-upload-icon]').on('click', FLBuilderAdminSettings._showIconUploader);
+            $('.fl-delete-icon-set').on('click', FLBuilderAdminSettings._deleteCustomIconSet);
             $('#uninstall-form').on('submit', FLBuilderAdminSettings._uninstallFormSubmit);
         },
         
@@ -141,12 +149,55 @@
         },
         
         /**
+	     * @method _showIconUploader
+	     * @private
+	     */
+        _showIconUploader: function()
+        {
+            if(FLBuilderAdminSettings._iconUploader === null) {
+                FLBuilderAdminSettings._iconUploader = wp.media({
+                    title: FLBuilderAdminSettingsStrings.selectFile,
+                    button: { text: FLBuilderAdminSettingsStrings.selectFile },
+                    library : { type : 'application/zip' },
+                    multiple: false
+                });
+            }
+            
+            FLBuilderAdminSettings._iconUploader.once('select', $.proxy(FLBuilderAdminSettings._iconFileSelected, this));
+            FLBuilderAdminSettings._iconUploader.open();
+        },
+        
+        /**
+	     * @method _iconFileSelected
+	     * @private
+	     */
+        _iconFileSelected: function()
+        {
+            var file = FLBuilderAdminSettings._iconUploader.state().get('selection').first().toJSON();
+            
+            $( 'input[name=fl-new-icon-set]' ).val( file.id );
+            $( '#icons-form' ).submit();
+        },
+        
+        /**
+	     * @method _deleteCustomIconSet
+	     * @private
+	     */
+        _deleteCustomIconSet: function()
+        {
+            var set = $( this ).data( 'set' );
+            
+            $( 'input[name=fl-delete-icon-set]' ).val( set );
+            $( '#icons-form' ).submit();
+        },
+        
+        /**
 	     * @method _uninstallFormSubmit
 	     * @private
 	     */
         _uninstallFormSubmit: function()
         {
-            var result = prompt(FLBuilderAdminSettings.strings.uninstall, '');
+            var result = prompt(FLBuilderAdminSettingsStrings.uninstall, '');
             
             if(result == 'uninstall') {
                 return true;

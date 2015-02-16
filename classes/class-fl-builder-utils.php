@@ -9,6 +9,36 @@
 final class FLBuilderUtils {
 
     /**
+	 * Get an instance of WP_Filesystem_Direct.
+	 *
+     * @method get_filesystem
+     */
+    static public function get_filesystem()
+    {
+	    global $wp_filesystem;
+		
+        require_once ABSPATH .'/wp-admin/includes/file.php';
+		
+		add_filter('filesystem_method', 'FLBuilderUtils::filesystem_method');
+				
+		WP_Filesystem();
+		
+		remove_filter('filesystem_method', 'FLBuilderUtils::filesystem_method');
+		
+		return $wp_filesystem;
+    }
+
+    /**
+     * @method filesystem_method
+     */
+    static public function filesystem_method()
+    {
+	    return 'direct';
+    }
+
+    /**
+	 * Return a snippet without punctuation at the end.
+	 *
      * @method snippetwop
      */
     static public function snippetwop($text, $length = 64, $tail = "...")
@@ -27,19 +57,5 @@ final class FLBuilderUtils {
         }
 
         return $text;
-    }
-
-    /**
-     * @method array_to_object
-     */
-    static public function array_to_object($array)
-    {
-        $object = new StdClass();
-
-        foreach($array as $key => $val) {
-            $object->$key = $val;
-        }
-
-        return $object;
     }
 }
