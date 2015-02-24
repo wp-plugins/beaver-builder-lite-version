@@ -9,3 +9,10 @@
     </div>
     <div class="fl-builder-loading"></div>
 </div>
+<script type="text/javascript">
+
+FLBuilderAdminPostsStrings = {
+    switchToEditor: '<?php printf( esc_attr_x( 'Switching to Text Editor mode will disable your %s layout until it is enabled again. Any edits made while in Text Editor mode will not be made on your %s layout. Do you want to continue?', '%s stands for custom branded "Page Builder" name.', 'fl-builder' ), FLBuilderModel::get_branding(), FLBuilderModel::get_branding() ); ?>'
+};
+
+</script>

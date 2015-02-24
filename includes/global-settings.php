@@ -60,6 +60,29 @@ FLBuilder::register_settings_form('global', array(
                             'size'              => '5',
                             'description'       => 'px',
                             'help'                     => __('All rows will default to this width. You can override this and make a row full width in the settings for each row.', 'fl-builder')
+                        ),
+                        'row_width_default' => array(
+                            'type'    => 'select',
+                            'label'   => __( 'Default Row Width', 'fl-builder' ),
+                            'default' => 'fixed',
+                            'options' => array(
+                                'fixed' => __( 'Fixed', 'fl-builder' ),
+                                'full'  => __( 'Full Width', 'fl-builder' )
+                            ),
+                            'toggle'        => array(
+                                'full'         => array(
+                                    'fields'        => array('row_content_width_default')
+                                )
+                            ),
+                        ),
+                        'row_content_width_default' => array(
+                            'type'    => 'select',
+                            'label'   => __( 'Default Row Content Width', 'fl-builder' ),
+                            'default' => 'fixed',
+                            'options' => array(
+                                'fixed' => __( 'Fixed', 'fl-builder' ),
+                                'full'  => __( 'Full Width', 'fl-builder' )
+                            ),
                         )
                     )
                 ),

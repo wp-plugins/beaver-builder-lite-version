@@ -296,9 +296,6 @@ var FLBuilderPreview;
             
             // Remove the loading graphic.
             $('.fl-builder-preview-loader').remove();
-            
-            // Send the preview event.
-            $( FLBuilder._contentClass ).trigger( 'preview-rendered' );
         },
     
         /**
@@ -399,7 +396,9 @@ var FLBuilderPreview;
                 bgSlideshowSpeed            : $(this.classes.settings + ' input[name=ss_speed]'),
                 bgSlideshowTrans            : $(this.classes.settings + ' select[name=ss_transition]'),
                 bgSlideshowTransSpeed       : $(this.classes.settings + ' input[name=ss_transitionDuration]'),
-                bgParallaxImageSrc          : $(this.classes.settings + ' select[name=bg_parallax_image_src]')
+                bgParallaxImageSrc          : $(this.classes.settings + ' select[name=bg_parallax_image_src]'),
+                bgOverlayColor              : $(this.classes.settings + ' input[name=bg_overlay_color]'),
+                bgOverlayOpacity            : $(this.classes.settings + ' input[name=bg_overlay_opacity]')
             });
             
             // Events
@@ -418,6 +417,8 @@ var FLBuilderPreview;
             this.elements.bgSlideshowTrans.on(      'change', $.proxy(this._bgSlideshowChange, this));
             this.elements.bgSlideshowTransSpeed.on( 'keyup',  $.proxy(this._bgSlideshowChange, this));
             this.elements.bgParallaxImageSrc.on(    'change', $.proxy(this._bgParallaxChange, this));
+            this.elements.bgOverlayColor.on(        'change', $.proxy(this._bgOverlayChange, this));
+            this.elements.bgOverlayOpacity.on(      'keyup',  $.proxy(this._bgOverlayChange, this));
         },
         
         /**
@@ -441,9 +442,15 @@ var FLBuilderPreview;
                 'background-image'  : 'none'
             });
             
+            // None
+            if(val == 'none') {
+                this._bgOverlayClear();
+            }
+
             // Color
-            if(val == 'color') {
+            else if(val == 'color') {
                 this.elements.bgColor.trigger('change');
+                this._bgOverlayClear();
             }
             
             // Photo
@@ -562,6 +569,49 @@ var FLBuilderPreview;
                     'background-size'       : 'cover'
                 });
             }
+        },
+        
+        /**
+         * @method _bgOverlayChange
+         * @private
+         */
+        _bgOverlayChange: function(e)
+        {
+            var rgb, alpha, value;
+            
+            if(this.elements.bgOverlayColor.val() == '' || isNaN(this.elements.bgOverlayOpacity.val())) {
+                this.updateCSSRule(this.classes.content + ':after', 'background-color', 'transparent');  
+            }
+            else {
+            
+                rgb    = this.hexToRgb(this.elements.bgOverlayColor.val()),
+                alpha  = this.parseFloat(this.elements.bgOverlayOpacity.val())/100,
+                value  = 'rgba(' + rgb.join() + ', ' + alpha + ')';
+                    
+                this.delay(100, $.proxy(function(){
+	                this.updateCSSRule(this.classes.content, 'position', 'relative');
+                    this.updateCSSRule(this.classes.content + ':after', {
+	                    'background-color'	: value,
+	                    'content'			: "''",
+					    'display'			: 'block',
+					    'position'			: 'absolute',
+					    'top'				: '0',
+					    'right'				: '0',
+					    'bottom'			: '0',
+					    'left'				: '0',
+					    'z-index'			: '0'
+                    });
+                }, this));
+    
+            }
+        },
+        /**
+         * @method _bgOverlayClear
+         * @private
+         */
+        _bgOverlayClear: function(e)
+        {
+            this.elements.bgOverlayColor.prev('.fl-color-picker-clear').trigger('click');
         },
         
         /* Node Border Settings

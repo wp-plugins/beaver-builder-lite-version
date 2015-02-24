@@ -151,6 +151,11 @@ final class FLBuilderIcons {
         $upload_info   = FLBuilderModel::get_cache_dir( 'icons' );
         $folders       = glob( $upload_info['path'] . '*' );
         
+        // Make sure we have an array.
+        if( ! is_array( $folders ) ) {
+	        return;
+        }
+        
         // Loop through uploaded sets.
         foreach ( $folders as $folder ) {
 	        

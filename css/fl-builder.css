@@ -440,7 +440,7 @@ html.fl-builder-edit {
     width: 100%;
     z-index: 100006;
 }
-.fl-block-overlay-active .fl-col {
+.fl-block-overlay-active .fl-row-content {
     position: relative;
     z-index: 100007;
 }

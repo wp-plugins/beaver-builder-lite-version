@@ -28,17 +28,19 @@ var FLBuilderAdminPosts;
          */        
         _enableEditorClicked: function()
         {
-            if(!$('body').hasClass('fl-builder-enabled')) {
+            if ( ! $( 'body' ).hasClass( 'fl-builder-enabled' ) ) {
                 return;
             }
+            if ( confirm( FLBuilderAdminPostsStrings.switchToEditor ) ) {
             
-            $('.fl-builder-admin-tabs a').removeClass('fl-active');
-            $(this).addClass('fl-active');
-            
-            FLBuilderAdminPosts.ajax({
-                action: 'fl_builder_save',
-                method: 'disable',
-            }, FLBuilderAdminPosts._enableEditorComplete);
+	            $('.fl-builder-admin-tabs a').removeClass('fl-active');
+	            $(this).addClass('fl-active');
+	            
+	            FLBuilderAdminPosts.ajax({
+	                action: 'fl_builder_save',
+	                method: 'disable',
+	            }, FLBuilderAdminPosts._enableEditorComplete);
+            }
         },
  
         /**

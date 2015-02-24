@@ -8,6 +8,10 @@ if($settings->bg_type == 'slideshow') :
 
 ?>
 YUI({'logExclude': { 'yui': true } }).use('fl-slideshow', function(Y) {
+	
+	if( null === Y.one('.fl-node-<?php echo $id; ?> .fl-bg-slideshow') ) {
+		return;
+	}
 
 	var oldSlideshow = Y.one('.fl-node-<?php echo $id; ?> .fl-bg-slideshow .fl-slideshow'),
 	    newSlideshow = new Y.FL.Slideshow({

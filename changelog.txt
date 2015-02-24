@@ -1,3 +1,23 @@
+<h4>1.4.8 - 02/22/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added a background color overlay setting for rows. A huge thanks to <a href="http://favolla.com.br/" target="_blank">Diego de Oliveira</a> for this contribution!</li>
+    <li>Added global settings for default row width.</li>
+    <li>Added a confirmation popup for switching back to text editor mode.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug with custom icons that only happens on certain sites as PHP's glob function doesn't always return an array.</li>
+    <li>Fixed an admin settings JavaScript error caused by unescaped translation strings.</li>
+    <li>Fixed a bug causing row background slideshows to show up on archive pages.</li>
+</ul>
+
+<h4>1.4.7 - 02/16/2015</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug that broke the builder's admin settings page on the standard version.</li>
+</ul>
+
 <h4>1.4.6 - 02/15/2015</h4>
 <p><strong>Enhancements</strong></p>
 <ul>

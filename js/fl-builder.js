@@ -1328,6 +1328,9 @@ var FLBuilder;
                     setTimeout(function(){
                         head.append(newJs);
                     }, 50);
+
+                    // Send the layout rendered event.
+                    $( FLBuilder._contentClass ).trigger( 'fl-builder.layout-rendered' );
                     
                     // Remove action overlays so they can reset.
                     FLBuilder._removeAllOverlays();

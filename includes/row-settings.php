@@ -14,7 +14,7 @@ FLBuilder::register_settings_form('row', array(
                         'width'         => array(
                             'type'          => 'select',
                             'label'         => __('Width', 'fl-builder'),
-                            'default'       => 'fixed',
+                            'default'       => $global_settings->row_width_default,
                             'options'       => array(
                                 'fixed'         => __('Fixed', 'fl-builder'),
                                 'full'          => __('Full Width', 'fl-builder')
@@ -32,7 +32,7 @@ FLBuilder::register_settings_form('row', array(
                         'content_width'  => array(
                             'type'          => 'select',
                             'label'         => __('Content Width', 'fl-builder'),
-                            'default'       => 'fixed',
+                            'default'       => $global_settings->row_content_width_default,
                             'options'       => array(
                                 'fixed'         => __('Fixed', 'fl-builder'),
                                 'full'          => __('Full Width', 'fl-builder')
@@ -83,16 +83,16 @@ FLBuilder::register_settings_form('row', array(
                                     'sections'      => array('bg_color')
                                 ),
                                 'photo'         => array(
-                                    'sections'      => array('bg_photo')
+                                    'sections'      => array('bg_photo', 'bg_overlay')
                                 ),
                                 'video'         => array(
-                                    'sections'      => array('bg_video')
+                                    'sections'      => array('bg_video', 'bg_overlay')
                                 ),
                                 'slideshow'     => array(
-                                    'sections'      => array('bg_slideshow')
+                                    'sections'      => array('bg_slideshow', 'bg_overlay')
                                 ),
                                 'parallax'      => array(
-                                    'sections'      => array('bg_parallax')
+                                    'sections'      => array('bg_parallax', 'bg_overlay')
                                 )
                             ),
                             'preview'         => array(
@@ -332,6 +332,30 @@ FLBuilder::register_settings_form('row', array(
                                 '5'             => _x( 'Medium', 'Speed.', 'fl-builder' ),
                                 '8'             => __('Slow', 'fl-builder')
                             ),
+                            'preview'         => array(
+                                'type'            => 'none'
+                            )
+                        )
+                    )
+                ),
+                'bg_overlay'     => array(
+                    'title'         => __('Background Overlay', 'fl-builder'),
+                    'fields'        => array(
+                        'bg_overlay_color'      => array(
+                            'type'          => 'color',
+                            'label'         => __('Overlay Color', 'fl-builder'),
+                            'show_reset'    => true,
+                            'preview'         => array(
+                                'type'            => 'none'
+                            )
+                        ),
+                        'bg_overlay_opacity'    => array(
+                            'type'          => 'text',
+                            'label'         => __('Overlay Opacity', 'fl-builder'),
+                            'default'       => '50',
+                            'description'   => '%',
+                            'maxlength'     => '3',
+                            'size'          => '5',
                             'preview'         => array(
                                 'type'            => 'none'
                             )
