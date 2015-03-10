@@ -362,6 +362,28 @@ final class FLBuilderModel {
 	}
 
 	/**
+	 * Checks to see if this is the first time 
+	 * a user has launched the builder.
+	 *
+     * @method is_new_user
+     */
+	static public function is_new_user()
+	{
+    	if ( self::is_builder_active() ) {
+				
+			$current_user 	= wp_get_current_user();
+        	$launched 		= get_user_meta( $current_user->ID, '_fl_builder_launched', true );
+        	
+        	if ( empty( $launched ) ) {
+	        	update_user_meta( $current_user->ID, '_fl_builder_launched', 1 );
+	        	return true;
+        	}
+    	}
+
+    	return false;
+	}
+
+	/**
 	 * Gets the status to use for working with nodes in
 	 * the database. Returns draft if the builder is active,
 	 * otherwise it returns published.
@@ -1416,12 +1438,19 @@ final class FLBuilderModel {
     static public function get_categorized_modules()
     {
         $enabled_modules = self::get_enabled_modules();
+        
+        // Get the core category keys. 
+        $basic_key		 = __('Basic Modules', 'fl-builder');
+        $advanced_key    = __('Advanced Modules', 'fl-builder');
+        $other_key    	 = __('Other Modules', 'fl-builder');
+        $widgets_key     = __('WordPress Widgets', 'fl-builder');
 
-		$categories = array(
-			'Basic Modules'     => array(),
-			'Advanced Modules'  => array(),
-			'Other'             => array()
-		);
+		// Build the default category arrays. 
+		$categories = array();
+		$categories[ $basic_key ] = array();
+		$categories[ $advanced_key ] = array();
+		$categories[ $other_key ] = array();
+		$categories[ $widgets_key ] = array();
 
 		// Build the categories array.
 		foreach(self::$modules as $module) {
@@ -1430,7 +1459,7 @@ final class FLBuilderModel {
     		    continue;
 		    }
 			else if($module->slug == 'widget') {
-				$categories[$module->category] = self::get_wp_widgets();
+				$categories[$widgets_key] = self::get_wp_widgets();
 			}
 			else if(isset($module->category)) {
 
@@ -1441,7 +1470,7 @@ final class FLBuilderModel {
 				$categories[$module->category][$module->name] = $module;
 			}
 			else {
-				$categories['Other'][$module->name] = $module;
+				$categories[$other_key][$module->name] = $module;
 			}
 		}
 
@@ -1458,6 +1487,33 @@ final class FLBuilderModel {
 		// Return sorted categories.
 		return $categories;
     }
+
+	/**
+     * @method get_module_category_slug
+     */
+    static public function get_module_category_slug( $name )
+    {
+	    // Get the core category keys. 
+        $basic_key		 = __('Basic Modules', 'fl-builder');
+        $advanced_key    = __('Advanced Modules', 'fl-builder');
+        $other_key    	 = __('Other Modules', 'fl-builder');
+        $widgets_key     = __('WordPress Widgets', 'fl-builder');
+        
+        if ( $name == $basic_key ) {
+	        return 'basic';
+        }
+        if ( $name == $advanced_key ) {
+	        return 'advanced';
+        }
+        if ( $name == $other_key ) {
+	        return 'other';
+        }
+        if ( $name == $widgets_key ) {
+	        return 'widgets';
+        }
+        
+        return sanitize_html_class( $name );
+	}
 
     /**
      * @method get_module
@@ -2638,6 +2694,50 @@ final class FLBuilderModel {
     }
 
 	/**
+     * @method get_help_button_defaults
+     */
+    static public function get_help_button_defaults()
+    {
+	    $defaults = array(
+	    	'enabled' 				=> true,
+	    	'tour'	  				=> true,
+	    	'video'	  				=> false,
+	    	'video_embed'			=> '<iframe width="420" height="315" src="https://www.youtube.com/embed/CNJbH2gaACo" frameborder="0" allowfullscreen></iframe>',
+	    	'knowledge_base' 		=> true,
+	    	'knowledge_base_url' 	=> 'https://www.wpbeaverbuilder.com/documentation/?utm_source=external&utm_medium=builder&utm_campaign=docs-button',
+	    	'forums' 				=> true,
+	    	'forums_url' 			=> 'https://www.wpbeaverbuilder.com/support/?utm_source=external&utm_medium=builder&utm_campaign=forums-button',
+    	);
+    	
+    	return $defaults;
+	}
+
+	/**
+     * @method get_help_button_settings
+     */
+    static public function get_help_button_settings()
+    {
+    	$key      = '_fl_builder_help_button';
+    	$defaults = self::get_help_button_defaults();
+
+	    // Get the value.
+    	if ( is_network_admin() || class_exists( 'FLBuilderMultisiteSettings' ) ) {
+        	$value = get_site_option( $key );
+    	}
+        else {
+            $value = get_option( $key );
+        }
+
+    	// Return the value.
+	    if ( false === $value ) {
+    	    return $defaults;
+	    }
+	    else {
+    	    return $value;
+	    }
+    }
+
+	/**
      * @method plugin_basename
      */
     static public function plugin_basename()
@@ -2655,7 +2755,7 @@ final class FLBuilderModel {
     {
         if(current_user_can('delete_plugins')) {
 
-            // Delete builder settings.
+            // Delete builder options.
             delete_option('_fl_builder_settings');
             delete_option('_fl_builder_enabled_modules');
             delete_option('_fl_builder_enabled_templates');
@@ -2663,6 +2763,10 @@ final class FLBuilderModel {
             delete_option('_fl_builder_enabled_icons');
             delete_option('_fl_builder_branding');
             delete_option('_fl_builder_editing_capability');
+            delete_option('_fl_builder_help_button');
+            
+            // Delete builder user meta.
+            delete_metadata('user', 0, '_fl_builder_launched', 1, true);
 
             // Delete uploaded files and folders.
             $upload_dir  = self::get_upload_dir();

@@ -76,6 +76,9 @@ final class FLBuilder {
     {
         // Enable editing if the builder is active.
         if(FLBuilderModel::is_builder_active()) {
+	        
+	        // Tell W3TC not to minify while the builder is active.
+	        define( 'DONOTMINIFY', true );
 
             // Remove 3rd party editor buttons.
             remove_all_actions('media_buttons', 999999);
@@ -348,6 +351,7 @@ final class FLBuilder {
     		wp_enqueue_style('jquery-nanoscroller',     $css_url . 'jquery.nanoscroller.css', array(), $ver);
     		wp_enqueue_style('jquery-autosuggest',      $css_url . 'jquery.autoSuggest.min.css', array(), $ver);
     		wp_enqueue_style('jquery-tiptip',           $css_url . 'jquery.tiptip.css', array(), $ver);
+    		wp_enqueue_style('bootstrap-tour',          $css_url . 'bootstrap-tour-standalone.min.css', array(), $ver);
     		wp_enqueue_style('fl-color-picker',         $css_url . 'colorpicker.css', array(), $ver);
     		wp_enqueue_style('fl-lightbox',             $css_url . 'fl-lightbox.css', array(), $ver);
     		wp_enqueue_style('fl-icon-selector',        $css_url . 'fl-icon-selector.css', array(), $ver);
@@ -378,6 +382,7 @@ final class FLBuilder {
     		wp_enqueue_script('jquery-tiptip',          $js_url . 'jquery.tiptip.min.js', array(), $ver, true);
     		wp_enqueue_script('jquery-simulate',        $js_url . 'jquery.simulate.js', array(), $ver, true);
     		wp_enqueue_script('jquery-validate',        $js_url . 'jquery.validate.min.js', array(), $ver, true);
+    		wp_enqueue_script('bootstrap-tour',         $js_url . 'bootstrap-tour-standalone.min.js', array(), $ver, true);
 			wp_enqueue_script('ace',                    $js_url . 'ace/ace.js', array(), $ver, true);
     		wp_enqueue_script('fl-color-picker',        $js_url . 'colorpicker.js', array(), $ver, true);
     		wp_enqueue_script('fl-lightbox',            $js_url . 'fl-lightbox.js', array(), $ver, true);
@@ -385,6 +390,7 @@ final class FLBuilder {
             wp_enqueue_script('fl-stylesheet',          $js_url . 'fl-stylesheet.js', array(), $ver, true);
             wp_enqueue_script('fl-builder',             $js_url . 'fl-builder.js', array(), $ver, true);
             wp_enqueue_script('fl-builder-preview',     $js_url . 'fl-builder-preview.js', array(), $ver, true);
+            wp_enqueue_script('fl-builder-tour',        $js_url . 'fl-builder-tour.js', array(), $ver, true);
 
             /* Core template settings */
             if(file_exists(FL_BUILDER_DIR . 'js/fl-template-settings.js')) {
@@ -450,6 +456,7 @@ final class FLBuilder {
             $post_id            = $wp_the_query->post->ID;
         	$categories         = FLBuilderModel::get_categorized_modules();
         	$enabled_templates  = FLBuilderModel::get_enabled_templates();
+        	$help_button	    = FLBuilderModel::get_help_button_settings();
 
             include FL_BUILDER_DIR . 'includes/ui.php';
             include FL_BUILDER_DIR . 'includes/js-config.php';

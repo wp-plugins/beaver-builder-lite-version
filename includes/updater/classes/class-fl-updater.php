@@ -10,7 +10,7 @@ final class FLUpdater {
 	 * @static
 	 * @private
 	 */
-	static private $_store_api_url = 'http://www.wpbeaverbuilder.com/';
+	static private $_store_api_url = 'https://www.wpbeaverbuilder.com/';
 
 	/**
 	 * @property $_updates_api_url

@@ -58,6 +58,9 @@
     margin-top: 15px;
     width: 78%;
 }
+.fl-settings-form-content h4 {
+	font-size: 14px;
+}
 
 /* Settings Forms
 ----------------------------------------------------------- */
@@ -95,6 +98,16 @@
 
 .fl-delete-icon-set {
 	color: #d34e2a;
+}
+
+/* Help Button
+----------------------------------------------------------- */
+
+.fl-help-button-settings,
+.fl-help-video-embed,
+.fl-knowledge-base-url,
+.fl-forums-url {
+	display: none;
 }
 
 /* Media Query - Max Width 900px

@@ -231,8 +231,7 @@ var FLBuilderPreview;
             this._xhr = FLBuilder.ajax({
                 action          : 'fl_builder_render_preview',
                 node_id         : nodeId,
-                node_preview    : settings,
-                'wp-minify-off' : '1'
+                node_preview    : settings
             }, $.proxy(this._renderPreview, this));
         },
     
@@ -296,6 +295,9 @@ var FLBuilderPreview;
             
             // Remove the loading graphic.
             $('.fl-builder-preview-loader').remove();
+           
+            // Fire the preview rendered event. 
+            $( FLBuilder._contentClass ).trigger( 'fl-builder.preview-rendered' );
         },
     
         /**

@@ -33,6 +33,9 @@
         </span>
         <?php endif; ?>
         <div class="fl-builder-bar-actions">
+	        <?php if ( $help_button['enabled'] ) : ?>
+            <span class="fl-builder-help-button fl-builder-button"><i class="fa fa-question-circle"></i></span>
+            <?php endif ?>
             <?php if(stristr(home_url(), 'demo.wpbeaverbuilder.com')) : ?>
         	<span class="fl-builder-upgrade-button fl-builder-button"><?php _e('Buy Now!', 'fl-builder'); ?></span>
             <?php elseif(FL_BUILDER_LITE === true) : ?>
@@ -59,7 +62,7 @@
     <div class="fl-builder-panel-content-wrap fl-nanoscroller">
         <div class="fl-builder-panel-content fl-nanoscroller-content">
             <div class="fl-builder-blocks">
-                <div class="fl-builder-blocks-section">
+                <div id="fl-builder-blocks-rows" class="fl-builder-blocks-section">
                     <span class="fl-builder-blocks-section-title">
                         <?php _e('Row Layouts', 'fl-builder'); ?>
                         <i class="fa fa-chevron-down"></i>
@@ -71,13 +74,13 @@
                         <span class="fl-builder-block fl-builder-block-row" data-cols="4-cols"><?php _e('4 Columns', 'fl-builder'); ?></span>
                         <span class="fl-builder-block fl-builder-block-row" data-cols="5-cols"><?php _e('5 Columns', 'fl-builder'); ?></span>
                         <span class="fl-builder-block fl-builder-block-row" data-cols="6-cols"><?php _e('6 Columns', 'fl-builder'); ?></span>
-                        <span class="fl-builder-block fl-builder-block-row" data-cols="left-sidebar"><?php _e('Left Sidebar', 'fl-builder'); ?></span>
+                        <span class="fl-builder-block fl-builder-block-row" data-cols="left-sidebar"><?php _e('Left Sidebar', 'fl-builder'); ?></span>   
                         <span class="fl-builder-block fl-builder-block-row" data-cols="right-sidebar"><?php _e('Right Sidebar', 'fl-builder'); ?></span>
                         <span class="fl-builder-block fl-builder-block-row" data-cols="left-right-sidebar"><?php _e('Left &amp; Right Sidebar', 'fl-builder'); ?></span>
                     </div>
                 </div>
             	<?php foreach($categories as $title => $modules) : ?>
-            	<div class="fl-builder-blocks-section <?php if($title == 'Builder Modules') echo ' fl-active'; ?>">
+            	<div id="fl-builder-blocks-<?php echo FLBuilderModel::get_module_category_slug( $title ); ?>" class="fl-builder-blocks-section">
                     <span class="fl-builder-blocks-section-title">
                         <?php echo $title; ?>
                         <i class="fa fa-chevron-down"></i>

@@ -38,6 +38,11 @@
             if($('.fl-builder-edit').length === 0 && typeof jQuery.fn.waypoint !== 'undefined' && !FLBuilderLayout._isTouch()) {
                 FLBuilderLayout._initModuleAnimations();
             }
+            
+            // Init anchor links.
+            if ( $( '.fl-builder-content a' ).length > 0 ) {
+                FLBuilderLayout._initAnchorLinks();
+            }
         },
         
         _destroy: function()
@@ -103,6 +108,10 @@
         
         _resizeBgVideo: function()
         {
+	        if ( 0 === $( this ).find( 'video' ).length ) {
+		        return;
+	        }
+	        
             var wrap        = $(this),
                 wrapHeight  = wrap.outerHeight(),
                 wrapWidth   = wrap.outerWidth(),
@@ -163,6 +172,58 @@
             else {
                 module.addClass('fl-animated');
             }
+        },
+        
+        _initAnchorLinks: function()
+        {
+            $( '.fl-builder-content a' ).each( FLBuilderLayout._initAnchorLink );
+        },
+        
+        _initAnchorLink: function()
+        {
+			var link 	= $( this ),
+				href 	= link.attr( 'href' ),
+				id   	= null,
+				element = null;
+			
+			if ( 'undefined' != typeof href && href.indexOf( '#' ) > -1 ) {
+				
+				try {
+					
+					id 		= href.split( '#' ).pop();
+					element = $( '#' + id );
+					
+					if ( element.length > 0 ) {
+						$( link ).on( 'click', FLBuilderLayout._scrollToElementOnLinkClick );
+					}
+				}
+				catch( e ) {}
+			}
+        },
+        
+        _scrollToElementOnLinkClick: function( e )
+        {
+			var link 	= $( this ),
+				href 	= link.attr( 'href' ),
+				id   	= href.split( '#' ).pop(),
+				element = $( '#' + id ),
+				dest 	= 0,
+	            win  	= $( window ),
+	            doc  	= $( document );
+	            
+	        if ( element.length > 0 ) {
+	        
+	            if ( element.offset().top > doc.height() - win.height() ) {
+	                dest = doc.height() - win.height();
+	            } 
+	            else {
+	                dest = element.offset().top - 100;
+	            }
+	
+	            $( 'html, body' ).animate( { scrollTop: dest }, 1000, 'swing' );
+	        }
+	        
+	        e.preventDefault();
         }
     };
 

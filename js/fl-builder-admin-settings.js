@@ -19,6 +19,7 @@
             this._bind();
             this._initNav();
             this._initOverrides();
+            this._initHelpButtonSettings();
         },
         
         /**
@@ -34,6 +35,10 @@
             $('input[name=fl-upload-icon]').on('click', FLBuilderAdminSettings._showIconUploader);
             $('.fl-delete-icon-set').on('click', FLBuilderAdminSettings._deleteCustomIconSet);
             $('#uninstall-form').on('submit', FLBuilderAdminSettings._uninstallFormSubmit);
+            $('input[name=fl-help-button-enabled]').on('click', FLBuilderAdminSettings._initHelpButtonSettings);
+            $('input[name=fl-help-video-enabled]').on('click', FLBuilderAdminSettings._initHelpButtonSettings);
+            $('input[name=fl-knowledge-base-enabled]').on('click', FLBuilderAdminSettings._initHelpButtonSettings);
+            $('input[name=fl-forums-enabled]').on('click', FLBuilderAdminSettings._initHelpButtonSettings);
         },
         
         /**
@@ -146,6 +151,28 @@
             else {
                 content.hide();
             }
+        },
+        
+        /**
+	     * @method _initHelpButtonSettings
+	     * @private
+	     */
+        _initHelpButtonSettings: function()
+        {
+	        if ( 0 === $( '#fl-help-button-form' ).length ) {
+		        return;
+	        }
+	        
+            var enabled  = $( 'input[name=fl-help-button-enabled]' )[ 0 ].checked,
+            	tour     = $('input[name=fl-help-tour-enabled]')[ 0 ].checked,
+            	video    = $('input[name=fl-help-video-enabled]')[ 0 ].checked,
+            	kb       = $('input[name=fl-knowledge-base-enabled]')[ 0 ].checked,
+            	forums   = $('input[name=fl-forums-enabled]')[ 0 ].checked;
+            
+            $( '.fl-help-button-settings' ).toggle( enabled );
+            $( '.fl-help-video-embed' ).toggle( video );
+            $( '.fl-knowledge-base-url' ).toggle( kb );
+            $( '.fl-forums-url' ).toggle( forums );
         },
         
         /**

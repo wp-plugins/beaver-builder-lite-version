@@ -1,3 +1,35 @@
+<h4>1.5.0 - 03/02/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Updated Slovak translation.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with the JavaScript for smooth scrolling links.</li>
+	<li>Fixed a spelling error in the help tour. Thanks Gerard!</li>
+</ul>
+
+<h4>1.4.9 - 03/01/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added a help button to the builder interface that gives users access to a tour, video (coming soon), forums and documentation.</li>
+    <li>Added network settings for white labeling the help button. Agency members can customize or disable all help button features such as adding their own video or knowledge base links. Unfortunately, the tour is too complex to make customizable, but it can be disabled and is disabled by default while in simple editing mode.</li>
+    <li>Added a welcome message for the first time a user launchs the builder on a site asking if they would like to view the tour.</li>
+    <li>Added a new style setting to the button module for creating flat, gradient or transparent buttons.</li>
+    <li>Added Arabic and Spanish translations.</li>
+    <li>Added display:inline to builder images to prevent themes that set images to display:block from breaking alignment.</li>
+    <li>Added JavaScript logic for smooth scrolling of all anchor links in a builder layout.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Row overlay actions are now fixed to the bottom of the overlay if the actions are hidden by the builder header or are off the page.</li>
+    <li>Fixed a bug with background video fallbacks not showing on mobile.</li>
+    <li>Fixed a bug with custom modules on Windows servers.</li>
+    <li>Fixed a CSS bug with the callout module when the photo sits to the left of the text.</li>
+    <li>Fixed a bug that prevented the builder from working with domain masking.</li>
+    <li>Fixed a bug caused by W3 Total Cache's HTML minification by disabling minify while the builder is active.</li>
+</ul>
+
 <h4>1.4.8 - 02/22/2015</h4>
 <p><strong>Enhancements</strong></p>
 <ul>

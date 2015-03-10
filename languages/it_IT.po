@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Beaver Builder Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-12 10:28-0800\n"
-"PO-Revision-Date: 2015-02-12 21:24+0100\n"
+"POT-Creation-Date: 2015-02-23 11:24-0800\n"
+"PO-Revision-Date: 2015-02-23 11:25+0100\n"
 "Last-Translator: Alessandro Curci <hantarex@gmail.com>\n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -45,7 +45,7 @@ msgstr "Aggiornamento"
 
 # @ fl-builder
 #: classes/class-fl-builder-admin-settings.php:126
-#: includes/global-settings.php:67
+#: includes/global-settings.php:90
 msgid "Modules"
 msgstr "Moduli"
 
@@ -180,11 +180,6 @@ msgid "Thumbnail"
 msgstr "Miniatura"
 
 # @ fl-builder
-#: classes/class-fl-builder-templates.php:28
-msgid "Page Builder Templates"
-msgstr "Modelli di layout di Page Builder"
-
-# @ fl-builder
 #: classes/class-fl-builder.php:702
 #, php-format
 msgctxt "Field name to add."
@@ -288,6 +283,19 @@ msgstr "%s è attualmente attivo per questa pagina."
 msgctxt "%s stands for custom branded \"Page Builder\" name."
 msgid "Launch %s"
 msgstr "Lancia %s"
+
+# @ fl-builder
+#: includes/admin-posts.php:15
+#, php-format
+msgctxt "%s stands for custom branded \"Page Builder\" name."
+msgid ""
+"Switching to Text Editor mode will disable your %s layout until it is "
+"enabled again. Any edits made while in Text Editor mode will not be made on "
+"your %s layout. Do you want to continue?"
+msgstr ""
+"Tornando alla modalità Text Editor i layout di %s saranno disabilitati "
+"finchè non lo riattivi. Le modifiche apportate in modalità Text Editor non "
+"saranno effettuate sul tuo layout %s. Vuoi continuare?"
 
 #: includes/admin-settings-branding.php:7
 msgid "White label the page builder by entering a custom name below."
@@ -440,7 +448,7 @@ msgid "Save Post Types"
 msgstr "Salva tipi di Post"
 
 # @ fl-builder
-#: includes/admin-settings-templates.php:3 includes/template-settings.php:4
+#: includes/admin-settings-templates.php:3
 msgid "Template Settings"
 msgstr "Impostazioni dei modelli"
 
@@ -533,160 +541,6 @@ msgid "Learn More"
 msgstr "Ulteriori informazioni"
 
 # @ fl-builder
-#: includes/admin-templates-edit.php:3
-msgid "Edit Template"
-msgstr "Modifica modello di Layout"
-
-# @ fl-builder
-#: includes/admin-templates-edit.php:8
-msgctxt "Template edit form field label. Template name."
-msgid "Name"
-msgstr "Nome"
-
-# @ fl-builder
-#: includes/admin-templates-edit.php:12 modules/callout/callout.php:303
-#: modules/post-grid/post-grid.php:113
-msgid "Image"
-msgstr "Immagine"
-
-# @ fl-builder
-#: includes/admin-templates-edit.php:16 includes/row-settings.php:155
-#: includes/template-settings.php:23 modules/callout/callout.php:351
-#: modules/callout/callout.php:371
-#: modules/content-slider/content-slider.php:466
-#: modules/post-grid/post-grid.php:127
-msgid "Position"
-msgstr "Posizione"
-
-#: includes/admin-templates-edit.php:20 includes/template-settings.php:28
-msgctxt "Template edit form field label. Is template premium one?"
-msgid "Premium"
-msgstr "Premium"
-
-# @ fl-builder
-#: includes/admin-templates-edit.php:23 includes/admin-templates.php:30
-#: includes/global-settings.php:18 includes/global-settings.php:87
-#: includes/row-settings.php:307 includes/template-settings.php:31
-#: modules/accordion/accordion.php:90 modules/button/button.php:135
-#: modules/callout/callout.php:418 modules/callout/callout.php:539
-#: modules/content-slider/content-slider.php:203
-#: modules/content-slider/content-slider.php:217
-#: modules/content-slider/content-slider.php:251
-#: modules/content-slider/content-slider.php:260
-#: modules/content-slider/content-slider.php:531
-#: modules/content-slider/content-slider.php:649 modules/cta/cta.php:295
-#: modules/icon-group/icon-group.php:80 modules/icon/icon.php:111
-#: modules/slideshow/slideshow.php:315 modules/slideshow/slideshow.php:325
-#: modules/slideshow/slideshow.php:376 modules/slideshow/slideshow.php:417
-#: modules/slideshow/slideshow.php:439 modules/slideshow/slideshow.php:488
-#: modules/slideshow/slideshow.php:497 modules/slideshow/slideshow.php:506
-#: modules/slideshow/slideshow.php:515 modules/slideshow/slideshow.php:524
-#: modules/slideshow/slideshow.php:533 modules/slideshow/slideshow.php:542
-#: modules/slideshow/slideshow.php:556 modules/slideshow/slideshow.php:571
-#: modules/slideshow/slideshow.php:606 modules/slideshow/slideshow.php:618
-#: modules/slideshow/slideshow.php:630 modules/slideshow/slideshow.php:642
-#: modules/social-buttons/social-buttons.php:111
-#: modules/social-buttons/social-buttons.php:120
-#: modules/social-buttons/social-buttons.php:129
-#: modules/testimonials/testimonials.php:85
-#: modules/testimonials/testimonials.php:124
-#: modules/testimonials/testimonials.php:154 modules/video/video.php:111
-#: modules/video/video.php:123
-msgid "No"
-msgstr "No"
-
-# @ fl-builder
-#: includes/admin-templates-edit.php:24 includes/admin-templates.php:30
-#: includes/global-settings.php:19 includes/global-settings.php:88
-#: includes/row-settings.php:308 includes/template-settings.php:32
-#: modules/accordion/accordion.php:89 modules/button/button.php:136
-#: modules/callout/callout.php:419 modules/callout/callout.php:540
-#: modules/content-slider/content-slider.php:204
-#: modules/content-slider/content-slider.php:218
-#: modules/content-slider/content-slider.php:252
-#: modules/content-slider/content-slider.php:261
-#: modules/content-slider/content-slider.php:532
-#: modules/content-slider/content-slider.php:650 modules/cta/cta.php:296
-#: modules/icon-group/icon-group.php:81 modules/icon/icon.php:112
-#: modules/slideshow/slideshow.php:316 modules/slideshow/slideshow.php:326
-#: modules/slideshow/slideshow.php:377 modules/slideshow/slideshow.php:418
-#: modules/slideshow/slideshow.php:440 modules/slideshow/slideshow.php:489
-#: modules/slideshow/slideshow.php:498 modules/slideshow/slideshow.php:507
-#: modules/slideshow/slideshow.php:516 modules/slideshow/slideshow.php:525
-#: modules/slideshow/slideshow.php:534 modules/slideshow/slideshow.php:543
-#: modules/slideshow/slideshow.php:557 modules/slideshow/slideshow.php:572
-#: modules/slideshow/slideshow.php:607 modules/slideshow/slideshow.php:619
-#: modules/slideshow/slideshow.php:631 modules/slideshow/slideshow.php:643
-#: modules/social-buttons/social-buttons.php:110
-#: modules/social-buttons/social-buttons.php:119
-#: modules/social-buttons/social-buttons.php:128
-#: modules/testimonials/testimonials.php:86
-#: modules/testimonials/testimonials.php:125
-#: modules/testimonials/testimonials.php:155 modules/video/video.php:112
-#: modules/video/video.php:124
-msgid "Yes"
-msgstr "Sì"
-
-# @ fl-builder
-#: includes/admin-templates-edit.php:29 includes/template-settings.php:37
-msgid "Category"
-msgstr "Categoria"
-
-# @ fl-builder
-#: includes/admin-templates-edit.php:32 includes/template-settings.php:40
-msgctxt "Templates category label."
-msgid "Landing Pages"
-msgstr "Landing Pages"
-
-#: includes/admin-templates-edit.php:33 includes/template-settings.php:41
-msgctxt "Templates category label."
-msgid "Company Info"
-msgstr "Informazioni organizzazione"
-
-# @ fl-builder
-#: includes/admin-templates-edit.php:40
-msgid "Update Template"
-msgstr "Aggiorna modello"
-
-# @ fl-builder
-#: includes/admin-templates.php:3
-msgid "Page Builder Template"
-msgstr "Modello di layout di Page Builder"
-
-# @ fl-builder
-#: includes/admin-templates.php:10
-msgctxt "Templates list column label."
-msgid "Name"
-msgstr "Nome"
-
-# @ fl-builder
-#: includes/admin-templates.php:11
-msgctxt "Templates list column label."
-msgid "Category"
-msgstr "Categoria"
-
-#: includes/admin-templates.php:12
-msgctxt "Templates list column label. Is template premium one?"
-msgid "Premium"
-msgstr "Premium"
-
-# @ fl-builder
-#: includes/admin-templates.php:25 includes/field-photo.php:12
-#: includes/template-selector.php:83
-msgid "Edit"
-msgstr "Modifica"
-
-# @ fl-builder
-#: includes/admin-templates.php:27 includes/template-selector.php:84
-msgid "Delete"
-msgstr "Elimina"
-
-# @ fl-builder
-#: includes/admin-templates.php:40 includes/js-config.php:27
-msgid "Do you really want to delete this template?"
-msgstr "Vuoi davvero eliminare questo modello?"
-
-# @ fl-builder
 #: includes/column-settings.php:4 includes/js-config.php:22
 msgid "Column Settings"
 msgstr "Impostazioni colonna"
@@ -696,8 +550,9 @@ msgstr "Impostazioni colonna"
 #: includes/row-settings.php:9 modules/accordion/accordion.php:45
 #: modules/button/button.php:95 modules/callout/callout.php:239
 #: modules/content-slider/content-slider.php:419 modules/cta/cta.php:99
-#: modules/heading/heading.php:69 modules/icon-group/icon-group.php:44
-#: modules/icon/icon.php:75 modules/pricing-table/pricing-table.php:43
+#: modules/heading/heading.php:69 modules/icon/icon.php:75
+#: modules/icon-group/icon-group.php:44
+#: modules/pricing-table/pricing-table.php:43
 #: modules/pricing-table/pricing-table.php:155
 #: modules/separator/separator.php:72 modules/tabs/tabs.php:45
 msgid "Style"
@@ -721,11 +576,10 @@ msgstr "Testo"
 # @ fl-builder
 #: includes/column-settings.php:30 includes/column-settings.php:43
 #: includes/column-settings.php:100 includes/row-settings.php:52
-#: includes/row-settings.php:109 includes/row-settings.php:379
+#: includes/row-settings.php:109 includes/row-settings.php:403
 #: modules/callout/callout.php:389
-#: modules/content-slider/content-slider.php:331
-#: modules/icon-group/icon-group.php:51 modules/icon/icon.php:82
-#: modules/separator/separator.php:34
+#: modules/content-slider/content-slider.php:331 modules/icon/icon.php:82
+#: modules/icon-group/icon-group.php:51 modules/separator/separator.php:34
 msgid "Color"
 msgstr "Colore"
 
@@ -735,26 +589,26 @@ msgstr "Colore"
 #: modules/callout/callout.php:506
 #: modules/content-slider/content-slider.php:357
 #: modules/content-slider/content-slider.php:624 modules/cta/cta.php:195
-#: modules/cta/cta.php:262 modules/icon-group/icon-group.php:64
-#: modules/icon/icon.php:95
+#: modules/cta/cta.php:262 modules/icon/icon.php:95
+#: modules/icon-group/icon-group.php:64
 msgid "Background Color"
 msgstr "Colore di sfondo"
 
 # @ fl-builder
 #: includes/column-settings.php:51 includes/column-settings.php:108
-#: includes/row-settings.php:117 includes/row-settings.php:387
+#: includes/row-settings.php:117 includes/row-settings.php:411
 #: modules/separator/separator.php:44
 msgid "Opacity"
 msgstr "Opacità"
 
 # @ fl-builder
-#: includes/column-settings.php:63 includes/row-settings.php:342
+#: includes/column-settings.php:63 includes/row-settings.php:366
 msgid "Border"
 msgstr "Bordo"
 
 # @ fl-builder
 #: includes/column-settings.php:67 includes/row-settings.php:65
-#: includes/row-settings.php:346 modules/callout/callout.php:472
+#: includes/row-settings.php:370 modules/callout/callout.php:472
 #: modules/content-slider/content-slider.php:325
 #: modules/content-slider/content-slider.php:372
 #: modules/content-slider/content-slider.php:590
@@ -764,7 +618,7 @@ msgid "Type"
 msgstr "Tipo"
 
 # @ fl-builder
-#: includes/column-settings.php:69 includes/row-settings.php:348
+#: includes/column-settings.php:69 includes/row-settings.php:372
 msgid ""
 "The type of border to use. Double borders must have a width of at least 3px "
 "to render properly."
@@ -773,163 +627,163 @@ msgstr ""
 "almeno 3px per essere visualizzati correttamente."
 
 # @ fl-builder
-#: includes/column-settings.php:71 includes/row-settings.php:350
+#: includes/column-settings.php:71 includes/row-settings.php:374
 msgctxt "Border type."
 msgid "None"
 msgstr "Nessuno"
 
 # @ fl-builder
-#: includes/column-settings.php:72 includes/row-settings.php:351
+#: includes/column-settings.php:72 includes/row-settings.php:375
 #: modules/separator/separator.php:75
 msgctxt "Border type."
 msgid "Solid"
 msgstr "Solido"
 
 # @ fl-builder
-#: includes/column-settings.php:73 includes/row-settings.php:352
+#: includes/column-settings.php:73 includes/row-settings.php:376
 #: modules/separator/separator.php:76
 msgctxt "Border type."
 msgid "Dashed"
 msgstr "Tratteggiato"
 
 # @ fl-builder
-#: includes/column-settings.php:74 includes/row-settings.php:353
+#: includes/column-settings.php:74 includes/row-settings.php:377
 #: modules/separator/separator.php:77
 msgctxt "Border type."
 msgid "Dotted"
 msgstr "Punteggiato"
 
 # @ fl-builder
-#: includes/column-settings.php:75 includes/row-settings.php:354
+#: includes/column-settings.php:75 includes/row-settings.php:378
 #: modules/separator/separator.php:78
 msgctxt "Border type."
 msgid "Double"
 msgstr "Doppio"
 
 # @ fl-builder
-#: includes/column-settings.php:119 includes/row-settings.php:398
+#: includes/column-settings.php:119 includes/row-settings.php:422
 msgid "Top Width"
 msgstr "Larghezza superiore"
 
 # @ fl-builder
-#: includes/column-settings.php:131 includes/row-settings.php:410
+#: includes/column-settings.php:131 includes/row-settings.php:434
 msgid "Bottom Width"
 msgstr "Larghezza inferiore"
 
 # @ fl-builder
-#: includes/column-settings.php:143 includes/row-settings.php:422
+#: includes/column-settings.php:143 includes/row-settings.php:446
 msgid "Left Width"
 msgstr "Larghezza sinistra"
 
 # @ fl-builder
-#: includes/column-settings.php:155 includes/row-settings.php:434
+#: includes/column-settings.php:155 includes/row-settings.php:458
 msgid "Right Width"
 msgstr "Larghezza destra"
 
 # @ fl-builder
 #: includes/column-settings.php:170 includes/module-settings.php:6
-#: includes/row-settings.php:449 modules/content-slider/content-slider.php:267
+#: includes/row-settings.php:473 modules/content-slider/content-slider.php:267
 msgid "Advanced"
 msgstr "Avanzato"
 
 # @ fl-builder
 #: includes/column-settings.php:173 includes/global-settings.php:41
-#: includes/global-settings.php:71 includes/module-settings.php:9
-#: includes/row-settings.php:452
+#: includes/global-settings.php:94 includes/module-settings.php:9
+#: includes/row-settings.php:476
 msgid "Margins"
 msgstr "Margini"
 
 # @ fl-builder
 #: includes/column-settings.php:177 includes/column-settings.php:230
-#: includes/module-settings.php:13 includes/row-settings.php:456
-#: includes/row-settings.php:509 modules/slideshow/slideshow.php:475
+#: includes/module-settings.php:13 includes/row-settings.php:480
+#: includes/row-settings.php:533 modules/slideshow/slideshow.php:475
 msgid "Top"
 msgstr "Alto"
 
 # @ fl-builder
 #: includes/column-settings.php:189 includes/column-settings.php:242
-#: includes/module-settings.php:25 includes/row-settings.php:468
-#: includes/row-settings.php:521 modules/slideshow/slideshow.php:474
+#: includes/module-settings.php:25 includes/row-settings.php:492
+#: includes/row-settings.php:545 modules/slideshow/slideshow.php:474
 msgid "Bottom"
 msgstr "Basso"
 
 # @ fl-builder
 #: includes/column-settings.php:201 includes/column-settings.php:254
-#: includes/module-settings.php:37 includes/row-settings.php:480
-#: includes/row-settings.php:533 modules/button/button.php:177
+#: includes/module-settings.php:37 includes/row-settings.php:504
+#: includes/row-settings.php:557 modules/button/button.php:177
 #: modules/callout/callout.php:250
 #: modules/content-slider/content-slider.php:470 modules/cta/cta.php:123
 #: modules/heading/heading.php:89 modules/heading/heading.php:161
-#: modules/icon-group/icon-group.php:111 modules/icon/icon.php:134
+#: modules/icon/icon.php:134 modules/icon-group/icon-group.php:111
 #: modules/photo/photo.php:417 modules/social-buttons/social-buttons.php:101
 msgid "Left"
 msgstr "Sinistra"
 
 # @ fl-builder
 #: includes/column-settings.php:213 includes/column-settings.php:266
-#: includes/module-settings.php:49 includes/row-settings.php:492
-#: includes/row-settings.php:545 modules/button/button.php:178
+#: includes/module-settings.php:49 includes/row-settings.php:516
+#: includes/row-settings.php:569 modules/button/button.php:178
 #: modules/callout/callout.php:251
 #: modules/content-slider/content-slider.php:472 modules/cta/cta.php:125
 #: modules/heading/heading.php:91 modules/heading/heading.php:163
-#: modules/icon-group/icon-group.php:112 modules/icon/icon.php:135
+#: modules/icon/icon.php:135 modules/icon-group/icon-group.php:112
 #: modules/photo/photo.php:419 modules/social-buttons/social-buttons.php:102
 msgid "Right"
 msgstr "Destra"
 
 # @ fl-builder
 #: includes/column-settings.php:226 includes/global-settings.php:49
-#: includes/row-settings.php:505 modules/button/button.php:191
+#: includes/row-settings.php:529 modules/button/button.php:191
 #: modules/callout/callout.php:567
 #: modules/content-slider/content-slider.php:668 modules/cta/cta.php:314
 msgid "Padding"
 msgstr "Padding"
 
 # @ fl-builder
-#: includes/column-settings.php:279 includes/global-settings.php:80
-#: includes/module-settings.php:62 includes/row-settings.php:558
+#: includes/column-settings.php:279 includes/global-settings.php:103
+#: includes/module-settings.php:62 includes/row-settings.php:582
 msgid "Responsive Layout"
 msgstr "Layout reattivo"
 
 # @ fl-builder
 #: includes/column-settings.php:283 includes/module-settings.php:66
-#: includes/row-settings.php:562 modules/slideshow/slideshow.php:290
+#: includes/row-settings.php:586 modules/slideshow/slideshow.php:290
 msgid "Display"
 msgstr "Visualizza"
 
 # @ fl-builder
 #: includes/column-settings.php:285 includes/module-settings.php:68
-#: includes/row-settings.php:564
+#: includes/row-settings.php:588
 msgid "Always"
 msgstr "Sempre"
 
 # @ fl-builder
 #: includes/column-settings.php:286 includes/module-settings.php:69
-#: includes/row-settings.php:565
+#: includes/row-settings.php:589
 msgid "Large Devices Only"
 msgstr "Solo dispositivi grandi"
 
 # @ fl-builder
 #: includes/column-settings.php:287 includes/module-settings.php:70
-#: includes/row-settings.php:566
+#: includes/row-settings.php:590
 msgid "Large &amp; Medium Devices Only"
 msgstr "Solo dispositivi grandi e medi"
 
 # @ fl-builder
 #: includes/column-settings.php:288 includes/module-settings.php:71
-#: includes/row-settings.php:567
+#: includes/row-settings.php:591
 msgid "Medium Devices Only"
 msgstr "Solo dispositivi medi"
 
 # @ fl-builder
 #: includes/column-settings.php:289 includes/module-settings.php:72
-#: includes/row-settings.php:568
+#: includes/row-settings.php:592
 msgid "Medium &amp; Small Devices Only"
 msgstr "Solo dispositivi medi e piccoli"
 
 # @ fl-builder
 #: includes/column-settings.php:290 includes/module-settings.php:73
-#: includes/row-settings.php:569
+#: includes/row-settings.php:593
 msgid "Small Devices Only"
 msgstr "Solo dispositivi piccoli"
 
@@ -991,13 +845,13 @@ msgstr "Larghezza personalizzata dispositivi piccoli"
 
 # @ fl-builder
 #: includes/column-settings.php:356 includes/module-settings.php:115
-#: includes/row-settings.php:579
+#: includes/row-settings.php:603
 msgid "CSS Selectors"
 msgstr "Selettore CSS"
 
 # @ fl-builder
 #: includes/column-settings.php:360 includes/loop-settings.php:27
-#: includes/module-settings.php:119 includes/row-settings.php:583
+#: includes/module-settings.php:119 includes/row-settings.php:607
 msgid "ID"
 msgstr "ID"
 
@@ -1098,6 +952,11 @@ msgid "Select Photo"
 msgstr "Seleziona foto"
 
 # @ fl-builder
+#: includes/field-photo.php:12 includes/template-selector.php:83
+msgid "Edit"
+msgstr "Modifica"
+
+# @ fl-builder
 #: includes/field-video.php:3 includes/js-config.php:60
 msgid "Select Video"
 msgstr "Seleziona video"
@@ -1108,16 +967,15 @@ msgid "Replace Video"
 msgstr "Sostituisci video"
 
 # @ fl-builder
-#: includes/global-settings.php:7 includes/template-settings.php:7
-#: includes/user-template-settings.php:7 modules/accordion/accordion.php:110
-#: modules/button/button.php:46 modules/callout/callout.php:207
-#: modules/contact-form/contact-form.php:57
+#: includes/global-settings.php:7 includes/user-template-settings.php:7
+#: modules/accordion/accordion.php:110 modules/button/button.php:46
+#: modules/callout/callout.php:207 modules/contact-form/contact-form.php:57
 #: modules/content-slider/content-slider.php:184
 #: modules/content-slider/content-slider.php:308 modules/cta/cta.php:65
 #: modules/gallery/gallery.php:213 modules/heading/heading.php:26
-#: modules/html/html.php:26 modules/icon-group/icon-group.php:128
-#: modules/icon/icon.php:27 modules/map/map.php:26 modules/photo/photo.php:368
-#: modules/pricing-table/pricing-table.php:87
+#: modules/html/html.php:26 modules/icon/icon.php:27
+#: modules/icon-group/icon-group.php:128 modules/map/map.php:26
+#: modules/photo/photo.php:368 modules/pricing-table/pricing-table.php:87
 #: modules/rich-text/rich-text.php:26 modules/separator/separator.php:27
 #: modules/sidebar/sidebar.php:27 modules/slideshow/slideshow.php:256
 #: modules/social-buttons/social-buttons.php:64 modules/tabs/tabs.php:77
@@ -1143,6 +1001,68 @@ msgctxt ""
 "General settings form field label. Intended meaning: \"Show page heading?\""
 msgid "Show"
 msgstr "Visualizza"
+
+# @ fl-builder
+#: includes/global-settings.php:18 includes/global-settings.php:110
+#: includes/row-settings.php:307 modules/accordion/accordion.php:90
+#: modules/button/button.php:135 modules/callout/callout.php:418
+#: modules/callout/callout.php:539
+#: modules/content-slider/content-slider.php:203
+#: modules/content-slider/content-slider.php:217
+#: modules/content-slider/content-slider.php:251
+#: modules/content-slider/content-slider.php:260
+#: modules/content-slider/content-slider.php:531
+#: modules/content-slider/content-slider.php:649 modules/cta/cta.php:295
+#: modules/icon/icon.php:111 modules/icon-group/icon-group.php:80
+#: modules/slideshow/slideshow.php:315 modules/slideshow/slideshow.php:325
+#: modules/slideshow/slideshow.php:376 modules/slideshow/slideshow.php:417
+#: modules/slideshow/slideshow.php:439 modules/slideshow/slideshow.php:488
+#: modules/slideshow/slideshow.php:497 modules/slideshow/slideshow.php:506
+#: modules/slideshow/slideshow.php:515 modules/slideshow/slideshow.php:524
+#: modules/slideshow/slideshow.php:533 modules/slideshow/slideshow.php:542
+#: modules/slideshow/slideshow.php:556 modules/slideshow/slideshow.php:571
+#: modules/slideshow/slideshow.php:606 modules/slideshow/slideshow.php:618
+#: modules/slideshow/slideshow.php:630 modules/slideshow/slideshow.php:642
+#: modules/social-buttons/social-buttons.php:111
+#: modules/social-buttons/social-buttons.php:120
+#: modules/social-buttons/social-buttons.php:129
+#: modules/testimonials/testimonials.php:85
+#: modules/testimonials/testimonials.php:124
+#: modules/testimonials/testimonials.php:154 modules/video/video.php:111
+#: modules/video/video.php:123
+msgid "No"
+msgstr "No"
+
+# @ fl-builder
+#: includes/global-settings.php:19 includes/global-settings.php:111
+#: includes/row-settings.php:308 modules/accordion/accordion.php:89
+#: modules/button/button.php:136 modules/callout/callout.php:419
+#: modules/callout/callout.php:540
+#: modules/content-slider/content-slider.php:204
+#: modules/content-slider/content-slider.php:218
+#: modules/content-slider/content-slider.php:252
+#: modules/content-slider/content-slider.php:261
+#: modules/content-slider/content-slider.php:532
+#: modules/content-slider/content-slider.php:650 modules/cta/cta.php:296
+#: modules/icon/icon.php:112 modules/icon-group/icon-group.php:81
+#: modules/slideshow/slideshow.php:316 modules/slideshow/slideshow.php:326
+#: modules/slideshow/slideshow.php:377 modules/slideshow/slideshow.php:418
+#: modules/slideshow/slideshow.php:440 modules/slideshow/slideshow.php:489
+#: modules/slideshow/slideshow.php:498 modules/slideshow/slideshow.php:507
+#: modules/slideshow/slideshow.php:516 modules/slideshow/slideshow.php:525
+#: modules/slideshow/slideshow.php:534 modules/slideshow/slideshow.php:543
+#: modules/slideshow/slideshow.php:557 modules/slideshow/slideshow.php:572
+#: modules/slideshow/slideshow.php:607 modules/slideshow/slideshow.php:619
+#: modules/slideshow/slideshow.php:631 modules/slideshow/slideshow.php:643
+#: modules/social-buttons/social-buttons.php:110
+#: modules/social-buttons/social-buttons.php:119
+#: modules/social-buttons/social-buttons.php:128
+#: modules/testimonials/testimonials.php:86
+#: modules/testimonials/testimonials.php:125
+#: modules/testimonials/testimonials.php:155 modules/video/video.php:112
+#: modules/video/video.php:124
+msgid "Yes"
+msgstr "Sì"
 
 # @ fl-builder
 #: includes/global-settings.php:26
@@ -1188,7 +1108,31 @@ msgstr ""
 "riga."
 
 # @ fl-builder
-#: includes/global-settings.php:84
+#: includes/global-settings.php:66
+msgid "Default Row Width"
+msgstr "Larghezza predefinita riga"
+
+# @ fl-builder
+#: includes/global-settings.php:69 includes/global-settings.php:83
+#: includes/row-settings.php:19 includes/row-settings.php:37
+#: includes/row-settings.php:179
+msgid "Fixed"
+msgstr "Fissa"
+
+# @ fl-builder
+#: includes/global-settings.php:70 includes/global-settings.php:84
+#: includes/row-settings.php:20 includes/row-settings.php:38
+#: modules/button/button.php:150 modules/callout/callout.php:554
+msgid "Full Width"
+msgstr "Larghezza piena"
+
+# @ fl-builder
+#: includes/global-settings.php:80
+msgid "Default Row Content Width"
+msgstr "Larghezza predefinita riga di contenuto"
+
+# @ fl-builder
+#: includes/global-settings.php:107
 msgctxt ""
 "General settings form field label. Intended meaning: \"Responsive layout "
 "enabled?\""
@@ -1196,12 +1140,12 @@ msgid "Enabled"
 msgstr "Abilitato"
 
 # @ fl-builder
-#: includes/global-settings.php:98
+#: includes/global-settings.php:121
 msgid "Medium Device Breakpoint"
 msgstr "Breakpoint dispositivi medi"
 
 # @ fl-builder
-#: includes/global-settings.php:103
+#: includes/global-settings.php:126
 msgid ""
 "The browser width at which the layout will adjust for medium devices such as "
 "tablets."
@@ -1210,12 +1154,12 @@ msgstr ""
 "come i tablet."
 
 # @ fl-builder
-#: includes/global-settings.php:107
+#: includes/global-settings.php:130
 msgid "Small Device Breakpoint"
 msgstr "Breakpoint dispositivi piccoli"
 
 # @ fl-builder
-#: includes/global-settings.php:112
+#: includes/global-settings.php:135
 msgid ""
 "The browser width at which the layout will adjust for small devices such as "
 "phones."
@@ -1283,6 +1227,11 @@ msgid ""
 msgstr ""
 "Vuoi davvero eliminare questa riga? Tutti i dati contenuti verranno "
 "eliminati definitivamente."
+
+# @ fl-builder
+#: includes/js-config.php:27
+msgid "Do you really want to delete this template?"
+msgstr "Vuoi davvero eliminare questo modello?"
 
 # @ fl-builder
 #: includes/js-config.php:28
@@ -1656,7 +1605,7 @@ msgstr ""
 "Niente spazi."
 
 # @ fl-builder
-#: includes/module-settings.php:127 includes/row-settings.php:591
+#: includes/module-settings.php:127 includes/row-settings.php:615
 msgid "Class"
 msgstr "Classe"
 
@@ -1675,18 +1624,6 @@ msgstr ""
 #: modules/content-slider/content-slider.php:477
 msgid "Width"
 msgstr "Larghezza"
-
-# @ fl-builder
-#: includes/row-settings.php:19 includes/row-settings.php:37
-#: includes/row-settings.php:179
-msgid "Fixed"
-msgstr "Fissa"
-
-# @ fl-builder
-#: includes/row-settings.php:20 includes/row-settings.php:38
-#: modules/button/button.php:150 modules/callout/callout.php:554
-msgid "Full Width"
-msgstr "Larghezza piena"
 
 # @ fl-builder
 #: includes/row-settings.php:27
@@ -1814,6 +1751,14 @@ msgstr ""
 "specificare di ripetere l'immagine solo orizzontalmente o verticalmente."
 
 # @ fl-builder
+#: includes/row-settings.php:155 modules/callout/callout.php:351
+#: modules/callout/callout.php:371
+#: modules/content-slider/content-slider.php:466
+#: modules/post-grid/post-grid.php:127
+msgid "Position"
+msgstr "Posizione"
+
+# @ fl-builder
 #: includes/row-settings.php:158
 msgid "Left Top"
 msgstr "Sinistra Alto"
@@ -1853,7 +1798,7 @@ msgstr "Centro Alto"
 #: modules/callout/callout.php:249
 #: modules/content-slider/content-slider.php:471 modules/cta/cta.php:124
 #: modules/heading/heading.php:90 modules/heading/heading.php:162
-#: modules/icon-group/icon-group.php:110 modules/icon/icon.php:133
+#: modules/icon/icon.php:133 modules/icon-group/icon-group.php:110
 #: modules/photo/photo.php:418 modules/social-buttons/social-buttons.php:100
 msgid "Center"
 msgstr "Centro"
@@ -2100,13 +2045,28 @@ msgid "Slow"
 msgstr "Lenta"
 
 # @ fl-builder
-#: includes/row-settings.php:571
+#: includes/row-settings.php:342
+msgid "Background Overlay"
+msgstr "Sfondo overlay"
+
+# @ fl-builder
+#: includes/row-settings.php:346
+msgid "Overlay Color"
+msgstr "Colore overlay"
+
+# @ fl-builder
+#: includes/row-settings.php:354
+msgid "Overlay Opacity"
+msgstr "Opacità overlay"
+
+# @ fl-builder
+#: includes/row-settings.php:595
 msgid "Choose whether to show or hide this row at different device sizes."
 msgstr ""
 "Scegli se mostrare o nascondere questa riga per diverse dimensioni dei "
 "dispositivi."
 
-#: includes/row-settings.php:584
+#: includes/row-settings.php:608
 msgid ""
 "A unique ID that will be applied to this row's HTML. Must start with a "
 "letter and only contain dashes, underscores, letters or numbers. No spaces."
@@ -2115,7 +2075,7 @@ msgstr ""
 "iniziare con una lettera e contenere solo trattini, underscore, lettere o "
 "numeri. Niente spazi."
 
-#: includes/row-settings.php:592
+#: includes/row-settings.php:616
 msgid ""
 "A class that will be applied to this row's HTML. Must start with a letter "
 "and only contain dashes, underscores, letters or numbers. Separate multiple "
@@ -2166,22 +2126,9 @@ msgstr ""
 "come modello in <strong>Strumenti &rarr; Salva modello</strong>."
 
 # @ fl-builder
-#: includes/template-settings.php:14 includes/user-template-settings.php:15
-msgctxt "Template name."
-msgid "Name"
-msgstr "Nome"
-
-#: includes/template-settings.php:18
-msgid "Image Filename"
-msgstr "Nome file immagine"
-
-#: includes/template-settings.php:19
-msgid ""
-"The filename of the image such as \"thumb.jpg\" that resides in the \"img/"
-"templates/\" directory."
-msgstr ""
-"Il nome file dell'immagine come \"thumb.jpg\" che risiede nella directory "
-"\"img/templates/\"."
+#: includes/template-selector.php:84
+msgid "Delete"
+msgstr "Elimina"
 
 # @ fl-builder
 #: includes/ui.php:7
@@ -2344,6 +2291,12 @@ msgstr ""
 "<strong>Modelli &rarr; I tuoi modelli</strong>."
 
 # @ fl-builder
+#: includes/user-template-settings.php:15
+msgctxt "Template name."
+msgid "Name"
+msgstr "Nome"
+
+# @ fl-builder
 #: modules/accordion/accordion.php:14
 msgid "Accordion"
 msgstr "Accordion"
@@ -2358,7 +2311,7 @@ msgstr "Visualizza una lista comprimibile di elementi."
 #: modules/callout/callout.php:16 modules/contact-form/contact-form.php:16
 #: modules/content-slider/content-slider.php:16 modules/cta/cta.php:16
 #: modules/gallery/gallery.php:16 modules/html/html.php:16
-#: modules/icon-group/icon-group.php:16 modules/icon/icon.php:16
+#: modules/icon/icon.php:16 modules/icon-group/icon-group.php:16
 #: modules/map/map.php:16 modules/post-grid/post-grid.php:16
 #: modules/pricing-table/pricing-table.php:16 modules/sidebar/sidebar.php:16
 #: modules/slideshow/slideshow.php:16
@@ -2462,9 +2415,8 @@ msgstr "Clicca qui"
 # @ fl-builder
 #: modules/button/button.php:62 modules/callout/callout.php:315
 #: modules/callout/callout.php:363 modules/callout/callout.php:367
-#: modules/cta/cta.php:228 modules/icon-group/icon-group.php:34
-#: modules/icon-group/icon-group.php:135 modules/icon/icon.php:14
-#: modules/icon/icon.php:34
+#: modules/cta/cta.php:228 modules/icon/icon.php:14 modules/icon/icon.php:34
+#: modules/icon-group/icon-group.php:34 modules/icon-group/icon-group.php:135
 msgid "Icon"
 msgstr "Icona"
 
@@ -2475,7 +2427,7 @@ msgstr "Icona"
 #: modules/content-slider/content-slider.php:571
 #: modules/content-slider/content-slider.php:594 modules/cta/cta.php:238
 #: modules/heading/heading.php:43 modules/heading/heading.php:47
-#: modules/icon-group/icon-group.php:139 modules/icon/icon.php:43
+#: modules/icon/icon.php:43 modules/icon-group/icon-group.php:139
 #: modules/slideshow/slideshow.php:343
 msgid "Link"
 msgstr "Collegamento"
@@ -2511,8 +2463,8 @@ msgstr "Nuova finestra"
 
 # @ fl-builder
 #: modules/button/button.php:98 modules/cta/cta.php:185
-#: modules/heading/heading.php:72 modules/icon-group/icon-group.php:47
-#: modules/icon/icon.php:78
+#: modules/heading/heading.php:72 modules/icon/icon.php:78
+#: modules/icon-group/icon-group.php:47
 msgid "Colors"
 msgstr "Colori"
 
@@ -2520,7 +2472,7 @@ msgstr "Colori"
 #: modules/button/button.php:108 modules/callout/callout.php:407
 #: modules/callout/callout.php:512
 #: modules/content-slider/content-slider.php:630 modules/cta/cta.php:268
-#: modules/icon-group/icon-group.php:69 modules/icon/icon.php:100
+#: modules/icon/icon.php:100 modules/icon-group/icon-group.php:69
 msgid "Background Hover Color"
 msgstr "Colore di sfondo al passaggio del mouse"
 
@@ -2543,14 +2495,14 @@ msgstr "Colore del testo al passaggio del mouse"
 #: modules/button/button.php:132 modules/callout/callout.php:415
 #: modules/callout/callout.php:536
 #: modules/content-slider/content-slider.php:646 modules/cta/cta.php:292
-#: modules/icon-group/icon-group.php:77 modules/icon/icon.php:108
+#: modules/icon/icon.php:108 modules/icon-group/icon-group.php:77
 msgid "Gradient"
 msgstr "Gradiente"
 
 # @ fl-builder
 #: modules/button/button.php:142 modules/callout/callout.php:242
 #: modules/cta/cta.php:102 modules/heading/heading.php:82
-#: modules/icon-group/icon-group.php:87 modules/icon/icon.php:118
+#: modules/icon/icon.php:118 modules/icon-group/icon-group.php:87
 msgid "Structure"
 msgstr "Struttura"
 
@@ -2568,7 +2520,7 @@ msgstr "Larghezza personalizzata"
 # @ fl-builder
 #: modules/button/button.php:173 modules/cta/cta.php:120
 #: modules/heading/heading.php:86 modules/heading/heading.php:141
-#: modules/icon-group/icon-group.php:107 modules/icon/icon.php:130
+#: modules/icon/icon.php:130 modules/icon-group/icon-group.php:107
 #: modules/photo/photo.php:414 modules/social-buttons/social-buttons.php:97
 msgid "Alignment"
 msgstr "Allineamento"
@@ -2643,6 +2595,11 @@ msgstr "Dimensione titolo"
 #: modules/callout/callout.php:292 modules/cta/cta.php:176
 msgid "Heading Custom Size"
 msgstr "Dimensione personalizzata titolo"
+
+# @ fl-builder
+#: modules/callout/callout.php:303 modules/post-grid/post-grid.php:113
+msgid "Image"
+msgstr "Immagine"
 
 # @ fl-builder
 #: modules/callout/callout.php:310
@@ -2728,8 +2685,8 @@ msgid "Icon Colors"
 msgstr "Colori icona"
 
 # @ fl-builder
-#: modules/callout/callout.php:394 modules/icon-group/icon-group.php:56
-#: modules/icon/icon.php:87
+#: modules/callout/callout.php:394 modules/icon/icon.php:87
+#: modules/icon-group/icon-group.php:56
 msgid "Hover Color"
 msgstr "Colore al passaggio del mouse"
 
@@ -2739,8 +2696,8 @@ msgid "Icon Structure"
 msgstr "Struttura icona"
 
 # @ fl-builder
-#: modules/callout/callout.php:429 modules/icon-group/icon-group.php:91
-#: modules/icon/icon.php:122 modules/post-grid/post-grid.php:136
+#: modules/callout/callout.php:429 modules/icon/icon.php:122
+#: modules/icon-group/icon-group.php:91 modules/post-grid/post-grid.php:136
 msgid "Size"
 msgstr "Dimensione"
 
@@ -3364,6 +3321,11 @@ msgid "Display raw HTML code."
 msgstr "Mostra codice HTML."
 
 # @ fl-builder
+#: modules/icon/icon.php:15
+msgid "Display an icon and optional title."
+msgstr "Mostra un'icona e un titolo opzionale."
+
+# @ fl-builder
 #: modules/icon-group/icon-group.php:14
 msgid "Icon Group"
 msgstr "Gruppo di icone"
@@ -3377,11 +3339,6 @@ msgstr "Mostra un gruppo di icone Font Awesome."
 #: modules/icon-group/icon-group.php:125
 msgid "Add Icon"
 msgstr "Aggiungi icona"
-
-# @ fl-builder
-#: modules/icon/icon.php:15
-msgid "Display an icon and optional title."
-msgstr "Mostra un'icona e un titolo opzionale."
 
 # @ fl-builder
 #: modules/map/map.php:14

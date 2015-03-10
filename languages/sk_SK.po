@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: {FL_BUILDER_NAME}\n"
-"POT-Creation-Date: 2015-02-12 10:28-0800\n"
-"PO-Revision-Date: 2015-02-12 21:02+0100\n"
+"POT-Creation-Date: 2015-03-01 14:02-0800\n"
+"PO-Revision-Date: 2015-03-02 07:49+0100\n"
 "Last-Translator: WebMan - Oliver Juhas <webmandesigneu@gmail.com>\n"
 "Language-Team: WebMan Design <webmandesigneu@gmail.com>\n"
 "Language: sk_SK\n"
@@ -39,11 +39,11 @@ msgid "Upgrade"
 msgstr "Aktualizácia"
 
 #: classes/class-fl-builder-admin-settings.php:126
-#: includes/global-settings.php:67
+#: includes/global-settings.php:90
 msgid "Modules"
 msgstr "Moduly"
 
-#: classes/class-fl-builder-admin-settings.php:130 includes/ui.php:44
+#: classes/class-fl-builder-admin-settings.php:130 includes/ui.php:47
 msgid "Templates"
 msgstr "Šablóny"
 
@@ -67,22 +67,34 @@ msgid "Branding"
 msgstr "Značka"
 
 #: classes/class-fl-builder-admin-settings.php:150
+msgid "Help Button"
+msgstr "Tlačidlo pomoci"
+
+#: classes/class-fl-builder-admin-settings.php:154
 #: includes/admin-settings-uninstall.php:3
 #: includes/admin-settings-uninstall.php:15
 msgid "Uninstall"
 msgstr "Odinštalovať"
 
-#: classes/class-fl-builder-admin-settings.php:368
+#: classes/class-fl-builder-admin-settings.php:376
 msgid "Error! You must have at least one icon set enabled."
 msgstr "Chyba! Musíte povoliť aspon jednu sadu ikoniek."
 
-#: classes/class-fl-builder-admin-settings.php:410
+#: classes/class-fl-builder-admin-settings.php:418
 msgid "Error! Could not unzip file."
 msgstr "Chyba! Nepodarilo sa rozbalit súbor."
 
-#: classes/class-fl-builder-admin-settings.php:444
+#: classes/class-fl-builder-admin-settings.php:452
 msgid "Error! Please upload an icon set from either Icomoon or Fontello."
 msgstr "Chyba! Prosíme, nahrajte sadu ikoniek z Icomoon alebo Fontello."
+
+#: classes/class-fl-builder-admin-settings.php:566
+msgid "Error! Please enter an iframe for the video embed code."
+msgstr "Chyba! Prosíme, zadajte IFRAME pre vložené video."
+
+#: classes/class-fl-builder-admin-settings.php:584
+msgid "Error! You must have at least one feature of the help button enabled."
+msgstr "Chyba! Je nutné aktivovať aspoň jednu položku tlačidla pomoci."
 
 #: classes/class-fl-builder-admin.php:40
 #, php-format
@@ -115,11 +127,11 @@ msgid "Upgrade"
 msgstr "Aktualizovať"
 
 #: classes/class-fl-builder-admin.php:202
-#: classes/class-fl-builder-model.php:2538
+#: classes/class-fl-builder-model.php:2594
 msgid "Page Builder"
 msgstr "Editor stránok"
 
-#: classes/class-fl-builder-model.php:1363
+#: classes/class-fl-builder-model.php:1385
 #, php-format
 msgctxt "%s stands for the module filename"
 msgid ""
@@ -129,7 +141,41 @@ msgstr ""
 "Súbor %s.php modulu už existuje! Prosíme, použite predponu v názvoch súborov "
 "vlastných modulov aby bola zachovaná kompatibilita s Beaver Builder modulom."
 
-#: classes/class-fl-builder-model.php:1953
+#: classes/class-fl-builder-model.php:1443
+#: classes/class-fl-builder-model.php:1497 modules/heading/heading.php:16
+#: modules/photo/photo.php:27 modules/rich-text/rich-text.php:16
+#: modules/separator/separator.php:16 modules/video/video.php:21
+msgid "Basic Modules"
+msgstr "Základné moduly"
+
+#: classes/class-fl-builder-model.php:1444
+#: classes/class-fl-builder-model.php:1498 modules/accordion/accordion.php:16
+#: modules/button/button.php:16 modules/callout/callout.php:16
+#: modules/contact-form/contact-form.php:16
+#: modules/content-slider/content-slider.php:16 modules/cta/cta.php:16
+#: modules/gallery/gallery.php:16 modules/html/html.php:16
+#: modules/icon-group/icon-group.php:16 modules/icon/icon.php:16
+#: modules/map/map.php:16 modules/post-grid/post-grid.php:16
+#: modules/pricing-table/pricing-table.php:16 modules/sidebar/sidebar.php:16
+#: modules/slideshow/slideshow.php:16
+#: modules/social-buttons/social-buttons.php:16 modules/tabs/tabs.php:16
+#: modules/testimonials/testimonials.php:16
+#: modules/woocommerce/woocommerce.php:18
+msgid "Advanced Modules"
+msgstr "Pokročilé moduly"
+
+#: classes/class-fl-builder-model.php:1445
+#: classes/class-fl-builder-model.php:1499
+msgid "Other Modules"
+msgstr "Ostatné moduly"
+
+#: classes/class-fl-builder-model.php:1446
+#: classes/class-fl-builder-model.php:1500 includes/ui.php:88
+#: modules/widget/widget.php:16
+msgid "WordPress Widgets"
+msgstr "WordPress widgety"
+
+#: classes/class-fl-builder-model.php:2009
 #, php-format
 msgctxt "%s stands for post/page title."
 msgid "Copy of %s"
@@ -159,73 +205,73 @@ msgstr "Miniatúra"
 msgid "Page Builder Templates"
 msgstr "Šablóny Editora stránok"
 
-#: classes/class-fl-builder.php:702
+#: classes/class-fl-builder.php:709
 #, php-format
 msgctxt "Field name to add."
 msgid "Add %s"
 msgstr "%s &rarr; pridať"
 
-#: classes/class-fl-builder.php:765 classes/class-fl-builder.php:767
+#: classes/class-fl-builder.php:772 classes/class-fl-builder.php:774
 msgctxt "Custom post type label."
 msgid "Layout Templates"
 msgstr "Šablóny rozloženia"
 
-#: classes/class-fl-builder.php:766 classes/class-fl-builder.php:768
+#: classes/class-fl-builder.php:773 classes/class-fl-builder.php:775
 msgctxt "Custom post type label."
 msgid "Layout Template"
 msgstr "Šablóna rozloženia"
 
-#: classes/class-fl-builder.php:769
+#: classes/class-fl-builder.php:776
 msgctxt "Custom post type label."
 msgid "Add New"
 msgstr "Pridať novú"
 
-#: classes/class-fl-builder.php:770
+#: classes/class-fl-builder.php:777
 msgctxt "Custom post type label."
 msgid "Add New Layout Template"
 msgstr "Pridať novú šablónu rozloženia"
 
-#: classes/class-fl-builder.php:771
+#: classes/class-fl-builder.php:778
 msgctxt "Custom post type label."
 msgid "New Layout Template"
 msgstr "Nová šablóna rozloženia"
 
-#: classes/class-fl-builder.php:772
+#: classes/class-fl-builder.php:779
 msgctxt "Custom post type label."
 msgid "Edit Layout Template"
 msgstr "Upraviť šablónu rozloženia"
 
-#: classes/class-fl-builder.php:773
+#: classes/class-fl-builder.php:780
 msgctxt "Custom post type label."
 msgid "View Layout Template"
 msgstr "Zobraziť šablónu rozloženia"
 
-#: classes/class-fl-builder.php:774
+#: classes/class-fl-builder.php:781
 msgctxt "Custom post type label."
 msgid "All Layout Templates"
 msgstr "Všetky šablóny rozloženia"
 
-#: classes/class-fl-builder.php:775
+#: classes/class-fl-builder.php:782
 msgctxt "Custom post type label."
 msgid "Search Layout Templates"
 msgstr "Hľadať šablóny rozloženia"
 
-#: classes/class-fl-builder.php:776
+#: classes/class-fl-builder.php:783
 msgctxt "Custom post type label."
 msgid "Parent Layout Templates:"
 msgstr "Nadradené šablóny rozloženia:"
 
-#: classes/class-fl-builder.php:777
+#: classes/class-fl-builder.php:784
 msgctxt "Custom post type label."
 msgid "No layout templates found."
 msgstr "Nenašli sa žiadne šablóny rozloženia."
 
-#: classes/class-fl-builder.php:778
+#: classes/class-fl-builder.php:785
 msgctxt "Custom post type label."
 msgid "No layout templates found in Trash."
 msgstr "V koši sa nenašli žiadne šablóny rozloženia."
 
-#: classes/class-fl-builder.php:1143 includes/js-config.php:61
+#: classes/class-fl-builder.php:1150 includes/js-config.php:66
 #, php-format
 msgctxt "%s stands for module name."
 msgid "%s Settings"
@@ -246,6 +292,18 @@ msgstr "Na tejto stránke sa používa %s."
 msgctxt "%s stands for custom branded \"Page Builder\" name."
 msgid "Launch %s"
 msgstr "Spustiť %s"
+
+#: includes/admin-posts.php:15
+#, php-format
+msgctxt "%s stands for custom branded \"Page Builder\" name."
+msgid ""
+"Switching to Text Editor mode will disable your %s layout until it is "
+"enabled again. Any edits made while in Text Editor mode will not be made on "
+"your %s layout. Do you want to continue?"
+msgstr ""
+"Prepnutím do režimu textového editora vypnete rozloženie %s, pokým ho znovu "
+"neaktivujete. Akékoľve zmeny vykonané v režime textového editora sa "
+"neaplikujú na rozloženie %s. Prajete si pokračovať?"
 
 #: includes/admin-settings-branding.php:7
 msgid "White label the page builder by entering a custom name below."
@@ -286,6 +344,62 @@ msgstr ""
 #: includes/admin-settings-editing.php:22
 msgid "Save Editing Settings"
 msgstr "Uložiť nastavenia editácie"
+
+#: includes/admin-settings-help-button.php:8
+msgid "Help Button Settings"
+msgstr "Nastavenia tlačidla pomoci"
+
+#: includes/admin-settings-help-button.php:17
+msgid "Enable Help Button"
+msgstr "Povoliť tlačidlo pomoci"
+
+#: includes/admin-settings-help-button.php:23
+msgid "Help Tour"
+msgstr "Pomocný sprievodca"
+
+#: includes/admin-settings-help-button.php:27
+msgid "Enable Help Tour"
+msgstr "Povoliť pomocného sprievodcu"
+
+#: includes/admin-settings-help-button.php:31
+msgid "Help Video"
+msgstr "Pomocné video"
+
+#: includes/admin-settings-help-button.php:35
+msgid "Enable Help Video"
+msgstr "Povoliť pomocné video"
+
+#: includes/admin-settings-help-button.php:39
+msgid "Help Video Embed Code"
+msgstr "Kód vloženého pomocného videa"
+
+#: includes/admin-settings-help-button.php:45
+msgid "Knowledge Base"
+msgstr "Databáza poznatkov"
+
+#: includes/admin-settings-help-button.php:49
+msgid "Enable Knowledge Base"
+msgstr "Povoliť databázku poznatkov"
+
+#: includes/admin-settings-help-button.php:53
+msgid "Knowledge Base URL"
+msgstr "URL databázy poznatkov"
+
+#: includes/admin-settings-help-button.php:59
+msgid "Forums"
+msgstr "Fóra"
+
+#: includes/admin-settings-help-button.php:63
+msgid "Enable Forums"
+msgstr "Povoliť fóra"
+
+#: includes/admin-settings-help-button.php:67
+msgid "Forums URL"
+msgstr "URL fór"
+
+#: includes/admin-settings-help-button.php:77
+msgid "Save Help Button Settings"
+msgstr "Uložiť nastavenia tlačidla pomoci"
 
 #: includes/admin-settings-icons.php:3
 msgid "Icon Settings"
@@ -462,15 +576,15 @@ msgctxt "Template edit form field label. Template name."
 msgid "Name"
 msgstr "Názov"
 
-#: includes/admin-templates-edit.php:12 modules/callout/callout.php:303
+#: includes/admin-templates-edit.php:12 modules/callout/callout.php:305
 #: modules/post-grid/post-grid.php:113
 msgid "Image"
 msgstr "Obrázok"
 
 #: includes/admin-templates-edit.php:16 includes/row-settings.php:155
-#: includes/template-settings.php:23 modules/callout/callout.php:351
-#: modules/callout/callout.php:371
-#: modules/content-slider/content-slider.php:466
+#: includes/template-settings.php:23 modules/callout/callout.php:353
+#: modules/callout/callout.php:373
+#: modules/content-slider/content-slider.php:472
 #: modules/post-grid/post-grid.php:127
 msgid "Position"
 msgstr "Pozícia"
@@ -481,16 +595,14 @@ msgid "Premium"
 msgstr "Prémiová"
 
 #: includes/admin-templates-edit.php:23 includes/admin-templates.php:30
-#: includes/global-settings.php:18 includes/global-settings.php:87
+#: includes/global-settings.php:18 includes/global-settings.php:110
 #: includes/row-settings.php:307 includes/template-settings.php:31
-#: modules/accordion/accordion.php:90 modules/button/button.php:135
-#: modules/callout/callout.php:418 modules/callout/callout.php:539
-#: modules/content-slider/content-slider.php:203
-#: modules/content-slider/content-slider.php:217
-#: modules/content-slider/content-slider.php:251
-#: modules/content-slider/content-slider.php:260
-#: modules/content-slider/content-slider.php:531
-#: modules/content-slider/content-slider.php:649 modules/cta/cta.php:295
+#: modules/accordion/accordion.php:90 modules/callout/callout.php:420
+#: modules/content-slider/content-slider.php:209
+#: modules/content-slider/content-slider.php:223
+#: modules/content-slider/content-slider.php:257
+#: modules/content-slider/content-slider.php:266
+#: modules/content-slider/content-slider.php:537
 #: modules/icon-group/icon-group.php:80 modules/icon/icon.php:111
 #: modules/slideshow/slideshow.php:315 modules/slideshow/slideshow.php:325
 #: modules/slideshow/slideshow.php:376 modules/slideshow/slideshow.php:417
@@ -512,16 +624,14 @@ msgid "No"
 msgstr "Nie"
 
 #: includes/admin-templates-edit.php:24 includes/admin-templates.php:30
-#: includes/global-settings.php:19 includes/global-settings.php:88
+#: includes/global-settings.php:19 includes/global-settings.php:111
 #: includes/row-settings.php:308 includes/template-settings.php:32
-#: modules/accordion/accordion.php:89 modules/button/button.php:136
-#: modules/callout/callout.php:419 modules/callout/callout.php:540
-#: modules/content-slider/content-slider.php:204
-#: modules/content-slider/content-slider.php:218
-#: modules/content-slider/content-slider.php:252
-#: modules/content-slider/content-slider.php:261
-#: modules/content-slider/content-slider.php:532
-#: modules/content-slider/content-slider.php:650 modules/cta/cta.php:296
+#: modules/accordion/accordion.php:89 modules/callout/callout.php:421
+#: modules/content-slider/content-slider.php:210
+#: modules/content-slider/content-slider.php:224
+#: modules/content-slider/content-slider.php:258
+#: modules/content-slider/content-slider.php:267
+#: modules/content-slider/content-slider.php:538
 #: modules/icon-group/icon-group.php:81 modules/icon/icon.php:112
 #: modules/slideshow/slideshow.php:316 modules/slideshow/slideshow.php:326
 #: modules/slideshow/slideshow.php:377 modules/slideshow/slideshow.php:418
@@ -588,20 +698,24 @@ msgstr "Upraviť"
 msgid "Delete"
 msgstr "Odstrániť"
 
-#: includes/admin-templates.php:40 includes/js-config.php:27
+#: includes/admin-templates.php:40 includes/js-config.php:28
 msgid "Do you really want to delete this template?"
 msgstr "Naozaj chcete túto šablónu vymazať?"
 
-#: includes/column-settings.php:4 includes/js-config.php:22
+#: includes/column-settings.php:4 includes/js-config.php:23
 msgid "Column Settings"
 msgstr "Nastavenia stĺpca"
 
 #: includes/column-settings.php:7 includes/module-settings.php:87
 #: includes/row-settings.php:9 modules/accordion/accordion.php:45
-#: modules/button/button.php:95 modules/callout/callout.php:239
-#: modules/content-slider/content-slider.php:419 modules/cta/cta.php:99
-#: modules/heading/heading.php:69 modules/icon-group/icon-group.php:44
-#: modules/icon/icon.php:75 modules/pricing-table/pricing-table.php:43
+#: modules/button/button.php:108 modules/button/button.php:146
+#: modules/button/button.php:150 modules/callout/callout.php:241
+#: modules/callout/callout.php:543
+#: modules/content-slider/content-slider.php:425
+#: modules/content-slider/content-slider.php:657 modules/cta/cta.php:101
+#: modules/cta/cta.php:299 modules/heading/heading.php:69
+#: modules/icon-group/icon-group.php:44 modules/icon/icon.php:75
+#: modules/pricing-table/pricing-table.php:43
 #: modules/pricing-table/pricing-table.php:155
 #: modules/separator/separator.php:72 modules/tabs/tabs.php:45
 msgid "Style"
@@ -612,55 +726,55 @@ msgid "Column Width"
 msgstr "Šírka stĺpca"
 
 #: includes/column-settings.php:26 includes/row-settings.php:48
-#: modules/button/button.php:53 modules/callout/callout.php:223
-#: modules/callout/callout.php:476 modules/callout/callout.php:492
-#: modules/content-slider/content-slider.php:376
-#: modules/content-slider/content-slider.php:610 modules/cta/cta.php:82
-#: modules/cta/cta.php:219
+#: modules/button/button.php:66 modules/callout/callout.php:225
+#: modules/callout/callout.php:478 modules/callout/callout.php:494
+#: modules/content-slider/content-slider.php:382
+#: modules/content-slider/content-slider.php:616 modules/cta/cta.php:84
+#: modules/cta/cta.php:221
 msgid "Text"
 msgstr "Text"
 
 #: includes/column-settings.php:30 includes/column-settings.php:43
 #: includes/column-settings.php:100 includes/row-settings.php:52
-#: includes/row-settings.php:109 includes/row-settings.php:379
-#: modules/callout/callout.php:389
-#: modules/content-slider/content-slider.php:331
+#: includes/row-settings.php:109 includes/row-settings.php:403
+#: modules/callout/callout.php:391
+#: modules/content-slider/content-slider.php:337
 #: modules/icon-group/icon-group.php:51 modules/icon/icon.php:82
 #: modules/separator/separator.php:34
 msgid "Color"
 msgstr "Farba"
 
 #: includes/column-settings.php:39 includes/row-settings.php:105
-#: modules/button/button.php:102 modules/callout/callout.php:402
-#: modules/callout/callout.php:506
-#: modules/content-slider/content-slider.php:357
-#: modules/content-slider/content-slider.php:624 modules/cta/cta.php:195
-#: modules/cta/cta.php:262 modules/icon-group/icon-group.php:64
+#: modules/button/button.php:115 modules/callout/callout.php:404
+#: modules/callout/callout.php:508
+#: modules/content-slider/content-slider.php:363
+#: modules/content-slider/content-slider.php:630 modules/cta/cta.php:197
+#: modules/cta/cta.php:264 modules/icon-group/icon-group.php:64
 #: modules/icon/icon.php:95
 msgid "Background Color"
 msgstr "Farba pozadia"
 
 #: includes/column-settings.php:51 includes/column-settings.php:108
-#: includes/row-settings.php:117 includes/row-settings.php:387
+#: includes/row-settings.php:117 includes/row-settings.php:411
 #: modules/separator/separator.php:44
 msgid "Opacity"
 msgstr "Nepriehľadnosť"
 
-#: includes/column-settings.php:63 includes/row-settings.php:342
+#: includes/column-settings.php:63 includes/row-settings.php:366
 msgid "Border"
 msgstr "Okraj"
 
 #: includes/column-settings.php:67 includes/row-settings.php:65
-#: includes/row-settings.php:346 modules/callout/callout.php:472
-#: modules/content-slider/content-slider.php:325
-#: modules/content-slider/content-slider.php:372
-#: modules/content-slider/content-slider.php:590
-#: modules/content-slider/content-slider.php:694
+#: includes/row-settings.php:370 modules/callout/callout.php:474
+#: modules/content-slider/content-slider.php:331
+#: modules/content-slider/content-slider.php:378
+#: modules/content-slider/content-slider.php:596
+#: modules/content-slider/content-slider.php:729
 #: modules/slideshow/slideshow.php:339
 msgid "Type"
 msgstr "Typ"
 
-#: includes/column-settings.php:69 includes/row-settings.php:348
+#: includes/column-settings.php:69 includes/row-settings.php:372
 msgid ""
 "The type of border to use. Double borders must have a width of at least 3px "
 "to render properly."
@@ -668,79 +782,79 @@ msgstr ""
 "Typ použitého okraja. Dvojitý okraj musí mať šírku aspoň 3px aby sa zobrazil "
 "správne."
 
-#: includes/column-settings.php:71 includes/row-settings.php:350
+#: includes/column-settings.php:71 includes/row-settings.php:374
 msgctxt "Border type."
 msgid "None"
 msgstr "Žiaden"
 
-#: includes/column-settings.php:72 includes/row-settings.php:351
+#: includes/column-settings.php:72 includes/row-settings.php:375
 #: modules/separator/separator.php:75
 msgctxt "Border type."
 msgid "Solid"
 msgstr "Plný"
 
-#: includes/column-settings.php:73 includes/row-settings.php:352
+#: includes/column-settings.php:73 includes/row-settings.php:376
 #: modules/separator/separator.php:76
 msgctxt "Border type."
 msgid "Dashed"
 msgstr "Prerušovaný"
 
-#: includes/column-settings.php:74 includes/row-settings.php:353
+#: includes/column-settings.php:74 includes/row-settings.php:377
 #: modules/separator/separator.php:77
 msgctxt "Border type."
 msgid "Dotted"
 msgstr "Bodkovaný"
 
-#: includes/column-settings.php:75 includes/row-settings.php:354
+#: includes/column-settings.php:75 includes/row-settings.php:378
 #: modules/separator/separator.php:78
 msgctxt "Border type."
 msgid "Double"
 msgstr "Dvojitý"
 
-#: includes/column-settings.php:119 includes/row-settings.php:398
+#: includes/column-settings.php:119 includes/row-settings.php:422
 msgid "Top Width"
 msgstr "Šírka hore"
 
-#: includes/column-settings.php:131 includes/row-settings.php:410
+#: includes/column-settings.php:131 includes/row-settings.php:434
 msgid "Bottom Width"
 msgstr "Šírka dole"
 
-#: includes/column-settings.php:143 includes/row-settings.php:422
+#: includes/column-settings.php:143 includes/row-settings.php:446
 msgid "Left Width"
 msgstr "Šírka vľavo"
 
-#: includes/column-settings.php:155 includes/row-settings.php:434
+#: includes/column-settings.php:155 includes/row-settings.php:458
 msgid "Right Width"
 msgstr "Šírka vpravo"
 
 #: includes/column-settings.php:170 includes/module-settings.php:6
-#: includes/row-settings.php:449 modules/content-slider/content-slider.php:267
+#: includes/row-settings.php:473 modules/content-slider/content-slider.php:273
 msgid "Advanced"
 msgstr "Pokročilé"
 
 #: includes/column-settings.php:173 includes/global-settings.php:41
-#: includes/global-settings.php:71 includes/module-settings.php:9
-#: includes/row-settings.php:452
+#: includes/global-settings.php:94 includes/module-settings.php:9
+#: includes/row-settings.php:476
 msgid "Margins"
 msgstr "Odsadenie"
 
 #: includes/column-settings.php:177 includes/column-settings.php:230
-#: includes/module-settings.php:13 includes/row-settings.php:456
-#: includes/row-settings.php:509 modules/slideshow/slideshow.php:475
+#: includes/module-settings.php:13 includes/row-settings.php:480
+#: includes/row-settings.php:533 modules/slideshow/slideshow.php:475
 msgid "Top"
 msgstr "Hore"
 
 #: includes/column-settings.php:189 includes/column-settings.php:242
-#: includes/module-settings.php:25 includes/row-settings.php:468
-#: includes/row-settings.php:521 modules/slideshow/slideshow.php:474
+#: includes/module-settings.php:25 includes/row-settings.php:492
+#: includes/row-settings.php:545 modules/slideshow/slideshow.php:474
 msgid "Bottom"
 msgstr "Dole"
 
 #: includes/column-settings.php:201 includes/column-settings.php:254
-#: includes/module-settings.php:37 includes/row-settings.php:480
-#: includes/row-settings.php:533 modules/button/button.php:177
-#: modules/callout/callout.php:250
-#: modules/content-slider/content-slider.php:470 modules/cta/cta.php:123
+#: includes/module-settings.php:37 includes/row-settings.php:504
+#: includes/row-settings.php:557 modules/button/button.php:219
+#: modules/callout/callout.php:252
+#: modules/content-slider/content-slider.php:476 modules/cta/cta.php:125
 #: modules/heading/heading.php:89 modules/heading/heading.php:161
 #: modules/icon-group/icon-group.php:111 modules/icon/icon.php:134
 #: modules/photo/photo.php:417 modules/social-buttons/social-buttons.php:101
@@ -748,10 +862,10 @@ msgid "Left"
 msgstr "Vľavo"
 
 #: includes/column-settings.php:213 includes/column-settings.php:266
-#: includes/module-settings.php:49 includes/row-settings.php:492
-#: includes/row-settings.php:545 modules/button/button.php:178
-#: modules/callout/callout.php:251
-#: modules/content-slider/content-slider.php:472 modules/cta/cta.php:125
+#: includes/module-settings.php:49 includes/row-settings.php:516
+#: includes/row-settings.php:569 modules/button/button.php:220
+#: modules/callout/callout.php:253
+#: modules/content-slider/content-slider.php:478 modules/cta/cta.php:127
 #: modules/heading/heading.php:91 modules/heading/heading.php:163
 #: modules/icon-group/icon-group.php:112 modules/icon/icon.php:135
 #: modules/photo/photo.php:419 modules/social-buttons/social-buttons.php:102
@@ -759,49 +873,49 @@ msgid "Right"
 msgstr "Vpravo"
 
 #: includes/column-settings.php:226 includes/global-settings.php:49
-#: includes/row-settings.php:505 modules/button/button.php:191
-#: modules/callout/callout.php:567
-#: modules/content-slider/content-slider.php:668 modules/cta/cta.php:314
+#: includes/row-settings.php:529 modules/button/button.php:233
+#: modules/callout/callout.php:598
+#: modules/content-slider/content-slider.php:703 modules/cta/cta.php:345
 msgid "Padding"
 msgstr "Vnútorné odsadenie"
 
-#: includes/column-settings.php:279 includes/global-settings.php:80
-#: includes/module-settings.php:62 includes/row-settings.php:558
+#: includes/column-settings.php:279 includes/global-settings.php:103
+#: includes/module-settings.php:62 includes/row-settings.php:582
 msgid "Responsive Layout"
 msgstr "Responzívne rozloženie"
 
 #: includes/column-settings.php:283 includes/module-settings.php:66
-#: includes/row-settings.php:562 modules/slideshow/slideshow.php:290
+#: includes/row-settings.php:586 modules/slideshow/slideshow.php:290
 msgid "Display"
 msgstr "Zobrazenie"
 
 #: includes/column-settings.php:285 includes/module-settings.php:68
-#: includes/row-settings.php:564
+#: includes/row-settings.php:588
 msgid "Always"
 msgstr "Vždy"
 
 #: includes/column-settings.php:286 includes/module-settings.php:69
-#: includes/row-settings.php:565
+#: includes/row-settings.php:589
 msgid "Large Devices Only"
 msgstr "Iba na veľkých zariadeniach"
 
 #: includes/column-settings.php:287 includes/module-settings.php:70
-#: includes/row-settings.php:566
+#: includes/row-settings.php:590
 msgid "Large &amp; Medium Devices Only"
 msgstr "Iba na veľkých a stredných zariadeniach"
 
 #: includes/column-settings.php:288 includes/module-settings.php:71
-#: includes/row-settings.php:567
+#: includes/row-settings.php:591
 msgid "Medium Devices Only"
 msgstr "Iba na stredných zariadeniach"
 
 #: includes/column-settings.php:289 includes/module-settings.php:72
-#: includes/row-settings.php:568
+#: includes/row-settings.php:592
 msgid "Medium &amp; Small Devices Only"
 msgstr "Iba na stredných a malých zariadeniach"
 
 #: includes/column-settings.php:290 includes/module-settings.php:73
-#: includes/row-settings.php:569
+#: includes/row-settings.php:593
 msgid "Small Devices Only"
 msgstr "Iba na malých zariadeniach"
 
@@ -819,16 +933,16 @@ msgid "The width of this column on medium devices such as tablets."
 msgstr "Šírka tohto stĺpca na stredne veľkých zariadeniach, ako sú tablety."
 
 #: includes/column-settings.php:302 includes/column-settings.php:330
-#: modules/callout/callout.php:281
-#: modules/content-slider/content-slider.php:442 modules/cta/cta.php:165
+#: modules/callout/callout.php:283
+#: modules/content-slider/content-slider.php:448 modules/cta/cta.php:167
 #: modules/heading/heading.php:117 modules/heading/heading.php:144
 #: modules/heading/heading.php:174
 msgid "Default"
 msgstr "Prednastavené"
 
 #: includes/column-settings.php:303 includes/column-settings.php:331
-#: modules/button/button.php:151 modules/callout/callout.php:282
-#: modules/content-slider/content-slider.php:443 modules/cta/cta.php:166
+#: modules/button/button.php:193 modules/callout/callout.php:284
+#: modules/content-slider/content-slider.php:449 modules/cta/cta.php:168
 #: modules/heading/heading.php:118 modules/heading/heading.php:145
 #: modules/heading/heading.php:175
 #: modules/social-buttons/social-buttons.php:74
@@ -852,12 +966,12 @@ msgid "Custom Small Device Width"
 msgstr "Vlastná šírka na malých zariadeniach"
 
 #: includes/column-settings.php:356 includes/module-settings.php:115
-#: includes/row-settings.php:579
+#: includes/row-settings.php:603
 msgid "CSS Selectors"
 msgstr "CSS selektor"
 
 #: includes/column-settings.php:360 includes/loop-settings.php:27
-#: includes/module-settings.php:119 includes/row-settings.php:583
+#: includes/module-settings.php:119 includes/row-settings.php:607
 msgid "ID"
 msgstr "ID"
 
@@ -896,7 +1010,7 @@ msgstr "Zvoliť ikonku"
 msgid "Replace"
 msgstr "Nahradiť"
 
-#: includes/field-icon.php:7 includes/js-config.php:53
+#: includes/field-icon.php:7 includes/js-config.php:58
 msgid "Remove"
 msgstr "Odstrániť"
 
@@ -913,7 +1027,7 @@ msgid "Start typing..."
 msgstr "Začnite písať..."
 
 #: includes/field-link.php:7 includes/icon-selector.php:28
-#: includes/js-config.php:18 includes/settings.php:63
+#: includes/js-config.php:19 includes/settings.php:63
 #: includes/template-selector.php:102 includes/ui.php:11
 msgid "Cancel"
 msgstr "Zrušiť"
@@ -938,11 +1052,11 @@ msgstr "Upraviť galériu"
 msgid "Add Photos"
 msgstr "Pridať obrázky"
 
-#: includes/field-photo.php:3 includes/js-config.php:58
+#: includes/field-photo.php:3 includes/js-config.php:63
 msgid "Select Photo"
 msgstr "Zvoliť obrázok"
 
-#: includes/field-video.php:3 includes/js-config.php:60
+#: includes/field-video.php:3 includes/js-config.php:65
 msgid "Select Video"
 msgstr "Zvoliť video"
 
@@ -952,10 +1066,10 @@ msgstr "Nahradiť video"
 
 #: includes/global-settings.php:7 includes/template-settings.php:7
 #: includes/user-template-settings.php:7 modules/accordion/accordion.php:110
-#: modules/button/button.php:46 modules/callout/callout.php:207
+#: modules/button/button.php:59 modules/callout/callout.php:209
 #: modules/contact-form/contact-form.php:57
-#: modules/content-slider/content-slider.php:184
-#: modules/content-slider/content-slider.php:308 modules/cta/cta.php:65
+#: modules/content-slider/content-slider.php:190
+#: modules/content-slider/content-slider.php:314 modules/cta/cta.php:67
 #: modules/gallery/gallery.php:213 modules/heading/heading.php:26
 #: modules/html/html.php:26 modules/icon-group/icon-group.php:128
 #: modules/icon/icon.php:27 modules/map/map.php:26 modules/photo/photo.php:368
@@ -1017,18 +1131,38 @@ msgstr ""
 "Všetky riadky budú prednastavené na túto šírku. Toto nastavenie môžete "
 "nahradiť roztiahnutím na celú šírku v nastaveniach daného riadku."
 
-#: includes/global-settings.php:84
+#: includes/global-settings.php:66
+msgid "Default Row Width"
+msgstr "Prednastavená šírka riadka"
+
+#: includes/global-settings.php:69 includes/global-settings.php:83
+#: includes/row-settings.php:19 includes/row-settings.php:37
+#: includes/row-settings.php:179
+msgid "Fixed"
+msgstr "Pevná"
+
+#: includes/global-settings.php:70 includes/global-settings.php:84
+#: includes/row-settings.php:20 includes/row-settings.php:38
+#: modules/button/button.php:192 modules/callout/callout.php:585
+msgid "Full Width"
+msgstr "Celá šírka"
+
+#: includes/global-settings.php:80
+msgid "Default Row Content Width"
+msgstr "Prednastavená šírka obsahu riadka"
+
+#: includes/global-settings.php:107
 msgctxt ""
 "General settings form field label. Intended meaning: \"Responsive layout "
 "enabled?\""
 msgid "Enabled"
 msgstr "Povoliť"
 
-#: includes/global-settings.php:98
+#: includes/global-settings.php:121
 msgid "Medium Device Breakpoint"
 msgstr "Zlomový bod pre stredne veľké zariadenia"
 
-#: includes/global-settings.php:103
+#: includes/global-settings.php:126
 msgid ""
 "The browser width at which the layout will adjust for medium devices such as "
 "tablets."
@@ -1036,11 +1170,11 @@ msgstr ""
 "Šírka internetového prehliadača, v ktorej sa rozloženie nastaví do režimu "
 "pre stredne veľké zariadenia, ako sú tablety."
 
-#: includes/global-settings.php:107
+#: includes/global-settings.php:130
 msgid "Small Device Breakpoint"
 msgstr "Zlomový bod pre malé zariadenia"
 
-#: includes/global-settings.php:112
+#: includes/global-settings.php:135
 msgid ""
 "The browser width at which the layout will adjust for small devices such as "
 "phones."
@@ -1053,15 +1187,15 @@ msgctxt "Select option for showing all icon libraries."
 msgid "All Libraries"
 msgstr "Všetky knižnice"
 
-#: includes/js-config.php:17
+#: includes/js-config.php:18
 msgid "What would you like to do?"
 msgstr "Čo si prajete urobiť?"
 
-#: includes/js-config.php:19
+#: includes/js-config.php:20
 msgid "Change Template"
 msgstr "Zmeniť šablónu"
 
-#: includes/js-config.php:20
+#: includes/js-config.php:21
 msgid ""
 "Warning! Changing the template will replace your existing layout. Do you "
 "really want to do this?"
@@ -1069,38 +1203,38 @@ msgstr ""
 "Pozor! Zmenou šablóny nahradíte existujúce rozloženie. Naozaj to chcete "
 "urobiť?"
 
-#: includes/js-config.php:21
+#: includes/js-config.php:22
 msgid "Column"
 msgstr "Stĺpec"
 
-#: includes/js-config.php:23
+#: includes/js-config.php:24
 msgid ""
 "Please select either a background layout or content layout before submitting."
 msgstr "Najskôr zvoľte rozloženie pozadia alebo obsahu."
 
-#: includes/js-config.php:24
+#: includes/js-config.php:25
 msgid "Do you really want to delete this item?"
 msgstr "Naozaj chcete túto položku odstrániť?"
 
-#: includes/js-config.php:25
+#: includes/js-config.php:26
 msgid ""
 "Do you really want to delete this module? All content data will be "
 "permanently deleted."
 msgstr ""
 "Naozaj chcete tento modul odstrániť? Všetky dáta jeho obsahu budu vymazané."
 
-#: includes/js-config.php:26
+#: includes/js-config.php:27
 msgid ""
 "Do you really want to delete this row? All content data will be permanently "
 "deleted."
 msgstr ""
 "Naozaj chcete odstrániť tento riadok? Všetok obsah riadku bude vymazaný."
 
-#: includes/js-config.php:28
+#: includes/js-config.php:29
 msgid "Discard Draft"
 msgstr "Zahodiť koncept"
 
-#: includes/js-config.php:29
+#: includes/js-config.php:30
 msgid ""
 "Do you really want to discard this draft? All of your changes that are not "
 "published will be lost."
@@ -1108,32 +1242,36 @@ msgstr ""
 "Naozaj chcete zahodiť vytvorený koncept? Stratíte všetky zmeny, ktoré nie sú "
 "publikované."
 
-#: includes/js-config.php:30
+#: includes/js-config.php:31 includes/ui.php:44
+msgid "Done"
+msgstr "Hotovo"
+
+#: includes/js-config.php:32
 msgid "Save Draft"
 msgstr "Uložiť koncept"
 
-#: includes/js-config.php:31
+#: includes/js-config.php:33
 msgctxt "Duplicate page/post action label."
 msgid "Duplicate"
 msgstr "Duplikovať"
 
-#: includes/js-config.php:32
+#: includes/js-config.php:34
 msgid "Duplicate This Page"
 msgstr "Duplikovať túto stránku"
 
-#: includes/js-config.php:33
+#: includes/js-config.php:35
 msgid "Duplicate This Template"
 msgstr "Duplikovať túto šablónu"
 
-#: includes/js-config.php:34
+#: includes/js-config.php:36
 msgid "Edit Global Settings"
 msgstr "Upraviť globálne nastavenia"
 
-#: includes/js-config.php:35
+#: includes/js-config.php:37
 msgid "Drop a row layout or module to get started!"
 msgstr "Začnite vložením riadku alebo modulu!"
 
-#: includes/js-config.php:36
+#: includes/js-config.php:38
 msgid ""
 "Beaver Builder caught the following JavaScript error. If Beaver Builder is "
 "not functioning as expected the cause is most likely this error. Please help "
@@ -1146,113 +1284,281 @@ msgstr ""
 "opätovnej, postupnej aktivácie ostatných modulov pre zistenie, či je problém "
 "spôsobený jedným z týchto modulov."
 
-#: includes/js-config.php:37
+#: includes/js-config.php:39
 msgid "Full Size"
 msgstr "Pôvodná veľkosť"
 
-#: includes/js-config.php:38
+#: includes/js-config.php:40
+msgid "Get Help"
+msgstr "Získať pomoc"
+
+#: includes/js-config.php:41
+msgid "Getting Started Video"
+msgstr "Video \"Začíname\""
+
+#: includes/js-config.php:42
 msgid "\"{message}\" on line {line} of {file}."
 msgstr "\"{message}\" na riadku {line} súboru {file}."
 
-#: includes/js-config.php:39
+#: includes/js-config.php:43
 msgid "Insert"
 msgstr "Vložiť"
 
-#: includes/js-config.php:40
+#: includes/js-config.php:44
 msgid "Large"
 msgstr "Veľké"
 
-#: includes/js-config.php:41
+#: includes/js-config.php:45
 msgid "Manage Templates"
 msgstr "Správa šablón"
 
-#: includes/js-config.php:42
+#: includes/js-config.php:46
 msgid "Medium"
 msgstr "Stredné"
 
-#: includes/js-config.php:43
+#: includes/js-config.php:47
 msgid "Module"
 msgstr "Modul"
 
-#: includes/js-config.php:44
+#: includes/js-config.php:48
 msgid "Move"
 msgstr "Presunúť"
 
-#: includes/js-config.php:45
+#: includes/js-config.php:49
 msgid "New Column"
 msgstr "Nový stĺpec"
 
-#: includes/js-config.php:46
+#: includes/js-config.php:50
 msgid "New Row"
 msgstr "Nový riadok"
 
-#: includes/js-config.php:47
+#: includes/js-config.php:51
 msgid "No results found."
 msgstr "Nenašli sa žiadne záznamy."
 
-#: includes/js-config.php:48
+#: includes/js-config.php:52
+msgid "No Thanks"
+msgstr "Nie, vďaka"
+
+#: includes/js-config.php:53
 msgid "OK"
 msgstr "OK"
 
-#: includes/js-config.php:49 modules/photo/photo.php:454
+#: includes/js-config.php:54 modules/photo/photo.php:454
 msgid "Photo Page"
 msgstr "Stránka obrázku"
 
-#: includes/js-config.php:50
+#: includes/js-config.php:55
 msgid "Photo Selected"
 msgstr "Obrázok bol zvolený"
 
-#: includes/js-config.php:51
+#: includes/js-config.php:56
 msgid "Photos Selected"
 msgstr "Obrázky boli zvolené"
 
-#: includes/js-config.php:52
+#: includes/js-config.php:57
 msgid "Publish Changes"
 msgstr "Publikovať zmeny"
 
-#: includes/js-config.php:54
+#: includes/js-config.php:59
 msgid "Row"
 msgstr "Riadok"
 
-#: includes/js-config.php:55 includes/row-settings.php:6
+#: includes/js-config.php:60 includes/row-settings.php:6
 msgid "Row Settings"
 msgstr "Nastavenia riadku"
 
-#: includes/js-config.php:56
+#: includes/js-config.php:61
 msgid "Save Core Template"
 msgstr "Uložiť základnú šablónu"
 
-#: includes/js-config.php:57 includes/ui.php:10
+#: includes/js-config.php:62 includes/ui.php:10
 #: includes/user-template-settings.php:4
 msgid "Save Template"
 msgstr "Uložiť šablónu"
 
-#: includes/js-config.php:59
+#: includes/js-config.php:64
 msgid "Select Photos"
 msgstr "Zvoliť obrázky"
 
-#: includes/js-config.php:62
+#: includes/js-config.php:67
+msgid "Take a Tour"
+msgstr "Spustiť sprievodcu"
+
+#: includes/js-config.php:68
 msgid "Append New Layout"
 msgstr "Pridať nové rozloženie"
 
-#: includes/js-config.php:63
+#: includes/js-config.php:69
 msgid "Replace Existing Layout"
 msgstr "Nahradiť existujúce rozloženie"
 
-#: includes/js-config.php:64
+#: includes/js-config.php:70
 msgid "Template Saved!"
 msgstr "Šablóna bola uložená!"
 
-#: includes/js-config.php:65
+#: includes/js-config.php:71
 msgid "Thumbnail"
 msgstr "Miniatúra"
 
-#: includes/js-config.php:66
+#: includes/js-config.php:72
+msgid "Next"
+msgstr "Ďalej"
+
+#: includes/js-config.php:73
+msgid "Get Started"
+msgstr "Začíname"
+
+#: includes/js-config.php:74
+msgid "Choose a Template"
+msgstr "Voľba šablóny"
+
+#: includes/js-config.php:75
+msgid ""
+"Get started by choosing a layout template to customize, or build a page from "
+"scratch by selecting the blank layout template."
+msgstr ""
+"Začnite voľbou šablóny, ktorú chcete upraviť, alebo nastavte prázdnu šablónu "
+"pre vytvorenie vlastného rozloženia stránky."
+
+#: includes/js-config.php:76
+msgid "Add Rows"
+msgstr "Pridajte riadky"
+
+#: includes/js-config.php:77
+msgid ""
+"Add mulit-column rows, adjust spacing, add backgrounds and more by dragging "
+"and dropping row layouts onto the page."
+msgstr ""
+"Pridajte viacstĺpcové riadky, upravte odsadenie, pozadie a iné nastavenia "
+"uchopením a pretiahnutím rozloženia riadka na stránku."
+
+#: includes/js-config.php:78 includes/ui.php:49
+msgid "Add Content"
+msgstr "Pridať obsah"
+
+#: includes/js-config.php:79
+msgid ""
+"Add new content by dragging and dropping modules or widgets into your row "
+"layouts or to create a new row layout."
+msgstr ""
+"Pridajte nový obsah uchopením a pretiahnutím modulov alebo widgetov do "
+"existujúcich riadkov alebo vytvorte nový riadok."
+
+#: includes/js-config.php:80
+msgid "Edit Content"
+msgstr "Upravte obsah"
+
+#: includes/js-config.php:81
+msgid ""
+"Move your mouse over rows, columns or modules to edit and interact with them."
+msgstr ""
+"Presunutím myši ponad riadok, stĺpec alebo modul budete môcť tieto elementy "
+"upraviť."
+
+#: includes/js-config.php:82
+msgid ""
+"Use the action buttons to perform actions such as moving, editing, "
+"duplicating, accessing individual column settings or deleting rows, columns "
+"and modules."
+msgstr ""
+"Použite tlačidlá akcií pre premiestnenie, editáciu, duplikáciu, nastavenie "
+"stĺpca alebo odstránenie elementov."
+
+#: includes/js-config.php:83
+msgid "Add More Content"
+msgstr "Pridajte viac obsahu"
+
+#: includes/js-config.php:84
+msgid ""
+"Use the Add Content button to open the content panel and add new row layouts "
+"or content."
+msgstr ""
+"Použite tlačidlo Pridať obsah pre otvorenie panelu obsahu a pridajte nové "
+"rozloženia riadkov alebo obsah."
+
+#: includes/js-config.php:85
+msgid "Change Templates"
+msgstr "Zmeňte šablóny"
+
+#: includes/js-config.php:86
+msgid ""
+"Use the Templates button to pick a new template or append one to your "
+"layout. Appending will insert a new template at the end of your existing "
+"page content."
+msgstr ""
+"Pomocou tlačidla Šablóny vyberte novú šablónu alebo nejakú pridajte k "
+"existujúcemu rozloženiu stránky. Pridaním šablóny ju zobrazíte na konci "
+"existujúceho rozloženia obsahu stránky."
+
+#: includes/js-config.php:87
+msgid "Helpful Tools"
+msgstr "Pomocné nástroje"
+
+#: includes/js-config.php:88
+msgid ""
+"The Tools button lets you duplicate a page, save a template or edit the "
+"global settings."
+msgstr ""
+"Tlačidlo Nástroje umožní duplikovať stránky, uložiť šablóny alebo upraviť "
+"globálne nastavenia."
+
+#: includes/js-config.php:89
+msgid "Publish Your Changes"
+msgstr "Publikujte zmeny"
+
+#: includes/js-config.php:90
+msgid ""
+"Once you're finished, click the Done button to publish your changes, save a "
+"draft or revert back to the last published state."
+msgstr ""
+"Ak s úpravami skončíte, kliknite tlačidlo Hotovo pre publikáciu vašich "
+"zmien, uloženie alebo zahodenie konceptu."
+
+#: includes/js-config.php:91
+msgid "Let's Get Building!"
+msgstr "Začnite tvoriť!"
+
+#: includes/js-config.php:92
+msgid ""
+"Now that you know the basics, you're ready to start building! If at any time "
+"you need help, click the help icon in the upper right corner to access the "
+"help menu. Happy building!"
+msgstr ""
+"Teraz, keď už ovládate základy, ste pripravení tvoriť vlastné stránky! Ak "
+"budete znovu potrebovať pomoc, kliknite na ikonku pomoci v pravom hornom "
+"rohu."
+
+#: includes/js-config.php:93
 msgid ""
 "The settings you are currently editing will not be saved if you navigate "
 "away from this page."
 msgstr ""
 "Nastavenia, ktoré práve vykonávate, sa neuložia ak odídete z tejto stránky."
+
+#: includes/js-config.php:94
+msgid "View the Knowledge Base"
+msgstr "Prezrieť databázu poznatkov"
+
+#: includes/js-config.php:95
+msgid "Visit the Forums"
+msgstr "Navštíviť fóra"
+
+#: includes/js-config.php:96
+msgid "Watch the Video"
+msgstr "Pozrieť video"
+
+#: includes/js-config.php:97
+msgid ""
+"Welcome! It looks like this might be your first time using the builder. "
+"Would you like to take a tour?"
+msgstr ""
+"Vitajte! Stretávate sa s editorom stránok po prvýkrát? Prajete si spustiť "
+"pomocného sprievodcu?"
+
+#: includes/js-config.php:98
+msgid "Yes Please!"
+msgstr "Áno prosím!"
 
 #: includes/loop-settings.php:19
 msgid "Post Type"
@@ -1374,14 +1680,14 @@ msgid "Slide Down"
 msgstr "Vkĺznut dole"
 
 #: includes/module-settings.php:102
-#: modules/content-slider/content-slider.php:223
+#: modules/content-slider/content-slider.php:229
 #: modules/testimonials/testimonials.php:91
 msgid "Delay"
 msgstr "Oneskorenie"
 
 #: includes/module-settings.php:106 includes/row-settings.php:266
-#: includes/row-settings.php:297 modules/content-slider/content-slider.php:227
-#: modules/content-slider/content-slider.php:244
+#: includes/row-settings.php:297 modules/content-slider/content-slider.php:233
+#: modules/content-slider/content-slider.php:250
 #: modules/slideshow/slideshow.php:385 modules/slideshow/slideshow.php:410
 #: modules/slideshow/slideshow.php:581
 #: modules/testimonials/testimonials.php:95
@@ -1402,7 +1708,7 @@ msgstr ""
 "Unikátne ID aplikované na HTML tohto modulu. Musí začínať písmenom a "
 "obsahovať iba pomlčky, podtržníky, písmená a čísla. Medzery nie sú povolené."
 
-#: includes/module-settings.php:127 includes/row-settings.php:591
+#: includes/module-settings.php:127 includes/row-settings.php:615
 msgid "Class"
 msgstr "Trieda"
 
@@ -1415,20 +1721,10 @@ msgstr ""
 "Trieda aplikovaná na HTML tohto modulu. Musí začínať písmenom a obsahovať "
 "iba pomlčky, podtržníky, písmená a čísla. Viaceré triedy oddeľte medzerami."
 
-#: includes/row-settings.php:16 modules/button/button.php:146
-#: modules/content-slider/content-slider.php:477
+#: includes/row-settings.php:16 modules/button/button.php:188
+#: modules/content-slider/content-slider.php:483
 msgid "Width"
 msgstr "Šírka"
-
-#: includes/row-settings.php:19 includes/row-settings.php:37
-#: includes/row-settings.php:179
-msgid "Fixed"
-msgstr "Pevná"
-
-#: includes/row-settings.php:20 includes/row-settings.php:38
-#: modules/button/button.php:150 modules/callout/callout.php:554
-msgid "Full Width"
-msgstr "Celá šírka"
 
 #: includes/row-settings.php:27
 msgid ""
@@ -1456,7 +1752,7 @@ msgstr ""
 msgid "Background"
 msgstr "Pozadie"
 
-#: includes/row-settings.php:68 modules/content-slider/content-slider.php:332
+#: includes/row-settings.php:68 modules/content-slider/content-slider.php:338
 msgctxt "Background type."
 msgid "None"
 msgstr "Žiaden"
@@ -1486,16 +1782,16 @@ msgctxt "Background type."
 msgid "Parallax"
 msgstr "Paralaxa"
 
-#: includes/row-settings.php:129 modules/content-slider/content-slider.php:353
+#: includes/row-settings.php:129 modules/content-slider/content-slider.php:359
 msgid "Background Photo"
 msgstr "Obrázok pozadia"
 
 #: includes/row-settings.php:133 includes/row-settings.php:321
-#: modules/callout/callout.php:314 modules/callout/callout.php:330
-#: modules/callout/callout.php:334
-#: modules/content-slider/content-slider.php:329
-#: modules/content-slider/content-slider.php:398
-#: modules/content-slider/content-slider.php:710 modules/photo/photo.php:25
+#: modules/callout/callout.php:316 modules/callout/callout.php:332
+#: modules/callout/callout.php:336
+#: modules/content-slider/content-slider.php:335
+#: modules/content-slider/content-slider.php:404
+#: modules/content-slider/content-slider.php:745 modules/photo/photo.php:25
 #: modules/photo/photo.php:392
 msgid "Photo"
 msgstr "Obrázok"
@@ -1564,9 +1860,9 @@ msgstr "Vpravo dole"
 msgid "Center Top"
 msgstr "V strede hore"
 
-#: includes/row-settings.php:165 modules/button/button.php:176
-#: modules/callout/callout.php:249
-#: modules/content-slider/content-slider.php:471 modules/cta/cta.php:124
+#: includes/row-settings.php:165 modules/button/button.php:218
+#: modules/callout/callout.php:251
+#: modules/content-slider/content-slider.php:477 modules/cta/cta.php:126
 #: modules/heading/heading.php:90 modules/heading/heading.php:162
 #: modules/icon-group/icon-group.php:110 modules/icon/icon.php:133
 #: modules/photo/photo.php:418 modules/social-buttons/social-buttons.php:100
@@ -1631,7 +1927,7 @@ msgstr ""
 msgid "Background Video"
 msgstr "Video na pozadí"
 
-#: includes/row-settings.php:207 modules/content-slider/content-slider.php:330
+#: includes/row-settings.php:207 modules/content-slider/content-slider.php:336
 #: modules/video/video.php:19 modules/video/video.php:100
 msgid "Video"
 msgstr "Video"
@@ -1693,7 +1989,7 @@ msgstr "URL kanála"
 msgid "Speed"
 msgstr "Rýchlosť"
 
-#: includes/row-settings.php:273 modules/content-slider/content-slider.php:231
+#: includes/row-settings.php:273 modules/content-slider/content-slider.php:237
 #: modules/slideshow/slideshow.php:389
 #: modules/testimonials/testimonials.php:99
 msgid "Transition"
@@ -1704,7 +2000,7 @@ msgctxt "Slideshow transition type."
 msgid "None"
 msgstr "Žiaden"
 
-#: includes/row-settings.php:277 modules/content-slider/content-slider.php:235
+#: includes/row-settings.php:277 modules/content-slider/content-slider.php:241
 #: modules/slideshow/slideshow.php:393
 #: modules/testimonials/testimonials.php:103
 msgid "Fade"
@@ -1746,7 +2042,7 @@ msgstr "Náhodné štvorce"
 msgid "Boxes Grow"
 msgstr "Rastúce štvorce"
 
-#: includes/row-settings.php:294 modules/content-slider/content-slider.php:240
+#: includes/row-settings.php:294 modules/content-slider/content-slider.php:246
 #: modules/slideshow/slideshow.php:407
 #: modules/testimonials/testimonials.php:108
 msgid "Transition Speed"
@@ -1773,12 +2069,24 @@ msgstr "Stredne"
 msgid "Slow"
 msgstr "Pomaly"
 
-#: includes/row-settings.php:571
+#: includes/row-settings.php:342
+msgid "Background Overlay"
+msgstr "Prekrytie pozadia"
+
+#: includes/row-settings.php:346
+msgid "Overlay Color"
+msgstr "Farba prekrytia"
+
+#: includes/row-settings.php:354
+msgid "Overlay Opacity"
+msgstr "Nepriehľadnosť prekrytia"
+
+#: includes/row-settings.php:595
 msgid "Choose whether to show or hide this row at different device sizes."
 msgstr ""
 "Zvoľte, či sa má tento riadok zobraziť na zariadeniach rôznych veľkostí."
 
-#: includes/row-settings.php:584
+#: includes/row-settings.php:608
 msgid ""
 "A unique ID that will be applied to this row's HTML. Must start with a "
 "letter and only contain dashes, underscores, letters or numbers. No spaces."
@@ -1786,7 +2094,7 @@ msgstr ""
 "Unikátne ID aplikované na HTML tohto riadka. Musí začínať písmenom a "
 "obsahovať iba pomlčky, podtržníky, písmená a čísla. Medzery nie sú povolené."
 
-#: includes/row-settings.php:592
+#: includes/row-settings.php:616
 msgid ""
 "A class that will be applied to this row's HTML. Must start with a letter "
 "and only contain dashes, underscores, letters or numbers. Separate multiple "
@@ -1855,69 +2163,57 @@ msgstr "Šablóna: %s"
 msgid "Page Builder Demo"
 msgstr "Demo Editora stránok"
 
-#: includes/ui.php:37
+#: includes/ui.php:40
 msgid "Buy Now!"
 msgstr "Zakúpiť ihneď!"
 
-#: includes/ui.php:39
+#: includes/ui.php:42
 msgid "Upgrade!"
 msgstr "Aktualizovať!"
 
-#: includes/ui.php:41
-msgid "Done"
-msgstr "Hotovo"
-
-#: includes/ui.php:42
+#: includes/ui.php:45
 msgid "Tools"
 msgstr "Nástroje"
 
-#: includes/ui.php:46
-msgid "Add Content"
-msgstr "Pridať obsah"
-
-#: includes/ui.php:64
+#: includes/ui.php:67
 msgid "Row Layouts"
 msgstr "Stĺpce a riadky"
 
-#: includes/ui.php:68
+#: includes/ui.php:71
 msgid "1 Column"
 msgstr "1 stĺpec"
 
-#: includes/ui.php:69
+#: includes/ui.php:72
 msgid "2 Columns"
 msgstr "2 stĺpce"
 
-#: includes/ui.php:70
+#: includes/ui.php:73
 msgid "3 Columns"
 msgstr "3 stĺpce"
 
-#: includes/ui.php:71
+#: includes/ui.php:74
 msgid "4 Columns"
 msgstr "4 stĺpce"
 
-#: includes/ui.php:72
+#: includes/ui.php:75
 msgid "5 Columns"
 msgstr "5 stĺpcov"
 
-#: includes/ui.php:73
+#: includes/ui.php:76
 msgid "6 Columns"
 msgstr "6 stĺpcov"
 
-#: includes/ui.php:74
+#: includes/ui.php:77
 msgid "Left Sidebar"
 msgstr "Bočný panel vľavo"
 
-#: includes/ui.php:75
+#: includes/ui.php:78
 msgid "Right Sidebar"
 msgstr "Bočný panel vpravo"
 
-#: includes/ui.php:76
+#: includes/ui.php:79
 msgid "Left &amp; Right Sidebar"
 msgstr "Bočný panel vľavo a vpravo"
-
-#: includes/ui.php:85 modules/widget/widget.php:16
-msgid "WordPress Widgets"
-msgstr "WordPress widgety"
 
 #: includes/updater/classes/class-fl-updater.php:107
 msgid "<strong>UPDATE UNAVAILABLE!</strong>"
@@ -1984,20 +2280,6 @@ msgstr "Akordeón"
 msgid "Display a collapsible accordion of items."
 msgstr "Zobrazí rozbaľovací zoznam položiek."
 
-#: modules/accordion/accordion.php:16 modules/button/button.php:16
-#: modules/callout/callout.php:16 modules/contact-form/contact-form.php:16
-#: modules/content-slider/content-slider.php:16 modules/cta/cta.php:16
-#: modules/gallery/gallery.php:16 modules/html/html.php:16
-#: modules/icon-group/icon-group.php:16 modules/icon/icon.php:16
-#: modules/map/map.php:16 modules/post-grid/post-grid.php:16
-#: modules/pricing-table/pricing-table.php:16 modules/sidebar/sidebar.php:16
-#: modules/slideshow/slideshow.php:16
-#: modules/social-buttons/social-buttons.php:16 modules/tabs/tabs.php:16
-#: modules/testimonials/testimonials.php:16
-#: modules/woocommerce/woocommerce.php:18
-msgid "Advanced Modules"
-msgstr "Pokročilé moduly"
-
 #: modules/accordion/accordion.php:28 modules/tabs/tabs.php:28
 msgid "Items"
 msgstr "Sekcie"
@@ -2059,8 +2341,8 @@ msgstr "Nadpis"
 msgid "Content"
 msgstr "Obsah"
 
-#: modules/button/button.php:14 modules/callout/callout.php:477
-#: modules/content-slider/content-slider.php:595 modules/cta/cta.php:212
+#: modules/button/button.php:14 modules/callout/callout.php:479
+#: modules/content-slider/content-slider.php:601 modules/cta/cta.php:214
 #: modules/pricing-table/pricing-table.php:129
 msgid "Button"
 msgstr "Tlačidlo"
@@ -2069,117 +2351,139 @@ msgstr "Tlačidlo"
 msgid "A simple call to action button."
 msgstr "Jednoduché tlačidlo pre vyvolanie akcie."
 
-#: modules/button/button.php:54 modules/cta/cta.php:220
+#: modules/button/button.php:67 modules/cta/cta.php:222
 msgid "Click Here"
 msgstr "Kliknite sem"
 
-#: modules/button/button.php:62 modules/callout/callout.php:315
-#: modules/callout/callout.php:363 modules/callout/callout.php:367
-#: modules/cta/cta.php:228 modules/icon-group/icon-group.php:34
+#: modules/button/button.php:75 modules/callout/callout.php:317
+#: modules/callout/callout.php:365 modules/callout/callout.php:369
+#: modules/cta/cta.php:230 modules/icon-group/icon-group.php:34
 #: modules/icon-group/icon-group.php:135 modules/icon/icon.php:14
 #: modules/icon/icon.php:34
 msgid "Icon"
 msgstr "Ikonka"
 
-#: modules/button/button.php:68 modules/button/button.php:72
-#: modules/callout/callout.php:443 modules/callout/callout.php:447
-#: modules/content-slider/content-slider.php:567
-#: modules/content-slider/content-slider.php:571
-#: modules/content-slider/content-slider.php:594 modules/cta/cta.php:238
+#: modules/button/button.php:81 modules/button/button.php:85
+#: modules/callout/callout.php:445 modules/callout/callout.php:449
+#: modules/content-slider/content-slider.php:573
+#: modules/content-slider/content-slider.php:577
+#: modules/content-slider/content-slider.php:600 modules/cta/cta.php:240
 #: modules/heading/heading.php:43 modules/heading/heading.php:47
 #: modules/icon-group/icon-group.php:139 modules/icon/icon.php:43
 #: modules/slideshow/slideshow.php:343
 msgid "Link"
 msgstr "Odkaz"
 
-#: modules/button/button.php:73
+#: modules/button/button.php:86
 msgid "http://www.example.com"
 msgstr "http://www.napriklad.com"
 
-#: modules/button/button.php:80 modules/callout/callout.php:455
-#: modules/content-slider/content-slider.php:576 modules/cta/cta.php:245
+#: modules/button/button.php:93 modules/callout/callout.php:457
+#: modules/content-slider/content-slider.php:582 modules/cta/cta.php:247
 #: modules/heading/heading.php:54 modules/icon/icon.php:50
 #: modules/photo/photo.php:478
 msgid "Link Target"
 msgstr "Cieľ odkazu"
 
-#: modules/button/button.php:83 modules/callout/callout.php:458
-#: modules/content-slider/content-slider.php:579 modules/cta/cta.php:248
+#: modules/button/button.php:96 modules/callout/callout.php:460
+#: modules/content-slider/content-slider.php:585 modules/cta/cta.php:250
 #: modules/heading/heading.php:57 modules/icon/icon.php:53
 #: modules/photo/photo.php:481
 msgid "Same Window"
 msgstr "Rovnaké okno"
 
-#: modules/button/button.php:84 modules/callout/callout.php:459
-#: modules/content-slider/content-slider.php:580 modules/cta/cta.php:249
+#: modules/button/button.php:97 modules/callout/callout.php:461
+#: modules/content-slider/content-slider.php:586 modules/cta/cta.php:251
 #: modules/heading/heading.php:58 modules/icon/icon.php:54
 #: modules/photo/photo.php:482
 msgid "New Window"
 msgstr "Nové okno"
 
-#: modules/button/button.php:98 modules/cta/cta.php:185
+#: modules/button/button.php:111 modules/cta/cta.php:187
 #: modules/heading/heading.php:72 modules/icon-group/icon-group.php:47
 #: modules/icon/icon.php:78
 msgid "Colors"
 msgstr "Farby"
 
-#: modules/button/button.php:108 modules/callout/callout.php:407
-#: modules/callout/callout.php:512
-#: modules/content-slider/content-slider.php:630 modules/cta/cta.php:268
+#: modules/button/button.php:121 modules/callout/callout.php:409
+#: modules/callout/callout.php:514
+#: modules/content-slider/content-slider.php:636 modules/cta/cta.php:270
 #: modules/icon-group/icon-group.php:69 modules/icon/icon.php:100
 msgid "Background Hover Color"
 msgstr "Farba pozadia po prechode myšou"
 
-#: modules/button/button.php:117 modules/callout/callout.php:521
-#: modules/content-slider/content-slider.php:522
-#: modules/content-slider/content-slider.php:635
-#: modules/content-slider/content-slider.php:719 modules/cta/cta.php:189
-#: modules/cta/cta.php:277 modules/heading/heading.php:77
+#: modules/button/button.php:130 modules/callout/callout.php:523
+#: modules/content-slider/content-slider.php:528
+#: modules/content-slider/content-slider.php:641
+#: modules/content-slider/content-slider.php:754 modules/cta/cta.php:191
+#: modules/cta/cta.php:279 modules/heading/heading.php:77
 msgid "Text Color"
 msgstr "Farba textu"
 
-#: modules/button/button.php:123 modules/callout/callout.php:527
-#: modules/content-slider/content-slider.php:641 modules/cta/cta.php:283
+#: modules/button/button.php:136 modules/callout/callout.php:529
+#: modules/content-slider/content-slider.php:647 modules/cta/cta.php:285
 msgid "Text Hover Color"
 msgstr "Farba textu po prechode myšou"
 
-#: modules/button/button.php:132 modules/callout/callout.php:415
-#: modules/callout/callout.php:536
-#: modules/content-slider/content-slider.php:646 modules/cta/cta.php:292
+#: modules/button/button.php:153 modules/callout/callout.php:546
+#: modules/content-slider/content-slider.php:660 modules/cta/cta.php:302
+msgid "Flat"
+msgstr "Plochý"
+
+#: modules/button/button.php:154 modules/callout/callout.php:417
+#: modules/callout/callout.php:547
+#: modules/content-slider/content-slider.php:661 modules/cta/cta.php:303
 #: modules/icon-group/icon-group.php:77 modules/icon/icon.php:108
 msgid "Gradient"
 msgstr "Gradient"
 
-#: modules/button/button.php:142 modules/callout/callout.php:242
-#: modules/cta/cta.php:102 modules/heading/heading.php:82
+#: modules/button/button.php:155 modules/callout/callout.php:548
+#: modules/content-slider/content-slider.php:662 modules/cta/cta.php:304
+msgid "Transparent"
+msgstr "Priehľadný"
+
+#: modules/button/button.php:165 modules/callout/callout.php:558
+#: modules/content-slider/content-slider.php:672 modules/cta/cta.php:314
+#: modules/pricing-table/pricing-table.php:67
+msgid "Border Size"
+msgstr "Veľkosť okraja"
+
+#: modules/button/button.php:174 modules/callout/callout.php:567
+#: modules/content-slider/content-slider.php:681 modules/cta/cta.php:203
+#: modules/cta/cta.php:323
+msgid "Background Opacity"
+msgstr "Nepriehľadnosť pozadia"
+
+#: modules/button/button.php:184 modules/callout/callout.php:244
+#: modules/cta/cta.php:104 modules/heading/heading.php:82
 #: modules/icon-group/icon-group.php:87 modules/icon/icon.php:118
 msgid "Structure"
 msgstr "Štruktúra"
 
-#: modules/button/button.php:149 modules/callout/callout.php:553
+#: modules/button/button.php:191 modules/callout/callout.php:584
 msgctxt "Width."
 msgid "Auto"
 msgstr "Automatická"
 
-#: modules/button/button.php:165
+#: modules/button/button.php:207
 msgid "Custom Width"
 msgstr "Vlastná šírka"
 
-#: modules/button/button.php:173 modules/cta/cta.php:120
+#: modules/button/button.php:215 modules/cta/cta.php:122
 #: modules/heading/heading.php:86 modules/heading/heading.php:141
 #: modules/icon-group/icon-group.php:107 modules/icon/icon.php:130
 #: modules/photo/photo.php:414 modules/social-buttons/social-buttons.php:97
 msgid "Alignment"
 msgstr "Zarovnanie"
 
-#: modules/button/button.php:183 modules/callout/callout.php:559
-#: modules/content-slider/content-slider.php:660 modules/cta/cta.php:306
+#: modules/button/button.php:225 modules/callout/callout.php:590
+#: modules/content-slider/content-slider.php:695 modules/cta/cta.php:337
 #: modules/heading/heading.php:114 modules/heading/heading.php:171
 msgid "Font Size"
 msgstr "Veľkosť písma"
 
-#: modules/button/button.php:199 modules/callout/callout.php:575
-#: modules/cta/cta.php:322
+#: modules/button/button.php:241 modules/callout/callout.php:606
+#: modules/cta/cta.php:353
 msgid "Round Corners"
 msgstr "Zaoblené rohy"
 
@@ -2191,130 +2495,130 @@ msgstr "Promo"
 msgid "A heading and snippet of text with an optional link, icon and image."
 msgstr "Nadpis a text s možnosťou nastavenia ikonky, obrázku a odkazu."
 
-#: modules/callout/callout.php:214
-#: modules/content-slider/content-slider.php:407
-#: modules/content-slider/content-slider.php:422 modules/cta/cta.php:72
+#: modules/callout/callout.php:216
+#: modules/content-slider/content-slider.php:413
+#: modules/content-slider/content-slider.php:428 modules/cta/cta.php:74
 #: modules/heading/heading.php:14 modules/heading/heading.php:33
 #: modules/testimonials/testimonials.php:56
 #: modules/testimonials/testimonials.php:61
 msgid "Heading"
 msgstr "Nadpis"
 
-#: modules/callout/callout.php:246
+#: modules/callout/callout.php:248
 msgid "Overall Alignment"
 msgstr "Celkové zarovnanie"
 
-#: modules/callout/callout.php:253
+#: modules/callout/callout.php:255
 msgid "The alignment that will apply to all elements within the callout."
 msgstr "Zarovnanie, ktoré sa aplikuje na všetky elementy v tomto promo module."
 
-#: modules/callout/callout.php:261 modules/cta/cta.php:145
+#: modules/callout/callout.php:263 modules/cta/cta.php:147
 msgid "Heading Structure"
 msgstr "Štruktúra nadpisu"
 
-#: modules/callout/callout.php:265
-#: modules/content-slider/content-slider.php:426 modules/cta/cta.php:149
+#: modules/callout/callout.php:267
+#: modules/content-slider/content-slider.php:432 modules/cta/cta.php:151
 msgid "Heading Tag"
 msgstr "HTML tag nadpisu"
 
-#: modules/callout/callout.php:278
-#: modules/content-slider/content-slider.php:439
-#: modules/content-slider/content-slider.php:453 modules/cta/cta.php:162
+#: modules/callout/callout.php:280
+#: modules/content-slider/content-slider.php:445
+#: modules/content-slider/content-slider.php:459 modules/cta/cta.php:164
 #: modules/testimonials/testimonials.php:69
 msgid "Heading Size"
 msgstr "Veľkosť nadpisu"
 
-#: modules/callout/callout.php:292 modules/cta/cta.php:176
+#: modules/callout/callout.php:294 modules/cta/cta.php:178
 msgid "Heading Custom Size"
 msgstr "Vlastná veľkosť nadpisu"
 
-#: modules/callout/callout.php:310
+#: modules/callout/callout.php:312
 msgid "Image Type"
 msgstr "Typ obrázku"
 
-#: modules/callout/callout.php:313
+#: modules/callout/callout.php:315
 msgctxt "Image type."
 msgid "None"
 msgstr "Žiadny"
 
-#: modules/callout/callout.php:338 modules/photo/photo.php:401
+#: modules/callout/callout.php:340 modules/photo/photo.php:401
 #: modules/slideshow/slideshow.php:312
 msgid "Crop"
 msgstr "Orezanie"
 
-#: modules/callout/callout.php:341
+#: modules/callout/callout.php:343
 msgctxt "Crop"
 msgid "None"
 msgstr "Žiadne"
 
-#: modules/callout/callout.php:342 modules/photo/photo.php:405
+#: modules/callout/callout.php:344 modules/photo/photo.php:405
 msgid "Landscape"
 msgstr "Krajinka"
 
-#: modules/callout/callout.php:343 modules/photo/photo.php:406
+#: modules/callout/callout.php:345 modules/photo/photo.php:406
 msgid "Panorama"
 msgstr "Panoráma"
 
-#: modules/callout/callout.php:344 modules/photo/photo.php:407
+#: modules/callout/callout.php:346 modules/photo/photo.php:407
 msgid "Portrait"
 msgstr "Portrét"
 
-#: modules/callout/callout.php:345 modules/photo/photo.php:408
+#: modules/callout/callout.php:347 modules/photo/photo.php:408
 msgid "Square"
 msgstr "Štvorec"
 
-#: modules/callout/callout.php:346 modules/photo/photo.php:409
+#: modules/callout/callout.php:348 modules/photo/photo.php:409
 msgid "Circle"
 msgstr "Kruh"
 
-#: modules/callout/callout.php:354 modules/callout/callout.php:374
+#: modules/callout/callout.php:356 modules/callout/callout.php:376
 msgid "Above Heading"
 msgstr "Nad nadpisom"
 
-#: modules/callout/callout.php:355 modules/callout/callout.php:375
+#: modules/callout/callout.php:357 modules/callout/callout.php:377
 msgid "Below Heading"
 msgstr "Pod nadpisom"
 
-#: modules/callout/callout.php:356 modules/callout/callout.php:378
+#: modules/callout/callout.php:358 modules/callout/callout.php:380
 msgid "Left of Text and Heading"
 msgstr "Vľavo od nadpisu a textu"
 
-#: modules/callout/callout.php:357 modules/callout/callout.php:379
+#: modules/callout/callout.php:359 modules/callout/callout.php:381
 msgid "Right of Text and Heading"
 msgstr "Vpravo od nadpisu a textu"
 
-#: modules/callout/callout.php:376
+#: modules/callout/callout.php:378
 msgid "Left of Heading"
 msgstr "Vľavo od nadpisu"
 
-#: modules/callout/callout.php:377
+#: modules/callout/callout.php:379
 msgid "Right of Heading"
 msgstr "Vpravo od nadpisu"
 
-#: modules/callout/callout.php:385
+#: modules/callout/callout.php:387
 msgid "Icon Colors"
 msgstr "Farba ikonky"
 
-#: modules/callout/callout.php:394 modules/icon-group/icon-group.php:56
+#: modules/callout/callout.php:396 modules/icon-group/icon-group.php:56
 #: modules/icon/icon.php:87
 msgid "Hover Color"
 msgstr "Farba po prechode myšou"
 
-#: modules/callout/callout.php:425
+#: modules/callout/callout.php:427
 msgid "Icon Structure"
 msgstr "Štruktúra ikonky"
 
-#: modules/callout/callout.php:429 modules/icon-group/icon-group.php:91
+#: modules/callout/callout.php:431 modules/icon-group/icon-group.php:91
 #: modules/icon/icon.php:122 modules/post-grid/post-grid.php:136
 msgid "Size"
 msgstr "Veľkosť"
 
-#: modules/callout/callout.php:440
-#: modules/content-slider/content-slider.php:564
+#: modules/callout/callout.php:442
+#: modules/content-slider/content-slider.php:570
 msgid "Call To Action"
 msgstr "Výzva k akcii"
 
-#: modules/callout/callout.php:448
+#: modules/callout/callout.php:450
 msgid ""
 "The link applies to the entire module. If choosing a call to action type "
 "below, this link will also be used for the text or button."
@@ -2322,33 +2626,38 @@ msgstr ""
 "Odkaz sa aplikuje na celý modul. Ak určíte typ výzvy k akcii, tento odkaz sa "
 "použije aj na text alebo tlačidlo."
 
-#: modules/callout/callout.php:468
-#: modules/content-slider/content-slider.php:586 modules/cta/cta.php:14
+#: modules/callout/callout.php:470
+#: modules/content-slider/content-slider.php:592 modules/cta/cta.php:14
 msgid "Call to Action"
 msgstr "Výzva k akcii"
 
-#: modules/callout/callout.php:475
-#: modules/content-slider/content-slider.php:593
+#: modules/callout/callout.php:477
+#: modules/content-slider/content-slider.php:599
 msgctxt "Call to action."
 msgid "None"
 msgstr "Žiadna"
 
-#: modules/callout/callout.php:496
-#: modules/content-slider/content-slider.php:614
+#: modules/callout/callout.php:498
+#: modules/content-slider/content-slider.php:620
 msgid "Button Icon"
 msgstr "Ikonka tlačidla"
 
-#: modules/callout/callout.php:502
-#: modules/content-slider/content-slider.php:620 modules/cta/cta.php:258
+#: modules/callout/callout.php:504
+#: modules/content-slider/content-slider.php:626 modules/cta/cta.php:260
 msgid "Button Colors"
 msgstr "Farba tlačidla"
 
-#: modules/callout/callout.php:546
-#: modules/content-slider/content-slider.php:656 modules/cta/cta.php:302
+#: modules/callout/callout.php:539
+#: modules/content-slider/content-slider.php:653 modules/cta/cta.php:295
+msgid "Button Style"
+msgstr "Štýl tlačidla"
+
+#: modules/callout/callout.php:577
+#: modules/content-slider/content-slider.php:691 modules/cta/cta.php:333
 msgid "Button Structure"
 msgstr "Štruktúra tlačidla"
 
-#: modules/callout/callout.php:550
+#: modules/callout/callout.php:581
 msgid "Button Width"
 msgstr "Šírka tlačidla"
 
@@ -2433,12 +2742,12 @@ msgstr "Prezentácia obsahu"
 msgid "Displays multiple slides with an optional heading and call to action."
 msgstr "Zobrazí viacero snímkov s nepovinným nadpisom a výzvou k akcii."
 
-#: modules/content-slider/content-slider.php:191 modules/map/map.php:41
+#: modules/content-slider/content-slider.php:197 modules/map/map.php:41
 #: modules/separator/separator.php:58 modules/slideshow/slideshow.php:294
 msgid "Height"
 msgstr "Výška"
 
-#: modules/content-slider/content-slider.php:196
+#: modules/content-slider/content-slider.php:202
 msgid ""
 "This setting is the minimum height of the content slider. Content will "
 "expand the height automatically."
@@ -2446,80 +2755,80 @@ msgstr ""
 "Nastavte minimálnu výšku prezentácie obsahu. Ak je obsah prezentácie vyšší, "
 "automaticky sa výška zväčší."
 
-#: modules/content-slider/content-slider.php:200
+#: modules/content-slider/content-slider.php:206
 #: modules/slideshow/slideshow.php:373
 #: modules/testimonials/testimonials.php:82 modules/video/video.php:108
 msgid "Auto Play"
 msgstr "Automatické prehrávanie"
 
-#: modules/content-slider/content-slider.php:214
+#: modules/content-slider/content-slider.php:220
 msgid "Show Play/Pause"
 msgstr "Zobraziť tlačidlo prehrať/pauza"
 
-#: modules/content-slider/content-slider.php:234
+#: modules/content-slider/content-slider.php:240
 #: modules/testimonials/testimonials.php:102
 msgctxt "Transition type."
 msgid "Slide"
 msgstr "Vkĺznutie"
 
-#: modules/content-slider/content-slider.php:248
+#: modules/content-slider/content-slider.php:254
 #: modules/testimonials/testimonials.php:121
 msgid "Show Arrows"
 msgstr "Zobraziť šípky"
 
-#: modules/content-slider/content-slider.php:257
+#: modules/content-slider/content-slider.php:263
 #: modules/testimonials/testimonials.php:151
 msgid "Show Dots"
 msgstr "Zobraziť bodky"
 
-#: modules/content-slider/content-slider.php:271
+#: modules/content-slider/content-slider.php:277
 msgid "Max Content Width"
 msgstr "Maximálna šírka obsahu"
 
-#: modules/content-slider/content-slider.php:276
+#: modules/content-slider/content-slider.php:282
 msgid "The max width that the content area will be within your slides."
 msgstr "Maximálna šírka obsahu v snímkoch."
 
-#: modules/content-slider/content-slider.php:283
+#: modules/content-slider/content-slider.php:289
 msgid "Slides"
 msgstr "Snímky"
 
-#: modules/content-slider/content-slider.php:290
+#: modules/content-slider/content-slider.php:296
 msgid "Slide"
 msgstr "Snímok"
 
-#: modules/content-slider/content-slider.php:305
+#: modules/content-slider/content-slider.php:311
 msgid "Slide Settings"
 msgstr "Nastavenia snímku"
 
-#: modules/content-slider/content-slider.php:315
+#: modules/content-slider/content-slider.php:321
 msgid "Slide Label"
 msgstr "Nadpis snímku"
 
-#: modules/content-slider/content-slider.php:316
+#: modules/content-slider/content-slider.php:322
 msgid ""
 "A label to identify this slide on the Slides tab of the Content Slider "
 "settings."
 msgstr ""
 "Názov, ktorým tento snímok identifikujete v nastaveniach Prezentácie obsahu"
 
-#: modules/content-slider/content-slider.php:321
+#: modules/content-slider/content-slider.php:327
 msgid "Background Layout"
 msgstr "Rozloženie pozadia"
 
-#: modules/content-slider/content-slider.php:327
+#: modules/content-slider/content-slider.php:333
 msgid "This setting is for the entire background of your slide."
 msgstr "Toto nastavenie sa aplikuje na celkové pozadie snímku."
 
-#: modules/content-slider/content-slider.php:362
+#: modules/content-slider/content-slider.php:368
 msgid "Background Video Code"
 msgstr "Video kód pozadia"
 
-#: modules/content-slider/content-slider.php:368
+#: modules/content-slider/content-slider.php:374
 msgid "Content Layout"
 msgstr "Rozloženie obsahu"
 
-#: modules/content-slider/content-slider.php:374
+#: modules/content-slider/content-slider.php:380
 msgid ""
 "This allows you to add content over or in addition to the background "
 "selection above. The location of the content layout can be selected in the "
@@ -2528,28 +2837,28 @@ msgstr ""
 "Toto nastavenie umožní pridať obsah nad pozadie nastavené vyššie. Pozíciu "
 "obsahu nastavíte na záložke štýlu."
 
-#: modules/content-slider/content-slider.php:377
+#: modules/content-slider/content-slider.php:383
 msgid "Text &amp; Photo"
 msgstr "Text a obrázok"
 
-#: modules/content-slider/content-slider.php:378
+#: modules/content-slider/content-slider.php:384
 msgid "Text &amp; Video"
 msgstr "Text a video"
 
-#: modules/content-slider/content-slider.php:379
+#: modules/content-slider/content-slider.php:385
 msgctxt "Content type."
 msgid "None"
 msgstr "Žiadny"
 
-#: modules/content-slider/content-slider.php:402 modules/video/video.php:132
+#: modules/content-slider/content-slider.php:408 modules/video/video.php:132
 msgid "Video Embed Code"
 msgstr "Kód vloženého videa"
 
-#: modules/content-slider/content-slider.php:462
+#: modules/content-slider/content-slider.php:468
 msgid "Text Position"
 msgstr "Pozícia textu"
 
-#: modules/content-slider/content-slider.php:468
+#: modules/content-slider/content-slider.php:474
 msgid ""
 "The position will move the content layout selections left, right or center "
 "over the background of the slide."
@@ -2557,49 +2866,49 @@ msgstr ""
 "Pozíciou nastavíte, či sa obsah zobrazí vľavo, vpravo alebo v strede nad "
 "pozadím snímku."
 
-#: modules/content-slider/content-slider.php:485
+#: modules/content-slider/content-slider.php:491
 msgid "Top Margin"
 msgstr "Odsadenie zhora"
 
-#: modules/content-slider/content-slider.php:493
+#: modules/content-slider/content-slider.php:499
 msgid "Bottom Margin"
 msgstr "Odsadenie zdola"
 
-#: modules/content-slider/content-slider.php:501
+#: modules/content-slider/content-slider.php:507
 msgid "Left Margin"
 msgstr "Odsadenie zľava"
 
-#: modules/content-slider/content-slider.php:509
+#: modules/content-slider/content-slider.php:515
 msgid "Right Margin"
 msgstr "Odsadenie zprava"
 
-#: modules/content-slider/content-slider.php:518
+#: modules/content-slider/content-slider.php:524
 msgid "Text Colors"
 msgstr "Farby textu"
 
-#: modules/content-slider/content-slider.php:528
+#: modules/content-slider/content-slider.php:534
 msgid "Text Shadow"
 msgstr "Tieň textu"
 
-#: modules/content-slider/content-slider.php:537
-#: modules/content-slider/content-slider.php:725
+#: modules/content-slider/content-slider.php:543
+#: modules/content-slider/content-slider.php:760
 msgid "Text Background Color"
 msgstr "Farba pozadia textu"
 
-#: modules/content-slider/content-slider.php:538
+#: modules/content-slider/content-slider.php:544
 msgid ""
 "The color applies to the overlay behind text over the background selections."
 msgstr "Farba sa aplikuje na prekrytie snímku textom."
 
-#: modules/content-slider/content-slider.php:543
+#: modules/content-slider/content-slider.php:549
 msgid "Text Background Opacity"
 msgstr "Nepriehľadnosť pozadia textu"
 
-#: modules/content-slider/content-slider.php:551
+#: modules/content-slider/content-slider.php:557
 msgid "Text Background Height"
 msgstr "Výška pozadia textu"
 
-#: modules/content-slider/content-slider.php:553
+#: modules/content-slider/content-slider.php:559
 msgid ""
 "Auto will allow the overlay to fit however long the text content is. 100% "
 "will fit the overlay to the top and bottom of the slide."
@@ -2607,12 +2916,12 @@ msgstr ""
 "Automatické nastavenie prispôsobí prekrytie dĺžke textu obsahu. 100% "
 "natiahne prekrytie od vrchu po spodok snímky."
 
-#: modules/content-slider/content-slider.php:555
+#: modules/content-slider/content-slider.php:561
 msgctxt "Background height."
 msgid "Auto"
 msgstr "Automatická"
 
-#: modules/content-slider/content-slider.php:572
+#: modules/content-slider/content-slider.php:578
 msgid ""
 "The link applies to the entire slide. If choosing a call to action type "
 "below, this link will also be used for the text or button."
@@ -2620,20 +2929,20 @@ msgstr ""
 "Odkaz sa aplikuje na celý snímok. Ak zvolíte výzvu k akcii, tento odkaz sa "
 "taktiež použije na text alebo tlačidlo."
 
-#: modules/content-slider/content-slider.php:676
+#: modules/content-slider/content-slider.php:711
 msgid "Border Radius"
 msgstr "Polomer okrajov"
 
-#: modules/content-slider/content-slider.php:687
+#: modules/content-slider/content-slider.php:722
 msgctxt "Module settings form tab. Display on mobile devices."
 msgid "Mobile"
 msgstr "Mobilné zobrazenie"
 
-#: modules/content-slider/content-slider.php:690
+#: modules/content-slider/content-slider.php:725
 msgid "Mobile Photo"
 msgstr "Obrázok pre mobilné zariadenia"
 
-#: modules/content-slider/content-slider.php:696
+#: modules/content-slider/content-slider.php:731
 msgid ""
 "You can choose a different photo that the slide will change to on mobile "
 "devices or no photo if desired."
@@ -2641,19 +2950,19 @@ msgstr ""
 "Môžete zvoliť zobrazenie odlišného obrázku na mobilných zariadeniach, alebo "
 "obrázok odstrániť."
 
-#: modules/content-slider/content-slider.php:698
+#: modules/content-slider/content-slider.php:733
 msgid "Use Main Photo"
 msgstr "Použiť hlavný obrázok"
 
-#: modules/content-slider/content-slider.php:699
+#: modules/content-slider/content-slider.php:734
 msgid "Choose Another Photo"
 msgstr "Zvoliť odlišný obrázok"
 
-#: modules/content-slider/content-slider.php:700
+#: modules/content-slider/content-slider.php:735
 msgid "No Photo"
 msgstr "Žiaden obrázok"
 
-#: modules/content-slider/content-slider.php:715
+#: modules/content-slider/content-slider.php:750
 msgid "Mobile Text Colors"
 msgstr "Farba textu na mobilných zariadeniach"
 
@@ -2661,38 +2970,34 @@ msgstr "Farba textu na mobilných zariadeniach"
 msgid "Display a heading, subheading and a button."
 msgstr "Zobrazí nadpis, podnadpis a tlačidlo."
 
-#: modules/cta/cta.php:73
+#: modules/cta/cta.php:75
 msgid "Ready to find out more?"
 msgstr "Ste pripravení dozvedieť sa viac?"
 
-#: modules/cta/cta.php:88
+#: modules/cta/cta.php:90
 msgid "Drop us a line today for a free quote!"
 msgstr "Napíšte nám ešte dnes pre bezplatnú konzultáciu!"
 
-#: modules/cta/cta.php:106 modules/gallery/gallery.php:220
+#: modules/cta/cta.php:108 modules/gallery/gallery.php:220
 #: modules/post-grid/post-grid.php:44 modules/tabs/tabs.php:52
 #: modules/testimonials/testimonials.php:37
 #: modules/woocommerce/woocommerce.php:57
 msgid "Layout"
 msgstr "Rozloženie"
 
-#: modules/cta/cta.php:109
+#: modules/cta/cta.php:111
 msgid "Inline"
 msgstr "V jednom riadku"
 
-#: modules/cta/cta.php:110
+#: modules/cta/cta.php:112
 msgid "Stacked"
 msgstr "Naskladané"
 
-#: modules/cta/cta.php:130 modules/icon-group/icon-group.php:99
+#: modules/cta/cta.php:132 modules/icon-group/icon-group.php:99
 msgid "Spacing"
 msgstr "Rozostupy"
 
-#: modules/cta/cta.php:201
-msgid "Background Opacity"
-msgstr "Nepriehľadnosť pozadia"
-
-#: modules/cta/cta.php:234
+#: modules/cta/cta.php:236
 msgid "Button Link"
 msgstr "Odkaz tlačidla"
 
@@ -2782,12 +3087,6 @@ msgstr "Odkaz na obrázok"
 #: modules/heading/heading.php:15
 msgid "Display a title/page heading."
 msgstr "Zobraziť nadpis stránky"
-
-#: modules/heading/heading.php:16 modules/photo/photo.php:27
-#: modules/rich-text/rich-text.php:16 modules/separator/separator.php:16
-#: modules/video/video.php:21
-msgid "Basic Modules"
-msgstr "Základné moduly"
 
 #: modules/heading/heading.php:101
 msgid "HTML Tag"
@@ -3048,10 +3347,6 @@ msgid ""
 msgstr ""
 "Použite toto nastavenie pre normalizáciu výšky boxíkov, ak obsahujú rôzny "
 "počet vlastností."
-
-#: modules/pricing-table/pricing-table.php:67
-msgid "Border Size"
-msgstr "Veľkosť okraja"
 
 #: modules/pricing-table/pricing-table.php:70
 msgctxt "Border size."

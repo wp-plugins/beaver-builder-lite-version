@@ -146,6 +146,10 @@ final class FLBuilderAdminSettings {
 				'title'	=> __( 'Branding', 'fl-builder' ),
 				'show'	=> self::has_support( 'branding' ) && ( is_network_admin() || ! self::multisite_support() )
 			),
+			'help-button' => array(
+				'title'	=> __( 'Help Button', 'fl-builder' ),
+				'show'	=> self::has_support( 'help-button' ) && ( is_network_admin() || ! self::multisite_support() )
+			),
 			'uninstall' => array(
 				'title'	=> __( 'Uninstall', 'fl-builder' ),
 				'show'	=> is_network_admin() || ! self::multisite_support()
@@ -191,6 +195,9 @@ final class FLBuilderAdminSettings {
 		
 		// Branding
 		self::render_form( 'branding' );
+		
+		// Help Button
+		self::render_form( 'help-button' );
 		
 		// Uninstall
 		self::render_form( 'uninstall' );
@@ -272,6 +279,7 @@ final class FLBuilderAdminSettings {
 		self::save_enabled_icons();
 		self::save_editing_capability();
 		self::save_branding();
+		self::save_help_button();
 		self::uninstall();
 	}
 	 
@@ -515,6 +523,74 @@ final class FLBuilderAdminSettings {
             else {
 				update_option( '_fl_builder_branding', $branding );
 				update_option( '_fl_builder_branding_icon', $branding_icon );
+            }
+        }
+    }
+	 
+	/**
+     * @method save_help_button
+     * @private
+     */	 
+	static private function save_help_button()
+	{
+        if ( isset( $_POST['fl-help-button-nonce'] ) && wp_verify_nonce( $_POST['fl-help-button-nonce'], 'help-button' ) ) {
+	        
+	        $settings 					= FLBuilderModel::get_help_button_defaults();
+	        $settings['enabled'] 		= isset( $_POST['fl-help-button-enabled'] ) 	? true : false;
+	        $settings['tour']	 		= isset( $_POST['fl-help-tour-enabled'] ) 		? true : false;
+	        $settings['video']	 		= isset( $_POST['fl-help-video-enabled'] ) 		? true : false;
+	        $settings['knowledge_base']	= isset( $_POST['fl-knowledge-base-enabled'] ) 	? true : false;
+	        $settings['forums']	 		= isset( $_POST['fl-forums-enabled'] ) 			? true : false;
+	        
+	        // Disable everything if the main button is disabled.
+	        if ( ! $settings['enabled'] ) {
+		        $settings['tour']	 		= false;
+		        $settings['video']	 		= false;
+		        $settings['knowledge_base']	= false;
+		        $settings['forums']	 		= false;
+	        }
+	        
+	        // Clean the video embed.
+	        $video_embed = wp_kses( $_POST['fl-help-video-embed'], array(
+	        	'iframe' => array(
+	        		'src' 					=> array(),
+	        		'frameborder' 			=> array(),
+	        		'webkitallowfullscreen'	=> array(),
+	        		'mozallowfullscreen'	=> array(),
+	        		'allowfullscreen'		=> array()
+	        	)
+	        ));
+	        
+	        // Save the video embed.
+	        if ( ! empty( $video_embed ) && ! stristr( $video_embed, 'iframe' ) ) {
+		        self::add_error( __( "Error! Please enter an iframe for the video embed code.", 'fl-builder' ) );
+	        }
+	        else if ( ! empty( $video_embed ) ) {
+		        $settings['video_embed'] = $video_embed;
+	        }
+	        
+	        // Save the knowledge base URL.
+	        if ( ! empty( $_POST['fl-knowledge-base-url'] ) ) {
+		        $settings['knowledge_base_url'] = sanitize_text_field( $_POST['fl-knowledge-base-url'] );
+	        }
+	        
+	        // Save the forums URL.
+	        if ( ! empty( $_POST['fl-forums-url'] ) ) {
+		        $settings['forums_url'] = sanitize_text_field( $_POST['fl-forums-url'] );
+	        }
+	        
+	        // Make sure we have at least one help feature enabled.
+	        if ( $settings['enabled'] && ! $settings['tour'] && ! $settings['video'] && ! $settings['knowledge_base'] && ! $settings['forums'] ) {
+		        self::add_error( __( "Error! You must have at least one feature of the help button enabled.", 'fl-builder' ) );
+		        return;
+	        }
+            
+            // Save the settings.
+            if ( is_network_admin() ) {
+				update_site_option( '_fl_builder_help_button', $settings );
+            }
+            else {
+				update_option( '_fl_builder_help_button', $settings );
             }
         }
     }

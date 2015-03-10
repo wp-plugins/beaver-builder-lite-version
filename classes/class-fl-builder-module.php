@@ -144,12 +144,21 @@ class FLBuilderModule {
         $this->enabled          = isset($params['enabled']) ? $params['enabled'] : true;
         $this->editor_export    = isset($params['editor_export']) ? $params['editor_export'] : true;
         
-        if(is_child_theme() && stristr($dir_path, get_stylesheet_directory())) {
-	        $this->url = str_replace(get_stylesheet_directory(), get_stylesheet_directory_uri(), $dir_path) . '/';
+        // We need to normalize the paths here since path comparisons 
+        // break on Windows because they use backslashes.
+        $dir_path 					= str_replace( '\\', '/', $dir_path );
+        $stylesheet_directory 		= str_replace( '\\', '/', get_stylesheet_directory() );
+        $stylesheet_directory_uri 	= str_replace( '\\', '/', get_stylesheet_directory_uri() );
+        $template_directory 		= str_replace( '\\', '/', get_template_directory() );
+        $template_directory_uri 	= str_replace( '\\', '/', get_template_directory_uri() );
+        
+        // Find the right paths.
+        if(is_child_theme() && stristr($dir_path, $stylesheet_directory)) {
+	        $this->url = str_replace($stylesheet_directory, $stylesheet_directory_uri, $dir_path) . '/';
 	        $this->dir = $dir_path . '/';
         }
-        else if(stristr($dir_path, get_template_directory())) {
-            $this->url = str_replace(get_template_directory(), get_template_directory_uri(), $dir_path) . '/';
+        else if(stristr($dir_path, $template_directory)) {
+            $this->url = str_replace($template_directory, $template_directory_uri, $dir_path) . '/';
             $this->dir = $dir_path . '/';
         }
         else {                

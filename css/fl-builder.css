@@ -39,8 +39,10 @@ html.fl-builder-edit {
 /* Simple UI
 ------------------------------------------------------ */
 
+.fl-builder-simple .fl-builder-templates-button,
 .fl-builder-simple .fl-builder-tools-button,
 .fl-builder-simple .fl-builder-add-content-button,
+.fl-builder-simple .fl-builder-help-button,
 .fl-builder-simple .fl-builder-panel,
 .fl-builder-simple .fl-block-overlay-actions .fl-block-move,
 .fl-builder-simple .fl-block-overlay-actions .fl-block-copy,
@@ -117,6 +119,17 @@ html.fl-builder-edit {
     font-size: 11px !important;
     line-height: 11px !important;
     height: 24px;
+}
+.fl-builder-help-button {
+	color: #b3b3b3;
+	font-size: 16px !important;
+}
+.fl-builder-help-button i {
+	position: relative;
+	top: -1px;
+}
+.fl-builder-help-button:hover {
+	color: #666;
 }
 
 /* Builder Bar
@@ -435,10 +448,22 @@ html.fl-builder-edit {
     -moz-box-sizing: border-box !important;
     -webkit-box-sizing: border-box !important;
     color: #fff;
+    left: 0;
     position: absolute;
     top: -30px;
     width: 100%;
     z-index: 100006;
+}
+.fl-row-overlay-header-bottom {
+	bottom: -30px;
+	top: 0;
+}
+.fl-row-overlay-header-bottom .fl-block-overlay-header {
+	position: absolute;
+	bottom: 0;
+}
+.fl-block-overlay-active .fl-row-content-wrap {
+	position: relative;
 }
 .fl-block-overlay-active .fl-row-content {
     position: relative;
@@ -1279,4 +1304,90 @@ li.as-result-item em {
 /* Loop Builder */
 .fl-loop-builder-filter {
     display: none;
+}
+
+/* Getting Started Video
+------------------------------------------------------ */
+
+.fl-builder-getting-started-video {
+	line-height: 0 !important;
+	padding: 10px;
+}
+.fl-builder-getting-started-video iframe {
+	border: none;
+	height: 326px;
+	width: 100%;
+}
+
+/* Help Tour
+------------------------------------------------------ */
+
+.fl-builder-tour-actions .fl-builder-actions-title {
+	font-size: 14px !important;
+	line-height: 19px;
+}
+.fl-builder-tour-mask {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 100000000;
+}
+.fl-builder-tour-dimmed {
+	background: rgba( 0, 0, 0, 0.7 );
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+body > .fl-builder-tour-dimmed {
+	position: fixed;
+}
+.tour-backdrop {
+	z-index: 110000;
+}
+.popover[class*=tour-] {
+	border: 1px solid #ccc;
+	border-radius: 0;
+	-webkit-box-shadow: 0 0 30px rgba(0,0,0,.3);
+	box-shadow: 0 0 40px rgba(0,0,0,.3);
+	color: #666;
+	font-size: 13px;
+	max-width: none;
+	padding: 0;
+	width: 300px;
+	z-index: 100000001;
+}
+.popover[class*=tour-].bottom > .arrow {
+	border-bottom-color: #ccc;
+}
+.popover[class*=tour-].bottom > .arrow:after {
+	border-bottom-color: #f7f7f7;
+}
+.popover[class*=tour-] .popover-title {
+	border-radius: 0;
+	color: #333;
+}
+.popover[class*=tour-] .fa-times {
+	color: #b3b3b3;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 5px;
+	position: absolute;
+	right: 3px;
+	top: 2px;
+}
+.popover[class*=tour-] .fa-times:hover {
+	color: #666;
+}
+.popover[class*=tour-] .popover-content {
+	border-bottom: 1px solid #d9d9d9;
+	padding: 13px 15px;
+}
+.popover[class*=tour-] .fl-builder-tour-next {
+	display: block;
+	float: none;
+	width: 100%;
 }

@@ -156,12 +156,12 @@ var FLBuilder;
             FLBuilder._initScrollbars();
             FLBuilder._initLightboxes();
             FLBuilder._initSortables();
-            FLBuilder._initTemplateSelector();
-            FLBuilder._initTemplateSettings();
+            FLBuilder._initCoreTemplateSettings();
             FLBuilder._bindEvents();
             FLBuilder._bindOverlayEvents();
             FLBuilder._setupEmptyLayout();
             FLBuilder._highlightEmptyCols();
+            FLBuilder._showTourOrTemplates();
         },
         
         /**
@@ -384,6 +384,7 @@ var FLBuilder;
             $('.fl-builder-add-content-button').on('click', FLBuilder._showPanel);
             $('.fl-builder-templates-button').on('click', FLBuilder._changeTemplateClicked);
             $('.fl-builder-upgrade-button').on('click', FLBuilder._upgradeClicked);
+            $('.fl-builder-help-button').on('click', FLBuilder._helpButtonClicked);
             
             /* Panel */
             $('.fl-builder-panel-actions .fl-builder-panel-close').on('click', FLBuilder._closePanel);
@@ -422,6 +423,16 @@ var FLBuilder;
             /* Edit User Template */
             $('body').delegate('.fl-builder-cancel-edit-template-button', 'click', FLBuilder._cancelEditUserTemplate);
             $('body').delegate('.fl-builder-save-edit-template-button', 'click', FLBuilder._saveEditUserTemplate);
+            
+            /* Help Actions */
+            $('body').delegate('.fl-builder-help-tour-button', 'click', FLBuilder._startHelpTour);
+            $('body').delegate('.fl-builder-help-video-button', 'click', FLBuilder._watchVideoClicked);
+            $('body').delegate('.fl-builder-knowledge-base-button', 'click', FLBuilder._viewKnowledgeBaseClicked);
+            $('body').delegate('.fl-builder-forums-button', 'click', FLBuilder._visitForumsClicked);
+            
+            /* Welcome Actions */
+            $('body').delegate('.fl-builder-no-tour-button', 'click', FLBuilder._noTourButtonClicked);
+            $('body').delegate('.fl-builder-yes-tour-button', 'click', FLBuilder._yesTourButtonClicked);
             
             /* Rows */
             $('body').delegate('.fl-row-overlay .fl-block-remove', 'click', FLBuilder._deleteRowClicked);
@@ -589,29 +600,9 @@ var FLBuilder;
             $('#tiptip_holder').stop().remove();
         },
         
-        /* Panel
+        /* Bar
         ----------------------------------------------------------*/
         
-        /**
-         * @method _closePanel
-         * @private
-         */
-        _closePanel: function()
-        {
-            $('.fl-builder-panel').stop(true, true).animate({ right: '-350px' }, 500, function(){ $(this).hide(); });
-            $('.fl-builder-bar .fl-builder-add-content-button').stop(true, true).fadeIn();
-        },
-        
-        /**
-         * @method _showPanel
-         * @private
-         */
-        _showPanel: function()
-        {
-            $('.fl-builder-bar .fl-builder-add-content-button').stop(true, true).fadeOut();
-            $('.fl-builder-panel').stop(true, true).show().animate({ right: '0' }, 500);
-        },
-
         /**
          * @method _toolsClicked
          * @private
@@ -632,7 +623,7 @@ var FLBuilder;
             }
             
             // Template buttons
-            if(!lite && postType != 'fl-builder-template' && (enabledTemplates == 'user' || enabledTemplates == 'enabled')) {
+            if(!lite && postType != 'fl-builder-template' && enabledTemplates != 'disabled') {
             
                 buttons['save-user-template'] = FLBuilderStrings.saveTemplate;
                 
@@ -675,6 +666,57 @@ var FLBuilder;
         _upgradeClicked: function()
         {
             window.open(FLBuilderConfig.upgradeUrl);
+        },
+        
+        /**
+         * @method _helpButtonClicked
+         * @private
+         */
+        _helpButtonClicked: function()
+        {
+	        var buttons = {};
+	        
+	        if ( FLBuilderConfig.help.tour ) {
+		        buttons['help-tour'] = FLBuilderStrings.takeHelpTour;
+	        }
+	        if ( FLBuilderConfig.help.video ) {
+		        buttons['help-video'] = FLBuilderStrings.watchHelpVideo;
+	        }
+	        if ( FLBuilderConfig.help.knowledge_base ) {
+		        buttons['knowledge-base'] = FLBuilderStrings.viewKnowledgeBase;
+	        }
+	        if ( FLBuilderConfig.help.forums ) {
+		        buttons['forums'] = FLBuilderStrings.visitForums;
+	        }
+	        
+            FLBuilder._showActionsLightbox({
+                'className': 'fl-builder-help-actions',
+                'title': FLBuilderStrings.actionsLightboxTitle,
+                'buttons': buttons
+            });
+        },
+        
+        /* Panel
+        ----------------------------------------------------------*/
+        
+        /**
+         * @method _closePanel
+         * @private
+         */
+        _closePanel: function()
+        {
+            $('.fl-builder-panel').stop(true, true).animate({ right: '-350px' }, 500, function(){ $(this).hide(); });
+            $('.fl-builder-bar .fl-builder-add-content-button').stop(true, true).fadeIn();
+        },
+        
+        /**
+         * @method _showPanel
+         * @private
+         */
+        _showPanel: function()
+        {
+            $('.fl-builder-bar .fl-builder-add-content-button').stop(true, true).fadeOut();
+            $('.fl-builder-panel').stop(true, true).show().animate({ right: '0' }, 500);
         },
         
         /**
@@ -922,14 +964,24 @@ var FLBuilder;
          */
         _showTemplateSelector: function()
         {
-            if(!FLBuilderConfig.lite) {
+	        if ( FLBuilderConfig.simpleUi ) {
+		        return;
+	        }
+	        if ( 'fl-builder-template' == FLBuilderConfig.postType ) {
+		    	return;   
+		    }
+		    if ( 'disabled' == FLBuilderConfig.enabledTemplates ) {
+			    return;
+	        }
+	        if ( FLBuilderConfig.lite ) {
+		    	return;    
+		    }
+	        
+            FLBuilder._showLightbox( false );
             
-                FLBuilder._showLightbox(false);
-            
-                FLBuilder.ajax({
-                    action: 'fl_builder_render_template_selector'
-                }, FLBuilder._templateSelectorLoaded);
-            }
+            FLBuilder.ajax({
+                action: 'fl_builder_render_template_selector'
+            }, FLBuilder._templateSelectorLoaded );
         },
         
         /**
@@ -942,7 +994,9 @@ var FLBuilder;
             
             if($('.fl-user-template').length == 0) {
                 $('.fl-user-templates-message').show();
-            } 
+            }
+            
+            $( 'body' ).trigger( 'fl-builder.template-selector-loaded' );
         },
         
         /**
@@ -1229,18 +1283,111 @@ var FLBuilder;
             window.close();
         },
         
-        /* Template Settings
+        /* Core Template Settings
         ----------------------------------------------------------*/
         
         /**
-         * @method _initTemplateSettings
+         * @method _initCoreTemplateSettings
          * @private
          */
-        _initTemplateSettings: function()
+        _initCoreTemplateSettings: function()
         {
             if(FLBuilder._templateSettingsEnabled) {
                 FLBuilder._bindTemplateSettings();
             }
+        },
+        
+        /* Help Actions
+        ----------------------------------------------------------*/
+        
+        /**
+         * @method _watchVideoClicked
+         * @private
+         */
+        _watchVideoClicked: function()
+        {
+	        FLBuilder._actionsLightbox.close();
+	        FLBuilder._lightbox.open('<div class="fl-lightbox-header"><h1>' + FLBuilderStrings.gettingStartedVideo + '</h1></div><div class="fl-builder-getting-started-video">' + FLBuilderConfig.help.video_embed + '</div><div class="fl-lightbox-footer"><span class="fl-builder-settings-cancel fl-builder-button fl-builder-button-large fl-builder-button-primary" href="javascript:void(0);">' + FLBuilderStrings.done + '</span></div>');
+        },
+        
+        /**
+         * @method _viewKnowledgeBaseClicked
+         * @private
+         */
+        _viewKnowledgeBaseClicked: function()
+        {
+	        FLBuilder._actionsLightbox.close();
+	        
+	        window.open( FLBuilderConfig.help.knowledge_base_url );
+        },
+        
+        /**
+         * @method _visitForumsClicked
+         * @private
+         */
+        _visitForumsClicked: function()
+        {
+	        FLBuilder._actionsLightbox.close();
+	        
+	        window.open( FLBuilderConfig.help.forums_url );
+        },
+        
+        /* Help Tour
+        ----------------------------------------------------------*/
+        
+        /**
+         * @method _showTourOrTemplates
+         * @private
+         */
+        _showTourOrTemplates: function()
+        {
+	        if ( ! FLBuilderConfig.simpleUi && 'fl-builder-template' != FLBuilderConfig.postType ) {
+	            if ( FLBuilderConfig.help.tour && FLBuilderConfig.newUser ) {
+		            FLBuilder._showTourLightbox();
+	            }
+	            else {
+		            FLBuilder._initTemplateSelector();
+	            }
+            }
+	    },
+        
+        /**
+         * @method _showTourLightbox
+         * @private
+         */
+        _showTourLightbox: function()
+        {
+            FLBuilder._actionsLightbox.open('<div class="fl-builder-actions fl-builder-tour-actions"><span class="fl-builder-actions-title">'+ FLBuilderStrings.welcomeMessage +'</span><span class="fl-builder-no-tour-button fl-builder-button fl-builder-button-large">'+ FLBuilderStrings.noThanks +'</span><span class="fl-builder-yes-tour-button fl-builder-button fl-builder-button-primary fl-builder-button-large">'+ FLBuilderStrings.yesPlease +'</span></div>');
+        },
+        
+        /**
+         * @method _noTourButtonClicked
+         * @private
+         */
+        _noTourButtonClicked: function()
+        {
+	        FLBuilder._actionsLightbox.close();
+	        FLBuilder._initTemplateSelector();
+        },
+        
+        /**
+         * @method _yesTourButtonClicked
+         * @private
+         */
+        _yesTourButtonClicked: function()
+        {
+	        FLBuilder._actionsLightbox.close();
+	        FLBuilderTour.start();
+        },
+        
+        /**
+         * @method _startHelpTour
+         * @private
+         */
+        _startHelpTour: function()
+        {
+	        FLBuilder._actionsLightbox.close();
+	        FLBuilderTour.start();
         },
         
         /* Layout
@@ -1273,8 +1420,7 @@ var FLBuilder;
             FLBuilder.showAjaxLoader();
             
             FLBuilder.ajax({
-                action: 'fl_builder_render_layout',
-                'wp-minify-off': '1'
+                action: 'fl_builder_render_layout'
             }, FLBuilder._renderLayout);
         },
         
@@ -1667,12 +1813,24 @@ var FLBuilder;
          */
         _rowMouseenter: function()
         {
-            var row = $(this);
+            var row 		= $( this ),
+            	rowContent 	= $( this ).find( '.fl-row-content-wrap' ),
+            	overlay 	= null,
+            	offset 		= null;
             
             if(!row.hasClass('fl-block-overlay-active')) {
+                
                 row.addClass('fl-block-overlay-active');
-                row.append('<div class="fl-row-overlay fl-block-overlay" data-node="'+ row.attr('data-node') +'"><div class="fl-block-overlay-header"><div class="fl-block-overlay-actions"><div class="fl-block-overlay-title">'+ FLBuilderStrings.row +'</div><i class="fl-block-move fa fa-arrows fl-tip" title="' + FLBuilderStrings.move + '"></i><i class="fl-block-settings fa fa-wrench fl-tip" title="' + FLBuilderStrings.rowSettings + '"></i><i class="fl-block-copy fa fa-copy fl-tip" title="' + FLBuilderStrings.duplicate + '"></i><i class="fl-block-remove fa fa-times fl-tip" title="' + FLBuilderStrings.remove + '"></i></div><div class="fl-clear"></div></div></div>');
+                rowContent.append('<div class="fl-row-overlay fl-block-overlay" data-node="'+ row.attr('data-node') +'"><div class="fl-block-overlay-header"><div class="fl-block-overlay-actions"><div class="fl-block-overlay-title">'+ FLBuilderStrings.row +'</div><i class="fl-block-move fa fa-arrows fl-tip" title="' + FLBuilderStrings.move + '"></i><i class="fl-block-settings fa fa-wrench fl-tip" title="' + FLBuilderStrings.rowSettings + '"></i><i class="fl-block-copy fa fa-copy fl-tip" title="' + FLBuilderStrings.duplicate + '"></i><i class="fl-block-remove fa fa-times fl-tip" title="' + FLBuilderStrings.remove + '"></i></div><div class="fl-clear"></div></div></div>');
                 FLBuilder._initTipTips();
+                
+                // Put the actions header on the bottom if it's hidden.
+                overlay = row.find( '.fl-row-overlay' );
+                offset  = overlay.offset();
+                
+                if ( offset.top < 43 ) {
+	                overlay.addClass( 'fl-row-overlay-header-bottom' );
+                }
             }
         },
         
@@ -2692,8 +2850,7 @@ var FLBuilder;
                 action          : 'fl_builder_save',
                 method          : 'save_settings',
                 node_id         : nodeId,
-                settings        : settings,
-                'wp-minify-off' : '1'
+                settings        : settings
             }, FLBuilder._saveSettingsComplete);
             
             // Close the lightbox.
@@ -3746,7 +3903,7 @@ var FLBuilder;
          */   
         _ajaxUrl: function(params)
         {
-            var url     = FLBuilderConfig.ajaxUrl,
+            var url     = window.location.href.split( '#' ).shift(),
                 param   = null;
             
             if(typeof params !== 'undefined') {
