@@ -11,33 +11,34 @@ final class FLBuilderUpdate {
     static public function init()
     {
         // Make sure the user is logged in.
-        if(!is_user_logged_in()) {
-            return;
-        }
-        
-        // Get the current version. 
-        $version = get_site_option('_fl_builder_version');
-        
-        // No version number. This must be a fresh install.
-        if(!$version) {
-            update_site_option('_fl_builder_version', FL_BUILDER_VERSION);
+        if ( ! is_user_logged_in() ) {
             return;
         }
         
         // Don't update for dev copies.
-        else if(FL_BUILDER_VERSION == '{FL_BUILDER_VERSION}') {
+        if ( FL_BUILDER_VERSION == '{FL_BUILDER_VERSION}' ) {
             return;
         }
         
-        // Only run updates if the version numbers don't match.
-        else if(!version_compare($version, FL_BUILDER_VERSION, '=')) {
+        // Get the saved version. 
+        $saved_version = get_site_option( '_fl_builder_version' );
         
-            if(is_multisite()) {
-                self::run_multisite();
+        // No saved version number. This must be a fresh install.
+        if ( ! $saved_version ) {
+            update_site_option( '_fl_builder_version', FL_BUILDER_VERSION );
+            return;
+        }
+        // Only run updates if the version numbers don't match.
+        else if ( ! version_compare( $saved_version, FL_BUILDER_VERSION, '=' ) ) {
+        
+            if ( is_multisite() ) {
+                self::run_multisite( $saved_version );
             }
             else {
-               self::run(); 
+               self::run( $saved_version ); 
             }
+            
+            update_site_option( '_fl_builder_version', FL_BUILDER_VERSION );
         }
     }
 
@@ -45,35 +46,27 @@ final class FLBuilderUpdate {
      * @method run
      * @private
      */
-    static private function run()
+    static private function run( $saved_version )
     {
-        // Get the current version. 
-        $version = get_site_option('_fl_builder_version');
-        
         // Update to 1.2.8 or greater.
-        if(version_compare($version, '1.2.8', '<')) {
+        if ( version_compare( $saved_version, '1.2.8', '<' ) ) {
             self::v_1_2_8();
         }
         
         // Update to 1.4.6 or greater.
-        if(version_compare($version, '1.4.6', '<')) {
+        if ( version_compare( $saved_version, '1.4.6', '<' ) ) {
             self::v_1_4_6();
         }
         
         // Clear all asset cache.
         FLBuilderModel::delete_all_asset_cache();
-        
-        // Update the version number.
-        if(!is_multisite()) {
-            update_site_option('_fl_builder_version', FL_BUILDER_VERSION);
-        }
     }
 
     /** 
      * @method run_multisite
      * @private
      */
-    static private function run_multisite() 
+    static private function run_multisite( $saved_version ) 
     {
         global $blog_id;
         global $wpdb;
@@ -82,19 +75,16 @@ final class FLBuilderUpdate {
         $original_blog_id = $blog_id;
         
         // Get all blog ids.
-        $blog_ids = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
+        $blog_ids = $wpdb->get_col( "SELECT blog_id FROM $wpdb->blogs" );
         
         // Loop through the blog ids and run the update.
-        foreach($blog_ids as $id) {
-            switch_to_blog($id);
-            self::run();
+        foreach ( $blog_ids as $id ) {
+            switch_to_blog( $id );
+            self::run( $saved_version );
         }
         
         // Revert to the original blog.
-        switch_to_blog($original_blog_id);
-        
-        // Update the version number.
-        update_site_option('_fl_builder_version', FL_BUILDER_VERSION);
+        switch_to_blog( $original_blog_id );
     }
 
     /** 
@@ -267,8 +257,15 @@ final class FLBuilderUpdate {
             self::v_1_2_8_convert_global_settings();
             
             // Delete all asset cache.
-            array_map('unlink', glob($cache_dir['path'] . '*.css'));
-    	    array_map('unlink', glob($cache_dir['path'] . '*.js'));
+    	    $css = glob( $cache_dir['path'] . '*.css' );
+		    $js  = glob( $cache_dir['path'] . '*.js' );
+		    
+		    if ( is_array( $css ) ) {
+    	    	array_map( 'unlink', $css );
+    	    }
+    	    if ( is_array( $js ) ) {
+    	    	array_map( 'unlink', $js );
+    	    }
         }
     }
 

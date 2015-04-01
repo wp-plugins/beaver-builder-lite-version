@@ -583,10 +583,19 @@ final class FLBuilderModel {
         $cache_dir 	= self::get_cache_dir();
 
 	    if($post_id == null) {
-    	    array_map('unlink', glob($cache_dir['path'] . '*.css'));
-    	    array_map('unlink', glob($cache_dir['path'] . '*.js'));
+		    
+		    $css = glob( $cache_dir['path'] . '*.css' );
+		    $js  = glob( $cache_dir['path'] . '*.js' );
+		    
+		    if ( is_array( $css ) ) {
+    	    	array_map( 'unlink', $css );
+    	    }
+    	    if ( is_array( $js ) ) {
+    	    	array_map( 'unlink', $js );
+    	    }
 	    }
         else {
+	        
             $css         = $cache_dir['path'] . $post_id . '-layout.css';
             $css_draft   = $cache_dir['path'] . $post_id . '-layout-draft.css';
             $css_preview = $cache_dir['path'] . $post_id . '-layout-preview.css';
@@ -612,6 +621,25 @@ final class FLBuilderModel {
             if(file_exists($js_preview)) {
                 unlink($js_preview);
             }
+        }
+	}
+
+	/**
+	 * Delete the asset cache if the domain has changed.
+	 *
+     * @method delete_asset_cache_domain_change
+     */
+	static public function delete_asset_cache_domain_change()
+	{
+        $home_url  = home_url();
+        $saved_url = get_option( '_fl_builder_home_url' );
+        
+        if ( ! $saved_url ) {
+	        update_option( '_fl_builder_home_url', $home_url );
+        }
+        else if ( $home_url != $saved_url ) {
+	        self::delete_all_asset_cache();
+	        update_option( '_fl_builder_home_url', $home_url );
         }
 	}
 
@@ -1435,7 +1463,7 @@ final class FLBuilderModel {
 	/**
      * @method get_categorized_modules
      */
-    static public function get_categorized_modules()
+    static public function get_categorized_modules( $show_disabled = false )
     {
         $enabled_modules = self::get_enabled_modules();
         
@@ -1455,7 +1483,7 @@ final class FLBuilderModel {
 		// Build the categories array.
 		foreach(self::$modules as $module) {
 
-		    if(!in_array($module->slug, $enabled_modules)) {
+		    if(!in_array($module->slug, $enabled_modules) && !$show_disabled) {
     		    continue;
 		    }
 			else if($module->slug == 'widget') {
@@ -2704,7 +2732,7 @@ final class FLBuilderModel {
 	    	'video'	  				=> false,
 	    	'video_embed'			=> '<iframe width="420" height="315" src="https://www.youtube.com/embed/CNJbH2gaACo" frameborder="0" allowfullscreen></iframe>',
 	    	'knowledge_base' 		=> true,
-	    	'knowledge_base_url' 	=> 'https://www.wpbeaverbuilder.com/documentation/?utm_source=external&utm_medium=builder&utm_campaign=docs-button',
+	    	'knowledge_base_url' 	=> 'https://www.wpbeaverbuilder.com/knowledge-base/?utm_source=external&utm_medium=builder&utm_campaign=docs-button',
 	    	'forums' 				=> true,
 	    	'forums_url' 			=> 'https://www.wpbeaverbuilder.com/support/?utm_source=external&utm_medium=builder&utm_campaign=forums-button',
     	);

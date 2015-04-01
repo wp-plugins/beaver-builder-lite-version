@@ -1,3 +1,52 @@
+<h4>1.5.3 - 03/31/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added admin settings section for clearing the builder's CSS and JavaScript cache.</li>
+    <li>Added a setting to show the full content in the posts module.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>CSS fix for three column layouts in the WooCommerce module.</li>
+    <li>Fixed a preview bug with row background overlay colors.</li>
+    <li>Fixed an issue with the PHP glob function not returning an array on some systems.</li>
+    <li>Fixed CSS conflicts with third party themes and the WordPress editor.</li>
+</ul>
+
+<h4>1.5.2 - 03/24/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added logic to the accordion module that scrolls a section into view on mobile if it's not visible.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Rolling back part of the last update that removed the style tag from columns. This is due to the fact that many existing sites have old CSS cached that doesn't contain the column width. We'll be releasing this change again in the near future to give sites time to update their cache with the new CSS.</li>
+	<li>Icons in accordion titles don't get replaced anymore when clicked.</li>
+	<li>Fixed an unescaped translation string JavaScript bug.</li>
+</ul>
+
+<h4>1.5.1 - 03/22/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added German translation.</li>
+    <li>Added Russian translation.</li>
+	<li>Smooth scrolling now works for all links on a page including links in the header on third party themes.</li>
+	<li>Added phone and subject fields to the contact form module.</li>
+	<li>Added settings to the contact form module for showing and hiding fields.</li>
+	<li>Builder cache now clears itself if the domain name of a website changes.</li>
+	<li>Modules in the backend are now categorized the same as they are on the frontend.</li>
+	<li>Moved column width from the style attribute in the markup to the generated css file.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with text editor refresh previews.</li>
+	<li>Added position:static to the body tag when the builder is active to fix issues with WordPress editor popups when the body is set to position:relative.</li>
+	<li>Fixed bugs with setting the product order in the WooCommerce module.</li>
+	<li>CSS fix for row/column colors overriding the color of elements in the heading module such as em tags.</li>
+	<li>Added ignore_sticky_posts to post module queries to prevent sticky posts from showing when not desired.</li>
+	<li>Smooth scrolling is only applied to rows, columns and modules to avoid conflicts with third party scripts.</li>
+	<li>Autosuggest fields such as links now work on pre WordPress 4.0.</li>
+</ul>
+
 <h4>1.5.0 - 03/02/2015</h4>
 <p><strong>Enhancements</strong></p>
 <ul>

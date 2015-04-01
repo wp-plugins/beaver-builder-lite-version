@@ -71,6 +71,25 @@ final class FLBuilderAutoSuggest {
 	    return isset($data) ? json_encode($data) : '';
 	}
 	
+	/**
+     * @method get_like
+     */	 
+	static public function get_like()
+	{
+		global $wpdb;
+		
+		$like = urldecode( $_REQUEST['fl_as_query'] );
+		
+		if ( method_exists( $wpdb, 'esc_like' ) ) {
+		    $like = esc_sql( $wpdb->esc_like( $like ) );
+	    }
+	    else {
+			$like = like_escape( esc_sql( $like ) );
+	    }
+	    
+	    return $like;
+	}
+	
     /**
      * @method posts
      */	 
@@ -79,7 +98,7 @@ final class FLBuilderAutoSuggest {
 	    global $wpdb;
 	    
 	    $data   = array();	    
-	    $like   = esc_sql($wpdb->esc_like(urldecode($_REQUEST['fl_as_query'])));
+	    $like   = self::get_like();
 	    $type   = esc_sql($_REQUEST['fl_as_action_data']);
 	    
 	    $posts  = $wpdb->get_results("
@@ -166,7 +185,7 @@ final class FLBuilderAutoSuggest {
 	    global $wpdb;
 	    
 	    $data  = array();
-	    $like  = esc_sql($wpdb->esc_like(urldecode($_REQUEST['fl_as_query'])));
+	    $like  = self::get_like();
 	    $users = $wpdb->get_results("SELECT * FROM {$wpdb->users} WHERE user_login LIKE '%{$like}%'");
 	    
 	    foreach($users as $user) {
@@ -205,10 +224,10 @@ final class FLBuilderAutoSuggest {
 	    global $wpdb;
 	    
 	    $data   = array();	    
-	    $like   = esc_sql($wpdb->esc_like(urldecode($_REQUEST['fl_as_query'])));
+	    $like   = self::get_like();
 	    $types  = FLBuilderLoop::post_types();
 	    $slugs  = array();
-	    
+
 	    foreach($types as $slug => $type) {
     	    $slugs[] = esc_sql($slug);
 	    }

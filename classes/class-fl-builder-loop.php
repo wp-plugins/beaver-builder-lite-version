@@ -20,13 +20,14 @@ final class FLBuilderLoop {
         $users           = empty($settings->users)           ? ''        : $settings->users;
         
         $args = array(
-            'paged'             => is_front_page() ? get_query_var('page') : get_query_var('paged'),
-            'posts_per_page'    => $posts_per_page,
-        	'post_type'         => $post_type,
-        	'orderby'           => $order_by,
-        	'order'             => $order,
-        	'author'            => $users,
-        	'tax_query'         => array('relation' => 'AND')
+            'paged'             	=> is_front_page() ? get_query_var('page') : get_query_var('paged'),
+            'posts_per_page'    	=> $posts_per_page,
+        	'post_type'         	=> $post_type,
+        	'orderby'           	=> $order_by,
+        	'order'             	=> $order,
+        	'author'            	=> $users,
+        	'tax_query'         	=> array('relation' => 'AND'),
+        	'ignore_sticky_posts'	=> true
         );
         
         // Build the taxonomy query.

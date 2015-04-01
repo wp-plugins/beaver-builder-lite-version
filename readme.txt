@@ -15,7 +15,7 @@ Beaver Builder is a drag and drop frontend WordPress page builder that works wit
 
 Beaver Builder is a drag and drop page builder that works on the frontend of WordPress and allows you to create beautiful layouts without having to write any code. If you haven't already, watch the video below or [try out the demo](http://demo.wpbeaverbuilder.com/?utm_source=external&utm_medium=wp-repo&utm_campaign=builder-description) to see it in action!
 
-[youtube https://www.youtube.com/watch?v=CNJbH2gaACo]
+[vimeo https://vimeo.com/122546221]
 
 Head on over to [our website](https://www.wpbeaverbuilder.com/?utm_source=external&utm_medium=wp-repo&utm_campaign=builder-description) to learn more about the Beaver Builder WordPress page builder and what it can do for you. 
 

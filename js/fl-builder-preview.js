@@ -582,6 +582,7 @@ var FLBuilderPreview;
             var rgb, alpha, value;
             
             if(this.elements.bgOverlayColor.val() == '' || isNaN(this.elements.bgOverlayOpacity.val())) {
+	            this.elements.node.removeClass('fl-row-bg-overlay');
                 this.updateCSSRule(this.classes.content + ':after', 'background-color', 'transparent');  
             }
             else {
@@ -591,18 +592,8 @@ var FLBuilderPreview;
                 value  = 'rgba(' + rgb.join() + ', ' + alpha + ')';
                     
                 this.delay(100, $.proxy(function(){
-	                this.updateCSSRule(this.classes.content, 'position', 'relative');
-                    this.updateCSSRule(this.classes.content + ':after', {
-	                    'background-color'	: value,
-	                    'content'			: "''",
-					    'display'			: 'block',
-					    'position'			: 'absolute',
-					    'top'				: '0',
-					    'right'				: '0',
-					    'bottom'			: '0',
-					    'left'				: '0',
-					    'z-index'			: '0'
-                    });
+	                this.elements.node.addClass('fl-row-bg-overlay');
+                    this.updateCSSRule(this.classes.content + ':after', 'background-color', value);
                 }, this));
     
             }
@@ -1288,7 +1279,12 @@ var FLBuilderPreview;
                     text = $('<div>' + editor.getContent() + '</div>');
                 } 
                 else {
-                    text = $('<div>' + textarea.val() + '</div>');
+	                if ( 'undefined' == typeof switchEditors || 'undefined' == typeof switchEditors.wpautop ) {
+                    	text = $('<div>' + textarea.val() + '</div>');
+                    }
+                    else {
+	                    text = $('<div>' + switchEditors.wpautop( textarea.val() ) + '</div>');
+                    }
                 }
             
                 text.find('script').remove();

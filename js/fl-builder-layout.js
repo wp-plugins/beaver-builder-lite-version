@@ -40,9 +40,7 @@
             }
             
             // Init anchor links.
-            if ( $( '.fl-builder-content a' ).length > 0 ) {
-                FLBuilderLayout._initAnchorLinks();
-            }
+            FLBuilderLayout._initAnchorLinks();
         },
         
         _destroy: function()
@@ -176,7 +174,7 @@
         
         _initAnchorLinks: function()
         {
-            $( '.fl-builder-content a' ).each( FLBuilderLayout._initAnchorLink );
+            $( 'a' ).each( FLBuilderLayout._initAnchorLink );
         },
         
         _initAnchorLink: function()
@@ -194,7 +192,9 @@
 					element = $( '#' + id );
 					
 					if ( element.length > 0 ) {
-						$( link ).on( 'click', FLBuilderLayout._scrollToElementOnLinkClick );
+						if ( element.hasClass( 'fl-row' ) || element.hasClass( 'fl-col' ) || element.hasClass( 'fl-module' ) ) {
+							$( link ).on( 'click', FLBuilderLayout._scrollToElementOnLinkClick );
+						}
 					}
 				}
 				catch( e ) {}

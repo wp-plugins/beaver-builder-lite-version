@@ -1,3 +1,7 @@
+.fl-node-<?php echo $col->node; ?> {
+	width: <?php echo $col->settings->size; ?>%;
+}
+
 <?php if(!empty($col->settings->text_color)) : ?>
 .fl-node-<?php echo $col->node; ?>,
 .fl-node-<?php echo $col->node; ?> * {

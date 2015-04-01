@@ -25,24 +25,9 @@
 <?php endif; ?>
 
 <?php if( in_array( $row->settings->bg_type, array('photo', 'parallax', 'slideshow', 'video') ) && !empty($row->settings->bg_overlay_color)) : ?>
-.fl-node-<?php echo $row->node; ?> .fl-row-content-wrap {
-    position: relative;
-}
 .fl-node-<?php echo $row->node; ?> .fl-row-content-wrap:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
     background-color: #<?php echo $row->settings->bg_overlay_color; ?>;
     background-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($row->settings->bg_overlay_color)) ?>, <?php echo $row->settings->bg_overlay_opacity/100; ?>);
-}
-.fl-node-<?php echo $row->node; ?> .fl-row-content {
-    position: relative;
-    z-index: 1;
 }
 <?php endif; ?>
 

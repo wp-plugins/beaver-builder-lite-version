@@ -903,24 +903,30 @@ final class FLBuilder {
      */
 	static public function render_row_attributes( $row )
 	{
+		$custom_class = apply_filters( 'fl_builder_row_custom_class', $row->settings->class, $row );
+		$overlay_bgs  = array( 'photo', 'parallax', 'slideshow', 'video' );
+		
 		// ID
 		if ( ! empty( $row->settings->id ) ) {
-			echo ' id="' . $row->settings->id . '"';
+			echo ' id="' . esc_attr( $row->settings->id ) . '"';
 		}
 		
 		// Class
 	    echo ' class="fl-row';
 	    echo ' fl-row-' . $row->settings->width . '-width';
 	    echo ' fl-row-bg-' . $row->settings->bg_type;
-	    echo ' fl-node-' . $row->node;
 
-	    if ( ! empty( $row->settings->class ) ) {
-		    echo apply_filters( 'fl_builder_row_custom_class', ' ' . $row->settings->class, $row );
+	    if ( in_array( $row->settings->bg_type, $overlay_bgs ) && ! empty( $row->settings->bg_overlay_color ) ) {
+		    echo ' fl-row-bg-overlay';
 	    }
 	    if ( ! empty( $row->settings->responsive_display ) ) {
 	        echo ' fl-visible-' . $row->settings->responsive_display;
 	    }
+	    if ( ! empty( $custom_class ) ) {
+		    echo ' ' . trim( esc_attr( $custom_class ) );
+	    }
 	    
+	    echo ' fl-node-' . $row->node;
 	    echo '"';
 		
 		// Data
@@ -1040,9 +1046,11 @@ final class FLBuilder {
      */
 	static public function render_column_attributes( $col )
 	{
+		$custom_class = apply_filters( 'fl_builder_column_custom_class', $col->settings->class, $col );
+		
 		// ID
 		if ( ! empty( $col->settings->id ) ) {
-			echo ' id="' . $col->settings->id . '"';
+			echo ' id="' . esc_attr( $col->settings->id ) . '"';
 		}
 		
 		// Class
@@ -1051,16 +1059,14 @@ final class FLBuilder {
 	    if ( $col->settings->size <= 50 ) {
 	        echo ' fl-col-small';
         }
-        
-        echo ' fl-node-' . $col->node;
-        
-        if ( ! empty( $col->settings->class ) ) {
-		    echo apply_filters( 'fl_builder_column_custom_class', ' ' . $col->settings->class, $col );
-	    }
 	    if ( ! empty( $col->settings->responsive_display ) ) {
 	        echo ' fl-visible-' . $col->settings->responsive_display;
 	    }
+        if ( ! empty( $custom_class ) ) {
+		    echo ' ' . trim( esc_attr( $custom_class ) );
+	    }
 	    
+        echo ' fl-node-' . $col->node;
 	    echo '"';
 	    
 	    // Width
@@ -1177,26 +1183,28 @@ final class FLBuilder {
      */
 	static public function render_module_attributes( $module )
 	{
+		$custom_class = apply_filters( 'fl_builder_module_custom_class', $module->settings->class, $module );
+		
 		// ID
 		if ( ! empty( $module->settings->id ) ) {
-			echo ' id="' . $module->settings->id . '"';
+			echo ' id="' . esc_attr( $module->settings->id ) . '"';
 		}
 		
 		// Class
 		echo ' class="fl-module';
 	    echo ' fl-module-' . $module->settings->type;
-	    echo ' fl-node-' . $module->node;
 
-	    if ( ! empty( $module->settings->class ) ) {
-	        echo apply_filters( 'fl_builder_module_custom_class', ' ' . $module->settings->class, $module );
-	    }
 	    if ( ! empty( $module->settings->responsive_display ) ) {
 	        echo ' fl-visible-' . $module->settings->responsive_display;
 	    }
 	    if ( ! empty( $module->settings->animation ) ) {
 	        echo ' fl-animation fl-' . $module->settings->animation;
 	    }
+	    if ( ! empty( $custom_class ) ) {
+	        echo ' ' . trim( esc_attr( $custom_class ) );
+	    }
 	    
+	    echo ' fl-node-' . $module->node;
 	    echo '"';
 		
 		// Data

@@ -16,27 +16,48 @@
             <p><?php _e('Check or uncheck modules below to enable or disable them.', 'fl-builder'); ?></p>
             <?php
 
-            $enabled_modules = FLBuilderModel::get_enabled_modules();
-            $checked = in_array('all', $enabled_modules) ? 'checked' : '';
+			$categories 		= FLBuilderModel::get_categorized_modules( true );
+            $enabled_modules 	= FLBuilderModel::get_enabled_modules();
+            $checked 			= in_array('all', $enabled_modules) ? 'checked' : '';
 
             ?>
             <label>
                 <input class="fl-module-all-cb" type="checkbox" name="fl-modules[]" value="all" <?php echo $checked; ?> />
                 <?php _ex( 'All', 'Plugin setup page: Modules.', 'fl-builder' ); ?>
             </label>
-            <?php
-
-            foreach(FLBuilderModel::$modules as $module) :
-
-                $checked = in_array($module->slug, $enabled_modules) ? 'checked' : '';
-
-            ?>
-            <p>
-                <label>
-                    <input class="fl-module-cb" type="checkbox" name="fl-modules[]" value="<?php echo $module->slug; ?>" <?php echo $checked; ?> />
-                    <?php echo $module->name; ?>
-                </label>
-            </p>
+            <?php foreach ( $categories as $title => $modules ) : ?>
+			<h3><?php echo $title; ?></h3>
+				<?php
+					
+				if ( $title == __( 'WordPress Widgets', 'fl-builder') ) : 
+					
+					$checked = in_array('widget', $enabled_modules) ? 'checked' : '';
+					
+				?>
+				<p>
+	                <label>
+	                    <input class="fl-module-cb" type="checkbox" name="fl-modules[]" value="widget" <?php echo $checked; ?> />
+	                    <?php echo $title; ?>
+	                </label>
+	            </p>
+				<?php
+					
+					continue;
+				
+				endif;
+					
+	            foreach ( $modules as $module ) :
+	
+	                $checked = in_array($module->slug, $enabled_modules) ? 'checked' : '';
+	
+	            ?>
+	            <p>
+	                <label>
+	                    <input class="fl-module-cb" type="checkbox" name="fl-modules[]" value="<?php echo $module->slug; ?>" <?php echo $checked; ?> />
+	                    <?php echo $module->name; ?>
+	                </label>
+	            </p>
+	            <?php endforeach; ?>
             <?php endforeach; ?>
         </div>
         <p class="submit">

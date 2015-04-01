@@ -35,7 +35,7 @@ var FLBuilderStrings = {
     duplicateTemplate: '<?php esc_attr_e('Duplicate This Template', 'fl-builder'); ?>',
     editGlobalSettings: '<?php esc_attr_e('Edit Global Settings', 'fl-builder'); ?>',
     emptyMessage: '<?php esc_attr_e('Drop a row layout or module to get started!', 'fl-builder') ?>',
-    errorMessage: '<?php _e('Beaver Builder caught the following JavaScript error. If Beaver Builder is not functioning as expected the cause is most likely this error. Please help us by disabling all plugins and testing Beaver Builder while reactivating each to determine if the issue is related to a third party plugin.', 'fl-builder') ?>',
+    errorMessage: '<?php esc_attr_e('Beaver Builder caught the following JavaScript error. If Beaver Builder is not functioning as expected the cause is most likely this error. Please help us by disabling all plugins and testing Beaver Builder while reactivating each to determine if the issue is related to a third party plugin.', 'fl-builder') ?>',
     fullSize: '<?php esc_attr_e('Full Size', 'fl-builder'); ?>',
     getHelp: '<?php esc_attr_e('Get Help', 'fl-builder'); ?>',
     gettingStartedVideo: '<?php esc_attr_e('Getting Started Video', 'fl-builder'); ?>',

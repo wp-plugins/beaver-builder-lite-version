@@ -3794,7 +3794,6 @@ var FLBuilder;
         {
             var wpEditors = $('.fl-builder-settings textarea.wp-editor-area');
             
-            $('.wp-switch-editor.switch-tmce').trigger('click');
             wpEditors.each(FLBuilder._updateEditorField);
         },
 
@@ -3804,21 +3803,20 @@ var FLBuilder;
          */  
         _updateEditorField: function()
         {
-            var textarea  = $(this),
-                content   = '',
-                id        = textarea.attr('id'),
-                name      = textarea.closest('.fl-editor-field').attr('id'),
-                editor    = typeof tinyMCE == 'undefined' ? false : tinyMCE.get(id);
+            var textarea  = $( this ),
+            	wrap      = textarea.closest( '.wp-editor-wrap' ),
+                id        = textarea.attr( 'id' ),
+                setting   = textarea.closest( '.fl-editor-field' ).attr( 'id' ),
+                editor    = typeof tinyMCE == 'undefined' ? false : tinyMCE.get( id );
             
-            if(editor) {
-                content = editor.getContent();
-            } 
-            else {
-                content = $('#' + id).val();
+            // Update the textarea content if tinymce is active.
+            if ( editor && wrap.hasClass( 'tmce-active' ) ) {
+                textarea.val( editor.getContent() );
             }
             
-            textarea.val(content);
-            textarea.attr('name', name);
+            // Set the textarea name to our setting name so 
+            // it can be referenced in the settings object.
+            textarea.attr( 'name', setting );
         },
         
         /* AJAX

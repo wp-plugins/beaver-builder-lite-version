@@ -150,6 +150,10 @@ final class FLBuilderAdminSettings {
 				'title'	=> __( 'Help Button', 'fl-builder' ),
 				'show'	=> self::has_support( 'help-button' ) && ( is_network_admin() || ! self::multisite_support() )
 			),
+			'cache' => array(
+				'title'	=> __( 'Cache', 'fl-builder' ),
+				'show'	=> true
+			),
 			'uninstall' => array(
 				'title'	=> __( 'Uninstall', 'fl-builder' ),
 				'show'	=> is_network_admin() || ! self::multisite_support()
@@ -198,6 +202,9 @@ final class FLBuilderAdminSettings {
 		
 		// Help Button
 		self::render_form( 'help-button' );
+		
+		// Cache
+		self::render_form( 'cache' );
 		
 		// Uninstall
 		self::render_form( 'uninstall' );
@@ -280,6 +287,7 @@ final class FLBuilderAdminSettings {
 		self::save_editing_capability();
 		self::save_branding();
 		self::save_help_button();
+		self::clear_cache();
 		self::uninstall();
 	}
 	 
@@ -593,6 +601,50 @@ final class FLBuilderAdminSettings {
 				update_option( '_fl_builder_help_button', $settings );
             }
         }
+    }
+	 
+	/**
+     * @method clear_cache
+     * @private
+     */	 
+	static private function clear_cache()
+	{
+        if ( ! current_user_can( 'delete_plugins' ) ) {
+            return;	
+        }
+        else if ( isset( $_POST['fl-cache-nonce'] ) && wp_verify_nonce( $_POST['fl-cache-nonce'], 'cache' ) ) {
+            if ( is_network_admin() ) {
+	            self::clear_cache_for_all_sites();
+            }
+            else {
+	            FLBuilderModel::delete_all_asset_cache();
+            }
+        }
+    }
+	 
+	/**
+     * @method clear_cache_for_all_sites
+     * @private
+     */	 
+	static private function clear_cache_for_all_sites()
+	{
+    	global $blog_id;
+        global $wpdb;
+        
+        // Save the original blog id.
+        $original_blog_id = $blog_id;
+        
+        // Get all blog ids.
+        $blog_ids = $wpdb->get_col( "SELECT blog_id FROM $wpdb->blogs" );
+        
+        // Loop through the blog ids and clear the cache.
+        foreach ( $blog_ids as $id ) {
+            switch_to_blog( $id );
+            FLBuilderModel::delete_all_asset_cache();
+        }
+        
+        // Revert to the original blog.
+        switch_to_blog( $original_blog_id );
     }
 	 
 	/**
