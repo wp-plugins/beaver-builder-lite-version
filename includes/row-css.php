@@ -1,8 +1,12 @@
 <?php if(!empty($row->settings->text_color)) : ?>
-.fl-node-<?php echo $row->node; ?> {
-    color: #<?php echo $row->settings->text_color; ?>;
-}
-.fl-node-<?php echo $row->node; ?> * {    
+.fl-node-<?php echo $row->node; ?>,
+.fl-node-<?php echo $row->node; ?> a,
+.fl-node-<?php echo $row->node; ?> h1,
+.fl-node-<?php echo $row->node; ?> h2,
+.fl-node-<?php echo $row->node; ?> h3,
+.fl-node-<?php echo $row->node; ?> h4,
+.fl-node-<?php echo $row->node; ?> h5,
+.fl-node-<?php echo $row->node; ?> h6 {
     color: #<?php echo $row->settings->text_color; ?>;
 }
 <?php endif; ?>

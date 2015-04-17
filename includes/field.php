@@ -4,13 +4,19 @@
     <th>
         <label for="<?php echo $name; ?>">
         <?php 
+	    
+	    if ( 'button' == $field['type'] ) {
+		    echo '&nbsp;';
+	    }
+	    else {
+
+			echo $field['label']; 
         
-        echo $field['label']; 
-        
-        if(isset($i)) {
-            echo ' <span class="fl-builder-field-index">' . ($i + 1) . '</span>';
-        }
-        
+	        if ( isset( $i ) ) {
+	            echo ' <span class="fl-builder-field-index">' . ( $i + 1 ) . '</span>';
+	        }    
+	    }
+	    
         ?>
         <?php if(isset($field['help'])) : ?>
     	<span class="fl-help-tooltip">

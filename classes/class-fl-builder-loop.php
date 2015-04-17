@@ -13,21 +13,42 @@ final class FLBuilderLoop {
      */	 
     static public function query($settings) 
     {
-        $posts_per_page  = empty($settings->posts_per_page)  ? 10        : $settings->posts_per_page;
-        $post_type       = empty($settings->post_type)       ? 'post'    : $settings->post_type;
-        $order_by        = empty($settings->order_by)        ? 'date'    : $settings->order_by;
-        $order           = empty($settings->order)           ? 'DESC'    : $settings->order;
-        $users           = empty($settings->users)           ? ''        : $settings->users;
+        $posts_per_page  = empty($settings->posts_per_page) ? 10 : $settings->posts_per_page;
+        $post_type       = empty($settings->post_type) ? 'post' : $settings->post_type;
+        $order_by        = empty($settings->order_by) ? 'date' : $settings->order_by;
+        $order           = empty($settings->order) ? 'DESC' : $settings->order;
+        $users           = empty($settings->users) ? '' : $settings->users;
+        $paged 			 = is_front_page() ? get_query_var('page') : get_query_var('paged');
         
+        // Get the offset.
+        if ( ! isset( $settings->offset ) || ! is_int( ( int )$settings->offset ) ) {
+	        $offset = 0;
+        }
+        else {
+	        $offset = $settings->offset;
+        }
+        
+        // Get the paged offset. 
+        if ( $paged < 2 ) {
+	        $paged_offset = $offset;
+        }
+        else {
+	        $paged_offset = $offset + ( ( $paged - 1 ) * $posts_per_page );
+        }
+        
+        // Build the query args.
         $args = array(
-            'paged'             	=> is_front_page() ? get_query_var('page') : get_query_var('paged'),
+            'paged'             	=> $paged,
             'posts_per_page'    	=> $posts_per_page,
         	'post_type'         	=> $post_type,
         	'orderby'           	=> $order_by,
         	'order'             	=> $order,
         	'author'            	=> $users,
         	'tax_query'         	=> array('relation' => 'AND'),
-        	'ignore_sticky_posts'	=> true
+        	'ignore_sticky_posts'	=> true,
+        	'offset'				=> $paged_offset,
+        	'fl_original_offset'    => $offset,
+        	'fl_builder_loop'		=> true
         );
         
         // Build the taxonomy query.
@@ -72,6 +93,18 @@ final class FLBuilderLoop {
         // Return the query.
         return $query;
     }
+
+	/**
+     * @method found_posts
+     */	 
+    static public function found_posts( $found_posts, $query ) 
+    {
+	    if ( isset( $query->query ) && isset( $query->query['fl_builder_loop'] ) ) {
+		    return $found_posts - $query->query['fl_original_offset'];
+	    }
+	    
+	    return $found_posts;
+	}
     
 	/**
      * @method pagination

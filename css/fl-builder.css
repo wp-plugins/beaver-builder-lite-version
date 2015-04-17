@@ -27,6 +27,11 @@ html.fl-builder-edit {
     top: 0;
     z-index: 200000;
 }
+.fl-builder-settings .fl-builder-loading {
+	background: rgba(255, 255, 255, 0.8) url(../img/ajax-loader.gif) center center no-repeat;
+    display: block;
+    position: absolute;
+}
 #tiptip_holder {
     z-index: 200000;
 }
@@ -551,6 +556,7 @@ html.fl-builder-edit {
     color: #333 !important;
     font-family: Helvetica, Verdana, sans-serif !important;
     font-size: 16px !important;
+    line-height: 24px;
     padding: 30px;
 } 
 
@@ -615,7 +621,7 @@ html.fl-builder-edit {
     border: 1px solid #d9d9d9;
     cursor: pointer;
     margin-bottom: 12px;
-    height: 168px;
+    height: 164px;
     overflow: hidden;
 }
 .fl-template-image:hover {
@@ -1209,6 +1215,7 @@ form.fl-builder-settings {
 .fl-builder-settings p.error {
     color: #d03436;
     display: block;
+    margin-top: 5px;
 }
 .fl-builder-settings .fl-form-table .fl-field-description {
     color: #999;
@@ -1315,6 +1322,33 @@ li.as-result-item em {
 /* Loop Builder */
 .fl-loop-builder-filter {
     display: none;
+}
+
+/* Service Fields */
+.fl-builder-service-settings {
+	position: relative;
+}
+.fl-builder-service-error {
+	color: #ff0000 !important;
+	padding: 15px 0 0 0;
+}
+.fl-builder-service-account-delete {
+	color: #ff0000 !important;
+	margin-left: 10px;
+	position: relative;
+	top: 2px;
+}
+.fl-builder-service-connect-row .fl-field-description {
+	background: #f0f0f0;
+	color: #333 !important;
+	display: block;
+	float: none;
+	margin: 10px 0 0 0;
+	padding: 10px;
+}
+.fl-builder-service-connect-row .fl-field-description a {
+	color: #21759b !important;
+	text-decoration: underline !important;
 }
 
 /* Getting Started Video

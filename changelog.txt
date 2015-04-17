@@ -1,3 +1,26 @@
+<h4>1.5.5 - 04/12/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>The Subscribe Form module is here! Please see <a href="https://www.wpbeaverbuilder.com/build-your-email-lists-with-beaver-builders-new-subscribe-form-module/">the blog post</a> for complete details.</li>
+    <li>Added four new templates.</li>
+</ul>
+
+<h4>1.5.4 - 04/08/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added offset setting to the Posts module.</li>
+    <li>Added getting started video to the help button.</li>
+    <li>Added auto spacing setting to the global settings for turning off auto spacing on responsive layouts.</li>
+    <li>Added SVG support to the photo field for sites that have SVG enabled as an mime type.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug with switching back to the WordPress editor.</li>
+    <li>Fixed a bug with textarea text color being overridden by row text color.</li>
+    <li>Fixed an issue with varnish by removing the question mark from the URL when publishing.</li>
+    <li>Removed FLBuilderModel::delete_asset_cache_domain_change as it's causing issues and we now have the clear cache button.</li>
+</ul>
+
 <h4>1.5.3 - 03/31/2015</h4>
 <p><strong>Enhancements</strong></p>
 <ul>

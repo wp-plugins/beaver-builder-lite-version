@@ -407,6 +407,27 @@ img.mfp-img {
     display: none;
 }
 
+/* Form Fields
+------------------------------------------------------ */
+
+.fl-form-field {
+	margin-bottom: 15px;
+}
+.fl-form-field input.fl-form-error {
+	border-color: #DD6420;
+}
+.fl-form-error-message {
+	clear: both;
+	color: #DD6420;
+	display: none;
+	padding-top: 8px;
+	font-size: 12px;
+	font-weight: lighter;
+}
+.fl-form-button-disabled {
+	opacity: 0.5;
+}
+
 /* Animations
 ------------------------------------------------------ */
 

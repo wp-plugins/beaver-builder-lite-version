@@ -222,9 +222,10 @@ final class FLBuilder {
         global $wp_query;
         global $post;
 
-        $ver     = FL_BUILDER_VERSION;
-        $css_url = FL_BUILDER_URL . 'css/';
-        $js_url  = FL_BUILDER_URL . 'js/';
+		$original_post  = $post;
+        $ver     		= FL_BUILDER_VERSION;
+        $css_url 		= FL_BUILDER_URL . 'css/';
+        $js_url  		= FL_BUILDER_URL . 'js/';
 
         // Register additional CSS
         wp_register_style('font-awesome',           $css_url . 'font-awesome.min.css', array(), $ver);
@@ -272,8 +273,8 @@ final class FLBuilder {
             }
         }
 
-        // Reset the main query.
-        wp_reset_query();
+        // Reset the global post variable.
+        $post = $original_post;
 	}
 
 	/**
@@ -390,6 +391,7 @@ final class FLBuilder {
             wp_enqueue_script('fl-stylesheet',          $js_url . 'fl-stylesheet.js', array(), $ver, true);
             wp_enqueue_script('fl-builder',             $js_url . 'fl-builder.js', array(), $ver, true);
             wp_enqueue_script('fl-builder-preview',     $js_url . 'fl-builder-preview.js', array(), $ver, true);
+            wp_enqueue_script('fl-builder-services',    $js_url . 'fl-builder-services.js', array(), $ver, true);
             wp_enqueue_script('fl-builder-tour',        $js_url . 'fl-builder-tour.js', array(), $ver, true);
 
             /* Core template settings */
@@ -573,7 +575,7 @@ final class FLBuilder {
 
             // Render the content.
             ob_start();
-            echo '<div class="fl-builder-content fl-builder-content-' . $post_id . '">';
+            echo '<div class="fl-builder-content fl-builder-content-' . $post_id . '" data-post-id="' . $post_id . '">';
             self::render_rows();
             echo '</div>';
             $content = do_shortcode(ob_get_clean());
@@ -669,13 +671,15 @@ final class FLBuilder {
 	/**
      * @method render_settings_field
      */
-	static public function render_settings_field($name, $field, $settings)
+	static public function render_settings_field($name, $field, $settings = null)
 	{
         $i                  = null;
         $is_multiple        = isset($field['multiple']) && $field['multiple'] === true;
-        $supports_multiple  = $field['type'] != 'editor' && $field['type'] != 'photo';
+        $supports_multiple  = $field['type'] != 'editor' && $field['type'] != 'photo' && $field['type'] != 'service';
+        $settings 			= ! $settings ? new stdClass() : $settings;
         $value              = isset($settings->$name) ? $settings->$name : '';
         $preview            = isset($field['preview']) ? json_encode($field['preview']) : json_encode(array('type' => 'refresh'));
+		$row_class          = isset($field['row_class']) ? ' ' . $field['row_class'] : '';
 
         if($is_multiple && $supports_multiple) {
 
@@ -712,7 +716,7 @@ final class FLBuilder {
             echo '</tbody>';
         }
         else {
-            echo '<tr id="fl-field-'. $name .'" class="fl-field" data-type="' . $field['type'] . '" data-preview=\'' . $preview . '\'>';
+            echo '<tr id="fl-field-'. $name .'" class="fl-field' . $row_class . '" data-type="' . $field['type'] . '" data-preview=\'' . $preview . '\'>';
             include FL_BUILDER_DIR . 'includes/field.php';
             echo '</tr>';
         }
@@ -1259,11 +1263,17 @@ final class FLBuilder {
 
         // Responsive css
         if($global_settings->responsive_enabled) {
+	        
             $css .= '@media (max-width: '. $global_settings->medium_breakpoint .'px) { ';
             $css .= file_get_contents(FL_BUILDER_DIR . '/css/fl-builder-layout-medium.css');
             $css .= ' }';
             $css .= '@media (max-width: '. $global_settings->responsive_breakpoint .'px) { ';
             $css .= file_get_contents(FL_BUILDER_DIR . '/css/fl-builder-layout-responsive.css');
+            
+            if ( ! isset( $global_settings->auto_spacing ) || $global_settings->auto_spacing ) {
+            	$css .= file_get_contents(FL_BUILDER_DIR . '/css/fl-builder-layout-auto-spacing.css');
+            }
+            
             $css .= ' }';
         }
 
@@ -1295,7 +1305,10 @@ final class FLBuilder {
 
             // Instance row bg positions
             $css .= self::render_row_bg_positions($row);
-            $css .= self::render_responsive_row_bg_positions($row);
+            
+            if ( ! isset( $global_settings->auto_spacing ) || $global_settings->auto_spacing ) {
+            	$css .= self::render_responsive_row_bg_positions($row);
+            }
         }
 
         // Column instances
@@ -1355,7 +1368,10 @@ final class FLBuilder {
 
             // Instance module margins
             $css .= self::render_module_margins($module);
-            $css .= self::render_responsive_module_margins($module);
+            
+            if ( ! isset( $global_settings->auto_spacing ) || $global_settings->auto_spacing ) {
+            	$css .= self::render_responsive_module_margins($module);
+            }
         }
 
         // Default page heading

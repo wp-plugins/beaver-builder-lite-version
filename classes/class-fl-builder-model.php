@@ -625,25 +625,6 @@ final class FLBuilderModel {
 	}
 
 	/**
-	 * Delete the asset cache if the domain has changed.
-	 *
-     * @method delete_asset_cache_domain_change
-     */
-	static public function delete_asset_cache_domain_change()
-	{
-        $home_url  = home_url();
-        $saved_url = get_option( '_fl_builder_home_url' );
-        
-        if ( ! $saved_url ) {
-	        update_option( '_fl_builder_home_url', $home_url );
-        }
-        else if ( $home_url != $saved_url ) {
-	        self::delete_all_asset_cache();
-	        update_option( '_fl_builder_home_url', $home_url );
-        }
-	}
-
-	/**
      * @method generate_node_id
      */
     static public function generate_node_id()
@@ -2478,6 +2459,9 @@ final class FLBuilderModel {
 
         // Get the templates array.
         $templates = self::get_templates();
+        
+        // Make sure we have an object.
+        $settings = ( object )$settings;
 
         // Get new ids for the nodes.
         $settings->nodes = self::generate_new_node_ids($data);
@@ -2729,8 +2713,8 @@ final class FLBuilderModel {
 	    $defaults = array(
 	    	'enabled' 				=> true,
 	    	'tour'	  				=> true,
-	    	'video'	  				=> false,
-	    	'video_embed'			=> '<iframe width="420" height="315" src="https://www.youtube.com/embed/CNJbH2gaACo" frameborder="0" allowfullscreen></iframe>',
+	    	'video'	  				=> true,
+	    	'video_embed'			=> '<iframe src="https://player.vimeo.com/video/124230072?autoplay=1" width="420" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
 	    	'knowledge_base' 		=> true,
 	    	'knowledge_base_url' 	=> 'https://www.wpbeaverbuilder.com/knowledge-base/?utm_source=external&utm_medium=builder&utm_campaign=docs-button',
 	    	'forums' 				=> true,
@@ -2763,6 +2747,48 @@ final class FLBuilderModel {
 	    else {
     	    return $value;
 	    }
+    }
+
+	/**
+     * @method get_services
+     */
+    static public function get_services()
+    {
+	    return get_option( '_fl_builder_services', array() );
+    }
+
+	/**
+     * @method update_services
+     */
+    static public function update_services( $service, $account, $data )
+    {
+	    $services = self::get_services();
+	 	$account  = sanitize_text_field( $account );
+	 	   
+	    if ( ! isset( $services[ $service ] ) ) {
+		    $services[ $service ] = array();
+	    }
+	    
+	    $services[ $service ][ $account ] = $data;
+	    
+	    update_option( '_fl_builder_services', $services );
+    }
+
+	/**
+     * @method delete_service_account
+     */
+    static public function delete_service_account( $service, $account )
+    {
+	    $services = self::get_services();
+	    
+	    if ( isset( $services[ $service ][ $account ] ) ) {
+		    unset( $services[ $service ][ $account ] );
+	    }
+	    if ( 0 === count( $services[ $service ] ) ) {
+		    unset( $services[ $service ] );
+	    }
+	    
+	    update_option( '_fl_builder_services', $services );
     }
 
 	/**

@@ -55,10 +55,13 @@ final class FLBuilderPhoto {
      */
     static public function get_thumb($photo)
     {
-        if(empty($photo)) {
+        if ( empty( $photo ) ) {
             echo FL_BUILDER_URL . 'img/spacer.png';
         }
-        else if(!empty($photo->sizes->thumbnail)) {
+        else if ( ! isset( $photo->sizes ) ) {
+	        echo $photo->url;
+        }
+        else if ( ! empty( $photo->sizes->thumbnail ) ) {
             echo $photo->sizes->thumbnail->url;
         }
         else {
@@ -71,20 +74,26 @@ final class FLBuilderPhoto {
      */
     static public function get_src_options($selected, $photo)
     {
-		$titles = array(
-			'full'      => _x( 'Full Size', 'Image size.', 'fl-builder' ),
-			'large'     => _x( 'Large', 'Image size.', 'fl-builder' ),
-			'medium'    => _x( 'Medium', 'Image size.', 'fl-builder' ),
-			'thumbnail' => _x( 'Thumbnail', 'Image size.', 'fl-builder' )
-		);
-
-        foreach($photo->sizes as $key => $val) {
-
-            if(!isset($titles[$key])) {
-                $titles[$key] = ucwords(str_replace(array('_', '-'), ' ', $key));
-            }
-
-            echo '<option value="' . $val->url . '" ' . selected($selected, $val->url) . '>' . $titles[$key]  . ' - ' . $val->width . ' x ' . $val->height . '</option>';
-        }
+	    if ( ! isset( $photo->sizes ) ) {
+		 	echo '<option value="' . $photo->url . '" selected="selected">' . _x( 'Full Size', 'Image size.', 'fl-builder' ) . '</option>';   
+		}
+		else {
+			
+			$titles = array(
+				'full'      => _x( 'Full Size', 'Image size.', 'fl-builder' ),
+				'large'     => _x( 'Large', 'Image size.', 'fl-builder' ),
+				'medium'    => _x( 'Medium', 'Image size.', 'fl-builder' ),
+				'thumbnail' => _x( 'Thumbnail', 'Image size.', 'fl-builder' )
+			);
+	
+	        foreach($photo->sizes as $key => $val) {
+	
+	            if(!isset($titles[$key])) {
+	                $titles[$key] = ucwords(str_replace(array('_', '-'), ' ', $key));
+	            }
+	
+	            echo '<option value="' . $val->url . '" ' . selected($selected, $val->url) . '>' . $titles[$key]  . ' - ' . $val->width . ' x ' . $val->height . '</option>';
+	        }
+		}
     }
 }

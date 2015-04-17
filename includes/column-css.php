@@ -4,7 +4,13 @@
 
 <?php if(!empty($col->settings->text_color)) : ?>
 .fl-node-<?php echo $col->node; ?>,
-.fl-node-<?php echo $col->node; ?> * {
+.fl-node-<?php echo $col->node; ?> a,
+.fl-node-<?php echo $col->node; ?> h1,
+.fl-node-<?php echo $col->node; ?> h2,
+.fl-node-<?php echo $col->node; ?> h3,
+.fl-node-<?php echo $col->node; ?> h4,
+.fl-node-<?php echo $col->node; ?> h5,
+.fl-node-<?php echo $col->node; ?> h6 {
     color: #<?php echo $col->settings->text_color; ?>;
 }
 <?php endif; ?>

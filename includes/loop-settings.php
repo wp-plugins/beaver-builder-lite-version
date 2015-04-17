@@ -4,6 +4,7 @@ FLBuilderModel::default_settings($settings, array(
     'post_type' => 'post',
     'order_by'  => 'date',
     'order'     => 'DESC',
+    'offset'    => 0,
     'users'     => ''
 ));
 
@@ -43,6 +44,15 @@ FLBuilderModel::default_settings($settings, array(
             'DESC'          => __('Descending', 'fl-builder'),
             'ASC'           => __('Ascending', 'fl-builder'),
         )
+    ), $settings); 
+    
+    // Offset
+    FLBuilder::render_settings_field('offset', array(
+        'type'          => 'text',
+        'label'         => __('Offset', 'fl-builder'),
+        'default'       => '0',
+        'size'          => '4',
+        'help'          => __('Skip this many posts that match the specified criteria.', 'fl-builder')
     ), $settings); 
     
     ?>

@@ -112,9 +112,19 @@ FLBuilder::register_settings_form('global', array(
                             ),
                             'toggle'               => array(
                                 '1'                    => array(
-                                    'fields'               => array('responsive_breakpoint', 'medium_breakpoint')
+                                    'fields'               => array('auto_spacing', 'responsive_breakpoint', 'medium_breakpoint')
                                 )
                             )
+                        ),
+                        'auto_spacing'   	   => array(
+                            'type'                 => 'select',
+                            'label'                => _x( 'Enable Auto Spacing', 'General settings form field label. Intended meaning: "Enable auto spacing for responsive layouts?"', 'fl-builder' ),
+                            'default'              => '1',
+                            'options'              => array(
+                                '0'                     => __('No', 'fl-builder'),
+                                '1'                     => __('Yes', 'fl-builder')
+                            ),
+                            'help'              => __('When auto spacing is enabled, the builder will automatically adjust the margins and padding in your layout once the small device breakpoint is reached. Most users will want to leave this enabled.', 'fl-builder')
                         ),
                         'medium_breakpoint' => array(
                             'type'              => 'text',

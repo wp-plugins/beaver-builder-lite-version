@@ -358,14 +358,28 @@ var FLBuilderPreview;
          */
         _textColorChange: function(e)
         {
-            if(this.elements.textColor.val() == '') {
+	        var val = this.elements.textColor.val();
+	        
+            if(val == '') {
                 this.updateCSSRule(this.classes.node, 'color', 'inherit');
-                this.updateCSSRule(this.classes.node + ' *', 'color', 'inherit');
+                this.updateCSSRule(this.classes.node + ' a', 'color', 'inherit');
+                this.updateCSSRule(this.classes.node + ' h1', 'color', 'inherit');
+                this.updateCSSRule(this.classes.node + ' h2', 'color', 'inherit');
+                this.updateCSSRule(this.classes.node + ' h3', 'color', 'inherit');
+                this.updateCSSRule(this.classes.node + ' h4', 'color', 'inherit');
+                this.updateCSSRule(this.classes.node + ' h5', 'color', 'inherit');
+                this.updateCSSRule(this.classes.node + ' h6', 'color', 'inherit');
             }
             else {
                 this.delay(100, $.proxy(function(){
-                    this.updateCSSRule(this.classes.node, 'color', '#' + this.elements.textColor.val());
-                    this.updateCSSRule(this.classes.node + ' *', 'color', '#' + this.elements.textColor.val());
+                    this.updateCSSRule(this.classes.node, 'color', '#' + val);
+                    this.updateCSSRule(this.classes.node + ' a', 'color', '#' + val);
+                    this.updateCSSRule(this.classes.node + ' h1', 'color', '#' + val);
+                    this.updateCSSRule(this.classes.node + ' h2', 'color', '#' + val);
+                    this.updateCSSRule(this.classes.node + ' h3', 'color', '#' + val);
+                    this.updateCSSRule(this.classes.node + ' h4', 'color', '#' + val);
+                    this.updateCSSRule(this.classes.node + ' h5', 'color', '#' + val);
+                    this.updateCSSRule(this.classes.node + ' h6', 'color', '#' + val);
                 }, this));   
             }
         },

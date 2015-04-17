@@ -434,6 +434,9 @@ var FLBuilder;
             $('body').delegate('.fl-builder-no-tour-button', 'click', FLBuilder._noTourButtonClicked);
             $('body').delegate('.fl-builder-yes-tour-button', 'click', FLBuilder._yesTourButtonClicked);
             
+            /* Alert Lightbox */
+            $('body').delegate('.fl-builder-alert-close', 'click', FLBuilder._alertClose);
+            
             /* Rows */
             $('body').delegate('.fl-row-overlay .fl-block-remove', 'click', FLBuilder._deleteRowClicked);
             $('body').delegate('.fl-row-overlay .fl-block-copy', 'click', FLBuilder._rowCopyClicked);
@@ -502,7 +505,7 @@ var FLBuilder;
             $('body').delegate('.fl-link-field-select', 'click', FLBuilder._linkFieldSelectClicked);
             $('body').delegate('.fl-link-field-search-cancel', 'click', FLBuilder._linkFieldSelectCancelClicked);
             
-            /* Loop Builder */
+            /* Loop Builder Fields */
             $('body').delegate('.fl-loop-builder select[name=post_type]', 'change', FLBuilder._loopBuilderPostTypeChange);
         },
         
@@ -808,7 +811,14 @@ var FLBuilder;
          */
         _exit: function()
         {
-            var href = FLBuilder._exitUrl ? FLBuilder._exitUrl : window.location.href.replace('fl_builder', '');
+            var href = window.location.href;
+            
+            if ( FLBuilder._exitUrl ) {
+	            href = FLBuilder._exitUrl;
+            }
+            else {
+	            href = href.replace('?fl_builder', '').replace('&fl_builder', '');
+            }
             
             window.location.href = href;
         },
@@ -1224,7 +1234,7 @@ var FLBuilder;
          */
         _saveUserTemplateSettingsComplete: function()
         {
-            FLBuilder._alert(FLBuilderStrings.templateSaved);
+            FLBuilder.alert(FLBuilderStrings.templateSaved);
         },
 
         /* Edit User Template
@@ -2716,7 +2726,6 @@ var FLBuilder;
                 }
             }
             
-            FLBuilder._updateEditorFields();
             FLLightbox.closeParent(this);
             
             if(FLBuilder.preview) {
@@ -3269,15 +3278,9 @@ var FLBuilder;
             preview.attr('src', FLBuilder._getPhotoSrc(photo));
             wrap.removeClass('fl-photo-empty');
             wrap.find('label.error').remove();
-            
-            if(typeof photo.sizes !== 'undefined') {
-                srcSelect.show();
-                srcSelect.html(FLBuilder._getPhotoSizeOptions(photo));
-                srcSelect.trigger('change');
-            }
-            else {
-                srcSelect.hide();
-            }
+            srcSelect.show();
+            srcSelect.html(FLBuilder._getPhotoSizeOptions(photo));
+            srcSelect.trigger('change');
         },
         
         /**
@@ -3313,10 +3316,16 @@ var FLBuilder;
                     thumbnail : FLBuilderStrings.thumbnail
                 };
                 
-            for(size in photo.sizes) {
-                selected = size == 'full' ? ' selected="selected"' : '';
-                html += '<option value="' + photo.sizes[size].url + '"' + selected + '>' + titles[size]  + ' - ' + photo.sizes[size].width + ' x ' + photo.sizes[size].height + '</option>';
+            if(typeof photo.sizes === 'undefined') {
+                html += '<option value="' + photo.url + '">' + FLBuilderStrings.fullSize + '</option>';
             }
+            else {
+	            
+	            for(size in photo.sizes) {
+	                selected = size == 'full' ? ' selected="selected"' : '';
+	                html += '<option value="' + photo.sizes[size].url + '"' + selected + '>' + titles[size]  + ' - ' + photo.sizes[size].width + ' x ' + photo.sizes[size].height + '</option>';
+	            }
+	        }
             
             return html;
         },
@@ -3755,21 +3764,6 @@ var FLBuilder;
             $(this).parent().hide();
         },
         
-        /* Loop Builder
-        ----------------------------------------------------------*/
-
-        /**
-         * @method _loopBuilderPostTypeChange
-         * @private
-         */ 
-        _loopBuilderPostTypeChange: function()
-        {
-            var val = $(this).val();
-            
-            $('.fl-loop-builder-filter').hide();
-            $('.fl-loop-builder-' + val + '-filter').show();
-        },
-        
         /* Editor Fields
         ----------------------------------------------------------*/
         
@@ -3798,6 +3792,9 @@ var FLBuilder;
         },
 
         /**
+	     * Create a hidden textarea with the editor content so 
+	     * this field can be saved.
+	     *
          * @method _updateEditorField
          * @private
          */  
@@ -3807,16 +3804,40 @@ var FLBuilder;
             	wrap      = textarea.closest( '.wp-editor-wrap' ),
                 id        = textarea.attr( 'id' ),
                 setting   = textarea.closest( '.fl-editor-field' ).attr( 'id' ),
-                editor    = typeof tinyMCE == 'undefined' ? false : tinyMCE.get( id );
+                editor    = typeof tinyMCE == 'undefined' ? false : tinyMCE.get( id ),
+                hidden    = textarea.siblings( 'textarea[name="' + setting + '"]' );
             
-            // Update the textarea content if tinymce is active.
-            if ( editor && wrap.hasClass( 'tmce-active' ) ) {
-                textarea.val( editor.getContent() );
+            // Add a hidden textarea if we don't have one.
+            if ( 0 === hidden.length ) {
+	            hidden = $( '<textarea name="' + setting + '"></textarea>' ).hide();
+	            textarea.after( hidden );
             }
             
-            // Set the textarea name to our setting name so 
-            // it can be referenced in the settings object.
-            textarea.attr( 'name', setting );
+            // Update the hidden textarea content.
+            if ( editor && wrap.hasClass( 'tmce-active' ) ) {
+                hidden.val( editor.getContent() );
+            }
+            else if ( 'undefined' != typeof switchEditors ) {
+	            hidden.val( switchEditors.wpautop( textarea.val() ) );
+            }
+            else {
+	            hidden.val( textarea.val() );
+            }
+        },
+        
+        /* Loop Builder Fields
+        ----------------------------------------------------------*/
+
+        /**
+         * @method _loopBuilderPostTypeChange
+         * @private
+         */ 
+        _loopBuilderPostTypeChange: function()
+        {
+            var val = $(this).val();
+            
+            $('.fl-loop-builder-filter').hide();
+            $('.fl-loop-builder-' + val + '-filter').show();
         },
         
         /* AJAX
@@ -4009,18 +4030,27 @@ var FLBuilder;
         ----------------------------------------------------------*/
         
         /**
-         * @method _alert
+         * @method alert
          * @private
          */
-        _alert: function(message)
+        alert: function(message)
         {
             var alert = new FLLightbox({
                     className: 'fl-builder-lightbox fl-builder-alert-lightbox',
                     destroyOnClose: true
                 }),
-                html = '<div class="fl-lightbox-message">' + message + '</div><div class="fl-lightbox-footer"><span class="fl-builder-settings-cancel fl-builder-button fl-builder-button-large fl-builder-button-primary" href="javascript:void(0);">' + FLBuilderStrings.ok + '</span></div>';
+                html = '<div class="fl-lightbox-message">' + message + '</div><div class="fl-lightbox-footer"><span class="fl-builder-alert-close fl-builder-button fl-builder-button-large fl-builder-button-primary" href="javascript:void(0);">' + FLBuilderStrings.ok + '</span></div>';
             
             alert.open(html);
+        },
+        
+        /**
+         * @method _alertClose
+         * @private
+         */
+        _alertClose: function()
+        {
+            FLLightbox.closeParent(this);
         },
         
         /* Console Logging

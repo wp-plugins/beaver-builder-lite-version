@@ -1,73 +1,93 @@
 <?php
 
 /**
- * Settings admin class.
+ * Handles logic for the admin settings page. 
  *
- * @class FLBuilderAdminSettings
+ * @since 1.5.0
  */
 final class FLBuilderAdminSettings {
 	
 	/**
-	 * @property $errors
+	 * Holds any errors that may arise from
+	 * saving admin settings.
+	 *
+	 * @since 1.5.0
+	 * @var array $errors
 	 */
 	static public $errors = array();
     
     /** 
-     * @method init
+	 * Adds the admin menu and enqueues CSS/JS if we are on
+	 * the builder admin settings page.
+	 *
+	 * @since 1.5.0
+     * @return void
      */
     static public function init()
     {
-        add_action('admin_menu', 'FLBuilderAdminSettings::menu');
+        add_action( 'admin_menu', 'FLBuilderAdminSettings::menu' );
             
-        if(isset($_REQUEST['page']) && $_REQUEST['page'] == 'fl-builder-settings') {
-            add_action('admin_enqueue_scripts', 'FLBuilderAdminSettings::styles_scripts');
+        if ( isset( $_REQUEST['page'] ) && 'fl-builder-settings' == $_REQUEST['page'] ) {
+            add_action( 'admin_enqueue_scripts', 'FLBuilderAdminSettings::styles_scripts' );
             self::save();
         }
     }
-	 
-	/**
-     * @method styles_scripts
-     */	 
+    
+    /** 
+	 * Enqueues the needed CSS/JS for the builder's admin settings page.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */
 	static public function styles_scripts()
 	{
         // Styles
-		wp_enqueue_style('fl-builder-admin-settings', FL_BUILDER_URL . 'css/fl-builder-admin-settings.css', array(), FL_BUILDER_VERSION);
+		wp_enqueue_style( 'fl-builder-admin-settings', FL_BUILDER_URL . 'css/fl-builder-admin-settings.css', array(), FL_BUILDER_VERSION );
 
 		// Scripts
-		wp_enqueue_script('fl-builder-admin-settings', FL_BUILDER_URL . 'js/fl-builder-admin-settings.js', array(), FL_BUILDER_VERSION);
+		wp_enqueue_script( 'fl-builder-admin-settings', FL_BUILDER_URL . 'js/fl-builder-admin-settings.js', array(), FL_BUILDER_VERSION );
 		
 		// Media Uploader
 		wp_enqueue_media();
 	}
-	
-	/**
-     * @method menu
+    
+    /** 
+	 * Renders the admin settings menu.
+	 *
+	 * @since 1.5.0
+     * @return void
      */
 	static public function menu() 
 	{
-	    if(current_user_can('delete_plugins')) {
+	    if ( current_user_can( 'delete_plugins' ) ) {
     	    
     	    $title = FLBuilderModel::get_branding();
     	    $cap   = 'delete_plugins';
     	    $slug  = 'fl-builder-settings';
     	    $func  = 'FLBuilderAdminSettings::render';
     	    
-            add_submenu_page('options-general.php', $title, $title, $cap, $slug, $func);
+            add_submenu_page( 'options-general.php', $title, $title, $cap, $slug, $func );
 		}
 	}
-	 
-	/**
-     * @method render
-     */	 
+    
+    /** 
+	 * Renders the admin settings.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */
 	static public function render()
 	{
 	    include FL_BUILDER_DIR . 'includes/admin-settings-js-config.php';
 		include FL_BUILDER_DIR . 'includes/admin-settings.php';
 	}
-	 
-	/**
-     * @method render_page_class
-     */	 
+    
+    /** 
+	 * Renders the page class for network installs and single site installs.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */
 	static public function render_page_class()
 	{
 		if ( self::multisite_support() ) {
@@ -77,10 +97,13 @@ final class FLBuilderAdminSettings {
 			echo 'fl-settings-single-install';
 		}
 	}
-	 
-	/**
-     * @method render_page_heading
-     */	 
+    
+    /** 
+	 * Renders the admin settings page heading.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */
 	static public function render_page_heading()
 	{
 		$icon = FLBuilderModel::get_branding_icon();
@@ -92,9 +115,12 @@ final class FLBuilderAdminSettings {
 		
 		echo '<span>' . sprintf( _x( '%s Settings', '%s stands for custom branded "Page Builder" name.', 'fl-builder' ), FLBuilderModel::get_branding() ) . '</span>';
 	}
-	 
-	/**
-     * @method render_update_message
+    
+    /** 
+	 * Renders the update message.
+	 *
+	 * @since 1.5.0
+     * @return void
      */	 
 	static public function render_update_message()
 	{
@@ -107,10 +133,13 @@ final class FLBuilderAdminSettings {
 			echo '<div class="updated"><p>' . __( 'Settings updated!', 'fl-builder' ) . '</p></div>';
 		}
 	}
-	 
-	/**
-     * @method render_nav_items
-     */	 
+    
+    /** 
+	 * Renders the nav items for the admin settings menu.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */	  
 	static public function render_nav_items()
 	{
 		$item_data = array(
@@ -166,10 +195,13 @@ final class FLBuilderAdminSettings {
 			}
 		}
 	}
-	 
-	/**
-     * @method render_forms
-     */	 
+    
+    /** 
+	 * Renders the admin settings forms.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */	   
 	static public function render_forms()
 	{
 		// License
@@ -209,20 +241,28 @@ final class FLBuilderAdminSettings {
 		// Uninstall
 		self::render_form( 'uninstall' );
 	}
-	 
-	/**
-     * @method render_form
-     */	 
+    
+    /** 
+	 * Renders an admin settings form based on the type specified.
+	 *
+	 * @since 1.5.0
+	 * @param string $type The type of form to render.
+     * @return void
+     */	   
 	static public function render_form( $type )
 	{
 		if ( self::has_support( $type ) ) {
 			include FL_BUILDER_DIR . 'includes/admin-settings-' . $type . '.php';
 		}
 	}
-	 
-	/**
-     * @method render_form_action
-     */	 
+    
+    /** 
+	 * Renders the action for a form.
+	 *
+	 * @since 1.5.0
+	 * @param string $type The type of form being rendered.
+     * @return void
+     */	  
 	static public function render_form_action( $type = '' )
 	{
 		if ( is_network_admin() ) {
@@ -232,9 +272,13 @@ final class FLBuilderAdminSettings {
 			echo admin_url( '/options-general.php?page=fl-builder-settings#' . $type );
 		}
 	}
-	 
-	/**
-     * @method get_form_action
+    
+    /** 
+	 * Returns the action for a form.
+	 *
+	 * @since 1.5.0
+	 * @param string $type The type of form being rendered.
+     * @return string The URL for the form action.
      */	 
 	static public function get_form_action( $type = '' )
 	{
@@ -245,34 +289,48 @@ final class FLBuilderAdminSettings {
 			return admin_url( '/options-general.php?page=fl-builder-settings#' . $type );
 		}
 	}
-	 
-	/**
-     * @method supports
-     */	 
+    
+    /** 
+	 * Checks to see if a settings form is supported.
+	 *
+	 * @since 1.5.0
+	 * @param string $type The type of form to check.
+     * @return bool
+     */ 
 	static public function has_support( $type )
 	{
 		return file_exists( FL_BUILDER_DIR . 'includes/admin-settings-' . $type . '.php' );
 	}
-	 
-	/**
-     * @method multisite_support
-     */	 
+    
+    /** 
+	 * Checks to see if multisite is supported.
+	 *
+	 * @since 1.5.0
+     * @return bool
+     */ 
 	static public function multisite_support()
 	{
 		return is_multisite() && class_exists( 'FLBuilderMultisiteSettings' );
 	}
-	 
-	/**
-     * @method add_error
-     */	 
+    
+    /** 
+	 * Adds an error message to be rendered.
+	 *
+	 * @since 1.5.0
+	 * @param string $message The error message to add.
+     * @return void
+     */  
 	static public function add_error( $message )
 	{
 		self::$errors[] = $message;
 	}
-	 
-	/**
-     * @method save
-     */	 
+    
+    /** 
+	 * Saves the admin settings.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */  
 	static public function save()
 	{
 	    // Only admins can save settings.
@@ -290,11 +348,13 @@ final class FLBuilderAdminSettings {
 		self::clear_cache();
 		self::uninstall();
 	}
-	 
-	/**
-     * @method save_enabled_modules
-     * @private
-     */	 
+    
+    /** 
+	 * Saves the enabled modules.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */ 
 	static private function save_enabled_modules()
 	{
     	if ( isset( $_POST['fl-modules-nonce'] ) && wp_verify_nonce( $_POST['fl-modules-nonce'], 'modules' ) ) {
@@ -316,11 +376,13 @@ final class FLBuilderAdminSettings {
             }
         }
     }
-	 
-	/**
-     * @method save_enabled_templates
-     * @private
-     */	 
+    
+    /** 
+	 * Saves the enabled templates.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */ 
 	static private function save_enabled_templates()
 	{
     	if ( isset( $_POST['fl-templates-nonce'] ) && wp_verify_nonce( $_POST['fl-templates-nonce'], 'templates' ) ) {
@@ -338,11 +400,13 @@ final class FLBuilderAdminSettings {
             }
         }
     }
-	 
-	/**
-     * @method save_enabled_post_types
-     * @private
-     */	 
+    
+    /** 
+	 * Saves the enabled post types.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */ 
 	static private function save_enabled_post_types()
 	{
     	if ( isset( $_POST['fl-post-types-nonce'] ) && wp_verify_nonce( $_POST['fl-post-types-nonce'], 'post-types' ) ) {
@@ -370,11 +434,13 @@ final class FLBuilderAdminSettings {
             }
         }
     }
-	 
-	/**
-     * @method save_enabled_icons
-     * @private
-     */	 
+    
+    /** 
+	 * Saves the enabled icons.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */ 	 
 	static private function save_enabled_icons()
 	{
         if ( isset( $_POST['fl-icons-nonce'] ) && wp_verify_nonce( $_POST['fl-icons-nonce'], 'icons' ) ) {
@@ -472,11 +538,13 @@ final class FLBuilderAdminSettings {
 	        self::update_enabled_icons( $enabled_icons );
         }
     }
-	 
-	/**
-     * @method update_enabled_icons
-     * @private
-     */	 
+    
+    /** 
+	 * Updates the enabled icons in the database.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */ 
 	static private function update_enabled_icons( $enabled_icons = array() )
 	{
 		if ( is_network_admin() ) {
@@ -490,11 +558,13 @@ final class FLBuilderAdminSettings {
             update_option( '_fl_builder_enabled_icons', $enabled_icons );
         }
 	}
-	 
-	/**
-     * @method save_editing_capability
-     * @private
-     */	 
+    
+    /** 
+	 * Saves the editing capability.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */ 
 	static private function save_editing_capability()
 	{
         if ( isset( $_POST['fl-editing-nonce'] ) && wp_verify_nonce( $_POST['fl-editing-nonce'], 'editing' ) ) {
@@ -512,11 +582,13 @@ final class FLBuilderAdminSettings {
             }
         }
     }
-	 
-	/**
-     * @method save_branding
-     * @private
-     */	 
+    
+    /** 
+	 * Saves the branding settings.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */ 
 	static private function save_branding()
 	{
         if ( isset( $_POST['fl-branding-nonce'] ) && wp_verify_nonce( $_POST['fl-branding-nonce'], 'branding' ) ) {
@@ -534,11 +606,13 @@ final class FLBuilderAdminSettings {
             }
         }
     }
-	 
-	/**
-     * @method save_help_button
-     * @private
-     */	 
+    
+    /** 
+	 * Saves the help button settings.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */ 
 	static private function save_help_button()
 	{
         if ( isset( $_POST['fl-help-button-nonce'] ) && wp_verify_nonce( $_POST['fl-help-button-nonce'], 'help-button' ) ) {
@@ -602,11 +676,13 @@ final class FLBuilderAdminSettings {
             }
         }
     }
-	 
-	/**
-     * @method clear_cache
-     * @private
-     */	 
+
+    /** 
+	 * Clears the builder cache.
+	 *
+	 * @since 1.5.3
+     * @return void
+     */ 
 	static private function clear_cache()
 	{
         if ( ! current_user_can( 'delete_plugins' ) ) {
@@ -621,11 +697,13 @@ final class FLBuilderAdminSettings {
             }
         }
     }
-	 
-	/**
-     * @method clear_cache_for_all_sites
-     * @private
-     */	 
+
+    /** 
+	 * Clears the builder cache for all sites on a network.
+	 *
+	 * @since 1.5.3
+     * @return void
+     */ 
 	static private function clear_cache_for_all_sites()
 	{
     	global $blog_id;
@@ -646,11 +724,13 @@ final class FLBuilderAdminSettings {
         // Revert to the original blog.
         switch_to_blog( $original_blog_id );
     }
-	 
-	/**
-     * @method uninstall
-     * @private
-     */	 
+
+    /** 
+	 * Uninstalls the builder and all of its data.
+	 *
+	 * @since 1.5.0
+     * @return void
+     */ 
 	static private function uninstall()
 	{
         if ( ! current_user_can( 'delete_plugins' ) ) {

@@ -8,39 +8,23 @@
         
         init: function()
         {
-            var win = $(window);
-            
             // Destroy existing layout events.
             FLBuilderLayout._destroy();
             
-            // Add the builder body class.
-            $('body').addClass('fl-builder');
-            
-            // Add the builder touch body class.
-            if(FLBuilderLayout._isTouch()) {
-                $('body').addClass('fl-builder-touch');
-            }
-            
-            // Init parallax backgrounds.
-            if($('.fl-row-bg-parallax').length > 0 && !FLBuilderLayout._isTouch()) {
-                FLBuilderLayout._scrollParallaxBackgrounds();
-                FLBuilderLayout._initParallaxBackgrounds();
-                win.on('scroll.fl-bg-parallax', FLBuilderLayout._scrollParallaxBackgrounds);
-            }
-            
-            // Init video backgrounds.
-            if($('.fl-bg-video').length > 0) {
-                FLBuilderLayout._resizeBgVideos();
-                win.on('resize.fl-bg-video', FLBuilderLayout._resizeBgVideos);
-            }
-            
-            // Init module animations.
-            if($('.fl-builder-edit').length === 0 && typeof jQuery.fn.waypoint !== 'undefined' && !FLBuilderLayout._isTouch()) {
-                FLBuilderLayout._initModuleAnimations();
-            }
+            // Init CSS classes.
+            FLBuilderLayout._initClasses();
             
             // Init anchor links.
             FLBuilderLayout._initAnchorLinks();
+            
+            // Init backgrounds.
+            FLBuilderLayout._initBackgrounds();
+            
+            // Init module animations.
+            FLBuilderLayout._initModuleAnimations();
+            
+            // Init forms.
+            FLBuilderLayout._initForms();
         },
         
         _destroy: function()
@@ -58,6 +42,35 @@
             }
             
             return false;
+        },
+        
+        _initClasses: function()
+        {
+            // Add the builder body class.
+            $('body').addClass('fl-builder');
+            
+            // Add the builder touch body class.
+            if(FLBuilderLayout._isTouch()) {
+                $('body').addClass('fl-builder-touch');
+            }
+        },
+        
+        _initBackgrounds: function()
+        {
+            var win = $(window);
+            
+            // Init parallax backgrounds.
+            if($('.fl-row-bg-parallax').length > 0 && !FLBuilderLayout._isTouch()) {
+                FLBuilderLayout._scrollParallaxBackgrounds();
+                FLBuilderLayout._initParallaxBackgrounds();
+                win.on('scroll.fl-bg-parallax', FLBuilderLayout._scrollParallaxBackgrounds);
+            }
+            
+            // Init video backgrounds.
+            if($('.fl-bg-video').length > 0) {
+                FLBuilderLayout._resizeBgVideos();
+                win.on('resize.fl-bg-video', FLBuilderLayout._resizeBgVideos);
+            }
         },
         
         _initParallaxBackgrounds: function()
@@ -151,10 +164,12 @@
         
         _initModuleAnimations: function()
         {
-            $('.fl-animation').waypoint({
-                offset: '80%',
-                handler: FLBuilderLayout._doModuleAnimation
-            });
+	        if($('.fl-builder-edit').length === 0 && typeof jQuery.fn.waypoint !== 'undefined' && !FLBuilderLayout._isTouch()) {
+	            $('.fl-animation').waypoint({
+	                offset: '80%',
+	                handler: FLBuilderLayout._doModuleAnimation
+	            });
+	        }
         },
         
         _doModuleAnimation: function()
@@ -224,6 +239,65 @@
 	        }
 	        
 	        e.preventDefault();
+        },
+        
+        _initForms: function()
+        {
+	        if ( ! FLBuilderLayout._hasPlaceholderSupport ) {
+	        	$( '.fl-form-field input' ).each( FLBuilderLayout._initFormFieldPlaceholderFallback );
+	        }
+	        
+	        $( '.fl-form-field input' ).on( 'focus', FLBuilderLayout._clearFormFieldError );
+        },
+        
+        _hasPlaceholderSupport: function()
+        {
+	        var input = document.createElement( 'input' );
+	        
+	        return 'undefined' != input.placeholder;
+        },
+        
+        _initFormFieldPlaceholderFallback: function()
+        {
+	        var field 		= $( this ),
+	        	val 		= field.val(),
+	        	placeholder = field.attr( 'placeholder' );
+	        
+	        if ( 'undefined' != placeholder && '' == val ) {
+		        field.val( placeholder );
+		        field.on( 'focus', FLBuilderLayout._hideFormFieldPlaceholderFallback );
+		        field.on( 'blur', FLBuilderLayout._showFormFieldPlaceholderFallback );
+	        }
+        },
+        
+        _hideFormFieldPlaceholderFallback: function()
+        {
+	        var field 		= $( this ),
+	        	val   		= field.val(),
+	        	placeholder = field.attr( 'placeholder' );
+	        
+	        if ( val == placeholder ) {
+		        field.val( '' );
+	        }
+        },
+        
+        _showFormFieldPlaceholderFallback: function()
+        {
+	        var field 		= $( this ),
+	        	val   		= field.val(),
+	        	placeholder = field.attr( 'placeholder' );
+	        
+	        if ( '' == val ) {
+		        field.val( placeholder );
+	        }
+        },
+        
+        _clearFormFieldError: function()
+        {
+	        var field = $( this );
+	        
+	        field.removeClass( 'fl-form-error' );
+	        field.siblings( '.fl-form-error-message' ).hide();
         }
     };
 
