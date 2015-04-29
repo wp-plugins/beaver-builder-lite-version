@@ -83,12 +83,12 @@
 	padding: 0;
 	height: 11px;
 	-moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    -ms-box-sizing: content-box;
-    box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
 }
 .colorpicker input:focus {
-    border-color: transparent;
+	border-color: transparent;
 }
 .colorpicker_hex {
 	position: absolute;

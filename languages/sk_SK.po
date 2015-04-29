@@ -1,15 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: {FL_BUILDER_NAME}\n"
-"POT-Creation-Date: 2015-03-01 14:02-0800\n"
-"PO-Revision-Date: 2015-03-02 07:49+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-14 15:26-0800\n"
+"PO-Revision-Date: 2015-04-15 08:37+0100\n"
 "Last-Translator: WebMan - Oliver Juhas <webmandesigneu@gmail.com>\n"
 "Language-Team: WebMan Design <webmandesigneu@gmail.com>\n"
 "Language: sk_SK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 1.7.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -18,81 +19,86 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: classes/class-fl-builder-admin-settings.php:93
+#: classes/class-fl-builder-admin-settings.php:116
 #: includes/global-settings.php:4
 #, php-format
 msgctxt "%s stands for custom branded \"Page Builder\" name."
 msgid "%s Settings"
 msgstr "Nastavenia pre %s"
 
-#: classes/class-fl-builder-admin-settings.php:107
+#: classes/class-fl-builder-admin-settings.php:133
 msgid "Settings updated!"
 msgstr "Nastavenia boli aktualizované!"
 
-#: classes/class-fl-builder-admin-settings.php:118
+#: classes/class-fl-builder-admin-settings.php:147
 msgid "License"
 msgstr "Licencia"
 
-#: classes/class-fl-builder-admin-settings.php:122
+#: classes/class-fl-builder-admin-settings.php:151
 #: includes/admin-settings-upgrade.php:3
 msgid "Upgrade"
 msgstr "Aktualizácia"
 
-#: classes/class-fl-builder-admin-settings.php:126
+#: classes/class-fl-builder-admin-settings.php:155
 #: includes/global-settings.php:90
 msgid "Modules"
 msgstr "Moduly"
 
-#: classes/class-fl-builder-admin-settings.php:130 includes/ui.php:47
+#: classes/class-fl-builder-admin-settings.php:159 includes/ui.php:47
 msgid "Templates"
 msgstr "Šablóny"
 
-#: classes/class-fl-builder-admin-settings.php:134
+#: classes/class-fl-builder-admin-settings.php:163
 #: includes/admin-settings-post-types.php:3
 msgid "Post Types"
 msgstr "Typy obsahu"
 
-#: classes/class-fl-builder-admin-settings.php:138
+#: classes/class-fl-builder-admin-settings.php:167
 #: modules/icon-group/icon-group.php:27
 msgid "Icons"
 msgstr "Ikonky"
 
-#: classes/class-fl-builder-admin-settings.php:142
+#: classes/class-fl-builder-admin-settings.php:171
 msgid "Editing"
 msgstr "Editácia"
 
-#: classes/class-fl-builder-admin-settings.php:146
+#: classes/class-fl-builder-admin-settings.php:175
 #: includes/admin-settings-branding.php:3
 msgid "Branding"
 msgstr "Značka"
 
-#: classes/class-fl-builder-admin-settings.php:150
+#: classes/class-fl-builder-admin-settings.php:179
 msgid "Help Button"
 msgstr "Tlačidlo pomoci"
 
-#: classes/class-fl-builder-admin-settings.php:154
+#: classes/class-fl-builder-admin-settings.php:183
+#: includes/admin-settings-cache.php:3
+msgid "Cache"
+msgstr "Cache"
+
+#: classes/class-fl-builder-admin-settings.php:187
 #: includes/admin-settings-uninstall.php:3
 #: includes/admin-settings-uninstall.php:15
 msgid "Uninstall"
 msgstr "Odinštalovať"
 
-#: classes/class-fl-builder-admin-settings.php:376
+#: classes/class-fl-builder-admin-settings.php:450
 msgid "Error! You must have at least one icon set enabled."
 msgstr "Chyba! Musíte povoliť aspon jednu sadu ikoniek."
 
-#: classes/class-fl-builder-admin-settings.php:418
+#: classes/class-fl-builder-admin-settings.php:492
 msgid "Error! Could not unzip file."
 msgstr "Chyba! Nepodarilo sa rozbalit súbor."
 
-#: classes/class-fl-builder-admin-settings.php:452
+#: classes/class-fl-builder-admin-settings.php:526
 msgid "Error! Please upload an icon set from either Icomoon or Fontello."
 msgstr "Chyba! Prosíme, nahrajte sadu ikoniek z Icomoon alebo Fontello."
 
-#: classes/class-fl-builder-admin-settings.php:566
+#: classes/class-fl-builder-admin-settings.php:648
 msgid "Error! Please enter an iframe for the video embed code."
 msgstr "Chyba! Prosíme, zadajte IFRAME pre vložené video."
 
-#: classes/class-fl-builder-admin-settings.php:584
+#: classes/class-fl-builder-admin-settings.php:666
 msgid "Error! You must have at least one feature of the help button enabled."
 msgstr "Chyba! Je nutné aktivovať aspoň jednu položku tlačidla pomoci."
 
@@ -127,11 +133,11 @@ msgid "Upgrade"
 msgstr "Aktualizovať"
 
 #: classes/class-fl-builder-admin.php:202
-#: classes/class-fl-builder-model.php:2594
+#: classes/class-fl-builder-model.php:2606
 msgid "Page Builder"
 msgstr "Editor stránok"
 
-#: classes/class-fl-builder-model.php:1385
+#: classes/class-fl-builder-model.php:1394
 #, php-format
 msgctxt "%s stands for the module filename"
 msgid ""
@@ -141,15 +147,15 @@ msgstr ""
 "Súbor %s.php modulu už existuje! Prosíme, použite predponu v názvoch súborov "
 "vlastných modulov aby bola zachovaná kompatibilita s Beaver Builder modulom."
 
-#: classes/class-fl-builder-model.php:1443
-#: classes/class-fl-builder-model.php:1497 modules/heading/heading.php:16
+#: classes/class-fl-builder-model.php:1452
+#: classes/class-fl-builder-model.php:1506 modules/heading/heading.php:16
 #: modules/photo/photo.php:27 modules/rich-text/rich-text.php:16
 #: modules/separator/separator.php:16 modules/video/video.php:21
 msgid "Basic Modules"
 msgstr "Základné moduly"
 
-#: classes/class-fl-builder-model.php:1444
-#: classes/class-fl-builder-model.php:1498 modules/accordion/accordion.php:16
+#: classes/class-fl-builder-model.php:1453
+#: classes/class-fl-builder-model.php:1507 modules/accordion/accordion.php:16
 #: modules/button/button.php:16 modules/callout/callout.php:16
 #: modules/contact-form/contact-form.php:16
 #: modules/content-slider/content-slider.php:16 modules/cta/cta.php:16
@@ -158,120 +164,468 @@ msgstr "Základné moduly"
 #: modules/map/map.php:16 modules/post-grid/post-grid.php:16
 #: modules/pricing-table/pricing-table.php:16 modules/sidebar/sidebar.php:16
 #: modules/slideshow/slideshow.php:16
-#: modules/social-buttons/social-buttons.php:16 modules/tabs/tabs.php:16
+#: modules/social-buttons/social-buttons.php:16
+#: modules/subscribe-form/subscribe-form.php:20 modules/tabs/tabs.php:16
 #: modules/testimonials/testimonials.php:16
 #: modules/woocommerce/woocommerce.php:18
 msgid "Advanced Modules"
 msgstr "Pokročilé moduly"
 
-#: classes/class-fl-builder-model.php:1445
-#: classes/class-fl-builder-model.php:1499
+#: classes/class-fl-builder-model.php:1454
+#: classes/class-fl-builder-model.php:1508
 msgid "Other Modules"
 msgstr "Ostatné moduly"
 
-#: classes/class-fl-builder-model.php:1446
-#: classes/class-fl-builder-model.php:1500 includes/ui.php:88
+#: classes/class-fl-builder-model.php:1455
+#: classes/class-fl-builder-model.php:1509
+#: includes/admin-settings-modules.php:32 includes/ui.php:88
 #: modules/widget/widget.php:16
 msgid "WordPress Widgets"
 msgstr "WordPress widgety"
 
-#: classes/class-fl-builder-model.php:2009
+#: classes/class-fl-builder-model.php:2018
 #, php-format
 msgctxt "%s stands for post/page title."
 msgid "Copy of %s"
 msgstr "Kópia %s"
 
-#: classes/class-fl-builder-photo.php:75
+#: classes/class-fl-builder-photo.php:78 classes/class-fl-builder-photo.php:83
 msgctxt "Image size."
 msgid "Full Size"
 msgstr "Pôvodná veľkosť"
 
-#: classes/class-fl-builder-photo.php:76
+#: classes/class-fl-builder-photo.php:84
 msgctxt "Image size."
 msgid "Large"
 msgstr "Veľký"
 
-#: classes/class-fl-builder-photo.php:77
+#: classes/class-fl-builder-photo.php:85
 msgctxt "Image size."
 msgid "Medium"
 msgstr "Stredný"
 
-#: classes/class-fl-builder-photo.php:78
+#: classes/class-fl-builder-photo.php:86
 msgctxt "Image size."
 msgid "Thumbnail"
 msgstr "Miniatúra"
+
+#: classes/class-fl-builder-service-aweber.php:72
+msgid "Error: You must provide an Authorization Code."
+msgstr "Chyba: Musíte poskytnúť autorizačný kód."
+
+#: classes/class-fl-builder-service-aweber.php:76
+msgid "Error: Please enter a valid Authorization Code."
+msgstr "Chyba: Prosíme, zadajte platný autorizačný kód."
+
+#: classes/class-fl-builder-service-aweber.php:127
+msgid "Authorization Code"
+msgstr "Autorizačný kód"
+
+#: classes/class-fl-builder-service-aweber.php:128
+#, php-format
+msgid ""
+"Please register this website with AWeber to get your Authorization Code. <a"
+"%s>Register Now</a>"
+msgstr ""
+"Prosíme, zaregistrujte svoju webstránku s AWeber pre získanie autorizačného "
+"kódu. <a%s>Zaregistrovať teraz</a>"
+
+#: classes/class-fl-builder-service-aweber.php:182
+#: classes/class-fl-builder-service-campaign-monitor.php:148
+#: classes/class-fl-builder-service-campaign-monitor.php:199
+#: classes/class-fl-builder-service-constant-contact.php:156
+#: classes/class-fl-builder-service-getresponse.php:154
+#: classes/class-fl-builder-service-icontact.php:207
+#: classes/class-fl-builder-service-madmimi.php:178
+#: classes/class-fl-builder-service-mailchimp.php:154
+#: classes/class-fl-builder-service-mailpoet.php:92
+#: classes/class-fl-builder-services.php:263 includes/service-settings.php:21
+#: modules/woocommerce/woocommerce.php:60
+msgid "Choose..."
+msgstr "Zvoľte..."
+
+#: classes/class-fl-builder-service-aweber.php:192
+#: classes/class-fl-builder-service-campaign-monitor.php:209
+#: classes/class-fl-builder-service-constant-contact.php:166
+#: classes/class-fl-builder-service-getresponse.php:164
+#: classes/class-fl-builder-service-icontact.php:217
+#: classes/class-fl-builder-service-madmimi.php:188
+#: classes/class-fl-builder-service-mailchimp.php:164
+#: classes/class-fl-builder-service-mailpoet.php:102
+msgid "List"
+msgstr "Zoznam"
+
+#: classes/class-fl-builder-service-aweber.php:219
+msgid ""
+"There was an error subscribing to AWeber. The account is no longer connected."
+msgstr "Počas odberu z AWeber došlo k chybe. Váš účet už nie je pripojený."
+
+#: classes/class-fl-builder-service-aweber.php:242
+msgid "There was an error connecting to AWeber. Please try again."
+msgstr "Počas pripojovania k AWeber došlo k chybe. Skúste znovu, prosím."
+
+#: classes/class-fl-builder-service-aweber.php:247
+#, php-format
+msgid "There was an error subscribing to AWeber. %s"
+msgstr "Došlo k chybe počas odberu z AWeber. %s"
+
+#: classes/class-fl-builder-service-campaign-monitor.php:55
+#: classes/class-fl-builder-service-constant-contact.php:48
+#: classes/class-fl-builder-service-getresponse.php:67
+#: classes/class-fl-builder-service-madmimi.php:73
+#: classes/class-fl-builder-service-mailchimp.php:67
+msgid "Error: You must provide an API key."
+msgstr "Chyba: Musíte poskytnúť API kľúč."
+
+#: classes/class-fl-builder-service-campaign-monitor.php:67
+#: classes/class-fl-builder-service-campaign-monitor.php:129
+#: classes/class-fl-builder-service-getresponse.php:76
+#: classes/class-fl-builder-service-getresponse.php:132
+msgid "Error: Please check your API key."
+msgstr "Chyba: Prosíme, skontrolujte API kľúč."
+
+#: classes/class-fl-builder-service-campaign-monitor.php:88
+#: classes/class-fl-builder-service-constant-contact.php:88
+#: classes/class-fl-builder-service-getresponse.php:100
+#: classes/class-fl-builder-service-madmimi.php:121
+#: classes/class-fl-builder-service-mailchimp.php:100
+msgid "API Key"
+msgstr "API kľúč"
+
+#: classes/class-fl-builder-service-campaign-monitor.php:89
+msgid ""
+"Your API key can be found in your Campaign Monitor account under Account "
+"Settings > API Key."
+msgstr ""
+"Váš API kľúč môžete nájsť vo vašom účte Campaign Monitor pod Nastavenia účtu "
+"> API kľúč."
+
+#: classes/class-fl-builder-service-campaign-monitor.php:158
+msgid "Client"
+msgstr "Klient"
+
+#: classes/class-fl-builder-service-campaign-monitor.php:236
+msgid ""
+"There was an error subscribing to Campaign Monitor. The account is no longer "
+"connected."
+msgstr ""
+"Počas odberu z Campaign Monitor došlo k chybe. Váš účet už nie je pripojený."
+
+#: classes/class-fl-builder-service-campaign-monitor.php:253
+msgid "There was an error subscribing to Campaign Monitor."
+msgstr "Došlo k chybe počas odberu z Campaign Monitor."
+
+#: classes/class-fl-builder-service-constant-contact.php:52
+msgid "Error: You must provide an access token."
+msgstr "Chyba: Musíte poskytnúť prístupový token."
+
+#: classes/class-fl-builder-service-constant-contact.php:61
+#: classes/class-fl-builder-service-constant-contact.php:134
+#, php-format
+msgid "Error: Could not connect to Constant Contact. %s"
+msgstr "Chyba: Spojenie s Constant Contact nemôže byť nadviazané. %s"
+
+#: classes/class-fl-builder-service-constant-contact.php:89
+msgid "Your Constant Contact API key."
+msgstr "Váš API kľúč pre Constant Contact."
+
+#: classes/class-fl-builder-service-constant-contact.php:99
+msgid "Access Token"
+msgstr "Prístupový token"
+
+#: classes/class-fl-builder-service-constant-contact.php:100
+msgid "Your Constant Contact access token."
+msgstr "Váš prístupový token pre Constant Contact."
+
+#: classes/class-fl-builder-service-constant-contact.php:101
+#, php-format
+msgid ""
+"You must register a <a%s>Developer Account</a> with Constant Contact to "
+"obtain an API key and access token. Please see <a%s>Getting an API key</a> "
+"for complete instructions."
+msgstr ""
+"Musíte sa zaregistrovať pod <a%s>developerským účtom</a> v Constant Contact, "
+"aby ste obdržali API kľúč a prístupový token. Kompletné inštrukcie môžete "
+"nájsť na stránke <a%s>Získanie API kľúča</a>."
+
+#: classes/class-fl-builder-service-constant-contact.php:193
+msgid ""
+"There was an error subscribing to Constant Contact. The account is no longer "
+"connected."
+msgstr ""
+"Počas odberu z Constant Contact došlo k chybe. Váš účet už nie je pripojený."
+
+#: classes/class-fl-builder-service-constant-contact.php:245
+#: classes/class-fl-builder-service-constant-contact.php:279
+#, php-format
+msgid "There was an error subscribing to Constant Contact. %s"
+msgstr "Došlo k chybe počas odberu z Constant Contact. %s"
+
+#: classes/class-fl-builder-service-getresponse.php:101
+msgid ""
+"Your API key can be found in your GetResponse account under My Account > "
+"GetResponse API."
+msgstr ""
+"Váš API kľúč môžete nájsť vo vašom účte GetResponse pod Môj účet > "
+"GetResponse API."
+
+#: classes/class-fl-builder-service-getresponse.php:191
+msgid ""
+"There was an error subscribing to GetResponse. The account is no longer "
+"connected."
+msgstr ""
+"Počas odberu z GetResponse došlo k chybe. Váš účet už nie je pripojený."
+
+#: classes/class-fl-builder-service-getresponse.php:202
+#, php-format
+msgid "There was an error subscribing to GetResponse. %s"
+msgstr "Došlo k chybe počas odberu z GetResponse. %s"
+
+#: classes/class-fl-builder-service-icontact.php:75
+msgid "Error: You must provide a username."
+msgstr "Chyba: Musíte poskytnúť užívateľské meno."
+
+#: classes/class-fl-builder-service-icontact.php:79
+msgid "Error: You must provide a app ID."
+msgstr "Chyba: Mustíte poskytnúť ID aplikácie."
+
+#: classes/class-fl-builder-service-icontact.php:83
+msgid "Error: You must provide a app password."
+msgstr "Chyba: Musíte poskytnúť heslo aplikácie."
+
+#: classes/class-fl-builder-service-icontact.php:104
+#: classes/class-fl-builder-service-icontact.php:188
+#, php-format
+msgid "Error: Could not connect to iContact. %s"
+msgstr "Chyba: Spojenie s iContact nemôže byť nadviazané. %s"
+
+#: classes/class-fl-builder-service-icontact.php:125
+msgid "Username"
+msgstr "Užívateľské meno"
+
+#: classes/class-fl-builder-service-icontact.php:126
+msgid "Your iContact username."
+msgstr "Vaše úzívateľské meno na iContact."
+
+#: classes/class-fl-builder-service-icontact.php:136
+msgid "App ID"
+msgstr "ID aplikácie"
+
+#: classes/class-fl-builder-service-icontact.php:137
+msgid "Your iContact app ID."
+msgstr "ID vašej iContact aplikácie."
+
+#: classes/class-fl-builder-service-icontact.php:147
+msgid "App Password"
+msgstr "Heslo aplikácie"
+
+#: classes/class-fl-builder-service-icontact.php:148
+msgid "Your iContact app password."
+msgstr "Heslo vašej iContact aplikácie."
+
+#: classes/class-fl-builder-service-icontact.php:149
+#, php-format
+msgid ""
+"You must <a%s>create an app</a> in iContact to obtain an app ID and "
+"password. Please see <a%s>the iContact docs</a> for complete instructions."
+msgstr ""
+"Musíte <a%s>vytvoriť aplikáciu</a> v iContact, aby ste obdržali ID a heslo "
+"aplikácie. Kompletné inštrukcie môžete nájsť na stránke <a%s>dokumentácie k "
+"iContact</a>."
+
+#: classes/class-fl-builder-service-icontact.php:244
+msgid ""
+"There was an error subscribing to iContact. The account is no longer "
+"connected."
+msgstr "Počas odberu z iContact došlo k chybe. Váš účet už nie je pripojený."
+
+#: classes/class-fl-builder-service-icontact.php:280
+#, php-format
+msgid "There was an error subscribing to iContact. %s"
+msgstr "Došlo k chybe počas odberu z iContact. %s"
+
+#: classes/class-fl-builder-service-madmimi.php:69
+msgid "Error: You must provide an email address."
+msgstr "Chyba: Musíte poskytnúť e-mailovú adresu."
+
+#: classes/class-fl-builder-service-madmimi.php:83
+msgid "Unable to connect to Mad Mimi. Please check your credentials."
+msgstr "Nepodarilo sa spojiť s Mad Mimi. Skontrolujte zadané údaje."
+
+#: classes/class-fl-builder-service-madmimi.php:110
+#: modules/subscribe-form/includes/frontend.php:11
+msgid "Email Address"
+msgstr "E-mailová adresa"
+
+#: classes/class-fl-builder-service-madmimi.php:111
+msgid "The email address associated with your Mad Mimi account."
+msgstr "E-mailová adresa použitá vo vašom Mad Mimi účte."
+
+#: classes/class-fl-builder-service-madmimi.php:122
+msgid ""
+"Your API key can be found in your Mad Mimi account under Account > Settings "
+"&amp; Billing > API."
+msgstr ""
+"Váš API kľúč môžete nájsť vo vašom účte Mad Mimi pod Účet > Nastavenia a "
+"fakturácia > API."
+
+#: classes/class-fl-builder-service-madmimi.php:156
+msgid ""
+"There was a problem retrieving your lists. Please check your API credentials."
+msgstr ""
+"Došlo k problému počas získavania vašich zoznamov. Skontrolujte zadané API "
+"údaje."
+
+#: classes/class-fl-builder-service-madmimi.php:215
+#: classes/class-fl-builder-service-madmimi.php:242
+msgid ""
+"There was an error subscribing to Mad Mimi. The account is no longer "
+"connected."
+msgstr "Počas odberu z Mad Mimi došlo k chybe. Váš účet už nie je pripojený."
+
+#: classes/class-fl-builder-service-mailchimp.php:101
+msgid ""
+"Your API key can be found in your MailChimp account under Account > Extras > "
+"API Keys."
+msgstr ""
+"Váš API kľúč môžete nájsť vo vašom účte MailChimp pod Účet > Extra > API "
+"kľúče."
+
+#: classes/class-fl-builder-service-mailchimp.php:191
+msgid ""
+"There was an error subscribing to MailChimp. The account is no longer "
+"connected."
+msgstr "Počas odberu z MailChimp došlo k chybe. Váš účet už nie je pripojený."
+
+#: classes/class-fl-builder-service-mailchimp.php:219
+#, php-format
+msgid "There was an error subscribing to MailChimp. %s"
+msgstr "Došlo k chybe počas odberu z MailChimp. %s"
+
+#: classes/class-fl-builder-service-mailpoet.php:73
+msgid "There was an error retrieveing your lists."
+msgstr "Došlo k chybe pri získavaní vašich zoznamov."
+
+#: classes/class-fl-builder-service-mailpoet.php:129
+msgid "There was an error subscribing. MailPoet is not installed."
+msgstr ""
+"Došlo k chybe počas pokusu o pripojenie. MailPoet nie je nainštalovaný."
+
+#: classes/class-fl-builder-services.php:133
+msgctxt "Third party service such as MailChimp."
+msgid "Error: Missing service type."
+msgstr "Chyba: Chýba typ služby."
+
+#: classes/class-fl-builder-services.php:136
+msgctxt "Connection data such as an API key."
+msgid "Error: Missing service data."
+msgstr "Chyba: Chýbajú dáta služby."
+
+#: classes/class-fl-builder-services.php:139
+msgctxt "Account name for a third party service such as MailChimp."
+msgid "Error: Missing account name."
+msgstr "Chyba: Chýba meno účtu."
+
+#: classes/class-fl-builder-services.php:148
+msgctxt "Account name for a third party service such as MailChimp."
+msgid "Error: An account with that name already exists."
+msgstr "Chyba: Účet s rovnakým menom už existuje."
+
+#: classes/class-fl-builder-services.php:228
+msgid "Account Name"
+msgstr "Meno účtu"
+
+#: classes/class-fl-builder-services.php:229
+msgid ""
+"Used to identify this connection within the accounts list and can be "
+"anything you like."
+msgstr ""
+"Použije sa na identifikáciu tohto pripojenia v zozname účtov. Môžete zadať "
+"čokoľvek."
+
+#: classes/class-fl-builder-services.php:242
+msgid "Connect"
+msgstr "Pripojiť"
+
+#: classes/class-fl-builder-services.php:270
+msgid "Add Account..."
+msgstr "Pridať účet..."
+
+#: classes/class-fl-builder-services.php:277
+msgid "Account"
+msgstr "Účet"
 
 #: classes/class-fl-builder-templates.php:28
 msgid "Page Builder Templates"
 msgstr "Šablóny Editora stránok"
 
-#: classes/class-fl-builder.php:709
+#: classes/class-fl-builder.php:713
 #, php-format
 msgctxt "Field name to add."
 msgid "Add %s"
 msgstr "%s &rarr; pridať"
 
-#: classes/class-fl-builder.php:772 classes/class-fl-builder.php:774
+#: classes/class-fl-builder.php:776 classes/class-fl-builder.php:778
 msgctxt "Custom post type label."
 msgid "Layout Templates"
 msgstr "Šablóny rozloženia"
 
-#: classes/class-fl-builder.php:773 classes/class-fl-builder.php:775
+#: classes/class-fl-builder.php:777 classes/class-fl-builder.php:779
 msgctxt "Custom post type label."
 msgid "Layout Template"
 msgstr "Šablóna rozloženia"
 
-#: classes/class-fl-builder.php:776
+#: classes/class-fl-builder.php:780
 msgctxt "Custom post type label."
 msgid "Add New"
 msgstr "Pridať novú"
 
-#: classes/class-fl-builder.php:777
+#: classes/class-fl-builder.php:781
 msgctxt "Custom post type label."
 msgid "Add New Layout Template"
 msgstr "Pridať novú šablónu rozloženia"
 
-#: classes/class-fl-builder.php:778
+#: classes/class-fl-builder.php:782
 msgctxt "Custom post type label."
 msgid "New Layout Template"
 msgstr "Nová šablóna rozloženia"
 
-#: classes/class-fl-builder.php:779
+#: classes/class-fl-builder.php:783
 msgctxt "Custom post type label."
 msgid "Edit Layout Template"
 msgstr "Upraviť šablónu rozloženia"
 
-#: classes/class-fl-builder.php:780
+#: classes/class-fl-builder.php:784
 msgctxt "Custom post type label."
 msgid "View Layout Template"
 msgstr "Zobraziť šablónu rozloženia"
 
-#: classes/class-fl-builder.php:781
+#: classes/class-fl-builder.php:785
 msgctxt "Custom post type label."
 msgid "All Layout Templates"
 msgstr "Všetky šablóny rozloženia"
 
-#: classes/class-fl-builder.php:782
+#: classes/class-fl-builder.php:786
 msgctxt "Custom post type label."
 msgid "Search Layout Templates"
 msgstr "Hľadať šablóny rozloženia"
 
-#: classes/class-fl-builder.php:783
+#: classes/class-fl-builder.php:787
 msgctxt "Custom post type label."
 msgid "Parent Layout Templates:"
 msgstr "Nadradené šablóny rozloženia:"
 
-#: classes/class-fl-builder.php:784
+#: classes/class-fl-builder.php:788
 msgctxt "Custom post type label."
 msgid "No layout templates found."
 msgstr "Nenašli sa žiadne šablóny rozloženia."
 
-#: classes/class-fl-builder.php:785
+#: classes/class-fl-builder.php:789
 msgctxt "Custom post type label."
 msgid "No layout templates found in Trash."
 msgstr "V koši sa nenašli žiadne šablóny rozloženia."
 
-#: classes/class-fl-builder.php:1150 includes/js-config.php:66
+#: classes/class-fl-builder.php:1160 includes/js-config.php:69
 #, php-format
 msgctxt "%s stands for module name."
 msgid "%s Settings"
@@ -293,18 +647,6 @@ msgctxt "%s stands for custom branded \"Page Builder\" name."
 msgid "Launch %s"
 msgstr "Spustiť %s"
 
-#: includes/admin-posts.php:15
-#, php-format
-msgctxt "%s stands for custom branded \"Page Builder\" name."
-msgid ""
-"Switching to Text Editor mode will disable your %s layout until it is "
-"enabled again. Any edits made while in Text Editor mode will not be made on "
-"your %s layout. Do you want to continue?"
-msgstr ""
-"Prepnutím do režimu textového editora vypnete rozloženie %s, pokým ho znovu "
-"neaktivujete. Akékoľve zmeny vykonané v režime textového editora sa "
-"neaplikujú na rozloženie %s. Prajete si pokračovať?"
-
 #: includes/admin-settings-branding.php:7
 msgid "White label the page builder by entering a custom name below."
 msgstr "Zmeňte značku editora stránok zadaním vlastného mena, názvu editora."
@@ -317,9 +659,39 @@ msgstr ""
 "Dodatočne môžete pridať aj vlastnú ikonku zadaním URL adresy obrázku. Ak "
 "ikonku nechcete použiť, ponechajte pole prázdne."
 
-#: includes/admin-settings-branding.php:14
-msgid "Save Branding"
-msgstr "Uložiť nastavenie značky"
+#: includes/admin-settings-cache.php:9
+msgid ""
+"A CSS and JavaScript file is dynamically generated and cached each time you "
+"create a new layout. Sometimes the cache needs to be refreshed when you "
+"migrate your site to another server or update to the latest version. If you "
+"are running into any issues, please try clearing the cache by clicking the "
+"button below."
+msgstr ""
+"Súbor CSS a JavaScript je dynamicky generovaný a cachovaný po každej zmene "
+"rozloženia. Niekedy je nutné obnoviť cache počas migrácie vašej webstránky "
+"na nové servre, alebo počas aktualizácie. Ak spozorujete akékoľvek problémy, "
+"skúste obnoviť cache kliknutím na tlačidlo."
+
+#: includes/admin-settings-cache.php:12 includes/admin-settings-cache.php:14
+#: includes/admin-settings-uninstall.php:7
+#: includes/admin-settings-uninstall.php:10
+#: includes/updater/includes/form.php:31
+msgid "NOTE:"
+msgstr "UPOZORNENIE:"
+
+#: includes/admin-settings-cache.php:12
+#: includes/admin-settings-uninstall.php:10
+#: includes/updater/includes/form.php:31
+msgid "This applies to all sites on the network."
+msgstr "Toto nastavenie sa aplikuje na všetky stránky v sieti."
+
+#: includes/admin-settings-cache.php:14
+msgid ""
+"This only applies to this site. Please visit the Network Admin Settings to "
+"clear the cache for all sites on the network."
+msgstr ""
+"Akcia sa aplikuje iba na túto stránku. Pre sieťové obnovenie cache na "
+"všetkých stránkach spustite akciu cez administrátorké nastavenia siete."
 
 #: includes/admin-settings-editing.php:3
 msgid "Editing Settings"
@@ -340,10 +712,6 @@ msgid ""
 msgstr ""
 "Nastavte <a%s>oprávnenia</a> vyžadované k pokročilej editácii stránok, ako "
 "je pridávanie, odstraňovanie alebo presun modulov."
-
-#: includes/admin-settings-editing.php:22
-msgid "Save Editing Settings"
-msgstr "Uložiť nastavenia editácie"
 
 #: includes/admin-settings-help-button.php:8
 msgid "Help Button Settings"
@@ -397,10 +765,6 @@ msgstr "Povoliť fóra"
 msgid "Forums URL"
 msgstr "URL fór"
 
-#: includes/admin-settings-help-button.php:77
-msgid "Save Help Button Settings"
-msgstr "Uložiť nastavenia tlačidla pomoci"
-
 #: includes/admin-settings-icons.php:3
 msgid "Icon Settings"
 msgstr "Nastavenia ikoniek"
@@ -423,26 +787,6 @@ msgctxt "Plugin setup page: Delete icon set."
 msgid "Delete"
 msgstr "Vymazať"
 
-#: includes/admin-settings-icons.php:59
-msgid "Upload Icon Set"
-msgstr "Nahrať sadu ikoniek"
-
-#: includes/admin-settings-icons.php:60
-msgid "Save Icon Settings"
-msgstr "Uložiť nastavenia ikoniek"
-
-#: includes/admin-settings-js-config.php:4
-msgid "Select File"
-msgstr "Zvoliť súbor"
-
-#: includes/admin-settings-js-config.php:5
-msgid ""
-"Please type \"uninstall\" in the box below to confirm that you really want "
-"to uninstall the page builder and all of its data."
-msgstr ""
-"Zadajte \"uninstall\" pre potvrdenie odinštalovania editora stránok a "
-"odstránenia všetkých jeho dát."
-
 #: includes/admin-settings-modules.php:3
 msgid "Enabled Modules"
 msgstr "Aktivované moduly"
@@ -453,14 +797,10 @@ msgstr ""
 "Zaškrtnite alebo odškrtnite doleuvedené moduly pre ich aktiváciu alebo "
 "deaktiváciu."
 
-#: includes/admin-settings-modules.php:25
+#: includes/admin-settings-modules.php:26
 msgctxt "Plugin setup page: Modules."
 msgid "All"
 msgstr "Všetky"
-
-#: includes/admin-settings-modules.php:43
-msgid "Save Module Settings"
-msgstr "Uložiť nastavenia modulov"
 
 #: includes/admin-settings-post-types.php:18
 msgid ""
@@ -483,10 +823,6 @@ msgstr "Napríklad: page, post, product"
 msgid "Select the post types you would like the builder to work with."
 msgstr ""
 "Zvoľte typy obsahu (článkov), s ktorými chcete editor stránok používať."
-
-#: includes/admin-settings-post-types.php:70
-msgid "Save Post Types"
-msgstr "Uložiť typy obsahu"
 
 #: includes/admin-settings-templates.php:3 includes/template-settings.php:4
 msgid "Template Settings"
@@ -512,10 +848,6 @@ msgstr "Sprístupniť iba užívateľské šablóny"
 msgid "Disable All Templates"
 msgstr "Zakázať všetky šablóny"
 
-#: includes/admin-settings-templates.php:30
-msgid "Save Template Settings"
-msgstr "Uložiť nastavenia šablón"
-
 #: includes/admin-settings-uninstall.php:5
 msgid ""
 "Clicking the button below will uninstall the page builder plugin and delete "
@@ -525,12 +857,6 @@ msgstr ""
 "Kliknutím na tlačidlo odinštalujete modul editora stránok a odstránite "
 "všetky dáta s ním asociované. Editor stránok môžete odinštalovať alebo "
 "deaktivovať aj v sekcii modulov, ak si neprajete odstrániť dáta."
-
-#: includes/admin-settings-uninstall.php:7
-#: includes/admin-settings-uninstall.php:10
-#: includes/updater/includes/form.php:31
-msgid "NOTE:"
-msgstr "UPOZORNENIE:"
 
 #: includes/admin-settings-uninstall.php:7
 msgid ""
@@ -543,11 +869,6 @@ msgstr ""
 "code> a <code>_fl_builder_enabled</code> meta dáta článov pre prípad, že sa "
 "rozhodnete znovu Editor stránok nainštalovať. V takom prípade sa dáta "
 "použijú na obnovenie rozloženia stránok."
-
-#: includes/admin-settings-uninstall.php:10
-#: includes/updater/includes/form.php:31
-msgid "This applies to all sites on the network."
-msgstr "Toto nastavenie sa aplikuje na všetky stránky v sieti."
 
 #: includes/admin-settings-upgrade.php:5
 msgid ""
@@ -596,8 +917,9 @@ msgstr "Prémiová"
 
 #: includes/admin-templates-edit.php:23 includes/admin-templates.php:30
 #: includes/global-settings.php:18 includes/global-settings.php:110
-#: includes/row-settings.php:307 includes/template-settings.php:31
-#: modules/accordion/accordion.php:90 modules/callout/callout.php:420
+#: includes/global-settings.php:124 includes/row-settings.php:307
+#: includes/template-settings.php:31 modules/accordion/accordion.php:90
+#: modules/callout/callout.php:420
 #: modules/content-slider/content-slider.php:209
 #: modules/content-slider/content-slider.php:223
 #: modules/content-slider/content-slider.php:257
@@ -625,8 +947,9 @@ msgstr "Nie"
 
 #: includes/admin-templates-edit.php:24 includes/admin-templates.php:30
 #: includes/global-settings.php:19 includes/global-settings.php:111
-#: includes/row-settings.php:308 includes/template-settings.php:32
-#: modules/accordion/accordion.php:89 modules/callout/callout.php:421
+#: includes/global-settings.php:125 includes/row-settings.php:308
+#: includes/template-settings.php:32 modules/accordion/accordion.php:89
+#: modules/callout/callout.php:421
 #: modules/content-slider/content-slider.php:210
 #: modules/content-slider/content-slider.php:224
 #: modules/content-slider/content-slider.php:258
@@ -698,11 +1021,11 @@ msgstr "Upraviť"
 msgid "Delete"
 msgstr "Odstrániť"
 
-#: includes/admin-templates.php:40 includes/js-config.php:28
+#: includes/admin-templates.php:40
 msgid "Do you really want to delete this template?"
 msgstr "Naozaj chcete túto šablónu vymazať?"
 
-#: includes/column-settings.php:4 includes/js-config.php:23
+#: includes/column-settings.php:4
 msgid "Column Settings"
 msgstr "Nastavenia stĺpca"
 
@@ -717,7 +1040,8 @@ msgstr "Nastavenia stĺpca"
 #: modules/icon-group/icon-group.php:44 modules/icon/icon.php:75
 #: modules/pricing-table/pricing-table.php:43
 #: modules/pricing-table/pricing-table.php:155
-#: modules/separator/separator.php:72 modules/tabs/tabs.php:45
+#: modules/separator/separator.php:72
+#: modules/subscribe-form/subscribe-form.php:217 modules/tabs/tabs.php:45
 msgid "Style"
 msgstr "Štýl"
 
@@ -750,7 +1074,7 @@ msgstr "Farba"
 #: modules/content-slider/content-slider.php:363
 #: modules/content-slider/content-slider.php:630 modules/cta/cta.php:197
 #: modules/cta/cta.php:264 modules/icon-group/icon-group.php:64
-#: modules/icon/icon.php:95
+#: modules/icon/icon.php:95 modules/subscribe-form/subscribe-form.php:182
 msgid "Background Color"
 msgstr "Farba pozadia"
 
@@ -876,6 +1200,7 @@ msgstr "Vpravo"
 #: includes/row-settings.php:529 modules/button/button.php:233
 #: modules/callout/callout.php:598
 #: modules/content-slider/content-slider.php:703 modules/cta/cta.php:345
+#: modules/subscribe-form/subscribe-form.php:263
 msgid "Padding"
 msgstr "Vnútorné odsadenie"
 
@@ -970,7 +1295,7 @@ msgstr "Vlastná šírka na malých zariadeniach"
 msgid "CSS Selectors"
 msgstr "CSS selektor"
 
-#: includes/column-settings.php:360 includes/loop-settings.php:27
+#: includes/column-settings.php:360 includes/loop-settings.php:28
 #: includes/module-settings.php:119 includes/row-settings.php:607
 msgid "ID"
 msgstr "ID"
@@ -1010,7 +1335,7 @@ msgstr "Zvoliť ikonku"
 msgid "Replace"
 msgstr "Nahradiť"
 
-#: includes/field-icon.php:7 includes/js-config.php:58
+#: includes/field-icon.php:7
 msgid "Remove"
 msgstr "Odstrániť"
 
@@ -1022,13 +1347,9 @@ msgstr "Zvoliť"
 msgid "Enter a post title to search."
 msgstr "Zadajte názov hľadaného článku."
 
-#: includes/field-link.php:6 includes/field-suggest.php:7
-msgid "Start typing..."
-msgstr "Začnite písať..."
-
 #: includes/field-link.php:7 includes/icon-selector.php:28
-#: includes/js-config.php:19 includes/settings.php:63
-#: includes/template-selector.php:102 includes/ui.php:11
+#: includes/settings.php:63 includes/template-selector.php:102
+#: includes/ui.php:11
 msgid "Cancel"
 msgstr "Zrušiť"
 
@@ -1052,11 +1373,11 @@ msgstr "Upraviť galériu"
 msgid "Add Photos"
 msgstr "Pridať obrázky"
 
-#: includes/field-photo.php:3 includes/js-config.php:63
+#: includes/field-photo.php:3
 msgid "Select Photo"
 msgstr "Zvoliť obrázok"
 
-#: includes/field-video.php:3 includes/js-config.php:65
+#: includes/field-video.php:3
 msgid "Select Video"
 msgstr "Zvoliť video"
 
@@ -1067,7 +1388,7 @@ msgstr "Nahradiť video"
 #: includes/global-settings.php:7 includes/template-settings.php:7
 #: includes/user-template-settings.php:7 modules/accordion/accordion.php:110
 #: modules/button/button.php:59 modules/callout/callout.php:209
-#: modules/contact-form/contact-form.php:57
+#: modules/contact-form/contact-form.php:58
 #: modules/content-slider/content-slider.php:190
 #: modules/content-slider/content-slider.php:314 modules/cta/cta.php:67
 #: modules/gallery/gallery.php:213 modules/heading/heading.php:26
@@ -1076,7 +1397,8 @@ msgstr "Nahradiť video"
 #: modules/pricing-table/pricing-table.php:87
 #: modules/rich-text/rich-text.php:26 modules/separator/separator.php:27
 #: modules/sidebar/sidebar.php:27 modules/slideshow/slideshow.php:256
-#: modules/social-buttons/social-buttons.php:64 modules/tabs/tabs.php:77
+#: modules/social-buttons/social-buttons.php:64
+#: modules/subscribe-form/subscribe-form.php:86 modules/tabs/tabs.php:77
 #: modules/testimonials/testimonials.php:30
 #: modules/testimonials/testimonials.php:200 modules/video/video.php:76
 #: modules/widget/widget.php:64 modules/woocommerce/woocommerce.php:50
@@ -1159,10 +1481,27 @@ msgid "Enabled"
 msgstr "Povoliť"
 
 #: includes/global-settings.php:121
+msgctxt ""
+"General settings form field label. Intended meaning: \"Enable auto spacing "
+"for responsive layouts?\""
+msgid "Enable Auto Spacing"
+msgstr "Povoliť automatické rozostupy"
+
+#: includes/global-settings.php:127
+msgid ""
+"When auto spacing is enabled, the builder will automatically adjust the "
+"margins and padding in your layout once the small device breakpoint is "
+"reached. Most users will want to leave this enabled."
+msgstr ""
+"Ak povolíte automatické rozostupy, editor stránok automaticky nastaví "
+"odsadenie pre malé zariadenia. Vo väčšine prípadov odporúčame povoliť toto "
+"nastavenie."
+
+#: includes/global-settings.php:131
 msgid "Medium Device Breakpoint"
 msgstr "Zlomový bod pre stredne veľké zariadenia"
 
-#: includes/global-settings.php:126
+#: includes/global-settings.php:136
 msgid ""
 "The browser width at which the layout will adjust for medium devices such as "
 "tablets."
@@ -1170,11 +1509,11 @@ msgstr ""
 "Šírka internetového prehliadača, v ktorej sa rozloženie nastaví do režimu "
 "pre stredne veľké zariadenia, ako sú tablety."
 
-#: includes/global-settings.php:130
+#: includes/global-settings.php:140
 msgid "Small Device Breakpoint"
 msgstr "Zlomový bod pre malé zariadenia"
 
-#: includes/global-settings.php:135
+#: includes/global-settings.php:145
 msgid ""
 "The browser width at which the layout will adjust for small devices such as "
 "phones."
@@ -1187,439 +1526,83 @@ msgctxt "Select option for showing all icon libraries."
 msgid "All Libraries"
 msgstr "Všetky knižnice"
 
-#: includes/js-config.php:18
-msgid "What would you like to do?"
-msgstr "Čo si prajete urobiť?"
-
-#: includes/js-config.php:20
-msgid "Change Template"
-msgstr "Zmeniť šablónu"
-
-#: includes/js-config.php:21
-msgid ""
-"Warning! Changing the template will replace your existing layout. Do you "
-"really want to do this?"
-msgstr ""
-"Pozor! Zmenou šablóny nahradíte existujúce rozloženie. Naozaj to chcete "
-"urobiť?"
-
-#: includes/js-config.php:22
-msgid "Column"
-msgstr "Stĺpec"
-
-#: includes/js-config.php:24
-msgid ""
-"Please select either a background layout or content layout before submitting."
-msgstr "Najskôr zvoľte rozloženie pozadia alebo obsahu."
-
-#: includes/js-config.php:25
-msgid "Do you really want to delete this item?"
-msgstr "Naozaj chcete túto položku odstrániť?"
-
-#: includes/js-config.php:26
-msgid ""
-"Do you really want to delete this module? All content data will be "
-"permanently deleted."
-msgstr ""
-"Naozaj chcete tento modul odstrániť? Všetky dáta jeho obsahu budu vymazané."
-
-#: includes/js-config.php:27
-msgid ""
-"Do you really want to delete this row? All content data will be permanently "
-"deleted."
-msgstr ""
-"Naozaj chcete odstrániť tento riadok? Všetok obsah riadku bude vymazaný."
-
-#: includes/js-config.php:29
-msgid "Discard Draft"
-msgstr "Zahodiť koncept"
-
-#: includes/js-config.php:30
-msgid ""
-"Do you really want to discard this draft? All of your changes that are not "
-"published will be lost."
-msgstr ""
-"Naozaj chcete zahodiť vytvorený koncept? Stratíte všetky zmeny, ktoré nie sú "
-"publikované."
-
-#: includes/js-config.php:31 includes/ui.php:44
-msgid "Done"
-msgstr "Hotovo"
-
-#: includes/js-config.php:32
-msgid "Save Draft"
-msgstr "Uložiť koncept"
-
-#: includes/js-config.php:33
+#: includes/js-config.php:35
 msgctxt "Duplicate page/post action label."
 msgid "Duplicate"
 msgstr "Duplikovať"
 
-#: includes/js-config.php:34
-msgid "Duplicate This Page"
-msgstr "Duplikovať túto stránku"
-
-#: includes/js-config.php:35
-msgid "Duplicate This Template"
-msgstr "Duplikovať túto šablónu"
-
-#: includes/js-config.php:36
-msgid "Edit Global Settings"
-msgstr "Upraviť globálne nastavenia"
-
-#: includes/js-config.php:37
-msgid "Drop a row layout or module to get started!"
-msgstr "Začnite vložením riadku alebo modulu!"
-
-#: includes/js-config.php:38
-msgid ""
-"Beaver Builder caught the following JavaScript error. If Beaver Builder is "
-"not functioning as expected the cause is most likely this error. Please help "
-"us by disabling all plugins and testing Beaver Builder while reactivating "
-"each to determine if the issue is related to a third party plugin."
-msgstr ""
-"Beaver Builder zaznamenal nasledovnú JavaScript chybu. Ak Beaver Builder "
-"nefunguje správne, dôvodom je pravdepodobne táto chyba. Pomôžte nám "
-"deaktiváciou ostatných modulov a otestovaním Beaver Builder modulu počas "
-"opätovnej, postupnej aktivácie ostatných modulov pre zistenie, či je problém "
-"spôsobený jedným z týchto modulov."
-
-#: includes/js-config.php:39
-msgid "Full Size"
-msgstr "Pôvodná veľkosť"
-
-#: includes/js-config.php:40
-msgid "Get Help"
-msgstr "Získať pomoc"
-
-#: includes/js-config.php:41
-msgid "Getting Started Video"
-msgstr "Video \"Začíname\""
-
-#: includes/js-config.php:42
+#: includes/js-config.php:44
 msgid "\"{message}\" on line {line} of {file}."
 msgstr "\"{message}\" na riadku {line} súboru {file}."
 
-#: includes/js-config.php:43
-msgid "Insert"
-msgstr "Vložiť"
-
-#: includes/js-config.php:44
-msgid "Large"
-msgstr "Veľké"
-
-#: includes/js-config.php:45
-msgid "Manage Templates"
-msgstr "Správa šablón"
-
-#: includes/js-config.php:46
-msgid "Medium"
-msgstr "Stredné"
-
-#: includes/js-config.php:47
-msgid "Module"
-msgstr "Modul"
-
-#: includes/js-config.php:48
-msgid "Move"
-msgstr "Presunúť"
-
-#: includes/js-config.php:49
-msgid "New Column"
-msgstr "Nový stĺpec"
-
-#: includes/js-config.php:50
-msgid "New Row"
-msgstr "Nový riadok"
-
-#: includes/js-config.php:51
-msgid "No results found."
-msgstr "Nenašli sa žiadne záznamy."
-
-#: includes/js-config.php:52
-msgid "No Thanks"
-msgstr "Nie, vďaka"
-
-#: includes/js-config.php:53
-msgid "OK"
-msgstr "OK"
-
-#: includes/js-config.php:54 modules/photo/photo.php:454
-msgid "Photo Page"
-msgstr "Stránka obrázku"
-
-#: includes/js-config.php:55
-msgid "Photo Selected"
-msgstr "Obrázok bol zvolený"
-
-#: includes/js-config.php:56
-msgid "Photos Selected"
-msgstr "Obrázky boli zvolené"
-
-#: includes/js-config.php:57
-msgid "Publish Changes"
-msgstr "Publikovať zmeny"
-
-#: includes/js-config.php:59
-msgid "Row"
-msgstr "Riadok"
-
-#: includes/js-config.php:60 includes/row-settings.php:6
-msgid "Row Settings"
-msgstr "Nastavenia riadku"
-
-#: includes/js-config.php:61
-msgid "Save Core Template"
-msgstr "Uložiť základnú šablónu"
-
-#: includes/js-config.php:62 includes/ui.php:10
-#: includes/user-template-settings.php:4
-msgid "Save Template"
-msgstr "Uložiť šablónu"
-
-#: includes/js-config.php:64
-msgid "Select Photos"
-msgstr "Zvoliť obrázky"
-
-#: includes/js-config.php:67
-msgid "Take a Tour"
-msgstr "Spustiť sprievodcu"
-
-#: includes/js-config.php:68
-msgid "Append New Layout"
-msgstr "Pridať nové rozloženie"
-
-#: includes/js-config.php:69
-msgid "Replace Existing Layout"
-msgstr "Nahradiť existujúce rozloženie"
-
-#: includes/js-config.php:70
-msgid "Template Saved!"
-msgstr "Šablóna bola uložená!"
-
-#: includes/js-config.php:71
-msgid "Thumbnail"
-msgstr "Miniatúra"
-
-#: includes/js-config.php:72
-msgid "Next"
-msgstr "Ďalej"
-
-#: includes/js-config.php:73
-msgid "Get Started"
-msgstr "Začíname"
-
-#: includes/js-config.php:74
-msgid "Choose a Template"
-msgstr "Voľba šablóny"
-
-#: includes/js-config.php:75
-msgid ""
-"Get started by choosing a layout template to customize, or build a page from "
-"scratch by selecting the blank layout template."
-msgstr ""
-"Začnite voľbou šablóny, ktorú chcete upraviť, alebo nastavte prázdnu šablónu "
-"pre vytvorenie vlastného rozloženia stránky."
-
-#: includes/js-config.php:76
-msgid "Add Rows"
-msgstr "Pridajte riadky"
-
-#: includes/js-config.php:77
-msgid ""
-"Add mulit-column rows, adjust spacing, add backgrounds and more by dragging "
-"and dropping row layouts onto the page."
-msgstr ""
-"Pridajte viacstĺpcové riadky, upravte odsadenie, pozadie a iné nastavenia "
-"uchopením a pretiahnutím rozloženia riadka na stránku."
-
-#: includes/js-config.php:78 includes/ui.php:49
-msgid "Add Content"
-msgstr "Pridať obsah"
-
-#: includes/js-config.php:79
-msgid ""
-"Add new content by dragging and dropping modules or widgets into your row "
-"layouts or to create a new row layout."
-msgstr ""
-"Pridajte nový obsah uchopením a pretiahnutím modulov alebo widgetov do "
-"existujúcich riadkov alebo vytvorte nový riadok."
-
-#: includes/js-config.php:80
-msgid "Edit Content"
-msgstr "Upravte obsah"
-
-#: includes/js-config.php:81
-msgid ""
-"Move your mouse over rows, columns or modules to edit and interact with them."
-msgstr ""
-"Presunutím myši ponad riadok, stĺpec alebo modul budete môcť tieto elementy "
-"upraviť."
-
-#: includes/js-config.php:82
-msgid ""
-"Use the action buttons to perform actions such as moving, editing, "
-"duplicating, accessing individual column settings or deleting rows, columns "
-"and modules."
-msgstr ""
-"Použite tlačidlá akcií pre premiestnenie, editáciu, duplikáciu, nastavenie "
-"stĺpca alebo odstránenie elementov."
-
-#: includes/js-config.php:83
-msgid "Add More Content"
-msgstr "Pridajte viac obsahu"
-
-#: includes/js-config.php:84
-msgid ""
-"Use the Add Content button to open the content panel and add new row layouts "
-"or content."
-msgstr ""
-"Použite tlačidlo Pridať obsah pre otvorenie panelu obsahu a pridajte nové "
-"rozloženia riadkov alebo obsah."
-
-#: includes/js-config.php:85
-msgid "Change Templates"
-msgstr "Zmeňte šablóny"
-
-#: includes/js-config.php:86
-msgid ""
-"Use the Templates button to pick a new template or append one to your "
-"layout. Appending will insert a new template at the end of your existing "
-"page content."
-msgstr ""
-"Pomocou tlačidla Šablóny vyberte novú šablónu alebo nejakú pridajte k "
-"existujúcemu rozloženiu stránky. Pridaním šablóny ju zobrazíte na konci "
-"existujúceho rozloženia obsahu stránky."
-
-#: includes/js-config.php:87
-msgid "Helpful Tools"
-msgstr "Pomocné nástroje"
-
-#: includes/js-config.php:88
-msgid ""
-"The Tools button lets you duplicate a page, save a template or edit the "
-"global settings."
-msgstr ""
-"Tlačidlo Nástroje umožní duplikovať stránky, uložiť šablóny alebo upraviť "
-"globálne nastavenia."
-
-#: includes/js-config.php:89
-msgid "Publish Your Changes"
-msgstr "Publikujte zmeny"
-
-#: includes/js-config.php:90
-msgid ""
-"Once you're finished, click the Done button to publish your changes, save a "
-"draft or revert back to the last published state."
-msgstr ""
-"Ak s úpravami skončíte, kliknite tlačidlo Hotovo pre publikáciu vašich "
-"zmien, uloženie alebo zahodenie konceptu."
-
-#: includes/js-config.php:91
-msgid "Let's Get Building!"
-msgstr "Začnite tvoriť!"
-
-#: includes/js-config.php:92
-msgid ""
-"Now that you know the basics, you're ready to start building! If at any time "
-"you need help, click the help icon in the upper right corner to access the "
-"help menu. Happy building!"
-msgstr ""
-"Teraz, keď už ovládate základy, ste pripravení tvoriť vlastné stránky! Ak "
-"budete znovu potrebovať pomoc, kliknite na ikonku pomoci v pravom hornom "
-"rohu."
-
-#: includes/js-config.php:93
-msgid ""
-"The settings you are currently editing will not be saved if you navigate "
-"away from this page."
-msgstr ""
-"Nastavenia, ktoré práve vykonávate, sa neuložia ak odídete z tejto stránky."
-
-#: includes/js-config.php:94
-msgid "View the Knowledge Base"
-msgstr "Prezrieť databázu poznatkov"
-
-#: includes/js-config.php:95
-msgid "Visit the Forums"
-msgstr "Navštíviť fóra"
-
-#: includes/js-config.php:96
-msgid "Watch the Video"
-msgstr "Pozrieť video"
-
-#: includes/js-config.php:97
-msgid ""
-"Welcome! It looks like this might be your first time using the builder. "
-"Would you like to take a tour?"
-msgstr ""
-"Vitajte! Stretávate sa s editorom stránok po prvýkrát? Prajete si spustiť "
-"pomocného sprievodcu?"
-
-#: includes/js-config.php:98
-msgid "Yes Please!"
-msgstr "Áno prosím!"
-
-#: includes/loop-settings.php:19
+#: includes/loop-settings.php:20
 msgid "Post Type"
 msgstr "Typ článku"
 
-#: includes/loop-settings.php:25
+#: includes/loop-settings.php:26
 msgid "Order By"
 msgstr "Zoradit podľa"
 
-#: includes/loop-settings.php:28 modules/post-grid/post-grid.php:155
+#: includes/loop-settings.php:29 modules/post-grid/post-grid.php:155
 #: modules/woocommerce/woocommerce.php:189
 msgid "Date"
 msgstr "Dátum"
 
-#: includes/loop-settings.php:29
+#: includes/loop-settings.php:30
 msgid "Date Last Modified"
 msgstr "Dátum poslednej zmeny"
 
-#: includes/loop-settings.php:30 modules/pricing-table/pricing-table.php:90
+#: includes/loop-settings.php:31 modules/pricing-table/pricing-table.php:90
 #: modules/pricing-table/pricing-table.php:94
 msgid "Title"
 msgstr "Nadpis"
 
-#: includes/loop-settings.php:31 modules/post-grid/post-grid.php:146
+#: includes/loop-settings.php:32 modules/post-grid/post-grid.php:146
 msgid "Author"
 msgstr "Autor"
 
-#: includes/loop-settings.php:32
+#: includes/loop-settings.php:33
 msgid "Comment Count"
 msgstr "Počet komentárov"
 
-#: includes/loop-settings.php:33
+#: includes/loop-settings.php:34
 msgid "Menu Order"
 msgstr "Nastavené poradie"
 
-#: includes/loop-settings.php:34
+#: includes/loop-settings.php:35
 msgid "Random"
 msgstr "Náhodne"
 
-#: includes/loop-settings.php:41
+#: includes/loop-settings.php:42
 msgid "Order"
 msgstr "Zoradiť"
 
-#: includes/loop-settings.php:43
+#: includes/loop-settings.php:44 modules/woocommerce/woocommerce.php:199
 msgid "Descending"
 msgstr "Zostupne"
 
-#: includes/loop-settings.php:44
+#: includes/loop-settings.php:45 modules/woocommerce/woocommerce.php:198
 msgid "Ascending"
 msgstr "Vzostupne"
 
 #: includes/loop-settings.php:52
+msgid "Offset"
+msgstr "Kompenzácia"
+
+#: includes/loop-settings.php:55
+msgid "Skip this many posts that match the specified criteria."
+msgstr "Preskočiť zadaný počet článkov."
+
+#: includes/loop-settings.php:62
 msgid "Filter"
 msgstr "Filter"
 
-#: includes/loop-settings.php:63
+#: includes/loop-settings.php:73
 #, php-format
 msgid "Enter a comma separated list of %s. Only these %s will be shown."
 msgstr "%s: zadajte čiarkou oddelený zoznam. Zobrazia sa iba tieto %s."
 
-#: includes/loop-settings.php:76
+#: includes/loop-settings.php:86
 #, php-format
 msgid ""
 "Enter a comma separated list of %s. Only posts with these %s will be shown."
@@ -1627,11 +1610,11 @@ msgstr ""
 "%s: zadajte čiarkou oddelený zoznam. %s sa použije na filtrované zobrazenie "
 "článkov."
 
-#: includes/loop-settings.php:90
+#: includes/loop-settings.php:100
 msgid "Authors"
 msgstr "Autori"
 
-#: includes/loop-settings.php:91
+#: includes/loop-settings.php:101
 msgid ""
 "Enter a comma separated list of authors usernames. Only posts with these "
 "authors will be shown."
@@ -1720,6 +1703,10 @@ msgid ""
 msgstr ""
 "Trieda aplikovaná na HTML tohto modulu. Musí začínať písmenom a obsahovať "
 "iba pomlčky, podtržníky, písmená a čísla. Viaceré triedy oddeľte medzerami."
+
+#: includes/row-settings.php:6
+msgid "Row Settings"
+msgstr "Nastavenia riadku"
 
 #: includes/row-settings.php:16 modules/button/button.php:188
 #: modules/content-slider/content-slider.php:483
@@ -2103,6 +2090,10 @@ msgstr ""
 "Trieda aplikovaná na HTML tohto riadka. Musí začínať písmenom a obsahovať "
 "iba pomlčky, podtržníky, písmená a čísla. Viaceré triedy oddeľte medzerami."
 
+#: includes/service-settings.php:32
+msgid "Service"
+msgstr "Služba"
+
 #: includes/settings.php:62
 msgid "Save"
 msgstr "Uložiť"
@@ -2159,6 +2150,10 @@ msgstr ""
 msgid "Template: %s"
 msgstr "Šablóna: %s"
 
+#: includes/ui.php:10 includes/user-template-settings.php:4
+msgid "Save Template"
+msgstr "Uložiť šablónu"
+
 #: includes/ui.php:23
 msgid "Page Builder Demo"
 msgstr "Demo Editora stránok"
@@ -2171,9 +2166,17 @@ msgstr "Zakúpiť ihneď!"
 msgid "Upgrade!"
 msgstr "Aktualizovať!"
 
+#: includes/ui.php:44
+msgid "Done"
+msgstr "Hotovo"
+
 #: includes/ui.php:45
 msgid "Tools"
 msgstr "Nástroje"
+
+#: includes/ui.php:49
+msgid "Add Content"
+msgstr "Pridať obsah"
 
 #: includes/ui.php:67
 msgid "Row Layouts"
@@ -2260,10 +2263,6 @@ msgstr ""
 "Zadajte svoj <a%s>licenčný kľúč</a> pre aktiváciu automatických aktualizácií "
 "a technickej podpory."
 
-#: includes/updater/includes/form.php:39
-msgid "Save Subscription Settings"
-msgstr "Uložiť nastavenia registrácie"
-
 #: includes/user-template-settings.php:8
 msgid ""
 "Save the current layout as a template that can be reused under "
@@ -2336,7 +2335,7 @@ msgid "Label"
 msgstr "Nadpis"
 
 #: modules/accordion/accordion.php:122 modules/post-grid/post-grid.php:195
-#: modules/post-grid/post-grid.php:199 modules/post-grid/post-grid.php:235
+#: modules/post-grid/post-grid.php:199 modules/post-grid/post-grid.php:234
 #: modules/tabs/tabs.php:89
 msgid "Content"
 msgstr "Obsah"
@@ -2344,6 +2343,7 @@ msgstr "Obsah"
 #: modules/button/button.php:14 modules/callout/callout.php:479
 #: modules/content-slider/content-slider.php:601 modules/cta/cta.php:214
 #: modules/pricing-table/pricing-table.php:129
+#: modules/subscribe-form/subscribe-form.php:160
 msgid "Button"
 msgstr "Tlačidlo"
 
@@ -2409,6 +2409,7 @@ msgstr "Farby"
 #: modules/callout/callout.php:514
 #: modules/content-slider/content-slider.php:636 modules/cta/cta.php:270
 #: modules/icon-group/icon-group.php:69 modules/icon/icon.php:100
+#: modules/subscribe-form/subscribe-form.php:188
 msgid "Background Hover Color"
 msgstr "Farba pozadia po prechode myšou"
 
@@ -2417,16 +2418,19 @@ msgstr "Farba pozadia po prechode myšou"
 #: modules/content-slider/content-slider.php:641
 #: modules/content-slider/content-slider.php:754 modules/cta/cta.php:191
 #: modules/cta/cta.php:279 modules/heading/heading.php:77
+#: modules/subscribe-form/subscribe-form.php:197
 msgid "Text Color"
 msgstr "Farba textu"
 
 #: modules/button/button.php:136 modules/callout/callout.php:529
 #: modules/content-slider/content-slider.php:647 modules/cta/cta.php:285
+#: modules/subscribe-form/subscribe-form.php:203
 msgid "Text Hover Color"
 msgstr "Farba textu po prechode myšou"
 
 #: modules/button/button.php:153 modules/callout/callout.php:546
 #: modules/content-slider/content-slider.php:660 modules/cta/cta.php:302
+#: modules/subscribe-form/subscribe-form.php:220
 msgid "Flat"
 msgstr "Plochý"
 
@@ -2434,29 +2438,33 @@ msgstr "Plochý"
 #: modules/callout/callout.php:547
 #: modules/content-slider/content-slider.php:661 modules/cta/cta.php:303
 #: modules/icon-group/icon-group.php:77 modules/icon/icon.php:108
+#: modules/subscribe-form/subscribe-form.php:221
 msgid "Gradient"
 msgstr "Gradient"
 
 #: modules/button/button.php:155 modules/callout/callout.php:548
 #: modules/content-slider/content-slider.php:662 modules/cta/cta.php:304
+#: modules/subscribe-form/subscribe-form.php:222
 msgid "Transparent"
 msgstr "Priehľadný"
 
 #: modules/button/button.php:165 modules/callout/callout.php:558
 #: modules/content-slider/content-slider.php:672 modules/cta/cta.php:314
 #: modules/pricing-table/pricing-table.php:67
+#: modules/subscribe-form/subscribe-form.php:232
 msgid "Border Size"
 msgstr "Veľkosť okraja"
 
 #: modules/button/button.php:174 modules/callout/callout.php:567
 #: modules/content-slider/content-slider.php:681 modules/cta/cta.php:203
-#: modules/cta/cta.php:323
+#: modules/cta/cta.php:323 modules/subscribe-form/subscribe-form.php:241
 msgid "Background Opacity"
 msgstr "Nepriehľadnosť pozadia"
 
 #: modules/button/button.php:184 modules/callout/callout.php:244
 #: modules/cta/cta.php:104 modules/heading/heading.php:82
 #: modules/icon-group/icon-group.php:87 modules/icon/icon.php:118
+#: modules/subscribe-form/subscribe-form.php:94
 msgid "Structure"
 msgstr "Štruktúra"
 
@@ -2479,11 +2487,12 @@ msgstr "Zarovnanie"
 #: modules/button/button.php:225 modules/callout/callout.php:590
 #: modules/content-slider/content-slider.php:695 modules/cta/cta.php:337
 #: modules/heading/heading.php:114 modules/heading/heading.php:171
+#: modules/subscribe-form/subscribe-form.php:255
 msgid "Font Size"
 msgstr "Veľkosť písma"
 
 #: modules/button/button.php:241 modules/callout/callout.php:606
-#: modules/cta/cta.php:353
+#: modules/cta/cta.php:353 modules/subscribe-form/subscribe-form.php:271
 msgid "Round Corners"
 msgstr "Zaoblené rohy"
 
@@ -2639,21 +2648,25 @@ msgstr "Žiadna"
 
 #: modules/callout/callout.php:498
 #: modules/content-slider/content-slider.php:620
+#: modules/subscribe-form/subscribe-form.php:172
 msgid "Button Icon"
 msgstr "Ikonka tlačidla"
 
 #: modules/callout/callout.php:504
 #: modules/content-slider/content-slider.php:626 modules/cta/cta.php:260
+#: modules/subscribe-form/subscribe-form.php:178
 msgid "Button Colors"
 msgstr "Farba tlačidla"
 
 #: modules/callout/callout.php:539
 #: modules/content-slider/content-slider.php:653 modules/cta/cta.php:295
+#: modules/subscribe-form/subscribe-form.php:213
 msgid "Button Style"
 msgstr "Štýl tlačidla"
 
 #: modules/callout/callout.php:577
 #: modules/content-slider/content-slider.php:691 modules/cta/cta.php:333
+#: modules/subscribe-form/subscribe-form.php:251
 msgid "Button Structure"
 msgstr "Štruktúra tlačidla"
 
@@ -2669,68 +2682,110 @@ msgstr "Kontaktný formulár"
 msgid "A very simple contact form."
 msgstr "Veľmi jednoduchý kontaktný formulár."
 
-#: modules/contact-form/contact-form.php:36
+#: modules/contact-form/contact-form.php:31
 msgid "Contact Form Submission"
 msgstr "Odoslanie kontaktného formulára"
 
-#: modules/contact-form/contact-form.php:64
+#: modules/contact-form/contact-form.php:41
+msgid "Message"
+msgstr "Správa"
+
+#: modules/contact-form/contact-form.php:65
 msgid "Send To Email"
 msgstr "Odoslať na e-mailovú adresu"
 
-#: modules/contact-form/contact-form.php:66
+#: modules/contact-form/contact-form.php:67
 msgid "example@mail.com"
 msgstr "priklad@posta.com"
 
-#: modules/contact-form/contact-form.php:67
+#: modules/contact-form/contact-form.php:68
 msgid "The contact form will send to this e-mail"
 msgstr "Kontaktný formulár sa odošle na túto e-mailovú adresu"
 
-#: modules/contact-form/includes/frontend.php:4
+#: modules/contact-form/contact-form.php:75
+#: modules/subscribe-form/subscribe-form.php:107
+msgid "Name Field"
+msgstr "Pole \"meno\""
+
+#: modules/contact-form/contact-form.php:78
+#: modules/contact-form/contact-form.php:87
+#: modules/contact-form/contact-form.php:96
+#: modules/contact-form/contact-form.php:105
+#: modules/post-grid/post-grid.php:116 modules/post-grid/post-grid.php:149
+#: modules/post-grid/post-grid.php:158 modules/post-grid/post-grid.php:188
+#: modules/post-grid/post-grid.php:202 modules/post-grid/post-grid.php:220
+msgid "Show"
+msgstr "Zobraziť"
+
+#: modules/contact-form/contact-form.php:79
+#: modules/contact-form/contact-form.php:88
+#: modules/contact-form/contact-form.php:97
+#: modules/contact-form/contact-form.php:106
+#: modules/post-grid/post-grid.php:117 modules/post-grid/post-grid.php:150
+#: modules/post-grid/post-grid.php:159 modules/post-grid/post-grid.php:189
+#: modules/post-grid/post-grid.php:203 modules/post-grid/post-grid.php:221
+msgid "Hide"
+msgstr "Skryť"
+
+#: modules/contact-form/contact-form.php:84
+msgid "Subject Field"
+msgstr "Pole \"predmet\""
+
+#: modules/contact-form/contact-form.php:93
+msgid "Email Field"
+msgstr "Pole \"e-mail\""
+
+#: modules/contact-form/contact-form.php:102
+msgid "Phone Field"
+msgstr "Pole \"telefón\""
+
+#: modules/contact-form/includes/frontend.php:5
 msgctxt "Contact form field label."
 msgid "Name"
 msgstr "Meno"
 
-#: modules/contact-form/includes/frontend.php:5
+#: modules/contact-form/includes/frontend.php:6
+#: modules/subscribe-form/includes/frontend.php:6
 msgid "Please enter your name."
 msgstr "Zadajte vaše meno."
 
-#: modules/contact-form/includes/frontend.php:6
-msgid "Your name"
-msgstr "Vaše meno"
+#: modules/contact-form/includes/frontend.php:13
+msgid "Subject"
+msgstr "Predmet"
 
-#: modules/contact-form/includes/frontend.php:10
+#: modules/contact-form/includes/frontend.php:14
+msgid "Please enter a subject."
+msgstr "Prosíme, zadajte predmet."
+
+#: modules/contact-form/includes/frontend.php:21
 msgid "Email"
 msgstr "E-mail"
 
-#: modules/contact-form/includes/frontend.php:11
+#: modules/contact-form/includes/frontend.php:22
 msgid "Please enter a valid email."
 msgstr "Zadajte vašu e-mailovú adresu."
 
-#: modules/contact-form/includes/frontend.php:12
-msgid "Your email"
-msgstr "Váš e-mail"
+#: modules/contact-form/includes/frontend.php:29
+msgid "Phone"
+msgstr "Telefón"
 
-#: modules/contact-form/includes/frontend.php:16
+#: modules/contact-form/includes/frontend.php:30
+msgid "Please enter a valid phone number."
+msgstr "Prosíme, zadajte platné telefónne číslo."
+
+#: modules/contact-form/includes/frontend.php:36
 msgid "Your Message"
 msgstr "Vaša správa"
 
-#: modules/contact-form/includes/frontend.php:17
+#: modules/contact-form/includes/frontend.php:37
 msgid "Please enter a message."
 msgstr "Zadajte vašu správu."
 
-#: modules/contact-form/includes/frontend.php:18
-msgid "Your message"
-msgstr "Vaša správa"
-
-#: modules/contact-form/includes/frontend.php:23
-msgid "Send"
-msgstr "Odoslať"
-
-#: modules/contact-form/includes/frontend.php:24
+#: modules/contact-form/includes/frontend.php:44
 msgid "Message Sent!"
 msgstr "Správa bola odoslaná!"
 
-#: modules/contact-form/includes/frontend.php:25
+#: modules/contact-form/includes/frontend.php:45
 msgid "Message failed. Please try again."
 msgstr "Správu nebolo možné odoslať. Skúste znovu."
 
@@ -2979,7 +3034,8 @@ msgid "Drop us a line today for a free quote!"
 msgstr "Napíšte nám ešte dnes pre bezplatnú konzultáciu!"
 
 #: modules/cta/cta.php:108 modules/gallery/gallery.php:220
-#: modules/post-grid/post-grid.php:44 modules/tabs/tabs.php:52
+#: modules/post-grid/post-grid.php:44
+#: modules/subscribe-form/subscribe-form.php:98 modules/tabs/tabs.php:52
 #: modules/testimonials/testimonials.php:37
 #: modules/woocommerce/woocommerce.php:57
 msgid "Layout"
@@ -3190,6 +3246,10 @@ msgstr "Žiadny"
 msgid "Photo File"
 msgstr "Súbor obrázku"
 
+#: modules/photo/photo.php:454
+msgid "Photo Page"
+msgstr "Stránka obrázku"
+
 #: modules/photo/photo.php:464
 msgid ""
 "Link type applies to how the image should be linked on click. You can choose "
@@ -3263,18 +3323,6 @@ msgstr "Rozostupy článkov"
 msgid "Featured Image"
 msgstr "Prezentačný obrázok"
 
-#: modules/post-grid/post-grid.php:116 modules/post-grid/post-grid.php:149
-#: modules/post-grid/post-grid.php:158 modules/post-grid/post-grid.php:188
-#: modules/post-grid/post-grid.php:202 modules/post-grid/post-grid.php:216
-msgid "Show"
-msgstr "Zobraziť"
-
-#: modules/post-grid/post-grid.php:117 modules/post-grid/post-grid.php:150
-#: modules/post-grid/post-grid.php:159 modules/post-grid/post-grid.php:189
-#: modules/post-grid/post-grid.php:203 modules/post-grid/post-grid.php:217
-msgid "Hide"
-msgstr "Skryť"
-
 #: modules/post-grid/post-grid.php:130
 msgid "Above Text"
 msgstr "Nad textom"
@@ -3295,15 +3343,27 @@ msgstr "Formát dátumu"
 msgid "Comments"
 msgstr "Komentáre"
 
-#: modules/post-grid/post-grid.php:213
+#: modules/post-grid/post-grid.php:208
+msgid "Content Type"
+msgstr "Typ obsahu"
+
+#: modules/post-grid/post-grid.php:211
+msgid "Excerpt"
+msgstr "Zhrnutie"
+
+#: modules/post-grid/post-grid.php:212
+msgid "Full Text"
+msgstr "Celý text"
+
+#: modules/post-grid/post-grid.php:217
 msgid "More Link"
 msgstr "Odkaz \"Čítať ďalej\""
 
-#: modules/post-grid/post-grid.php:227
+#: modules/post-grid/post-grid.php:226
 msgid "More Link Text"
 msgstr "Text odkazu \"Čítať ďalej\""
 
-#: modules/post-grid/post-grid.php:228
+#: modules/post-grid/post-grid.php:227
 msgid "Read More"
 msgstr "Čítať ďalej"
 
@@ -3371,6 +3431,7 @@ msgid "Price Box"
 msgstr "Cenový box"
 
 #: modules/pricing-table/pricing-table.php:111
+#: modules/woocommerce/woocommerce.php:190
 msgid "Price"
 msgstr "Cena"
 
@@ -3387,6 +3448,7 @@ msgid "Price Size"
 msgstr "Veľkosť ceny"
 
 #: modules/pricing-table/pricing-table.php:133
+#: modules/subscribe-form/subscribe-form.php:167
 msgid "Button Text"
 msgstr "Text tlačidla"
 
@@ -3681,6 +3743,62 @@ msgstr "Zobraziť Twitter"
 msgid "Show Google+"
 msgstr "Zobraziť Google+"
 
+#: modules/subscribe-form/includes/frontend.php:5
+msgctxt "First and last name."
+msgid "Name"
+msgstr "Meno"
+
+#: modules/subscribe-form/includes/frontend.php:12
+msgid "Please enter a valid email address."
+msgstr "Prosíme, zadajte platnú e-mailovú adresu."
+
+#: modules/subscribe-form/includes/frontend.php:40
+msgid "Something went wrong. Please check your entries and try again."
+msgstr "Došlo k chybe. Prosíme, skontrolujte zadané údaje a skúste znovu."
+
+#: modules/subscribe-form/subscribe-form.php:18
+msgid "Subscribe Form"
+msgstr "Formulár odberu"
+
+#: modules/subscribe-form/subscribe-form.php:19
+msgid "Adds a simple subscribe form to your layout."
+msgstr "Pridá jednoduchý formulár pre registráciu odberov."
+
+#: modules/subscribe-form/subscribe-form.php:72
+msgid "There was an error subscribing. Please try again."
+msgstr "Počas registrácie došlo k chybe. Prosíme, skúste znovu."
+
+#: modules/subscribe-form/subscribe-form.php:117
+msgid "Success"
+msgstr "Úspech"
+
+#: modules/subscribe-form/subscribe-form.php:121
+msgid "Success Action"
+msgstr "Akcia úspechu"
+
+#: modules/subscribe-form/subscribe-form.php:123
+msgid "Show Message"
+msgstr "Zobraziť správu"
+
+#: modules/subscribe-form/subscribe-form.php:124
+msgid "Redirect"
+msgstr "Presmerovať"
+
+#: modules/subscribe-form/subscribe-form.php:143
+msgid ""
+"Thanks for subscribing! Please check your email for further instructions."
+msgstr ""
+"Vďaka za registráciu! Prosíme, skontrolujte svoj e-mail pre ďalšie "
+"inštrukcie."
+
+#: modules/subscribe-form/subscribe-form.php:150
+msgid "Success URL"
+msgstr "URL úspechu"
+
+#: modules/subscribe-form/subscribe-form.php:168
+msgid "Subscribe!"
+msgstr "Registrovať!"
+
 #: modules/tabs/tabs.php:14
 msgid "Tabs"
 msgstr "Záložky"
@@ -3759,7 +3877,7 @@ msgid "Loop"
 msgstr "Prehrávať v slučke"
 
 #: modules/widget/includes/frontend.php:35
-#: modules/widget/includes/settings-general.php:44
+#: modules/widget/includes/settings-general.php:46
 #, php-format
 msgctxt "%s stands for widget slug."
 msgid "%s no longer exists."
@@ -3780,10 +3898,6 @@ msgstr "WooCommerce"
 #: modules/woocommerce/woocommerce.php:17
 msgid "Display products or categories from your WooCommerce store."
 msgstr "Zobrazí produkty alebo kategórie z vášho WooCommerce obchodu."
-
-#: modules/woocommerce/woocommerce.php:60
-msgid "Choose..."
-msgstr "Zvoľte..."
 
 #: modules/woocommerce/woocommerce.php:61
 msgid "Single Product"
@@ -3941,13 +4055,358 @@ msgstr "Popularity"
 msgid "Rating"
 msgstr "Hodnotenia"
 
-#: modules/woocommerce/woocommerce.php:190
-msgid "Price: Low to High"
-msgstr "Ceny: od najnižšej po najvyššiu"
+#: modules/woocommerce/woocommerce.php:195
+msgid "Sort Direction"
+msgstr "Smer triedenia"
 
-#: modules/woocommerce/woocommerce.php:191
-msgid "Price: High to Low"
-msgstr "Ceny: od najvyššej po najnižšiu"
+#~ msgctxt "%s stands for custom branded \"Page Builder\" name."
+#~ msgid ""
+#~ "Switching to Text Editor mode will disable your %s layout until it is "
+#~ "enabled again. Any edits made while in Text Editor mode will not be made "
+#~ "on your %s layout. Do you want to continue?"
+#~ msgstr ""
+#~ "Prepnutím do režimu textového editora vypnete rozloženie %s, pokým ho "
+#~ "znovu neaktivujete. Akékoľve zmeny vykonané v režime textového editora sa "
+#~ "neaplikujú na rozloženie %s. Prajete si pokračovať?"
+
+#~ msgid "Save Branding"
+#~ msgstr "Uložiť nastavenie značky"
+
+#~ msgid "Save Editing Settings"
+#~ msgstr "Uložiť nastavenia editácie"
+
+#~ msgid "Save Help Button Settings"
+#~ msgstr "Uložiť nastavenia tlačidla pomoci"
+
+#~ msgid "Upload Icon Set"
+#~ msgstr "Nahrať sadu ikoniek"
+
+#~ msgid "Save Icon Settings"
+#~ msgstr "Uložiť nastavenia ikoniek"
+
+#~ msgid "Select File"
+#~ msgstr "Zvoliť súbor"
+
+#~ msgid ""
+#~ "Please type \"uninstall\" in the box below to confirm that you really "
+#~ "want to uninstall the page builder and all of its data."
+#~ msgstr ""
+#~ "Zadajte \"uninstall\" pre potvrdenie odinštalovania editora stránok a "
+#~ "odstránenia všetkých jeho dát."
+
+#~ msgid "Save Module Settings"
+#~ msgstr "Uložiť nastavenia modulov"
+
+#~ msgid "Save Post Types"
+#~ msgstr "Uložiť typy obsahu"
+
+#~ msgid "Save Template Settings"
+#~ msgstr "Uložiť nastavenia šablón"
+
+#~ msgid "Start typing..."
+#~ msgstr "Začnite písať..."
+
+#~ msgid "What would you like to do?"
+#~ msgstr "Čo si prajete urobiť?"
+
+#~ msgid "Change Template"
+#~ msgstr "Zmeniť šablónu"
+
+#~ msgid ""
+#~ "Warning! Changing the template will replace your existing layout. Do you "
+#~ "really want to do this?"
+#~ msgstr ""
+#~ "Pozor! Zmenou šablóny nahradíte existujúce rozloženie. Naozaj to chcete "
+#~ "urobiť?"
+
+#~ msgid "Column"
+#~ msgstr "Stĺpec"
+
+#~ msgid ""
+#~ "Please select either a background layout or content layout before "
+#~ "submitting."
+#~ msgstr "Najskôr zvoľte rozloženie pozadia alebo obsahu."
+
+#~ msgid "Do you really want to delete this item?"
+#~ msgstr "Naozaj chcete túto položku odstrániť?"
+
+#~ msgid ""
+#~ "Do you really want to delete this module? All content data will be "
+#~ "permanently deleted."
+#~ msgstr ""
+#~ "Naozaj chcete tento modul odstrániť? Všetky dáta jeho obsahu budu "
+#~ "vymazané."
+
+#~ msgid ""
+#~ "Do you really want to delete this row? All content data will be "
+#~ "permanently deleted."
+#~ msgstr ""
+#~ "Naozaj chcete odstrániť tento riadok? Všetok obsah riadku bude vymazaný."
+
+#~ msgid "Discard Draft"
+#~ msgstr "Zahodiť koncept"
+
+#~ msgid ""
+#~ "Do you really want to discard this draft? All of your changes that are "
+#~ "not published will be lost."
+#~ msgstr ""
+#~ "Naozaj chcete zahodiť vytvorený koncept? Stratíte všetky zmeny, ktoré nie "
+#~ "sú publikované."
+
+#~ msgid "Save Draft"
+#~ msgstr "Uložiť koncept"
+
+#~ msgid "Duplicate This Page"
+#~ msgstr "Duplikovať túto stránku"
+
+#~ msgid "Duplicate This Template"
+#~ msgstr "Duplikovať túto šablónu"
+
+#~ msgid "Edit Global Settings"
+#~ msgstr "Upraviť globálne nastavenia"
+
+#~ msgid "Drop a row layout or module to get started!"
+#~ msgstr "Začnite vložením riadku alebo modulu!"
+
+#~ msgid ""
+#~ "Beaver Builder caught the following JavaScript error. If Beaver Builder "
+#~ "is not functioning as expected the cause is most likely this error. "
+#~ "Please help us by disabling all plugins and testing Beaver Builder while "
+#~ "reactivating each to determine if the issue is related to a third party "
+#~ "plugin."
+#~ msgstr ""
+#~ "Beaver Builder zaznamenal nasledovnú JavaScript chybu. Ak Beaver Builder "
+#~ "nefunguje správne, dôvodom je pravdepodobne táto chyba. Pomôžte nám "
+#~ "deaktiváciou ostatných modulov a otestovaním Beaver Builder modulu počas "
+#~ "opätovnej, postupnej aktivácie ostatných modulov pre zistenie, či je "
+#~ "problém spôsobený jedným z týchto modulov."
+
+#~ msgid "Full Size"
+#~ msgstr "Pôvodná veľkosť"
+
+#~ msgid "Get Help"
+#~ msgstr "Získať pomoc"
+
+#~ msgid "Getting Started Video"
+#~ msgstr "Video \"Začíname\""
+
+#~ msgid "Insert"
+#~ msgstr "Vložiť"
+
+#~ msgid "Large"
+#~ msgstr "Veľké"
+
+#~ msgid "Manage Templates"
+#~ msgstr "Správa šablón"
+
+#~ msgid "Medium"
+#~ msgstr "Stredné"
+
+#~ msgid "Module"
+#~ msgstr "Modul"
+
+#~ msgid "Move"
+#~ msgstr "Presunúť"
+
+#~ msgid "New Column"
+#~ msgstr "Nový stĺpec"
+
+#~ msgid "New Row"
+#~ msgstr "Nový riadok"
+
+#~ msgid "No results found."
+#~ msgstr "Nenašli sa žiadne záznamy."
+
+#~ msgid "No Thanks"
+#~ msgstr "Nie, vďaka"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Photo Selected"
+#~ msgstr "Obrázok bol zvolený"
+
+#~ msgid "Photos Selected"
+#~ msgstr "Obrázky boli zvolené"
+
+#~ msgid "Publish Changes"
+#~ msgstr "Publikovať zmeny"
+
+#~ msgid "Row"
+#~ msgstr "Riadok"
+
+#~ msgid "Save Core Template"
+#~ msgstr "Uložiť základnú šablónu"
+
+#~ msgid "Select Photos"
+#~ msgstr "Zvoliť obrázky"
+
+#~ msgid "Take a Tour"
+#~ msgstr "Spustiť sprievodcu"
+
+#~ msgid "Append New Layout"
+#~ msgstr "Pridať nové rozloženie"
+
+#~ msgid "Replace Existing Layout"
+#~ msgstr "Nahradiť existujúce rozloženie"
+
+#~ msgid "Template Saved!"
+#~ msgstr "Šablóna bola uložená!"
+
+#~ msgid "Thumbnail"
+#~ msgstr "Miniatúra"
+
+#~ msgid "Next"
+#~ msgstr "Ďalej"
+
+#~ msgid "Get Started"
+#~ msgstr "Začíname"
+
+#~ msgid "Choose a Template"
+#~ msgstr "Voľba šablóny"
+
+#~ msgid ""
+#~ "Get started by choosing a layout template to customize, or build a page "
+#~ "from scratch by selecting the blank layout template."
+#~ msgstr ""
+#~ "Začnite voľbou šablóny, ktorú chcete upraviť, alebo nastavte prázdnu "
+#~ "šablónu pre vytvorenie vlastného rozloženia stránky."
+
+#~ msgid "Add Rows"
+#~ msgstr "Pridajte riadky"
+
+#~ msgid ""
+#~ "Add mulit-column rows, adjust spacing, add backgrounds and more by "
+#~ "dragging and dropping row layouts onto the page."
+#~ msgstr ""
+#~ "Pridajte viacstĺpcové riadky, upravte odsadenie, pozadie a iné nastavenia "
+#~ "uchopením a pretiahnutím rozloženia riadka na stránku."
+
+#~ msgid ""
+#~ "Add new content by dragging and dropping modules or widgets into your row "
+#~ "layouts or to create a new row layout."
+#~ msgstr ""
+#~ "Pridajte nový obsah uchopením a pretiahnutím modulov alebo widgetov do "
+#~ "existujúcich riadkov alebo vytvorte nový riadok."
+
+#~ msgid "Edit Content"
+#~ msgstr "Upravte obsah"
+
+#~ msgid ""
+#~ "Move your mouse over rows, columns or modules to edit and interact with "
+#~ "them."
+#~ msgstr ""
+#~ "Presunutím myši ponad riadok, stĺpec alebo modul budete môcť tieto "
+#~ "elementy upraviť."
+
+#~ msgid ""
+#~ "Use the action buttons to perform actions such as moving, editing, "
+#~ "duplicating, accessing individual column settings or deleting rows, "
+#~ "columns and modules."
+#~ msgstr ""
+#~ "Použite tlačidlá akcií pre premiestnenie, editáciu, duplikáciu, "
+#~ "nastavenie stĺpca alebo odstránenie elementov."
+
+#~ msgid "Add More Content"
+#~ msgstr "Pridajte viac obsahu"
+
+#~ msgid ""
+#~ "Use the Add Content button to open the content panel and add new row "
+#~ "layouts or content."
+#~ msgstr ""
+#~ "Použite tlačidlo Pridať obsah pre otvorenie panelu obsahu a pridajte nové "
+#~ "rozloženia riadkov alebo obsah."
+
+#~ msgid "Change Templates"
+#~ msgstr "Zmeňte šablóny"
+
+#~ msgid ""
+#~ "Use the Templates button to pick a new template or append one to your "
+#~ "layout. Appending will insert a new template at the end of your existing "
+#~ "page content."
+#~ msgstr ""
+#~ "Pomocou tlačidla Šablóny vyberte novú šablónu alebo nejakú pridajte k "
+#~ "existujúcemu rozloženiu stránky. Pridaním šablóny ju zobrazíte na konci "
+#~ "existujúceho rozloženia obsahu stránky."
+
+#~ msgid "Helpful Tools"
+#~ msgstr "Pomocné nástroje"
+
+#~ msgid ""
+#~ "The Tools button lets you duplicate a page, save a template or edit the "
+#~ "global settings."
+#~ msgstr ""
+#~ "Tlačidlo Nástroje umožní duplikovať stránky, uložiť šablóny alebo upraviť "
+#~ "globálne nastavenia."
+
+#~ msgid "Publish Your Changes"
+#~ msgstr "Publikujte zmeny"
+
+#~ msgid ""
+#~ "Once you're finished, click the Done button to publish your changes, save "
+#~ "a draft or revert back to the last published state."
+#~ msgstr ""
+#~ "Ak s úpravami skončíte, kliknite tlačidlo Hotovo pre publikáciu vašich "
+#~ "zmien, uloženie alebo zahodenie konceptu."
+
+#~ msgid "Let's Get Building!"
+#~ msgstr "Začnite tvoriť!"
+
+#~ msgid ""
+#~ "Now that you know the basics, you're ready to start building! If at any "
+#~ "time you need help, click the help icon in the upper right corner to "
+#~ "access the help menu. Happy building!"
+#~ msgstr ""
+#~ "Teraz, keď už ovládate základy, ste pripravení tvoriť vlastné stránky! Ak "
+#~ "budete znovu potrebovať pomoc, kliknite na ikonku pomoci v pravom hornom "
+#~ "rohu."
+
+#~ msgid ""
+#~ "The settings you are currently editing will not be saved if you navigate "
+#~ "away from this page."
+#~ msgstr ""
+#~ "Nastavenia, ktoré práve vykonávate, sa neuložia ak odídete z tejto "
+#~ "stránky."
+
+#~ msgid "View the Knowledge Base"
+#~ msgstr "Prezrieť databázu poznatkov"
+
+#~ msgid "Visit the Forums"
+#~ msgstr "Navštíviť fóra"
+
+#~ msgid "Watch the Video"
+#~ msgstr "Pozrieť video"
+
+#~ msgid ""
+#~ "Welcome! It looks like this might be your first time using the builder. "
+#~ "Would you like to take a tour?"
+#~ msgstr ""
+#~ "Vitajte! Stretávate sa s editorom stránok po prvýkrát? Prajete si spustiť "
+#~ "pomocného sprievodcu?"
+
+#~ msgid "Yes Please!"
+#~ msgstr "Áno prosím!"
+
+#~ msgid "Save Subscription Settings"
+#~ msgstr "Uložiť nastavenia registrácie"
+
+#~ msgid "Your name"
+#~ msgstr "Vaše meno"
+
+#~ msgid "Your email"
+#~ msgstr "Váš e-mail"
+
+#~ msgid "Your message"
+#~ msgstr "Vaša správa"
+
+#~ msgid "Send"
+#~ msgstr "Odoslať"
+
+#~ msgid "Price: Low to High"
+#~ msgstr "Ceny: od najnižšej po najvyššiu"
+
+#~ msgid "Price: High to Low"
+#~ msgstr "Ceny: od najvyššej po najnižšiu"
 
 #~ msgctxt "Fontello icon set with no name."
 #~ msgid "Fontello (Unnamed)"

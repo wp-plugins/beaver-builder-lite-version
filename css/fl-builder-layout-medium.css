@@ -3,10 +3,10 @@
 
 .fl-visible-desktop,
 .fl-visible-mobile {
-    display: none;
+	display: none;
 }
 .fl-visible-desktop-medium,
 .fl-visible-medium,
 .fl-visible-medium-mobile {
-    display: block;
+	display: block;
 }

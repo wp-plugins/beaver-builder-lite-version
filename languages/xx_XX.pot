@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: {FL_BUILDER_NAME}\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-22 13:17-0800\n"
-"PO-Revision-Date: 2015-03-22 13:18-0800\n"
+"POT-Creation-Date: 2015-04-15 14:59-0800\n"
+"PO-Revision-Date: 2015-04-15 15:00-0800\n"
 "Last-Translator: Alessandro Curci <hantarex@gmail.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -13,14 +13,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.7.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e;__ngettext:1,2;_n:1,2;"
+"__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: ../\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:93
+#: classes/class-fl-builder-admin-settings.php:116
 #: includes/global-settings.php:4
 #, php-format
 msgctxt "%s stands for custom branded \"Page Builder\" name."
@@ -28,89 +29,94 @@ msgid "%s Settings"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:107
+#: classes/class-fl-builder-admin-settings.php:133
 msgid "Settings updated!"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:118
+#: classes/class-fl-builder-admin-settings.php:147
 msgid "License"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:122
+#: classes/class-fl-builder-admin-settings.php:151
 #: includes/admin-settings-upgrade.php:3
 msgid "Upgrade"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:126
+#: classes/class-fl-builder-admin-settings.php:155
 #: includes/global-settings.php:90
 msgid "Modules"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:130 includes/ui.php:47
+#: classes/class-fl-builder-admin-settings.php:159 includes/ui.php:47
 msgid "Templates"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:134
+#: classes/class-fl-builder-admin-settings.php:163
 #: includes/admin-settings-post-types.php:3
 msgid "Post Types"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:138
+#: classes/class-fl-builder-admin-settings.php:167
 #: modules/icon-group/icon-group.php:27
 msgid "Icons"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:142
+#: classes/class-fl-builder-admin-settings.php:171
 msgid "Editing"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:146
+#: classes/class-fl-builder-admin-settings.php:175
 #: includes/admin-settings-branding.php:3
 msgid "Branding"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:150
+#: classes/class-fl-builder-admin-settings.php:179
 msgid "Help Button"
 msgstr ""
 
+#: classes/class-fl-builder-admin-settings.php:183
+#: includes/admin-settings-cache.php:3
+msgid "Cache"
+msgstr ""
+
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:154
+#: classes/class-fl-builder-admin-settings.php:187
 #: includes/admin-settings-uninstall.php:3
 #: includes/admin-settings-uninstall.php:15
 msgid "Uninstall"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:376
+#: classes/class-fl-builder-admin-settings.php:450
 msgid "Error! You must have at least one icon set enabled."
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:418
+#: classes/class-fl-builder-admin-settings.php:492
 msgid "Error! Could not unzip file."
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:452
+#: classes/class-fl-builder-admin-settings.php:526
 msgid "Error! Please upload an icon set from either Icomoon or Fontello."
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:566
+#: classes/class-fl-builder-admin-settings.php:648
 msgid "Error! Please enter an iframe for the video embed code."
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:584
+#: classes/class-fl-builder-admin-settings.php:666
 msgid "Error! You must have at least one feature of the help button enabled."
 msgstr ""
 
@@ -144,12 +150,12 @@ msgstr ""
 
 # @ fl-builder
 #: classes/class-fl-builder-admin.php:202
-#: classes/class-fl-builder-model.php:2613
+#: classes/class-fl-builder-model.php:2606
 msgid "Page Builder"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:1404
+#: classes/class-fl-builder-model.php:1394
 #, php-format
 msgctxt "%s stands for the module filename"
 msgid ""
@@ -158,16 +164,16 @@ msgid ""
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:1462
-#: classes/class-fl-builder-model.php:1516 modules/heading/heading.php:16
+#: classes/class-fl-builder-model.php:1452
+#: classes/class-fl-builder-model.php:1506 modules/heading/heading.php:16
 #: modules/photo/photo.php:27 modules/rich-text/rich-text.php:16
 #: modules/separator/separator.php:16 modules/video/video.php:21
 msgid "Basic Modules"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:1463
-#: classes/class-fl-builder-model.php:1517 modules/accordion/accordion.php:16
+#: classes/class-fl-builder-model.php:1453
+#: classes/class-fl-builder-model.php:1507 modules/accordion/accordion.php:16
 #: modules/button/button.php:16 modules/callout/callout.php:16
 #: modules/contact-form/contact-form.php:16
 #: modules/content-slider/content-slider.php:16 modules/cta/cta.php:16
@@ -176,55 +182,381 @@ msgstr ""
 #: modules/map/map.php:16 modules/post-grid/post-grid.php:16
 #: modules/pricing-table/pricing-table.php:16 modules/sidebar/sidebar.php:16
 #: modules/slideshow/slideshow.php:16
-#: modules/social-buttons/social-buttons.php:16 modules/tabs/tabs.php:16
+#: modules/social-buttons/social-buttons.php:16
+#: modules/subscribe-form/subscribe-form.php:20 modules/tabs/tabs.php:16
 #: modules/testimonials/testimonials.php:16
 #: modules/woocommerce/woocommerce.php:18
 msgid "Advanced Modules"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:1464
-#: classes/class-fl-builder-model.php:1518
+#: classes/class-fl-builder-model.php:1454
+#: classes/class-fl-builder-model.php:1508
 msgid "Other Modules"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:1465
-#: classes/class-fl-builder-model.php:1519
+#: classes/class-fl-builder-model.php:1455
+#: classes/class-fl-builder-model.php:1509
 #: includes/admin-settings-modules.php:32 includes/ui.php:88
 #: modules/widget/widget.php:16
 msgid "WordPress Widgets"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:2028
+#: classes/class-fl-builder-model.php:2018
 #, php-format
 msgctxt "%s stands for post/page title."
 msgid "Copy of %s"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-photo.php:75
+#: classes/class-fl-builder-photo.php:78 classes/class-fl-builder-photo.php:83
 msgctxt "Image size."
 msgid "Full Size"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-photo.php:76
+#: classes/class-fl-builder-photo.php:84
 msgctxt "Image size."
 msgid "Large"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-photo.php:77
+#: classes/class-fl-builder-photo.php:85
 msgctxt "Image size."
 msgid "Medium"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-photo.php:78
+#: classes/class-fl-builder-photo.php:86
 msgctxt "Image size."
 msgid "Thumbnail"
+msgstr ""
+
+#: classes/class-fl-builder-service-aweber.php:72
+msgid "Error: You must provide an Authorization Code."
+msgstr ""
+
+#: classes/class-fl-builder-service-aweber.php:76
+msgid "Error: Please enter a valid Authorization Code."
+msgstr ""
+
+#: classes/class-fl-builder-service-aweber.php:127
+msgid "Authorization Code"
+msgstr ""
+
+#: classes/class-fl-builder-service-aweber.php:128
+#, php-format
+msgid ""
+"Please register this website with AWeber to get your Authorization Code. <a"
+"%s>Register Now</a>"
+msgstr ""
+
+# @ fl-builder
+#: classes/class-fl-builder-service-aweber.php:182
+#: classes/class-fl-builder-service-campaign-monitor.php:148
+#: classes/class-fl-builder-service-campaign-monitor.php:199
+#: classes/class-fl-builder-service-constant-contact.php:156
+#: classes/class-fl-builder-service-getresponse.php:154
+#: classes/class-fl-builder-service-icontact.php:207
+#: classes/class-fl-builder-service-madmimi.php:178
+#: classes/class-fl-builder-service-mailchimp.php:154
+#: classes/class-fl-builder-service-mailpoet.php:92
+#: classes/class-fl-builder-services.php:263 includes/service-settings.php:21
+#: modules/woocommerce/woocommerce.php:60
+msgid "Choose..."
+msgstr ""
+
+#: classes/class-fl-builder-service-aweber.php:192
+#: classes/class-fl-builder-service-campaign-monitor.php:209
+#: classes/class-fl-builder-service-constant-contact.php:166
+#: classes/class-fl-builder-service-getresponse.php:164
+#: classes/class-fl-builder-service-icontact.php:217
+#: classes/class-fl-builder-service-madmimi.php:188
+#: classes/class-fl-builder-service-mailchimp.php:164
+#: classes/class-fl-builder-service-mailpoet.php:102
+msgctxt "An email list from a third party provider."
+msgid "List"
+msgstr ""
+
+#: classes/class-fl-builder-service-aweber.php:219
+msgid ""
+"There was an error subscribing to AWeber. The account is no longer connected."
+msgstr ""
+
+#: classes/class-fl-builder-service-aweber.php:242
+msgid "There was an error connecting to AWeber. Please try again."
+msgstr ""
+
+#: classes/class-fl-builder-service-aweber.php:247
+#, php-format
+msgid "There was an error subscribing to AWeber. %s"
+msgstr ""
+
+#: classes/class-fl-builder-service-campaign-monitor.php:55
+#: classes/class-fl-builder-service-constant-contact.php:48
+#: classes/class-fl-builder-service-getresponse.php:67
+#: classes/class-fl-builder-service-madmimi.php:73
+#: classes/class-fl-builder-service-mailchimp.php:67
+msgid "Error: You must provide an API key."
+msgstr ""
+
+#: classes/class-fl-builder-service-campaign-monitor.php:67
+#: classes/class-fl-builder-service-campaign-monitor.php:129
+#: classes/class-fl-builder-service-getresponse.php:76
+#: classes/class-fl-builder-service-getresponse.php:132
+msgid "Error: Please check your API key."
+msgstr ""
+
+#: classes/class-fl-builder-service-campaign-monitor.php:88
+#: classes/class-fl-builder-service-constant-contact.php:88
+#: classes/class-fl-builder-service-getresponse.php:100
+#: classes/class-fl-builder-service-madmimi.php:121
+#: classes/class-fl-builder-service-mailchimp.php:100
+msgid "API Key"
+msgstr ""
+
+#: classes/class-fl-builder-service-campaign-monitor.php:89
+msgid ""
+"Your API key can be found in your Campaign Monitor account under Account "
+"Settings > API Key."
+msgstr ""
+
+#: classes/class-fl-builder-service-campaign-monitor.php:158
+msgctxt "A client account in Campaign Monitor."
+msgid "Client"
+msgstr ""
+
+#: classes/class-fl-builder-service-campaign-monitor.php:236
+msgid ""
+"There was an error subscribing to Campaign Monitor. The account is no longer "
+"connected."
+msgstr ""
+
+#: classes/class-fl-builder-service-campaign-monitor.php:253
+msgid "There was an error subscribing to Campaign Monitor."
+msgstr ""
+
+#: classes/class-fl-builder-service-constant-contact.php:52
+msgid "Error: You must provide an access token."
+msgstr ""
+
+#: classes/class-fl-builder-service-constant-contact.php:61
+#: classes/class-fl-builder-service-constant-contact.php:134
+#, php-format
+msgid "Error: Could not connect to Constant Contact. %s"
+msgstr ""
+
+#: classes/class-fl-builder-service-constant-contact.php:89
+msgid "Your Constant Contact API key."
+msgstr ""
+
+#: classes/class-fl-builder-service-constant-contact.php:99
+msgid "Access Token"
+msgstr ""
+
+#: classes/class-fl-builder-service-constant-contact.php:100
+msgid "Your Constant Contact access token."
+msgstr ""
+
+#: classes/class-fl-builder-service-constant-contact.php:101
+#, php-format
+msgid ""
+"You must register a <a%s>Developer Account</a> with Constant Contact to "
+"obtain an API key and access token. Please see <a%s>Getting an API key</a> "
+"for complete instructions."
+msgstr ""
+
+#: classes/class-fl-builder-service-constant-contact.php:193
+msgid ""
+"There was an error subscribing to Constant Contact. The account is no longer "
+"connected."
+msgstr ""
+
+#: classes/class-fl-builder-service-constant-contact.php:245
+#: classes/class-fl-builder-service-constant-contact.php:279
+#, php-format
+msgid "There was an error subscribing to Constant Contact. %s"
+msgstr ""
+
+#: classes/class-fl-builder-service-getresponse.php:101
+msgid ""
+"Your API key can be found in your GetResponse account under My Account > "
+"GetResponse API."
+msgstr ""
+
+#: classes/class-fl-builder-service-getresponse.php:191
+msgid ""
+"There was an error subscribing to GetResponse. The account is no longer "
+"connected."
+msgstr ""
+
+#: classes/class-fl-builder-service-getresponse.php:202
+#, php-format
+msgid "There was an error subscribing to GetResponse. %s"
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:75
+msgid "Error: You must provide a username."
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:79
+msgid "Error: You must provide a app ID."
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:83
+msgid "Error: You must provide a app password."
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:104
+#: classes/class-fl-builder-service-icontact.php:188
+#, php-format
+msgid "Error: Could not connect to iContact. %s"
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:125
+msgid "Username"
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:126
+msgid "Your iContact username."
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:136
+msgid "App ID"
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:137
+msgid "Your iContact app ID."
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:147
+msgid "App Password"
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:148
+msgid "Your iContact app password."
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:149
+#, php-format
+msgid ""
+"You must <a%s>create an app</a> in iContact to obtain an app ID and "
+"password. Please see <a%s>the iContact docs</a> for complete instructions."
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:244
+msgid ""
+"There was an error subscribing to iContact. The account is no longer "
+"connected."
+msgstr ""
+
+#: classes/class-fl-builder-service-icontact.php:280
+#, php-format
+msgid "There was an error subscribing to iContact. %s"
+msgstr ""
+
+#: classes/class-fl-builder-service-madmimi.php:69
+msgid "Error: You must provide an email address."
+msgstr ""
+
+#: classes/class-fl-builder-service-madmimi.php:83
+msgid "Unable to connect to Mad Mimi. Please check your credentials."
+msgstr ""
+
+#: classes/class-fl-builder-service-madmimi.php:110
+#: modules/subscribe-form/includes/frontend.php:11
+msgid "Email Address"
+msgstr ""
+
+#: classes/class-fl-builder-service-madmimi.php:111
+msgid "The email address associated with your Mad Mimi account."
+msgstr ""
+
+#: classes/class-fl-builder-service-madmimi.php:122
+msgid ""
+"Your API key can be found in your Mad Mimi account under Account > Settings "
+"&amp; Billing > API."
+msgstr ""
+
+#: classes/class-fl-builder-service-madmimi.php:156
+msgid ""
+"There was a problem retrieving your lists. Please check your API credentials."
+msgstr ""
+
+#: classes/class-fl-builder-service-madmimi.php:215
+#: classes/class-fl-builder-service-madmimi.php:242
+msgid ""
+"There was an error subscribing to Mad Mimi. The account is no longer "
+"connected."
+msgstr ""
+
+#: classes/class-fl-builder-service-mailchimp.php:101
+msgid ""
+"Your API key can be found in your MailChimp account under Account > Extras > "
+"API Keys."
+msgstr ""
+
+#: classes/class-fl-builder-service-mailchimp.php:191
+msgid ""
+"There was an error subscribing to MailChimp. The account is no longer "
+"connected."
+msgstr ""
+
+#: classes/class-fl-builder-service-mailchimp.php:219
+#, php-format
+msgid "There was an error subscribing to MailChimp. %s"
+msgstr ""
+
+#: classes/class-fl-builder-service-mailpoet.php:73
+msgid "There was an error retrieveing your lists."
+msgstr ""
+
+#: classes/class-fl-builder-service-mailpoet.php:129
+msgid "There was an error subscribing. MailPoet is not installed."
+msgstr ""
+
+#: classes/class-fl-builder-services.php:133
+msgctxt "Third party service such as MailChimp."
+msgid "Error: Missing service type."
+msgstr ""
+
+#: classes/class-fl-builder-services.php:136
+msgctxt "Connection data such as an API key."
+msgid "Error: Missing service data."
+msgstr ""
+
+#: classes/class-fl-builder-services.php:139
+msgctxt "Account name for a third party service such as MailChimp."
+msgid "Error: Missing account name."
+msgstr ""
+
+#: classes/class-fl-builder-services.php:148
+msgctxt "Account name for a third party service such as MailChimp."
+msgid "Error: An account with that name already exists."
+msgstr ""
+
+#: classes/class-fl-builder-services.php:228
+msgid "Account Name"
+msgstr ""
+
+#: classes/class-fl-builder-services.php:229
+msgid ""
+"Used to identify this connection within the accounts list and can be "
+"anything you like."
+msgstr ""
+
+#: classes/class-fl-builder-services.php:242
+msgid "Connect"
+msgstr ""
+
+#: classes/class-fl-builder-services.php:270
+msgid "Add Account..."
+msgstr ""
+
+#: classes/class-fl-builder-services.php:277
+msgid "Account"
 msgstr ""
 
 #: classes/class-fl-builder-templates.php:28
@@ -232,86 +564,86 @@ msgid "Page Builder Templates"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:709
+#: classes/class-fl-builder.php:713
 #, php-format
 msgctxt "Field name to add."
 msgid "Add %s"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:772 classes/class-fl-builder.php:774
+#: classes/class-fl-builder.php:776 classes/class-fl-builder.php:778
 msgctxt "Custom post type label."
 msgid "Layout Templates"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:773 classes/class-fl-builder.php:775
+#: classes/class-fl-builder.php:777 classes/class-fl-builder.php:779
 msgctxt "Custom post type label."
 msgid "Layout Template"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:776
+#: classes/class-fl-builder.php:780
 msgctxt "Custom post type label."
 msgid "Add New"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:777
+#: classes/class-fl-builder.php:781
 msgctxt "Custom post type label."
 msgid "Add New Layout Template"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:778
+#: classes/class-fl-builder.php:782
 msgctxt "Custom post type label."
 msgid "New Layout Template"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:779
+#: classes/class-fl-builder.php:783
 msgctxt "Custom post type label."
 msgid "Edit Layout Template"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:780
+#: classes/class-fl-builder.php:784
 msgctxt "Custom post type label."
 msgid "View Layout Template"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:781
+#: classes/class-fl-builder.php:785
 msgctxt "Custom post type label."
 msgid "All Layout Templates"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:782
+#: classes/class-fl-builder.php:786
 msgctxt "Custom post type label."
 msgid "Search Layout Templates"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:783
+#: classes/class-fl-builder.php:787
 msgctxt "Custom post type label."
 msgid "Parent Layout Templates:"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:784
+#: classes/class-fl-builder.php:788
 msgctxt "Custom post type label."
 msgid "No layout templates found."
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:785
+#: classes/class-fl-builder.php:789
 msgctxt "Custom post type label."
 msgid "No layout templates found in Trash."
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder.php:1152 includes/js-config.php:66
+#: classes/class-fl-builder.php:1160 includes/js-config.php:69
 #, php-format
 msgctxt "%s stands for module name."
 msgid "%s Settings"
@@ -348,6 +680,44 @@ msgid ""
 "below. Leave the field blank if you do not wish to use an icon."
 msgstr ""
 
+#: includes/admin-settings-branding.php:14
+msgid "Save Branding"
+msgstr ""
+
+#: includes/admin-settings-cache.php:9
+msgid ""
+"A CSS and JavaScript file is dynamically generated and cached each time you "
+"create a new layout. Sometimes the cache needs to be refreshed when you "
+"migrate your site to another server or update to the latest version. If you "
+"are running into any issues, please try clearing the cache by clicking the "
+"button below."
+msgstr ""
+
+# @ fl-builder
+#: includes/admin-settings-cache.php:12 includes/admin-settings-cache.php:14
+#: includes/admin-settings-uninstall.php:7
+#: includes/admin-settings-uninstall.php:10
+#: includes/updater/includes/form.php:31
+msgid "NOTE:"
+msgstr ""
+
+# @ fl-builder
+#: includes/admin-settings-cache.php:12
+#: includes/admin-settings-uninstall.php:10
+#: includes/updater/includes/form.php:31
+msgid "This applies to all sites on the network."
+msgstr ""
+
+#: includes/admin-settings-cache.php:14
+msgid ""
+"This only applies to this site. Please visit the Network Admin Settings to "
+"clear the cache for all sites on the network."
+msgstr ""
+
+#: includes/admin-settings-cache.php:19
+msgid "Clear Cache"
+msgstr ""
+
 # @ fl-builder
 #: includes/admin-settings-editing.php:3
 msgid "Editing Settings"
@@ -367,6 +737,10 @@ msgstr ""
 msgid ""
 "Set the <a%s>capability</a> required for users to access advanced builder "
 "editing such as adding, deleting or moving modules."
+msgstr ""
+
+#: includes/admin-settings-editing.php:22
+msgid "Save Editing Settings"
 msgstr ""
 
 # @ fl-builder
@@ -434,6 +808,10 @@ msgstr ""
 msgid "Forums URL"
 msgstr ""
 
+#: includes/admin-settings-help-button.php:77
+msgid "Save Help Button Settings"
+msgstr ""
+
 # @ fl-builder
 #: includes/admin-settings-icons.php:3
 msgid "Icon Settings"
@@ -458,6 +836,24 @@ msgctxt "Plugin setup page: Delete icon set."
 msgid "Delete"
 msgstr ""
 
+#: includes/admin-settings-icons.php:59
+msgid "Upload Icon Set"
+msgstr ""
+
+#: includes/admin-settings-icons.php:60
+msgid "Save Icon Settings"
+msgstr ""
+
+#: includes/admin-settings-js-config.php:4
+msgid "Select File"
+msgstr ""
+
+#: includes/admin-settings-js-config.php:5
+msgid ""
+"Please type \"uninstall\" in the box below to confirm that you really want "
+"to uninstall the page builder and all of its data."
+msgstr ""
+
 # @ fl-builder
 #: includes/admin-settings-modules.php:3
 msgid "Enabled Modules"
@@ -472,6 +868,10 @@ msgstr ""
 #: includes/admin-settings-modules.php:26
 msgctxt "Plugin setup page: Modules."
 msgid "All"
+msgstr ""
+
+#: includes/admin-settings-modules.php:64
+msgid "Save Module Settings"
 msgstr ""
 
 # @ fl-builder
@@ -495,6 +895,10 @@ msgstr ""
 # @ fl-builder
 #: includes/admin-settings-post-types.php:38
 msgid "Select the post types you would like the builder to work with."
+msgstr ""
+
+#: includes/admin-settings-post-types.php:70
+msgid "Save Post Types"
 msgstr ""
 
 # @ fl-builder
@@ -527,6 +931,10 @@ msgstr ""
 msgid "Disable All Templates"
 msgstr ""
 
+#: includes/admin-settings-templates.php:30
+msgid "Save Template Settings"
+msgstr ""
+
 # @ fl-builder
 #: includes/admin-settings-uninstall.php:5
 msgid ""
@@ -537,24 +945,11 @@ msgstr ""
 
 # @ fl-builder
 #: includes/admin-settings-uninstall.php:7
-#: includes/admin-settings-uninstall.php:10
-#: includes/updater/includes/form.php:31
-msgid "NOTE:"
-msgstr ""
-
-# @ fl-builder
-#: includes/admin-settings-uninstall.php:7
 msgid ""
 "The builder does not delete the post meta <code>_fl_builder_data</code>, "
 "<code>_fl_builder_draft</code> and <code>_fl_builder_enabled</code> in case "
 "you want to reinstall it later. If you do, the builder will rebuild all of "
 "its data using those meta values."
-msgstr ""
-
-# @ fl-builder
-#: includes/admin-settings-uninstall.php:10
-#: includes/updater/includes/form.php:31
-msgid "This applies to all sites on the network."
 msgstr ""
 
 # @ fl-builder
@@ -607,8 +1002,9 @@ msgstr ""
 # @ fl-builder
 #: includes/admin-templates-edit.php:23 includes/admin-templates.php:30
 #: includes/global-settings.php:18 includes/global-settings.php:110
-#: includes/row-settings.php:307 includes/template-settings.php:31
-#: modules/accordion/accordion.php:90 modules/callout/callout.php:420
+#: includes/global-settings.php:124 includes/row-settings.php:307
+#: includes/template-settings.php:31 modules/accordion/accordion.php:90
+#: modules/callout/callout.php:420
 #: modules/content-slider/content-slider.php:209
 #: modules/content-slider/content-slider.php:223
 #: modules/content-slider/content-slider.php:257
@@ -637,8 +1033,9 @@ msgstr ""
 # @ fl-builder
 #: includes/admin-templates-edit.php:24 includes/admin-templates.php:30
 #: includes/global-settings.php:19 includes/global-settings.php:111
-#: includes/row-settings.php:308 includes/template-settings.php:32
-#: modules/accordion/accordion.php:89 modules/callout/callout.php:421
+#: includes/global-settings.php:125 includes/row-settings.php:308
+#: includes/template-settings.php:32 modules/accordion/accordion.php:89
+#: modules/callout/callout.php:421
 #: modules/content-slider/content-slider.php:210
 #: modules/content-slider/content-slider.php:224
 #: modules/content-slider/content-slider.php:258
@@ -713,12 +1110,12 @@ msgid "Delete"
 msgstr ""
 
 # @ fl-builder
-#: includes/admin-templates.php:40
+#: includes/admin-templates.php:40 includes/js-config.php:30
 msgid "Do you really want to delete this template?"
 msgstr ""
 
 # @ fl-builder
-#: includes/column-settings.php:4
+#: includes/column-settings.php:4 includes/js-config.php:23
 msgid "Column Settings"
 msgstr ""
 
@@ -734,7 +1131,8 @@ msgstr ""
 #: modules/icon-group/icon-group.php:44 modules/icon/icon.php:75
 #: modules/pricing-table/pricing-table.php:43
 #: modules/pricing-table/pricing-table.php:155
-#: modules/separator/separator.php:72 modules/tabs/tabs.php:45
+#: modules/separator/separator.php:72
+#: modules/subscribe-form/subscribe-form.php:217 modules/tabs/tabs.php:45
 msgid "Style"
 msgstr ""
 
@@ -771,7 +1169,7 @@ msgstr ""
 #: modules/content-slider/content-slider.php:363
 #: modules/content-slider/content-slider.php:630 modules/cta/cta.php:197
 #: modules/cta/cta.php:264 modules/icon-group/icon-group.php:64
-#: modules/icon/icon.php:95
+#: modules/icon/icon.php:95 modules/subscribe-form/subscribe-form.php:182
 msgid "Background Color"
 msgstr ""
 
@@ -915,6 +1313,7 @@ msgstr ""
 #: includes/row-settings.php:529 modules/button/button.php:233
 #: modules/callout/callout.php:598
 #: modules/content-slider/content-slider.php:703 modules/cta/cta.php:345
+#: modules/subscribe-form/subscribe-form.php:263
 msgid "Padding"
 msgstr ""
 
@@ -1027,7 +1426,7 @@ msgid "CSS Selectors"
 msgstr ""
 
 # @ fl-builder
-#: includes/column-settings.php:360 includes/loop-settings.php:27
+#: includes/column-settings.php:360 includes/loop-settings.php:28
 #: includes/module-settings.php:119 includes/row-settings.php:607
 msgid "ID"
 msgstr ""
@@ -1070,7 +1469,7 @@ msgid "Replace"
 msgstr ""
 
 # @ fl-builder
-#: includes/field-icon.php:7
+#: includes/field-icon.php:7 includes/js-config.php:61
 msgid "Remove"
 msgstr ""
 
@@ -1084,10 +1483,14 @@ msgstr ""
 msgid "Enter a post title to search."
 msgstr ""
 
+#: includes/field-link.php:6 includes/field-suggest.php:7
+msgid "Start typing..."
+msgstr ""
+
 # @ fl-builder
 #: includes/field-link.php:7 includes/icon-selector.php:28
-#: includes/settings.php:63 includes/template-selector.php:102
-#: includes/ui.php:11
+#: includes/js-config.php:19 includes/settings.php:63
+#: includes/template-selector.php:102 includes/ui.php:11
 msgid "Cancel"
 msgstr ""
 
@@ -1115,12 +1518,12 @@ msgid "Add Photos"
 msgstr ""
 
 # @ fl-builder
-#: includes/field-photo.php:3
+#: includes/field-photo.php:3 includes/js-config.php:66
 msgid "Select Photo"
 msgstr ""
 
 # @ fl-builder
-#: includes/field-video.php:3
+#: includes/field-video.php:3 includes/js-config.php:68
 msgid "Select Video"
 msgstr ""
 
@@ -1142,7 +1545,8 @@ msgstr ""
 #: modules/pricing-table/pricing-table.php:87
 #: modules/rich-text/rich-text.php:26 modules/separator/separator.php:27
 #: modules/sidebar/sidebar.php:27 modules/slideshow/slideshow.php:256
-#: modules/social-buttons/social-buttons.php:64 modules/tabs/tabs.php:77
+#: modules/social-buttons/social-buttons.php:64
+#: modules/subscribe-form/subscribe-form.php:86 modules/tabs/tabs.php:77
 #: modules/testimonials/testimonials.php:30
 #: modules/testimonials/testimonials.php:200 modules/video/video.php:76
 #: modules/widget/widget.php:64 modules/woocommerce/woocommerce.php:50
@@ -1233,25 +1637,39 @@ msgctxt ""
 msgid "Enabled"
 msgstr ""
 
-# @ fl-builder
 #: includes/global-settings.php:121
+msgctxt ""
+"General settings form field label. Intended meaning: \"Enable auto spacing "
+"for responsive layouts?\""
+msgid "Enable Auto Spacing"
+msgstr ""
+
+#: includes/global-settings.php:127
+msgid ""
+"When auto spacing is enabled, the builder will automatically adjust the "
+"margins and padding in your layout once the small device breakpoint is "
+"reached. Most users will want to leave this enabled."
+msgstr ""
+
+# @ fl-builder
+#: includes/global-settings.php:131
 msgid "Medium Device Breakpoint"
 msgstr ""
 
 # @ fl-builder
-#: includes/global-settings.php:126
+#: includes/global-settings.php:136
 msgid ""
 "The browser width at which the layout will adjust for medium devices such as "
 "tablets."
 msgstr ""
 
 # @ fl-builder
-#: includes/global-settings.php:130
+#: includes/global-settings.php:140
 msgid "Small Device Breakpoint"
 msgstr ""
 
 # @ fl-builder
-#: includes/global-settings.php:135
+#: includes/global-settings.php:145
 msgid ""
 "The browser width at which the layout will adjust for small devices such as "
 "phones."
@@ -1263,14 +1681,97 @@ msgctxt "Select option for showing all icon libraries."
 msgid "All Libraries"
 msgstr ""
 
+#: includes/js-config.php:18
+msgid "What would you like to do?"
+msgstr ""
+
+#: includes/js-config.php:20
+msgid "Change Template"
+msgstr ""
+
+#: includes/js-config.php:21
+msgid ""
+"Warning! Changing the template will replace your existing layout. Do you "
+"really want to do this?"
+msgstr ""
+
+#: includes/js-config.php:22
+msgid "Column"
+msgstr ""
+
+#: includes/js-config.php:24
+msgid ""
+"Please select either a background layout or content layout before submitting."
+msgstr ""
+
+#: includes/js-config.php:25
+msgid "Remove Account"
+msgstr ""
+
+#: includes/js-config.php:26
+msgid ""
+"Are you sure you want to remove this account? Other modules that are "
+"connected to it will be affected."
+msgstr ""
+
+#: includes/js-config.php:27
+msgid "Do you really want to delete this item?"
+msgstr ""
+
+#: includes/js-config.php:28
+msgid ""
+"Do you really want to delete this module? All content data will be "
+"permanently deleted."
+msgstr ""
+
+#: includes/js-config.php:29
+msgid ""
+"Do you really want to delete this row? All content data will be permanently "
+"deleted."
+msgstr ""
+
+#: includes/js-config.php:31
+msgid "Discard Draft"
+msgstr ""
+
+#: includes/js-config.php:32
+msgid ""
+"Do you really want to discard this draft? All of your changes that are not "
+"published will be lost."
+msgstr ""
+
 # @ fl-builder
-#: includes/js-config.php:33
+#: includes/js-config.php:33 includes/ui.php:44
+msgid "Done"
+msgstr ""
+
+#: includes/js-config.php:34
+msgid "Save Draft"
+msgstr ""
+
+# @ fl-builder
+#: includes/js-config.php:35
 msgctxt "Duplicate page/post action label."
 msgid "Duplicate"
 msgstr ""
 
-# @ fl-builder
+#: includes/js-config.php:36
+msgid "Duplicate This Page"
+msgstr ""
+
+#: includes/js-config.php:37
+msgid "Duplicate This Template"
+msgstr ""
+
 #: includes/js-config.php:38
+msgid "Edit Global Settings"
+msgstr ""
+
+#: includes/js-config.php:39
+msgid "Drop a row layout or module to get started!"
+msgstr ""
+
+#: includes/js-config.php:40
 msgid ""
 "Beaver Builder caught the following JavaScript error. If Beaver Builder is "
 "not functioning as expected the cause is most likely this error. Please help "
@@ -1278,98 +1779,373 @@ msgid ""
 "each to determine if the issue is related to a third party plugin."
 msgstr ""
 
-# @ fl-builder
+#: includes/js-config.php:41
+msgid "Full Size"
+msgstr ""
+
 #: includes/js-config.php:42
-msgid "\"{message}\" on line {line} of {file}."
+msgid "Get Help"
+msgstr ""
+
+#: includes/js-config.php:43
+msgid "Getting Started Video"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:19
+#: includes/js-config.php:44
+msgid "\"{message}\" on line {line} of {file}."
+msgstr ""
+
+#: includes/js-config.php:45
+msgid "Insert"
+msgstr ""
+
+#: includes/js-config.php:46
+msgid "Large"
+msgstr ""
+
+#: includes/js-config.php:47
+msgid "Manage Templates"
+msgstr ""
+
+#: includes/js-config.php:48
+msgid "Medium"
+msgstr ""
+
+#: includes/js-config.php:49
+msgid "Module"
+msgstr ""
+
+#: includes/js-config.php:50
+msgid "Move"
+msgstr ""
+
+#: includes/js-config.php:51
+msgid "New Column"
+msgstr ""
+
+#: includes/js-config.php:52
+msgid "New Row"
+msgstr ""
+
+#: includes/js-config.php:53
+msgid "No results found."
+msgstr ""
+
+#: includes/js-config.php:54
+msgid "No Thanks"
+msgstr ""
+
+#: includes/js-config.php:55
+msgid "OK"
+msgstr ""
+
+# @ fl-builder
+#: includes/js-config.php:56 modules/photo/photo.php:454
+msgid "Photo Page"
+msgstr ""
+
+#: includes/js-config.php:57
+msgid "Photo Selected"
+msgstr ""
+
+#: includes/js-config.php:58
+msgid "Photos Selected"
+msgstr ""
+
+#: includes/js-config.php:59 modules/subscribe-form/includes/frontend.php:15
+msgid "Please Wait..."
+msgstr ""
+
+#: includes/js-config.php:60
+msgid "Publish Changes"
+msgstr ""
+
+#: includes/js-config.php:62
+msgid "Row"
+msgstr ""
+
+# @ fl-builder
+#: includes/js-config.php:63 includes/row-settings.php:6
+msgid "Row Settings"
+msgstr ""
+
+#: includes/js-config.php:64
+msgid "Save Core Template"
+msgstr ""
+
+# @ fl-builder
+#: includes/js-config.php:65 includes/ui.php:10
+#: includes/user-template-settings.php:4
+msgid "Save Template"
+msgstr ""
+
+#: includes/js-config.php:67
+msgid "Select Photos"
+msgstr ""
+
+#: includes/js-config.php:70
+msgid "Please select an account before saving."
+msgstr ""
+
+#: includes/js-config.php:71
+msgid "Please connect an account before saving."
+msgstr ""
+
+#: includes/js-config.php:72
+msgid "Please select a list before saving."
+msgstr ""
+
+#: includes/js-config.php:73
+msgid "Take a Tour"
+msgstr ""
+
+#: includes/js-config.php:74
+msgid "Append New Layout"
+msgstr ""
+
+#: includes/js-config.php:75
+msgid "Replace Existing Layout"
+msgstr ""
+
+#: includes/js-config.php:76
+msgid "Template Saved!"
+msgstr ""
+
+#: includes/js-config.php:77
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/js-config.php:78
+msgid "Next"
+msgstr ""
+
+#: includes/js-config.php:79
+msgid "Get Started"
+msgstr ""
+
+#: includes/js-config.php:80
+msgid "Choose a Template"
+msgstr ""
+
+#: includes/js-config.php:81
+msgid ""
+"Get started by choosing a layout template to customize, or build a page from "
+"scratch by selecting the blank layout template."
+msgstr ""
+
+#: includes/js-config.php:82
+msgid "Add Rows"
+msgstr ""
+
+#: includes/js-config.php:83
+msgid ""
+"Add multi-column rows, adjust spacing, add backgrounds and more by dragging "
+"and dropping row layouts onto the page."
+msgstr ""
+
+# @ fl-builder
+#: includes/js-config.php:84 includes/ui.php:49
+msgid "Add Content"
+msgstr ""
+
+#: includes/js-config.php:85
+msgid ""
+"Add new content by dragging and dropping modules or widgets into your row "
+"layouts or to create a new row layout."
+msgstr ""
+
+#: includes/js-config.php:86
+msgid "Edit Content"
+msgstr ""
+
+#: includes/js-config.php:87
+msgid ""
+"Move your mouse over rows, columns or modules to edit and interact with them."
+msgstr ""
+
+#: includes/js-config.php:88
+msgid ""
+"Use the action buttons to perform actions such as moving, editing, "
+"duplicating or deleting rows, columns and modules."
+msgstr ""
+
+#: includes/js-config.php:89
+msgid "Add More Content"
+msgstr ""
+
+#: includes/js-config.php:90
+msgid ""
+"Use the Add Content button to open the content panel and add new row "
+"layouts, modules or widgets."
+msgstr ""
+
+#: includes/js-config.php:91
+msgid "Change Templates"
+msgstr ""
+
+#: includes/js-config.php:92
+msgid ""
+"Use the Templates button to pick a new template or append one to your "
+"layout. Appending will insert a new template at the end of your existing "
+"page content."
+msgstr ""
+
+#: includes/js-config.php:93
+msgid "Helpful Tools"
+msgstr ""
+
+#: includes/js-config.php:94
+msgid ""
+"The Tools button lets you duplicate a page, save a template or edit the "
+"global settings."
+msgstr ""
+
+#: includes/js-config.php:95
+msgid "Publish Your Changes"
+msgstr ""
+
+#: includes/js-config.php:96
+msgid ""
+"Once you're finished, click the Done button to publish your changes, save a "
+"draft or revert back to the last published state."
+msgstr ""
+
+#: includes/js-config.php:97
+msgid "Let's Get Building!"
+msgstr ""
+
+#: includes/js-config.php:98
+msgid ""
+"Now that you know the basics, you're ready to start building! If at any time "
+"you need help, click the help icon in the upper right corner to access the "
+"help menu. Happy building!"
+msgstr ""
+
+#: includes/js-config.php:99
+msgid ""
+"The settings you are currently editing will not be saved if you navigate "
+"away from this page."
+msgstr ""
+
+#: includes/js-config.php:100
+msgid "View the Knowledge Base"
+msgstr ""
+
+#: includes/js-config.php:101
+msgid "Visit the Forums"
+msgstr ""
+
+#: includes/js-config.php:102
+msgid "Watch the Video"
+msgstr ""
+
+#: includes/js-config.php:103
+msgid ""
+"Welcome! It looks like this might be your first time using the builder. "
+"Would you like to take a tour?"
+msgstr ""
+
+#: includes/js-config.php:104
+msgid "Yes Please!"
+msgstr ""
+
+# @ fl-builder
+#: includes/loop-settings.php:20
 msgid "Post Type"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:25
+#: includes/loop-settings.php:26
 msgid "Order By"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:28 modules/post-grid/post-grid.php:155
+#: includes/loop-settings.php:29 modules/post-grid/post-grid.php:155
 #: modules/woocommerce/woocommerce.php:189
 msgid "Date"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:29
+#: includes/loop-settings.php:30
 msgid "Date Last Modified"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:30 modules/pricing-table/pricing-table.php:90
+#: includes/loop-settings.php:31 modules/pricing-table/pricing-table.php:90
 #: modules/pricing-table/pricing-table.php:94
 msgid "Title"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:31 modules/post-grid/post-grid.php:146
+#: includes/loop-settings.php:32 modules/post-grid/post-grid.php:146
 msgid "Author"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:32
+#: includes/loop-settings.php:33
 msgid "Comment Count"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:33
+#: includes/loop-settings.php:34
 msgid "Menu Order"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:34
+#: includes/loop-settings.php:35
 msgid "Random"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:41
+#: includes/loop-settings.php:42
 msgid "Order"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:43 modules/woocommerce/woocommerce.php:199
+#: includes/loop-settings.php:44 modules/woocommerce/woocommerce.php:199
 msgid "Descending"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:44 modules/woocommerce/woocommerce.php:198
+#: includes/loop-settings.php:45 modules/woocommerce/woocommerce.php:198
 msgid "Ascending"
 msgstr ""
 
-# @ fl-builder
 #: includes/loop-settings.php:52
+msgctxt "How many posts to skip."
+msgid "Offset"
+msgstr ""
+
+#: includes/loop-settings.php:55
+msgid "Skip this many posts that match the specified criteria."
+msgstr ""
+
+# @ fl-builder
+#: includes/loop-settings.php:62
 msgid "Filter"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:63
+#: includes/loop-settings.php:73
 #, php-format
 msgid "Enter a comma separated list of %s. Only these %s will be shown."
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:76
+#: includes/loop-settings.php:86
 #, php-format
 msgid ""
 "Enter a comma separated list of %s. Only posts with these %s will be shown."
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:90
+#: includes/loop-settings.php:100
 msgid "Authors"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:91
+#: includes/loop-settings.php:101
 msgid ""
 "Enter a comma separated list of authors usernames. Only posts with these "
 "authors will be shown."
@@ -1463,11 +2239,6 @@ msgid ""
 "A class that will be applied to this module's HTML. Must start with a letter "
 "and only contain dashes, underscores, letters or numbers. Separate multiple "
 "classes with spaces."
-msgstr ""
-
-# @ fl-builder
-#: includes/row-settings.php:6
-msgid "Row Settings"
 msgstr ""
 
 # @ fl-builder
@@ -1898,6 +2669,10 @@ msgid ""
 "classes with spaces."
 msgstr ""
 
+#: includes/service-settings.php:32
+msgid "Service"
+msgstr ""
+
 # @ fl-builder
 #: includes/settings.php:62
 msgid "Save"
@@ -1959,11 +2734,6 @@ msgid "Template: %s"
 msgstr ""
 
 # @ fl-builder
-#: includes/ui.php:10 includes/user-template-settings.php:4
-msgid "Save Template"
-msgstr ""
-
-# @ fl-builder
 #: includes/ui.php:23
 msgid "Page Builder Demo"
 msgstr ""
@@ -1979,18 +2749,8 @@ msgid "Upgrade!"
 msgstr ""
 
 # @ fl-builder
-#: includes/ui.php:44
-msgid "Done"
-msgstr ""
-
-# @ fl-builder
 #: includes/ui.php:45
 msgid "Tools"
-msgstr ""
-
-# @ fl-builder
-#: includes/ui.php:49
-msgid "Add Content"
 msgstr ""
 
 # @ fl-builder
@@ -2092,6 +2852,10 @@ msgstr ""
 msgid "Enter your <a%s>licence key</a> to enable remote updates and support."
 msgstr ""
 
+#: includes/updater/includes/form.php:39
+msgid "Save Subscription Settings"
+msgstr ""
+
 # @ fl-builder
 #: includes/user-template-settings.php:8
 msgid ""
@@ -2176,7 +2940,7 @@ msgstr ""
 
 # @ fl-builder
 #: modules/accordion/accordion.php:122 modules/post-grid/post-grid.php:195
-#: modules/post-grid/post-grid.php:199 modules/post-grid/post-grid.php:235
+#: modules/post-grid/post-grid.php:199 modules/post-grid/post-grid.php:234
 #: modules/tabs/tabs.php:89
 msgid "Content"
 msgstr ""
@@ -2185,6 +2949,7 @@ msgstr ""
 #: modules/button/button.php:14 modules/callout/callout.php:479
 #: modules/content-slider/content-slider.php:601 modules/cta/cta.php:214
 #: modules/pricing-table/pricing-table.php:129
+#: modules/subscribe-form/subscribe-form.php:160
 msgid "Button"
 msgstr ""
 
@@ -2260,6 +3025,7 @@ msgstr ""
 #: modules/callout/callout.php:514
 #: modules/content-slider/content-slider.php:636 modules/cta/cta.php:270
 #: modules/icon-group/icon-group.php:69 modules/icon/icon.php:100
+#: modules/subscribe-form/subscribe-form.php:188
 msgid "Background Hover Color"
 msgstr ""
 
@@ -2269,18 +3035,21 @@ msgstr ""
 #: modules/content-slider/content-slider.php:641
 #: modules/content-slider/content-slider.php:754 modules/cta/cta.php:191
 #: modules/cta/cta.php:279 modules/heading/heading.php:77
+#: modules/subscribe-form/subscribe-form.php:197
 msgid "Text Color"
 msgstr ""
 
 # @ fl-builder
 #: modules/button/button.php:136 modules/callout/callout.php:529
 #: modules/content-slider/content-slider.php:647 modules/cta/cta.php:285
+#: modules/subscribe-form/subscribe-form.php:203
 msgid "Text Hover Color"
 msgstr ""
 
 # @ fl-builder
 #: modules/button/button.php:153 modules/callout/callout.php:546
 #: modules/content-slider/content-slider.php:660 modules/cta/cta.php:302
+#: modules/subscribe-form/subscribe-form.php:220
 msgid "Flat"
 msgstr ""
 
@@ -2289,12 +3058,14 @@ msgstr ""
 #: modules/callout/callout.php:547
 #: modules/content-slider/content-slider.php:661 modules/cta/cta.php:303
 #: modules/icon-group/icon-group.php:77 modules/icon/icon.php:108
+#: modules/subscribe-form/subscribe-form.php:221
 msgid "Gradient"
 msgstr ""
 
 # @ fl-builder
 #: modules/button/button.php:155 modules/callout/callout.php:548
 #: modules/content-slider/content-slider.php:662 modules/cta/cta.php:304
+#: modules/subscribe-form/subscribe-form.php:222
 msgid "Transparent"
 msgstr ""
 
@@ -2302,13 +3073,14 @@ msgstr ""
 #: modules/button/button.php:165 modules/callout/callout.php:558
 #: modules/content-slider/content-slider.php:672 modules/cta/cta.php:314
 #: modules/pricing-table/pricing-table.php:67
+#: modules/subscribe-form/subscribe-form.php:232
 msgid "Border Size"
 msgstr ""
 
 # @ fl-builder
 #: modules/button/button.php:174 modules/callout/callout.php:567
 #: modules/content-slider/content-slider.php:681 modules/cta/cta.php:203
-#: modules/cta/cta.php:323
+#: modules/cta/cta.php:323 modules/subscribe-form/subscribe-form.php:241
 msgid "Background Opacity"
 msgstr ""
 
@@ -2316,6 +3088,7 @@ msgstr ""
 #: modules/button/button.php:184 modules/callout/callout.php:244
 #: modules/cta/cta.php:104 modules/heading/heading.php:82
 #: modules/icon-group/icon-group.php:87 modules/icon/icon.php:118
+#: modules/subscribe-form/subscribe-form.php:94
 msgid "Structure"
 msgstr ""
 
@@ -2342,12 +3115,13 @@ msgstr ""
 #: modules/button/button.php:225 modules/callout/callout.php:590
 #: modules/content-slider/content-slider.php:695 modules/cta/cta.php:337
 #: modules/heading/heading.php:114 modules/heading/heading.php:171
+#: modules/subscribe-form/subscribe-form.php:255
 msgid "Font Size"
 msgstr ""
 
 # @ fl-builder
 #: modules/button/button.php:241 modules/callout/callout.php:606
-#: modules/cta/cta.php:353
+#: modules/cta/cta.php:353 modules/subscribe-form/subscribe-form.php:271
 msgid "Round Corners"
 msgstr ""
 
@@ -2534,24 +3308,28 @@ msgstr ""
 # @ fl-builder
 #: modules/callout/callout.php:498
 #: modules/content-slider/content-slider.php:620
+#: modules/subscribe-form/subscribe-form.php:172
 msgid "Button Icon"
 msgstr ""
 
 # @ fl-builder
 #: modules/callout/callout.php:504
 #: modules/content-slider/content-slider.php:626 modules/cta/cta.php:260
+#: modules/subscribe-form/subscribe-form.php:178
 msgid "Button Colors"
 msgstr ""
 
 # @ fl-builder
 #: modules/callout/callout.php:539
 #: modules/content-slider/content-slider.php:653 modules/cta/cta.php:295
+#: modules/subscribe-form/subscribe-form.php:213
 msgid "Button Style"
 msgstr ""
 
 # @ fl-builder
 #: modules/callout/callout.php:577
 #: modules/content-slider/content-slider.php:691 modules/cta/cta.php:333
+#: modules/subscribe-form/subscribe-form.php:251
 msgid "Button Structure"
 msgstr ""
 
@@ -2595,6 +3373,7 @@ msgid "The contact form will send to this e-mail"
 msgstr ""
 
 #: modules/contact-form/contact-form.php:75
+#: modules/subscribe-form/subscribe-form.php:107
 msgid "Name Field"
 msgstr ""
 
@@ -2605,7 +3384,8 @@ msgstr ""
 #: modules/contact-form/contact-form.php:105
 #: modules/post-grid/post-grid.php:116 modules/post-grid/post-grid.php:149
 #: modules/post-grid/post-grid.php:158 modules/post-grid/post-grid.php:188
-#: modules/post-grid/post-grid.php:202 modules/post-grid/post-grid.php:216
+#: modules/post-grid/post-grid.php:202 modules/post-grid/post-grid.php:220
+#: modules/subscribe-form/subscribe-form.php:110
 msgid "Show"
 msgstr ""
 
@@ -2616,7 +3396,8 @@ msgstr ""
 #: modules/contact-form/contact-form.php:106
 #: modules/post-grid/post-grid.php:117 modules/post-grid/post-grid.php:150
 #: modules/post-grid/post-grid.php:159 modules/post-grid/post-grid.php:189
-#: modules/post-grid/post-grid.php:203 modules/post-grid/post-grid.php:217
+#: modules/post-grid/post-grid.php:203 modules/post-grid/post-grid.php:221
+#: modules/subscribe-form/subscribe-form.php:111
 msgid "Hide"
 msgstr ""
 
@@ -2640,10 +3421,16 @@ msgstr ""
 
 # @ fl-builder
 #: modules/contact-form/includes/frontend.php:6
+#: modules/subscribe-form/includes/frontend.php:6
 msgid "Please enter your name."
 msgstr ""
 
+#: modules/contact-form/includes/frontend.php:7
+msgid "Your name"
+msgstr ""
+
 #: modules/contact-form/includes/frontend.php:13
+#: modules/contact-form/includes/frontend.php:15
 msgid "Subject"
 msgstr ""
 
@@ -2661,12 +3448,20 @@ msgstr ""
 msgid "Please enter a valid email."
 msgstr ""
 
+#: modules/contact-form/includes/frontend.php:23
+msgid "Your email"
+msgstr ""
+
 #: modules/contact-form/includes/frontend.php:29
 msgid "Phone"
 msgstr ""
 
 #: modules/contact-form/includes/frontend.php:30
 msgid "Please enter a valid phone number."
+msgstr ""
+
+#: modules/contact-form/includes/frontend.php:31
+msgid "Your phone"
 msgstr ""
 
 # @ fl-builder
@@ -2677,6 +3472,14 @@ msgstr ""
 # @ fl-builder
 #: modules/contact-form/includes/frontend.php:37
 msgid "Please enter a message."
+msgstr ""
+
+#: modules/contact-form/includes/frontend.php:38
+msgid "Your message"
+msgstr ""
+
+#: modules/contact-form/includes/frontend.php:43
+msgid "Send"
 msgstr ""
 
 # @ fl-builder
@@ -2973,19 +3776,20 @@ msgstr ""
 
 # @ fl-builder
 #: modules/cta/cta.php:108 modules/gallery/gallery.php:220
-#: modules/post-grid/post-grid.php:44 modules/tabs/tabs.php:52
+#: modules/post-grid/post-grid.php:44
+#: modules/subscribe-form/subscribe-form.php:98 modules/tabs/tabs.php:52
 #: modules/testimonials/testimonials.php:37
 #: modules/woocommerce/woocommerce.php:57
 msgid "Layout"
 msgstr ""
 
 # @ fl-builder
-#: modules/cta/cta.php:111
+#: modules/cta/cta.php:111 modules/subscribe-form/subscribe-form.php:102
 msgid "Inline"
 msgstr ""
 
 # @ fl-builder
-#: modules/cta/cta.php:112
+#: modules/cta/cta.php:112 modules/subscribe-form/subscribe-form.php:101
 msgid "Stacked"
 msgstr ""
 
@@ -3230,11 +4034,6 @@ msgid "Photo File"
 msgstr ""
 
 # @ fl-builder
-#: modules/photo/photo.php:454
-msgid "Photo Page"
-msgstr ""
-
-# @ fl-builder
 #: modules/photo/photo.php:464
 msgid ""
 "Link type applies to how the image should be linked on click. You can choose "
@@ -3345,18 +4144,30 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
+#: modules/post-grid/post-grid.php:208
+msgid "Content Type"
+msgstr ""
+
+#: modules/post-grid/post-grid.php:211
+msgid "Excerpt"
+msgstr ""
+
+#: modules/post-grid/post-grid.php:212
+msgid "Full Text"
+msgstr ""
+
 # @ fl-builder
-#: modules/post-grid/post-grid.php:213
+#: modules/post-grid/post-grid.php:217
 msgid "More Link"
 msgstr ""
 
 # @ fl-builder
-#: modules/post-grid/post-grid.php:227
+#: modules/post-grid/post-grid.php:226
 msgid "More Link Text"
 msgstr ""
 
 # @ fl-builder
-#: modules/post-grid/post-grid.php:228
+#: modules/post-grid/post-grid.php:227
 msgid "Read More"
 msgstr ""
 
@@ -3458,6 +4269,7 @@ msgstr ""
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:133
+#: modules/subscribe-form/subscribe-form.php:167
 msgid "Button Text"
 msgstr ""
 
@@ -3797,6 +4609,60 @@ msgstr ""
 msgid "Show Google+"
 msgstr ""
 
+#: modules/subscribe-form/includes/frontend.php:5
+msgctxt "First and last name."
+msgid "Name"
+msgstr ""
+
+#: modules/subscribe-form/includes/frontend.php:12
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: modules/subscribe-form/includes/frontend.php:40
+msgid "Something went wrong. Please check your entries and try again."
+msgstr ""
+
+#: modules/subscribe-form/subscribe-form.php:18
+msgid "Subscribe Form"
+msgstr ""
+
+#: modules/subscribe-form/subscribe-form.php:19
+msgid "Adds a simple subscribe form to your layout."
+msgstr ""
+
+#: modules/subscribe-form/subscribe-form.php:72
+msgid "There was an error subscribing. Please try again."
+msgstr ""
+
+#: modules/subscribe-form/subscribe-form.php:117
+msgid "Success"
+msgstr ""
+
+#: modules/subscribe-form/subscribe-form.php:121
+msgid "Success Action"
+msgstr ""
+
+#: modules/subscribe-form/subscribe-form.php:123
+msgid "Show Message"
+msgstr ""
+
+#: modules/subscribe-form/subscribe-form.php:124
+msgid "Redirect"
+msgstr ""
+
+#: modules/subscribe-form/subscribe-form.php:143
+msgid ""
+"Thanks for subscribing! Please check your email for further instructions."
+msgstr ""
+
+#: modules/subscribe-form/subscribe-form.php:150
+msgid "Success URL"
+msgstr ""
+
+#: modules/subscribe-form/subscribe-form.php:168
+msgid "Subscribe!"
+msgstr ""
+
 # @ fl-builder
 #: modules/tabs/tabs.php:14
 msgid "Tabs"
@@ -3916,11 +4782,6 @@ msgstr ""
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:17
 msgid "Display products or categories from your WooCommerce store."
-msgstr ""
-
-# @ fl-builder
-#: modules/woocommerce/woocommerce.php:60
-msgid "Choose..."
 msgstr ""
 
 # @ fl-builder

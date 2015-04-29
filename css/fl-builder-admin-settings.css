@@ -2,46 +2,46 @@
 ----------------------------------------------------------- */
 
 .fl-settings-heading img {
-    height: 40px;
-    margin-right: 5px;
-    vertical-align: middle;
+	height: 40px;
+	margin-right: 5px;
+	vertical-align: middle;
 }
 .fl-settings-heading span {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 /* Nav
 ----------------------------------------------------------- */
 
 .fl-settings-nav {
-    float: left;
-    margin: 15px 2% 0 0;
-    width: 19%;
+	float: left;
+	margin: 15px 2% 0 0;
+	width: 19%;
 }
 .fl-settings-nav ul {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
-    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
 }
 .fl-settings-nav ul li {
-    display: block;
-    margin: 0;
+	display: block;
+	margin: 0;
 }
 .fl-settings-nav ul li a {
-    border-bottom: 1px solid #eee;
-    display: block;
-    padding: 10px;
+	border-bottom: 1px solid #eee;
+	display: block;
+	padding: 10px;
 }
 .fl-settings-nav ul li a:hover,
 .fl-settings-nav ul li a.fl-active {
-    background: #f5f5f5;
+	background: #f5f5f5;
 }
 .fl-settings-nav ul li:last-child a {
-    border-bottom: none;
+	border-bottom: none;
 }
 .fl-settings-nav a {
-    text-decoration: none;
+	text-decoration: none;
 }
 .fl-settings-nav .fl-settings-save {
 	padding: 0 2px;
@@ -54,9 +54,9 @@
 ----------------------------------------------------------- */
 
 .fl-settings-content {
-    float: left;
-    margin-top: 15px;
-    width: 78%;
+	float: left;
+	margin-top: 15px;
+	width: 78%;
 }
 .fl-settings-form-content h4 {
 	font-size: 14px;
@@ -66,31 +66,31 @@
 ----------------------------------------------------------- */
 
 .fl-settings-form {
-    display: none;
-    max-width: 450px;
+	display: none;
+	max-width: 450px;
 }
 .fl-settings-form-header {
-    margin-bottom: 20px !important;
+	margin-bottom: 20px !important;
 }
 .fl-settings-form .form-table {
-    margin: 12px 0;
+	margin: 12px 0;
 }
 .fl-settings-form th {
-    font-weight: bold;
-    vertical-align: middle;
+	font-weight: bold;
+	vertical-align: middle;
 }
 .fl-settings-form th,
 .fl-settings-form td {
-    font-size: 13px;
-    font-weight: normal;
-    padding: 12px;
+	font-size: 13px;
+	font-weight: normal;
+	padding: 12px;
 }
 .fl-settings-form-content {
-    display: none;
+	display: none;
 }
 .fl-settings-network-admin .fl-settings-form-content,
 .fl-settings-single-install .fl-settings-form-content {
-    display: block;
+	display: block;
 }
 
 /* Icons
@@ -115,26 +115,26 @@
 
 @media (max-width: 900px) {
 
-    /* Nav
-    ----------------------------------------------------------- */
-    
-    .fl-settings-nav {
-        float: none;
-        margin: 15px 0 0 0;
-        width: 100%;
-    }
+	/* Nav
+	----------------------------------------------------------- */
+	
+	.fl-settings-nav {
+		float: none;
+		margin: 15px 0 0 0;
+		width: 100%;
+	}
 
-    /* Content
-    ----------------------------------------------------------- */
-    
-    .fl-settings-content {
-        float: none;
-        margin-top: 15px;
-        width: 100%;
-    }
+	/* Content
+	----------------------------------------------------------- */
+	
+	.fl-settings-content {
+		float: none;
+		margin-top: 15px;
+		width: 100%;
+	}
 	.fl-settings-content .fl-settings-save {
 		float: none;
-        width: 100%;
+		width: 100%;
 	}
 	.fl-settings-content .fl-settings-save .button-primary {
 		width: 100%;
@@ -145,12 +145,12 @@
 ----------------------------------------------------------- */
 
 @media (max-width: 782px) {
-    
-    /* Settings Forms
-    ----------------------------------------------------------- */
-    
-    .fl-settings-form th,
-    .fl-settings-form td {
-        padding: 5px 17px;
-    }
+	
+	/* Settings Forms
+	----------------------------------------------------------- */
+	
+	.fl-settings-form th,
+	.fl-settings-form td {
+		padding: 5px 17px;
+	}
 }

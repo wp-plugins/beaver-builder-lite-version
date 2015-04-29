@@ -1,11 +1,11 @@
 (function($){
 
-    FLBuilder.registerModuleHelper('html', {
+	FLBuilder.registerModuleHelper('html', {
 
-        init: function()
-        {
-            $('.ace_text-input').focus();
-        }
-    });
+		init: function()
+		{
+			$('.ace_text-input').focus();
+		}
+	});
 
 })(jQuery);

@@ -26,16 +26,16 @@
 		
 		// Render the service select.
 		FLBuilder::render_settings_field( 'service', array(
-			'row_class'		=> 'fl-builder-service-select-row',
-			'class'			=> 'fl-builder-service-select',
-	        'type'          => 'select',
-	        'label'         => __( 'Service', 'fl-builder' ),
-	        'options'       => $options,
-		    'preview'		=> array(
-			    'type'			=> 'none'
-		    )
-	    ), $settings ); 
-	    
-	    ?>
+			'row_class'     => 'fl-builder-service-select-row',
+			'class'         => 'fl-builder-service-select',
+			'type'          => 'select',
+			'label'         => __( 'Service', 'fl-builder' ),
+			'options'       => $options,
+			'preview'       => array(
+				'type'          => 'none'
+			)
+		), $settings ); 
+		
+		?>
 	</table>
 </div>

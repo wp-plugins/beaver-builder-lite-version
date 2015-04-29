@@ -1,3 +1,24 @@
+<h4>1.5.6 - 04/26/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added SendinBlue integration.</li>
+    <li>Added filters for MailChimp single optin and disabling the welcome message.</li>
+    <li>Most of the builder's PHP and JavaScript files now have much better inline documentation of classes, properties and methods (we still need to do the modules).</li>
+</ul>
+<p><strong>Tweaks</strong></p>
+<ul>
+    <li>Removed phone number validation from the Contact Form module to support international phone numbers.</li>
+    <li>Updated FontAwesome.</li>
+    <li>Tweaked the Heading module CSS to prevent Dynamik from overriding our styles.</li>
+    <li>Added CSS to fix margins issue with the WordPress editor link lightbox and some third party themes.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug that didn't allow backslashes to be saved.</li>
+    <li>Fixed a bug that prevented namespaced widgets from working.</li>
+    <li>Fixed a bug with the Posts module that prevented the date from being hidden in the gallery layout.</li>
+</ul>
+
 <h4>1.5.5 - 04/12/2015</h4>
 <p><strong>Enhancements</strong></p>
 <ul>

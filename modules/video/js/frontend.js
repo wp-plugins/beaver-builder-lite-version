@@ -1,7 +1,7 @@
 (function($) {
-    
-    $(function() {
-        $('.fl-embed-video').fitVids();
-    });
-    
+	
+	$(function() {
+		$('.fl-embed-video').fitVids();
+	});
+	
 })(jQuery);
