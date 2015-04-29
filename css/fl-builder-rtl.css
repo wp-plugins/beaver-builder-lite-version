@@ -1,0 +1,61 @@
+/* Wrappers
+------------------------------------------------------ */
+
+.fl-builder-bar,
+.fl-builder-panel,
+.fl-lightbox {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+/* Panel
+------------------------------------------------------ */
+
+.fl-builder-blocks-section > span i {
+	float: left;
+}
+
+/* Template Selector
+------------------------------------------------------ */
+
+.fl-user-template-actions {
+	left: 0;
+	right: auto;
+}
+
+/* Settings Forms
+------------------------------------------------------ */
+
+.fl-lightbox-header .fl-builder-preview-loader {
+	left: 15px;
+	right: auto;
+}
+.fl-form-table th {
+	text-align: right !important;
+}
+
+/* Icon Fields
+------------------------------------------------------ */
+
+.fl-icon-field .fl-icon-preview i {
+	margin: 10px 2px 9px 10px;
+}
+
+/* Icon Selector
+------------------------------------------------------ */
+
+.fl-icons-filter {
+	left: 10px;
+	right: auto;
+}
+.fl-icons-section h2 {
+	text-align: right;
+}
+
+/* Tooltips
+------------------------------------------------------ */
+
+.fl-help-tooltip-text {
+	left: auto;
+	right: 23px;
+}
