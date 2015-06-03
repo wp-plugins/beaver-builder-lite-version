@@ -1,0 +1,27 @@
+.fl-embed-video iframe {
+	max-width: 100%;
+}
+.fl-wp-video {
+	position: relative;
+	padding-top: 30px; 
+	height: 0; 
+	overflow: hidden;
+	padding-bottom: 53.30%;
+}
+.fl-wp-video .wp-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+.fl-wp-video .wp-video .mejs-container,
+.fl-wp-video .wp-video .mejs-inner,
+.fl-wp-video .wp-video .mejs-layers,
+.fl-wp-video .wp-video .mejs-layer,
+.fl-wp-video .wp-video-shortcode,
+.fl-wp-video .me-plugin,
+.fl-wp-video .me-plugin * {
+	width: 100% !important;
+	height: 100% !important;
+}

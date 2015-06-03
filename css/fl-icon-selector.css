@@ -1,0 +1,68 @@
+.fl-icon-selector .fl-lightbox {
+	height: 100%;
+}
+.fl-icons-filter {
+	height: auto !important;
+	margin: 0 !important;
+	position: absolute !important;
+	right: 10px;
+	top: 10px;
+}
+.fl-icons-filter select {
+	vertical-align: middle;
+	width: 160px;
+}
+.fl-icons-filter input {
+	line-height: 18px;
+	vertical-align: middle;
+	width: 160px;
+}
+.fl-icons-list {
+	bottom: 52px;
+	left: 0;
+	overflow: auto;
+	padding: 20px;
+	position: absolute;
+	right: 0;
+	top: 48px;
+}
+.fl-icons-list::-webkit-scrollbar {
+	background-color: #ccc;
+	-webkit-appearance: none;
+	width: 10px;
+}
+.fl-icons-list::-webkit-scrollbar-thumb {
+	background-color: #666;
+	border: 1px solid #ccc;
+}
+.fl-icons-section {
+	text-align: center;
+}
+.fl-icons-section h2 {
+	border-bottom: 1px solid #dfdfdf;
+	color: #333 !important;
+	font-family: Helvetica, Verdana, sans-serif !important;
+	font-size: 16px !important;
+	font-weight: bold !important;
+	margin: 0 0 20px 0 !important;
+	padding: 0 0 10px 0 !important;
+	text-align: left;
+}
+.fl-icons-list i,
+.fl-icons-list i:before {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 32px;
+	height: 80px;
+	line-height: 80px;
+	width: 80px;
+}
+.fl-icons-list i:hover {
+	background: #e5e5e5;
+}
+.fl-icon-selector-footer {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+}
