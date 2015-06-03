@@ -3,12 +3,23 @@
 	<?php if(get_post_type() == 'fl-builder-template') : ?>
 	
 	<div class="fl-builder-bar-content">
+		<?php if(FLBuilderModel::get_branding_icon() == '') : ?>
 		<span class="fl-builder-bar-title fl-builder-bar-title-no-icon">
 			<?php echo sprintf(__('Template: %s', 'fl-builder'), get_the_title($post_id)); ?>
 		</span>
+		<?php else : ?>
+		<span class="fl-builder-bar-title">
+			<img src="<?php echo FLBuilderModel::get_branding_icon(); ?>" />
+			<span><?php echo sprintf(__('Template: %s', 'fl-builder'), get_the_title($post_id)); ?></span>
+		</span>
+		<?php endif; ?>
 		<div class="fl-builder-bar-actions">
-			<span class="fl-builder-save-edit-template-button fl-builder-button fl-builder-button-primary"><?php _e('Save Template', 'fl-builder'); ?></span>
-			<span class="fl-builder-cancel-edit-template-button fl-builder-button"><?php _e('Cancel', 'fl-builder'); ?></span>
+			<?php if ( $help_button['enabled'] ) : ?>
+			<span class="fl-builder-help-button fl-builder-button"><i class="fa fa-question-circle"></i></span>
+			<?php endif ?>
+			<span class="fl-builder-done-button fl-builder-button fl-builder-button-primary"><?php _e('Done', 'fl-builder'); ?></span>
+			<span class="fl-builder-tools-button fl-builder-button"><?php _e('Tools', 'fl-builder'); ?></span>
+			<span class="fl-builder-add-content-button fl-builder-button"><?php _e('Add Content', 'fl-builder'); ?></span>
 			<div class="fl-clear"></div>
 		</div>
 		<div class="fl-clear"></div>

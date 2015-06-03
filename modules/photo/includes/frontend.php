@@ -15,8 +15,11 @@ $alt    = $module->get_alt();
 		<?php if(!empty($link)) : ?>
 		</a>
 		<?php endif; ?>    
+		<?php if($photo && !empty($photo->caption) && 'hover' == $settings->show_caption) : ?>
+		<div class="fl-photo-caption fl-photo-caption-hover" itemprop="caption"><?php echo $photo->caption; ?></div>
+		<?php endif; ?>
 	</div>
-	<?php if($photo && $settings->show_caption && !empty($photo->caption)) : ?>
-	<div class="fl-photo-caption fl-photo-caption-<?php echo $settings->show_caption; ?>" itemprop="caption"><?php echo $photo->caption; ?></div>
+	<?php if($photo && !empty($photo->caption) && 'below' == $settings->show_caption) : ?>
+	<div class="fl-photo-caption fl-photo-caption-below" itemprop="caption"><?php echo $photo->caption; ?></div>
 	<?php endif; ?>
 </div>

@@ -39,15 +39,6 @@
 .fl-module-content {
 	zoom:1;
 }
-.fl-row,
-.fl-row-content {
-	margin-left: auto;
-	margin-right: auto;
-}
-.fl-col {
-	float: left;
-	min-height: 1px;
-}
 .fl-clear {
 	clear: both;
 }
@@ -78,6 +69,17 @@
 
 /* Rows
 ------------------------------------------------------ */
+
+.fl-row,
+.fl-row-content {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Photo Bg */
+.fl-builder-touch .fl-row-bg-photo .fl-row-content-wrap {
+	background-attachment: scroll;
+}
 
 /* Video Bg */
 .fl-row-bg-video,
@@ -133,7 +135,7 @@
 	top: 0;
 }
 
-/* Bg Overlay */
+/* Row Bg Overlay */
 .fl-row-bg-overlay .fl-row-content-wrap {
 	position: relative;
 }
@@ -148,6 +150,33 @@
 	z-index: 0;
 }
 .fl-row-bg-overlay .fl-row-content {
+	position: relative;
+	z-index: 1;
+}
+
+/* Columns
+------------------------------------------------------ */
+
+.fl-col {
+	float: left;
+	min-height: 1px;
+}
+
+/* Column Bg Overlay */
+.fl-col-bg-overlay .fl-col-content {
+	position: relative;
+}
+.fl-col-bg-overlay .fl-col-content:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+}
+.fl-col-bg-overlay .fl-module {
 	position: relative;
 	z-index: 1;
 }
@@ -214,6 +243,10 @@
 	vertical-align: middle;
 	width: auto;
 }
+.fl-builder-content .fl-button i.fl-button-icon-after {
+	margin-left: 8px;
+	margin-right: 0;
+}
 .fl-builder-content .fl-button-has-icon .fl-button-text {
 	vertical-align: middle;
 }
@@ -255,6 +288,7 @@
 ------------------------------------------------------ */
 
 .fl-photo {
+	line-height: 0;
 	position: relative;
 }
 .fl-photo-align-left {
@@ -267,7 +301,10 @@
 	text-align: right;
 }
 .fl-photo-content {
+	display: inline-block;
 	line-height: 0;
+	position: relative;
+	max-width: 100%;
 }
 .fl-photo-content img {
 	display: inline;
@@ -305,7 +342,7 @@
 	-moz-transition:opacity 0.3s ease-in;
 	transition:opacity 0.3s ease-in;
 }
-.fl-photo:hover .fl-photo-caption-hover {
+.fl-photo-content:hover .fl-photo-caption-hover {
 	opacity: 100;
 	filter: alpha(opacity = 100);
 }

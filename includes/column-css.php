@@ -15,10 +15,27 @@
 }
 <?php endif; ?>
 
-<?php if(!empty($col->settings->bg_color)) : ?>
+<?php if($col->settings->bg_type == 'color' && !empty($col->settings->bg_color)) : ?>
 .fl-node-<?php echo $col->node; ?> .fl-col-content {
 	background-color: #<?php echo $col->settings->bg_color; ?>;
 	background-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($col->settings->bg_color)) ?>, <?php echo $col->settings->bg_opacity/100; ?>);
+}
+<?php endif; ?>
+
+<?php if($col->settings->bg_type == 'photo' && !empty($col->settings->bg_image)) : ?>
+.fl-node-<?php echo $col->node; ?> .fl-col-content {
+	background-image: url(<?php echo $col->settings->bg_image_src; ?>);
+	background-repeat: <?php echo $col->settings->bg_repeat; ?>;
+	background-position: <?php echo $col->settings->bg_position; ?>;
+	background-attachment: <?php echo $col->settings->bg_attachment; ?>;
+	background-size: <?php echo $col->settings->bg_size; ?>;
+}
+<?php endif; ?>
+
+<?php if( in_array( $col->settings->bg_type, array('photo') ) && ! empty( $col->settings->bg_overlay_color ) ) : ?>
+.fl-node-<?php echo $col->node; ?> .fl-col-content:after {
+	background-color: #<?php echo $col->settings->bg_overlay_color; ?>;
+	background-color: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $col->settings->bg_overlay_color ) ) ?>, <?php echo $col->settings->bg_overlay_opacity/100; ?>);
 }
 <?php endif; ?>
 

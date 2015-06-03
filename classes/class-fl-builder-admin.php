@@ -149,19 +149,23 @@ final class FLBuilderAdmin {
 	}
 
 	/**
-	 * Loads builder classes for wp-admin.
+	 * Loads builder classes if they exist.
 	 *
 	 * @since 1.0
 	 * @return void
 	 */
 	static public function init_classes()
 	{
-		$templates_class	= FL_BUILDER_DIR . 'classes/class-fl-builder-templates.php';
+		$templates_class	= FL_BUILDER_DIR . 'classes/class-fl-builder-template-settings.php';
+		$overrides_class	= FL_BUILDER_DIR . 'classes/class-fl-builder-templates-override.php';
 		$ms_class			= FL_BUILDER_DIR . 'classes/class-fl-builder-multisite.php';
 		$ms_settings_class	= FL_BUILDER_DIR . 'classes/class-fl-builder-multisite-settings.php';
 
 		if(file_exists($templates_class)) {
 			require_once $templates_class;
+		}
+		if(file_exists($overrides_class)) {
+			require_once $overrides_class;
 		}
 		if(is_multisite()) {
 

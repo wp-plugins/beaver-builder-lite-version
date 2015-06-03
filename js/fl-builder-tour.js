@@ -180,7 +180,13 @@
 			};
 			
 			// Remove the first step if no templates.
-			if( FLBuilderConfig.lite || 'disabled' == FLBuilderConfig.enabledTemplates ) {
+			if( FLBuilderConfig.lite ) {
+				config.steps.shift();
+			}
+			else if ( 'disabled' == FLBuilderConfig.enabledTemplates ) {
+				config.steps.shift();
+			}
+			else if ( 'fl-builder-template' == FLBuilderConfig.postType ) {
 				config.steps.shift();
 			}
 			

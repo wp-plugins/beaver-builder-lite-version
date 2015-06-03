@@ -88,7 +88,9 @@ final class FLBuilderAdminPosts {
 	{
 		global $post;
 		
-		$enabled = FLBuilderModel::is_builder_enabled();
+		$post_type_obj 	= get_post_type_object ( $post->post_type );
+		$post_type_name = strtolower( $post_type_obj->labels->singular_name );
+		$enabled 		= FLBuilderModel::is_builder_enabled();
 		
 		include FL_BUILDER_DIR . 'includes/admin-posts.php';
 	}

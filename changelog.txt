@@ -1,3 +1,69 @@
+<h4>1.5.9 - 06/01/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Accordion and tab items can now be linked to. Please see this <a href="https://www.wpbeaverbuilder.com/knowledge-base/linking-to-tabs-and-accordions/">knowledge base entry</a> for more info.</li>
+	<li>Button icons can now be added after the button text.</li>
+	<li>Added background color overlay for columns.</li>
+	<li>Added Dutch translation.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed issues with modules, widgets and shortcodes that create secondary loops causing the page to become unresponsive.</li>
+    <li>Fixed a bug with widgets that use checkbox groups.</li>
+    <li>Fixed a bug with the pricing table module that caused some styling not to show.</li>
+    <li>The map module no longer scrolls as you scroll the page.</li>
+	<li>CSS tweak to prevent the text editor from breaking when the body's position is set to relative.</li>
+	<li>CSS tweak for photos to prevent extra space below them.</li>
+	<li>CSS tweak to make fixed background photos scroll on iOS to prevent them from getting blown up too big.</li>
+	<li>CSS tweak to fix a FireFox bug with callouts.</li>
+    <li>Added jQuery as a dependency for fl-builder-layout-(POST_ID).js so it's included after jquery.js if jquery.js is moved to wp_footer.</li>
+</ul>
+
+<h4>1.5.8 - 05/17/2015</h4>
+<p>Please see <a href="https://www.wpbeaverbuilder.com/?p=14686" target="_blank">the blog post</a> for more info on this release.</p>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>User defined templates can now be categorized and ordered.</li>
+	<li>Revisions are now enabled for user defined templates.</li>
+    <li>Added a setting to enable the templates admin interface for editing templates in the WordPress admin.</li>
+    <li>Added a setting for Agency members to override core templates.</li>
+    <li>Added Hatchbuck integration to the Subscribe Form module.</li>
+    <li>Photo backgrounds can now be added to columns.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a CSS z-index bug with the Content Slider module's next/prev buttons.</li>
+</ul>
+
+<h4>1.5.7.2 - 05/12/2015</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug with shortcodes not being rendered when the Posts module is present on a page.</li>
+</ul>
+
+<h4>1.5.7.1 - 05/10/2015</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a FireFox and IE bug with the Photo module introduced in 1.5.7.</li>
+    <li>Fixed a CSS bug with the height of the Content Slider module when multiple sliders are on the same page.</li>
+    <li>Fixed a bug that prevented shortcodes from being escaped with double brackets.</li>
+    <li>Fixed a bug that caused the Video module to freeze the builder with videos that are uploaded to WordPress.</li>
+</ul>
+
+<h4>1.5.7 - 05/04/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added Infusionsoft integration.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug causing MailPoet to be unavailable in the Subscribe Form module.</li>
+    <li>Fixed a bug causing the builder's admin settings to be unavailable when DISALLOW_FILE_MODS is set to true.</li>
+    <li>Fixed a bug with new lines in photo captions breaking the Slideshow module.</li>
+    <li>Fixed a CSS bug with photo captions that are shown on hover.</li>
+    <li>Fixed floating content issues with the Accordion module.</li>
+</ul>
+
 <h4>1.5.6 - 04/26/2015</h4>
 <p><strong>Enhancements</strong></p>
 <ul>

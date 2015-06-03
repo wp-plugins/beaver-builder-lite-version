@@ -59,10 +59,10 @@ final class FLBuilderAdminSettings {
 	 */
 	static public function menu() 
 	{
-		if ( current_user_can( 'delete_plugins' ) ) {
+		if ( current_user_can( 'delete_users' ) ) {
 			
 			$title = FLBuilderModel::get_branding();
-			$cap   = 'delete_plugins';
+			$cap   = 'delete_users';
 			$slug  = 'fl-builder-settings';
 			$func  = 'FLBuilderAdminSettings::render';
 			
@@ -334,7 +334,7 @@ final class FLBuilderAdminSettings {
 	static public function save()
 	{
 		// Only admins can save settings.
-		if(!current_user_can('delete_plugins')) {
+		if(!current_user_can('delete_users')) {
 			return;
 		}
 		
@@ -365,16 +365,8 @@ final class FLBuilderAdminSettings {
 			if ( is_array( $_POST['fl-modules'] ) ) {
 				$modules = array_map( 'sanitize_text_field', $_POST['fl-modules'] );
 			}
-		
-			if ( is_network_admin() ) {
-				update_site_option( '_fl_builder_enabled_modules', $modules );
-			}
-			else if ( self::multisite_support() && ! isset( $_POST['fl-override-ms'] ) ) {
-				delete_option( '_fl_builder_enabled_modules' );
-			}
-			else {
-				update_option( '_fl_builder_enabled_modules', $modules );
-			}
+			
+			FLBuilderModel::update_admin_settings_option( '_fl_builder_enabled_modules', $modules, true );
 		}
 	}
 	
@@ -382,6 +374,7 @@ final class FLBuilderAdminSettings {
 	 * Saves the enabled templates.
 	 *
 	 * @since 1.0
+	 * @since 1.5.7 Added the ability to enable the templates admin UI.
 	 * @access private
 	 * @return void
 	 */ 
@@ -389,16 +382,14 @@ final class FLBuilderAdminSettings {
 	{
 		if ( isset( $_POST['fl-templates-nonce'] ) && wp_verify_nonce( $_POST['fl-templates-nonce'], 'templates' ) ) {
 		
-			$enabled_templates = sanitize_text_field( $_POST['fl-template-settings'] );
-		
-			if ( is_network_admin() ) {
-				update_site_option( '_fl_builder_enabled_templates', $enabled_templates );
-			}
-			else if ( self::multisite_support() && ! isset( $_POST['fl-override-ms'] ) ) {
-				delete_option( '_fl_builder_enabled_templates' );
-			}
-			else {
-				update_option( '_fl_builder_enabled_templates', $enabled_templates );
+			$enabled_templates   = sanitize_text_field( $_POST['fl-template-settings'] );
+			$admin_ui_enabled    = isset( $_POST['fl-template-admin-ui'] ) ? 1 : 0;
+			
+			FLBuilderModel::update_admin_settings_option( '_fl_builder_enabled_templates', $enabled_templates, true );
+			FLBuilderModel::update_admin_settings_option( '_fl_builder_user_templates_admin', $admin_ui_enabled, true );
+			
+			if ( class_exists( 'FLBuilderTemplatesOverride' ) ) {
+				FLBuilderTemplatesOverride::save_admin_settings();	
 			}
 		}
 	}
@@ -415,26 +406,20 @@ final class FLBuilderAdminSettings {
 		if ( isset( $_POST['fl-post-types-nonce'] ) && wp_verify_nonce( $_POST['fl-post-types-nonce'], 'post-types' ) ) {
 		
 			if ( is_network_admin() ) {
-				
 				$post_types = sanitize_text_field( $_POST['fl-post-types'] );
 				$post_types = str_replace( ' ', '', $post_types );
 				$post_types = explode( ',', $post_types );
-				
-				update_site_option( '_fl_builder_post_types', $post_types );
-			}
-			else if ( self::multisite_support() && ! isset($_POST['fl-override-ms'] ) ) {
-				delete_option( '_fl_builder_post_types' );
 			}
 			else {
 				
 				$post_types = array();
 				
-				if ( is_array( $_POST['fl-post-types'] ) ) {
+				if ( isset( $_POST['fl-post-types'] ) && is_array( $_POST['fl-post-types'] ) ) {
 					$post_types = array_map( 'sanitize_text_field', $_POST['fl-post-types'] );
 				}
-				
-				update_option( '_fl_builder_post_types', $post_types );
 			}
+			
+			FLBuilderModel::update_admin_settings_option( '_fl_builder_post_types', $post_types, true );
 		}
 	}
 	
@@ -552,16 +537,7 @@ final class FLBuilderAdminSettings {
 	 */ 
 	static private function update_enabled_icons( $enabled_icons = array() )
 	{
-		if ( is_network_admin() ) {
-			update_site_option( '_fl_builder_enabled_icons', $enabled_icons );
-			update_option( '_fl_builder_enabled_icons', $enabled_icons );
-		}
-		else if ( self::multisite_support() && ! isset( $_POST['fl-override-ms'] ) ) {
-			delete_option( '_fl_builder_enabled_icons' );
-		}
-		else {
-			update_option( '_fl_builder_enabled_icons', $enabled_icons );
-		}
+		FLBuilderModel::update_admin_settings_option( '_fl_builder_enabled_icons', $enabled_icons, true );
 	}
 	
 	/** 
@@ -577,15 +553,7 @@ final class FLBuilderAdminSettings {
 			
 			$capability = sanitize_text_field( $_POST['fl-editing-capability'] );
 			
-			if ( is_network_admin() ) {
-				update_site_option( '_fl_builder_editing_capability', $capability );
-			}
-			else if ( self::multisite_support() && ! isset( $_POST['fl-override-ms'] ) ) {
-				delete_option( '_fl_builder_editing_capability' );
-			}
-			else {
-				update_option( '_fl_builder_editing_capability', $capability );
-			}
+			FLBuilderModel::update_admin_settings_option( '_fl_builder_editing_capability', $capability, true );
 		}
 	}
 	
@@ -603,14 +571,8 @@ final class FLBuilderAdminSettings {
 			$branding		= wp_kses_post( $_POST['fl-branding'] );
 			$branding_icon	= sanitize_text_field( $_POST['fl-branding-icon'] );
 			
-			if ( is_network_admin() ) {
-				update_site_option( '_fl_builder_branding', $branding );
-				update_site_option( '_fl_builder_branding_icon', $branding_icon );
-			}
-			else {
-				update_option( '_fl_builder_branding', $branding );
-				update_option( '_fl_builder_branding_icon', $branding_icon );
-			}
+			FLBuilderModel::update_admin_settings_option( '_fl_builder_branding', $branding, false );
+			FLBuilderModel::update_admin_settings_option( '_fl_builder_branding_icon', $branding_icon, false );
 		}
 	}
 	
@@ -675,13 +637,7 @@ final class FLBuilderAdminSettings {
 				return;
 			}
 			
-			// Save the settings.
-			if ( is_network_admin() ) {
-				update_site_option( '_fl_builder_help_button', $settings );
-			}
-			else {
-				update_option( '_fl_builder_help_button', $settings );
-			}
+			FLBuilderModel::update_admin_settings_option( '_fl_builder_help_button', $settings, false );
 		}
 	}
 
@@ -694,7 +650,7 @@ final class FLBuilderAdminSettings {
 	 */ 
 	static private function clear_cache()
 	{
-		if ( ! current_user_can( 'delete_plugins' ) ) {
+		if ( ! current_user_can( 'delete_users' ) ) {
 			return; 
 		}
 		else if ( isset( $_POST['fl-cache-nonce'] ) && wp_verify_nonce( $_POST['fl-cache-nonce'], 'cache' ) ) {

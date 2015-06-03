@@ -516,20 +516,17 @@
 			$('body').delegate('.fl-builder-global-settings .fl-builder-settings-save', 'click', FLBuilder._saveGlobalSettingsClicked);
 			
 			/* Template Selector */
+			$('body').delegate('.fl-template-category-select', 'change', FLBuilder._templateCategoryChanged);
+			$('body').delegate('.fl-template-preview', 'click', FLBuilder._templateClicked);
 			$('body').delegate('.fl-user-template', 'click', FLBuilder._userTemplateClicked);
 			$('body').delegate('.fl-user-template-edit', 'click', FLBuilder._editUserTemplateClicked);
 			$('body').delegate('.fl-user-template-delete', 'click', FLBuilder._deleteUserTemplateClicked);
-			$('body').delegate('.fl-template-preview', 'click', FLBuilder._templateClicked);
 			$('body').delegate('.fl-builder-template-replace-button', 'click', FLBuilder._templateReplaceClicked);
 			$('body').delegate('.fl-builder-template-append-button', 'click', FLBuilder._templateAppendClicked);
 			$('body').delegate('.fl-builder-template-actions .fl-builder-cancel-button', 'click', FLBuilder._templateCancelClicked);
 			
 			/* User Template Settings */
 			$('body').delegate('.fl-builder-user-template-settings .fl-builder-settings-save', 'click', FLBuilder._saveUserTemplateSettings);
-			
-			/* Edit User Template */
-			$('body').delegate('.fl-builder-cancel-edit-template-button', 'click', FLBuilder._cancelEditUserTemplate);
-			$('body').delegate('.fl-builder-save-edit-template-button', 'click', FLBuilder._saveEditUserTemplate);
 			
 			/* Help Actions */
 			$('body').delegate('.fl-builder-help-tour-button', 'click', FLBuilder._startHelpTour);
@@ -687,6 +684,10 @@
 			
 			e.preventDefault();
 			
+			if ( 'fl-builder-template' == FLBuilderConfig.postType )  {
+				return;
+			}
+			
 			FLBuilder._exitUrl = href.indexOf('?') > -1 ? href : href + '?fl_builder';
 			FLBuilder._doneClicked();
 		},
@@ -757,14 +758,16 @@
 				
 			// Duplicate button
 			if(postType == 'fl-builder-template') {
-				buttons['duplicate-page'] = FLBuilderStrings.duplicateTemplate;
+				if ( typeof window.opener == 'undefined' || ! window.opener ) {
+					buttons['duplicate-page'] = FLBuilderStrings.duplicateTemplate;
+				}
 			}
 			else {
 				buttons['duplicate-page'] = FLBuilderStrings.duplicatePage;
 			}
 			
 			// Template buttons
-			if(!lite && postType != 'fl-builder-template' && enabledTemplates != 'disabled') {
+			if(!lite && postType != 'fl-builder-template' && (enabledTemplates == 'enabled' || enabledTemplates == 'user')) {
 			
 				buttons['save-user-template'] = FLBuilderStrings.saveTemplate;
 				
@@ -979,9 +982,10 @@
 		/**
 		 * Redirects the user to the _exitUrl if defined, otherwise 
 		 * it redirects the user to the current post without the 
-		 * builder active.
+		 * builder active. 
 		 *
 		 * @since 1.0
+		 * @since 1.5.7 Closes the window if we're in a child window.
 		 * @access private
 		 * @method _exit
 		 */
@@ -989,14 +993,20 @@
 		{
 			var href = window.location.href;
 			
-			if ( FLBuilder._exitUrl ) {
-				href = FLBuilder._exitUrl;
+			if ( typeof window.opener != 'undefined' && window.opener ) {
+				window.close();
 			}
 			else {
-				href = href.replace('?fl_builder', '').replace('&fl_builder', '');
+				
+				if ( FLBuilder._exitUrl ) {
+					href = FLBuilder._exitUrl;
+				}
+				else {
+					href = href.replace('?fl_builder', '').replace('&fl_builder', '');
+				}
+				
+				window.location.href = href;
 			}
-			
-			window.location.href = href;
 		},
 		
 		/* Tools Actions
@@ -1034,38 +1044,6 @@
 			var adminUrl = $('#fl-admin-url').val();
 			
 			window.location.href = adminUrl + 'post.php?post='+ response +'&action=edit';
-		},
-		
-		/**
-		 * Shows the template selector when the templates button
-		 * has been clicked.
-		 *
-		 * @since 1.0
-		 * @access private
-		 * @method _changeTemplateClicked
-		 */
-		_changeTemplateClicked: function()
-		{
-			FLBuilder._actionsLightbox.close();
-			FLBuilder._showTemplateSelector();
-		},
-		
-		/**
-		 * Shows the settings for saving a user defined template 
-		 * when the save template button is clicked.
-		 *
-		 * @since 1.1.3
-		 * @access private
-		 * @method _saveUserTemplateClicked
-		 */
-		_saveUserTemplateClicked: function()
-		{
-			FLBuilder._actionsLightbox.close();
-			FLBuilder._showLightbox(false);
-			
-			FLBuilder.ajax({
-				action: 'fl_builder_render_user_template_settings'
-			}, FLBuilder._userTemplateSettingsLoaded);
 		},
 		
 		/**
@@ -1176,6 +1154,20 @@
 		},
 		
 		/**
+		 * Shows the template selector when the templates button
+		 * has been clicked.
+		 *
+		 * @since 1.0
+		 * @access private
+		 * @method _changeTemplateClicked
+		 */
+		_changeTemplateClicked: function()
+		{
+			FLBuilder._actionsLightbox.close();
+			FLBuilder._showTemplateSelector();
+		},
+		
+		/**
 		 * Shows the template selector lightbox.
 		 *
 		 * @since 1.0
@@ -1212,15 +1204,40 @@
 		 * @method _templateSelectorLoaded
 		 * @param {String} html The HTML for the template selector.
 		 */
-		_templateSelectorLoaded: function(html)
+		_templateSelectorLoaded: function( html )
 		{
-			FLBuilder._setLightboxContent(html);
+			FLBuilder._setLightboxContent( html );
 			
-			if($('.fl-user-template').length == 0) {
-				$('.fl-user-templates-message').show();
+			var select 			= $( '.fl-template-category-select' ),
+				userTemplates 	= $( '.fl-user-template' );
+			
+			// Default to the user templates tab?
+			if ( 'user' == FLBuilderConfig.enabledTemplates || userTemplates.length > 0 ) {
+				select.val( 'fl-builder-settings-tab-yours' );
+				$( '.fl-builder-settings-tab' ).removeClass( 'fl-active' );
+				$( '#fl-builder-settings-tab-yours' ).addClass( 'fl-active' );
+			}
+			
+			// Show the no templates message?
+			if ( 0 === userTemplates.length ) {
+				$( '.fl-user-templates-message' ).show();
 			}
 			
 			$( 'body' ).trigger( 'fl-builder.template-selector-loaded' );
+		},
+		
+		/**
+		 * Callback to show a template category when the 
+		 * select is changed.
+		 *
+		 * @since 1.5.7
+		 * @access private
+		 * @method _templateCategoryChanged
+		 */
+		_templateCategoryChanged: function()
+		{
+			$( '.fl-template-selector .fl-builder-settings-tab' ).hide();
+			$( '#' + $( this ).val() ).show();
 		},
 		
 		/**
@@ -1234,7 +1251,7 @@
 		_templateClicked: function()
 		{
 			var template = $(this),
-				index    = template.closest('.fl-template-preview').attr('data-index');
+				index    = template.closest('.fl-template-preview').attr('data-id');
 			
 			if($(FLBuilder._contentClass).children('.fl-row').length > 0) {
 				
@@ -1254,88 +1271,6 @@
 			else {
 				FLBuilder._applyTemplate(index, false, 'core');
 			}
-		},
-		
-		/**
-		 * Callback for when a user clicks a user defined template in 
-		 * the template selector.
-		 *
-		 * @since 1.1.3
-		 * @access private
-		 * @method _userTemplateClicked
-		 */
-		_userTemplateClicked: function()
-		{
-			var id = $(this).attr('data-id');
-				
-			if($(FLBuilder._contentClass).children('.fl-row').length > 0) {
-			
-				if(id == 'blank') {
-					if(confirm(FLBuilderStrings.changeTemplateMessage)) {
-						FLBuilder._lightbox._node.hide();
-						FLBuilder._applyTemplate('blank', false, 'user');
-					}
-				}
-				else {            
-					FLBuilder._selectedTemplateId = id;
-					FLBuilder._selectedTemplateType = 'user';
-					FLBuilder._showTemplateActions();
-					FLBuilder._lightbox._node.hide();
-				}
-			}
-			else {
-				FLBuilder._applyTemplate(id, false, 'user');
-			}
-		},
-		
-		/**
-		 * Launches the builder in a new tab to edit a user
-		 * defined template when the edit link is clicked.
-		 *
-		 * @since 1.1.3
-		 * @access private
-		 * @method _editUserTemplateClicked
-		 * @param {Object} e The event object.
-		 */
-		_editUserTemplateClicked: function(e)
-		{
-			e.preventDefault();
-			e.stopPropagation();
-			
-			window.open($(this).attr('href'));
-		},
-		
-		/**
-		 * Deletes a user defined template when the delete link is clicked.
-		 *
-		 * @since 1.1.3
-		 * @access private
-		 * @method _deleteUserTemplateClicked
-		 * @param {Object} e The event object.
-		 */
-		_deleteUserTemplateClicked: function(e)
-		{
-			var template = $(this).closest('.fl-user-template');
-			
-			if(confirm(FLBuilderStrings.deleteTemplate)) {
-				
-				FLBuilder.ajax({
-					action: 'fl_builder_save',
-					method: 'delete_user_template',
-					template_id: template.attr('data-id')
-				});
-			
-				template.fadeOut(function(){ 
-					
-					template.remove(); 
-			
-					if($('.fl-user-template').length == 0) {
-						$('.fl-user-templates-message').show();
-					}  
-				});
-			}
-			
-			e.stopPropagation();
 		},
 		
 		/**
@@ -1424,7 +1359,7 @@
 				FLBuilder.ajax({
 					action: 'fl_builder_save',
 					method: 'apply_template',
-					index: id,
+					template_id: id,
 					append: append
 				}, FLBuilder._updateLayout);
 			}
@@ -1441,6 +1376,24 @@
 		
 		/* User Template Settings
 		----------------------------------------------------------*/
+		
+		/**
+		 * Shows the settings for saving a user defined template 
+		 * when the save template button is clicked.
+		 *
+		 * @since 1.1.3
+		 * @access private
+		 * @method _saveUserTemplateClicked
+		 */
+		_saveUserTemplateClicked: function()
+		{
+			FLBuilder._actionsLightbox.close();
+			FLBuilder._showLightbox(false);
+			
+			FLBuilder.ajax({
+				action: 'fl_builder_render_user_template_settings'
+			}, FLBuilder._userTemplateSettingsLoaded);
+		},
 		
 		/**
 		 * Sets the lightbox content when the user template settings are loaded.
@@ -1481,7 +1434,7 @@
 				FLBuilder.ajax({
 					action: 'fl_builder_save',
 					method: 'save_user_template',
-					template_name: settings.name
+					settings: settings
 				}, FLBuilder._saveUserTemplateSettingsComplete);
 					
 				FLBuilder._lightbox.close();
@@ -1499,75 +1452,97 @@
 		{
 			FLBuilder.alert(FLBuilderStrings.templateSaved);
 		},
-
-		/* Edit User Template
-		----------------------------------------------------------*/
 		
 		/**
-		 * Clears changes made when editing a user defined template.
+		 * Callback for when a user clicks a user defined template in 
+		 * the template selector.
 		 *
-		 * @since 1.1.9
+		 * @since 1.1.3
 		 * @access private
-		 * @method _cancelEditUserTemplate
+		 * @method _userTemplateClicked
 		 */
-		_cancelEditUserTemplate: function()
+		_userTemplateClicked: function()
 		{
-			var result = confirm(FLBuilderStrings.discardMessage);
-			
-			if(result) {
-			
-				FLBuilder.showAjaxLoader();
+			var id = $(this).attr('data-id');
 				
-				FLBuilder.ajax({
-					action: 'fl_builder_save',
-					method: 'clear_draft_layout',
-					render_assets: 0
-				}, FLBuilder._cancelEditUserTemplateComplete);
+			if($(FLBuilder._contentClass).children('.fl-row').length > 0) {
+			
+				if(id == 'blank') {
+					if(confirm(FLBuilderStrings.changeTemplateMessage)) {
+						FLBuilder._lightbox._node.hide();
+						FLBuilder._applyTemplate('blank', false, 'user');
+					}
+				}
+				else {            
+					FLBuilder._selectedTemplateId = id;
+					FLBuilder._selectedTemplateType = 'user';
+					FLBuilder._showTemplateActions();
+					FLBuilder._lightbox._node.hide();
+				}
+			}
+			else {
+				FLBuilder._applyTemplate(id, false, 'user');
 			}
 		},
 		
 		/**
-		 * Closes the window when the builder has finished clearing
-		 * changes made to a user defined template.
+		 * Launches the builder in a new tab to edit a user
+		 * defined template when the edit link is clicked.
 		 *
-		 * @since 1.1.9
+		 * @since 1.1.3
 		 * @access private
-		 * @method _cancelEditUserTemplateComplete
+		 * @method _editUserTemplateClicked
+		 * @param {Object} e The event object.
 		 */
-		_cancelEditUserTemplateComplete: function()
+		_editUserTemplateClicked: function(e)
 		{
-			window.close();
-		},
-		
-		/**
-		 * Saves changes made to a user defined template.
-		 *
-		 * @since 1.1.9
-		 * @access private
-		 * @method _saveEditUserTemplate
-		 */
-		_saveEditUserTemplate: function()
-		{
-			FLBuilder.showAjaxLoader();
+			e.preventDefault();
+			e.stopPropagation();
 			
-			FLBuilder.ajax({
-				action: 'fl_builder_save',
-				method: 'save_layout',
-				render_assets: 0
-			}, FLBuilder._saveEditUserTemplateComplete);
+			window.open($(this).attr('href'));
 		},
 		
 		/**
-		 * Closes the window when the builder has finished saving
-		 * changes made to a user defined template.
+		 * Deletes a user defined template when the delete link is clicked.
 		 *
-		 * @since 1.1.9
+		 * @since 1.1.3
 		 * @access private
-		 * @method _saveEditUserTemplateComplete
+		 * @method _deleteUserTemplateClicked
+		 * @param {Object} e The event object.
 		 */
-		_saveEditUserTemplateComplete: function()
+		_deleteUserTemplateClicked: function(e)
 		{
-			window.close();
+			var template = $( this ).closest( '.fl-user-template' ),
+				id		 = template.attr( 'data-id' ),
+				all		 = $( '.fl-user-template[data-id=' + id + ']' ),
+				parent   = null;
+			
+			if ( confirm( FLBuilderStrings.deleteTemplate ) ) {
+				
+				FLBuilder.ajax( {
+					action: 'fl_builder_save',
+					method: 'delete_user_template',
+					template_id: id
+				} );
+			
+				all.fadeOut( function() {
+					
+					template = $( this );
+					parent 	 = template.closest( '.fl-user-template-category' );
+					
+					template.remove(); 
+					
+					if ( 0 === parent.find( '.fl-user-template' ).length ) {
+						parent.remove();
+					}
+					if ( 1 === $( '.fl-user-template' ).length ) {
+						$( '.fl-user-templates').hide();
+						$( '.fl-user-templates-message').show();
+					}
+				});
+			}
+			
+			e.stopPropagation();
 		},
 		
 		/* Core Template Settings
@@ -3370,47 +3345,89 @@
 		{
 			FLBuilder._updateEditorFields();
 			
-			var data     = form.serializeArray(),
-				i        = 0,
-				name     = '',
-				key      = '',
-				settings = {};
-				 
-			for( ; i < data.length; i++) {
+			var data     	= form.serializeArray(),
+				checkboxes 	= form.find( 'input[type="checkbox"]:not(:checked)' ),
+				i        	= 0,
+				value	 	= '',
+				name     	= '',
+				key      	= '',
+				matches	 	= [],
+				settings 	= {};
 				
-				if(data[i].name.indexOf('[]') > -1) {
+			// Add unchecked checkboxes to the form data. 
+			for ( ; i < checkboxes.length; i++ ) {
+				
+				name = checkboxes.eq( i ).attr( 'name' );
+				
+				if ( 'undefined' != name ) {
 					
-					name = data[i].name.replace('[]', '');
+					data.push( {
+						name  : name,
+						value : ''
+					} );
+				}
+			}
+			
+			// Loop through the form data.
+			for ( i = 0; i < data.length; i++ ) {
+				
+				value = data[ i ].value.replace( /\r/gm, '' );
+				
+				// Support foo[] setting keys.
+				if ( data[ i ].name.indexOf( '[]' ) > -1 ) {
 					
-					if(name.indexOf('[') > -1) {
+					name = data[ i ].name.replace( '[]', '' );
 					
-						key = name.split('[').pop().replace(']', '');
-						name = name.replace('['+ key +']', '');
+					// Support foo[][bar] setting keys.
+					if ( name.indexOf( '[' ) > -1 ) {
+					
+						matches = name.match( /\[(.*)\]/ );
+						key  	= matches[ 0 ].replace( /(\[|\])/g, '' );
+						name 	= name.replace( matches[ 0 ], '' );
 						
-						if(typeof settings[name] === 'undefined') {
-							settings[name] = {};
+						if ( 'undefined' == typeof settings[ name ] ) {
+							settings[ name ] = {};
 						}
 						
-						settings[name][key] = data[i].value.replace(/\r/gm, '');
+						// Support foo[][bar][] setting keys.
+						if ( matches[ 0 ].indexOf( '[]' ) > -1 ) {
+							
+							if ( 'undefined' == typeof settings[ name ][ key ] ) {
+								settings[ name ][ key ] = [];
+							}
+							
+							settings[ name ][ key ].push( value );
+						}
+						// Must be a foo[][bar] setting key.
+						else {
+							settings[ name ][ key ] = value;	
+						}
 					}
+					// Must be a standard foo[] setting key.
 					else {
 
-						if(typeof settings[name] === 'undefined') {
-							settings[name] = [];
+						if ( 'undefined' == typeof settings[ name ] ) {
+							settings[ name ] = [];
 						}
 						
-						settings[name].push(data[i].value.replace(/\r/gm, ''));
+						settings[ name ].push( value );
 					}
 				}
+				// Standard name/value pair.
 				else {
-					settings[data[i].name] = data[i].value.replace(/\r/gm, '');
+					settings[ data[ i ].name ] = value;
 				}
 			}
 			
 			// Replace auto suggest values.
-			for(key in settings) {
-				if(typeof settings['as_values_' + key] !== 'undefined') {
-					settings[key] = $.grep(settings['as_values_' + key].split(','), function(n){ return n != ''; }).join(',');
+			for ( key in settings ) {
+				if ( 'undefined' != typeof settings[ 'as_values_' + key ] ) {
+					settings[ key ] = $.grep( 
+						settings[ 'as_values_' + key ].split( ',' ), 
+						function( n ) { 
+							return n != ''; 
+						}
+					).join( ',' );
 				}
 			}
 			

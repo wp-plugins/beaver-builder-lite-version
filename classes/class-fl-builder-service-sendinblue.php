@@ -73,7 +73,7 @@ final class FLBuilderServiceSendinBlue extends FLBuilderService {
 			$result = $api->get_account();
 			
 			if ( ! is_array( $result ) ) {
-				$response['error'] = __( 'There was an error connecting to SendinBlue. Please try again.' );
+				$response['error'] = __( 'There was an error connecting to SendinBlue. Please try again.', 'fl-builder' );
 			}
 			else if ( isset( $result['code'] ) && 'failure' == $result['code'] ) {
 				$response['error'] = sprintf( __( 'Error: Could not connect to SendinBlue. %s', 'fl-builder' ), $result['message'] );
@@ -217,7 +217,7 @@ final class FLBuilderServiceSendinBlue extends FLBuilderService {
 			$result = $api->create_update_user( $email, $data, 0, array( $settings->list_id ), array(), 0 );
 			
 			if ( ! is_array( $result ) ) {
-				$response['error'] = __( 'There was an error subscribing to SendinBlue. Please try again.' );
+				$response['error'] = __( 'There was an error subscribing to SendinBlue. Please try again.', 'fl-builder' );
 			}
 			else if ( isset( $result['code'] ) && 'failure' == $result['code'] ) {
 				$response['error'] = sprintf( __( 'Error: Could not subscribe to SendinBlue. %s', 'fl-builder' ), $result['message'] );

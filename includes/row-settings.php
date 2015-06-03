@@ -145,7 +145,7 @@ FLBuilder::register_settings_form('row', array(
 								'repeat-x'      => _x( 'Horizontal', 'Background repeat.', 'fl-builder' ),
 								'repeat-y'      => _x( 'Vertical', 'Background repeat.', 'fl-builder' )
 							),
-							'help'          => __('Repeat applies to how the image should display in the row background. Choosing none will display the image as uploaded. Tile will repeat the image as many times as needed to fill the row horizontally and vertically. You can also specify the image to only repeat horizontally or vertically.', 'fl-builder'),
+							'help'          => __('Repeat applies to how the image should display in the background. Choosing none will display the image as uploaded. Tile will repeat the image as many times as needed to fill the background horizontally and vertically. You can also specify the image to only repeat horizontally or vertically.', 'fl-builder'),
 							'preview'         => array(
 								'type'            => 'none'
 							)
@@ -165,7 +165,7 @@ FLBuilder::register_settings_form('row', array(
 								'center center' => __( 'Center', 'fl-builder' ),
 								'center bottom' => __('Center Bottom', 'fl-builder')
 							),
-							'help'          => __('Position will tell the image where it should sit in the row background.', 'fl-builder'),
+							'help'          => __('Position will tell the image where it should sit in the background.', 'fl-builder'),
 							'preview'         => array(
 								'type'            => 'none'
 							)
@@ -178,7 +178,7 @@ FLBuilder::register_settings_form('row', array(
 								'scroll'        => __( 'Scroll', 'fl-builder' ),
 								'fixed'         => __( 'Fixed', 'fl-builder' )
 							),
-							'help'          => __('Attachment will specify how the image reacts when scrolling a page. When scrolling is selected, the image will scroll with page scrolling. This is the default setting. Fixed will allow the image to scroll within the row background if fill is selected in the scale setting.', 'fl-builder'),
+							'help'          => __('Attachment will specify how the image reacts when scrolling a page. When scrolling is selected, the image will scroll with page scrolling. This is the default setting. Fixed will allow the image to scroll within the background if fill is selected in the scale setting.', 'fl-builder'),
 							'preview'         => array(
 								'type'            => 'none'
 							)
@@ -192,7 +192,7 @@ FLBuilder::register_settings_form('row', array(
 								'contain'       => __( 'Fit', 'fl-builder'),
 								'cover'         => __( 'Fill', 'fl-builder')
 							),
-							'help'          => __('Scale applies to how the image should display in the row background. You can select either fill or fit to the row background.', 'fl-builder'),
+							'help'          => __('Scale applies to how the image should display in the background. You can select either fill or fit to the background.', 'fl-builder'),
 							'preview'         => array(
 								'type'            => 'none'
 							)

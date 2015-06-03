@@ -75,7 +75,7 @@
 	-webkit-border-bottom-right-radius: 3px;
 	-webkit-border-bottom-left-radius: 3px;
 	margin-bottom: 20px;
-	padding: 50px;
+	padding: 45px 0 50px;
 	text-align: center;
 }
 .fl-builder-admin-ui h3 {
@@ -99,4 +99,27 @@
 	text-align: center;
 	top: 0;
 	z-index: 1;
+}
+
+/* Templates
+------------------------------------------------------ */
+
+.post-type-fl-builder-template .fl-builder-admin-tabs {
+	display: none;
+}
+.post-type-fl-builder-template .fl-builder-admin-ui {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	display: block;
+	margin-top: 30px;
+}
+#fl-builder-template-category-tabs {
+	display: none;
+}
+#fl-builder-template-category-all {
+	margin: 13px 0 0;
+}
+#newfl-builder-template-category_parent {
+	display: none;
 }

@@ -2,178 +2,182 @@ msgid ""
 msgstr ""
 "Project-Id-Version: {FL_BUILDER_NAME}\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-18 10:56-0800\n"
-"PO-Revision-Date: 2015-05-18 10:57-0800\n"
-"Last-Translator: Alessandro Curci <hantarex@gmail.com>\n"
+"POT-Creation-Date: 2015-03-22 13:17-0800\n"
+"PO-Revision-Date: 2015-04-10 19:38+0100\n"
+"Last-Translator: Karlis Rode <karlis.rode@gmail.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;esc_attr_e;__ngettext:1,2;_n:1,2;"
-"__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
-"_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: ../\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:116
+#: classes/class-fl-builder-admin-settings.php:93
 #: includes/global-settings.php:4
 #, php-format
 msgctxt "%s stands for custom branded \"Page Builder\" name."
 msgid "%s Settings"
-msgstr ""
+msgstr "%s Inställningar"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:133
+#: classes/class-fl-builder-admin-settings.php:107
 msgid "Settings updated!"
-msgstr ""
+msgstr "Inställningar uppdaterade!"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:147
+#: classes/class-fl-builder-admin-settings.php:118
 msgid "License"
-msgstr ""
+msgstr "Licens"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:151
+#: classes/class-fl-builder-admin-settings.php:122
 #: includes/admin-settings-upgrade.php:3
 msgid "Upgrade"
-msgstr ""
+msgstr "Uppdatering"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:155
+#: classes/class-fl-builder-admin-settings.php:126
 #: includes/global-settings.php:90
 msgid "Modules"
-msgstr ""
+msgstr "Moduler"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:159 includes/ui.php:58
+#: classes/class-fl-builder-admin-settings.php:130 includes/ui.php:47
 msgid "Templates"
-msgstr ""
+msgstr "Mallar"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:163
+#: classes/class-fl-builder-admin-settings.php:134
 #: includes/admin-settings-post-types.php:3
 msgid "Post Types"
-msgstr ""
+msgstr "Inläggstyper"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:167
+#: classes/class-fl-builder-admin-settings.php:138
 #: modules/icon-group/icon-group.php:27
 msgid "Icons"
-msgstr ""
+msgstr "Ikoner"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:171
+#: classes/class-fl-builder-admin-settings.php:142
 msgid "Editing"
-msgstr ""
+msgstr "Editering"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:175
+#: classes/class-fl-builder-admin-settings.php:146
 #: includes/admin-settings-branding.php:3
 msgid "Branding"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:179
+#: classes/class-fl-builder-admin-settings.php:150
 msgid "Help Button"
-msgstr ""
-
-#: classes/class-fl-builder-admin-settings.php:183
-#: includes/admin-settings-cache.php:3
-msgid "Cache"
-msgstr ""
+msgstr "Hjälpknapp"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:187
+#: classes/class-fl-builder-admin-settings.php:154
 #: includes/admin-settings-uninstall.php:3
 #: includes/admin-settings-uninstall.php:15
 msgid "Uninstall"
-msgstr ""
+msgstr "Avinstallera"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:439
+#: classes/class-fl-builder-admin-settings.php:376
 msgid "Error! You must have at least one icon set enabled."
-msgstr ""
+msgstr "Fel! Du måste ha minst ett set med ikoner aktiverat."
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:481
+#: classes/class-fl-builder-admin-settings.php:418
 msgid "Error! Could not unzip file."
-msgstr ""
+msgstr "Fel! Kan inte zippa upp filen."
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:515
+#: classes/class-fl-builder-admin-settings.php:452
 msgid "Error! Please upload an icon set from either Icomoon or Fontello."
 msgstr ""
+"Fel! Var god ladda upp ett set ikoner från antingen Icomoon eller Fontello."
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:618
+#: classes/class-fl-builder-admin-settings.php:566
 msgid "Error! Please enter an iframe for the video embed code."
-msgstr ""
+msgstr "Fel! Var god ange en iframe för inbäddningskoden till videon."
 
 # @ fl-builder
-#: classes/class-fl-builder-admin-settings.php:636
+#: classes/class-fl-builder-admin-settings.php:584
 msgid "Error! You must have at least one feature of the help button enabled."
-msgstr ""
+msgstr "Fel! Du måste ha minst en funktion för hjälpknappen aktiverad."
 
 # @ fl-builder
-#: classes/class-fl-builder-admin.php:45
+#: classes/class-fl-builder-admin.php:40
 #, php-format
 msgid ""
 "This version of the <strong>Page Builder</strong> plugin is not compatible "
 "with WordPress Multisite. <a%s>Please upgrade</a> to the Multisite version "
 "of this plugin."
 msgstr ""
+"Denna version av <strong>Wetail Page Builder</strong>-pluginet är inte "
+"kompatibelt med WordPress Multisite. <a%s>Var god uppgradera</a> till "
+"Multisite-versionen av pluginet."
 
 # @ fl-builder
-#: classes/class-fl-builder-admin.php:55
+#: classes/class-fl-builder-admin.php:50
 msgid ""
 "The <strong>Page Builder</strong> plugin requires WordPress version 3.5 or "
 "greater. Please update WordPress before activating the plugin."
 msgstr ""
+"<strong>Wetail Page Builder</strong>-pluginet kräver WordPress version 3.5 "
+"eller högre. Var god uppdatera WordPress innan du aktiverar pluginet."
 
 # @ fl-builder
-#: classes/class-fl-builder-admin.php:112
+#: classes/class-fl-builder-admin.php:96
 #, php-format
 msgid "Page Builder activated! <a%s>Click here</a> to enable remote updates."
 msgstr ""
+"Wetail Page Builder aktiverad! <a%s>Klicka här</a> för att aktivera "
+"fjärruppdateringar."
 
 # @ fl-builder
-#: classes/class-fl-builder-admin.php:238
+#: classes/class-fl-builder-admin.php:191
 msgctxt "Plugin action link label."
 msgid "Upgrade"
-msgstr ""
+msgstr "Uppgradera"
 
 # @ fl-builder
-#: classes/class-fl-builder-admin.php:253
-#: classes/class-fl-builder-model.php:3113
+#: classes/class-fl-builder-admin.php:202
+#: classes/class-fl-builder-model.php:2613
 msgid "Page Builder"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:1605
+#: classes/class-fl-builder-model.php:1404
 #, php-format
 msgctxt "%s stands for the module filename"
 msgid ""
 "A module with the filename %s.php already exists! Please namespace your "
 "module filenames to ensure compatibility with Beaver Builder."
 msgstr ""
+"En modul med filnamnet %s.php finns redan! Var god lägg till ett namespace "
+"på filnamnen i din modul för att göra den kompatibel med Beaver Builder."
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:1652
-#: classes/class-fl-builder-model.php:1710 modules/heading/heading.php:16
+#: classes/class-fl-builder-model.php:1462
+#: classes/class-fl-builder-model.php:1516 modules/heading/heading.php:16
 #: modules/photo/photo.php:27 modules/rich-text/rich-text.php:16
 #: modules/separator/separator.php:16 modules/video/video.php:21
 msgid "Basic Modules"
-msgstr ""
+msgstr "Grundläggande moduler"
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:1653
-#: classes/class-fl-builder-model.php:1711 modules/accordion/accordion.php:16
+#: classes/class-fl-builder-model.php:1463
+#: classes/class-fl-builder-model.php:1517 modules/accordion/accordion.php:16
 #: modules/button/button.php:16 modules/callout/callout.php:16
 #: modules/contact-form/contact-form.php:16
 #: modules/content-slider/content-slider.php:16 modules/cta/cta.php:16
@@ -182,664 +186,165 @@ msgstr ""
 #: modules/map/map.php:16 modules/post-grid/post-grid.php:16
 #: modules/pricing-table/pricing-table.php:16 modules/sidebar/sidebar.php:16
 #: modules/slideshow/slideshow.php:16
-#: modules/social-buttons/social-buttons.php:16
-#: modules/subscribe-form/subscribe-form.php:20 modules/tabs/tabs.php:16
+#: modules/social-buttons/social-buttons.php:16 modules/tabs/tabs.php:16
 #: modules/testimonials/testimonials.php:16
 #: modules/woocommerce/woocommerce.php:18
 msgid "Advanced Modules"
-msgstr ""
+msgstr "Avancerade moduler"
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:1654
-#: classes/class-fl-builder-model.php:1712
+#: classes/class-fl-builder-model.php:1464
+#: classes/class-fl-builder-model.php:1518
 msgid "Other Modules"
-msgstr ""
+msgstr "Övriga moduler"
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:1655
-#: classes/class-fl-builder-model.php:1713
-#: includes/admin-settings-modules.php:32 includes/ui.php:99
+#: classes/class-fl-builder-model.php:1465
+#: classes/class-fl-builder-model.php:1519
+#: includes/admin-settings-modules.php:32 includes/ui.php:88
 #: modules/widget/widget.php:16
 msgid "WordPress Widgets"
 msgstr ""
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:2302
+#: classes/class-fl-builder-model.php:2028
 #, php-format
 msgctxt "%s stands for post/page title."
 msgid "Copy of %s"
-msgstr ""
-
-#: classes/class-fl-builder-model.php:2715
-msgctxt "Default user template category."
-msgid "Uncategorized"
-msgstr ""
+msgstr "Kopia av %s"
 
 # @ fl-builder
-#: classes/class-fl-builder-model.php:3070
-msgid "Home Pages"
-msgstr ""
-
-# @ fl-builder
-#: classes/class-fl-builder-model.php:3071
-msgid "Content Pages"
-msgstr ""
-
-# @ fl-builder
-#: classes/class-fl-builder-photo.php:95
-#: classes/class-fl-builder-photo.php:100
+#: classes/class-fl-builder-photo.php:75
 msgctxt "Image size."
 msgid "Full Size"
-msgstr ""
+msgstr "Full storlek"
 
 # @ fl-builder
-#: classes/class-fl-builder-photo.php:101
+#: classes/class-fl-builder-photo.php:76
 msgctxt "Image size."
 msgid "Large"
-msgstr ""
+msgstr "Stor"
 
 # @ fl-builder
-#: classes/class-fl-builder-photo.php:102
+#: classes/class-fl-builder-photo.php:77
 msgctxt "Image size."
 msgid "Medium"
-msgstr ""
+msgstr "Mellan"
 
 # @ fl-builder
-#: classes/class-fl-builder-photo.php:103
+#: classes/class-fl-builder-photo.php:78
 msgctxt "Image size."
 msgid "Thumbnail"
-msgstr ""
+msgstr "Tumnagel"
 
-#: classes/class-fl-builder-service-aweber.php:72
-msgid "Error: You must provide an Authorization Code."
-msgstr ""
-
-#: classes/class-fl-builder-service-aweber.php:76
-msgid "Error: Please enter a valid Authorization Code."
-msgstr ""
-
-#: classes/class-fl-builder-service-aweber.php:127
-msgid "Authorization Code"
-msgstr ""
-
-#: classes/class-fl-builder-service-aweber.php:128
-#, php-format
-msgid ""
-"Please register this website with AWeber to get your Authorization Code. <a"
-"%s>Register Now</a>"
-msgstr ""
-
-# @ fl-builder
-#: classes/class-fl-builder-service-aweber.php:182
-#: classes/class-fl-builder-service-campaign-monitor.php:148
-#: classes/class-fl-builder-service-campaign-monitor.php:199
-#: classes/class-fl-builder-service-constant-contact.php:156
-#: classes/class-fl-builder-service-getresponse.php:154
-#: classes/class-fl-builder-service-icontact.php:207
-#: classes/class-fl-builder-service-infusionsoft.php:204
-#: classes/class-fl-builder-service-madmimi.php:178
-#: classes/class-fl-builder-service-mailchimp.php:154
-#: classes/class-fl-builder-service-mailpoet.php:92
-#: classes/class-fl-builder-service-sendinblue.php:161
-#: classes/class-fl-builder-services.php:278 includes/service-settings.php:21
-#: modules/woocommerce/woocommerce.php:60
-msgid "Choose..."
-msgstr ""
-
-#: classes/class-fl-builder-service-aweber.php:192
-#: classes/class-fl-builder-service-campaign-monitor.php:209
-#: classes/class-fl-builder-service-constant-contact.php:166
-#: classes/class-fl-builder-service-getresponse.php:164
-#: classes/class-fl-builder-service-icontact.php:217
-#: classes/class-fl-builder-service-infusionsoft.php:214
-#: classes/class-fl-builder-service-madmimi.php:188
-#: classes/class-fl-builder-service-mailchimp.php:164
-#: classes/class-fl-builder-service-mailpoet.php:102
-#: classes/class-fl-builder-service-sendinblue.php:171
-msgctxt "An email list from a third party provider."
-msgid "List"
-msgstr ""
-
-#: classes/class-fl-builder-service-aweber.php:219
-msgid ""
-"There was an error subscribing to AWeber. The account is no longer connected."
-msgstr ""
-
-#: classes/class-fl-builder-service-aweber.php:242
-msgid "There was an error connecting to AWeber. Please try again."
-msgstr ""
-
-#: classes/class-fl-builder-service-aweber.php:247
-#, php-format
-msgid "There was an error subscribing to AWeber. %s"
-msgstr ""
-
-#: classes/class-fl-builder-service-campaign-monitor.php:55
-#: classes/class-fl-builder-service-constant-contact.php:48
-#: classes/class-fl-builder-service-getresponse.php:67
-#: classes/class-fl-builder-service-hatchbuck.php:48
-#: classes/class-fl-builder-service-infusionsoft.php:79
-#: classes/class-fl-builder-service-madmimi.php:73
-#: classes/class-fl-builder-service-mailchimp.php:67
-msgid "Error: You must provide an API key."
-msgstr ""
-
-#: classes/class-fl-builder-service-campaign-monitor.php:67
-#: classes/class-fl-builder-service-campaign-monitor.php:129
-#: classes/class-fl-builder-service-getresponse.php:76
-#: classes/class-fl-builder-service-getresponse.php:132
-#: classes/class-fl-builder-service-hatchbuck.php:63
-msgid "Error: Please check your API key."
-msgstr ""
-
-#: classes/class-fl-builder-service-campaign-monitor.php:88
-#: classes/class-fl-builder-service-constant-contact.php:88
-#: classes/class-fl-builder-service-getresponse.php:100
-#: classes/class-fl-builder-service-hatchbuck.php:87
-#: classes/class-fl-builder-service-infusionsoft.php:129
-#: classes/class-fl-builder-service-madmimi.php:121
-#: classes/class-fl-builder-service-mailchimp.php:100
-msgid "API Key"
-msgstr ""
-
-#: classes/class-fl-builder-service-campaign-monitor.php:89
-msgid ""
-"Your API key can be found in your Campaign Monitor account under Account "
-"Settings > API Key."
-msgstr ""
-
-#: classes/class-fl-builder-service-campaign-monitor.php:158
-msgctxt "A client account in Campaign Monitor."
-msgid "Client"
-msgstr ""
-
-#: classes/class-fl-builder-service-campaign-monitor.php:236
-msgid ""
-"There was an error subscribing to Campaign Monitor. The account is no longer "
-"connected."
-msgstr ""
-
-#: classes/class-fl-builder-service-campaign-monitor.php:253
-msgid "There was an error subscribing to Campaign Monitor."
-msgstr ""
-
-#: classes/class-fl-builder-service-constant-contact.php:52
-msgid "Error: You must provide an access token."
-msgstr ""
-
-#: classes/class-fl-builder-service-constant-contact.php:61
-#: classes/class-fl-builder-service-constant-contact.php:134
-#, php-format
-msgid "Error: Could not connect to Constant Contact. %s"
-msgstr ""
-
-#: classes/class-fl-builder-service-constant-contact.php:89
-msgid "Your Constant Contact API key."
-msgstr ""
-
-#: classes/class-fl-builder-service-constant-contact.php:99
-msgid "Access Token"
-msgstr ""
-
-#: classes/class-fl-builder-service-constant-contact.php:100
-msgid "Your Constant Contact access token."
-msgstr ""
-
-#: classes/class-fl-builder-service-constant-contact.php:101
-#, php-format
-msgid ""
-"You must register a <a%s>Developer Account</a> with Constant Contact to "
-"obtain an API key and access token. Please see <a%s>Getting an API key</a> "
-"for complete instructions."
-msgstr ""
-
-#: classes/class-fl-builder-service-constant-contact.php:193
-msgid ""
-"There was an error subscribing to Constant Contact. The account is no longer "
-"connected."
-msgstr ""
-
-#: classes/class-fl-builder-service-constant-contact.php:245
-#: classes/class-fl-builder-service-constant-contact.php:279
-#, php-format
-msgid "There was an error subscribing to Constant Contact. %s"
-msgstr ""
-
-#: classes/class-fl-builder-service-getresponse.php:101
-msgid ""
-"Your API key can be found in your GetResponse account under My Account > "
-"GetResponse API."
-msgstr ""
-
-#: classes/class-fl-builder-service-getresponse.php:191
-msgid ""
-"There was an error subscribing to GetResponse. The account is no longer "
-"connected."
-msgstr ""
-
-#: classes/class-fl-builder-service-getresponse.php:202
-#, php-format
-msgid "There was an error subscribing to GetResponse. %s"
-msgstr ""
-
-#: classes/class-fl-builder-service-hatchbuck.php:88
-msgid ""
-"Your API key can be found in your Hatchbuck account under Account Settings > "
-"Web API."
-msgstr ""
-
-#: classes/class-fl-builder-service-hatchbuck.php:134
-msgctxt "A tag to add to contacts in Hatchbuck when they subscribe."
-msgid "Tag"
-msgstr ""
-
-#: classes/class-fl-builder-service-hatchbuck.php:161
-msgid ""
-"There was an error subscribing to Hatchbuck. The account is no longer "
-"connected."
-msgstr ""
-
-#: classes/class-fl-builder-service-hatchbuck.php:190
-msgid "There was an error subscribing to Hatchbuck. The API key is invalid."
-msgstr ""
-
-#: classes/class-fl-builder-service-hatchbuck.php:200
-#: classes/class-fl-builder-service-hatchbuck.php:232
-msgid "There was an error subscribing to Hatchbuck."
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:75
-msgid "Error: You must provide a username."
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:79
-msgid "Error: You must provide a app ID."
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:83
-msgid "Error: You must provide a app password."
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:104
-#: classes/class-fl-builder-service-icontact.php:188
-#, php-format
-msgid "Error: Could not connect to iContact. %s"
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:125
-msgid "Username"
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:126
-msgid "Your iContact username."
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:136
-#: classes/class-fl-builder-service-infusionsoft.php:118
-msgid "App ID"
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:137
-msgid "Your iContact app ID."
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:147
-msgid "App Password"
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:148
-msgid "Your iContact app password."
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:149
-#, php-format
-msgid ""
-"You must <a%s>create an app</a> in iContact to obtain an app ID and "
-"password. Please see <a%s>the iContact docs</a> for complete instructions."
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:244
-msgid ""
-"There was an error subscribing to iContact. The account is no longer "
-"connected."
-msgstr ""
-
-#: classes/class-fl-builder-service-icontact.php:280
-#, php-format
-msgid "There was an error subscribing to iContact. %s"
-msgstr ""
-
-#: classes/class-fl-builder-service-infusionsoft.php:49
-#, php-format
-msgid "There was an error connecting to Infusionsoft. %s"
-msgstr ""
-
-#: classes/class-fl-builder-service-infusionsoft.php:83
-msgid "Error: You must provide an app ID."
-msgstr ""
-
-#: classes/class-fl-builder-service-infusionsoft.php:119
-msgid ""
-"Your App ID can be found in the URL for your account. For example, if the "
-"URL for your account is myaccount.infusionsoft.com, your App ID would be "
-"<strong>myaccount</strong>."
-msgstr ""
-
-#: classes/class-fl-builder-service-infusionsoft.php:130
-msgid ""
-"Your API key can be found in your Infusionsoft account under Admin > "
-"Settings > Application > API > Encrypted Key."
-msgstr ""
-
-#: classes/class-fl-builder-service-infusionsoft.php:242
-msgid ""
-"There was an error subscribing to Infusionsoft. The account is no longer "
-"connected."
-msgstr ""
-
-#: classes/class-fl-builder-service-infusionsoft.php:291
-#, php-format
-msgid "There was an error subscribing to Infusionsoft. %s"
-msgstr ""
-
-#: classes/class-fl-builder-service-madmimi.php:69
-msgid "Error: You must provide an email address."
-msgstr ""
-
-#: classes/class-fl-builder-service-madmimi.php:83
-msgid "Unable to connect to Mad Mimi. Please check your credentials."
-msgstr ""
-
-#: classes/class-fl-builder-service-madmimi.php:110
-#: modules/subscribe-form/includes/frontend.php:11
-msgid "Email Address"
-msgstr ""
-
-#: classes/class-fl-builder-service-madmimi.php:111
-msgid "The email address associated with your Mad Mimi account."
-msgstr ""
-
-#: classes/class-fl-builder-service-madmimi.php:122
-msgid ""
-"Your API key can be found in your Mad Mimi account under Account > Settings "
-"&amp; Billing > API."
-msgstr ""
-
-#: classes/class-fl-builder-service-madmimi.php:156
-msgid ""
-"There was a problem retrieving your lists. Please check your API credentials."
-msgstr ""
-
-#: classes/class-fl-builder-service-madmimi.php:215
-#: classes/class-fl-builder-service-madmimi.php:242
-msgid ""
-"There was an error subscribing to Mad Mimi. The account is no longer "
-"connected."
-msgstr ""
-
-#: classes/class-fl-builder-service-mailchimp.php:101
-msgid ""
-"Your API key can be found in your MailChimp account under Account > Extras > "
-"API Keys."
-msgstr ""
-
-#: classes/class-fl-builder-service-mailchimp.php:191
-msgid ""
-"There was an error subscribing to MailChimp. The account is no longer "
-"connected."
-msgstr ""
-
-#: classes/class-fl-builder-service-mailchimp.php:221
-#, php-format
-msgid "There was an error subscribing to MailChimp. %s"
-msgstr ""
-
-#: classes/class-fl-builder-service-mailpoet.php:73
-msgid "There was an error retrieveing your lists."
-msgstr ""
-
-#: classes/class-fl-builder-service-mailpoet.php:129
-msgid "There was an error subscribing. MailPoet is not installed."
-msgstr ""
-
-#: classes/class-fl-builder-service-sendinblue.php:67
-msgid "Error: You must provide an Access Key."
-msgstr ""
-
-#: classes/class-fl-builder-service-sendinblue.php:76
-#: classes/class-fl-builder-service-sendinblue.php:136
-msgid "There was an error connecting to SendinBlue. Please try again."
-msgstr ""
-
-#: classes/class-fl-builder-service-sendinblue.php:79
-#: classes/class-fl-builder-service-sendinblue.php:139
-#, php-format
-msgid "Error: Could not connect to SendinBlue. %s"
-msgstr ""
-
-#: classes/class-fl-builder-service-sendinblue.php:103
-msgid "Access Key"
-msgstr ""
-
-#: classes/class-fl-builder-service-sendinblue.php:104
-msgid ""
-"Your Access Key can be found in your SendinBlue account under API & "
-"Integration > Manager Your Keys > Version 2.0 > Access Key."
-msgstr ""
-
-#: classes/class-fl-builder-service-sendinblue.php:198
-msgid ""
-"There was an error subscribing to SendinBlue. The account is no longer "
-"connected."
-msgstr ""
-
-#: classes/class-fl-builder-service-sendinblue.php:220
-msgid "There was an error subscribing to SendinBlue. Please try again."
-msgstr ""
-
-#: classes/class-fl-builder-service-sendinblue.php:223
-#, php-format
-msgid "Error: Could not subscribe to SendinBlue. %s"
-msgstr ""
-
-#: classes/class-fl-builder-services.php:148
-msgctxt "Third party service such as MailChimp."
-msgid "Error: Missing service type."
-msgstr ""
-
-#: classes/class-fl-builder-services.php:151
-msgctxt "Connection data such as an API key."
-msgid "Error: Missing service data."
-msgstr ""
-
-#: classes/class-fl-builder-services.php:154
-msgctxt "Account name for a third party service such as MailChimp."
-msgid "Error: Missing account name."
-msgstr ""
-
-#: classes/class-fl-builder-services.php:163
-msgctxt "Account name for a third party service such as MailChimp."
-msgid "Error: An account with that name already exists."
-msgstr ""
-
-#: classes/class-fl-builder-services.php:243
-msgid "Account Name"
-msgstr ""
-
-#: classes/class-fl-builder-services.php:244
-msgid ""
-"Used to identify this connection within the accounts list and can be "
-"anything you like."
-msgstr ""
-
-#: classes/class-fl-builder-services.php:257
-msgid "Connect"
-msgstr ""
-
-#: classes/class-fl-builder-services.php:285
-msgid "Add Account..."
-msgstr ""
-
-#: classes/class-fl-builder-services.php:292
-msgid "Account"
-msgstr ""
-
-#: classes/class-fl-builder-template-settings.php:33
+#: classes/class-fl-builder-templates.php:28
 msgid "Page Builder Templates"
-msgstr ""
-
-#: classes/class-fl-builder-templates-override.php:46
-msgid "Error! Please enter a number for the site ID."
-msgstr ""
-
-#: classes/class-fl-builder-templates-override.php:50
-msgid "Error! A site with that ID doesn't exist."
-msgstr ""
+msgstr "Page Builder-mallar"
 
 # @ fl-builder
-#: classes/class-fl-builder.php:811
+#: classes/class-fl-builder.php:709
 #, php-format
 msgctxt "Field name to add."
 msgid "Add %s"
-msgstr ""
-
-#: classes/class-fl-builder.php:901 classes/class-fl-builder.php:903
-msgctxt "Custom post type label."
-msgid "Templates"
-msgstr ""
-
-#: classes/class-fl-builder.php:902 classes/class-fl-builder.php:904
-msgctxt "Custom post type label."
-msgid "Template"
-msgstr ""
+msgstr "Lägg till %s"
 
 # @ fl-builder
-#: classes/class-fl-builder.php:905
+#: classes/class-fl-builder.php:772 classes/class-fl-builder.php:774
+msgctxt "Custom post type label."
+msgid "Layout Templates"
+msgstr "Layout-mallar"
+
+# @ fl-builder
+#: classes/class-fl-builder.php:773 classes/class-fl-builder.php:775
+msgctxt "Custom post type label."
+msgid "Layout Template"
+msgstr "Layout-mall"
+
+# @ fl-builder
+#: classes/class-fl-builder.php:776
 msgctxt "Custom post type label."
 msgid "Add New"
-msgstr ""
-
-#: classes/class-fl-builder.php:906
-msgctxt "Custom post type label."
-msgid "Add New Template"
-msgstr ""
-
-#: classes/class-fl-builder.php:907
-msgctxt "Custom post type label."
-msgid "New Template"
-msgstr ""
-
-#: classes/class-fl-builder.php:908
-msgctxt "Custom post type label."
-msgid "Edit Template"
-msgstr ""
-
-#: classes/class-fl-builder.php:909
-msgctxt "Custom post type label."
-msgid "View Template"
-msgstr ""
-
-#: classes/class-fl-builder.php:910
-msgctxt "Custom post type label."
-msgid "All Templates"
-msgstr ""
-
-#: classes/class-fl-builder.php:911
-msgctxt "Custom post type label."
-msgid "Search Templates"
-msgstr ""
-
-#: classes/class-fl-builder.php:912
-msgctxt "Custom post type label."
-msgid "Parent Templates:"
-msgstr ""
-
-#: classes/class-fl-builder.php:913
-msgctxt "Custom post type label."
-msgid "No templates found."
-msgstr ""
-
-#: classes/class-fl-builder.php:914
-msgctxt "Custom post type label."
-msgid "No templates found in Trash."
-msgstr ""
-
-#: classes/class-fl-builder.php:927 classes/class-fl-builder.php:937
-msgctxt "Custom taxonomy label."
-msgid "Categories"
-msgstr ""
-
-#: classes/class-fl-builder.php:928
-msgctxt "Custom taxonomy label."
-msgid "Category"
-msgstr ""
-
-#: classes/class-fl-builder.php:929
-msgctxt "Custom taxonomy label."
-msgid "Search Categories"
-msgstr ""
-
-#: classes/class-fl-builder.php:930
-msgctxt "Custom taxonomy label."
-msgid "All Categories"
-msgstr ""
-
-#: classes/class-fl-builder.php:931
-msgctxt "Custom taxonomy label."
-msgid "Parent Category"
-msgstr ""
-
-#: classes/class-fl-builder.php:932
-msgctxt "Custom taxonomy label."
-msgid "Parent Category:"
-msgstr ""
-
-#: classes/class-fl-builder.php:933
-msgctxt "Custom taxonomy label."
-msgid "Edit Category"
-msgstr ""
-
-#: classes/class-fl-builder.php:934
-msgctxt "Custom taxonomy label."
-msgid "Update Category"
-msgstr ""
-
-#: classes/class-fl-builder.php:935
-msgctxt "Custom taxonomy label."
-msgid "Add New Category"
-msgstr ""
-
-#: classes/class-fl-builder.php:936
-msgctxt "Custom taxonomy label."
-msgid "New Category Name"
-msgstr ""
+msgstr "Lägg till ny"
 
 # @ fl-builder
-#: classes/class-fl-builder.php:1389 includes/js-config.php:69
+#: classes/class-fl-builder.php:777
+msgctxt "Custom post type label."
+msgid "Add New Layout Template"
+msgstr "Lägg till ny Layout-mall"
+
+# @ fl-builder
+#: classes/class-fl-builder.php:778
+msgctxt "Custom post type label."
+msgid "New Layout Template"
+msgstr "Ny Layout-mall"
+
+# @ fl-builder
+#: classes/class-fl-builder.php:779
+msgctxt "Custom post type label."
+msgid "Edit Layout Template"
+msgstr "Ändra Layout-mall"
+
+# @ fl-builder
+#: classes/class-fl-builder.php:780
+msgctxt "Custom post type label."
+msgid "View Layout Template"
+msgstr "Visa Layout-mall"
+
+# @ fl-builder
+#: classes/class-fl-builder.php:781
+msgctxt "Custom post type label."
+msgid "All Layout Templates"
+msgstr "Alla Layout-mallar"
+
+# @ fl-builder
+#: classes/class-fl-builder.php:782
+msgctxt "Custom post type label."
+msgid "Search Layout Templates"
+msgstr "Sök Layout-mall"
+
+# @ fl-builder
+#: classes/class-fl-builder.php:783
+msgctxt "Custom post type label."
+msgid "Parent Layout Templates:"
+msgstr "Föräldralayout-mallar:"
+
+# @ fl-builder
+#: classes/class-fl-builder.php:784
+msgctxt "Custom post type label."
+msgid "No layout templates found."
+msgstr "Inga Layout-mallar funna."
+
+# @ fl-builder
+#: classes/class-fl-builder.php:785
+msgctxt "Custom post type label."
+msgid "No layout templates found in Trash."
+msgstr "Inga Layout-mallar funna i Papperskorgen."
+
+# @ fl-builder
+#: classes/class-fl-builder.php:1152 includes/js-config.php:66
 #, php-format
 msgctxt "%s stands for module name."
 msgid "%s Settings"
-msgstr ""
+msgstr "%s Inställningar"
 
 # @ fl-builder
 #: includes/admin-posts.php:3 modules/rich-text/rich-text.php:14
 msgid "Text Editor"
-msgstr ""
+msgstr "Text-redigerare"
 
+# @ fl-builder
 #: includes/admin-posts.php:7
 #, php-format
-msgctxt ""
-"The first %s stands for custom branded \"Page Builder\" name. The second %s "
-"stands for the post type name."
-msgid "%s is currently active for this %s."
-msgstr ""
+msgctxt "%s stands for custom branded \"Page Builder\" name."
+msgid "%s is currently active for this page."
+msgstr "%s är för närvarande aktivt för denna sida."
 
 # @ fl-builder
 #: includes/admin-posts.php:8
 #, php-format
 msgctxt "%s stands for custom branded \"Page Builder\" name."
 msgid "Launch %s"
-msgstr ""
+msgstr "Starta %s"
 
 # @ fl-builder
 #: includes/admin-settings-branding.php:7
@@ -853,56 +358,18 @@ msgid ""
 "below. Leave the field blank if you do not wish to use an icon."
 msgstr ""
 
-#: includes/admin-settings-branding.php:14
-msgid "Save Branding"
-msgstr ""
-
-#: includes/admin-settings-cache.php:9
-msgid ""
-"A CSS and JavaScript file is dynamically generated and cached each time you "
-"create a new layout. Sometimes the cache needs to be refreshed when you "
-"migrate your site to another server or update to the latest version. If you "
-"are running into any issues, please try clearing the cache by clicking the "
-"button below."
-msgstr ""
-
-# @ fl-builder
-#: includes/admin-settings-cache.php:12 includes/admin-settings-cache.php:14
-#: includes/admin-settings-uninstall.php:7
-#: includes/admin-settings-uninstall.php:10
-#: includes/updater/includes/form.php:31
-msgid "NOTE:"
-msgstr ""
-
-# @ fl-builder
-#: includes/admin-settings-cache.php:12
-#: includes/admin-settings-uninstall.php:10
-#: includes/updater/includes/form.php:31
-msgid "This applies to all sites on the network."
-msgstr ""
-
-#: includes/admin-settings-cache.php:14
-msgid ""
-"This only applies to this site. Please visit the Network Admin Settings to "
-"clear the cache for all sites on the network."
-msgstr ""
-
-#: includes/admin-settings-cache.php:19
-msgid "Clear Cache"
-msgstr ""
-
 # @ fl-builder
 #: includes/admin-settings-editing.php:3
 msgid "Editing Settings"
-msgstr ""
+msgstr "Inställningar för ändringar"
 
 # @ fl-builder
 #: includes/admin-settings-editing.php:10 includes/admin-settings-icons.php:27
 #: includes/admin-settings-modules.php:10
 #: includes/admin-settings-post-types.php:10
-#: includes/admin-settings-templates.php:16
+#: includes/admin-settings-templates.php:10
 msgid "Override network settings?"
-msgstr ""
+msgstr "Åsidosätt nätverksinställningar?"
 
 # @ fl-builder
 #: includes/admin-settings-editing.php:16
@@ -911,89 +378,84 @@ msgid ""
 "Set the <a%s>capability</a> required for users to access advanced builder "
 "editing such as adding, deleting or moving modules."
 msgstr ""
-
-#: includes/admin-settings-editing.php:22
-msgid "Save Editing Settings"
-msgstr ""
+"Sätt  <a%s>kapabiliteten</a> som krävs för att användare ska få tillgång "
+"till avancerade funktioner såsom att lägga till, ta bort eller flytta "
+"moduler."
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:8
 msgid "Help Button Settings"
-msgstr ""
+msgstr "Inställningar för hjälpknapp"
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:17
 msgid "Enable Help Button"
-msgstr ""
+msgstr "Aktivera hjälpknapp"
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:23
 msgid "Help Tour"
-msgstr ""
+msgstr "Hjälp-tour"
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:27
 msgid "Enable Help Tour"
-msgstr ""
+msgstr "Aktivera hjälp-tour"
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:31
 msgid "Help Video"
-msgstr ""
+msgstr "Hjälp-video"
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:35
 msgid "Enable Help Video"
-msgstr ""
+msgstr "Aktivera hjälp-video"
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:39
 msgid "Help Video Embed Code"
-msgstr ""
+msgstr "Inbäddningskod för hjälp-video"
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:45
 msgid "Knowledge Base"
-msgstr ""
+msgstr "Kunskapsbank"
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:49
 msgid "Enable Knowledge Base"
-msgstr ""
+msgstr "Aktivera kunskapsbank"
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:53
 msgid "Knowledge Base URL"
-msgstr ""
+msgstr "URL för kunskapsbank"
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:59
 msgid "Forums"
-msgstr ""
+msgstr "Forum"
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:63
 msgid "Enable Forums"
-msgstr ""
+msgstr "Aktivera forum"
 
 # @ fl-builder
 #: includes/admin-settings-help-button.php:67
 msgid "Forums URL"
-msgstr ""
-
-#: includes/admin-settings-help-button.php:77
-msgid "Save Help Button Settings"
-msgstr ""
+msgstr "URL för forum"
 
 # @ fl-builder
 #: includes/admin-settings-icons.php:3
 msgid "Icon Settings"
-msgstr ""
+msgstr "Inställningar för ikoner"
 
 # @ fl-builder
 #: includes/admin-settings-icons.php:13
 msgid "Icons for the main site must be managed in the network admin."
-msgstr ""
+msgstr "Ikoner för huvudsidan måste admnistreras i nätverksadmingränssnittet."
 
 # @ fl-builder
 #: includes/admin-settings-icons.php:33
@@ -1002,50 +464,31 @@ msgid ""
 "Enable or disable icon sets using the options below or upload a custom icon "
 "set from either <a%s>Icomoon</a> or <a%s>Fontello</a>."
 msgstr ""
+"Aktivera eller inaktivera ikon-set med hjälp av valen nedan eller ladda upp "
+"ett anpassat ikon-set antingen från <a%s>Icomoon</a> eller <a%s>Fontello</a>."
 
 # @ fl-builder
 #: includes/admin-settings-icons.php:48
 msgctxt "Plugin setup page: Delete icon set."
 msgid "Delete"
-msgstr ""
-
-#: includes/admin-settings-icons.php:59
-msgid "Upload Icon Set"
-msgstr ""
-
-#: includes/admin-settings-icons.php:60
-msgid "Save Icon Settings"
-msgstr ""
-
-#: includes/admin-settings-js-config.php:4
-msgid "Select File"
-msgstr ""
-
-#: includes/admin-settings-js-config.php:5
-msgid ""
-"Please type \"uninstall\" in the box below to confirm that you really want "
-"to uninstall the page builder and all of its data."
-msgstr ""
+msgstr "Radera"
 
 # @ fl-builder
 #: includes/admin-settings-modules.php:3
 msgid "Enabled Modules"
-msgstr ""
+msgstr "Aktiverade moduler"
 
 # @ fl-builder
 #: includes/admin-settings-modules.php:16
 msgid "Check or uncheck modules below to enable or disable them."
 msgstr ""
+"Markera eller avmarkera moduler nedan för att aktivera eller avaktivera dem."
 
 # @ fl-builder
 #: includes/admin-settings-modules.php:26
 msgctxt "Plugin setup page: Modules."
 msgid "All"
-msgstr ""
-
-#: includes/admin-settings-modules.php:64
-msgid "Save Module Settings"
-msgstr ""
+msgstr "Alla"
 
 # @ fl-builder
 #: includes/admin-settings-post-types.php:18
@@ -1053,91 +496,54 @@ msgid ""
 "Enter a comma separated list of the post types you would like the builder to "
 "work with."
 msgstr ""
+"Mata in en kommaseparerad lista på inläggstyperna du vill att Wetail Page "
+"Builder ska fungera för."
 
 # @ fl-builder
 #: includes/admin-settings-post-types.php:19
 #: includes/admin-settings-post-types.php:39
 msgid "NOTE: Not all custom post types may be supported."
-msgstr ""
+msgstr "OBS: Inte alla anpassade inläggstyper har stöd för detta."
 
 # @ fl-builder
 #: includes/admin-settings-post-types.php:34
 msgid "Example: page, post, product"
-msgstr ""
+msgstr "Exempel: sida, inlägg, produkt"
 
 # @ fl-builder
 #: includes/admin-settings-post-types.php:38
 msgid "Select the post types you would like the builder to work with."
-msgstr ""
-
-#: includes/admin-settings-post-types.php:70
-msgid "Save Post Types"
-msgstr ""
-
-#: includes/admin-settings-templates-override.php:2
-#: includes/admin-settings-templates-override.php:8
-#: includes/admin-settings-templates-override.php:13
-msgid "Override Core Templates"
-msgstr ""
-
-#: includes/admin-settings-templates-override.php:3
-msgid ""
-"Enter the ID of a site on the network whose templates should override core "
-"builder templates. Leave this field blank if you do not wish to override "
-"core templates."
-msgstr ""
-
-#: includes/admin-settings-templates-override.php:9
-msgid ""
-"Use this setting to override core builder templates with your templates."
-msgstr ""
+msgstr "Välj inläggstyperna du vill att Wetail Page Builder ska fungera för."
 
 # @ fl-builder
-#: includes/admin-settings-templates.php:9 includes/template-settings.php:4
+#: includes/admin-settings-templates.php:3 includes/template-settings.php:4
 msgid "Template Settings"
-msgstr ""
+msgstr "Mall-inställningar"
 
-#: includes/admin-settings-templates.php:22
-msgid "Enable Templates"
-msgstr ""
+# @ fl-builder
+#: includes/admin-settings-templates.php:16
+msgid "Enable or disable templates using the options below."
+msgstr "Aktivera eller avaktivera mallar med hjälp av valen nedan."
 
+# @ fl-builder
 #: includes/admin-settings-templates.php:23
-msgid ""
-"Use this setting to enable or disable templates in the builder interface."
-msgstr ""
+msgid "Enable All Templates"
+msgstr "Aktivera samtliga mallar"
+
+# @ fl-builder
+#: includes/admin-settings-templates.php:24
+msgid "Enable Core Templates Only"
+msgstr "Aktivera enbart kärnmallar"
 
 # @ fl-builder
 #: includes/admin-settings-templates.php:25
-msgid "Enable All Templates"
-msgstr ""
+msgid "Enable User Templates Only"
+msgstr "Aktivera enbart användar-mallar"
 
 # @ fl-builder
 #: includes/admin-settings-templates.php:26
-msgid "Enable Core Templates Only"
-msgstr ""
-
-# @ fl-builder
-#: includes/admin-settings-templates.php:27
-msgid "Enable User Templates Only"
-msgstr ""
-
-# @ fl-builder
-#: includes/admin-settings-templates.php:28
 msgid "Disable All Templates"
-msgstr ""
-
-#: includes/admin-settings-templates.php:31
-#: includes/admin-settings-templates.php:36
-msgid "Enable Templates Admin"
-msgstr ""
-
-#: includes/admin-settings-templates.php:32
-msgid "Use this setting to edit builder templates in the WordPress admin."
-msgstr ""
-
-#: includes/admin-settings-templates.php:50
-msgid "Save Template Settings"
-msgstr ""
+msgstr "Avaktivera samtliga mallar"
 
 # @ fl-builder
 #: includes/admin-settings-uninstall.php:5
@@ -1149,12 +555,25 @@ msgstr ""
 
 # @ fl-builder
 #: includes/admin-settings-uninstall.php:7
+#: includes/admin-settings-uninstall.php:10
+#: includes/updater/includes/form.php:31
+msgid "NOTE:"
+msgstr "OBS:"
+
+# @ fl-builder
+#: includes/admin-settings-uninstall.php:7
 msgid ""
 "The builder does not delete the post meta <code>_fl_builder_data</code>, "
 "<code>_fl_builder_draft</code> and <code>_fl_builder_enabled</code> in case "
 "you want to reinstall it later. If you do, the builder will rebuild all of "
 "its data using those meta values."
 msgstr ""
+
+# @ fl-builder
+#: includes/admin-settings-uninstall.php:10
+#: includes/updater/includes/form.php:31
+msgid "This applies to all sites on the network."
+msgstr "Detta gäller samtliga sidor på nätverket."
 
 # @ fl-builder
 #: includes/admin-settings-upgrade.php:5
@@ -1167,32 +586,32 @@ msgstr ""
 # @ fl-builder
 #: includes/admin-settings-upgrade.php:7
 msgid "Upgrade Now"
-msgstr ""
+msgstr "Uppgradera nu"
 
 # @ fl-builder
 #: includes/admin-settings-upgrade.php:9
 msgid "Learn More"
-msgstr ""
+msgstr "Läs mer"
 
 #: includes/admin-templates-edit.php:3
 msgid "Edit Template"
-msgstr ""
+msgstr "Ändra mall"
 
 #: includes/admin-templates-edit.php:8
 msgctxt "Template edit form field label. Template name."
 msgid "Name"
-msgstr ""
+msgstr "Namn"
 
 # @ fl-builder
 #: includes/admin-templates-edit.php:12 modules/callout/callout.php:305
 #: modules/post-grid/post-grid.php:113
 msgid "Image"
-msgstr ""
+msgstr "Bild"
 
 # @ fl-builder
-#: includes/admin-templates-edit.php:16 includes/column-settings.php:114
-#: includes/row-settings.php:155 includes/template-settings.php:23
-#: modules/callout/callout.php:353 modules/callout/callout.php:373
+#: includes/admin-templates-edit.php:16 includes/row-settings.php:155
+#: includes/template-settings.php:23 modules/callout/callout.php:353
+#: modules/callout/callout.php:373
 #: modules/content-slider/content-slider.php:472
 #: modules/post-grid/post-grid.php:127
 msgid "Position"
@@ -1206,15 +625,44 @@ msgstr ""
 # @ fl-builder
 #: includes/admin-templates-edit.php:23 includes/admin-templates.php:30
 #: includes/global-settings.php:18 includes/global-settings.php:110
-#: includes/global-settings.php:124 includes/row-settings.php:307
-#: includes/template-settings.php:31 modules/accordion/accordion.php:90
-#: modules/callout/callout.php:420
+#: includes/row-settings.php:307 includes/template-settings.php:31
+#: modules/accordion/accordion.php:90 modules/callout/callout.php:420
 #: modules/content-slider/content-slider.php:209
 #: modules/content-slider/content-slider.php:223
 #: modules/content-slider/content-slider.php:257
 #: modules/content-slider/content-slider.php:266
 #: modules/content-slider/content-slider.php:537
 #: modules/icon-group/icon-group.php:80 modules/icon/icon.php:111
+#: modules/slideshow/slideshow.php:315 modules/slideshow/slideshow.php:325
+#: modules/slideshow/slideshow.php:376 modules/slideshow/slideshow.php:417
+#: modules/slideshow/slideshow.php:439 modules/slideshow/slideshow.php:488
+#: modules/slideshow/slideshow.php:497 modules/slideshow/slideshow.php:506
+#: modules/slideshow/slideshow.php:515 modules/slideshow/slideshow.php:524
+#: modules/slideshow/slideshow.php:533 modules/slideshow/slideshow.php:542
+#: modules/slideshow/slideshow.php:556 modules/slideshow/slideshow.php:571
+#: modules/slideshow/slideshow.php:606 modules/slideshow/slideshow.php:618
+#: modules/slideshow/slideshow.php:630 modules/slideshow/slideshow.php:642
+#: modules/social-buttons/social-buttons.php:111
+#: modules/social-buttons/social-buttons.php:120
+#: modules/social-buttons/social-buttons.php:129
+#: modules/testimonials/testimonials.php:85
+#: modules/testimonials/testimonials.php:124
+#: modules/testimonials/testimonials.php:154 modules/video/video.php:111
+#: modules/video/video.php:123
+msgid "No"
+msgstr "Nej"
+
+# @ fl-builder
+#: includes/admin-templates-edit.php:24 includes/admin-templates.php:30
+#: includes/global-settings.php:19 includes/global-settings.php:111
+#: includes/row-settings.php:308 includes/template-settings.php:32
+#: modules/accordion/accordion.php:89 modules/callout/callout.php:421
+#: modules/content-slider/content-slider.php:210
+#: modules/content-slider/content-slider.php:224
+#: modules/content-slider/content-slider.php:258
+#: modules/content-slider/content-slider.php:267
+#: modules/content-slider/content-slider.php:538
+#: modules/icon-group/icon-group.php:81 modules/icon/icon.php:112
 #: modules/slideshow/slideshow.php:316 modules/slideshow/slideshow.php:326
 #: modules/slideshow/slideshow.php:377 modules/slideshow/slideshow.php:418
 #: modules/slideshow/slideshow.php:440 modules/slideshow/slideshow.php:489
@@ -1224,37 +672,6 @@ msgstr ""
 #: modules/slideshow/slideshow.php:557 modules/slideshow/slideshow.php:572
 #: modules/slideshow/slideshow.php:607 modules/slideshow/slideshow.php:619
 #: modules/slideshow/slideshow.php:631 modules/slideshow/slideshow.php:643
-#: modules/social-buttons/social-buttons.php:111
-#: modules/social-buttons/social-buttons.php:120
-#: modules/social-buttons/social-buttons.php:129
-#: modules/testimonials/testimonials.php:85
-#: modules/testimonials/testimonials.php:124
-#: modules/testimonials/testimonials.php:154 modules/video/video.php:111
-#: modules/video/video.php:123
-msgid "No"
-msgstr ""
-
-# @ fl-builder
-#: includes/admin-templates-edit.php:24 includes/admin-templates.php:30
-#: includes/global-settings.php:19 includes/global-settings.php:111
-#: includes/global-settings.php:125 includes/row-settings.php:308
-#: includes/template-settings.php:32 modules/accordion/accordion.php:89
-#: modules/callout/callout.php:421
-#: modules/content-slider/content-slider.php:210
-#: modules/content-slider/content-slider.php:224
-#: modules/content-slider/content-slider.php:258
-#: modules/content-slider/content-slider.php:267
-#: modules/content-slider/content-slider.php:538
-#: modules/icon-group/icon-group.php:81 modules/icon/icon.php:112
-#: modules/slideshow/slideshow.php:317 modules/slideshow/slideshow.php:327
-#: modules/slideshow/slideshow.php:378 modules/slideshow/slideshow.php:419
-#: modules/slideshow/slideshow.php:441 modules/slideshow/slideshow.php:490
-#: modules/slideshow/slideshow.php:499 modules/slideshow/slideshow.php:508
-#: modules/slideshow/slideshow.php:517 modules/slideshow/slideshow.php:526
-#: modules/slideshow/slideshow.php:535 modules/slideshow/slideshow.php:544
-#: modules/slideshow/slideshow.php:558 modules/slideshow/slideshow.php:573
-#: modules/slideshow/slideshow.php:608 modules/slideshow/slideshow.php:620
-#: modules/slideshow/slideshow.php:632 modules/slideshow/slideshow.php:644
 #: modules/social-buttons/social-buttons.php:110
 #: modules/social-buttons/social-buttons.php:119
 #: modules/social-buttons/social-buttons.php:128
@@ -1263,39 +680,39 @@ msgstr ""
 #: modules/testimonials/testimonials.php:155 modules/video/video.php:112
 #: modules/video/video.php:124
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: includes/admin-templates-edit.php:29 includes/template-settings.php:37
 msgid "Category"
-msgstr ""
+msgstr "Kategori"
 
 #: includes/admin-templates-edit.php:32 includes/template-settings.php:40
 msgctxt "Templates category label."
 msgid "Landing Pages"
-msgstr ""
+msgstr "Landningssidor"
 
 #: includes/admin-templates-edit.php:33 includes/template-settings.php:41
 msgctxt "Templates category label."
 msgid "Company Info"
-msgstr ""
+msgstr "Företagsinfo"
 
 #: includes/admin-templates-edit.php:40
 msgid "Update Template"
-msgstr ""
+msgstr "Uppdatera mall"
 
 #: includes/admin-templates.php:3
 msgid "Page Builder Template"
-msgstr ""
+msgstr "Page Builder-mall"
 
 #: includes/admin-templates.php:10
 msgctxt "Templates list column label."
 msgid "Name"
-msgstr ""
+msgstr "Namn"
 
 #: includes/admin-templates.php:11
 msgctxt "Templates list column label."
 msgid "Category"
-msgstr ""
+msgstr "Kategori"
 
 #: includes/admin-templates.php:12
 msgctxt "Templates list column label. Is template premium one?"
@@ -1304,24 +721,24 @@ msgstr ""
 
 # @ fl-builder
 #: includes/admin-templates.php:25 includes/field-photo.php:12
-#: includes/template-selector.php:70
+#: includes/template-selector.php:83
 msgid "Edit"
-msgstr ""
+msgstr "Ändra"
 
 # @ fl-builder
-#: includes/admin-templates.php:27 includes/template-selector.php:71
+#: includes/admin-templates.php:27 includes/template-selector.php:84
 msgid "Delete"
-msgstr ""
+msgstr "Radera"
 
 # @ fl-builder
-#: includes/admin-templates.php:40 includes/js-config.php:30
+#: includes/admin-templates.php:40
 msgid "Do you really want to delete this template?"
-msgstr ""
+msgstr "Vill du verkligen radera denna mall?"
 
 # @ fl-builder
-#: includes/column-settings.php:4 includes/js-config.php:23
+#: includes/column-settings.php:4
 msgid "Column Settings"
-msgstr ""
+msgstr "Kolumn-inställningar"
 
 # @ fl-builder
 #: includes/column-settings.php:7 includes/module-settings.php:87
@@ -1335,15 +752,14 @@ msgstr ""
 #: modules/icon-group/icon-group.php:44 modules/icon/icon.php:75
 #: modules/pricing-table/pricing-table.php:43
 #: modules/pricing-table/pricing-table.php:155
-#: modules/separator/separator.php:72
-#: modules/subscribe-form/subscribe-form.php:217 modules/tabs/tabs.php:45
+#: modules/separator/separator.php:72 modules/tabs/tabs.php:45
 msgid "Style"
-msgstr ""
+msgstr "Utseende"
 
 # @ fl-builder
 #: includes/column-settings.php:14
 msgid "Column Width"
-msgstr ""
+msgstr "Kolumnbredd"
 
 # @ fl-builder
 #: includes/column-settings.php:26 includes/row-settings.php:48
@@ -1356,326 +772,142 @@ msgid "Text"
 msgstr ""
 
 # @ fl-builder
-#: includes/column-settings.php:30 includes/column-settings.php:69
-#: includes/column-settings.php:199 includes/row-settings.php:52
+#: includes/column-settings.php:30 includes/column-settings.php:43
+#: includes/column-settings.php:100 includes/row-settings.php:52
 #: includes/row-settings.php:109 includes/row-settings.php:403
 #: modules/callout/callout.php:391
 #: modules/content-slider/content-slider.php:337
 #: modules/icon-group/icon-group.php:51 modules/icon/icon.php:82
 #: modules/separator/separator.php:34
 msgid "Color"
-msgstr ""
+msgstr "Färg"
 
 # @ fl-builder
-#: includes/column-settings.php:39 includes/row-settings.php:61
-msgid "Background"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:43 includes/column-settings.php:166
-#: includes/row-settings.php:65 includes/row-settings.php:370
-#: modules/callout/callout.php:474
-#: modules/content-slider/content-slider.php:331
-#: modules/content-slider/content-slider.php:378
-#: modules/content-slider/content-slider.php:596
-#: modules/content-slider/content-slider.php:729
-#: modules/slideshow/slideshow.php:340
-msgid "Type"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:46 includes/row-settings.php:68
-#: modules/content-slider/content-slider.php:338
-msgctxt "Background type."
-msgid "None"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:47 includes/row-settings.php:69
-msgctxt "Background type."
-msgid "Color"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:48 includes/row-settings.php:70
-msgctxt "Background type."
-msgid "Photo"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:65 includes/row-settings.php:105
+#: includes/column-settings.php:39 includes/row-settings.php:105
 #: modules/button/button.php:115 modules/callout/callout.php:404
 #: modules/callout/callout.php:508
 #: modules/content-slider/content-slider.php:363
 #: modules/content-slider/content-slider.php:630 modules/cta/cta.php:197
 #: modules/cta/cta.php:264 modules/icon-group/icon-group.php:64
-#: modules/icon/icon.php:95 modules/subscribe-form/subscribe-form.php:182
+#: modules/icon/icon.php:95
 msgid "Background Color"
-msgstr ""
+msgstr "Bakgrundsfärg"
 
 # @ fl-builder
-#: includes/column-settings.php:77 includes/column-settings.php:207
+#: includes/column-settings.php:51 includes/column-settings.php:108
 #: includes/row-settings.php:117 includes/row-settings.php:411
 #: modules/separator/separator.php:44
 msgid "Opacity"
-msgstr ""
+msgstr "Opacitet"
 
 # @ fl-builder
-#: includes/column-settings.php:88 includes/row-settings.php:129
-#: modules/content-slider/content-slider.php:359
-msgid "Background Photo"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:92 includes/row-settings.php:133
-#: includes/row-settings.php:321 modules/callout/callout.php:316
-#: modules/callout/callout.php:332 modules/callout/callout.php:336
-#: modules/content-slider/content-slider.php:335
-#: modules/content-slider/content-slider.php:404
-#: modules/content-slider/content-slider.php:745 modules/photo/photo.php:25
-#: modules/photo/photo.php:392
-msgid "Photo"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:99 includes/row-settings.php:140
-msgid "Repeat"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:102 includes/row-settings.php:143
-msgctxt "Background repeat."
-msgid "None"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:103 includes/row-settings.php:144
-msgctxt "Background repeat."
-msgid "Tile"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:104 includes/row-settings.php:145
-msgctxt "Background repeat."
-msgid "Horizontal"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:105 includes/row-settings.php:146
-msgctxt "Background repeat."
-msgid "Vertical"
-msgstr ""
-
-#: includes/column-settings.php:107 includes/row-settings.php:148
-msgid ""
-"Repeat applies to how the image should display in the background. Choosing "
-"none will display the image as uploaded. Tile will repeat the image as many "
-"times as needed to fill the background horizontally and vertically. You can "
-"also specify the image to only repeat horizontally or vertically."
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:117 includes/row-settings.php:158
-msgid "Left Top"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:118 includes/row-settings.php:159
-msgid "Left Center"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:119 includes/row-settings.php:160
-msgid "Left Bottom"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:120 includes/row-settings.php:161
-msgid "Right Top"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:121 includes/row-settings.php:162
-msgid "Right Center"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:122 includes/row-settings.php:163
-msgid "Right Bottom"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:123 includes/row-settings.php:164
-msgid "Center Top"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:124 includes/row-settings.php:165
-#: modules/button/button.php:218 modules/callout/callout.php:251
-#: modules/content-slider/content-slider.php:477 modules/cta/cta.php:126
-#: modules/heading/heading.php:90 modules/heading/heading.php:162
-#: modules/icon-group/icon-group.php:110 modules/icon/icon.php:133
-#: modules/photo/photo.php:418 modules/social-buttons/social-buttons.php:100
-msgid "Center"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:125 includes/row-settings.php:166
-msgid "Center Bottom"
-msgstr ""
-
-#: includes/column-settings.php:127 includes/row-settings.php:168
-msgid "Position will tell the image where it should sit in the background."
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:134 includes/row-settings.php:175
-msgid "Attachment"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:137 includes/row-settings.php:178
-#: modules/post-grid/post-grid.php:75
-msgid "Scroll"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:138 includes/global-settings.php:69
-#: includes/global-settings.php:83 includes/row-settings.php:19
-#: includes/row-settings.php:37 includes/row-settings.php:179
-msgid "Fixed"
-msgstr ""
-
-#: includes/column-settings.php:140 includes/row-settings.php:181
-msgid ""
-"Attachment will specify how the image reacts when scrolling a page. When "
-"scrolling is selected, the image will scroll with page scrolling. This is "
-"the default setting. Fixed will allow the image to scroll within the "
-"background if fill is selected in the scale setting."
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:147 includes/row-settings.php:188
-msgid "Scale"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:150 includes/row-settings.php:191
-msgctxt "Background scale."
-msgid "None"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:151 includes/row-settings.php:192
-msgid "Fit"
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:152 includes/row-settings.php:193
-msgid "Fill"
-msgstr ""
-
-#: includes/column-settings.php:154 includes/row-settings.php:195
-msgid ""
-"Scale applies to how the image should display in the background. You can "
-"select either fill or fit to the background."
-msgstr ""
-
-# @ fl-builder
-#: includes/column-settings.php:162 includes/row-settings.php:366
+#: includes/column-settings.php:63 includes/row-settings.php:366
 msgid "Border"
-msgstr ""
+msgstr "Kantlinje"
 
 # @ fl-builder
-#: includes/column-settings.php:168 includes/row-settings.php:372
+#: includes/column-settings.php:67 includes/row-settings.php:65
+#: includes/row-settings.php:370 modules/callout/callout.php:474
+#: modules/content-slider/content-slider.php:331
+#: modules/content-slider/content-slider.php:378
+#: modules/content-slider/content-slider.php:596
+#: modules/content-slider/content-slider.php:729
+#: modules/slideshow/slideshow.php:339
+msgid "Type"
+msgstr "Typ"
+
+# @ fl-builder
+#: includes/column-settings.php:69 includes/row-settings.php:372
 msgid ""
 "The type of border to use. Double borders must have a width of at least 3px "
 "to render properly."
 msgstr ""
+"Typ av kantlinje att använda. Dubbla kantlinjer måste ha en bredd på minst "
+"3px för att ritas ut korrekt."
 
 # @ fl-builder
-#: includes/column-settings.php:170 includes/row-settings.php:374
+#: includes/column-settings.php:71 includes/row-settings.php:374
 msgctxt "Border type."
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
-#: includes/column-settings.php:171 includes/row-settings.php:375
+#: includes/column-settings.php:72 includes/row-settings.php:375
 #: modules/separator/separator.php:75
 msgctxt "Border type."
 msgid "Solid"
-msgstr ""
+msgstr "Genomgående"
 
 # @ fl-builder
-#: includes/column-settings.php:172 includes/row-settings.php:376
+#: includes/column-settings.php:73 includes/row-settings.php:376
 #: modules/separator/separator.php:76
 msgctxt "Border type."
 msgid "Dashed"
-msgstr ""
+msgstr "Streckad"
 
 # @ fl-builder
-#: includes/column-settings.php:173 includes/row-settings.php:377
+#: includes/column-settings.php:74 includes/row-settings.php:377
 #: modules/separator/separator.php:77
 msgctxt "Border type."
 msgid "Dotted"
-msgstr ""
+msgstr "Prickig"
 
 # @ fl-builder
-#: includes/column-settings.php:174 includes/row-settings.php:378
+#: includes/column-settings.php:75 includes/row-settings.php:378
 #: modules/separator/separator.php:78
 msgctxt "Border type."
 msgid "Double"
-msgstr ""
+msgstr "Dubbel"
 
 # @ fl-builder
-#: includes/column-settings.php:218 includes/row-settings.php:422
+#: includes/column-settings.php:119 includes/row-settings.php:422
 msgid "Top Width"
-msgstr ""
+msgstr "Övre bredd"
 
 # @ fl-builder
-#: includes/column-settings.php:230 includes/row-settings.php:434
+#: includes/column-settings.php:131 includes/row-settings.php:434
 msgid "Bottom Width"
-msgstr ""
+msgstr "Nedre bredd"
 
 # @ fl-builder
-#: includes/column-settings.php:242 includes/row-settings.php:446
+#: includes/column-settings.php:143 includes/row-settings.php:446
 msgid "Left Width"
-msgstr ""
+msgstr "Vänster bredd"
 
 # @ fl-builder
-#: includes/column-settings.php:254 includes/row-settings.php:458
+#: includes/column-settings.php:155 includes/row-settings.php:458
 msgid "Right Width"
-msgstr ""
+msgstr "Höger bredd"
 
 # @ fl-builder
-#: includes/column-settings.php:269 includes/module-settings.php:6
+#: includes/column-settings.php:170 includes/module-settings.php:6
 #: includes/row-settings.php:473 modules/content-slider/content-slider.php:273
 msgid "Advanced"
-msgstr ""
+msgstr "Avancerat"
 
 # @ fl-builder
-#: includes/column-settings.php:272 includes/global-settings.php:41
+#: includes/column-settings.php:173 includes/global-settings.php:41
 #: includes/global-settings.php:94 includes/module-settings.php:9
 #: includes/row-settings.php:476
 msgid "Margins"
-msgstr ""
+msgstr "Marginaler"
 
 # @ fl-builder
-#: includes/column-settings.php:276 includes/column-settings.php:329
+#: includes/column-settings.php:177 includes/column-settings.php:230
 #: includes/module-settings.php:13 includes/row-settings.php:480
-#: includes/row-settings.php:533 modules/slideshow/slideshow.php:476
+#: includes/row-settings.php:533 modules/slideshow/slideshow.php:475
 msgid "Top"
-msgstr ""
+msgstr "Övre"
 
 # @ fl-builder
-#: includes/column-settings.php:288 includes/column-settings.php:341
+#: includes/column-settings.php:189 includes/column-settings.php:242
 #: includes/module-settings.php:25 includes/row-settings.php:492
-#: includes/row-settings.php:545 modules/slideshow/slideshow.php:475
+#: includes/row-settings.php:545 modules/slideshow/slideshow.php:474
 msgid "Bottom"
-msgstr ""
+msgstr "Nedre"
 
 # @ fl-builder
-#: includes/column-settings.php:300 includes/column-settings.php:353
+#: includes/column-settings.php:201 includes/column-settings.php:254
 #: includes/module-settings.php:37 includes/row-settings.php:504
 #: includes/row-settings.php:557 modules/button/button.php:219
 #: modules/callout/callout.php:252
@@ -1684,10 +916,10 @@ msgstr ""
 #: modules/icon-group/icon-group.php:111 modules/icon/icon.php:134
 #: modules/photo/photo.php:417 modules/social-buttons/social-buttons.php:101
 msgid "Left"
-msgstr ""
+msgstr "Vänster"
 
 # @ fl-builder
-#: includes/column-settings.php:312 includes/column-settings.php:365
+#: includes/column-settings.php:213 includes/column-settings.php:266
 #: includes/module-settings.php:49 includes/row-settings.php:516
 #: includes/row-settings.php:569 modules/button/button.php:220
 #: modules/callout/callout.php:253
@@ -1696,231 +928,234 @@ msgstr ""
 #: modules/icon-group/icon-group.php:112 modules/icon/icon.php:135
 #: modules/photo/photo.php:419 modules/social-buttons/social-buttons.php:102
 msgid "Right"
-msgstr ""
+msgstr "Höger"
 
 # @ fl-builder
-#: includes/column-settings.php:325 includes/global-settings.php:49
+#: includes/column-settings.php:226 includes/global-settings.php:49
 #: includes/row-settings.php:529 modules/button/button.php:233
 #: modules/callout/callout.php:598
 #: modules/content-slider/content-slider.php:703 modules/cta/cta.php:345
-#: modules/subscribe-form/subscribe-form.php:263
 msgid "Padding"
-msgstr ""
+msgstr "Cellutfyllnad"
 
 # @ fl-builder
-#: includes/column-settings.php:378 includes/global-settings.php:103
+#: includes/column-settings.php:279 includes/global-settings.php:103
 #: includes/module-settings.php:62 includes/row-settings.php:582
 msgid "Responsive Layout"
-msgstr ""
+msgstr "Responsiv layout"
 
 # @ fl-builder
-#: includes/column-settings.php:382 includes/module-settings.php:66
-#: includes/row-settings.php:586 modules/slideshow/slideshow.php:291
+#: includes/column-settings.php:283 includes/module-settings.php:66
+#: includes/row-settings.php:586 modules/slideshow/slideshow.php:290
 msgid "Display"
-msgstr ""
+msgstr "Visa"
 
 # @ fl-builder
-#: includes/column-settings.php:384 includes/module-settings.php:68
+#: includes/column-settings.php:285 includes/module-settings.php:68
 #: includes/row-settings.php:588
 msgid "Always"
-msgstr ""
+msgstr "Alltid"
 
 # @ fl-builder
-#: includes/column-settings.php:385 includes/module-settings.php:69
+#: includes/column-settings.php:286 includes/module-settings.php:69
 #: includes/row-settings.php:589
 msgid "Large Devices Only"
-msgstr ""
+msgstr "Enbart stora enheter"
 
 # @ fl-builder
-#: includes/column-settings.php:386 includes/module-settings.php:70
+#: includes/column-settings.php:287 includes/module-settings.php:70
 #: includes/row-settings.php:590
 msgid "Large &amp; Medium Devices Only"
-msgstr ""
+msgstr "Enbart stora &amp; medelstora enheter"
 
 # @ fl-builder
-#: includes/column-settings.php:387 includes/module-settings.php:71
+#: includes/column-settings.php:288 includes/module-settings.php:71
 #: includes/row-settings.php:591
 msgid "Medium Devices Only"
-msgstr ""
+msgstr "Enbart medelstora enheter"
 
 # @ fl-builder
-#: includes/column-settings.php:388 includes/module-settings.php:72
+#: includes/column-settings.php:289 includes/module-settings.php:72
 #: includes/row-settings.php:592
 msgid "Medium &amp; Small Devices Only"
-msgstr ""
+msgstr "Enbart medelstora &amp; små enheter"
 
 # @ fl-builder
-#: includes/column-settings.php:389 includes/module-settings.php:73
+#: includes/column-settings.php:290 includes/module-settings.php:73
 #: includes/row-settings.php:593
 msgid "Small Devices Only"
-msgstr ""
+msgstr "Enbart små enheter"
 
 # @ fl-builder
-#: includes/column-settings.php:391
+#: includes/column-settings.php:292
 msgid "Choose whether to show or hide this column at different device sizes."
 msgstr ""
+"Välj om du vill visa eller dölja den här kolumnen vid olika storlek på "
+"enheter."
 
 # @ fl-builder
-#: includes/column-settings.php:398
+#: includes/column-settings.php:299
 msgid "Medium Device Width"
-msgstr ""
+msgstr "Bredd på medelstor enhet"
 
 # @ fl-builder
-#: includes/column-settings.php:399
+#: includes/column-settings.php:300
 msgid "The width of this column on medium devices such as tablets."
-msgstr ""
+msgstr "Bredden på den här kolumen på mellanstora enheter såsom tablets."
 
 # @ fl-builder
-#: includes/column-settings.php:401 includes/column-settings.php:429
+#: includes/column-settings.php:302 includes/column-settings.php:330
 #: modules/callout/callout.php:283
 #: modules/content-slider/content-slider.php:448 modules/cta/cta.php:167
 #: modules/heading/heading.php:117 modules/heading/heading.php:144
 #: modules/heading/heading.php:174
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 # @ fl-builder
-#: includes/column-settings.php:402 includes/column-settings.php:430
+#: includes/column-settings.php:303 includes/column-settings.php:331
 #: modules/button/button.php:193 modules/callout/callout.php:284
 #: modules/content-slider/content-slider.php:449 modules/cta/cta.php:168
 #: modules/heading/heading.php:118 modules/heading/heading.php:145
 #: modules/heading/heading.php:175
 #: modules/social-buttons/social-buttons.php:74
 msgid "Custom"
-msgstr ""
+msgstr "Anpassad"
 
 # @ fl-builder
-#: includes/column-settings.php:415
+#: includes/column-settings.php:316
 msgid "Custom Medium Device Width"
-msgstr ""
+msgstr "Anpassad bredd på medelstor enhet"
 
 # @ fl-builder
-#: includes/column-settings.php:426
+#: includes/column-settings.php:327
 msgid "Small Device Width"
-msgstr ""
+msgstr "Bredd på liten enhet"
 
 # @ fl-builder
-#: includes/column-settings.php:427
+#: includes/column-settings.php:328
 msgid "The width of this column on small devices such as phones."
-msgstr ""
+msgstr "Bredden på den här kolumnen på små enheter såsom telefoner."
 
 # @ fl-builder
-#: includes/column-settings.php:443
+#: includes/column-settings.php:344
 msgid "Custom Small Device Width"
-msgstr ""
+msgstr "Anpassad bredd på liten enhet"
 
 # @ fl-builder
-#: includes/column-settings.php:455 includes/module-settings.php:115
+#: includes/column-settings.php:356 includes/module-settings.php:115
 #: includes/row-settings.php:603
 msgid "CSS Selectors"
-msgstr ""
+msgstr "CSS-selektorer"
 
 # @ fl-builder
-#: includes/column-settings.php:459 includes/loop-settings.php:28
+#: includes/column-settings.php:360 includes/loop-settings.php:27
 #: includes/module-settings.php:119 includes/row-settings.php:607
 msgid "ID"
 msgstr ""
 
 # @ fl-builder
-#: includes/column-settings.php:460
+#: includes/column-settings.php:361
 msgid ""
 "A unique ID that will be applied to this column's HTML. Must start with a "
 "letter and only contain dashes, underscores, letters or numbers. No spaces."
 msgstr ""
+"Ett unikt ID som kommer att bifogas till den här kolumnens HTML. Måste börja "
+"med en bokstav och får enbart innehålla bindestreck, understreck, bokstäver "
+"eller siffror. Inga mellanslag."
 
 # @ fl-builder
-#: includes/column-settings.php:467
+#: includes/column-settings.php:368
 msgid "CSS Class"
-msgstr ""
+msgstr "CSS-klass"
 
 # @ fl-builder
-#: includes/column-settings.php:468
+#: includes/column-settings.php:369
 msgid ""
 "A class that will be applied to this column's HTML. Must start with a letter "
 "and only contain dashes, underscores, letters or numbers. Separate multiple "
 "classes with spaces."
 msgstr ""
+"En klass som kommer att bifogas till den här kolumnens HTML. Måste börja med "
+"en bokstav och får enbart innehålla bindestreck, understreck, bokstäver "
+"eller siffror. Separera flera klasser med mellanslag."
 
 # @ fl-builder
 #: includes/field-form.php:28
 #, php-format
 msgctxt "%s stands for form field label."
 msgid "Edit %s"
-msgstr ""
+msgstr "Ändra %s"
 
 # @ fl-builder
 #: includes/field-icon.php:2 includes/icon-selector.php:2
 msgid "Select Icon"
-msgstr ""
+msgstr "Välj ikon"
 
 # @ fl-builder
 #: includes/field-icon.php:5 includes/field-photo.php:13
 msgid "Replace"
-msgstr ""
+msgstr "Ersätt"
 
 # @ fl-builder
-#: includes/field-icon.php:7 includes/js-config.php:61
+#: includes/field-icon.php:7
 msgid "Remove"
-msgstr ""
+msgstr "Ta bort"
 
 # @ fl-builder
 #: includes/field-link.php:3
 msgid "Select"
-msgstr ""
+msgstr "Välj"
 
 # @ fl-builder
 #: includes/field-link.php:5
 msgid "Enter a post title to search."
-msgstr ""
-
-#: includes/field-link.php:6 includes/field-suggest.php:7
-msgid "Start typing..."
-msgstr ""
+msgstr "Mata in titeln på ett inlägg för att söka."
 
 # @ fl-builder
 #: includes/field-link.php:7 includes/icon-selector.php:28
-#: includes/js-config.php:19 includes/settings.php:63
-#: includes/template-selector.php:92
+#: includes/settings.php:63 includes/template-selector.php:102
+#: includes/ui.php:11
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 # @ fl-builder
 #: includes/field-multiple-photos.php:8
 #, php-format
 msgid "1 Photo Selected"
 msgid_plural "%d Photos Selected"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 bild vald"
+msgstr[1] "%d bilder valda"
 
 # @ fl-builder
 #: includes/field-multiple-photos.php:13
 msgid "Create Gallery"
-msgstr ""
+msgstr "Skapa galleri"
 
 # @ fl-builder
 #: includes/field-multiple-photos.php:14
 msgid "Edit Gallery"
-msgstr ""
+msgstr "Ändra galleri"
 
 # @ fl-builder
 #: includes/field-multiple-photos.php:15
 msgid "Add Photos"
-msgstr ""
+msgstr "Lägg till bilder"
 
 # @ fl-builder
-#: includes/field-photo.php:3 includes/js-config.php:66
+#: includes/field-photo.php:3
 msgid "Select Photo"
-msgstr ""
+msgstr "Välj bild"
 
 # @ fl-builder
-#: includes/field-video.php:3 includes/js-config.php:68
+#: includes/field-video.php:3
 msgid "Select Video"
-msgstr ""
+msgstr "Välj video"
 
 # @ fl-builder
 #: includes/field-video.php:17
 msgid "Replace Video"
-msgstr ""
+msgstr "Ersätt video"
 
 # @ fl-builder
 #: includes/global-settings.php:7 includes/template-settings.php:7
@@ -1934,31 +1169,30 @@ msgstr ""
 #: modules/icon/icon.php:27 modules/map/map.php:26 modules/photo/photo.php:368
 #: modules/pricing-table/pricing-table.php:87
 #: modules/rich-text/rich-text.php:26 modules/separator/separator.php:27
-#: modules/sidebar/sidebar.php:27 modules/slideshow/slideshow.php:257
-#: modules/social-buttons/social-buttons.php:64
-#: modules/subscribe-form/subscribe-form.php:86 modules/tabs/tabs.php:77
+#: modules/sidebar/sidebar.php:27 modules/slideshow/slideshow.php:256
+#: modules/social-buttons/social-buttons.php:64 modules/tabs/tabs.php:77
 #: modules/testimonials/testimonials.php:30
 #: modules/testimonials/testimonials.php:200 modules/video/video.php:76
 #: modules/widget/widget.php:64 modules/woocommerce/woocommerce.php:50
 msgid "General"
-msgstr ""
+msgstr "Allmänt"
 
 # @ fl-builder
 #: includes/global-settings.php:8
 msgid "Note: These settings apply to all posts and pages."
-msgstr ""
+msgstr "Obs: Dessa inställningar påverkar samtliga inlägg och sidor."
 
 # @ fl-builder
 #: includes/global-settings.php:11
 msgid "Default Page Heading"
-msgstr ""
+msgstr "Förvald sidrubrik"
 
 # @ fl-builder
 #: includes/global-settings.php:15
 msgctxt ""
 "General settings form field label. Intended meaning: \"Show page heading?\""
 msgid "Show"
-msgstr ""
+msgstr "Visa"
 
 # @ fl-builder
 #: includes/global-settings.php:26
@@ -1967,26 +1201,29 @@ msgid ""
 "You will also be required to enter some basic CSS for this to work if you "
 "choose no."
 msgstr ""
+"Att välja nej kommer att dölja temats standard-rubrik för inläggstypen \"Sida"
+"\". Du kommer även att behöva ange viss grundläggande CSS för att detta ska "
+"fungera om du väljer nej."
 
 # @ fl-builder
 #: includes/global-settings.php:30
 msgid "CSS Selector"
-msgstr ""
+msgstr "CSS-selektor"
 
 # @ fl-builder
 #: includes/global-settings.php:32
 msgid "Enter a CSS selector for the default page heading to hide it."
-msgstr ""
+msgstr "Mata in en CSS-selektor för sidans standardrubrik för att dölja den."
 
 # @ fl-builder
 #: includes/global-settings.php:37
 msgid "Rows"
-msgstr ""
+msgstr "Rader"
 
 # @ fl-builder
 #: includes/global-settings.php:57
 msgid "Max Width"
-msgstr ""
+msgstr "Maxbredd"
 
 # @ fl-builder
 #: includes/global-settings.php:62
@@ -1994,23 +1231,32 @@ msgid ""
 "All rows will default to this width. You can override this and make a row "
 "full width in the settings for each row."
 msgstr ""
+"Alla rader kommer automatiskt att sättas till denna bredd. Du kan åsidosätta "
+"detta och ge en rad full bredd i inställningarna för varje separat rad."
 
 # @ fl-builder
 #: includes/global-settings.php:66
 msgid "Default Row Width"
-msgstr ""
+msgstr "Standardradbredd"
+
+# @ fl-builder
+#: includes/global-settings.php:69 includes/global-settings.php:83
+#: includes/row-settings.php:19 includes/row-settings.php:37
+#: includes/row-settings.php:179
+msgid "Fixed"
+msgstr "Fixerad"
 
 # @ fl-builder
 #: includes/global-settings.php:70 includes/global-settings.php:84
 #: includes/row-settings.php:20 includes/row-settings.php:38
 #: modules/button/button.php:192 modules/callout/callout.php:585
 msgid "Full Width"
-msgstr ""
+msgstr "Full bredd"
 
 # @ fl-builder
 #: includes/global-settings.php:80
 msgid "Default Row Content Width"
-msgstr ""
+msgstr "Standardbredd på radinnehåll"
 
 # @ fl-builder
 #: includes/global-settings.php:107
@@ -2018,143 +1264,50 @@ msgctxt ""
 "General settings form field label. Intended meaning: \"Responsive layout "
 "enabled?\""
 msgid "Enabled"
-msgstr ""
+msgstr "Aktiverad"
 
+# @ fl-builder
 #: includes/global-settings.php:121
-msgctxt ""
-"General settings form field label. Intended meaning: \"Enable auto spacing "
-"for responsive layouts?\""
-msgid "Enable Auto Spacing"
-msgstr ""
-
-#: includes/global-settings.php:127
-msgid ""
-"When auto spacing is enabled, the builder will automatically adjust the "
-"margins and padding in your layout once the small device breakpoint is "
-"reached. Most users will want to leave this enabled."
-msgstr ""
-
-# @ fl-builder
-#: includes/global-settings.php:131
 msgid "Medium Device Breakpoint"
-msgstr ""
+msgstr "Brytpunkt för mediumenheter"
 
 # @ fl-builder
-#: includes/global-settings.php:136
+#: includes/global-settings.php:126
 msgid ""
 "The browser width at which the layout will adjust for medium devices such as "
 "tablets."
 msgstr ""
+"Bredden i webbläsaren där layouten kommer att justera för medelstora enheter "
+"såsom tablets."
 
 # @ fl-builder
-#: includes/global-settings.php:140
+#: includes/global-settings.php:130
 msgid "Small Device Breakpoint"
-msgstr ""
+msgstr "Brytpunkt för små enheter"
 
 # @ fl-builder
-#: includes/global-settings.php:145
+#: includes/global-settings.php:135
 msgid ""
 "The browser width at which the layout will adjust for small devices such as "
 "phones."
 msgstr ""
+"Bredden i webbläsaren där layouten kommer att justeras för små enheter såsom "
+"mobiler."
 
 # @ fl-builder
 #: includes/icon-selector.php:5
 msgctxt "Select option for showing all icon libraries."
 msgid "All Libraries"
-msgstr ""
-
-#: includes/js-config.php:18
-msgid "What would you like to do?"
-msgstr ""
-
-#: includes/js-config.php:20
-msgid "Change Template"
-msgstr ""
-
-#: includes/js-config.php:21
-msgid ""
-"Warning! Changing the template will replace your existing layout. Do you "
-"really want to do this?"
-msgstr ""
-
-#: includes/js-config.php:22
-msgid "Column"
-msgstr ""
-
-#: includes/js-config.php:24
-msgid ""
-"Please select either a background layout or content layout before submitting."
-msgstr ""
-
-#: includes/js-config.php:25
-msgid "Remove Account"
-msgstr ""
-
-#: includes/js-config.php:26
-msgid ""
-"Are you sure you want to remove this account? Other modules that are "
-"connected to it will be affected."
-msgstr ""
-
-#: includes/js-config.php:27
-msgid "Do you really want to delete this item?"
-msgstr ""
-
-#: includes/js-config.php:28
-msgid ""
-"Do you really want to delete this module? All content data will be "
-"permanently deleted."
-msgstr ""
-
-#: includes/js-config.php:29
-msgid ""
-"Do you really want to delete this row? All content data will be permanently "
-"deleted."
-msgstr ""
-
-#: includes/js-config.php:31
-msgid "Discard Changes"
-msgstr ""
-
-#: includes/js-config.php:32
-msgid ""
-"Do you really want to discard these changes? All of your changes that are "
-"not published will be lost."
-msgstr ""
+msgstr "Alla bibliotek"
 
 # @ fl-builder
-#: includes/js-config.php:33 includes/ui.php:20 includes/ui.php:55
-msgid "Done"
-msgstr ""
-
-#: includes/js-config.php:34
-msgid "Save Draft"
-msgstr ""
-
-# @ fl-builder
-#: includes/js-config.php:35
+#: includes/js-config.php:33
 msgctxt "Duplicate page/post action label."
 msgid "Duplicate"
-msgstr ""
+msgstr "Duplicera"
 
-#: includes/js-config.php:36
-msgid "Duplicate This Page"
-msgstr ""
-
-#: includes/js-config.php:37
-msgid "Duplicate This Template"
-msgstr ""
-
+# @ fl-builder
 #: includes/js-config.php:38
-msgid "Edit Global Settings"
-msgstr ""
-
-#: includes/js-config.php:39
-msgid "Drop a row layout or module to get started!"
-msgstr ""
-
-#: includes/js-config.php:40
 msgid ""
 "Beaver Builder caught the following JavaScript error. If Beaver Builder is "
 "not functioning as expected the cause is most likely this error. Please help "
@@ -2162,446 +1315,178 @@ msgid ""
 "each to determine if the issue is related to a third party plugin."
 msgstr ""
 
-#: includes/js-config.php:41
-msgid "Full Size"
-msgstr ""
-
+# @ fl-builder
 #: includes/js-config.php:42
-msgid "Get Help"
-msgstr ""
-
-#: includes/js-config.php:43
-msgid "Getting Started Video"
-msgstr ""
-
-# @ fl-builder
-#: includes/js-config.php:44
 msgid "\"{message}\" on line {line} of {file}."
-msgstr ""
-
-#: includes/js-config.php:45
-msgid "Insert"
-msgstr ""
-
-#: includes/js-config.php:46
-msgid "Large"
-msgstr ""
-
-#: includes/js-config.php:47
-msgid "Manage Templates"
-msgstr ""
-
-#: includes/js-config.php:48
-msgid "Medium"
-msgstr ""
-
-#: includes/js-config.php:49
-msgid "Module"
-msgstr ""
-
-#: includes/js-config.php:50
-msgid "Move"
-msgstr ""
-
-#: includes/js-config.php:51
-msgid "New Column"
-msgstr ""
-
-#: includes/js-config.php:52
-msgid "New Row"
-msgstr ""
-
-#: includes/js-config.php:53
-msgid "No results found."
-msgstr ""
-
-#: includes/js-config.php:54
-msgid "No Thanks"
-msgstr ""
-
-#: includes/js-config.php:55
-msgid "OK"
-msgstr ""
+msgstr "\"{message}\" på rad {line} i {file}."
 
 # @ fl-builder
-#: includes/js-config.php:56 modules/photo/photo.php:454
-msgid "Photo Page"
-msgstr ""
-
-#: includes/js-config.php:57
-msgid "Photo Selected"
-msgstr ""
-
-#: includes/js-config.php:58
-msgid "Photos Selected"
-msgstr ""
-
-#: includes/js-config.php:59 modules/subscribe-form/includes/frontend.php:15
-msgid "Please Wait..."
-msgstr ""
-
-#: includes/js-config.php:60
-msgid "Publish Changes"
-msgstr ""
-
-#: includes/js-config.php:62
-msgid "Row"
-msgstr ""
-
-# @ fl-builder
-#: includes/js-config.php:63 includes/row-settings.php:6
-msgid "Row Settings"
-msgstr ""
-
-#: includes/js-config.php:64
-msgid "Save Core Template"
-msgstr ""
-
-# @ fl-builder
-#: includes/js-config.php:65 includes/user-template-settings.php:4
-msgid "Save Template"
-msgstr ""
-
-#: includes/js-config.php:67
-msgid "Select Photos"
-msgstr ""
-
-#: includes/js-config.php:70
-msgid "Please select an account before saving."
-msgstr ""
-
-#: includes/js-config.php:71
-msgid "Please connect an account before saving."
-msgstr ""
-
-#: includes/js-config.php:72
-msgid "Please select a list before saving."
-msgstr ""
-
-#: includes/js-config.php:73
-msgid "Take a Tour"
-msgstr ""
-
-#: includes/js-config.php:74
-msgid "Append New Layout"
-msgstr ""
-
-#: includes/js-config.php:75
-msgid "Replace Existing Layout"
-msgstr ""
-
-#: includes/js-config.php:76
-msgid "Template Saved!"
-msgstr ""
-
-#: includes/js-config.php:77
-msgid "Thumbnail"
-msgstr ""
-
-#: includes/js-config.php:78
-msgid "Next"
-msgstr ""
-
-#: includes/js-config.php:79
-msgid "Get Started"
-msgstr ""
-
-#: includes/js-config.php:80
-msgid "Choose a Template"
-msgstr ""
-
-#: includes/js-config.php:81
-msgid ""
-"Get started by choosing a layout template to customize, or build a page from "
-"scratch by selecting the blank layout template."
-msgstr ""
-
-#: includes/js-config.php:82
-msgid "Add Rows"
-msgstr ""
-
-#: includes/js-config.php:83
-msgid ""
-"Add multi-column rows, adjust spacing, add backgrounds and more by dragging "
-"and dropping row layouts onto the page."
-msgstr ""
-
-# @ fl-builder
-#: includes/js-config.php:84 includes/ui.php:22 includes/ui.php:60
-msgid "Add Content"
-msgstr ""
-
-#: includes/js-config.php:85
-msgid ""
-"Add new content by dragging and dropping modules or widgets into your row "
-"layouts or to create a new row layout."
-msgstr ""
-
-#: includes/js-config.php:86
-msgid "Edit Content"
-msgstr ""
-
-#: includes/js-config.php:87
-msgid ""
-"Move your mouse over rows, columns or modules to edit and interact with them."
-msgstr ""
-
-#: includes/js-config.php:88
-msgid ""
-"Use the action buttons to perform actions such as moving, editing, "
-"duplicating or deleting rows, columns and modules."
-msgstr ""
-
-#: includes/js-config.php:89
-msgid "Add More Content"
-msgstr ""
-
-#: includes/js-config.php:90
-msgid ""
-"Use the Add Content button to open the content panel and add new row "
-"layouts, modules or widgets."
-msgstr ""
-
-#: includes/js-config.php:91
-msgid "Change Templates"
-msgstr ""
-
-#: includes/js-config.php:92
-msgid ""
-"Use the Templates button to pick a new template or append one to your "
-"layout. Appending will insert a new template at the end of your existing "
-"page content."
-msgstr ""
-
-#: includes/js-config.php:93
-msgid "Helpful Tools"
-msgstr ""
-
-#: includes/js-config.php:94
-msgid ""
-"The Tools button lets you duplicate a page, save a template or edit the "
-"global settings."
-msgstr ""
-
-#: includes/js-config.php:95
-msgid "Publish Your Changes"
-msgstr ""
-
-#: includes/js-config.php:96
-msgid ""
-"Once you're finished, click the Done button to publish your changes, save a "
-"draft or revert back to the last published state."
-msgstr ""
-
-#: includes/js-config.php:97
-msgid "Let's Get Building!"
-msgstr ""
-
-#: includes/js-config.php:98
-msgid ""
-"Now that you know the basics, you're ready to start building! If at any time "
-"you need help, click the help icon in the upper right corner to access the "
-"help menu. Happy building!"
-msgstr ""
-
-#: includes/js-config.php:99
-msgid ""
-"The settings you are currently editing will not be saved if you navigate "
-"away from this page."
-msgstr ""
-
-#: includes/js-config.php:100
-msgid "View the Knowledge Base"
-msgstr ""
-
-#: includes/js-config.php:101
-msgid "Visit the Forums"
-msgstr ""
-
-#: includes/js-config.php:102
-msgid "Watch the Video"
-msgstr ""
-
-#: includes/js-config.php:103
-msgid ""
-"Welcome! It looks like this might be your first time using the builder. "
-"Would you like to take a tour?"
-msgstr ""
-
-#: includes/js-config.php:104
-msgid "Yes Please!"
-msgstr ""
-
-# @ fl-builder
-#: includes/loop-settings.php:20
+#: includes/loop-settings.php:19
 msgid "Post Type"
-msgstr ""
+msgstr "Inläggstyp"
 
 # @ fl-builder
-#: includes/loop-settings.php:26
+#: includes/loop-settings.php:25
 msgid "Order By"
-msgstr ""
+msgstr "Sortera utefter"
 
 # @ fl-builder
-#: includes/loop-settings.php:29 modules/post-grid/post-grid.php:155
+#: includes/loop-settings.php:28 modules/post-grid/post-grid.php:155
 #: modules/woocommerce/woocommerce.php:189
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 # @ fl-builder
-#: includes/loop-settings.php:30
+#: includes/loop-settings.php:29
 msgid "Date Last Modified"
-msgstr ""
+msgstr "Senast ändrad"
 
 # @ fl-builder
-#: includes/loop-settings.php:31 modules/pricing-table/pricing-table.php:90
+#: includes/loop-settings.php:30 modules/pricing-table/pricing-table.php:90
 #: modules/pricing-table/pricing-table.php:94
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 # @ fl-builder
-#: includes/loop-settings.php:32 modules/post-grid/post-grid.php:146
+#: includes/loop-settings.php:31 modules/post-grid/post-grid.php:146
 msgid "Author"
-msgstr ""
+msgstr "Författare"
+
+# @ fl-builder
+#: includes/loop-settings.php:32
+msgid "Comment Count"
+msgstr "Antal kommentarer"
 
 # @ fl-builder
 #: includes/loop-settings.php:33
-msgid "Comment Count"
-msgstr ""
+msgid "Menu Order"
+msgstr "Menyordning"
 
 # @ fl-builder
 #: includes/loop-settings.php:34
-msgid "Menu Order"
-msgstr ""
-
-# @ fl-builder
-#: includes/loop-settings.php:35
 msgid "Random"
-msgstr ""
+msgstr "Slumpmässig"
 
 # @ fl-builder
-#: includes/loop-settings.php:42
+#: includes/loop-settings.php:41
 msgid "Order"
-msgstr ""
+msgstr "Ordning"
 
 # @ fl-builder
-#: includes/loop-settings.php:44 modules/woocommerce/woocommerce.php:199
+#: includes/loop-settings.php:43 modules/woocommerce/woocommerce.php:199
 msgid "Descending"
-msgstr ""
+msgstr "Fallande"
 
 # @ fl-builder
-#: includes/loop-settings.php:45 modules/woocommerce/woocommerce.php:198
+#: includes/loop-settings.php:44 modules/woocommerce/woocommerce.php:198
 msgid "Ascending"
-msgstr ""
-
-#: includes/loop-settings.php:52
-msgctxt "How many posts to skip."
-msgid "Offset"
-msgstr ""
-
-#: includes/loop-settings.php:55
-msgid "Skip this many posts that match the specified criteria."
-msgstr ""
+msgstr "Stigande"
 
 # @ fl-builder
-#: includes/loop-settings.php:62
+#: includes/loop-settings.php:52
 msgid "Filter"
 msgstr ""
 
 # @ fl-builder
-#: includes/loop-settings.php:73
+#: includes/loop-settings.php:63
 #, php-format
 msgid "Enter a comma separated list of %s. Only these %s will be shown."
 msgstr ""
+"Mata in en kommaseparerad lista av %s. Enbart dessa %s kommer att visas."
 
 # @ fl-builder
-#: includes/loop-settings.php:86
+#: includes/loop-settings.php:76
 #, php-format
 msgid ""
 "Enter a comma separated list of %s. Only posts with these %s will be shown."
 msgstr ""
+"Mata in en kommaseparerad lista av %s. Enbart inlägg med dessa %s kommer att "
+"visas."
 
 # @ fl-builder
-#: includes/loop-settings.php:100
+#: includes/loop-settings.php:90
 msgid "Authors"
-msgstr ""
+msgstr "Författare"
 
 # @ fl-builder
-#: includes/loop-settings.php:101
+#: includes/loop-settings.php:91
 msgid ""
 "Enter a comma separated list of authors usernames. Only posts with these "
 "authors will be shown."
 msgstr ""
+"Mata in en kommaseparerad lista på författares användarnamn. Enbart inlägg "
+"med dessa författare kommer att visas."
 
 # @ fl-builder
 #: includes/module-settings.php:75
 msgid "Choose whether to show or hide this module at different device sizes."
 msgstr ""
+"Välj om modulen ska visas eller inte visas vid olika storlek på enheter."
 
 # @ fl-builder
 #: includes/module-settings.php:83
 msgid "Animation"
-msgstr ""
+msgstr "Animering"
 
 # @ fl-builder
 #: includes/module-settings.php:89
 msgctxt "Animation style."
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
 #: includes/module-settings.php:90
 msgctxt "Animation style."
 msgid "Fade In"
-msgstr ""
+msgstr "Tona in"
 
 # @ fl-builder
 #: includes/module-settings.php:91
 msgctxt "Animation style."
 msgid "Slide Left"
-msgstr ""
+msgstr "Glid åt vänster"
 
 # @ fl-builder
 #: includes/module-settings.php:92
 msgctxt "Animation style."
 msgid "Slide Right"
-msgstr ""
+msgstr "Glid åt höger"
 
 # @ fl-builder
 #: includes/module-settings.php:93
 msgctxt "Animation style."
 msgid "Slide Up"
-msgstr ""
+msgstr "Glid uppåt"
 
 # @ fl-builder
 #: includes/module-settings.php:94
 msgctxt "Animation style."
 msgid "Slide Down"
-msgstr ""
+msgstr "Glid neråt"
 
 # @ fl-builder
 #: includes/module-settings.php:102
 #: modules/content-slider/content-slider.php:229
 #: modules/testimonials/testimonials.php:91
 msgid "Delay"
-msgstr ""
+msgstr "Fördröjning"
 
 # @ fl-builder
 #: includes/module-settings.php:106 includes/row-settings.php:266
 #: includes/row-settings.php:297 modules/content-slider/content-slider.php:233
 #: modules/content-slider/content-slider.php:250
-#: modules/slideshow/slideshow.php:386 modules/slideshow/slideshow.php:411
-#: modules/slideshow/slideshow.php:582
+#: modules/slideshow/slideshow.php:385 modules/slideshow/slideshow.php:410
+#: modules/slideshow/slideshow.php:581
 #: modules/testimonials/testimonials.php:95
 #: modules/testimonials/testimonials.php:112
 msgctxt "Value unit for form field of time in seconds. Such as: \"5 seconds\""
 msgid "seconds"
-msgstr ""
+msgstr "sekunder"
 
 # @ fl-builder
 #: includes/module-settings.php:107
 msgid "The amount of time in seconds before this animation starts."
-msgstr ""
+msgstr "Tid i sekunder innan animationen startar."
 
 # @ fl-builder
 #: includes/module-settings.php:120
@@ -2609,11 +1494,14 @@ msgid ""
 "A unique ID that will be applied to this module's HTML. Must start with a "
 "letter and only contain dashes, underscores, letters or numbers. No spaces."
 msgstr ""
+"Ett unikt ID som kommer att bifogas till den här modulens HTML. Måste börja "
+"med en bokstav och får enbart innehålla bindestreck, understreck, bokstäver "
+"eller siffror. Inga mellanslag."
 
 # @ fl-builder
 #: includes/module-settings.php:127 includes/row-settings.php:615
 msgid "Class"
-msgstr ""
+msgstr "Klass"
 
 # @ fl-builder
 #: includes/module-settings.php:128
@@ -2622,12 +1510,20 @@ msgid ""
 "and only contain dashes, underscores, letters or numbers. Separate multiple "
 "classes with spaces."
 msgstr ""
+"En klass som kommer att bifogas till den här modulens HTML. Måste börja med "
+"en bokstav och får enbart innehålla bindestreck, understreck, bokstäver "
+"eller siffror. Separera flera klasser med mellanslag."
+
+# @ fl-builder
+#: includes/row-settings.php:6
+msgid "Row Settings"
+msgstr "Rad-inställningar"
 
 # @ fl-builder
 #: includes/row-settings.php:16 modules/button/button.php:188
 #: modules/content-slider/content-slider.php:483
 msgid "Width"
-msgstr ""
+msgstr "Bredd"
 
 # @ fl-builder
 #: includes/row-settings.php:27
@@ -2635,11 +1531,14 @@ msgid ""
 "Full width rows span the width of the page from edge to edge. Fixed rows are "
 "no wider than the Row Max Width set in the Global Settings."
 msgstr ""
+"Fullbreddsrader täcker hela sidans bredd från kant till kant. Fixerade rader "
+"är inte bredare än inställningen för maxbredd på rader i Globala "
+"inställningar."
 
 # @ fl-builder
 #: includes/row-settings.php:34
 msgid "Content Width"
-msgstr ""
+msgstr "Bredd på innehåll"
 
 # @ fl-builder
 #: includes/row-settings.php:40
@@ -2647,6 +1546,32 @@ msgid ""
 "Full width content spans the width of the page from edge to edge. Fixed "
 "content is no wider than the Row Max Width set in the Global Settings."
 msgstr ""
+"Fullbreddsinnehåll täcker hela sidans bredd från kant till kant. Fixerade "
+"rader är inte bredare än inställningen för maxbredd på rader i Globala "
+"inställningar."
+
+# @ fl-builder
+#: includes/row-settings.php:61
+msgid "Background"
+msgstr "Bakgrund"
+
+# @ fl-builder
+#: includes/row-settings.php:68 modules/content-slider/content-slider.php:338
+msgctxt "Background type."
+msgid "None"
+msgstr "Ingen"
+
+# @ fl-builder
+#: includes/row-settings.php:69
+msgctxt "Background type."
+msgid "Color"
+msgstr "Färg"
+
+# @ fl-builder
+#: includes/row-settings.php:70
+msgctxt "Background type."
+msgid "Photo"
+msgstr "Bild"
 
 # @ fl-builder
 #: includes/row-settings.php:71
@@ -2658,7 +1583,7 @@ msgstr ""
 #: includes/row-settings.php:73
 msgctxt "Background type."
 msgid "Slideshow"
-msgstr ""
+msgstr "Bildspel"
 
 # @ fl-builder
 #: includes/row-settings.php:77
@@ -2667,9 +1592,176 @@ msgid "Parallax"
 msgstr ""
 
 # @ fl-builder
+#: includes/row-settings.php:129 modules/content-slider/content-slider.php:359
+msgid "Background Photo"
+msgstr "Bakgrundsbild"
+
+# @ fl-builder
+#: includes/row-settings.php:133 includes/row-settings.php:321
+#: modules/callout/callout.php:316 modules/callout/callout.php:332
+#: modules/callout/callout.php:336
+#: modules/content-slider/content-slider.php:335
+#: modules/content-slider/content-slider.php:404
+#: modules/content-slider/content-slider.php:745 modules/photo/photo.php:25
+#: modules/photo/photo.php:392
+msgid "Photo"
+msgstr "Bild"
+
+# @ fl-builder
+#: includes/row-settings.php:140
+msgid "Repeat"
+msgstr "Upprepning"
+
+# @ fl-builder
+#: includes/row-settings.php:143
+msgctxt "Background repeat."
+msgid "None"
+msgstr "Ingen"
+
+# @ fl-builder
+#: includes/row-settings.php:144
+msgctxt "Background repeat."
+msgid "Tile"
+msgstr "Fogad (tile)"
+
+# @ fl-builder
+#: includes/row-settings.php:145
+msgctxt "Background repeat."
+msgid "Horizontal"
+msgstr "Horisontell"
+
+# @ fl-builder
+#: includes/row-settings.php:146
+msgctxt "Background repeat."
+msgid "Vertical"
+msgstr "Vertikal"
+
+# @ fl-builder
+#: includes/row-settings.php:148
+msgid ""
+"Repeat applies to how the image should display in the row background. "
+"Choosing none will display the image as uploaded. Tile will repeat the image "
+"as many times as needed to fill the row horizontally and vertically. You can "
+"also specify the image to only repeat horizontally or vertically."
+msgstr ""
+"Upprepning avser hur bilden ska visualiseras som bakgrund till raden. Valet "
+"ingen kommer att visa bilden i naturlig storlek. Fogad kommer att upprepa "
+"bilden så många gånger som behövs för att täcka raden horisontellt och "
+"vertikalt. Du kan även specificera att bilden ska upprepas enbart "
+"horisontellt eller vertikalt."
+
+# @ fl-builder
+#: includes/row-settings.php:158
+msgid "Left Top"
+msgstr "Vänster topp"
+
+# @ fl-builder
+#: includes/row-settings.php:159
+msgid "Left Center"
+msgstr "Vänster mitt"
+
+# @ fl-builder
+#: includes/row-settings.php:160
+msgid "Left Bottom"
+msgstr "Vänster botten"
+
+# @ fl-builder
+#: includes/row-settings.php:161
+msgid "Right Top"
+msgstr "Höger topp"
+
+# @ fl-builder
+#: includes/row-settings.php:162
+msgid "Right Center"
+msgstr "Höger mitt"
+
+# @ fl-builder
+#: includes/row-settings.php:163
+msgid "Right Bottom"
+msgstr "Höger botten"
+
+# @ fl-builder
+#: includes/row-settings.php:164
+msgid "Center Top"
+msgstr "Center topp"
+
+# @ fl-builder
+#: includes/row-settings.php:165 modules/button/button.php:218
+#: modules/callout/callout.php:251
+#: modules/content-slider/content-slider.php:477 modules/cta/cta.php:126
+#: modules/heading/heading.php:90 modules/heading/heading.php:162
+#: modules/icon-group/icon-group.php:110 modules/icon/icon.php:133
+#: modules/photo/photo.php:418 modules/social-buttons/social-buttons.php:100
+msgid "Center"
+msgstr "Centrerad"
+
+# @ fl-builder
+#: includes/row-settings.php:166
+msgid "Center Bottom"
+msgstr "Center botten"
+
+# @ fl-builder
+#: includes/row-settings.php:168
+msgid "Position will tell the image where it should sit in the row background."
+msgstr "Positionering anger var bilden ska visas som bakgrund till raden."
+
+# @ fl-builder
+#: includes/row-settings.php:175
+msgid "Attachment"
+msgstr "Fästpunkt"
+
+# @ fl-builder
+#: includes/row-settings.php:178 modules/post-grid/post-grid.php:75
+msgid "Scroll"
+msgstr ""
+
+# @ fl-builder
+#: includes/row-settings.php:181
+msgid ""
+"Attachment will specify how the image reacts when scrolling a page. When "
+"scrolling is selected, the image will scroll with page scrolling. This is "
+"the default setting. Fixed will allow the image to scroll within the row "
+"background if fill is selected in the scale setting."
+msgstr ""
+"Fästpunkt anger hur bilden reagerar när man bläddrar på en sida. När scroll "
+"är valt kommer bilden att hänga med sidan när den förskjuts. Detta är "
+"standard. Fixerad kommer att låta bilden scrolla med radens bakgrund om fyll "
+"är valt i inställningarna för skalning."
+
+# @ fl-builder
+#: includes/row-settings.php:188
+msgid "Scale"
+msgstr "Skalning"
+
+# @ fl-builder
+#: includes/row-settings.php:191
+msgctxt "Background scale."
+msgid "None"
+msgstr "Ingen"
+
+# @ fl-builder
+#: includes/row-settings.php:192
+msgid "Fit"
+msgstr "Passa"
+
+# @ fl-builder
+#: includes/row-settings.php:193
+msgid "Fill"
+msgstr "Fyll"
+
+# @ fl-builder
+#: includes/row-settings.php:195
+msgid ""
+"Scale applies to how the image should display in the row background. You can "
+"select either fill or fit to the row background."
+msgstr ""
+"Skalning anger hur bilden ska visas i bakgrunden till raden. Du kan antingen "
+"välja fyll eller passa med radens bakgrund."
+
+# @ fl-builder
 #: includes/row-settings.php:203
 msgid "Background Video"
-msgstr ""
+msgstr "Bakgrundsvideo"
 
 # @ fl-builder
 #: includes/row-settings.php:207 modules/content-slider/content-slider.php:336
@@ -2683,179 +1775,184 @@ msgid ""
 "An HTML5 video to use as the background of this row. Supported types are "
 "MP4, WebM and Ogg."
 msgstr ""
+"HTML5-video att använda som bakgrund för denna rad. Format som stöds är MP4, "
+"WebM och Ogg."
 
 # @ fl-builder
 #: includes/row-settings.php:215
 msgid "Fallback Photo"
-msgstr ""
+msgstr "Alternativ bild"
 
 # @ fl-builder
 #: includes/row-settings.php:216
 msgid "A photo that will be displayed if the video fails to load."
-msgstr ""
+msgstr "Bild som visas ifall videon som ska visas inte laddar."
 
 # @ fl-builder
 #: includes/row-settings.php:224
 msgid "Background Slideshow"
-msgstr ""
+msgstr "Bakgrundsbildspel"
 
 # @ fl-builder
 #: includes/row-settings.php:228 modules/gallery/gallery.php:234
-#: modules/slideshow/slideshow.php:264
+#: modules/slideshow/slideshow.php:263
 msgid "Source"
-msgstr ""
+msgstr "Källa"
 
 # @ fl-builder
 #: includes/row-settings.php:231 modules/gallery/gallery.php:237
-#: modules/photo/photo.php:378 modules/slideshow/slideshow.php:267
+#: modules/photo/photo.php:378 modules/slideshow/slideshow.php:266
 #: modules/video/video.php:86
 msgid "Media Library"
-msgstr ""
+msgstr "Mediabibliotek"
 
 # @ fl-builder
 #: includes/row-settings.php:234 modules/gallery/gallery.php:240
-#: modules/slideshow/slideshow.php:270
+#: modules/slideshow/slideshow.php:269
 msgid ""
 "Pull images from the WordPress media library or a gallery on your SmugMug "
 "site by inserting the RSS feed URL from SmugMug. The RSS feed URL can be "
 "accessed by using the get a link function in your SmugMug gallery."
 msgstr ""
+"Hämta bilder från WordPress egna mediabibliotek eller ett galleri på din "
+"SmugMug-sida genom att mata in RSS-flödets URL från SmugMug. Denna URL kan "
+"fås genom att använda funktionen \"get a link\" i ditt SmugMug-galleri."
 
 # @ fl-builder
 #: includes/row-settings.php:249 modules/gallery/gallery.php:252
-#: modules/slideshow/slideshow.php:282
+#: modules/slideshow/slideshow.php:281
 msgid "Photos"
-msgstr ""
+msgstr "Bilder"
 
 # @ fl-builder
 #: includes/row-settings.php:256 modules/gallery/gallery.php:256
-#: modules/slideshow/slideshow.php:286
+#: modules/slideshow/slideshow.php:285
 msgid "Feed URL"
-msgstr ""
+msgstr "Flödets URL"
 
 # @ fl-builder
 #: includes/row-settings.php:263 includes/row-settings.php:328
-#: modules/slideshow/slideshow.php:383
+#: modules/slideshow/slideshow.php:382
 msgid "Speed"
-msgstr ""
+msgstr "Hastighet"
 
 # @ fl-builder
 #: includes/row-settings.php:273 modules/content-slider/content-slider.php:237
-#: modules/slideshow/slideshow.php:390
+#: modules/slideshow/slideshow.php:389
 #: modules/testimonials/testimonials.php:99
 msgid "Transition"
-msgstr ""
+msgstr "Övergång"
 
 # @ fl-builder
 #: includes/row-settings.php:276
 msgctxt "Slideshow transition type."
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
 #: includes/row-settings.php:277 modules/content-slider/content-slider.php:241
-#: modules/slideshow/slideshow.php:394
+#: modules/slideshow/slideshow.php:393
 #: modules/testimonials/testimonials.php:103
 msgid "Fade"
-msgstr ""
+msgstr "Tona in/ut"
 
 # @ fl-builder
-#: includes/row-settings.php:278 modules/slideshow/slideshow.php:395
+#: includes/row-settings.php:278 modules/slideshow/slideshow.php:394
 msgid "Ken Burns"
-msgstr ""
+msgstr "Panorering (Ken Burns)"
 
 # @ fl-builder
-#: includes/row-settings.php:279 modules/slideshow/slideshow.php:396
+#: includes/row-settings.php:279 modules/slideshow/slideshow.php:395
 msgid "Slide Horizontal"
-msgstr ""
+msgstr "Glid in/ut horisontellt"
 
 # @ fl-builder
-#: includes/row-settings.php:280 modules/slideshow/slideshow.php:397
+#: includes/row-settings.php:280 modules/slideshow/slideshow.php:396
 msgid "Slide Vertical"
-msgstr ""
+msgstr "Glid in/ut vertikalt"
 
 # @ fl-builder
-#: includes/row-settings.php:281 modules/slideshow/slideshow.php:398
+#: includes/row-settings.php:281 modules/slideshow/slideshow.php:397
 msgid "Blinds"
-msgstr ""
+msgstr "Persienn"
 
 # @ fl-builder
-#: includes/row-settings.php:282 modules/slideshow/slideshow.php:399
+#: includes/row-settings.php:282 modules/slideshow/slideshow.php:398
 msgid "Bars"
-msgstr ""
+msgstr "Galler"
 
 # @ fl-builder
-#: includes/row-settings.php:283 modules/slideshow/slideshow.php:400
+#: includes/row-settings.php:283 modules/slideshow/slideshow.php:399
 msgid "Random Bars"
-msgstr ""
+msgstr "Slumpmässigt galler"
 
 # @ fl-builder
-#: includes/row-settings.php:284 modules/slideshow/slideshow.php:401
+#: includes/row-settings.php:284 modules/slideshow/slideshow.php:400
 msgid "Boxes"
-msgstr ""
+msgstr "Boxar"
 
 # @ fl-builder
-#: includes/row-settings.php:285 modules/slideshow/slideshow.php:402
+#: includes/row-settings.php:285 modules/slideshow/slideshow.php:401
 msgid "Random Boxes"
-msgstr ""
+msgstr "Slumpmässiga boxar"
 
 # @ fl-builder
-#: includes/row-settings.php:286 modules/slideshow/slideshow.php:403
+#: includes/row-settings.php:286 modules/slideshow/slideshow.php:402
 msgid "Boxes Grow"
-msgstr ""
+msgstr "Växande boxar"
 
 # @ fl-builder
 #: includes/row-settings.php:294 modules/content-slider/content-slider.php:246
-#: modules/slideshow/slideshow.php:408
+#: modules/slideshow/slideshow.php:407
 #: modules/testimonials/testimonials.php:108
 msgid "Transition Speed"
-msgstr ""
+msgstr "Övergångshastighet"
 
 # @ fl-builder
-#: includes/row-settings.php:304 modules/slideshow/slideshow.php:415
+#: includes/row-settings.php:304 modules/slideshow/slideshow.php:414
 msgid "Randomize Photos"
-msgstr ""
+msgstr "Slumpmässiga bilder"
 
 # @ fl-builder
 #: includes/row-settings.php:317
 msgid "Background Parallax"
-msgstr ""
+msgstr "Bakgrunds-parallax"
 
 # @ fl-builder
 #: includes/row-settings.php:331
 msgid "Fast"
-msgstr ""
+msgstr "Snabb"
 
 # @ fl-builder
 #: includes/row-settings.php:332
 msgctxt "Speed."
 msgid "Medium"
-msgstr ""
+msgstr "Medel"
 
 # @ fl-builder
 #: includes/row-settings.php:333
 msgid "Slow"
-msgstr ""
+msgstr "Långsam"
 
 # @ fl-builder
 #: includes/row-settings.php:342
 msgid "Background Overlay"
-msgstr ""
+msgstr "Bakgrundsfilter"
 
 # @ fl-builder
 #: includes/row-settings.php:346
 msgid "Overlay Color"
-msgstr ""
+msgstr "Filterfärg"
 
 # @ fl-builder
 #: includes/row-settings.php:354
 msgid "Overlay Opacity"
-msgstr ""
+msgstr "Filter-opacitet"
 
 # @ fl-builder
 #: includes/row-settings.php:595
 msgid "Choose whether to show or hide this row at different device sizes."
-msgstr ""
+msgstr "Välj om raden ska visas eller döljas vid olika storlek på enheter."
 
 # @ fl-builder
 #: includes/row-settings.php:608
@@ -2863,6 +1960,9 @@ msgid ""
 "A unique ID that will be applied to this row's HTML. Must start with a "
 "letter and only contain dashes, underscores, letters or numbers. No spaces."
 msgstr ""
+"Ett unikt ID som kommer att bifogas till den här radens HTML. Måste börja "
+"med en bokstav och får enbart innehålla bindestreck, understreck, bokstäver "
+"eller siffror. Inga mellanslag."
 
 # @ fl-builder
 #: includes/row-settings.php:616
@@ -2871,143 +1971,169 @@ msgid ""
 "and only contain dashes, underscores, letters or numbers. Separate multiple "
 "classes with spaces."
 msgstr ""
-
-#: includes/service-settings.php:32
-msgid "Service"
-msgstr ""
+"En klass som kommer att bifogas till den här radens HTML. Måste börja med en "
+"bokstav och får enbart innehålla bindestreck, understreck, bokstäver eller "
+"siffror. Separera flera klasser med mellanslag."
 
 # @ fl-builder
 #: includes/settings.php:62
 msgid "Save"
-msgstr ""
+msgstr "Spara"
 
 # @ fl-builder
-#: includes/template-selector.php:4
+#: includes/template-selector.php:3
 msgid "Layout Templates"
-msgstr ""
+msgstr "Layout-mallar"
 
 # @ fl-builder
-#: includes/template-selector.php:17
+#: includes/template-selector.php:8
+msgid "Home Pages"
+msgstr "Första-sidor"
+
+# @ fl-builder
+#: includes/template-selector.php:9
+msgid "Content Pages"
+msgstr "Innehållssidor"
+
+# @ fl-builder
+#: includes/template-selector.php:13
 msgid "Your Templates"
-msgstr ""
+msgstr "Dina mallar"
 
 # @ fl-builder
-#: includes/template-selector.php:53
+#: includes/template-selector.php:47 includes/template-selector.php:77
+msgctxt "Template name."
+msgid "Blank"
+msgstr "Tom"
+
+# @ fl-builder
+#: includes/template-selector.php:72
 msgid ""
 "You haven't saved any templates yet! To do so, create a layout and save it "
 "as a template under <strong>Tools &rarr; Save Template</strong>."
 msgstr ""
-
-# @ fl-builder
-#: includes/template-selector.php:58
-msgctxt "Template name."
-msgid "Blank"
-msgstr ""
+"Du har inte sparat några mallar än! För att göra det, skapa en layout och "
+"spara den som en mall under <strong>Verktyg &rarr; Spara mall</strong>."
 
 # @ fl-builder
 #: includes/template-settings.php:14 includes/user-template-settings.php:15
 msgctxt "Template name."
 msgid "Name"
-msgstr ""
+msgstr "Namn"
 
 #: includes/template-settings.php:18
 msgid "Image Filename"
-msgstr ""
+msgstr "Filnamn på bild"
 
 #: includes/template-settings.php:19
 msgid ""
 "The filename of the image such as \"thumb.jpg\" that resides in the \"img/"
 "templates/\" directory."
-msgstr ""
+msgstr "Bildens filnamn som ill exempel \"thumb.jpg\" i mappen \"thumb.jpg\"."
 
 # @ fl-builder
-#: includes/ui.php:8 includes/ui.php:13
+#: includes/ui.php:7
 #, php-format
 msgid "Template: %s"
-msgstr ""
+msgstr "Mall: %s"
 
 # @ fl-builder
-#: includes/ui.php:21 includes/ui.php:56
-msgid "Tools"
-msgstr ""
+#: includes/ui.php:10 includes/user-template-settings.php:4
+msgid "Save Template"
+msgstr "Spara mall"
 
 # @ fl-builder
-#: includes/ui.php:34
+#: includes/ui.php:23
 msgid "Page Builder Demo"
 msgstr ""
 
 # @ fl-builder
-#: includes/ui.php:51
+#: includes/ui.php:40
 msgid "Buy Now!"
-msgstr ""
+msgstr "Köp nu!"
 
 # @ fl-builder
-#: includes/ui.php:53
+#: includes/ui.php:42
 msgid "Upgrade!"
-msgstr ""
+msgstr "Uppgradera!"
+
+# @ fl-builder
+#: includes/ui.php:44
+msgid "Done"
+msgstr "Klar"
+
+# @ fl-builder
+#: includes/ui.php:45
+msgid "Tools"
+msgstr "Verktyg"
+
+# @ fl-builder
+#: includes/ui.php:49
+msgid "Add Content"
+msgstr "Lägg till innehåll"
+
+# @ fl-builder
+#: includes/ui.php:67
+msgid "Row Layouts"
+msgstr "Rad-layouter"
+
+# @ fl-builder
+#: includes/ui.php:71
+msgid "1 Column"
+msgstr "1 kolumn"
+
+# @ fl-builder
+#: includes/ui.php:72
+msgid "2 Columns"
+msgstr "2 kolumner"
+
+# @ fl-builder
+#: includes/ui.php:73
+msgid "3 Columns"
+msgstr "3 kolumner"
+
+# @ fl-builder
+#: includes/ui.php:74
+msgid "4 Columns"
+msgstr "4 kolumner"
+
+# @ fl-builder
+#: includes/ui.php:75
+msgid "5 Columns"
+msgstr "5 kolumner"
+
+# @ fl-builder
+#: includes/ui.php:76
+msgid "6 Columns"
+msgstr "6 kolumner"
+
+# @ fl-builder
+#: includes/ui.php:77
+msgid "Left Sidebar"
+msgstr "Vänster sidofält"
 
 # @ fl-builder
 #: includes/ui.php:78
-msgid "Row Layouts"
-msgstr ""
-
-# @ fl-builder
-#: includes/ui.php:82
-msgid "1 Column"
-msgstr ""
-
-# @ fl-builder
-#: includes/ui.php:83
-msgid "2 Columns"
-msgstr ""
-
-# @ fl-builder
-#: includes/ui.php:84
-msgid "3 Columns"
-msgstr ""
-
-# @ fl-builder
-#: includes/ui.php:85
-msgid "4 Columns"
-msgstr ""
-
-# @ fl-builder
-#: includes/ui.php:86
-msgid "5 Columns"
-msgstr ""
-
-# @ fl-builder
-#: includes/ui.php:87
-msgid "6 Columns"
-msgstr ""
-
-# @ fl-builder
-#: includes/ui.php:88
-msgid "Left Sidebar"
-msgstr ""
-
-# @ fl-builder
-#: includes/ui.php:89
 msgid "Right Sidebar"
-msgstr ""
+msgstr "Höger sidofält"
 
 # @ fl-builder
-#: includes/ui.php:90
+#: includes/ui.php:79
 msgid "Left &amp; Right Sidebar"
-msgstr ""
+msgstr "Vänster &amp; höger sidofält"
 
 # @ fl-builder
-#: includes/updater/classes/class-fl-updater.php:132
+#: includes/updater/classes/class-fl-updater.php:107
 msgid "<strong>UPDATE UNAVAILABLE!</strong>"
-msgstr ""
+msgstr "<strong>UPPDATERING EJ TILLGÄNGLIG!</strong>"
 
 # @ fl-builder
-#: includes/updater/classes/class-fl-updater.php:134
+#: includes/updater/classes/class-fl-updater.php:109
 msgid "Please subscribe to enable automatic updates for this plugin."
 msgstr ""
 
 # @ fl-builder
-#: includes/updater/classes/class-fl-updater.php:136
+#: includes/updater/classes/class-fl-updater.php:111
 #: includes/updater/includes/form.php:6
 msgid "Subscribe Now"
 msgstr ""
@@ -3027,27 +2153,25 @@ msgstr ""
 # @ fl-builder
 #: includes/updater/includes/form.php:14
 msgid "Active!"
-msgstr ""
+msgstr "Aktiv!"
 
 # @ fl-builder
 #: includes/updater/includes/form.php:16
 msgid "Not Active!"
-msgstr ""
+msgstr "Ej aktiv!"
 
 # @ fl-builder
 #: includes/updater/includes/form.php:22
 msgid "Email address saved!"
-msgstr ""
+msgstr "Email-adress sparad!"
 
 # @ fl-builder
 #: includes/updater/includes/form.php:27
 #, php-format
 msgid "Enter your <a%s>licence key</a> to enable remote updates and support."
 msgstr ""
-
-#: includes/updater/includes/form.php:39
-msgid "Save Subscription Settings"
-msgstr ""
+"Mata in din <a%s>licensnyckel</a> för att möjliggöra fjärruppdateringar och "
+"support."
 
 # @ fl-builder
 #: includes/user-template-settings.php:8
@@ -3055,64 +2179,66 @@ msgid ""
 "Save the current layout as a template that can be reused under "
 "<strong>Templates &rarr; Your Templates</strong>."
 msgstr ""
+"Spara aktuell layout som en mall som kan återanvändas under <strong>Mallar "
+"&rarr; Dina mallar</strong>."
 
 # @ fl-builder
 #: modules/accordion/accordion.php:14
 msgid "Accordion"
-msgstr ""
+msgstr "Dragspel"
 
 # @ fl-builder
 #: modules/accordion/accordion.php:15
 msgid "Display a collapsible accordion of items."
-msgstr ""
+msgstr "Visa ett hopfällbart dragspel av objekt."
 
 # @ fl-builder
 #: modules/accordion/accordion.php:28 modules/tabs/tabs.php:28
 msgid "Items"
-msgstr ""
+msgstr "Objekt"
 
 # @ fl-builder
 #: modules/accordion/accordion.php:35 modules/tabs/tabs.php:35
 msgid "Item"
-msgstr ""
+msgstr "Objekt"
 
 # @ fl-builder
 #: modules/accordion/accordion.php:52 modules/tabs/tabs.php:61
 msgid "Border Color"
-msgstr ""
+msgstr "Färg på kantlinje"
 
 # @ fl-builder
 #: modules/accordion/accordion.php:62
 msgid "Label Size"
-msgstr ""
+msgstr "Storlek på beskrivning"
 
 # @ fl-builder
 #: modules/accordion/accordion.php:65
 msgctxt "Label size."
 msgid "Small"
-msgstr ""
+msgstr "Liten"
 
 # @ fl-builder
 #: modules/accordion/accordion.php:66
 msgctxt "Label size."
 msgid "Medium"
-msgstr ""
+msgstr "Mellan"
 
 # @ fl-builder
 #: modules/accordion/accordion.php:67
 msgctxt "Label size."
 msgid "Large"
-msgstr ""
+msgstr "Stor"
 
 # @ fl-builder
 #: modules/accordion/accordion.php:75
 msgid "Item Spacing"
-msgstr ""
+msgstr "Mellanrum mellan objekt"
 
 # @ fl-builder
 #: modules/accordion/accordion.php:86
 msgid "Collapse Inactive"
-msgstr ""
+msgstr "Fäll ihop inaktiva"
 
 # @ fl-builder
 #: modules/accordion/accordion.php:92
@@ -3120,41 +2246,42 @@ msgid ""
 "Choosing yes will keep only one item open at a time. Choosing no will allow "
 "multiple items to be open at the same time."
 msgstr ""
+"Att välja ja kommer att hålla enbart ett objekt öppen samtidigt. Att välja "
+"nej kommer att tillåta flera objekt att vara öppna samtidigt."
 
 # @ fl-builder
 #: modules/accordion/accordion.php:107 modules/tabs/tabs.php:74
 msgid "Add Item"
-msgstr ""
+msgstr "Lägg till objekt"
 
 # @ fl-builder
 #: modules/accordion/accordion.php:117 modules/tabs/tabs.php:84
 msgid "Label"
-msgstr ""
+msgstr "Beskrivning"
 
 # @ fl-builder
 #: modules/accordion/accordion.php:122 modules/post-grid/post-grid.php:195
-#: modules/post-grid/post-grid.php:199 modules/post-grid/post-grid.php:234
+#: modules/post-grid/post-grid.php:199 modules/post-grid/post-grid.php:235
 #: modules/tabs/tabs.php:89
 msgid "Content"
-msgstr ""
+msgstr "Innehåll"
 
 # @ fl-builder
 #: modules/button/button.php:14 modules/callout/callout.php:479
 #: modules/content-slider/content-slider.php:601 modules/cta/cta.php:214
 #: modules/pricing-table/pricing-table.php:129
-#: modules/subscribe-form/subscribe-form.php:160
 msgid "Button"
-msgstr ""
+msgstr "Knapp"
 
 # @ fl-builder
 #: modules/button/button.php:15
 msgid "A simple call to action button."
-msgstr ""
+msgstr "En enkel \"Call to action\"-knapp."
 
 # @ fl-builder
 #: modules/button/button.php:67 modules/cta/cta.php:222
 msgid "Click Here"
-msgstr ""
+msgstr "Klicka här"
 
 # @ fl-builder
 #: modules/button/button.php:75 modules/callout/callout.php:317
@@ -3163,7 +2290,7 @@ msgstr ""
 #: modules/icon-group/icon-group.php:135 modules/icon/icon.php:14
 #: modules/icon/icon.php:34
 msgid "Icon"
-msgstr ""
+msgstr "Ikon"
 
 # @ fl-builder
 #: modules/button/button.php:81 modules/button/button.php:85
@@ -3173,9 +2300,9 @@ msgstr ""
 #: modules/content-slider/content-slider.php:600 modules/cta/cta.php:240
 #: modules/heading/heading.php:43 modules/heading/heading.php:47
 #: modules/icon-group/icon-group.php:139 modules/icon/icon.php:43
-#: modules/slideshow/slideshow.php:344
+#: modules/slideshow/slideshow.php:343
 msgid "Link"
-msgstr ""
+msgstr "Länk"
 
 # @ fl-builder
 #: modules/button/button.php:86
@@ -3188,7 +2315,7 @@ msgstr ""
 #: modules/heading/heading.php:54 modules/icon/icon.php:50
 #: modules/photo/photo.php:478
 msgid "Link Target"
-msgstr ""
+msgstr "Öppna i"
 
 # @ fl-builder
 #: modules/button/button.php:96 modules/callout/callout.php:460
@@ -3196,7 +2323,7 @@ msgstr ""
 #: modules/heading/heading.php:57 modules/icon/icon.php:53
 #: modules/photo/photo.php:481
 msgid "Same Window"
-msgstr ""
+msgstr "Samma fönster"
 
 # @ fl-builder
 #: modules/button/button.php:97 modules/callout/callout.php:461
@@ -3204,23 +2331,22 @@ msgstr ""
 #: modules/heading/heading.php:58 modules/icon/icon.php:54
 #: modules/photo/photo.php:482
 msgid "New Window"
-msgstr ""
+msgstr "Nytt fönster"
 
 # @ fl-builder
 #: modules/button/button.php:111 modules/cta/cta.php:187
 #: modules/heading/heading.php:72 modules/icon-group/icon-group.php:47
 #: modules/icon/icon.php:78
 msgid "Colors"
-msgstr ""
+msgstr "Färger"
 
 # @ fl-builder
 #: modules/button/button.php:121 modules/callout/callout.php:409
 #: modules/callout/callout.php:514
 #: modules/content-slider/content-slider.php:636 modules/cta/cta.php:270
 #: modules/icon-group/icon-group.php:69 modules/icon/icon.php:100
-#: modules/subscribe-form/subscribe-form.php:188
 msgid "Background Hover Color"
-msgstr ""
+msgstr "Bakgrundsfärg under muspekare"
 
 # @ fl-builder
 #: modules/button/button.php:130 modules/callout/callout.php:523
@@ -3228,37 +2354,32 @@ msgstr ""
 #: modules/content-slider/content-slider.php:641
 #: modules/content-slider/content-slider.php:754 modules/cta/cta.php:191
 #: modules/cta/cta.php:279 modules/heading/heading.php:77
-#: modules/subscribe-form/subscribe-form.php:197
 msgid "Text Color"
-msgstr ""
+msgstr "Textfärg"
 
 # @ fl-builder
 #: modules/button/button.php:136 modules/callout/callout.php:529
 #: modules/content-slider/content-slider.php:647 modules/cta/cta.php:285
-#: modules/subscribe-form/subscribe-form.php:203
 msgid "Text Hover Color"
-msgstr ""
+msgstr "Textfärg under muspekare"
 
 # @ fl-builder
 #: modules/button/button.php:153 modules/callout/callout.php:546
 #: modules/content-slider/content-slider.php:660 modules/cta/cta.php:302
-#: modules/subscribe-form/subscribe-form.php:220
 msgid "Flat"
-msgstr ""
+msgstr "Platt"
 
 # @ fl-builder
 #: modules/button/button.php:154 modules/callout/callout.php:417
 #: modules/callout/callout.php:547
 #: modules/content-slider/content-slider.php:661 modules/cta/cta.php:303
 #: modules/icon-group/icon-group.php:77 modules/icon/icon.php:108
-#: modules/subscribe-form/subscribe-form.php:221
 msgid "Gradient"
 msgstr ""
 
 # @ fl-builder
 #: modules/button/button.php:155 modules/callout/callout.php:548
 #: modules/content-slider/content-slider.php:662 modules/cta/cta.php:304
-#: modules/subscribe-form/subscribe-form.php:222
 msgid "Transparent"
 msgstr ""
 
@@ -3266,24 +2387,22 @@ msgstr ""
 #: modules/button/button.php:165 modules/callout/callout.php:558
 #: modules/content-slider/content-slider.php:672 modules/cta/cta.php:314
 #: modules/pricing-table/pricing-table.php:67
-#: modules/subscribe-form/subscribe-form.php:232
 msgid "Border Size"
-msgstr ""
+msgstr "Storlek på kantlinje"
 
 # @ fl-builder
 #: modules/button/button.php:174 modules/callout/callout.php:567
 #: modules/content-slider/content-slider.php:681 modules/cta/cta.php:203
-#: modules/cta/cta.php:323 modules/subscribe-form/subscribe-form.php:241
+#: modules/cta/cta.php:323
 msgid "Background Opacity"
-msgstr ""
+msgstr "Opacitet på bakgrund"
 
 # @ fl-builder
 #: modules/button/button.php:184 modules/callout/callout.php:244
 #: modules/cta/cta.php:104 modules/heading/heading.php:82
 #: modules/icon-group/icon-group.php:87 modules/icon/icon.php:118
-#: modules/subscribe-form/subscribe-form.php:94
 msgid "Structure"
-msgstr ""
+msgstr "Struktur"
 
 # @ fl-builder
 #: modules/button/button.php:191 modules/callout/callout.php:584
@@ -3294,7 +2413,7 @@ msgstr ""
 # @ fl-builder
 #: modules/button/button.php:207
 msgid "Custom Width"
-msgstr ""
+msgstr "Anpassad bredd"
 
 # @ fl-builder
 #: modules/button/button.php:215 modules/cta/cta.php:122
@@ -3302,31 +2421,30 @@ msgstr ""
 #: modules/icon-group/icon-group.php:107 modules/icon/icon.php:130
 #: modules/photo/photo.php:414 modules/social-buttons/social-buttons.php:97
 msgid "Alignment"
-msgstr ""
+msgstr "Justering"
 
 # @ fl-builder
 #: modules/button/button.php:225 modules/callout/callout.php:590
 #: modules/content-slider/content-slider.php:695 modules/cta/cta.php:337
 #: modules/heading/heading.php:114 modules/heading/heading.php:171
-#: modules/subscribe-form/subscribe-form.php:255
 msgid "Font Size"
-msgstr ""
+msgstr "Storlek på typsnitt"
 
 # @ fl-builder
 #: modules/button/button.php:241 modules/callout/callout.php:606
-#: modules/cta/cta.php:353 modules/subscribe-form/subscribe-form.php:271
+#: modules/cta/cta.php:353
 msgid "Round Corners"
-msgstr ""
+msgstr "Rundade hörn"
 
 # @ fl-builder
 #: modules/callout/callout.php:14
 msgid "Callout"
-msgstr ""
+msgstr "Puff"
 
 # @ fl-builder
 #: modules/callout/callout.php:15
 msgid "A heading and snippet of text with an optional link, icon and image."
-msgstr ""
+msgstr "En rubrik och textsnutt med en valfri länk, ikon och bild."
 
 # @ fl-builder
 #: modules/callout/callout.php:216
@@ -3336,28 +2454,28 @@ msgstr ""
 #: modules/testimonials/testimonials.php:56
 #: modules/testimonials/testimonials.php:61
 msgid "Heading"
-msgstr ""
+msgstr "Rubrik"
 
 # @ fl-builder
 #: modules/callout/callout.php:248
 msgid "Overall Alignment"
-msgstr ""
+msgstr "Generell justering"
 
 # @ fl-builder
 #: modules/callout/callout.php:255
 msgid "The alignment that will apply to all elements within the callout."
-msgstr ""
+msgstr "Justering som appliceras på alla element inom puffen."
 
 # @ fl-builder
 #: modules/callout/callout.php:263 modules/cta/cta.php:147
 msgid "Heading Structure"
-msgstr ""
+msgstr "Rubrik-struktur"
 
 # @ fl-builder
 #: modules/callout/callout.php:267
 #: modules/content-slider/content-slider.php:432 modules/cta/cta.php:151
 msgid "Heading Tag"
-msgstr ""
+msgstr "Rubrik-tagg"
 
 # @ fl-builder
 #: modules/callout/callout.php:280
@@ -3365,112 +2483,112 @@ msgstr ""
 #: modules/content-slider/content-slider.php:459 modules/cta/cta.php:164
 #: modules/testimonials/testimonials.php:69
 msgid "Heading Size"
-msgstr ""
+msgstr "Rubrik-storlek"
 
 # @ fl-builder
 #: modules/callout/callout.php:294 modules/cta/cta.php:178
 msgid "Heading Custom Size"
-msgstr ""
+msgstr "Anpassad storlek på rubrik"
 
 # @ fl-builder
 #: modules/callout/callout.php:312
 msgid "Image Type"
-msgstr ""
+msgstr "Bildtyp"
 
 # @ fl-builder
 #: modules/callout/callout.php:315
 msgctxt "Image type."
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
 #: modules/callout/callout.php:340 modules/photo/photo.php:401
-#: modules/slideshow/slideshow.php:313
+#: modules/slideshow/slideshow.php:312
 msgid "Crop"
-msgstr ""
+msgstr "Beskärning"
 
 # @ fl-builder
 #: modules/callout/callout.php:343
 msgctxt "Crop"
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
 #: modules/callout/callout.php:344 modules/photo/photo.php:405
 msgid "Landscape"
-msgstr ""
+msgstr "Liggande"
 
 # @ fl-builder
 #: modules/callout/callout.php:345 modules/photo/photo.php:406
 msgid "Panorama"
-msgstr ""
+msgstr "Panorama"
 
 # @ fl-builder
 #: modules/callout/callout.php:346 modules/photo/photo.php:407
 msgid "Portrait"
-msgstr ""
+msgstr "Porträtt"
 
 # @ fl-builder
 #: modules/callout/callout.php:347 modules/photo/photo.php:408
 msgid "Square"
-msgstr ""
+msgstr "Kvadrat"
 
 # @ fl-builder
 #: modules/callout/callout.php:348 modules/photo/photo.php:409
 msgid "Circle"
-msgstr ""
+msgstr "Cirkel"
 
 # @ fl-builder
 #: modules/callout/callout.php:356 modules/callout/callout.php:376
 msgid "Above Heading"
-msgstr ""
+msgstr "Ovanför rubrik"
 
 # @ fl-builder
 #: modules/callout/callout.php:357 modules/callout/callout.php:377
 msgid "Below Heading"
-msgstr ""
+msgstr "Under rubrik"
 
 # @ fl-builder
 #: modules/callout/callout.php:358 modules/callout/callout.php:380
 msgid "Left of Text and Heading"
-msgstr ""
+msgstr "Vänster om text och rubrik"
 
 # @ fl-builder
 #: modules/callout/callout.php:359 modules/callout/callout.php:381
 msgid "Right of Text and Heading"
-msgstr ""
+msgstr "Höger om text och rubrik"
 
 # @ fl-builder
 #: modules/callout/callout.php:378
 msgid "Left of Heading"
-msgstr ""
+msgstr "Vänster om rubrik"
 
 # @ fl-builder
 #: modules/callout/callout.php:379
 msgid "Right of Heading"
-msgstr ""
+msgstr "Höger om rubrik"
 
 # @ fl-builder
 #: modules/callout/callout.php:387
 msgid "Icon Colors"
-msgstr ""
+msgstr "Ikon-färger"
 
 # @ fl-builder
 #: modules/callout/callout.php:396 modules/icon-group/icon-group.php:56
 #: modules/icon/icon.php:87
 msgid "Hover Color"
-msgstr ""
+msgstr "Färg under muspekare"
 
 # @ fl-builder
 #: modules/callout/callout.php:427
 msgid "Icon Structure"
-msgstr ""
+msgstr "Ikon-struktur"
 
 # @ fl-builder
 #: modules/callout/callout.php:431 modules/icon-group/icon-group.php:91
 #: modules/icon/icon.php:122 modules/post-grid/post-grid.php:136
 msgid "Size"
-msgstr ""
+msgstr "Storlek"
 
 # @ fl-builder
 #: modules/callout/callout.php:442
@@ -3484,6 +2602,8 @@ msgid ""
 "The link applies to the entire module. If choosing a call to action type "
 "below, this link will also be used for the text or button."
 msgstr ""
+"Länken appliceras på hela modulen. Om man väljer \"Call to action\"-typen "
+"nedanför kommer denna länk även användas till texten eller knappen."
 
 # @ fl-builder
 #: modules/callout/callout.php:470
@@ -3496,64 +2616,60 @@ msgstr ""
 #: modules/content-slider/content-slider.php:599
 msgctxt "Call to action."
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
 #: modules/callout/callout.php:498
 #: modules/content-slider/content-slider.php:620
-#: modules/subscribe-form/subscribe-form.php:172
 msgid "Button Icon"
-msgstr ""
+msgstr "Knapp-ikon"
 
 # @ fl-builder
 #: modules/callout/callout.php:504
 #: modules/content-slider/content-slider.php:626 modules/cta/cta.php:260
-#: modules/subscribe-form/subscribe-form.php:178
 msgid "Button Colors"
-msgstr ""
+msgstr "Knapp-färger"
 
 # @ fl-builder
 #: modules/callout/callout.php:539
 #: modules/content-slider/content-slider.php:653 modules/cta/cta.php:295
-#: modules/subscribe-form/subscribe-form.php:213
 msgid "Button Style"
-msgstr ""
+msgstr "Knapp-utseende"
 
 # @ fl-builder
 #: modules/callout/callout.php:577
 #: modules/content-slider/content-slider.php:691 modules/cta/cta.php:333
-#: modules/subscribe-form/subscribe-form.php:251
 msgid "Button Structure"
-msgstr ""
+msgstr "Knapp-struktur"
 
 # @ fl-builder
 #: modules/callout/callout.php:581
 msgid "Button Width"
-msgstr ""
+msgstr "Knapp-bredd"
 
 # @ fl-builder
 #: modules/contact-form/contact-form.php:14
 msgid "Contact Form"
-msgstr ""
+msgstr "Kontakt-formulär"
 
 # @ fl-builder
 #: modules/contact-form/contact-form.php:15
 msgid "A very simple contact form."
-msgstr ""
+msgstr "Ett väldigt enkelt kontakt-formulär."
 
 # @ fl-builder
 #: modules/contact-form/contact-form.php:31
 msgid "Contact Form Submission"
-msgstr ""
+msgstr "Skickande av kontaktformulär"
 
 #: modules/contact-form/contact-form.php:41
 msgid "Message"
-msgstr ""
+msgstr "Meddelande"
 
 # @ fl-builder
 #: modules/contact-form/contact-form.php:65
 msgid "Send To Email"
-msgstr ""
+msgstr "Skicka till email"
 
 # @ fl-builder
 #: modules/contact-form/contact-form.php:67
@@ -3563,12 +2679,11 @@ msgstr ""
 # @ fl-builder
 #: modules/contact-form/contact-form.php:68
 msgid "The contact form will send to this e-mail"
-msgstr ""
+msgstr "Kontaktformuläret skickar till denna e-mail"
 
 #: modules/contact-form/contact-form.php:75
-#: modules/subscribe-form/subscribe-form.php:107
 msgid "Name Field"
-msgstr ""
+msgstr "Fält för namn"
 
 # @ fl-builder
 #: modules/contact-form/contact-form.php:78
@@ -3577,10 +2692,9 @@ msgstr ""
 #: modules/contact-form/contact-form.php:105
 #: modules/post-grid/post-grid.php:116 modules/post-grid/post-grid.php:149
 #: modules/post-grid/post-grid.php:158 modules/post-grid/post-grid.php:188
-#: modules/post-grid/post-grid.php:202 modules/post-grid/post-grid.php:220
-#: modules/subscribe-form/subscribe-form.php:110
+#: modules/post-grid/post-grid.php:202 modules/post-grid/post-grid.php:216
 msgid "Show"
-msgstr ""
+msgstr "Visa"
 
 # @ fl-builder
 #: modules/contact-form/contact-form.php:79
@@ -3589,47 +2703,40 @@ msgstr ""
 #: modules/contact-form/contact-form.php:106
 #: modules/post-grid/post-grid.php:117 modules/post-grid/post-grid.php:150
 #: modules/post-grid/post-grid.php:159 modules/post-grid/post-grid.php:189
-#: modules/post-grid/post-grid.php:203 modules/post-grid/post-grid.php:221
-#: modules/subscribe-form/subscribe-form.php:111
+#: modules/post-grid/post-grid.php:203 modules/post-grid/post-grid.php:217
 msgid "Hide"
-msgstr ""
+msgstr "Dölj"
 
 #: modules/contact-form/contact-form.php:84
 msgid "Subject Field"
-msgstr ""
+msgstr "Fält för ämne"
 
 #: modules/contact-form/contact-form.php:93
 msgid "Email Field"
-msgstr ""
+msgstr "Fält för email"
 
 #: modules/contact-form/contact-form.php:102
 msgid "Phone Field"
-msgstr ""
+msgstr "Fält för telefon"
 
 # @ fl-builder
 #: modules/contact-form/includes/frontend.php:5
 msgctxt "Contact form field label."
 msgid "Name"
-msgstr ""
+msgstr "Namn"
 
 # @ fl-builder
 #: modules/contact-form/includes/frontend.php:6
-#: modules/subscribe-form/includes/frontend.php:6
 msgid "Please enter your name."
-msgstr ""
-
-#: modules/contact-form/includes/frontend.php:7
-msgid "Your name"
-msgstr ""
+msgstr "Var god ange ditt namn."
 
 #: modules/contact-form/includes/frontend.php:13
-#: modules/contact-form/includes/frontend.php:15
 msgid "Subject"
-msgstr ""
+msgstr "Ämne"
 
 #: modules/contact-form/includes/frontend.php:14
 msgid "Please enter a subject."
-msgstr ""
+msgstr "Var god ange ett ämne"
 
 # @ fl-builder
 #: modules/contact-form/includes/frontend.php:21
@@ -3639,67 +2746,51 @@ msgstr ""
 # @ fl-builder
 #: modules/contact-form/includes/frontend.php:22
 msgid "Please enter a valid email."
-msgstr ""
-
-#: modules/contact-form/includes/frontend.php:23
-msgid "Your email"
-msgstr ""
+msgstr "Var god ange en giltig email-adress."
 
 #: modules/contact-form/includes/frontend.php:29
 msgid "Phone"
-msgstr ""
+msgstr "Telefon"
 
 #: modules/contact-form/includes/frontend.php:30
 msgid "Please enter a valid phone number."
-msgstr ""
-
-#: modules/contact-form/includes/frontend.php:31
-msgid "Your phone"
-msgstr ""
+msgstr "Var god ange ett giltigt telefonnummer."
 
 # @ fl-builder
 #: modules/contact-form/includes/frontend.php:36
 msgid "Your Message"
-msgstr ""
+msgstr "Ditt meddelande"
 
 # @ fl-builder
 #: modules/contact-form/includes/frontend.php:37
 msgid "Please enter a message."
-msgstr ""
-
-#: modules/contact-form/includes/frontend.php:38
-msgid "Your message"
-msgstr ""
-
-#: modules/contact-form/includes/frontend.php:43
-msgid "Send"
-msgstr ""
+msgstr "Var god ange ett meddelande."
 
 # @ fl-builder
 #: modules/contact-form/includes/frontend.php:44
 msgid "Message Sent!"
-msgstr ""
+msgstr "Meddelande skickat!"
 
 # @ fl-builder
 #: modules/contact-form/includes/frontend.php:45
 msgid "Message failed. Please try again."
-msgstr ""
+msgstr "Meddelande misslyckades. Var god försök igen."
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:14
 msgid "Content Slider"
-msgstr ""
+msgstr "Innehållsbildspel"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:15
 msgid "Displays multiple slides with an optional heading and call to action."
-msgstr ""
+msgstr "Visar flera slides med en valfri rubrik och \"Call to action\"."
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:197 modules/map/map.php:41
-#: modules/separator/separator.php:58 modules/slideshow/slideshow.php:295
+#: modules/separator/separator.php:58 modules/slideshow/slideshow.php:294
 msgid "Height"
-msgstr ""
+msgstr "Höjd"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:202
@@ -3707,18 +2798,20 @@ msgid ""
 "This setting is the minimum height of the content slider. Content will "
 "expand the height automatically."
 msgstr ""
+"Denna inställning är minimum-höjden för innehållsbildspelet. Innehållet "
+"kommer automatiskt att expandera höjden."
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:206
-#: modules/slideshow/slideshow.php:374
+#: modules/slideshow/slideshow.php:373
 #: modules/testimonials/testimonials.php:82 modules/video/video.php:108
 msgid "Auto Play"
-msgstr ""
+msgstr "Automatisk start"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:220
 msgid "Show Play/Pause"
-msgstr ""
+msgstr "Visa Play/Paus"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:240
@@ -3731,23 +2824,23 @@ msgstr ""
 #: modules/content-slider/content-slider.php:254
 #: modules/testimonials/testimonials.php:121
 msgid "Show Arrows"
-msgstr ""
+msgstr "Visa pilar"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:263
 #: modules/testimonials/testimonials.php:151
 msgid "Show Dots"
-msgstr ""
+msgstr "Visa punkter"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:277
 msgid "Max Content Width"
-msgstr ""
+msgstr "Maximal bredd på innehåll"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:282
 msgid "The max width that the content area will be within your slides."
-msgstr ""
+msgstr "Den maximala bredd som innehållet i dina slides kommer att vara."
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:289
@@ -3762,12 +2855,12 @@ msgstr ""
 # @ fl-builder
 #: modules/content-slider/content-slider.php:311
 msgid "Slide Settings"
-msgstr ""
+msgstr "Inställningar för slides"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:321
 msgid "Slide Label"
-msgstr ""
+msgstr "Beskrivning på slide"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:322
@@ -3775,26 +2868,28 @@ msgid ""
 "A label to identify this slide on the Slides tab of the Content Slider "
 "settings."
 msgstr ""
+"En beskrivning för att identifiera denna slide i slide-fliken för "
+"innehållsbildspelsinställningarna."
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:327
 msgid "Background Layout"
-msgstr ""
+msgstr "Bakgrunds-layout"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:333
 msgid "This setting is for the entire background of your slide."
-msgstr ""
+msgstr "Denna inställning är för hela bakgrunden på din slide."
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:368
 msgid "Background Video Code"
-msgstr ""
+msgstr "Kod för bakgrundsvideo"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:374
 msgid "Content Layout"
-msgstr ""
+msgstr "Layout för innehåll"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:380
@@ -3803,11 +2898,14 @@ msgid ""
 "selection above. The location of the content layout can be selected in the "
 "style tab."
 msgstr ""
+"Detta ger dig möjlighet att lägga till innehåll ovanför eller som tillägg "
+"till bakgrundsvalet ovanför. Läget för layouten på innehållet kan väljas i "
+"utseende-fliken."
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:383
 msgid "Text &amp; Photo"
-msgstr ""
+msgstr "Text &amp; bild"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:384
@@ -3818,17 +2916,17 @@ msgstr ""
 #: modules/content-slider/content-slider.php:385
 msgctxt "Content type."
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:408 modules/video/video.php:132
 msgid "Video Embed Code"
-msgstr ""
+msgstr "Kod för inbäddad video"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:468
 msgid "Text Position"
-msgstr ""
+msgstr "Text-position"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:474
@@ -3836,58 +2934,60 @@ msgid ""
 "The position will move the content layout selections left, right or center "
 "over the background of the slide."
 msgstr ""
+"Positionen kommer att flytta layouten på innehållet åt vänster, höger eller "
+"mitten ovanför bakrunden på sliden."
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:491
 msgid "Top Margin"
-msgstr ""
+msgstr "Övre marginal"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:499
 msgid "Bottom Margin"
-msgstr ""
+msgstr "Nedre marginal"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:507
 msgid "Left Margin"
-msgstr ""
+msgstr "Vänster marginal"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:515
 msgid "Right Margin"
-msgstr ""
+msgstr "Höger marginal"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:524
 msgid "Text Colors"
-msgstr ""
+msgstr "Textfärger"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:534
 msgid "Text Shadow"
-msgstr ""
+msgstr "Text-skuggor"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:543
 #: modules/content-slider/content-slider.php:760
 msgid "Text Background Color"
-msgstr ""
+msgstr "Bakgrundsfärg på text"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:544
 msgid ""
 "The color applies to the overlay behind text over the background selections."
-msgstr ""
+msgstr "Färgen appliceras på filtret bakom text ovanför bakgrundsvalen."
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:549
 msgid "Text Background Opacity"
-msgstr ""
+msgstr "Opacitet på textbakgrund"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:557
 msgid "Text Background Height"
-msgstr ""
+msgstr "Höjd på textbakgrund"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:559
@@ -3895,6 +2995,8 @@ msgid ""
 "Auto will allow the overlay to fit however long the text content is. 100% "
 "will fit the overlay to the top and bottom of the slide."
 msgstr ""
+"Auto låter filtret täcka hela textinnehållet. 100% kommer att täcka filtret "
+"från toppen till botten av sliden."
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:561
@@ -3908,22 +3010,24 @@ msgid ""
 "The link applies to the entire slide. If choosing a call to action type "
 "below, this link will also be used for the text or button."
 msgstr ""
+"Länken gäller hela sliden. Om man väljer en \"Call to action\"-typ nedanför "
+"kommer den här läken även användas till texten eller knappen."
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:711
 msgid "Border Radius"
-msgstr ""
+msgstr "Radius på rundade hörn"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:722
 msgctxt "Module settings form tab. Display on mobile devices."
 msgid "Mobile"
-msgstr ""
+msgstr "Mobil"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:725
 msgid "Mobile Photo"
-msgstr ""
+msgstr "Mobil bild"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:731
@@ -3931,36 +3035,38 @@ msgid ""
 "You can choose a different photo that the slide will change to on mobile "
 "devices or no photo if desired."
 msgstr ""
+"Du kan välja en annan bild som sliden kommer att byta till på mobila enheter "
+"eller om inget foto önskas."
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:733
 msgid "Use Main Photo"
-msgstr ""
+msgstr "Använd huvudbild"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:734
 msgid "Choose Another Photo"
-msgstr ""
+msgstr "Välj en annan bild"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:735
 msgid "No Photo"
-msgstr ""
+msgstr "Ingen bild"
 
 # @ fl-builder
 #: modules/content-slider/content-slider.php:750
 msgid "Mobile Text Colors"
-msgstr ""
+msgstr "Mobila textfärger"
 
 # @ fl-builder
 #: modules/cta/cta.php:15
 msgid "Display a heading, subheading and a button."
-msgstr ""
+msgstr "Visa en rubrik, underrubrik och en knapp."
 
 # @ fl-builder
 #: modules/cta/cta.php:75
 msgid "Ready to find out more?"
-msgstr ""
+msgstr "Redo att ta reda på mer?"
 
 # @ fl-builder
 #: modules/cta/cta.php:90
@@ -3969,42 +3075,41 @@ msgstr ""
 
 # @ fl-builder
 #: modules/cta/cta.php:108 modules/gallery/gallery.php:220
-#: modules/post-grid/post-grid.php:44
-#: modules/subscribe-form/subscribe-form.php:98 modules/tabs/tabs.php:52
+#: modules/post-grid/post-grid.php:44 modules/tabs/tabs.php:52
 #: modules/testimonials/testimonials.php:37
 #: modules/woocommerce/woocommerce.php:57
 msgid "Layout"
 msgstr ""
 
 # @ fl-builder
-#: modules/cta/cta.php:111 modules/subscribe-form/subscribe-form.php:102
+#: modules/cta/cta.php:111
 msgid "Inline"
-msgstr ""
+msgstr "I linje"
 
 # @ fl-builder
-#: modules/cta/cta.php:112 modules/subscribe-form/subscribe-form.php:101
+#: modules/cta/cta.php:112
 msgid "Stacked"
-msgstr ""
+msgstr "Staplad"
 
 # @ fl-builder
 #: modules/cta/cta.php:132 modules/icon-group/icon-group.php:99
 msgid "Spacing"
-msgstr ""
+msgstr "Mellanrum"
 
 # @ fl-builder
 #: modules/cta/cta.php:236
 msgid "Button Link"
-msgstr ""
+msgstr "Knapp-länk"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:14 modules/post-grid/post-grid.php:55
 msgid "Gallery"
-msgstr ""
+msgstr "Galleri"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:15
 msgid "Display multiple photos in a gallery view."
-msgstr ""
+msgstr "Visa flera bilder i en galleri-vy."
 
 # @ fl-builder
 #: modules/gallery/gallery.php:223
@@ -4015,55 +3120,55 @@ msgstr ""
 #: modules/gallery/gallery.php:224
 msgctxt "Gallery layout: thumbnails."
 msgid "Thumbs"
-msgstr ""
+msgstr "Tumnaglar"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:260
 msgid "Photo Size"
-msgstr ""
+msgstr "Bildstorlek"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:263
 msgctxt "Photo size."
 msgid "Small"
-msgstr ""
+msgstr "Liten"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:264
 msgctxt "Photo size."
 msgid "Medium"
-msgstr ""
+msgstr "Mellan"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:265
 msgctxt "Photo size."
 msgid "Large"
-msgstr ""
+msgstr "Stor"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:270
 msgid "Photo Spacing"
-msgstr ""
+msgstr "Bildmellanrum"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:278
 msgid "Show Captions"
-msgstr ""
+msgstr "Visa bildtexter"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:281 modules/photo/photo.php:432
 msgid "Never"
-msgstr ""
+msgstr "Aldrig"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:282 modules/photo/photo.php:433
 msgid "On Hover"
-msgstr ""
+msgstr "Under muspekare"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:283 modules/photo/photo.php:434
 msgid "Below Photo"
-msgstr ""
+msgstr "Under bild"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:285
@@ -4072,17 +3177,20 @@ msgid ""
 "media manager for each image. The caption is also pulled directly from "
 "SmugMug if you have captions set in your gallery."
 msgstr ""
+"Denna bildtext tar text från den text som står i bildtext-arean i "
+"mediahanteraren för varje bild. Bildtexten tas även direkt från SmugMug om "
+"du har satt bildtexter i ditt galleri."
 
 # @ fl-builder
-#: modules/gallery/gallery.php:289 modules/slideshow/slideshow.php:336
+#: modules/gallery/gallery.php:289 modules/slideshow/slideshow.php:335
 msgid "Click Action"
-msgstr ""
+msgstr "Händelse vid klick"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:292
 msgctxt "Click action."
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
 #: modules/gallery/gallery.php:293 modules/photo/photo.php:452
@@ -4092,32 +3200,32 @@ msgstr ""
 # @ fl-builder
 #: modules/gallery/gallery.php:294
 msgid "Photo Link"
-msgstr ""
+msgstr "Bildlänk"
 
 # @ fl-builder
 #: modules/heading/heading.php:15
 msgid "Display a title/page heading."
-msgstr ""
+msgstr "Visa en titel/sidrubrik."
 
 # @ fl-builder
 #: modules/heading/heading.php:101
 msgid "HTML Tag"
-msgstr ""
+msgstr "HTML-tagg"
 
 # @ fl-builder
 #: modules/heading/heading.php:128 modules/heading/heading.php:188
 msgid "Custom Font Size"
-msgstr ""
+msgstr "Anpassad typsnitts-storlek"
 
 # @ fl-builder
 #: modules/heading/heading.php:137
 msgid "Mobile Structure"
-msgstr ""
+msgstr "Mobil-struktur"
 
 # @ fl-builder
 #: modules/heading/heading.php:158
 msgid "Custom Alignment"
-msgstr ""
+msgstr "Anpassad justering"
 
 # @ fl-builder
 #: modules/html/html.php:14
@@ -4127,57 +3235,57 @@ msgstr ""
 # @ fl-builder
 #: modules/html/html.php:15
 msgid "Display raw HTML code."
-msgstr ""
+msgstr "Visa rå HTML-kod."
 
 # @ fl-builder
 #: modules/icon-group/icon-group.php:14
 msgid "Icon Group"
-msgstr ""
+msgstr "Ikon-grupp"
 
 # @ fl-builder
 #: modules/icon-group/icon-group.php:15
 msgid "Display a group of linked Font Awesome icons."
-msgstr ""
+msgstr "Visa en grupp av länkade Font Awesome-ikoner."
 
 # @ fl-builder
 #: modules/icon-group/icon-group.php:125
 msgid "Add Icon"
-msgstr ""
+msgstr "Lägg till ikon"
 
 # @ fl-builder
 #: modules/icon/icon.php:15
 msgid "Display an icon and optional title."
-msgstr ""
+msgstr "Visa en ikon och valfri titel."
 
 # @ fl-builder
 #: modules/map/map.php:14
 msgid "Map"
-msgstr ""
+msgstr "Karta"
 
 # @ fl-builder
 #: modules/map/map.php:15
 msgid "Display a Google map."
-msgstr ""
+msgstr "Visa en karta från Google."
 
 # @ fl-builder
 #: modules/map/map.php:33
 msgid "Address"
-msgstr ""
+msgstr "Adress"
 
 # @ fl-builder
 #: modules/map/map.php:34
 msgid "1865 Winchester Blvd #202 Campbell, CA 95008"
-msgstr ""
+msgstr "Kungstensgatan 60, 113 29 Stockholm"
 
 # @ fl-builder
 #: modules/photo/photo.php:26
 msgid "Upload a photo or display one from the media library."
-msgstr ""
+msgstr "Ladda upp en bild eller visa en bild från mediabiblioteket."
 
 # @ fl-builder
 #: modules/photo/photo.php:375
 msgid "Photo Source"
-msgstr ""
+msgstr "Bildkälla"
 
 # @ fl-builder
 #: modules/photo/photo.php:379 modules/photo/photo.php:451
@@ -4187,7 +3295,7 @@ msgstr ""
 # @ fl-builder
 #: modules/photo/photo.php:396
 msgid "Photo URL"
-msgstr ""
+msgstr "URL till bild"
 
 # @ fl-builder
 #: modules/photo/photo.php:397
@@ -4198,33 +3306,38 @@ msgstr ""
 #: modules/photo/photo.php:404
 msgctxt "Crop."
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
 #: modules/photo/photo.php:425 modules/photo/photo.php:439
 msgid "Caption"
-msgstr ""
+msgstr "Bildtext"
 
 # @ fl-builder
 #: modules/photo/photo.php:429
 msgid "Show Caption"
-msgstr ""
+msgstr "Visa bildtext"
 
 # @ fl-builder
 #: modules/photo/photo.php:448
 msgid "Link Type"
-msgstr ""
+msgstr "Länktyp"
 
 # @ fl-builder
 #: modules/photo/photo.php:450
 msgctxt "Link type."
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
 #: modules/photo/photo.php:453
 msgid "Photo File"
-msgstr ""
+msgstr "Bild-fil"
+
+# @ fl-builder
+#: modules/photo/photo.php:454
+msgid "Photo Page"
+msgstr "Bild-sida"
 
 # @ fl-builder
 #: modules/photo/photo.php:464
@@ -4232,16 +3345,18 @@ msgid ""
 "Link type applies to how the image should be linked on click. You can choose "
 "a specific URL, the individual photo or a separate page with the photo."
 msgstr ""
+"Länktyp anger hur en bild ska länkas när man klickar på den. Du kan välja en "
+"specifik URL, den specifika bilden eller en separat sida med bilden i."
 
 # @ fl-builder
-#: modules/photo/photo.php:471 modules/slideshow/slideshow.php:357
+#: modules/photo/photo.php:471 modules/slideshow/slideshow.php:356
 msgid "Link URL"
-msgstr ""
+msgstr "URL för länken"
 
 # @ fl-builder
 #: modules/post-grid/includes/frontend.php:41
 msgid "No posts found."
-msgstr ""
+msgstr "Inga inlägg hittades."
 
 # @ fl-builder
 #: modules/post-grid/includes/post-feed.php:14
@@ -4249,161 +3364,149 @@ msgstr ""
 #, php-format
 msgctxt "%s stands for author name."
 msgid "By %s"
-msgstr ""
+msgstr "Av %s"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:14
 msgid "Posts"
-msgstr ""
+msgstr "Inlägg"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:15
 msgid "Display a grid of your WordPress posts."
-msgstr ""
+msgstr "Visa ett rutnät med dina WordPress-inlägg."
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:51
 msgid "Layout Style"
-msgstr ""
+msgstr "Layout-utseende"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:54 modules/post-grid/post-grid.php:88
 msgid "Grid"
-msgstr ""
+msgstr "Rutnät"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:56
 msgid "Feed"
-msgstr ""
+msgstr "Flöde"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:71
 msgid "Pagination Style"
-msgstr ""
+msgstr "Utseende på paginering"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:74
 msgid "Numbers"
-msgstr ""
+msgstr "Siffror"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:76
 msgctxt "Pagination style."
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:81
 msgid "Posts Per Page"
-msgstr ""
+msgstr "Inlägg per sida"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:92
 msgid "Post Width"
-msgstr ""
+msgstr "Bredd på inlägg"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:100
 msgid "Post Spacing"
-msgstr ""
+msgstr "Mellanrum för inlägg"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:109
 msgid "Featured Image"
-msgstr ""
+msgstr "Utvald bild"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:130
 msgid "Above Text"
-msgstr ""
+msgstr "Ovanför text"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:131
 msgid "Beside Text"
-msgstr ""
+msgstr "Bredvid text"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:142
 msgid "Post Info"
-msgstr ""
+msgstr "Info om inlägg"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:169
 msgid "Date Format"
-msgstr ""
+msgstr "Datumformat"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:185
 msgid "Comments"
-msgstr ""
-
-#: modules/post-grid/post-grid.php:208
-msgid "Content Type"
-msgstr ""
-
-#: modules/post-grid/post-grid.php:211
-msgid "Excerpt"
-msgstr ""
-
-#: modules/post-grid/post-grid.php:212
-msgid "Full Text"
-msgstr ""
+msgstr "Kommentarer"
 
 # @ fl-builder
-#: modules/post-grid/post-grid.php:217
+#: modules/post-grid/post-grid.php:213
 msgid "More Link"
-msgstr ""
-
-# @ fl-builder
-#: modules/post-grid/post-grid.php:226
-msgid "More Link Text"
-msgstr ""
+msgstr "Läs Mer-länk"
 
 # @ fl-builder
 #: modules/post-grid/post-grid.php:227
+msgid "More Link Text"
+msgstr "Läs Mer-text"
+
+# @ fl-builder
+#: modules/post-grid/post-grid.php:228
 msgid "Read More"
-msgstr ""
+msgstr "Läs mer"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:14
 msgid "Pricing Table"
-msgstr ""
+msgstr "Pristabell"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:15
 msgid "A simple pricing table generator."
-msgstr ""
+msgstr "En enkel pristabellsgenerator"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:26
 msgid "Pricing Boxes"
-msgstr ""
+msgstr "Prisboxar"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:33
 msgid "Pricing Box"
-msgstr ""
+msgstr "Prisbox"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:50
 msgid "Box Spacing"
-msgstr ""
+msgstr "Mellanrum för boxar"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:53
 #: modules/testimonials/testimonials.php:40
 msgid "Wide"
-msgstr ""
+msgstr "Bred"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:54
 msgid "Tight"
-msgstr ""
+msgstr "Smal"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:59
 msgid "Features Min Height"
-msgstr ""
+msgstr "Minsta höjd för funktioner"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:63
@@ -4411,116 +3514,117 @@ msgid ""
 "Use this to normalize the height of your boxes when they have different "
 "numbers of features."
 msgstr ""
+"Använd detta för att normalisera höjden på dina boxar när de har olika antal "
+"funktioner."
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:70
 msgctxt "Border size."
 msgid "Wide"
-msgstr ""
+msgstr "Bred"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:71
 msgctxt "Border size."
 msgid "Tight"
-msgstr ""
+msgstr "Smal"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:84
 msgid "Add Pricing Box"
-msgstr ""
+msgstr "Lägg till prisbox"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:98
 msgid "Title Size"
-msgstr ""
+msgstr "Storlek på titel"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:107
 msgid "Price Box"
-msgstr ""
+msgstr "Prisbox"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:111
 #: modules/woocommerce/woocommerce.php:190
 msgid "Price"
-msgstr ""
+msgstr "Pris"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:115
 msgid "Duration"
-msgstr ""
+msgstr "Varaktighet"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:116
 msgid "per Year"
-msgstr ""
+msgstr "per år"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:120
 msgid "Price Size"
-msgstr ""
+msgstr "Storlek på pris"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:133
-#: modules/subscribe-form/subscribe-form.php:167
 msgid "Button Text"
-msgstr ""
+msgstr "Knapptext"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:137
 msgid "Button URL"
-msgstr ""
+msgstr "URL på knapp"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:142
 msgctxt "Price features displayed in pricing box."
 msgid "Features"
-msgstr ""
+msgstr "Funktioner"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:147
 msgid "One feature per line. HTML is okay."
-msgstr ""
+msgstr "En funktion per rad. HTML är accepterat."
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:162
 msgid "Box Background"
-msgstr ""
+msgstr "Bakgrund på box"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:167
 msgid "Box Foreground"
-msgstr ""
+msgstr "Förgrund på box"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:173
 msgid "Accent Color"
-msgstr ""
+msgstr "Accentfärg"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:178
 msgid "Accent Text Color"
-msgstr ""
+msgstr "Accentfärg på text"
 
 # @ fl-builder
 #: modules/pricing-table/pricing-table.php:182
 msgid "Box Top Margin"
-msgstr ""
+msgstr "Övre marginal på box"
 
 # @ fl-builder
 #: modules/rich-text/rich-text.php:15
 msgid "A WYSIWYG text editor."
-msgstr ""
+msgstr "En WYSIWYG-editor (What You See Is What You Get)"
 
 # @ fl-builder
 #: modules/separator/separator.php:14
 msgid "Separator"
-msgstr ""
+msgstr "Åtskiljare"
 
 # @ fl-builder
 #: modules/separator/separator.php:15
 msgid "A divider line to separate content."
-msgstr ""
+msgstr "En skiljelinje för att separera innehåll."
 
 # @ fl-builder
 #: modules/separator/separator.php:85
@@ -4528,251 +3632,268 @@ msgid ""
 "The type of border to use. Double borders must have a height of at least 3px "
 "to render properly."
 msgstr ""
+"Typ av kantlinje att använda. Dubbla kantlinjer måste ha en höjd på minst "
+"3px för att ritas ut korrekt."
 
 # @ fl-builder
 #: modules/sidebar/includes/settings-general.php:5
 #: modules/sidebar/sidebar.php:14
 msgid "Sidebar"
-msgstr ""
+msgstr "Sidofält"
 
 # @ fl-builder
 #: modules/sidebar/sidebar.php:15
 msgid ""
 "Display a WordPress sidebar that has been registered by the current theme."
-msgstr ""
+msgstr "Visa ett WordPress-sidofält som registrerats i aktuellt tema."
 
 # @ fl-builder
 #: modules/slideshow/slideshow.php:14
 msgid "Slideshow"
-msgstr ""
+msgstr "Bildspel"
 
 # @ fl-builder
 #: modules/slideshow/slideshow.php:15
 msgid "Display multiple photos in a slideshow view."
-msgstr ""
+msgstr "Visa flera bilder i ett bildspel."
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:303
+#: modules/slideshow/slideshow.php:302
 msgid "Skin Color"
-msgstr ""
+msgstr "Färg på skal"
+
+# @ fl-builder
+#: modules/slideshow/slideshow.php:305
+msgctxt "Color."
+msgid "Light"
+msgstr "Ljus"
 
 # @ fl-builder
 #: modules/slideshow/slideshow.php:306
 msgctxt "Color."
-msgid "Light"
-msgstr ""
-
-# @ fl-builder
-#: modules/slideshow/slideshow.php:307
-msgctxt "Color."
 msgid "Dark"
-msgstr ""
+msgstr "Mörk"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:309
+#: modules/slideshow/slideshow.php:308
 msgid ""
 "If your overall theme/images are lighter in color, light will display "
 "buttons in a darker color scheme and vice versa for dark."
 msgstr ""
+"Om ditt tema/bilder har en allmänt ljusare färg kommer alternativet ljust "
+"visa knappar i en mörkare färg och vice versa för mörkt."
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:319
+#: modules/slideshow/slideshow.php:318
 msgid ""
 "Crop set to no will fit the slideshow images to the height you specify and "
 "keep the width proportional, whereas crop set to yes will fit the slideshow "
 "images to all sides of the content area while cropping the left and right to "
 "fit the height you specify."
 msgstr ""
+"Valet nej vid beskärning kommer att anpassa bilderna i bildspelet till den "
+"angivna höjden och behålla bredden proportionell. Valet ja kommer att "
+"anpassa bilderna i bildspelet till alla sidor av innehållsarean och beskära "
+"vänster och höger sida för att passa den angivna höjden."
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:323
+#: modules/slideshow/slideshow.php:322
 msgid "Disable Right-Click"
-msgstr ""
+msgstr "Avaktivera höger-klick"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:343
+#: modules/slideshow/slideshow.php:342
 msgctxt "Click action type."
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:367
+#: modules/slideshow/slideshow.php:366
 msgid "Playback"
 msgstr ""
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:393
+#: modules/slideshow/slideshow.php:392
 msgctxt "Slideshow transition."
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:430
+#: modules/slideshow/slideshow.php:429
 msgid "Controls"
-msgstr ""
+msgstr "Kontroller"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:437 modules/slideshow/slideshow.php:486
+#: modules/slideshow/slideshow.php:436 modules/slideshow/slideshow.php:485
 msgid "Navigation Arrows"
-msgstr ""
+msgstr "Navigationspilar"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:443
+#: modules/slideshow/slideshow.php:442
 msgid ""
 "Navigational arrows allow the visitor to freely move through the images in "
 "your slideshow. These are larger arrows that overlay your slideshow images "
 "and are separate from the control bar navigational arrows."
 msgstr ""
+"Navigationspilar ger besökaren möjlighet att enkelt röra sig genom bilderna "
+"i ditt bildspel. De stora pilarna ligger i ett lager ovanför dina bilder och "
+"är separerade från navigationspilarna i kontrollpanelen."
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:448
+#: modules/slideshow/slideshow.php:447
 msgid "Control Bar"
-msgstr ""
+msgstr "Kontrollpanel"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:452
+#: modules/slideshow/slideshow.php:451
 msgid "Nav Type"
-msgstr ""
+msgstr "Navigationstyp"
+
+# @ fl-builder
+#: modules/slideshow/slideshow.php:454
+msgctxt "Nav type."
+msgid "None"
+msgstr "Ingen"
 
 # @ fl-builder
 #: modules/slideshow/slideshow.php:455
-msgctxt "Nav type."
-msgid "None"
-msgstr ""
-
-# @ fl-builder
-#: modules/slideshow/slideshow.php:456
 msgid "Buttons"
-msgstr ""
+msgstr "Knappar"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:457 modules/slideshow/slideshow.php:587
+#: modules/slideshow/slideshow.php:456 modules/slideshow/slideshow.php:586
 msgid "Thumbs"
-msgstr ""
+msgstr "Tumnaglar"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:472
+#: modules/slideshow/slideshow.php:471
 msgid "Nav Position"
-msgstr ""
+msgstr "Navigationsposition"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:482
+#: modules/slideshow/slideshow.php:481
 msgid "Control Bar Buttons"
-msgstr ""
+msgstr "Kontrollpanelsknappar"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:495
+#: modules/slideshow/slideshow.php:494
 msgid "Play Button"
-msgstr ""
+msgstr "Play-knapp"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:504
+#: modules/slideshow/slideshow.php:503
 msgid "Fullscreen Button"
-msgstr ""
+msgstr "Fullskärms-knapp"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:513
+#: modules/slideshow/slideshow.php:512
 msgid "Photo Count"
-msgstr ""
+msgstr "Bildräknare"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:522
+#: modules/slideshow/slideshow.php:521
 msgid "Thumbs Button"
-msgstr ""
+msgstr "Tumnagel-knapp"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:531
+#: modules/slideshow/slideshow.php:530
 msgid "Caption Button"
-msgstr ""
+msgstr "Bildtexts-knapp"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:540
+#: modules/slideshow/slideshow.php:539
 msgid "Social Button"
-msgstr ""
+msgstr "Social media-knapp"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:550
+#: modules/slideshow/slideshow.php:549
 msgid "Control Bar Overlay"
-msgstr ""
+msgstr "Kontrollpanelsöverlagring"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:554
+#: modules/slideshow/slideshow.php:553
 msgid "Overlay Enabled"
-msgstr ""
+msgstr "Överlagring aktiverat"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:565
+#: modules/slideshow/slideshow.php:564
 msgid ""
 "Control bar overlay specifies if the control bar buttons you choose overlay "
 "your slideshow images or site below the slideshow completely."
 msgstr ""
+"Kontrollpanelsöverlagring anger om de knappar du valt i kontrollpanelens "
+"helt och hållet ska överlagra bilderna i ditt bildspel eller sidan under "
+"bildspelet."
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:569
+#: modules/slideshow/slideshow.php:568
 msgid "Overlay Hide"
-msgstr ""
+msgstr "Dölj överlagring"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:575
+#: modules/slideshow/slideshow.php:574
 msgid ""
 "Overlay hide will hide the control bar after however many seconds you "
 "specify below. They will reappear upon mouse over."
 msgstr ""
+"Dold överlagring kommer att dölja kontrollpanelen efter det antal sekunder "
+"du specificerar nedanför. Den kommer att visas igen när man sveper över med "
+"muspekaren."
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:579
+#: modules/slideshow/slideshow.php:578
 msgid "Overlay Hide Delay"
-msgstr ""
+msgstr "Fördröjning vid döljande av överlagring"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:591
+#: modules/slideshow/slideshow.php:590
 msgid "Thumbs Size"
-msgstr ""
+msgstr "Storlek på tumnaglar"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:600
+#: modules/slideshow/slideshow.php:599
 msgid "Social"
 msgstr ""
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:604
+#: modules/slideshow/slideshow.php:603
 msgid "Facebook Button"
-msgstr ""
+msgstr "Facebook-knapp"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:616
+#: modules/slideshow/slideshow.php:615
 msgid "Twitter Button"
-msgstr ""
+msgstr "Twitter-knapp"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:628
+#: modules/slideshow/slideshow.php:627
 msgid "Google Plus Button"
-msgstr ""
+msgstr "Google Plus-knapp"
 
 # @ fl-builder
-#: modules/slideshow/slideshow.php:640
+#: modules/slideshow/slideshow.php:639
 msgid "Pinterest Button"
-msgstr ""
+msgstr "Pinterest-knapp"
 
 # @ fl-builder
 #: modules/social-buttons/social-buttons.php:14
 msgid "Social Buttons"
-msgstr ""
+msgstr "Sociala medier-knappar"
 
 # @ fl-builder
 #: modules/social-buttons/social-buttons.php:15
 msgid "Displays social buttons."
-msgstr ""
+msgstr "Visa sociala medier-knappar."
 
 # @ fl-builder
 #: modules/social-buttons/social-buttons.php:71
 msgid "Target URL"
-msgstr ""
+msgstr "Mål-URL"
 
 # @ fl-builder
 #: modules/social-buttons/social-buttons.php:75
 msgid "Current Page"
-msgstr ""
+msgstr "Aktuell sida"
 
 # @ fl-builder
 #: modules/social-buttons/social-buttons.php:82
@@ -4781,162 +3902,111 @@ msgid ""
 "to interface with. For example, if you show Facebook, the user will \"Like\" "
 "whatever you put in this field."
 msgstr ""
+"Fältet mål-URL anger sidan som du vill att dina sociala medier-ikoner ska "
+"interagera med. Om du till exemepl visar Facebook kommer användaren att "
+"\"gilla\" det du anger i detta fält."
 
 # @ fl-builder
 #: modules/social-buttons/social-buttons.php:89
 msgid "Custom URL"
-msgstr ""
+msgstr "Anpassad URL"
 
 # @ fl-builder
 #: modules/social-buttons/social-buttons.php:107
 msgid "Show Facebook"
-msgstr ""
+msgstr "Visa Facebook"
 
 # @ fl-builder
 #: modules/social-buttons/social-buttons.php:116
 msgid "Show Twitter"
-msgstr ""
+msgstr "Visa Twitter"
 
 # @ fl-builder
 #: modules/social-buttons/social-buttons.php:125
 msgid "Show Google+"
-msgstr ""
-
-#: modules/subscribe-form/includes/frontend.php:5
-msgctxt "First and last name."
-msgid "Name"
-msgstr ""
-
-#: modules/subscribe-form/includes/frontend.php:12
-msgid "Please enter a valid email address."
-msgstr ""
-
-#: modules/subscribe-form/includes/frontend.php:40
-msgid "Something went wrong. Please check your entries and try again."
-msgstr ""
-
-#: modules/subscribe-form/subscribe-form.php:18
-msgid "Subscribe Form"
-msgstr ""
-
-#: modules/subscribe-form/subscribe-form.php:19
-msgid "Adds a simple subscribe form to your layout."
-msgstr ""
-
-#: modules/subscribe-form/subscribe-form.php:72
-msgid "There was an error subscribing. Please try again."
-msgstr ""
-
-#: modules/subscribe-form/subscribe-form.php:117
-msgid "Success"
-msgstr ""
-
-#: modules/subscribe-form/subscribe-form.php:121
-msgid "Success Action"
-msgstr ""
-
-#: modules/subscribe-form/subscribe-form.php:123
-msgid "Show Message"
-msgstr ""
-
-#: modules/subscribe-form/subscribe-form.php:124
-msgid "Redirect"
-msgstr ""
-
-#: modules/subscribe-form/subscribe-form.php:143
-msgid ""
-"Thanks for subscribing! Please check your email for further instructions."
-msgstr ""
-
-#: modules/subscribe-form/subscribe-form.php:150
-msgid "Success URL"
-msgstr ""
-
-#: modules/subscribe-form/subscribe-form.php:168
-msgid "Subscribe!"
-msgstr ""
+msgstr "Visa Google+"
 
 # @ fl-builder
 #: modules/tabs/tabs.php:14
 msgid "Tabs"
-msgstr ""
+msgstr "Flikar"
 
 # @ fl-builder
 #: modules/tabs/tabs.php:15
 msgid "Display a collection of tabbed content."
-msgstr ""
+msgstr "Visa innehåll ordnat i flikar."
 
 # @ fl-builder
 #: modules/tabs/tabs.php:55
 msgid "Horizontal"
-msgstr ""
+msgstr "Horisontell"
 
 # @ fl-builder
 #: modules/tabs/tabs.php:56
 msgid "Vertical"
-msgstr ""
+msgstr "Vertikal"
 
 # @ fl-builder
 #: modules/testimonials/testimonials.php:14
 #: modules/testimonials/testimonials.php:60
 #: modules/testimonials/testimonials.php:174
 msgid "Testimonials"
-msgstr ""
+msgstr "Rekommendationer"
 
 # @ fl-builder
 #: modules/testimonials/testimonials.php:15
 msgid "An animated tesimonials area."
-msgstr ""
+msgstr "En animerad rekommendations-area."
 
 # @ fl-builder
 #: modules/testimonials/testimonials.php:41
 msgid "Compact"
-msgstr ""
+msgstr "Kompakt"
 
 # @ fl-builder
 #: modules/testimonials/testimonials.php:51
 msgid "Wide is for 1 column rows, compact is for multi-column rows."
-msgstr ""
+msgstr "Bred är rader med 1 kolumn, kompakt är för rader med flera kolumner."
 
 # @ fl-builder
 #: modules/testimonials/testimonials.php:78
 msgid "Slider Settings"
-msgstr ""
+msgstr "Inställningar för bildspel."
 
 # @ fl-builder
 #: modules/testimonials/testimonials.php:135
 msgid "Arrow Color"
-msgstr ""
+msgstr "Pilfärg"
 
 # @ fl-builder
 #: modules/testimonials/testimonials.php:165
 msgid "Dot Color"
-msgstr ""
+msgstr "Punktfärg"
 
 # @ fl-builder
 #: modules/testimonials/testimonials.php:181
 msgid "Testimonial"
-msgstr ""
+msgstr "Rekommendation"
 
 # @ fl-builder
 #: modules/testimonials/testimonials.php:197
 msgid "Add Testimonial"
-msgstr ""
+msgstr "Lägg till rekommendation"
 
 # @ fl-builder
 #: modules/video/video.php:20
 msgid "Render a WordPress or embedable video."
-msgstr ""
+msgstr "Visa en WordPress-video eller inbäddningsbar video."
 
 # @ fl-builder
 #: modules/video/video.php:83
 msgid "Video Type"
-msgstr ""
+msgstr "Video-typ"
 
 # @ fl-builder
 #: modules/video/video.php:87
 msgid "Embed"
-msgstr ""
+msgstr "Bädda in"
 
 # @ fl-builder
 #: modules/video/video.php:104
@@ -4955,7 +4025,7 @@ msgstr ""
 #, php-format
 msgctxt "%s stands for widget slug."
 msgid "%s no longer exists."
-msgstr ""
+msgstr "%s existerar inte längre."
 
 # @ fl-builder
 #: modules/widget/widget.php:14
@@ -4965,7 +4035,7 @@ msgstr ""
 # @ fl-builder
 #: modules/widget/widget.php:15
 msgid "Display a WordPress widget."
-msgstr ""
+msgstr "Visa en WordPress-widget."
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:16
@@ -4975,53 +4045,58 @@ msgstr ""
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:17
 msgid "Display products or categories from your WooCommerce store."
-msgstr ""
+msgstr "Visa produkter eller kategorier från din WooCommerce-shop."
+
+# @ fl-builder
+#: modules/woocommerce/woocommerce.php:60
+msgid "Choose..."
+msgstr "Välj..."
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:61
 msgid "Single Product"
-msgstr ""
+msgstr "Ensam produkt"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:62
 #: modules/woocommerce/woocommerce.php:113
 msgid "Multiple Products"
-msgstr ""
+msgstr "Flera produkter"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:63
 msgid "\"Add to Cart\" Button"
-msgstr ""
+msgstr "\"Lägg i varukorg\"-knapp"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:64
 msgid "Categories"
-msgstr ""
+msgstr "Kategorier"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:65
 msgid "Cart"
-msgstr ""
+msgstr "Varukorg"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:66
 msgid "Checkout"
-msgstr ""
+msgstr "Kassa"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:67
 msgid "Order Tracking"
-msgstr ""
+msgstr "Orderspårning"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:68
 msgid "My Account"
-msgstr ""
+msgstr "Mitt konto"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:87
 msgid "Product ID"
-msgstr ""
+msgstr "Produkt-ID"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:90
@@ -5030,11 +4105,15 @@ msgid ""
 "a unique ID. You can find this unique product ID by visiting the Products "
 "area and rolling over the product. The unique ID will be the first attribute."
 msgstr ""
+"När du lägger till produkter i produkt-arean i WooCommerce kommer vart och "
+"ett av dessa få ett unikt ID. Du kan återfinna detta unika ID genom att "
+"besöka produktarean och föra muspekaren över produkten. Det unika ID:et "
+"kommer vara det första attributet."
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:94
 msgid "Parent Category ID"
-msgstr ""
+msgstr "ID på föräldrakategori"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:97
@@ -5044,57 +4123,62 @@ msgid ""
 "the categories area under Products and looking in the URL that is displayed "
 "in your browser. The ID will be the only number value in the URL."
 msgstr ""
+"När du lägger till produktkategorier i produkt-arean i WooCommerce kommer "
+"vart och ett av dessa få ett unikt ID. Du kan återfinna detta ID genom att "
+"föra muspekaren över kategorin som du hittar i kategori-arean under "
+"Produkter och se vilken länk den pekar mot längst ner till vänster i din "
+"webbläsare. ID:et kommer att vara det enda numeriska värdet i denna länk."
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:101
 #: modules/woocommerce/woocommerce.php:172
 msgid "Columns"
-msgstr ""
+msgstr "Kolumner"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:117
 msgid "Products Source"
-msgstr ""
+msgstr "Produktkälla"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:120
 msgid "Products IDs"
-msgstr ""
+msgstr "Produkt-ID:n"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:121
 msgid "Product Category"
-msgstr ""
+msgstr "Produkt-kategori"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:122
 msgid "Recent Products"
-msgstr ""
+msgstr "Senaste produkter"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:123
 msgid "Featured Products"
-msgstr ""
+msgstr "Utvalda produkter"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:124
 msgid "Sale Products"
-msgstr ""
+msgstr "Rea-produkter"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:125
 msgid "Best Selling Products"
-msgstr ""
+msgstr "Bästsäljande produkter"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:126
 msgid "Top Rated Products"
-msgstr ""
+msgstr "Topprankade"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:154
 msgid "Product IDs"
-msgstr ""
+msgstr "Produkt-ID:n"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:156
@@ -5104,11 +4188,16 @@ msgid ""
 "area and rolling over the product. The unique ID will be the first attribute "
 "and you can add several here separated by a comma."
 msgstr ""
+"När du lägger till produkter i produkt-arean i WooCommerce kommer vart och "
+"ett av dessa få ett unikt ID. Du kan återfinna detta unika ID genom att "
+"besöka produktarean och föra muspekaren över produkten. Det unika ID:et "
+"kommer vara det första attributet och du kan lägga till fler här genom komma-"
+"separering."
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:160
 msgid "Category Slug"
-msgstr ""
+msgstr "Permalänk för kategori"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:162
@@ -5118,33 +4207,37 @@ msgid ""
 "found in the Categories area under WooCommerce Products. Several can be "
 "added here separated by a comma."
 msgstr ""
+"När du lägger till produktkategorier i produkt-arean i WooCommerce kommer "
+"vart och ett av dessa få en unik permalänk. Du kan återfinna dessa "
+"permalänkar i kategori-arean under WooCommerce Produkter. Du kan lägga till "
+"fler här genom komma-separering."
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:166
 msgid "Number of Products"
-msgstr ""
+msgstr "Antal produkter"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:183
 msgid "Sort By"
-msgstr ""
+msgstr "Sortera utifrån"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:186
 msgctxt "Sort by."
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:187
 msgid "Popularity"
-msgstr ""
+msgstr "Popularitet"
 
 # @ fl-builder
 #: modules/woocommerce/woocommerce.php:188
 msgid "Rating"
-msgstr ""
+msgstr "Betyg"
 
 #: modules/woocommerce/woocommerce.php:195
 msgid "Sort Direction"
-msgstr ""
+msgstr "Sorteringsriktning"

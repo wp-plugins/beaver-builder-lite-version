@@ -35,10 +35,20 @@ final class FLBuilderServices {
 			'name'              => 'GetResponse',
 			'class'             => 'FLBuilderServiceGetResponse'
 		),
+		'hatchbuck'         => array(
+			'type'              => 'autoresponder',
+			'name'              => 'Hatchbuck',
+			'class'             => 'FLBuilderServiceHatchbuck'
+		),
 		'icontact'          => array(
 			'type'              => 'autoresponder',
 			'name'              => 'iContact',
 			'class'             => 'FLBuilderServiceIContact'
+		),
+		'infusionsoft'      => array(
+			'type'              => 'autoresponder',
+			'name'              => 'Infusionsoft',
+			'class'             => 'FLBuilderServiceInfusionsoft'
 		),
 		'madmimi'           => array(
 			'type'              => 'autoresponder',
@@ -49,6 +59,11 @@ final class FLBuilderServices {
 			'type'              => 'autoresponder',
 			'name'              => 'MailChimp',
 			'class'             => 'FLBuilderServiceMailChimp'
+		),
+		'mailpoet'          => array(
+			'type'              => 'autoresponder',
+			'name'              => 'MailPoet',
+			'class'             => 'FLBuilderServiceMailPoet'
 		),
 		'sendinblue'        => array(
 			'type'              => 'autoresponder',

@@ -326,6 +326,12 @@
 						if ( element.hasClass( 'fl-row' ) || element.hasClass( 'fl-col' ) || element.hasClass( 'fl-module' ) ) {
 							$( link ).on( 'click', FLBuilderLayout._scrollToElementOnLinkClick );
 						}
+						if ( element.hasClass( 'fl-accordion-item' ) ) {
+							$( link ).on( 'click', FLBuilderLayout._scrollToAccordionOnLinkClick );
+						}
+						if ( element.hasClass( 'fl-tabs-panel' ) ) {
+							$( link ).on( 'click', FLBuilderLayout._scrollToTabOnLinkClick );
+						}
 					}
 				}
 				catch( e ) {}
@@ -340,12 +346,9 @@
 		 * @method _scrollToElementOnLinkClick
 		 * @param {Object} e An event object.
 		 */ 
-		_scrollToElementOnLinkClick: function( e )
+		_scrollToElementOnLinkClick: function( e, callback )
 		{
-			var link    = $( this ),
-				href    = link.attr( 'href' ),
-				id      = href.split( '#' ).pop(),
-				element = $( '#' + id ),
+			var element = $( '#' + $( this ).attr( 'href' ).split( '#' ).pop() ),
 				dest    = 0,
 				win     = $( window ),
 				doc     = $( document );
@@ -359,10 +362,76 @@
 					dest = element.offset().top - 100;
 				}
 	
-				$( 'html, body' ).animate( { scrollTop: dest }, 1000, 'swing' );
+				$( 'html, body' ).animate( { scrollTop: dest }, 1000, 'swing', callback );
+				
+				e.preventDefault();
 			}
+		},
+		
+		/**
+		 * Scrolls to an accordion item when a link is clicked.
+		 *
+		 * @since 1.5.9
+		 * @access private
+		 * @method _scrollToAccordionOnLinkClick
+		 * @param {Object} e An event object.
+		 */ 
+		_scrollToAccordionOnLinkClick: function( e )
+		{
+			var element = $( '#' + $( this ).attr( 'href' ).split( '#' ).pop() );
+				
+			if ( element.length > 0 ) {
 			
-			e.preventDefault();
+				var callback = function() {
+					if ( element ) {
+						element.find( '.fl-accordion-button' ).trigger( 'click' );	
+						element = false;
+					}
+				};
+				
+				FLBuilderLayout._scrollToElementOnLinkClick.call( this, e, callback );
+			}
+		},
+		
+		/**
+		 * Scrolls to a tab panel when a link is clicked.
+		 *
+		 * @since 1.5.9
+		 * @access private
+		 * @method _scrollToTabOnLinkClick
+		 * @param {Object} e An event object.
+		 */ 
+		_scrollToTabOnLinkClick: function( e )
+		{
+			var element 		= $( '#' + $( this ).attr( 'href' ).split( '#' ).pop() ),
+				tabs			= null,
+				label   		= null,
+				responsiveLabel = null;
+				
+			if ( element.length > 0 ) {
+				
+				tabs 			= element.closest( '.fl-tabs' );
+				responsiveLabel = element.find( '.fl-tabs-panel-label' );
+				tabIndex 		= responsiveLabel.data( 'index' );
+				label 			= tabs.find( '.fl-tabs-labels .fl-tabs-label[data-index=' + tabIndex + ']' );
+			
+				if ( responsiveLabel.is( ':visible' ) ) {
+					
+					var callback = function() {
+						if ( element ) {
+							responsiveLabel.trigger( 'click' );	
+							element = false;
+						}
+					};
+					
+					FLBuilderLayout._scrollToElementOnLinkClick.call( this, e, callback );
+				}
+				else {
+					label.trigger( 'click' );
+				}
+				
+				e.preventDefault();
+			}
 		},
 		
 		/**

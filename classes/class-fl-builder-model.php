@@ -148,19 +148,21 @@ final class FLBuilderModel {
 	 */
 	static public function get_edit_url( $post_id = false )
 	{
-		global $post;
-
 		if ( false === $post_id ) {
-			$post_id = $post->ID;
+			global $post;
+		}
+		else {
+			$post = get_post( $post_id );
 		}
 
-		$url = add_query_arg( 'fl_builder', '', get_permalink( $post_id ) );
+		$url = add_query_arg( 'fl_builder', '', get_permalink( $post->ID ) );
 
-		if ( class_exists( 'WPMinify' ) ) {
-			$url = add_query_arg( 'wp-minify-off', '1', $url );
+		if ( 'draft' == $post->post_status ) {
+			return set_url_scheme( $url );
 		}
-
-		return set_url_scheme( $url );
+		else {
+			return $url;
+		}
 	}
 
 	/**
@@ -235,24 +237,10 @@ final class FLBuilderModel {
 	 */
 	static public function get_post_types()
 	{
-		$key		= '_fl_builder_post_types';
-		$default	= array('page', 'fl-builder-template');
+		$value = self::get_admin_settings_option( '_fl_builder_post_types', true );
 
-		// Get the value.
-		if(is_network_admin()) {
-			$value = get_site_option($key);
-		}
-		else if(class_exists('FLBuilderMultisiteSettings')) {
-			$value = get_option($key);
-			$value = !$value ? get_site_option($key) : $value;
-		}
-		else {
-			$value = get_option($key);
-		}
-
-		// Return the value.
-		if(!$value) {
-			return $default;
+		if ( ! $value ) {
+			return array( 'page', 'fl-builder-template' );
 		}
 		else {
 			$value[] = 'fl-builder-template';
@@ -277,20 +265,29 @@ final class FLBuilderModel {
 	 * is being worked on.
 	 *
 	 * @since 1.0 
+	 * @since 1.5.9 Trying to use the global $wp_the_query instead of $post to get the post id.
 	 * @return int|bool The post id or false.
 	 */
 	static public function get_post_id()
 	{
+		global $wp_the_query;
 		global $post;
 
 		$post_data = self::get_post_data();
 
-		if(isset($post_data['post_id'])) {
+		// Get a post ID sent in an AJAX request.
+		if ( isset( $post_data['post_id'] ) ) {
 			return $post_data['post_id'];
 		}
-		else if(isset($post)) {
+		// Get a post ID from the main query.
+		else if ( in_the_loop() && isset( $wp_the_query ) && isset( $wp_the_query->post ) ) {
+			return $wp_the_query->post->ID;
+		}
+		// Get a post ID in a query outside of the main loop.
+		else if ( isset( $post ) ) {
 			return $post->ID;
 		}
+		// No post ID found.
 		else {
 			return false;
 		}
@@ -1644,29 +1641,11 @@ final class FLBuilderModel {
 	 */
 	static public function get_enabled_modules()
 	{
-		$key		= '_fl_builder_enabled_modules';
-		$default	= array_keys(self::$modules);
+		$default	= array_keys( self::$modules );
 		$default[]	= 'all';
-
-		// Get the value.
-		if(is_network_admin()) {
-			$value = get_site_option($key);
-		}
-		else if(class_exists('FLBuilderMultisiteSettings')) {
-			$value = get_option($key);
-			$value = !$value ? get_site_option($key) : $value;
-		}
-		else {
-			$value = get_option($key);
-		}
-
-		// Return the value.
-		if(!$value || in_array('all', $value)) {
-			return $default;
-		}
-		else {
-			return $value;
-		}
+		$value 		= self::get_admin_settings_option( '_fl_builder_enabled_modules', true );
+		
+		return ( ! $value || in_array( 'all', $value ) ) ? $default : $value;
 	}
 
 	/**
@@ -2061,7 +2040,12 @@ final class FLBuilderModel {
 		require_once FL_BUILDER_DIR . 'includes/row-settings.php';
 		require_once FL_BUILDER_DIR . 'includes/column-settings.php';
 		require_once FL_BUILDER_DIR . 'includes/module-settings.php';
-		require_once FL_BUILDER_DIR . 'includes/user-template-settings.php';
+		
+		$user_templates = FL_BUILDER_DIR . 'includes/user-template-settings.php';
+		
+		if ( file_exists( $user_templates ) ) {
+			require_once $user_templates;
+		}
 	}
 
 	/**
@@ -2678,28 +2662,22 @@ final class FLBuilderModel {
 	 */
 	static public function get_enabled_templates()
 	{
-		$key		= '_fl_builder_enabled_templates';
-		$default	= 'enabled';
+		$value = self::get_admin_settings_option( '_fl_builder_enabled_templates', true );
+		
+		return ! $value ? 'enabled' : $value;
+	}
 
-		// Get the value.
-		if(is_network_admin()) {
-			$value = get_site_option($key);
-		}
-		else if(class_exists('FLBuilderMultisiteSettings')) {
-			$value = get_option($key);
-			$value = !$value ? get_site_option($key) : $value;
-		}
-		else {
-			$value = get_option($key);
-		}
-
-		// Return the value.
-		if(!$value) {
-			return $default;
-		}
-		else {
-			return $value;
-		}
+	/**
+	 * Returns whether the user templates admin UI is enabled.
+	 *
+	 * @since 1.5.7
+	 * @return string
+	 */
+	static public function is_user_templates_admin_enabled()
+	{
+		$value = self::get_admin_settings_option( '_fl_builder_user_templates_admin', true );
+		
+		return ! $value ? 0 : $value;
 	}
 
 	/**
@@ -2711,9 +2689,10 @@ final class FLBuilderModel {
 	static public function save_user_template()
 	{
 		$post_data = self::get_post_data();
+		$settings  = $post_data['settings'];
 
 		$post_id = wp_insert_post(array(
-			'post_title'	 => $post_data['template_name'],
+			'post_title'	 => $settings['name'],
 			'post_type'		 => 'fl-builder-template',
 			'post_status'	 => 'publish',
 			'ping_status'	 => 'closed',
@@ -2728,17 +2707,87 @@ final class FLBuilderModel {
 
 		// Save the template layout data.
 		self::update_layout_data($data, 'published', $post_id);
+		
+		// Enable the builder for this template.
+		update_post_meta($post_id, '_fl_builder_enabled', true);
 	}
 
 	/**
 	 * Returns data for all user defined templates.
 	 *
 	 * @since 1.1.3
+	 * @since 1.5.7 Added support for template categories.
 	 * @return array
 	 */
 	static public function get_user_templates()
 	{
-		return get_posts('post_type=fl-builder-template&orderby=title&order=ASC&posts_per_page=-1');
+		$categorized = array(
+			'uncategorized' => array(
+				'name'		=> _x( 'Uncategorized', 'Default user template category.', 'fl-builder' ),
+				'templates'	=> array()
+			)
+		);
+		
+		$posts = get_posts( array(
+			'post_type' 		=> 'fl-builder-template',
+			'orderby' 			=> 'menu_order title',
+			'order' 			=> 'ASC',
+			'posts_per_page' 	=> '-1',
+		) );
+		
+		$templates = array();
+		
+		// Loop through templates posts and build the templates array.
+		foreach( $posts as $post ) {
+			
+			if ( has_post_thumbnail( $post->ID ) ) {
+				$image_data = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+				$image = $image_data[0];
+			}
+			else {
+				$image = FL_BUILDER_URL . 'img/templates/blank.jpg';
+			}
+			
+			$templates[] = array(
+				'id' 		=> $post->ID,
+				'name'  	=> $post->post_title,
+				'image' 	=> $image
+			);
+		}
+		
+		// Loop through templates and build the categorized array.
+		foreach ( $templates as $template ) {
+			
+			$cats = wp_get_post_terms( $template['id'], 'fl-builder-template-category' );
+			
+			if ( 0 === count( $cats ) || is_wp_error( $cats ) ) {
+				$categorized['uncategorized']['templates'][] = $template;
+			}
+			else {
+				
+				foreach ( $cats as $cat ) {
+					
+					if ( ! isset( $categorized[ $cat->slug ] ) ) {
+						$categorized[ $cat->slug ] = array(
+							'name'		=> $cat->name,
+							'templates'	=> array()
+						);
+					}
+					
+					$categorized[ $cat->slug ]['templates'][] = $template;
+				}
+			}
+		}
+		
+		// Unset the uncategorized cat if no templates.
+		if ( 0 === count( $categorized['uncategorized']['templates'] ) ) {
+			unset( $categorized['uncategorized'] );
+		}
+		
+		return array(
+			'templates'  	=> $templates,
+			'categorized' 	=> $categorized
+		);
 	}
 
 	/**
@@ -2762,11 +2811,13 @@ final class FLBuilderModel {
 	 * Apply a user defined template to the current layout.
 	 *
 	 * @since 1.1.3
+	 * @since 1.5.7 Added param for passing template data.
 	 * @param int $template_id The post ID of the template to apply.
 	 * @param bool $append Whether to append the new template or replacing the existing layout.
+	 * @param string $template_data Template data to use instead of data for the passed id.
 	 * @return void
 	 */
-	static public function apply_user_template($template_id = null, $append = false)
+	static public function apply_user_template($template_id = null, $append = false, $template_data = null)
 	{
 		$post_data		= self::get_post_data();
 		$template_id	= isset($post_data['template_id']) ? $post_data['template_id'] : $template_id;
@@ -2784,7 +2835,9 @@ final class FLBuilderModel {
 			if($template_id != 'blank') {
 
 				// Get the template data.
-				$template_data = self::get_layout_data('published', $template_id);
+				if ( ! $template_data ) {
+					$template_data = self::get_layout_data('published', $template_id);
+				}
 
 				// Get new ids for the template nodes.
 				$template_data = self::generate_new_node_ids($template_data);
@@ -2894,15 +2947,28 @@ final class FLBuilderModel {
 	 * Apply a core template.
 	 *
 	 * @since 1.0
+	 * @since 1.5.7. Added logic for overriding core templates.
 	 * @param int $index The index of the template to apply.
 	 * @param bool $append Whether to append the new template or replacing the existing layout.
 	 * @return void
 	 */
 	static public function apply_template($index = 0, $append = false)
 	{
-		$post_data		= self::get_post_data();
-		$index			= isset($post_data['index']) ? $post_data['index'] : $index;
-		$append			= isset($post_data['append']) ? $post_data['append'] : $append;
+		$post_data	= self::get_post_data();
+		$index		= isset($post_data['template_id']) ? $post_data['template_id'] : $index;
+		$append		= isset($post_data['append']) ? $post_data['append'] : $append;
+		
+		// Apply a user defined template if core templates are overriden.
+		if ( class_exists( 'FLBuilderTemplatesOverride' ) ) {
+			
+			$success = FLBuilderTemplatesOverride::apply( $index, $append );
+			
+			if ( $success ) {
+				return;
+			}
+		}
+		
+		// Apply a core template.
 		$template		= self::get_template($index);
 		$row_position	= self::next_node_position('row');
 
@@ -2993,6 +3059,59 @@ final class FLBuilderModel {
 	}
 
 	/**
+	 * Returns template data needed for the template selector.
+	 *
+	 * @since 1.5.7
+	 * @return array
+	 */
+	static public function get_template_selector_data()
+	{
+		// Return data for overriding core templates?
+		if ( class_exists( 'FLBuilderTemplatesOverride' ) ) {
+			
+			$data = FLBuilderTemplatesOverride::get_selector_data();
+			
+			if ( $data ) {
+				return $data;
+			}
+		}
+		
+		// Return data for core templates.
+		$category_labels = array(
+			'landing' => __( 'Home Pages', 'fl-builder' ),
+			'company' => __( 'Content Pages', 'fl-builder' )
+		);
+		$categorized = array();
+		$templates   = array();
+		
+		foreach( self::get_templates() as $key => $template ) {
+			$templates[] = array(
+				'id' 		=> $key,
+				'name'  	=> $template->name,
+				'image' 	=> FL_BUILDER_URL . 'img/templates/' . $template->image,
+				'category'	=> $template->category
+			);
+		}
+		
+		foreach( $templates as $template ) {
+			
+			if ( ! isset( $categorized[ $template['category'] ] ) ) {
+				$categorized[ $template['category'] ] = array(
+					'name'		=> $category_labels[ $template['category'] ],
+					'templates'	=> array()
+				);
+			}
+			
+			$categorized[ $template['category'] ]['templates'][] = $template;
+		}
+		
+		return array(
+			'templates'  	=> $templates,
+			'categorized' 	=> $categorized
+		);
+	}
+
+	/**
 	 * Returns the custom branding string.
 	 *
 	 * @since 1.3.1
@@ -3000,24 +3119,9 @@ final class FLBuilderModel {
 	 */
 	static public function get_branding()
 	{
-		$key		= '_fl_builder_branding';
-		$default	= __('Page Builder', 'fl-builder');
-
-		// Get the value.
-		if(is_network_admin() || class_exists('FLBuilderMultisiteSettings')) {
-			$value = get_site_option($key);
-		}
-		else {
-			$value = get_option($key);
-		}
-
-		// Return the value.
-		if(!$value) {
-			return $default;
-		}
-		else {
-			return stripcslashes($value);
-		}
+		$value = self::get_admin_settings_option( '_fl_builder_branding', false );
+		
+		return ! $value ? __( 'Page Builder', 'fl-builder' ) : stripcslashes( $value );
 	}
 
 	/**
@@ -3028,24 +3132,9 @@ final class FLBuilderModel {
 	 */
 	static public function get_branding_icon()
 	{
-		$key		= '_fl_builder_branding_icon';
-		$default	= FL_BUILDER_URL . 'img/beaver.png';
-
-		// Get the value.
-		if(is_network_admin() || class_exists('FLBuilderMultisiteSettings')) {
-			$value = get_site_option($key);
-		}
-		else {
-			$value = get_option($key);
-		}
-
-		// Return the value.
-		if($value === false) {
-			return $default;
-		}
-		else {
-			return $value;
-		}
+		$value = self::get_admin_settings_option( '_fl_builder_branding_icon', false );
+		
+		return false === $value ? FL_BUILDER_URL . 'img/beaver.png' : $value;
 	}
 
 	/**
@@ -3056,28 +3145,9 @@ final class FLBuilderModel {
 	 */
 	static public function get_enabled_icons()
 	{
-		$key		= '_fl_builder_enabled_icons';
-		$default	= array( 'font-awesome', 'foundation-icons', 'dashicons' );
-
-		// Get the value.
-		if(is_network_admin()) {
-			$value = get_site_option($key);
-		}
-		else if(class_exists('FLBuilderMultisiteSettings')) {
-			$value = get_option($key);
-			$value = !$value ? get_site_option($key) : $value;
-		}
-		else {
-			$value = get_option($key);
-		}
-
-		// Return the value.
-		if(!$value) {
-			return $default;
-		}
-		else {
-			return $value;
-		}
+		$value = self::get_admin_settings_option( '_fl_builder_enabled_icons', true );
+		
+		return ! $value ? array( 'font-awesome', 'foundation-icons', 'dashicons' ) : $value;
 	}
 
 	/**
@@ -3089,28 +3159,9 @@ final class FLBuilderModel {
 	 */
 	static public function get_editing_capability()
 	{
-		$key		= '_fl_builder_editing_capability';
-		$default	= 'edit_posts';
-
-		// Get the value.
-		if(is_network_admin()) {
-			$value = get_site_option($key);
-		}
-		else if(class_exists('FLBuilderMultisiteSettings')) {
-			$value = get_option($key);
-			$value = !$value ? get_site_option($key) : $value;
-		}
-		else {
-			$value = get_option($key);
-		}
-
-		// Return the value.
-		if(!$value) {
-			return $default;
-		}
-		else {
-			return $value;
-		}
+		$value = self::get_admin_settings_option( '_fl_builder_editing_capability', true );
+		
+		return ! $value ? 'edit_posts' : $value;
 	}
 
 	/**
@@ -3143,24 +3194,9 @@ final class FLBuilderModel {
 	 */
 	static public function get_help_button_settings()
 	{
-		$key	  = '_fl_builder_help_button';
-		$defaults = self::get_help_button_defaults();
-
-		// Get the value.
-		if ( is_network_admin() || class_exists( 'FLBuilderMultisiteSettings' ) ) {
-			$value = get_site_option( $key );
-		}
-		else {
-			$value = get_option( $key );
-		}
-
-		// Return the value.
-		if ( false === $value ) {
-			return $defaults;
-		}
-		else {
-			return $value;
-		}
+		$value = self::get_admin_settings_option( '_fl_builder_help_button', false );
+		
+		return false === $value ? self::get_help_button_defaults() : $value;
 	}
 
 	/**
@@ -3220,6 +3256,63 @@ final class FLBuilderModel {
 	}
 
 	/**
+	 * Returns an option from the database for 
+	 * the admin settings page.
+	 *
+	 * @since 1.5.7
+	 * @param string $key The option key.
+	 * @param bool $network_override Whether to allow the network admin setting to be overridden on subsites.
+	 * @return mixed
+	 */
+	static public function get_admin_settings_option( $key, $network_override = true )
+	{
+		// Get the site-wide option if we're in the network admin.
+		if ( is_network_admin() ) {
+			$value = get_site_option( $key );
+		}
+		// Get the site-wide option if network overrides aren't allowed.
+		else if ( ! $network_override && class_exists( 'FLBuilderMultisiteSettings' ) ) {
+			$value = get_site_option( $key );
+		}
+		// Network overrides are allowed. Return the subsite option if it exists.
+		else if ( class_exists( 'FLBuilderMultisiteSettings' ) ) {
+			$value = get_option( $key );
+			$value = false === $value ? get_site_option( $key ) : $value;
+		}
+		// This must be a single site install. Get the single site option.
+		else {
+			$value = get_option( $key );
+		}
+
+		return $value;
+	}
+
+	/**
+	 * Updates an option from the admin settings page.
+	 *
+	 * @since 1.5.7
+	 * @param string $key The option key.
+	 * @param mixed $value The value to update.
+	 * @param bool $network_override Whether to allow the network admin setting to be overridden on subsites.
+	 * @return mixed
+	 */
+	static public function update_admin_settings_option( $key, $value, $network_override = true )
+	{
+		// Update the site-wide option since we're in the network admin. 
+		if ( is_network_admin() ) {
+			update_site_option( $key, $value );
+		}
+		// Delete the option if network overrides are allowed and the override checkbox isn't checked.
+		else if ( $network_override && FLBuilderAdminSettings::multisite_support() && ! isset( $_POST['fl-override-ms'] ) ) {
+			delete_option( $key );
+		}
+		// Update the option for single install or subsite.
+		else {
+			update_option( $key, $value );
+		}
+	}
+
+	/**
 	 * Returns the plugin basename for Beaver Builder.
 	 *
 	 * @since 1.0
@@ -3246,9 +3339,11 @@ final class FLBuilderModel {
 			delete_option('_fl_builder_settings');
 			delete_option('_fl_builder_enabled_modules');
 			delete_option('_fl_builder_enabled_templates');
+			delete_option('_fl_builder_user_templates_admin');
 			delete_option('_fl_builder_post_types');
 			delete_option('_fl_builder_enabled_icons');
 			delete_option('_fl_builder_branding');
+			delete_option('_fl_builder_branding_icon');
 			delete_option('_fl_builder_editing_capability');
 			delete_option('_fl_builder_help_button');
 			

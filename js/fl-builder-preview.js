@@ -737,6 +737,7 @@
 			
 			if(this.elements.bgOverlayColor.val() == '' || isNaN(this.elements.bgOverlayOpacity.val())) {
 				this.elements.node.removeClass('fl-row-bg-overlay');
+				this.elements.node.removeClass('fl-col-bg-overlay');
 				this.updateCSSRule(this.classes.content + ':after', 'background-color', 'transparent');  
 			}
 			else {
@@ -746,8 +747,16 @@
 				value  = 'rgba(' + rgb.join() + ', ' + alpha + ')';
 					
 				this.delay(100, $.proxy(function(){
-					this.elements.node.addClass('fl-row-bg-overlay');
-					this.updateCSSRule(this.classes.content + ':after', 'background-color', value);
+					
+					if ( this.elements.node.hasClass( 'fl-col' ) ) {
+						this.elements.node.addClass( 'fl-col-bg-overlay' );
+					}
+					else {
+						this.elements.node.addClass( 'fl-row-bg-overlay' );
+					}
+					
+					this.updateCSSRule( this.classes.content + ':after', 'background-color', value );
+					
 				}, this));
 	
 			}

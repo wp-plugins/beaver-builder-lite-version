@@ -8,6 +8,14 @@
 final class FLBuilder {
 
 	/**
+	 * Stores the ID of the post that is currently being rendered.
+	 *
+	 * @since 1.5.9
+	 * @var int $post_rendering
+	 */
+	static private $post_rendering = null;
+
+	/**
 	 * Localization
 	 *
 	 * Load the translation file for current language. Checks the default WordPress
@@ -378,7 +386,7 @@ final class FLBuilder {
 				FLBuilder::render_js();
 			}
 
-			wp_enqueue_script('fl-builder-layout-' . $post_id, $asset_info['js_url'], array(), $asset_ver, true);
+			wp_enqueue_script('fl-builder-layout-' . $post_id, $asset_info['js_url'], array('jquery'), $asset_ver, true);
 		}
 	}
 
@@ -624,37 +632,51 @@ final class FLBuilder {
 
 	/**
 	 * Renders the content for a builder layout while in the loop. 
+	 * This method should only be called by the_content filter as 
+	 * defined in fl-builder.php. To output builder content, use 
+	 * the_content function while in a WordPress loop. 
 	 *
 	 * @since 1.0
 	 * @param string $content The existing content.
 	 * @return string
 	 */
-	static public function render_content($content)
+	static public function render_content( $content )
 	{
-		global $post;
+		global $wp_filter;
 
 		$post_id        = FLBuilderModel::get_post_id();
 		$enabled        = FLBuilderModel::is_builder_enabled();
-		$ajax           = defined('DOING_AJAX');
-		$global_posts   = FLBuilderModel::get_global_posts();
-		$is_global      = in_array($post->ID, $global_posts);
+		$rendering		= $post_id === self::$post_rendering;
+		$ajax           = defined( 'DOING_AJAX' );
 		$in_loop        = in_the_loop();
+		$is_global      = in_array( $post_id, FLBuilderModel::get_global_posts() );
 
-		if($enabled && !$ajax && ($is_global || $in_loop)) {
-
-			// Remove the builder's render_content filter in case apply_filters
-			// is called again by a widget, module or shortcode.
-			remove_filter('the_content', 'FLBuilder::render_content');
+		if( $enabled && ! $rendering && ! $ajax && ( $in_loop || $is_global ) ) {
+			
+			// Store this post ID so we know it is currently being rendered
+			// in case another method or function calls apply filters on the 
+			// content after this method has run which creates an infinite loop.
+			self::$post_rendering = $post_id;
+			
+			// Store a reference to the current the_content filters array since 
+			// any modules or widgets that call apply_filters on the_content cause 
+			// the array pointer to move to the end. That makes it so the builder
+			// content doesn't receive filters after this method runs as it should.
+			$filters = $wp_filter['the_content'];
+			
+			// Remove the builder's render_content filter so it's not called again
+			// by modules or widgets that call apply_filters on the content.
+			remove_filter( 'the_content', 'FLBuilder::render_content' );
 
 			// Render the content.
 			ob_start();
 			echo '<div class="fl-builder-content fl-builder-content-' . $post_id . '" data-post-id="' . $post_id . '">';
 			self::render_rows();
 			echo '</div>';
-			$content = do_shortcode(ob_get_clean());
-
-			// Reapply the builder's render_content filter.
-			add_filter('the_content', 'FLBuilder::render_content');
+			$content = ob_get_clean();
+			
+			// Restore the original the_content filters array.
+			$wp_filter['the_content'] = $filters;
 		}
 
 		return $content;
@@ -865,37 +887,74 @@ final class FLBuilder {
 	 * Registers the custom post type for builder templates.
 	 *
 	 * @since 1.1.3
+	 * @since 1.5.7 Added template category taxonomy.
 	 * @return void
 	 */
 	static public function register_templates_post_type()
 	{
+		// Template classes aren't included in the lite version. 
 		if(FL_BUILDER_LITE === true) {
 			return;
 		}
-
+		
+		// Get the array of supported features for the templates post type.
+		$supports = array(
+			'title',
+			'revisions',
+			'page-attributes'
+		);
+		
+		// Include thumbnail support if core templates can be overridden.
+		if ( class_exists( 'FLBuilderTemplatesOverride' ) ) {
+			$supports[] = 'thumbnail';	
+		}
+		
+		// Register the template post type.
 		register_post_type('fl-builder-template', array(
-			'public'            => false,
+			'public'            => FLBuilderModel::is_user_templates_admin_enabled() ? true : false,
 			'labels'            => array(
-				'name'               => _x( 'Layout Templates', 'Custom post type label.', 'fl-builder' ),
-				'singular_name'      => _x( 'Layout Template', 'Custom post type label.', 'fl-builder' ),
-				'menu_name'          => _x( 'Layout Templates', 'Custom post type label.', 'fl-builder' ),
-				'name_admin_bar'     => _x( 'Layout Template', 'Custom post type label.', 'fl-builder' ),
+				'name'               => _x( 'Templates', 'Custom post type label.', 'fl-builder' ),
+				'singular_name'      => _x( 'Template', 'Custom post type label.', 'fl-builder' ),
+				'menu_name'          => _x( 'Templates', 'Custom post type label.', 'fl-builder' ),
+				'name_admin_bar'     => _x( 'Template', 'Custom post type label.', 'fl-builder' ),
 				'add_new'            => _x( 'Add New', 'Custom post type label.', 'fl-builder' ),
-				'add_new_item'       => _x( 'Add New Layout Template', 'Custom post type label.', 'fl-builder' ),
-				'new_item'           => _x( 'New Layout Template', 'Custom post type label.', 'fl-builder' ),
-				'edit_item'          => _x( 'Edit Layout Template', 'Custom post type label.', 'fl-builder' ),
-				'view_item'          => _x( 'View Layout Template', 'Custom post type label.', 'fl-builder' ),
-				'all_items'          => _x( 'All Layout Templates', 'Custom post type label.', 'fl-builder' ),
-				'search_items'       => _x( 'Search Layout Templates', 'Custom post type label.', 'fl-builder' ),
-				'parent_item_colon'  => _x( 'Parent Layout Templates:', 'Custom post type label.', 'fl-builder' ),
-				'not_found'          => _x( 'No layout templates found.', 'Custom post type label.', 'fl-builder' ),
-				'not_found_in_trash' => _x( 'No layout templates found in Trash.', 'Custom post type label.', 'fl-builder' )
+				'add_new_item'       => _x( 'Add New Template', 'Custom post type label.', 'fl-builder' ),
+				'new_item'           => _x( 'New Template', 'Custom post type label.', 'fl-builder' ),
+				'edit_item'          => _x( 'Edit Template', 'Custom post type label.', 'fl-builder' ),
+				'view_item'          => _x( 'View Template', 'Custom post type label.', 'fl-builder' ),
+				'all_items'          => _x( 'All Templates', 'Custom post type label.', 'fl-builder' ),
+				'search_items'       => _x( 'Search Templates', 'Custom post type label.', 'fl-builder' ),
+				'parent_item_colon'  => _x( 'Parent Templates:', 'Custom post type label.', 'fl-builder' ),
+				'not_found'          => _x( 'No templates found.', 'Custom post type label.', 'fl-builder' ),
+				'not_found_in_trash' => _x( 'No templates found in Trash.', 'Custom post type label.', 'fl-builder' )
 			),
-			'supports'          => array(
-				'title'
+			'menu_icon'			=> 'dashicons-welcome-widgets-menus',
+			'supports'          => $supports,
+			'taxonomies'		=> array(
+				'fl-builder-template-category'
 			),
-			'publicly_queryable'    => true
-		));
+			'publicly_queryable' => true
+		) );
+		
+		// Register the template taxonomy.
+		register_taxonomy( 'fl-builder-template-category', array( 'fl-builder-template' ), array(
+			'labels'            => array(
+				'name'              => _x( 'Categories', 'Custom taxonomy label.', 'fl-builder' ),
+				'singular_name'     => _x( 'Category', 'Custom taxonomy label.', 'fl-builder' ),
+				'search_items'      => _x( 'Search Categories', 'Custom taxonomy label.', 'fl-builder' ),
+				'all_items'         => _x( 'All Categories', 'Custom taxonomy label.', 'fl-builder' ),
+				'parent_item'       => _x( 'Parent Category', 'Custom taxonomy label.', 'fl-builder' ),
+				'parent_item_colon' => _x( 'Parent Category:', 'Custom taxonomy label.', 'fl-builder' ),
+				'edit_item'         => _x( 'Edit Category', 'Custom taxonomy label.', 'fl-builder' ),
+				'update_item'       => _x( 'Update Category', 'Custom taxonomy label.', 'fl-builder' ),
+				'add_new_item'      => _x( 'Add New Category', 'Custom taxonomy label.', 'fl-builder' ),
+				'new_item_name'     => _x( 'New Category Name', 'Custom taxonomy label.', 'fl-builder' ),
+				'menu_name'         => _x( 'Categories', 'Custom taxonomy label.', 'fl-builder' ),
+			),
+			'hierarchical'      => true,
+			'public'            => true,
+			'show_admin_column' => true
+		) );
 	}
 
 	/**
@@ -910,8 +969,7 @@ final class FLBuilder {
 
 			$enabled_templates  = FLBuilderModel::get_enabled_templates();
 			$user_templates     = FLBuilderModel::get_user_templates();
-			$templates          = FLBuilderModel::get_templates();
-			$num_rows           = FLBuilderModel::count_nodes('row');
+			$templates          = FLBuilderModel::get_template_selector_data();
 
 			include FL_BUILDER_DIR . 'includes/template-selector.php';
 
@@ -1219,6 +1277,7 @@ final class FLBuilder {
 	static public function render_column_attributes( $col )
 	{
 		$custom_class = apply_filters( 'fl_builder_column_custom_class', $col->settings->class, $col );
+		$overlay_bgs  = array( 'photo' );
 		
 		// ID
 		if ( ! empty( $col->settings->id ) ) {
@@ -1230,6 +1289,9 @@ final class FLBuilder {
 
 		if ( $col->settings->size <= 50 ) {
 			echo ' fl-col-small';
+		}
+		if ( in_array( $col->settings->bg_type, $overlay_bgs ) && ! empty( $col->settings->bg_overlay_color ) ) {
+			echo ' fl-col-bg-overlay';
 		}
 		if ( ! empty( $col->settings->responsive_display ) ) {
 			echo ' fl-visible-' . $col->settings->responsive_display;

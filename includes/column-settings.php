@@ -35,6 +35,32 @@ FLBuilder::register_settings_form('col', array(
 						)
 					)
 				),
+				'background'    => array(
+					'title'         => __('Background', 'fl-builder'),
+					'fields'        => array(
+						'bg_type'      => array(
+							'type'          => 'select',
+							'label'         => __('Type', 'fl-builder'),
+							'default'       => 'color',
+							'options'       => array(
+								'none'          => _x( 'None', 'Background type.', 'fl-builder' ),
+								'color'         => _x( 'Color', 'Background type.', 'fl-builder' ),
+								'photo'         => _x( 'Photo', 'Background type.', 'fl-builder' ),
+							),
+							'toggle'        => array(
+								'color'         => array(
+									'sections'      => array('bg_color')
+								),
+								'photo'         => array(
+									'sections'      => array('bg_photo', 'bg_overlay')
+								),
+							),
+							'preview'         => array(
+								'type'            => 'none'
+							)
+						)
+					)
+				),
 				'bg_color'     => array(
 					'title'         => __('Background Color', 'fl-builder'),
 					'fields'        => array(
@@ -50,6 +76,104 @@ FLBuilder::register_settings_form('col', array(
 							'type'          => 'text',
 							'label'         => __('Opacity', 'fl-builder'),
 							'default'       => '100',
+							'description'   => '%',
+							'maxlength'     => '3',
+							'size'          => '5',
+							'preview'         => array(
+								'type'            => 'none'
+							)
+						)
+					)
+				),
+				'bg_photo'     => array(
+					'title'         => __('Background Photo', 'fl-builder'),
+					'fields'        => array(
+						'bg_image'      => array(
+							'type'          => 'photo',
+							'label'         => __('Photo', 'fl-builder'),
+							'preview'         => array(
+								'type'            => 'none'
+							)
+						),
+						'bg_repeat'     => array(
+							'type'          => 'select',
+							'label'         => __('Repeat', 'fl-builder'),
+							'default'       => 'none',
+							'options'       => array(
+								'no-repeat'     => _x( 'None', 'Background repeat.', 'fl-builder' ),
+								'repeat'        => _x( 'Tile', 'Background repeat.', 'fl-builder' ),
+								'repeat-x'      => _x( 'Horizontal', 'Background repeat.', 'fl-builder' ),
+								'repeat-y'      => _x( 'Vertical', 'Background repeat.', 'fl-builder' )
+							),
+							'help'          => __('Repeat applies to how the image should display in the background. Choosing none will display the image as uploaded. Tile will repeat the image as many times as needed to fill the background horizontally and vertically. You can also specify the image to only repeat horizontally or vertically.', 'fl-builder'),
+							'preview'         => array(
+								'type'            => 'none'
+							)
+						),
+						'bg_position'   => array(
+							'type'          => 'select',
+							'label'         => __('Position', 'fl-builder'),
+							'default'       => 'center center',
+							'options'       => array(
+								'left top'      => __('Left Top', 'fl-builder'),
+								'left center'   => __('Left Center', 'fl-builder'),
+								'left bottom'   => __('Left Bottom', 'fl-builder'),
+								'right top'     => __('Right Top', 'fl-builder'),
+								'right center'  => __('Right Center', 'fl-builder'),
+								'right bottom'  => __('Right Bottom', 'fl-builder'),
+								'center top'    => __('Center Top', 'fl-builder'),
+								'center center' => __( 'Center', 'fl-builder' ),
+								'center bottom' => __('Center Bottom', 'fl-builder')
+							),
+							'help'          => __('Position will tell the image where it should sit in the background.', 'fl-builder'),
+							'preview'         => array(
+								'type'            => 'none'
+							)
+						),
+						'bg_attachment' => array(
+							'type'          => 'select',
+							'label'         => __('Attachment', 'fl-builder'),
+							'default'       => 'scroll',
+							'options'       => array(
+								'scroll'        => __( 'Scroll', 'fl-builder' ),
+								'fixed'         => __( 'Fixed', 'fl-builder' )
+							),
+							'help'          => __('Attachment will specify how the image reacts when scrolling a page. When scrolling is selected, the image will scroll with page scrolling. This is the default setting. Fixed will allow the image to scroll within the background if fill is selected in the scale setting.', 'fl-builder'),
+							'preview'         => array(
+								'type'            => 'none'
+							)
+						),
+						'bg_size'       => array(
+							'type'          => 'select',
+							'label'         => __('Scale', 'fl-builder'),
+							'default'       => 'cover',
+							'options'       => array(
+								''              => _x( 'None', 'Background scale.', 'fl-builder' ),
+								'contain'       => __( 'Fit', 'fl-builder'),
+								'cover'         => __( 'Fill', 'fl-builder')
+							),
+							'help'          => __('Scale applies to how the image should display in the background. You can select either fill or fit to the background.', 'fl-builder'),
+							'preview'         => array(
+								'type'            => 'none'
+							)
+						)
+					)
+				),
+				'bg_overlay'     => array(
+					'title'         => __('Background Overlay', 'fl-builder'),
+					'fields'        => array(
+						'bg_overlay_color'      => array(
+							'type'          => 'color',
+							'label'         => __('Overlay Color', 'fl-builder'),
+							'show_reset'    => true,
+							'preview'         => array(
+								'type'            => 'none'
+							)
+						),
+						'bg_overlay_opacity'    => array(
+							'type'          => 'text',
+							'label'         => __('Overlay Opacity', 'fl-builder'),
+							'default'       => '50',
 							'description'   => '%',
 							'maxlength'     => '3',
 							'size'          => '5',

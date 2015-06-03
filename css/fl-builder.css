@@ -5,7 +5,7 @@ html.fl-builder-edit {
 	margin-top: 43px !important;
 }
 .fl-builder-edit body {
-	position: static;
+	position: static !important;
 }
 .fl-builder-edit #wpadminbar {
 	display: none;
@@ -563,6 +563,56 @@ html.fl-builder-edit {
 /* Template Selector
 ------------------------------------------------------ */
 
+.fl-template-category-select {
+	width: 180px !important;
+}
+.fl-template-selector .fl-builder-settings-section {
+	margin: 0 0 10px;
+}
+.fl-template-selector .fl-builder-settings-fields {
+	height: 470px;
+}
+.fl-template-selector .fl-builder-settings-tab-description  {
+	font-size: 15px!important;
+	margin: 0 !important;
+	padding: 10px 0 25px;
+	text-align: center;
+}
+.fl-template-preview {
+	float: left;
+	margin: 0 20px 30px 0;
+	position: relative;
+	text-align: center;
+	width: 170px;
+}
+.fl-template-preview.fl-last {
+	margin-right: 0;
+}
+.fl-template-image {
+	border: 1px solid #d9d9d9;
+	cursor: pointer;
+	margin-bottom: 12px;
+	height: 164px;
+	overflow: hidden;
+}
+.fl-template-image:hover {
+	border-color: #ff0000;
+}
+.fl-template-image img {
+	max-height: none;
+	width: 100%;
+}
+.fl-template-preview span {
+	display: block;
+	text-align: center;
+}
+.fl-user-template-category-name {
+	background: #f2f2f2;
+	border-bottom: 3px solid #dfdfdf;
+	border-top: 2px solid #dfdfdf;
+	font-weight: bold;
+	padding: 8px 15px;
+}
 .fl-user-templates {
 	border-top: 1px solid #dfdfdf;
 	margin-bottom: 20px;
@@ -601,40 +651,6 @@ html.fl-builder-edit {
 .fl-user-templates-message {
 	display: none;
 }
-.fl-template-selector .fl-builder-settings-tab-description  {
-	font-size: 15px!important;
-	margin: 0 !important;
-	padding: 10px 0 25px;
-	text-align: center;
-}
-.fl-template-preview {
-	float: left;
-	margin: 0 20px 30px 0;
-	position: relative;
-	text-align: center;
-	width: 170px;
-}
-.fl-template-preview.fl-last {
-	margin-right: 0;
-}
-.fl-template-image {
-	border: 1px solid #d9d9d9;
-	cursor: pointer;
-	margin-bottom: 12px;
-	height: 164px;
-	overflow: hidden;
-}
-.fl-template-image:hover {
-	border-color: #ff0000;
-}
-.fl-template-image img {
-	max-height: none;
-	width: 100%;
-}
-.fl-template-preview span {
-	display: block;
-	text-align: center;
-}
 
 /* User Template Settings
 ------------------------------------------------------ */
@@ -658,6 +674,10 @@ form.fl-builder-settings {
 	line-height: 23px !important;
 	padding: 20px 25px !important;
 	background: #f2f2f2 !important;
+}
+.fl-builder-settings-message * {
+	font-size: 15px !important;
+	line-height: 23px !important;
 }
 .fl-builder-preview-loader {
 	position: relative;
@@ -749,6 +769,13 @@ form.fl-builder-settings {
 	margin: 5px 0 0 0;
 	overflow: hidden;
 	position: relative;
+}
+.fl-lightbox-header .fl-builder-settings-fields {
+	height: auto;
+	margin: 0;
+	position: absolute;
+	right: 10px;
+	top: 10px;	
 }
 .fl-builder-settings-fields .fl-nanoscroller-content {
 	padding: 15px 20px 20px 20px;
