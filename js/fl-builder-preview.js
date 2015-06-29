@@ -442,11 +442,17 @@
 		{
 			// Elements
 			$.extend(this.elements, {
-				textColor : $(this.classes.settings + ' input[name=text_color]')
+				textColor    : $(this.classes.settings + ' input[name=text_color]'),
+				linkColor    : $(this.classes.settings + ' input[name=link_color]'),
+				hoverColor 	 : $(this.classes.settings + ' input[name=hover_color]'),
+				headingColor : $(this.classes.settings + ' input[name=heading_color]')
 			});
 			
 			// Events
 			this.elements.textColor.on('change', $.proxy(this._textColorChange, this));
+			this.elements.linkColor.on('change', $.proxy(this._textColorChange, this));
+			this.elements.hoverColor.on('change', $.proxy(this._textColorChange, this));
+			this.elements.headingColor.on('change', $.proxy(this._textColorChange, this));
 		},
 		
 		/**
@@ -460,30 +466,72 @@
 		 */
 		_textColorChange: function(e)
 		{
-			var val = this.elements.textColor.val();
+			var textColor    = this.elements.textColor.val(),
+				linkColor    = this.elements.linkColor.val(),
+				hoverColor   = this.elements.hoverColor.val(),
+				headingColor = this.elements.headingColor.val();
 			
-			if(val == '') {
-				this.updateCSSRule(this.classes.node, 'color', 'inherit');
-				this.updateCSSRule(this.classes.node + ' a', 'color', 'inherit');
-				this.updateCSSRule(this.classes.node + ' h1', 'color', 'inherit');
-				this.updateCSSRule(this.classes.node + ' h2', 'color', 'inherit');
-				this.updateCSSRule(this.classes.node + ' h3', 'color', 'inherit');
-				this.updateCSSRule(this.classes.node + ' h4', 'color', 'inherit');
-				this.updateCSSRule(this.classes.node + ' h5', 'color', 'inherit');
-				this.updateCSSRule(this.classes.node + ' h6', 'color', 'inherit');
-			}
-			else {
-				this.delay(100, $.proxy(function(){
-					this.updateCSSRule(this.classes.node, 'color', '#' + val);
-					this.updateCSSRule(this.classes.node + ' a', 'color', '#' + val);
-					this.updateCSSRule(this.classes.node + ' h1', 'color', '#' + val);
-					this.updateCSSRule(this.classes.node + ' h2', 'color', '#' + val);
-					this.updateCSSRule(this.classes.node + ' h3', 'color', '#' + val);
-					this.updateCSSRule(this.classes.node + ' h4', 'color', '#' + val);
-					this.updateCSSRule(this.classes.node + ' h5', 'color', '#' + val);
-					this.updateCSSRule(this.classes.node + ' h6', 'color', '#' + val);
-				}, this));   
-			}
+			linkColor 	 = linkColor == '' ? textColor : linkColor;
+			hoverColor 	 = hoverColor == '' ? textColor : hoverColor;
+			headingColor = headingColor == '' ? textColor : headingColor;
+			
+			this.delay(100, $.proxy(function(){
+			
+				// Update Text color.
+				if(textColor == '') {
+					this.updateCSSRule(this.classes.node, 'color', 'inherit');
+				}
+				else {
+					this.updateCSSRule(this.classes.node, 'color', '#' + textColor);
+				}
+				
+				// Update Link Color
+				if ( linkColor == '' ) {
+					this.updateCSSRule(this.classes.node + ' a', 'color', 'inherit');
+				}
+				else {
+					this.updateCSSRule(this.classes.node + ' a', 'color', '#' + linkColor);
+				}
+				
+				// Hover Color
+				if(hoverColor == '') {
+					this.updateCSSRule(this.classes.node + ' a:hover', 'color', 'inherit');
+				}
+				else {
+					this.updateCSSRule(this.classes.node + ' a:hover', 'color', '#' + hoverColor);
+				}
+				
+				// Heading Color
+				if(headingColor == '') {
+					this.updateCSSRule(this.classes.node + ' h1', 'color', 'inherit');
+					this.updateCSSRule(this.classes.node + ' h2', 'color', 'inherit');
+					this.updateCSSRule(this.classes.node + ' h3', 'color', 'inherit');
+					this.updateCSSRule(this.classes.node + ' h4', 'color', 'inherit');
+					this.updateCSSRule(this.classes.node + ' h5', 'color', 'inherit');
+					this.updateCSSRule(this.classes.node + ' h6', 'color', 'inherit');
+					this.updateCSSRule(this.classes.node + ' h1 a', 'color', 'inherit');
+					this.updateCSSRule(this.classes.node + ' h2 a', 'color', 'inherit');
+					this.updateCSSRule(this.classes.node + ' h3 a', 'color', 'inherit');
+					this.updateCSSRule(this.classes.node + ' h4 a', 'color', 'inherit');
+					this.updateCSSRule(this.classes.node + ' h5 a', 'color', 'inherit');
+					this.updateCSSRule(this.classes.node + ' h6 a', 'color', 'inherit');
+				}
+				else {
+					this.updateCSSRule(this.classes.node + ' h1', 'color', '#' + headingColor);
+					this.updateCSSRule(this.classes.node + ' h2', 'color', '#' + headingColor);
+					this.updateCSSRule(this.classes.node + ' h3', 'color', '#' + headingColor);
+					this.updateCSSRule(this.classes.node + ' h4', 'color', '#' + headingColor);
+					this.updateCSSRule(this.classes.node + ' h5', 'color', '#' + headingColor);
+					this.updateCSSRule(this.classes.node + ' h6', 'color', '#' + headingColor);
+					this.updateCSSRule(this.classes.node + ' h1 a', 'color', '#' + headingColor);
+					this.updateCSSRule(this.classes.node + ' h2 a', 'color', '#' + headingColor);
+					this.updateCSSRule(this.classes.node + ' h3 a', 'color', '#' + headingColor);
+					this.updateCSSRule(this.classes.node + ' h4 a', 'color', '#' + headingColor);
+					this.updateCSSRule(this.classes.node + ' h5 a', 'color', '#' + headingColor);
+					this.updateCSSRule(this.classes.node + ' h6 a', 'color', '#' + headingColor);
+				}
+				
+			}, this));
 		},
 		
 		/* Node Bg Settings

@@ -25,6 +25,9 @@
 			
 			// Campaign Monitor Events
 			body.delegate( '.fl-builder-campaign-monitor-client-select', 'change', this._campaignMonitorClientChange );
+			
+			// MailChimp Events
+			body.delegate( '.fl-builder-mailchimp-list-select', 'change', this._mailChimpListChange );
 		},
 		
 		/**
@@ -357,6 +360,57 @@
 				client  = wrap.find( '.fl-builder-campaign-monitor-client-select' );
 			
 			client.closest( 'tr' ).after( data.html );
+			FLBuilderServices._finishSettingsLoading();
+		},
+		
+		/* MailChimp
+		----------------------------------------------------------*/
+		
+		/**
+		 * Fires when the MailChimp list select is changed.
+		 *
+		 * @return void
+		 * @since 1.6.0
+		 */
+		_mailChimpListChange: function()
+		{
+			var nodeId      = $( '.fl-builder-settings' ).data( 'node' ),
+				wrap        = $( this ).closest( '.fl-builder-service-settings' ),
+				select      = wrap.find( '.fl-builder-service-select' ),
+				account     = wrap.find( '.fl-builder-service-account-select' ),
+				list        = wrap.find( '.fl-builder-service-list-select' );
+			
+			$( '.fl-builder-mailchimp-group-select' ).closest( 'tr' ).remove();
+			
+			if ( '' == list.val() ) {
+				return;
+			}
+			
+			FLBuilderServices._startSettingsLoading( select );
+			
+			FLBuilder.ajax( {
+				action  : 'fl_builder_render_service_fields',
+				node_id : nodeId,
+				service : select.val(),
+				account : account.val(),
+				list_id : list.val()
+			}, FLBuilderServices._mailChimpListChangeComplete );
+		},
+		
+		/**
+		 * AJAX callback for when the MailChimp list select is changed.
+		 *
+		 * @param {String} response The JSON response.
+		 * @return void
+		 * @since 1.6.0
+		 */
+		_mailChimpListChangeComplete: function( response )
+		{
+			var data    = JSON.parse( response ),
+				wrap    = $( '.fl-builder-service-settings-loading' ),
+				list    = wrap.find( '.fl-builder-service-list-select' );
+			
+			list.closest( 'tr' ).after( data.html );
 			FLBuilderServices._finishSettingsLoading();
 		}
 	};

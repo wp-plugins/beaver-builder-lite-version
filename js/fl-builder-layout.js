@@ -29,6 +29,9 @@
 			// Init anchor links.
 			FLBuilderLayout._initAnchorLinks();
 			
+			// Init the browser hash.
+			FLBuilderLayout._initHash();
+			
 			// Init backgrounds.
 			FLBuilderLayout._initBackgrounds();
 			
@@ -286,6 +289,56 @@
 			}
 			else {
 				module.addClass('fl-animated');
+			}
+		},
+		
+		/**
+		 * Opens a tab or accordion item if the browser hash is set
+		 * to the ID of one on the page.
+		 *
+		 * @since 1.6.0
+		 * @access private
+		 * @method _initHash
+		 */ 
+		_initHash: function()
+		{
+			var hash 			= window.location.hash.replace( '#', '' ),
+				element 		= null,
+				tabs			= null,
+				responsiveLabel	= null,
+				tabIndex		= null,
+				label			= null;
+			
+			if ( '' != hash ) {
+				
+				element = $( '#' + hash );
+					
+				if ( element.length > 0 ) {
+					
+					if ( element.hasClass( 'fl-accordion-item' ) ) {
+						setTimeout( function() {
+							element.find( '.fl-accordion-button' ).trigger( 'click' );
+						}, 100 );
+					}
+					if ( element.hasClass( 'fl-tabs-panel' ) ) {
+						
+						setTimeout( function() {
+							
+							tabs 			= element.closest( '.fl-tabs' );
+							responsiveLabel = element.find( '.fl-tabs-panel-label' );
+							tabIndex 		= responsiveLabel.data( 'index' );
+							label 			= tabs.find( '.fl-tabs-labels .fl-tabs-label[data-index=' + tabIndex + ']' );
+						
+							if ( responsiveLabel.is( ':visible' ) ) {
+								responsiveLabel.trigger( 'click' );	
+							}
+							else {
+								label.trigger( 'click' );
+							}
+							
+						}, 100 );
+					}
+				}
 			}
 		},
 		

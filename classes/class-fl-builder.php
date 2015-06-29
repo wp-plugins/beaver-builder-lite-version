@@ -378,8 +378,10 @@ final class FLBuilder {
 			if(!file_exists($asset_info['css'])) {
 				FLBuilder::render_css();
 			}
+			
+			$deps = apply_filters( 'fl_builder_layout_style_dependencies', array() );
 
-			wp_enqueue_style('fl-builder-layout-' . $post_id, $asset_info['css_url'], array(), $asset_ver);
+			wp_enqueue_style('fl-builder-layout-' . $post_id, $asset_info['css_url'], $deps, $asset_ver);
 
 			// Enqueue main JS
 			if(!file_exists($asset_info['js'])) {
@@ -1529,6 +1531,11 @@ final class FLBuilder {
 
 		// Global css
 		$css = file_get_contents(FL_BUILDER_DIR . '/css/fl-builder-layout.css');
+		
+		// Global RTL css
+		if(is_rtl()) {
+			$css .= file_get_contents(FL_BUILDER_DIR . '/css/fl-builder-layout-rtl.css');
+		}
 
 		// Responsive css
 		if($global_settings->responsive_enabled) {
@@ -1732,18 +1739,54 @@ final class FLBuilder {
 		$settings   = $row->settings;
 		$positions  = '';
 		$css        = '';
-
-		if($settings->margin_top != '' || $settings->border_top != '') {
-			$positions  .= 'top:' . ($settings->margin_top + $settings->border_top) . 'px;';
+		$top		= 0;
+		$bottom		= 0;
+		$left		= 0;
+		$right		= 0;
+		
+		// Margins
+		if($settings->margin_top != '') {
+			$top += (int)$settings->margin_top;
 		}
-		if($settings->margin_bottom != ''|| $settings->border_bottom != '') {
-			$positions  .= 'bottom:' . ($settings->margin_bottom + $settings->border_bottom) . 'px;';
+		if($settings->margin_bottom != '') {
+			$bottom += (int)$settings->margin_bottom;
 		}
-		if($settings->margin_left != ''|| $settings->border_left != '') {
-			$positions  .= 'left:' . ($settings->margin_left + $settings->border_left) . 'px;';
+		if($settings->margin_left != '') {
+			$left += (int)$settings->margin_left;
 		}
-		if($settings->margin_right != ''|| $settings->border_right != '') {
-			$positions  .= 'right:' . ($settings->margin_right + $settings->border_right) . 'px;';
+		if($settings->margin_right != '') {
+			$right += (int)$settings->margin_right;
+		}
+		
+		// Borders
+		if($settings->border_type != '') {
+		
+			if($settings->border_top != '') {
+				$top += (int)$settings->border_top;
+			}
+			if($settings->border_bottom != '') {
+				$bottom += (int)$settings->border_bottom;
+			}
+			if($settings->border_left != '') {
+				$left += (int)$settings->border_left;
+			}
+			if($settings->border_right != '') {
+				$right += (int)$settings->border_right;
+			}
+		}
+		
+		// CSS
+		if($top > 0) {
+			$positions  .= 'top:' . $top . 'px;';
+		}
+		if($bottom > 0) {
+			$positions  .= 'bottom:' . $bottom . 'px;';
+		}
+		if($left > 0) {
+			$positions  .= 'left:' . $left . 'px;';
+		}
+		if($right > 0) {
+			$positions  .= 'right:' . $right . 'px;';
 		}
 		if($positions != '') {
 			$css .= '.fl-node-' . $row->node . ' .fl-bg-video {' . $positions . '}';
@@ -1767,17 +1810,20 @@ final class FLBuilder {
 		$positions          = '';
 		$css                = '';
 
-		if($settings->border_top != '') {
-			$positions  .= 'top:' . $settings->border_top . 'px;';
-		}
-		if($settings->border_bottom != '') {
-			$positions  .= 'bottom:' . $settings->border_bottom . 'px;';
-		}
-		if($positions != '') {
-			$css .= '@media (max-width: '. $global_settings->responsive_breakpoint .'px) { ';
-			$css .= '.fl-node-' . $row->node . ' .fl-bg-video {' . $positions . '}';
-			$css .= '.fl-node-' . $row->node . ' .fl-bg-slideshow {' . $positions . '}';
-			$css .= ' }';
+		if ($settings->border_type != '') {
+			
+			if($settings->border_top != '') {
+				$positions  .= 'top:' . $settings->border_top . 'px;';
+			}
+			if($settings->border_bottom != '') {
+				$positions  .= 'bottom:' . $settings->border_bottom . 'px;';
+			}
+			if($positions != '') {
+				$css .= '@media (max-width: '. $global_settings->responsive_breakpoint .'px) { ';
+				$css .= '.fl-node-' . $row->node . ' .fl-bg-video {' . $positions . '}';
+				$css .= '.fl-node-' . $row->node . ' .fl-bg-slideshow {' . $positions . '}';
+				$css .= ' }';
+			}
 		}
 
 		return $css;

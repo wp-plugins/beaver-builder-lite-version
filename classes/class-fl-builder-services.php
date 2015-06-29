@@ -15,6 +15,11 @@ final class FLBuilderServices {
 	 * @var array $services_data
 	 */  
 	static private $services_data = array(
+		'activecampaign'    => array(
+			'type'              => 'autoresponder',
+			'name'              => 'ActiveCampaign',
+			'class'             => 'FLBuilderServiceActiveCampaign'
+		),
 		'aweber'            => array(
 			'type'              => 'autoresponder',
 			'name'              => 'AWeber',
@@ -29,6 +34,11 @@ final class FLBuilderServices {
 			'type'              => 'autoresponder',
 			'name'              => 'Constant Contact',
 			'class'             => 'FLBuilderServiceConstantContact'
+		),
+		'email-address'     => array(
+			'type'              => 'autoresponder',
+			'name'              => 'Email Address',
+			'class'             => 'FLBuilderServiceEmailAddress'
 		),
 		'getresponse'       => array(
 			'type'              => 'autoresponder',

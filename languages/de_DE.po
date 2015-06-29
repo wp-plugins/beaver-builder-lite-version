@@ -1552,7 +1552,7 @@ msgstr "Forum besuchen"
 # @ fl-builder
 #: includes/js-config.php:96
 msgid "Watch the Video"
-msgstr "Bideo anschauen"
+msgstr "Video anschauen"
 
 # @ fl-builder
 #: includes/js-config.php:97

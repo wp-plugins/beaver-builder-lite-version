@@ -702,6 +702,7 @@ form.fl-builder-settings {
 .fl-builder-settings-tabs a {
 	color: #999;
 	display: inline-block;
+	margin: 0;
 	padding: 10px 20px;
 	text-decoration: none;
 }
@@ -822,6 +823,9 @@ form.fl-builder-settings {
 .fl-builder-settings-fields select:focus {
 	background: transparent;
 	border-color: #aaa;
+}
+.fl-builder-settings-fields select[multiple] {
+	height: 60px;
 }
 .fl-builder-settings-fields ::-webkit-input-placeholder { /* WebKit browsers */
 	color: #999 !important;

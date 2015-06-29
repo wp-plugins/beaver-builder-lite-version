@@ -120,6 +120,7 @@ final class FLBuilderServiceMailChimp extends FLBuilderService {
 	 */  
 	public function render_fields( $account, $settings ) 
 	{
+		$post_data      = FLBuilderModel::get_post_data();
 		$account_data   = $this->get_account_data( $account );
 		$api            = $this->get_api( $account_data['api_key'] );
 		$response       = array( 
@@ -127,13 +128,35 @@ final class FLBuilderServiceMailChimp extends FLBuilderService {
 			'html'          => '' 
 		);
 		
+		// Lists field
 		try {
-			$lists = $api->lists->getList();
-			$response['html'] = $this->render_list_field( $lists, $settings );
+			
+			if ( ! isset( $post_data['list_id'] ) ) {
+				$lists = $api->lists->getList();
+				$response['html'] .= $this->render_list_field( $lists, $settings );
+			}
 		} 
 		catch ( Mailchimp_Error $e ) {
 			$response['error'] = $e->getMessage();
 		}
+		
+		// Groups field
+		try {
+			
+			if ( isset( $post_data['list_id'] ) || isset( $settings->list_id ) ) {
+				
+				if ( isset( $post_data['list_id'] ) ) {
+					$list_id = $post_data['list_id'];
+				}
+				else {
+					$list_id = $settings->list_id;
+				}
+				
+				$groups = $api->lists->interestGroupings( $list_id );
+				$response['html'] .= $this->render_groups_field( $list_id, $groups, $settings );
+			}
+		} 
+		catch ( Mailchimp_Error $e ) {}
 		
 		return $response;
 	}
@@ -159,9 +182,50 @@ final class FLBuilderServiceMailChimp extends FLBuilderService {
 		
 		FLBuilder::render_settings_field( 'list_id', array(
 			'row_class'     => 'fl-builder-service-field-row',
-			'class'         => 'fl-builder-service-list-select',
+			'class'         => 'fl-builder-service-list-select fl-builder-mailchimp-list-select',
 			'type'          => 'select',
 			'label'         => _x( 'List', 'An email list from a third party provider.', 'fl-builder' ),
+			'options'       => $options,
+			'preview'       => array(
+				'type'          => 'none'
+			)
+		), $settings); 
+		
+		return ob_get_clean();
+	}
+
+	/**
+	 * Render markup for the groups field. 
+	 *
+	 * @since 1.6.0
+	 * @param string $list_id The ID of the list for this groups.
+	 * @param array $groups An array of group data.
+	 * @param object $settings Saved module settings.
+	 * @return string The markup for the group field.
+	 * @access private
+	 */  
+	private function render_groups_field( $list_id, $groups, $settings ) 
+	{
+		if ( ! is_array( $groups ) || 0 === count( $groups ) ) {
+			return;
+		}
+		
+		ob_start();
+		
+		$options = array( '' => __( 'No Group', 'fl-builder' ) );
+		
+		foreach ( $groups as $group ) {
+			foreach ( $group['groups'] as $subgroup ) {
+				$options[ $list_id . '_' . $group['id'] . '_' . $subgroup['id'] ] = $group['name'] . ' - ' . $subgroup['name'];
+			}
+		}
+		
+		FLBuilder::render_settings_field( 'groups', array(
+			'row_class'     => 'fl-builder-service-field-row',
+			'class'         => 'fl-builder-mailchimp-group-select',
+			'type'          => 'select',
+			'label'         => _x( 'Groups', 'MailChimp list group.', 'fl-builder' ),
+			'multi-select'	=> true,
 			'options'       => $options,
 			'preview'       => array(
 				'type'          => 'none'
@@ -198,6 +262,7 @@ final class FLBuilderServiceMailChimp extends FLBuilderService {
 			$email   = array( 'email' => $email );
 			$data    = array();
 			
+			// Name
 			if ( $name ) {
 				
 				$names = explode( ' ', $name );
@@ -210,6 +275,72 @@ final class FLBuilderServiceMailChimp extends FLBuilderService {
 				}
 			}
 			
+			// Groups
+			if ( isset( $settings->groups ) && is_array( $settings->groups ) ) {
+				
+				$groups = array();
+				
+				// Build the array of saved group data.
+				for ( $i = 0; $i < count( $settings->groups ); $i++ ) {
+					
+					if ( empty( $settings->groups[ $i ] ) ) {
+						continue;
+					}
+					
+					$group_data = explode( '_', $settings->groups[ $i ] );
+					
+					if ( $group_data[0] != $settings->list_id ) {
+						continue;
+					}
+					if ( ! isset( $groups[ $group_data[1] ] ) ) {
+						$groups[ $group_data[1] ] = array();
+					}
+					
+					$groups[ $group_data[1] ][] = $group_data[2];
+				}
+				
+				// Get the subgroup names from the API and add to the $data array.
+				if ( count( $groups ) > 0 ) {
+				
+					$groups_result = $api->lists->interestGroupings( $settings->list_id );
+					
+					if ( is_array( $groups_result ) && count( $groups_result ) > 0 ) {
+						
+						foreach ( $groups_result as $group ) {
+							
+							if ( ! isset( $groups[ $group['id'] ] ) ) {
+								continue;
+							}
+							
+							$subgroup_names = array();
+							
+							foreach ( $group['groups'] as $subgroup ) {
+								
+								if ( in_array( $subgroup['id'], $groups[ $group['id'] ] ) ) {
+									$subgroup_names[] = $subgroup['name'];
+								}
+							}
+							
+							if ( 0 === count( $subgroup_names ) ) {
+								unset( $groups[ $group['id'] ] );
+							}
+							else {
+								$groups[ $group['id'] ] = $subgroup_names;
+							}
+						}
+						
+						$i = 0;
+						
+						foreach ( $groups as $group_id => $subgroups ) {
+							$data['groupings'][ $i ]['id']     = $group_id;
+							$data['groupings'][ $i ]['groups'] = $subgroups;
+							$i++;
+						}
+					}
+				}
+			}
+			
+			// Subscribe
 			try {
 				$api->lists->subscribe( $settings->list_id, $email, $data, 'html', (bool) $double, true, false, (bool) $welcome );
 			} 

@@ -991,9 +991,10 @@
 		 */
 		_exit: function()
 		{
-			var href = window.location.href;
+			var href 		= window.location.href,
+				isTemplate 	= 'fl-builder-template' == FLBuilderConfig.postType;
 			
-			if ( typeof window.opener != 'undefined' && window.opener ) {
+			if ( isTemplate && typeof window.opener != 'undefined' && window.opener ) {
 				window.close();
 			}
 			else {
@@ -3373,8 +3374,12 @@
 				
 				value = data[ i ].value.replace( /\r/gm, '' );
 				
+				// Don't save text editor textareas.
+				if ( data[ i ].name.indexOf( 'flrich' ) > -1 ) {
+					continue;
+				}
 				// Support foo[] setting keys.
-				if ( data[ i ].name.indexOf( '[]' ) > -1 ) {
+				else if ( data[ i ].name.indexOf( '[]' ) > -1 ) {
 					
 					name = data[ i ].name.replace( '[]', '' );
 					
@@ -3419,15 +3424,22 @@
 				}
 			}
 			
-			// Replace auto suggest values.
+			// Update auto suggest values.
 			for ( key in settings ) {
+				
 				if ( 'undefined' != typeof settings[ 'as_values_' + key ] ) {
+					
 					settings[ key ] = $.grep( 
 						settings[ 'as_values_' + key ].split( ',' ), 
 						function( n ) { 
 							return n != ''; 
 						}
 					).join( ',' );
+					
+					try {
+						delete settings[ 'as_values_' + key ];
+					}
+					catch( e ) {}
 				}
 			}
 			

@@ -1,3 +1,33 @@
+<h4>1.6.0.1 - 06/28/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added fl_builder_layout_style_dependencies filter.</li> 
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with importing templates that have slideshows or galleries.</li>      
+	<li>Fixed a bug with row margins when the background is set to a slideshow or video.</li>  
+</ul>
+
+<h4>1.6.0 - 06/22/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added link, hover and heading color settings to rows and columns.</li>   
+	<li>Tab and accordion items now open when linked to from another page.</li>  
+	<li>Accordion items now have an active class when open.</li>  
+	<li>Column layouts now support RTL languages.</li> 
+	<li>Added an email address option to the Subscribe Form module so signups can be sent to your email address.</li> 
+	<li>Added support for MailChimp groups to the Subscribe Form module.</li> 
+	<li>Added ActiveCampaign integration.</li> 
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with the window closing when publishing changes.</li>    
+	<li>Fixed a bug with getting the correct ID for the current post.</li>  
+	<li>Fixed a bug with row borders showing when none are set and the background is a slideshow.</li>  
+	<li>Fixed a bug with the multiple photos field when used in a nested form.</li> 
+</ul>
+
 <h4>1.5.9 - 06/01/2015</h4>
 <p><strong>Enhancements</strong></p>
 <ul>

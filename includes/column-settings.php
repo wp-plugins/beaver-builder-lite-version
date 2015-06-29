@@ -32,6 +32,30 @@ FLBuilder::register_settings_form('col', array(
 							'preview'         => array(
 								'type'            => 'none'
 							)
+						),
+						'link_color'    => array(
+							'type'          => 'color',
+							'label'         => __('Link Color', 'fl-builder'),
+							'show_reset'    => true,
+							'preview'         => array(
+								'type'            => 'none'
+							)
+						),
+						'hover_color'    => array(
+							'type'          => 'color',
+							'label'         => __('Link Hover Color', 'fl-builder'),
+							'show_reset'    => true,
+							'preview'         => array(
+								'type'            => 'none'
+							)
+						),
+						'heading_color'  => array(
+							'type'          => 'color',
+							'label'         => __('Heading Color', 'fl-builder'),
+							'show_reset'    => true,
+							'preview'         => array(
+								'type'            => 'none'
+							)
 						)
 					)
 				),

@@ -280,7 +280,7 @@ final class FLBuilderModel {
 			return $post_data['post_id'];
 		}
 		// Get a post ID from the main query.
-		else if ( in_the_loop() && isset( $wp_the_query ) && isset( $wp_the_query->post ) ) {
+		else if ( in_the_loop() && is_main_query() && isset( $wp_the_query->post ) ) {
 			return $wp_the_query->post->ID;
 		}
 		// Get a post ID in a query outside of the main loop.

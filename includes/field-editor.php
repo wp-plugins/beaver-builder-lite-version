@@ -8,7 +8,7 @@
 	
 	global $wp_version;
 
-	$editor_id = 'flrich' . time() . '_' . $name;; 
+	$editor_id = 'flrich' . time() . '_' . $name;
 	
 	wp_editor($value, $editor_id, array(
 		'media_buttons' => isset($field['media_buttons']) ? $field['media_buttons'] : true,
