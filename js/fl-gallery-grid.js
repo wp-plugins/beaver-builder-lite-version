@@ -73,7 +73,13 @@
 				items       = wrap.find(this.itemSelector),
 				itemWidth   = wrapWidth/numCols,
 				itemHeight  = itemWidth * this.itemHeight;
+				
+			// Browser bug fix. One column images are streched otherwise.
+			if ( 1 === numCols ) {
+				itemWidth -= .5;
+			}
 			
+			// Set the item width and height.
 			items.css({
 				'float'  : 'left',
 				'height' : itemHeight + 'px',

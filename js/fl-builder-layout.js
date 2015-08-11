@@ -376,7 +376,7 @@
 					element = $( '#' + id );
 					
 					if ( element.length > 0 ) {
-						if ( element.hasClass( 'fl-row' ) || element.hasClass( 'fl-col' ) || element.hasClass( 'fl-module' ) ) {
+						if ( link.hasClass( 'fl-scroll-link' ) || element.hasClass( 'fl-row' ) || element.hasClass( 'fl-col' ) || element.hasClass( 'fl-module' ) ) {
 							$( link ).on( 'click', FLBuilderLayout._scrollToElementOnLinkClick );
 						}
 						if ( element.hasClass( 'fl-accordion-item' ) ) {

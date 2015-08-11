@@ -321,7 +321,11 @@ final class FLBuilder {
 
 		if(count($post_ids) > 0) {
 
-			$posts = get_posts(array('post__in' => $post_ids, 'post_type' => 'any'));
+			$posts = get_posts(array(
+				'post__in' 			=> $post_ids, 
+				'post_type' 		=> 'any',
+				'posts_per_page'	=> -1
+			));
 
 			foreach($posts as $post) {
 				self::enqueue_layout_styles_scripts($post->ID);
@@ -935,7 +939,8 @@ final class FLBuilder {
 			'taxonomies'		=> array(
 				'fl-builder-template-category'
 			),
-			'publicly_queryable' => true
+			'publicly_queryable' 	=> true,
+			'exclude_from_search'	=> true
 		) );
 		
 		// Register the template taxonomy.
@@ -1578,13 +1583,6 @@ final class FLBuilder {
 
 			// Instance row padding
 			$css .= self::render_row_padding($row);
-
-			// Instance row bg positions
-			$css .= self::render_row_bg_positions($row);
-			
-			if ( ! isset( $global_settings->auto_spacing ) || $global_settings->auto_spacing ) {
-				$css .= self::render_responsive_row_bg_positions($row);
-			}
 		}
 
 		// Column instances
@@ -1722,108 +1720,6 @@ final class FLBuilder {
 		}
 		if($padding != '') {
 			$css = '.fl-node-' . $row->node . ' .fl-row-content-wrap {' . $padding . '}';
-		}
-
-		return $css;
-	}
-
-	/**
-	 * Renders the CSS positions for a row's backgrounds.
-	 *
-	 * @since 1.0
-	 * @param object $row A row node object.
-	 * @return string The row CSS positions string.
-	 */
-	static public function render_row_bg_positions($row)
-	{
-		$settings   = $row->settings;
-		$positions  = '';
-		$css        = '';
-		$top		= 0;
-		$bottom		= 0;
-		$left		= 0;
-		$right		= 0;
-		
-		// Margins
-		if($settings->margin_top != '') {
-			$top += (int)$settings->margin_top;
-		}
-		if($settings->margin_bottom != '') {
-			$bottom += (int)$settings->margin_bottom;
-		}
-		if($settings->margin_left != '') {
-			$left += (int)$settings->margin_left;
-		}
-		if($settings->margin_right != '') {
-			$right += (int)$settings->margin_right;
-		}
-		
-		// Borders
-		if($settings->border_type != '') {
-		
-			if($settings->border_top != '') {
-				$top += (int)$settings->border_top;
-			}
-			if($settings->border_bottom != '') {
-				$bottom += (int)$settings->border_bottom;
-			}
-			if($settings->border_left != '') {
-				$left += (int)$settings->border_left;
-			}
-			if($settings->border_right != '') {
-				$right += (int)$settings->border_right;
-			}
-		}
-		
-		// CSS
-		if($top > 0) {
-			$positions  .= 'top:' . $top . 'px;';
-		}
-		if($bottom > 0) {
-			$positions  .= 'bottom:' . $bottom . 'px;';
-		}
-		if($left > 0) {
-			$positions  .= 'left:' . $left . 'px;';
-		}
-		if($right > 0) {
-			$positions  .= 'right:' . $right . 'px;';
-		}
-		if($positions != '') {
-			$css .= '.fl-node-' . $row->node . ' .fl-bg-video {' . $positions . '}';
-			$css .= '.fl-node-' . $row->node . ' .fl-bg-slideshow {' . $positions . '}';
-		}
-
-		return $css;
-	}
-
-	/**
-	 * Renders the responsive CSS positions for a row's backgrounds.
-	 *
-	 * @since 1.0
-	 * @param object $row A row node object.
-	 * @return string The row CSS positions string.
-	 */
-	static public function render_responsive_row_bg_positions($row)
-	{
-		$global_settings    = FLBuilderModel::get_global_settings();
-		$settings           = $row->settings;
-		$positions          = '';
-		$css                = '';
-
-		if ($settings->border_type != '') {
-			
-			if($settings->border_top != '') {
-				$positions  .= 'top:' . $settings->border_top . 'px;';
-			}
-			if($settings->border_bottom != '') {
-				$positions  .= 'bottom:' . $settings->border_bottom . 'px;';
-			}
-			if($positions != '') {
-				$css .= '@media (max-width: '. $global_settings->responsive_breakpoint .'px) { ';
-				$css .= '.fl-node-' . $row->node . ' .fl-bg-video {' . $positions . '}';
-				$css .= '.fl-node-' . $row->node . ' .fl-bg-slideshow {' . $positions . '}';
-				$css .= ' }';
-			}
 		}
 
 		return $css;

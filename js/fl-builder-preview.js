@@ -1650,28 +1650,49 @@
 		 * Initializes CSS previews for a node.
 		 *
 		 * @since 1.3.3
+		 * @since 1.6.1 Reworked to accept a preview.rules array.
 		 * @access private
 		 * @method _initFieldCSSPreview
 		 * @param {Object} field A field object.
 		 */
-		_initFieldCSSPreview: function(field)
+		_initFieldCSSPreview: function( field )
 		{
-			var fieldType = field.data('type'),
-				preview   = field.data('preview'),
-				callback  = $.proxy(this._previewCSS, this, preview);
-			
-			switch(fieldType) {
+			var preview = field.data( 'preview' ),
+				i 		= null;
+				
+			if ( 'undefined' != typeof preview.rules ) {
+				for ( i in preview.rules ) {
+					this._initFieldCSSPreviewCallback( field, preview.rules[ i ] );
+				}
+			}
+			else {
+				this._initFieldCSSPreviewCallback( field, preview );
+			}
+		},
+		
+		/**
+		 * Initializes CSS preview callbacks for a field.
+		 *
+		 * @since 1.6.1
+		 * @access private
+		 * @method _initFieldCSSPreviewCallback
+		 * @param {Object} field A field object.
+		 * @param {Object} preview The preview data object.
+		 */
+		_initFieldCSSPreviewCallback: function( field, preview )
+		{
+			switch( field.data( 'type' ) ) {
 				
 				case 'text':
-					field.find('input[type=text]').on('keyup', callback);
+					field.find( 'input[type=text]' ).on( 'keyup', $.proxy( this._previewCSS, this, preview ) );
 				break;
 				
 				case 'select':
-					field.find('select').on('change', callback);
+					field.find( 'select' ).on( 'change', $.proxy( this._previewCSS, this, preview ) );
 				break;
 				
 				case 'color':
-					field.find('.fl-color-picker-value').on('change', $.proxy(this._previewColor, this, preview));
+					field.find( '.fl-color-picker-value' ).on( 'change', $.proxy( this._previewColor, this, preview ) );
 				break;
 			}
 		},
@@ -1687,7 +1708,7 @@
 		 */
 		_previewCSS: function(preview, e)
 		{
-			var selector = this.classes.node + ' ' + preview.selector,
+			var selector = this._getPreviewSelector( this.classes.node, preview.selector ),
 				property = preview.property,
 				unit     = typeof preview.unit == 'undefined' ? '' : preview.unit,
 				value    = $(e.target).val();
@@ -1713,7 +1734,7 @@
 		 */
 		_previewColor: function(preview, e)
 		{
-			var selector = this.classes.node + ' ' + preview.selector,
+			var selector = this._getPreviewSelector( this.classes.node, preview.selector ),
 				val      = $(e.target).val(),
 				color    = val == '' ? 'inherit' : '#' + val;
 			
@@ -1736,6 +1757,33 @@
 			field.find('input[type=checkbox]').on('click', callback);
 			field.find('textarea').on('keyup', callback);
 			field.find('select').on('change', callback);
+		},
+		
+		/**
+		 * Returns a formatted selector string for a preview.
+		 *
+		 * @since 1.6.1
+		 * @access private
+		 * @method _getPreviewSelector
+		 * @param {String} selector A CSS selector string.
+		 * @return {String}
+		 */
+		_getPreviewSelector: function( prefix, selector )
+		{
+			var formatted = '',
+				parts 	  = selector.split( ',' ),
+				i 	  	  = 0;
+			
+			for ( ; i < parts.length; i++ ) {
+				
+				formatted += prefix + ' ' + parts[ i ];
+				
+				if ( i != parts.length - 1 ) {
+					formatted += ', ';
+				}
+			}
+			
+			return formatted;
 		}
 	};
 

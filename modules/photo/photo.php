@@ -263,6 +263,22 @@ class FLPhotoModule extends FLBuilderModule {
 	}
 
 	/**
+	 * @method get_attributes
+	 */
+	public function get_attributes()
+	{
+		$attrs = '';
+		
+		if ( isset( $this->settings->attributes ) ) {
+			foreach ( $this->settings->attributes as $key => $val ) {
+				$attrs .= $key . '="' . $val . '" ';
+			}
+		}
+		
+		return $attrs;
+	}
+
+	/**
 	 * @method _has_source
 	 * @protected
 	 */

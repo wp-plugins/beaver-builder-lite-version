@@ -75,6 +75,9 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+.fl-row-content-wrap {
+	position: relative;
+}
 
 /* Photo Bg */
 .fl-builder-touch .fl-row-bg-photo .fl-row-content-wrap {
@@ -136,9 +139,6 @@
 }
 
 /* Row Bg Overlay */
-.fl-row-bg-overlay .fl-row-content-wrap {
-	position: relative;
-}
 .fl-row-bg-overlay .fl-row-content-wrap:after {
 	content: '';
 	display: block;

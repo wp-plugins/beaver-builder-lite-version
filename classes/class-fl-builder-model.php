@@ -1617,19 +1617,15 @@ final class FLBuilderModel {
 				return;
 			}
 			
-			// See if the module is enabled or not. 
-			$enabled = apply_filters( 'fl_builder_register_module', $instance->enabled, $instance );
+			// Filter the enabled flag.
+			$instance->enabled = apply_filters( 'fl_builder_register_module', $instance->enabled, $instance );
+			
+			// Save the instance in the modules array.
+			self::$modules[$instance->slug] = $instance;
 
-			// Only register modules that are enabled.
-			if( $enabled ) {
-
-				// Save the instance in the modules array.
-				self::$modules[$instance->slug] = $instance;
-
-				// Add the form to the instance.
-				self::$modules[$instance->slug]->form = $form;
-				self::$modules[$instance->slug]->form['advanced'] = self::$settings_forms['module_advanced'];
-			}
+			// Add the form to the instance.
+			self::$modules[$instance->slug]->form = $form;
+			self::$modules[$instance->slug]->form['advanced'] = self::$settings_forms['module_advanced'];
 		}
 	}
 
@@ -1643,9 +1639,17 @@ final class FLBuilderModel {
 	{
 		$default	= array_keys( self::$modules );
 		$default[]	= 'all';
-		$value 		= self::get_admin_settings_option( '_fl_builder_enabled_modules', true );
+		$setting 	= self::get_admin_settings_option( '_fl_builder_enabled_modules', true );
+		$setting    = ( ! $setting || in_array( 'all', $setting ) ) ? $default : $setting;
 		
-		return ( ! $value || in_array( 'all', $value ) ) ? $default : $value;
+		foreach ( self::$modules as $module_slug => $module ) {
+			if ( ! $module->enabled && in_array( $module_slug, $setting ) ) {
+				$key = array_search( $module_slug, $setting );
+				unset( $setting[ $key ] );
+			}
+		} 
+		
+		return $setting;
 	}
 
 	/**
@@ -1675,7 +1679,10 @@ final class FLBuilderModel {
 		// Build the categories array.
 		foreach(self::$modules as $module) {
 
-			if(!in_array($module->slug, $enabled_modules) && !$show_disabled) {
+			if ( ! $module->enabled ) {
+				continue;
+			}
+			else if(!in_array($module->slug, $enabled_modules) && !$show_disabled) {
 				continue;
 			}
 			else if($module->slug == 'widget') {
@@ -2583,9 +2590,10 @@ final class FLBuilderModel {
 	 * Saves layout data when a user chooses to publish. 
 	 *
 	 * @since 1.0
+	 * @param bool $publish Whether to publish the parent post or not.
 	 * @return void
 	 */
-	static public function save_layout()
+	static public function save_layout( $publish = true )
 	{
 		$editor_content = FLBuilder::render_editor_content();
 		$post_id		= self::get_post_id();
@@ -2605,14 +2613,38 @@ final class FLBuilderModel {
 
 		// Get the post status.
 		$post_status = get_post_status($post_id);
-		$post_status = strstr($post_status, 'draft') ? 'publish' : $post_status;
-
+		
+		// Publish the post?
+		if ( $publish ) {
+			$post_status = strstr($post_status, 'draft') ? 'publish' : $post_status;
+		}
+		
 		// Update the post with stripped down content.
 		wp_update_post(array(
 			'ID'			=> self::get_post_id(),
 			'post_status'	=> $post_status,
 			'post_content'	=> $editor_content
 		));
+	}
+
+	/**
+	 * Publishes the current builder layout only if the parent post
+	 * is still a draft. The layout will be published but the parent
+	 * post will remain a draft so the post can be scheduled and the 
+	 * layout can be viewed while the builder is not active. If the 
+	 * parent post is already published, nothing happens.
+	 *
+	 * @since 1.6.1
+	 * @return void
+	 */
+	static public function save_draft()
+	{
+		$post_id 	 = self::get_post_id();
+		$post_status = get_post_status( $post_id );
+
+		if ( strstr( $post_status, 'draft' ) ) {
+			self::save_layout( false );
+		}
 	}
 
 	/**

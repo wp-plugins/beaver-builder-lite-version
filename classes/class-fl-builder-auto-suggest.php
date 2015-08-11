@@ -91,7 +91,7 @@ final class FLBuilderAutoSuggest {
 	{
 		global $wpdb;
 		
-		$like = urldecode( $_REQUEST['fl_as_query'] );
+		$like = stripslashes( urldecode( $_REQUEST['fl_as_query'] ) );
 		
 		if ( method_exists( $wpdb, 'esc_like' ) ) {
 			$like = esc_sql( $wpdb->esc_like( $like ) );
@@ -149,7 +149,7 @@ final class FLBuilderAutoSuggest {
 			$posts = $wpdb->get_results("SELECT ID, post_title FROM {$wpdb->posts} WHERE ID IN ({$ids})");
 			
 			foreach($posts as $post) {
-				$data[] = array('name' => $post->post_title, 'value' => $post->ID);
+				$data[] = array('name' => esc_attr( $post->post_title ), 'value' => $post->ID);
 			}
 		}
 		
@@ -198,7 +198,7 @@ final class FLBuilderAutoSuggest {
 			));
 		
 			foreach($cats as $cat) {
-				$data[] = array('name' => $cat->name, 'value' => $cat->term_id);
+				$data[] = array('name' => esc_attr( $cat->name ), 'value' => $cat->term_id);
 			}
 		}
 		

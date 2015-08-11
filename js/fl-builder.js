@@ -936,8 +936,14 @@
 		_draftButtonClicked: function()
 		{
 			FLBuilder.showAjaxLoader();
+			
+			FLBuilder.ajax({
+				action: 'fl_builder_save',
+				method: 'save_draft',
+				render_assets: 0
+			}, FLBuilder._exit);
+			
 			FLBuilder._actionsLightbox.close();
-			FLBuilder._exit();
 		},
 		
 		/**
@@ -3354,20 +3360,6 @@
 				key      	= '',
 				matches	 	= [],
 				settings 	= {};
-				
-			// Add unchecked checkboxes to the form data. 
-			for ( ; i < checkboxes.length; i++ ) {
-				
-				name = checkboxes.eq( i ).attr( 'name' );
-				
-				if ( 'undefined' != name ) {
-					
-					data.push( {
-						name  : name,
-						value : ''
-					} );
-				}
-			}
 			
 			// Loop through the form data.
 			for ( i = 0; i < data.length; i++ ) {
@@ -3784,13 +3776,13 @@
 				for(i in toggle) {
 					FLBuilder._settingsSelectToggle(toggle[i].fields, 'hide', '#fl-field-');
 					FLBuilder._settingsSelectToggle(toggle[i].sections, 'hide', '#fl-builder-settings-section-');
-					FLBuilder._settingsSelectToggle(toggle[i].tabs, 'hide', 'a[href*=fl-builder-settings-tab-');
+					FLBuilder._settingsSelectToggle(toggle[i].tabs, 'hide', 'a[href*=fl-builder-settings-tab-', ']');
 				}
 				
 				if(typeof toggle[val] !== 'undefined') {
 					FLBuilder._settingsSelectToggle(toggle[val].fields, 'show', '#fl-field-');
 					FLBuilder._settingsSelectToggle(toggle[val].sections, 'show', '#fl-builder-settings-section-');
-					FLBuilder._settingsSelectToggle(toggle[val].tabs, 'show', 'a[href*=fl-builder-settings-tab-');
+					FLBuilder._settingsSelectToggle(toggle[val].tabs, 'show', 'a[href*=fl-builder-settings-tab-', ']');
 				}
 			}
 			
@@ -3802,7 +3794,7 @@
 				if(typeof hide[val] !== 'undefined') {
 					FLBuilder._settingsSelectToggle(hide[val].fields, 'hide', '#fl-field-');
 					FLBuilder._settingsSelectToggle(hide[val].sections, 'hide', '#fl-builder-settings-section-');
-					FLBuilder._settingsSelectToggle(hide[val].tabs, 'hide', 'a[href*=fl-builder-settings-tab-');
+					FLBuilder._settingsSelectToggle(hide[val].tabs, 'hide', 'a[href*=fl-builder-settings-tab-', ']');
 				}
 			}
 			
@@ -3828,14 +3820,16 @@
 		 * @param {Array} inputArray
 		 * @param {Function} func
 		 * @param {String} prefix
+		 * @param {String} suffix
 		 */ 
-		_settingsSelectToggle: function(inputArray, func, prefix)
+		_settingsSelectToggle: function(inputArray, func, prefix, suffix)
 		{
-			var i = 0;
+			var i 		= 0,
+				suffix 	= 'undefined' == typeof suffix ? '' : suffix;
 			
 			if(typeof inputArray !== 'undefined') {
 				for( ; i < inputArray.length; i++) {
-					$(prefix + inputArray[i])[func]();
+					$(prefix + inputArray[i] + suffix)[func]();
 				}
 			}
 		},

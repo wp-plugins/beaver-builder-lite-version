@@ -23,6 +23,7 @@ final class FLBuilderLoop {
 		$order			 = empty($settings->order) ? 'DESC' : $settings->order;
 		$users			 = empty($settings->users) ? '' : $settings->users;
 		$paged			 = is_front_page() ? get_query_var('page') : get_query_var('paged');
+		$fields			 = empty($settings->fields) ? '' : $settings->fields; 
 		
 		// Get the offset.
 		if ( ! isset( $settings->offset ) || ! is_int( ( int )$settings->offset ) ) {
@@ -52,7 +53,8 @@ final class FLBuilderLoop {
 			'ignore_sticky_posts'	=> true,
 			'offset'				=> $paged_offset,
 			'fl_original_offset'	=> $offset,
-			'fl_builder_loop'		=> true
+			'fl_builder_loop'		=> true,
+			'fields'				=> $fields
 		);
 		
 		// Build the taxonomy query.

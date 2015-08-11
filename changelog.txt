@@ -1,3 +1,55 @@
+<h4>1.6.1.1 - 08/11/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Tested WordPress 4.3 compatibility.</li>
+	<li>Updated translation files.</li>
+	<li>The CSS class fl-scroll-link can now be added to links to have them scroll to an element on the page.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with toggling settings tabs in the Posts module.</li>
+	<li>Fixed a bug with images in the Posts module gallery layout getting stretched on mobile.</li>
+</ul>
+
+<h4>1.6.1 - 08/03/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added the Posts Carousel module.</li>
+	<li>Added the Posts Slider module.</li>
+	<li>Added style options to the Posts module gallery layout.</li>
+	<li>The builder is now compatible with scheduled posts.</li>
+	<li>The fullscreen slideshow button now shows at smaller sizes.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with row margins not working when a slideshow or video background is present.</li>
+</ul>
+
+<h4>1.6.0.3 - 07/21/2015</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with the fl_builder_global_posts filter not returning all posts.</li>       
+	<li>Fixed a bug with all checkboxes being checked in some widgets when saving.</li>       
+	<li>Fixed a bug with floating content breaking out of tabs.</li>       
+	<li>Fixed a bug with autosuggest fields breaking when posts have special characters in the title.</li>       
+</ul>
+
+<h4>1.6.0.2 - 07/08/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added support for comma separated selectors in CSS preview fields.</li>
+	<li>Added support for an array of rules in CSS preview fields.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Added exclude_from_search for the templates post type so templates don't so in searches.</li>
+	<li>Fixed a bug with nested modules such as buttons causing errors when they are disabled using fl_builder_register_module.</li>
+	<li>Fixed a bug with slideshow and gallery templates.</li>
+	<li>Fixed a bug with the Posts module that made it so two on the same page couldn't have different post widths.</li>
+	<li>Fixed a bug that prevented two accordions on the same page from having open sections at the same time.</li>
+	<li>Fixed a bug causing the Facebook comments popup in the Social Buttons module from showing.</li>
+</ul>
+
 <h4>1.6.0.1 - 06/28/2015</h4>
 <p><strong>Enhancements</strong></p>
 <ul>
