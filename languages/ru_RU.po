@@ -1,0 +1,4558 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: {FL_BUILDER_NAME}\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-15 14:59-0800\n"
+"PO-Revision-Date: 2015-04-16 11:36+0300\n"
+"Last-Translator: WebMan - Oliver Juhas <webmandesigneu@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: classes/class-fl-builder-admin-settings.php:116
+#: includes/global-settings.php:4
+#, php-format
+msgctxt "%s stands for custom branded \"Page Builder\" name."
+msgid "%s Settings"
+msgstr "Настроить %s"
+
+#: classes/class-fl-builder-admin-settings.php:133
+msgid "Settings updated!"
+msgstr "Настройки обновлены!"
+
+#: classes/class-fl-builder-admin-settings.php:147
+msgid "License"
+msgstr "Лицензия"
+
+#: classes/class-fl-builder-admin-settings.php:151
+#: includes/admin-settings-upgrade.php:3
+msgid "Upgrade"
+msgstr "Апгрейд"
+
+#: classes/class-fl-builder-admin-settings.php:155
+#: includes/global-settings.php:90
+msgid "Modules"
+msgstr "Модули"
+
+#: classes/class-fl-builder-admin-settings.php:159 includes/ui.php:47
+msgid "Templates"
+msgstr "Шаблоны"
+
+#: classes/class-fl-builder-admin-settings.php:163
+#: includes/admin-settings-post-types.php:3
+msgid "Post Types"
+msgstr "Типы материалов"
+
+#: classes/class-fl-builder-admin-settings.php:167
+#: modules/icon-group/icon-group.php:27
+msgid "Icons"
+msgstr "Иконки"
+
+#: classes/class-fl-builder-admin-settings.php:171
+msgid "Editing"
+msgstr "Редактирование"
+
+#: classes/class-fl-builder-admin-settings.php:175
+#: includes/admin-settings-branding.php:3
+msgid "Branding"
+msgstr "Брендирование"
+
+#: classes/class-fl-builder-admin-settings.php:179
+msgid "Help Button"
+msgstr "Кнопка помощи"
+
+#: classes/class-fl-builder-admin-settings.php:183
+#: includes/admin-settings-cache.php:3
+msgid "Cache"
+msgstr "Кэш"
+
+#: classes/class-fl-builder-admin-settings.php:187
+#: includes/admin-settings-uninstall.php:3
+#: includes/admin-settings-uninstall.php:15
+msgid "Uninstall"
+msgstr "Деинсталляция"
+
+#: classes/class-fl-builder-admin-settings.php:450
+msgid "Error! You must have at least one icon set enabled."
+msgstr "Ошибка! Должен быть включен хотя бы один набор иконок."
+
+#: classes/class-fl-builder-admin-settings.php:492
+msgid "Error! Could not unzip file."
+msgstr "Ошибка! Не удалось распаковать файл."
+
+#: classes/class-fl-builder-admin-settings.php:526
+msgid "Error! Please upload an icon set from either Icomoon or Fontello."
+msgstr "Ошибка! Пожалуйста, загружайте наборы иконок с Icomoon или Fontello."
+
+#: classes/class-fl-builder-admin-settings.php:648
+msgid "Error! Please enter an iframe for the video embed code."
+msgstr "Ошибка! Пожалуйста, укажите элемент iframe для кода вставки видео."
+
+#: classes/class-fl-builder-admin-settings.php:666
+msgid "Error! You must have at least one feature of the help button enabled."
+msgstr "Ошибка! Хотя бы одно свойство кнопки помощи должно быть включено."
+
+#: classes/class-fl-builder-admin.php:40
+#, php-format
+msgid ""
+"This version of the <strong>Page Builder</strong> plugin is not compatible "
+"with WordPress Multisite. <a%s>Please upgrade</a> to the Multisite version "
+"of this plugin."
+msgstr ""
+"Данная версия плагина <strong>Конструктора страниц</strong> не совместима с "
+"сетью Вордпресс. <a%s>Пожалуйста, сделайте апгрейд</a>, чтобы пользоваться "
+"версией этого плагина для сети сайтов."
+
+#: classes/class-fl-builder-admin.php:50
+msgid ""
+"The <strong>Page Builder</strong> plugin requires WordPress version 3.5 or "
+"greater. Please update WordPress before activating the plugin."
+msgstr ""
+"Плагин <strong>Конструктор страниц</strong> требует Вордпресс версии 3.5 или "
+"выше. Пожалуйста, обновите Вордпресс перед активацией плагина."
+
+#: classes/class-fl-builder-admin.php:96
+#, php-format
+msgid "Page Builder activated! <a%s>Click here</a> to enable remote updates."
+msgstr ""
+"Конструктор страниц активирован! <a%s>Нажмите здесь</a> для включения "
+"удалённых обновлений."
+
+#: classes/class-fl-builder-admin.php:191
+msgctxt "Plugin action link label."
+msgid "Upgrade"
+msgstr "Сделать апгрейд"
+
+#: classes/class-fl-builder-admin.php:202
+#: classes/class-fl-builder-model.php:2606
+msgid "Page Builder"
+msgstr "Конструктор страниц"
+
+#: classes/class-fl-builder-model.php:1394
+#, php-format
+msgctxt "%s stands for the module filename"
+msgid ""
+"A module with the filename %s.php already exists! Please namespace your "
+"module filenames to ensure compatibility with Beaver Builder."
+msgstr ""
+"Модуль с именем файла %s.php уже существует! Пожалуйста, измените имена "
+"файлов вашего модуля для обеспечения совместимости с Beaver Builder."
+
+#: classes/class-fl-builder-model.php:1452
+#: classes/class-fl-builder-model.php:1506 modules/heading/heading.php:16
+#: modules/photo/photo.php:27 modules/rich-text/rich-text.php:16
+#: modules/separator/separator.php:16 modules/video/video.php:21
+msgid "Basic Modules"
+msgstr "Базовые модули"
+
+#: classes/class-fl-builder-model.php:1453
+#: classes/class-fl-builder-model.php:1507 modules/accordion/accordion.php:16
+#: modules/button/button.php:16 modules/callout/callout.php:16
+#: modules/contact-form/contact-form.php:16
+#: modules/content-slider/content-slider.php:16 modules/cta/cta.php:16
+#: modules/gallery/gallery.php:16 modules/html/html.php:16
+#: modules/icon-group/icon-group.php:16 modules/icon/icon.php:16
+#: modules/map/map.php:16 modules/post-grid/post-grid.php:16
+#: modules/pricing-table/pricing-table.php:16 modules/sidebar/sidebar.php:16
+#: modules/slideshow/slideshow.php:16
+#: modules/social-buttons/social-buttons.php:16
+#: modules/subscribe-form/subscribe-form.php:20 modules/tabs/tabs.php:16
+#: modules/testimonials/testimonials.php:16
+#: modules/woocommerce/woocommerce.php:18
+msgid "Advanced Modules"
+msgstr "Расширенные модули"
+
+#: classes/class-fl-builder-model.php:1454
+#: classes/class-fl-builder-model.php:1508
+msgid "Other Modules"
+msgstr "Прочие модули"
+
+#: classes/class-fl-builder-model.php:1455
+#: classes/class-fl-builder-model.php:1509
+#: includes/admin-settings-modules.php:32 includes/ui.php:88
+#: modules/widget/widget.php:16
+msgid "WordPress Widgets"
+msgstr "Виджеты Вордпресс"
+
+#: classes/class-fl-builder-model.php:2018
+#, php-format
+msgctxt "%s stands for post/page title."
+msgid "Copy of %s"
+msgstr "Копия %s"
+
+#: classes/class-fl-builder-photo.php:78 classes/class-fl-builder-photo.php:83
+msgctxt "Image size."
+msgid "Full Size"
+msgstr "Полный размер"
+
+#: classes/class-fl-builder-photo.php:84
+msgctxt "Image size."
+msgid "Large"
+msgstr "Большой"
+
+#: classes/class-fl-builder-photo.php:85
+msgctxt "Image size."
+msgid "Medium"
+msgstr "Средний"
+
+#: classes/class-fl-builder-photo.php:86
+msgctxt "Image size."
+msgid "Thumbnail"
+msgstr "Миниатюра"
+
+#: classes/class-fl-builder-service-aweber.php:72
+msgid "Error: You must provide an Authorization Code."
+msgstr "Ошибка: Вы должны указать код авторизации"
+
+#: classes/class-fl-builder-service-aweber.php:76
+msgid "Error: Please enter a valid Authorization Code."
+msgstr "Ошибка: Пожалуйста, введите действительный код авторизации"
+
+#: classes/class-fl-builder-service-aweber.php:127
+msgid "Authorization Code"
+msgstr "Код авторизации"
+
+#: classes/class-fl-builder-service-aweber.php:128
+#, php-format
+msgid ""
+"Please register this website with AWeber to get your Authorization Code. <a"
+"%s>Register Now</a>"
+msgstr ""
+"Пожалуйста, зарегистрируйте этот веб-сайт на AWeber для получения кода "
+"авторизации. <a%s>Зарегистрироваться прямо сейчас</a>"
+
+#: classes/class-fl-builder-service-aweber.php:182
+#: classes/class-fl-builder-service-campaign-monitor.php:148
+#: classes/class-fl-builder-service-campaign-monitor.php:199
+#: classes/class-fl-builder-service-constant-contact.php:156
+#: classes/class-fl-builder-service-getresponse.php:154
+#: classes/class-fl-builder-service-icontact.php:207
+#: classes/class-fl-builder-service-madmimi.php:178
+#: classes/class-fl-builder-service-mailchimp.php:154
+#: classes/class-fl-builder-service-mailpoet.php:92
+#: classes/class-fl-builder-services.php:263 includes/service-settings.php:21
+#: modules/woocommerce/woocommerce.php:60
+msgid "Choose..."
+msgstr "Выбрать..."
+
+#: classes/class-fl-builder-service-aweber.php:192
+#: classes/class-fl-builder-service-campaign-monitor.php:209
+#: classes/class-fl-builder-service-constant-contact.php:166
+#: classes/class-fl-builder-service-getresponse.php:164
+#: classes/class-fl-builder-service-icontact.php:217
+#: classes/class-fl-builder-service-madmimi.php:188
+#: classes/class-fl-builder-service-mailchimp.php:164
+#: classes/class-fl-builder-service-mailpoet.php:102
+msgctxt "An email list from a third party provider."
+msgid "List"
+msgstr "Список"
+
+#: classes/class-fl-builder-service-aweber.php:219
+msgid ""
+"There was an error subscribing to AWeber. The account is no longer connected."
+msgstr ""
+"Произошла ошибка при подписке на AWeber. Учетная запись больше не подключена."
+
+#: classes/class-fl-builder-service-aweber.php:242
+msgid "There was an error connecting to AWeber. Please try again."
+msgstr ""
+"Произошла ошибка при подключении к AWeber. Пожалуйста, попробуйте еще раз."
+
+#: classes/class-fl-builder-service-aweber.php:247
+#, php-format
+msgid "There was an error subscribing to AWeber. %s"
+msgstr "Произошла ошибка при подписке на AWeber. %s"
+
+#: classes/class-fl-builder-service-campaign-monitor.php:55
+#: classes/class-fl-builder-service-constant-contact.php:48
+#: classes/class-fl-builder-service-getresponse.php:67
+#: classes/class-fl-builder-service-madmimi.php:73
+#: classes/class-fl-builder-service-mailchimp.php:67
+msgid "Error: You must provide an API key."
+msgstr "Ошибка: Необходимо указать ключ API."
+
+#: classes/class-fl-builder-service-campaign-monitor.php:67
+#: classes/class-fl-builder-service-campaign-monitor.php:129
+#: classes/class-fl-builder-service-getresponse.php:76
+#: classes/class-fl-builder-service-getresponse.php:132
+msgid "Error: Please check your API key."
+msgstr "Ошибка: Пожалуйста, проверьте ваш ключ API."
+
+#: classes/class-fl-builder-service-campaign-monitor.php:88
+#: classes/class-fl-builder-service-constant-contact.php:88
+#: classes/class-fl-builder-service-getresponse.php:100
+#: classes/class-fl-builder-service-madmimi.php:121
+#: classes/class-fl-builder-service-mailchimp.php:100
+msgid "API Key"
+msgstr "Ключ API"
+
+#: classes/class-fl-builder-service-campaign-monitor.php:89
+msgid ""
+"Your API key can be found in your Campaign Monitor account under Account "
+"Settings > API Key."
+msgstr ""
+"Ваш ключ API можно найти в учетной записи Campaign Monitor в разделе: "
+"Параметры учетной записи > Ключ API."
+
+#: classes/class-fl-builder-service-campaign-monitor.php:158
+msgctxt "A client account in Campaign Monitor."
+msgid "Client"
+msgstr "Клиент"
+
+#: classes/class-fl-builder-service-campaign-monitor.php:236
+msgid ""
+"There was an error subscribing to Campaign Monitor. The account is no longer "
+"connected."
+msgstr ""
+"Произошла ошибка при подписке на Campaign Monitor. Учетная запись больше не "
+"подключена."
+
+#: classes/class-fl-builder-service-campaign-monitor.php:253
+msgid "There was an error subscribing to Campaign Monitor."
+msgstr "Произошла ошибка при подписке на Campaign Monitor. "
+
+#: classes/class-fl-builder-service-constant-contact.php:52
+msgid "Error: You must provide an access token."
+msgstr "Ошибка: Вы должны предоставить токен доступа."
+
+#: classes/class-fl-builder-service-constant-contact.php:61
+#: classes/class-fl-builder-service-constant-contact.php:134
+#, php-format
+msgid "Error: Could not connect to Constant Contact. %s"
+msgstr "Ошибка: Не удалось подключиться к Constant Contact. %s"
+
+#: classes/class-fl-builder-service-constant-contact.php:89
+msgid "Your Constant Contact API key."
+msgstr "Ваш ключ API для Constant Contact."
+
+#: classes/class-fl-builder-service-constant-contact.php:99
+msgid "Access Token"
+msgstr "Токен доступа"
+
+#: classes/class-fl-builder-service-constant-contact.php:100
+msgid "Your Constant Contact access token."
+msgstr "Ваш токен доступа для Constant Contact."
+
+#: classes/class-fl-builder-service-constant-contact.php:101
+#, php-format
+msgid ""
+"You must register a <a%s>Developer Account</a> with Constant Contact to "
+"obtain an API key and access token. Please see <a%s>Getting an API key</a> "
+"for complete instructions."
+msgstr ""
+"Вы должны зарегистрировать <a%s>Учетную запись разработчика</a> на Constant "
+"Contact, чтобы получить ключ API и токен доступа. Пожалуйста, ознакомьтесь с "
+"<a%s>полной инструкцией для получения ключа API</a>."
+
+#: classes/class-fl-builder-service-constant-contact.php:193
+msgid ""
+"There was an error subscribing to Constant Contact. The account is no longer "
+"connected."
+msgstr ""
+"Произошла ошибка при подписке на Constant Contact. Учетная запись больше не "
+"подключена."
+
+#: classes/class-fl-builder-service-constant-contact.php:245
+#: classes/class-fl-builder-service-constant-contact.php:279
+#, php-format
+msgid "There was an error subscribing to Constant Contact. %s"
+msgstr "Произошла ошибка при подписке на Constant Contact. %s"
+
+#: classes/class-fl-builder-service-getresponse.php:101
+msgid ""
+"Your API key can be found in your GetResponse account under My Account > "
+"GetResponse API."
+msgstr ""
+"Ваш ключ API можно найти в учетной записи GetResponse в разделе: Моя учетная "
+"запись > GetResponse API."
+
+#: classes/class-fl-builder-service-getresponse.php:191
+msgid ""
+"There was an error subscribing to GetResponse. The account is no longer "
+"connected."
+msgstr ""
+"Произошла ошибка при подписке на GetResponse. Учетная запись больше не "
+"подключена."
+
+#: classes/class-fl-builder-service-getresponse.php:202
+#, php-format
+msgid "There was an error subscribing to GetResponse. %s"
+msgstr "Произошла ошибка при подписке на GetResponse. %s"
+
+#: classes/class-fl-builder-service-icontact.php:75
+msgid "Error: You must provide a username."
+msgstr "Ошибка: Необходимо указать имя пользователя."
+
+#: classes/class-fl-builder-service-icontact.php:79
+msgid "Error: You must provide a app ID."
+msgstr "Ошибка: Необходимо указать ID приложения."
+
+#: classes/class-fl-builder-service-icontact.php:83
+msgid "Error: You must provide a app password."
+msgstr "Ошибка: Необходимо указать пароль приложения."
+
+#: classes/class-fl-builder-service-icontact.php:104
+#: classes/class-fl-builder-service-icontact.php:188
+#, php-format
+msgid "Error: Could not connect to iContact. %s"
+msgstr "Ошибка: Не удалось подключиться к iContact. %s"
+
+#: classes/class-fl-builder-service-icontact.php:125
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: classes/class-fl-builder-service-icontact.php:126
+msgid "Your iContact username."
+msgstr "Ваше имя пользователя IContact."
+
+#: classes/class-fl-builder-service-icontact.php:136
+msgid "App ID"
+msgstr "ID приложения"
+
+#: classes/class-fl-builder-service-icontact.php:137
+msgid "Your iContact app ID."
+msgstr "ID вашего приложения в iContact."
+
+#: classes/class-fl-builder-service-icontact.php:147
+msgid "App Password"
+msgstr "Пароль приложения"
+
+#: classes/class-fl-builder-service-icontact.php:148
+msgid "Your iContact app password."
+msgstr "Пароль для вашего приложения в iContact."
+
+#: classes/class-fl-builder-service-icontact.php:149
+#, php-format
+msgid ""
+"You must <a%s>create an app</a> in iContact to obtain an app ID and "
+"password. Please see <a%s>the iContact docs</a> for complete instructions."
+msgstr ""
+"Вы должны <a%s>создать приложение</a> в iContact получить ID приложения и "
+"пароль. Пожалуйста, ознакомьтесь с <a%s>документацией iContact</a> для "
+"получения полных инструкций."
+
+#: classes/class-fl-builder-service-icontact.php:244
+msgid ""
+"There was an error subscribing to iContact. The account is no longer "
+"connected."
+msgstr ""
+"Произошла ошибка при подписке на iContact. Учетная запись больше не "
+"подключена."
+
+#: classes/class-fl-builder-service-icontact.php:280
+#, php-format
+msgid "There was an error subscribing to iContact. %s"
+msgstr "Произошла ошибка при подписке на iContact. %s"
+
+#: classes/class-fl-builder-service-madmimi.php:69
+msgid "Error: You must provide an email address."
+msgstr "Ошибка: Необходимо указать адрес электронной почты."
+
+#: classes/class-fl-builder-service-madmimi.php:83
+msgid "Unable to connect to Mad Mimi. Please check your credentials."
+msgstr ""
+"Не удается подключиться к Mad Mimi. Пожалуйста проверьте учетные данные."
+
+#: classes/class-fl-builder-service-madmimi.php:110
+#: modules/subscribe-form/includes/frontend.php:11
+msgid "Email Address"
+msgstr "Адрес email"
+
+#: classes/class-fl-builder-service-madmimi.php:111
+msgid "The email address associated with your Mad Mimi account."
+msgstr "Адрес электронной почты, связанный с вашей учетной записью Mad Mimi."
+
+#: classes/class-fl-builder-service-madmimi.php:122
+msgid ""
+"Your API key can be found in your Mad Mimi account under Account > Settings "
+"&amp; Billing > API."
+msgstr ""
+"Ваш ключ API можно найти в учетной записи Mad Mimi в разделе: Учетная запись "
+"> Настройки и счета > API."
+
+#: classes/class-fl-builder-service-madmimi.php:156
+msgid ""
+"There was a problem retrieving your lists. Please check your API credentials."
+msgstr ""
+"Произошла ошибка при получении ваших списков. Пожалуйста, проверьте свои "
+"учетные данные API."
+
+#: classes/class-fl-builder-service-madmimi.php:215
+#: classes/class-fl-builder-service-madmimi.php:242
+msgid ""
+"There was an error subscribing to Mad Mimi. The account is no longer "
+"connected."
+msgstr ""
+"Произошла ошибка при подписке на Mad Mimi. Учетная запись больше не "
+"подключена."
+
+#: classes/class-fl-builder-service-mailchimp.php:101
+msgid ""
+"Your API key can be found in your MailChimp account under Account > Extras > "
+"API Keys."
+msgstr ""
+"Ваш ключ API можно найти в учетной записи MailChimp в разделе: Учетная "
+"запись > Дополнительно > Ключи API."
+
+#: classes/class-fl-builder-service-mailchimp.php:191
+msgid ""
+"There was an error subscribing to MailChimp. The account is no longer "
+"connected."
+msgstr ""
+"Произошла ошибка при подписке на MailChimp. Учетная запись больше не "
+"подключена."
+
+#: classes/class-fl-builder-service-mailchimp.php:219
+#, php-format
+msgid "There was an error subscribing to MailChimp. %s"
+msgstr "Произошла ошибка при подписке на MailChimp. %s"
+
+#: classes/class-fl-builder-service-mailpoet.php:73
+msgid "There was an error retrieveing your lists."
+msgstr "Произошла ошибка при получении ваших списков."
+
+#: classes/class-fl-builder-service-mailpoet.php:129
+msgid "There was an error subscribing. MailPoet is not installed."
+msgstr "Произошла ошибка при подписке. MailPoet не установлен."
+
+#: classes/class-fl-builder-services.php:133
+msgctxt "Third party service such as MailChimp."
+msgid "Error: Missing service type."
+msgstr "Ошибка: Тип сервиса подписки не указан."
+
+#: classes/class-fl-builder-services.php:136
+msgctxt "Connection data such as an API key."
+msgid "Error: Missing service data."
+msgstr "Ошибка: Данные сервиса подписки не указаны."
+
+#: classes/class-fl-builder-services.php:139
+msgctxt "Account name for a third party service such as MailChimp."
+msgid "Error: Missing account name."
+msgstr "Ошибка: Имя учетной записи не указано."
+
+#: classes/class-fl-builder-services.php:148
+msgctxt "Account name for a third party service such as MailChimp."
+msgid "Error: An account with that name already exists."
+msgstr "Ошибка: Учетная запись с таким именем уже существует."
+
+#: classes/class-fl-builder-services.php:228
+msgid "Account Name"
+msgstr "Имя учетной записи"
+
+#: classes/class-fl-builder-services.php:229
+msgid ""
+"Used to identify this connection within the accounts list and can be "
+"anything you like."
+msgstr ""
+"Используется для идентификации данного соединения в списке учетных записей и "
+"может быть какой пожелаете."
+
+#: classes/class-fl-builder-services.php:242
+msgid "Connect"
+msgstr "Подключить"
+
+#: classes/class-fl-builder-services.php:270
+msgid "Add Account..."
+msgstr "Добавить учетную запись..."
+
+#: classes/class-fl-builder-services.php:277
+msgid "Account"
+msgstr "Учетная запись"
+
+#: classes/class-fl-builder-templates.php:28
+msgid "Page Builder Templates"
+msgstr "Шаблоны конструктора страниц"
+
+#: classes/class-fl-builder.php:713
+#, php-format
+msgctxt "Field name to add."
+msgid "Add %s"
+msgstr "Добавить: %s"
+
+#: classes/class-fl-builder.php:776 classes/class-fl-builder.php:778
+msgctxt "Custom post type label."
+msgid "Layout Templates"
+msgstr "Шаблоны страниц"
+
+#: classes/class-fl-builder.php:777 classes/class-fl-builder.php:779
+msgctxt "Custom post type label."
+msgid "Layout Template"
+msgstr "Шаблон страницы"
+
+#: classes/class-fl-builder.php:780
+msgctxt "Custom post type label."
+msgid "Add New"
+msgstr "Добавить новый"
+
+#: classes/class-fl-builder.php:781
+msgctxt "Custom post type label."
+msgid "Add New Layout Template"
+msgstr "Добавить новый шаблон страницы"
+
+#: classes/class-fl-builder.php:782
+msgctxt "Custom post type label."
+msgid "New Layout Template"
+msgstr "Новый шаблон страницы"
+
+#: classes/class-fl-builder.php:783
+msgctxt "Custom post type label."
+msgid "Edit Layout Template"
+msgstr "Редактировать шаблон страницы"
+
+#: classes/class-fl-builder.php:784
+msgctxt "Custom post type label."
+msgid "View Layout Template"
+msgstr "Просмотреть шаблон страницы"
+
+#: classes/class-fl-builder.php:785
+msgctxt "Custom post type label."
+msgid "All Layout Templates"
+msgstr "Все шаблоны страниц"
+
+#: classes/class-fl-builder.php:786
+msgctxt "Custom post type label."
+msgid "Search Layout Templates"
+msgstr "Поиск по шаблонам страниц"
+
+#: classes/class-fl-builder.php:787
+msgctxt "Custom post type label."
+msgid "Parent Layout Templates:"
+msgstr "Исходные шаблоны страниц:"
+
+#: classes/class-fl-builder.php:788
+msgctxt "Custom post type label."
+msgid "No layout templates found."
+msgstr "Шаблоны страниц не найдены."
+
+#: classes/class-fl-builder.php:789
+msgctxt "Custom post type label."
+msgid "No layout templates found in Trash."
+msgstr "Шаблоны страниц не найдены в Корзине."
+
+#: classes/class-fl-builder.php:1160 includes/js-config.php:69
+#, php-format
+msgctxt "%s stands for module name."
+msgid "%s Settings"
+msgstr "%s — настройки"
+
+#: includes/admin-posts.php:3 modules/rich-text/rich-text.php:14
+msgid "Text Editor"
+msgstr "Текстовый редактор"
+
+#: includes/admin-posts.php:7
+#, php-format
+msgctxt "%s stands for custom branded \"Page Builder\" name."
+msgid "%s is currently active for this page."
+msgstr "%s активен для этой страницы."
+
+#: includes/admin-posts.php:8
+#, php-format
+msgctxt "%s stands for custom branded \"Page Builder\" name."
+msgid "Launch %s"
+msgstr "Запустить %s"
+
+#: includes/admin-settings-branding.php:7
+msgid "White label the page builder by entering a custom name below."
+msgstr "Укажите здесь собственное название для конструктора страниц."
+
+#: includes/admin-settings-branding.php:10
+msgid ""
+"Additionally, you may also add a custom icon by entering the URL of an image "
+"below. Leave the field blank if you do not wish to use an icon."
+msgstr ""
+"Вы также можете добавить собственную икону, указав URL выбранного "
+"изображения. Оставьте это поле пустым, если вы не хотите использовать иконку."
+
+#: includes/admin-settings-branding.php:14
+msgid "Save Branding"
+msgstr "Сохранить брендирование"
+
+#: includes/admin-settings-cache.php:9
+msgid ""
+"A CSS and JavaScript file is dynamically generated and cached each time you "
+"create a new layout. Sometimes the cache needs to be refreshed when you "
+"migrate your site to another server or update to the latest version. If you "
+"are running into any issues, please try clearing the cache by clicking the "
+"button below."
+msgstr ""
+"Файл CSS и JavaScript  динамически генерируется и кэшируется каждый раз, "
+"когда вы создаете новый макет. Иногда кэш необходимо обновить при переносе "
+"сайта на другой сервер или при обновлении до последней версии. Если вы "
+"сталкиваетесь с какими-либо проблемами, пожалуйста, попробуйте очистить кэш, "
+"нажав на кнопку ниже."
+
+#: includes/admin-settings-cache.php:12 includes/admin-settings-cache.php:14
+#: includes/admin-settings-uninstall.php:7
+#: includes/admin-settings-uninstall.php:10
+#: includes/updater/includes/form.php:31
+msgid "NOTE:"
+msgstr "ВНИМАНИЕ:"
+
+#: includes/admin-settings-cache.php:12
+#: includes/admin-settings-uninstall.php:10
+#: includes/updater/includes/form.php:31
+msgid "This applies to all sites on the network."
+msgstr "Это действует для всех сайтов сети."
+
+#: includes/admin-settings-cache.php:14
+msgid ""
+"This only applies to this site. Please visit the Network Admin Settings to "
+"clear the cache for all sites on the network."
+msgstr ""
+"Это относится только к данному сайту. Пожалуйста, посетите страницу настроек "
+"администратора сети, чтобы очистить кэш для всех сайтов сети."
+
+#: includes/admin-settings-cache.php:19
+msgid "Clear Cache"
+msgstr "Очистить кэш"
+
+#: includes/admin-settings-editing.php:3
+msgid "Editing Settings"
+msgstr "Редактировать Настройки"
+
+#: includes/admin-settings-editing.php:10 includes/admin-settings-icons.php:27
+#: includes/admin-settings-modules.php:10
+#: includes/admin-settings-post-types.php:10
+#: includes/admin-settings-templates.php:10
+msgid "Override network settings?"
+msgstr "Заместить общие настройки сети?"
+
+#: includes/admin-settings-editing.php:16
+#, php-format
+msgid ""
+"Set the <a%s>capability</a> required for users to access advanced builder "
+"editing such as adding, deleting or moving modules."
+msgstr ""
+"Укажите <a%s>права пользователя</a>, необходимые для доступа к расширенным "
+"функциям конструктора, таким как добавление, удаление и перемещение модулей."
+
+#: includes/admin-settings-editing.php:22
+msgid "Save Editing Settings"
+msgstr "Сохранить Настройки редактирования"
+
+#: includes/admin-settings-help-button.php:8
+msgid "Help Button Settings"
+msgstr "Настройки кнопки помощи"
+
+#: includes/admin-settings-help-button.php:17
+msgid "Enable Help Button"
+msgstr "Включить кнопку "
+
+#: includes/admin-settings-help-button.php:23
+msgid "Help Tour"
+msgstr "Вспомогательный обзор"
+
+#: includes/admin-settings-help-button.php:27
+msgid "Enable Help Tour"
+msgstr "Включить вспомогательный обзор"
+
+#: includes/admin-settings-help-button.php:31
+msgid "Help Video"
+msgstr "Вспомогательное видео"
+
+#: includes/admin-settings-help-button.php:35
+msgid "Enable Help Video"
+msgstr "Включить вспомогательное видео"
+
+#: includes/admin-settings-help-button.php:39
+msgid "Help Video Embed Code"
+msgstr "Код вставки вспомогательного видео"
+
+#: includes/admin-settings-help-button.php:45
+msgid "Knowledge Base"
+msgstr "База знаний"
+
+#: includes/admin-settings-help-button.php:49
+msgid "Enable Knowledge Base"
+msgstr "Включить базу знаний"
+
+#: includes/admin-settings-help-button.php:53
+msgid "Knowledge Base URL"
+msgstr "URL базы знаний"
+
+#: includes/admin-settings-help-button.php:59
+msgid "Forums"
+msgstr "Форум"
+
+#: includes/admin-settings-help-button.php:63
+msgid "Enable Forums"
+msgstr "Включить форум"
+
+#: includes/admin-settings-help-button.php:67
+msgid "Forums URL"
+msgstr "URL форума"
+
+#: includes/admin-settings-help-button.php:77
+msgid "Save Help Button Settings"
+msgstr "Сохранить настройки кнопки помощи"
+
+#: includes/admin-settings-icons.php:3
+msgid "Icon Settings"
+msgstr "Настройки иконок"
+
+#: includes/admin-settings-icons.php:13
+msgid "Icons for the main site must be managed in the network admin."
+msgstr "Иконки главного сайта управляются администратором сети."
+
+#: includes/admin-settings-icons.php:33
+#, php-format
+msgid ""
+"Enable or disable icon sets using the options below or upload a custom icon "
+"set from either <a%s>Icomoon</a> or <a%s>Fontello</a>."
+msgstr ""
+"Включите или отключите наборы иконок, используя опции ниже или загрузите "
+"набор с <a%s>Icomoon</a> или <a%s>Fontello</a>."
+
+#: includes/admin-settings-icons.php:48
+msgctxt "Plugin setup page: Delete icon set."
+msgid "Delete"
+msgstr "Удалить"
+
+#: includes/admin-settings-icons.php:59
+msgid "Upload Icon Set"
+msgstr "Загрузить набор иконок"
+
+#: includes/admin-settings-icons.php:60
+msgid "Save Icon Settings"
+msgstr "Сохранить настройки иконок"
+
+#: includes/admin-settings-js-config.php:4
+msgid "Select File"
+msgstr "Выбрать файл"
+
+#: includes/admin-settings-js-config.php:5
+msgid ""
+"Please type \"uninstall\" in the box below to confirm that you really want "
+"to uninstall the page builder and all of its data."
+msgstr ""
+"Пожалуйста, напишите \"удалить\" в поле ниже, чтобы подтвердить удаление "
+"конструктора страниц и всех связанных данных"
+
+#: includes/admin-settings-modules.php:3
+msgid "Enabled Modules"
+msgstr "Включенные модули"
+
+#: includes/admin-settings-modules.php:16
+msgid "Check or uncheck modules below to enable or disable them."
+msgstr "Отмечайте модули для их включения и отключения."
+
+#: includes/admin-settings-modules.php:26
+msgctxt "Plugin setup page: Modules."
+msgid "All"
+msgstr "Все"
+
+#: includes/admin-settings-modules.php:64
+msgid "Save Module Settings"
+msgstr "Сохранить настройки модулей"
+
+#: includes/admin-settings-post-types.php:18
+msgid ""
+"Enter a comma separated list of the post types you would like the builder to "
+"work with."
+msgstr ""
+"Введите разделённый запятыми список типов постов, где вы хотите использовать "
+"конструктор."
+
+#: includes/admin-settings-post-types.php:19
+#: includes/admin-settings-post-types.php:39
+msgid "NOTE: Not all custom post types may be supported."
+msgstr "ВНИМАНИЕ: Могут поддерживаться не все пользовательские типы постов."
+
+#: includes/admin-settings-post-types.php:34
+msgid "Example: page, post, product"
+msgstr "Пример: page, post, product"
+
+#: includes/admin-settings-post-types.php:38
+msgid "Select the post types you would like the builder to work with."
+msgstr "Выберите типы постов, где вы хотите использовать конструктор."
+
+#: includes/admin-settings-post-types.php:70
+msgid "Save Post Types"
+msgstr "Сохранить типы постов"
+
+#: includes/admin-settings-templates.php:3 includes/template-settings.php:4
+msgid "Template Settings"
+msgstr "Настройки шаблонов"
+
+#: includes/admin-settings-templates.php:16
+msgid "Enable or disable templates using the options below."
+msgstr "Включайте и отключайте шаблоны, используя опции ниже."
+
+#: includes/admin-settings-templates.php:23
+msgid "Enable All Templates"
+msgstr "Включить все шаблоны"
+
+#: includes/admin-settings-templates.php:24
+msgid "Enable Core Templates Only"
+msgstr "Включить только ключевые шаблоны"
+
+#: includes/admin-settings-templates.php:25
+msgid "Enable User Templates Only"
+msgstr "Включить только пользовательские шаблоны"
+
+#: includes/admin-settings-templates.php:26
+msgid "Disable All Templates"
+msgstr "Отключить все шаблоны"
+
+#: includes/admin-settings-templates.php:30
+msgid "Save Template Settings"
+msgstr "Сохранить настройки шаблонов"
+
+#: includes/admin-settings-uninstall.php:5
+msgid ""
+"Clicking the button below will uninstall the page builder plugin and delete "
+"all of the data associated with it. You can uninstall or deactivate the page "
+"builder from the plugins page instead if you do not wish to delete the data."
+msgstr ""
+"Нажатие кнопки ниже деинсталлирует плагин конструктора страниц и удалит все "
+"данные, с ним связанные. Вы можете деинсталлировать или деактивировать "
+"конструктор на странице плагинов, если не хотите терять эти данные."
+
+#: includes/admin-settings-uninstall.php:7
+msgid ""
+"The builder does not delete the post meta <code>_fl_builder_data</code>, "
+"<code>_fl_builder_draft</code> and <code>_fl_builder_enabled</code> in case "
+"you want to reinstall it later. If you do, the builder will rebuild all of "
+"its data using those meta values."
+msgstr ""
+"Конструктор не удаляет мета элементы поста <code>_fl_builder_data</code>, "
+"<code>_fl_builder_draft</code> и <code>_fl_builder_enabled</code> на случай, "
+"если вы захотите переустановить плагин позже. Если вы это сделаете, "
+"конструктор восстановит данные, используя эти значения мета значения."
+
+#: includes/admin-settings-upgrade.php:5
+msgid ""
+"You are currently running the lite version of the Beaver Builder plugin. "
+"Upgrade today for access to premium features such as advanced modules, "
+"templates, support and more!"
+msgstr ""
+"Вы пользуетесь упрощенной версией плагина Beaver Builder. Сделайте апгрейд "
+"сегодня для доступа к функциям высшего качества, шаблонам, поддержке и "
+"многому другому!"
+
+#: includes/admin-settings-upgrade.php:7
+msgid "Upgrade Now"
+msgstr "Сделать апгрейд сейчас"
+
+#: includes/admin-settings-upgrade.php:9
+msgid "Learn More"
+msgstr "Узнать больше"
+
+#: includes/admin-templates-edit.php:3
+msgid "Edit Template"
+msgstr "Редактировать шаблон"
+
+#: includes/admin-templates-edit.php:8
+msgctxt "Template edit form field label. Template name."
+msgid "Name"
+msgstr "Название"
+
+#: includes/admin-templates-edit.php:12 modules/callout/callout.php:305
+#: modules/post-grid/post-grid.php:113
+msgid "Image"
+msgstr "Изображение"
+
+#: includes/admin-templates-edit.php:16 includes/row-settings.php:155
+#: includes/template-settings.php:23 modules/callout/callout.php:353
+#: modules/callout/callout.php:373
+#: modules/content-slider/content-slider.php:472
+#: modules/post-grid/post-grid.php:127
+msgid "Position"
+msgstr "Позиция"
+
+#: includes/admin-templates-edit.php:20 includes/template-settings.php:28
+msgctxt "Template edit form field label. Is template premium one?"
+msgid "Premium"
+msgstr "Премиум"
+
+#: includes/admin-templates-edit.php:23 includes/admin-templates.php:30
+#: includes/global-settings.php:18 includes/global-settings.php:110
+#: includes/global-settings.php:124 includes/row-settings.php:307
+#: includes/template-settings.php:31 modules/accordion/accordion.php:90
+#: modules/callout/callout.php:420
+#: modules/content-slider/content-slider.php:209
+#: modules/content-slider/content-slider.php:223
+#: modules/content-slider/content-slider.php:257
+#: modules/content-slider/content-slider.php:266
+#: modules/content-slider/content-slider.php:537
+#: modules/icon-group/icon-group.php:80 modules/icon/icon.php:111
+#: modules/slideshow/slideshow.php:315 modules/slideshow/slideshow.php:325
+#: modules/slideshow/slideshow.php:376 modules/slideshow/slideshow.php:417
+#: modules/slideshow/slideshow.php:439 modules/slideshow/slideshow.php:488
+#: modules/slideshow/slideshow.php:497 modules/slideshow/slideshow.php:506
+#: modules/slideshow/slideshow.php:515 modules/slideshow/slideshow.php:524
+#: modules/slideshow/slideshow.php:533 modules/slideshow/slideshow.php:542
+#: modules/slideshow/slideshow.php:556 modules/slideshow/slideshow.php:571
+#: modules/slideshow/slideshow.php:606 modules/slideshow/slideshow.php:618
+#: modules/slideshow/slideshow.php:630 modules/slideshow/slideshow.php:642
+#: modules/social-buttons/social-buttons.php:111
+#: modules/social-buttons/social-buttons.php:120
+#: modules/social-buttons/social-buttons.php:129
+#: modules/testimonials/testimonials.php:85
+#: modules/testimonials/testimonials.php:124
+#: modules/testimonials/testimonials.php:154 modules/video/video.php:111
+#: modules/video/video.php:123
+msgid "No"
+msgstr "Нет"
+
+#: includes/admin-templates-edit.php:24 includes/admin-templates.php:30
+#: includes/global-settings.php:19 includes/global-settings.php:111
+#: includes/global-settings.php:125 includes/row-settings.php:308
+#: includes/template-settings.php:32 modules/accordion/accordion.php:89
+#: modules/callout/callout.php:421
+#: modules/content-slider/content-slider.php:210
+#: modules/content-slider/content-slider.php:224
+#: modules/content-slider/content-slider.php:258
+#: modules/content-slider/content-slider.php:267
+#: modules/content-slider/content-slider.php:538
+#: modules/icon-group/icon-group.php:81 modules/icon/icon.php:112
+#: modules/slideshow/slideshow.php:316 modules/slideshow/slideshow.php:326
+#: modules/slideshow/slideshow.php:377 modules/slideshow/slideshow.php:418
+#: modules/slideshow/slideshow.php:440 modules/slideshow/slideshow.php:489
+#: modules/slideshow/slideshow.php:498 modules/slideshow/slideshow.php:507
+#: modules/slideshow/slideshow.php:516 modules/slideshow/slideshow.php:525
+#: modules/slideshow/slideshow.php:534 modules/slideshow/slideshow.php:543
+#: modules/slideshow/slideshow.php:557 modules/slideshow/slideshow.php:572
+#: modules/slideshow/slideshow.php:607 modules/slideshow/slideshow.php:619
+#: modules/slideshow/slideshow.php:631 modules/slideshow/slideshow.php:643
+#: modules/social-buttons/social-buttons.php:110
+#: modules/social-buttons/social-buttons.php:119
+#: modules/social-buttons/social-buttons.php:128
+#: modules/testimonials/testimonials.php:86
+#: modules/testimonials/testimonials.php:125
+#: modules/testimonials/testimonials.php:155 modules/video/video.php:112
+#: modules/video/video.php:124
+msgid "Yes"
+msgstr "Да"
+
+#: includes/admin-templates-edit.php:29 includes/template-settings.php:37
+msgid "Category"
+msgstr "Категория"
+
+#: includes/admin-templates-edit.php:32 includes/template-settings.php:40
+msgctxt "Templates category label."
+msgid "Landing Pages"
+msgstr "Главные страницы"
+
+#: includes/admin-templates-edit.php:33 includes/template-settings.php:41
+msgctxt "Templates category label."
+msgid "Company Info"
+msgstr "Информация о компании"
+
+#: includes/admin-templates-edit.php:40
+msgid "Update Template"
+msgstr "Обновить шаблон"
+
+#: includes/admin-templates.php:3
+msgid "Page Builder Template"
+msgstr "Шаблон Конструктора страниц"
+
+#: includes/admin-templates.php:10
+msgctxt "Templates list column label."
+msgid "Name"
+msgstr "Название"
+
+#: includes/admin-templates.php:11
+msgctxt "Templates list column label."
+msgid "Category"
+msgstr "Категория"
+
+#: includes/admin-templates.php:12
+msgctxt "Templates list column label. Is template premium one?"
+msgid "Premium"
+msgstr "Премиум"
+
+#: includes/admin-templates.php:25 includes/field-photo.php:12
+#: includes/template-selector.php:83
+msgid "Edit"
+msgstr "Редактировать"
+
+#: includes/admin-templates.php:27 includes/template-selector.php:84
+msgid "Delete"
+msgstr "Удалить"
+
+#: includes/admin-templates.php:40 includes/js-config.php:30
+msgid "Do you really want to delete this template?"
+msgstr "Вы действительно хотите удалить этот плагин?"
+
+#: includes/column-settings.php:4 includes/js-config.php:23
+msgid "Column Settings"
+msgstr "Настройки колонки"
+
+#: includes/column-settings.php:7 includes/module-settings.php:87
+#: includes/row-settings.php:9 modules/accordion/accordion.php:45
+#: modules/button/button.php:108 modules/button/button.php:146
+#: modules/button/button.php:150 modules/callout/callout.php:241
+#: modules/callout/callout.php:543
+#: modules/content-slider/content-slider.php:425
+#: modules/content-slider/content-slider.php:657 modules/cta/cta.php:101
+#: modules/cta/cta.php:299 modules/heading/heading.php:69
+#: modules/icon-group/icon-group.php:44 modules/icon/icon.php:75
+#: modules/pricing-table/pricing-table.php:43
+#: modules/pricing-table/pricing-table.php:155
+#: modules/separator/separator.php:72
+#: modules/subscribe-form/subscribe-form.php:217 modules/tabs/tabs.php:45
+msgid "Style"
+msgstr "Стиль"
+
+#: includes/column-settings.php:14
+msgid "Column Width"
+msgstr "Ширина колонки"
+
+#: includes/column-settings.php:26 includes/row-settings.php:48
+#: modules/button/button.php:66 modules/callout/callout.php:225
+#: modules/callout/callout.php:478 modules/callout/callout.php:494
+#: modules/content-slider/content-slider.php:382
+#: modules/content-slider/content-slider.php:616 modules/cta/cta.php:84
+#: modules/cta/cta.php:221
+msgid "Text"
+msgstr "Текст"
+
+#: includes/column-settings.php:30 includes/column-settings.php:43
+#: includes/column-settings.php:100 includes/row-settings.php:52
+#: includes/row-settings.php:109 includes/row-settings.php:403
+#: modules/callout/callout.php:391
+#: modules/content-slider/content-slider.php:337
+#: modules/icon-group/icon-group.php:51 modules/icon/icon.php:82
+#: modules/separator/separator.php:34
+msgid "Color"
+msgstr "Цвет"
+
+#: includes/column-settings.php:39 includes/row-settings.php:105
+#: modules/button/button.php:115 modules/callout/callout.php:404
+#: modules/callout/callout.php:508
+#: modules/content-slider/content-slider.php:363
+#: modules/content-slider/content-slider.php:630 modules/cta/cta.php:197
+#: modules/cta/cta.php:264 modules/icon-group/icon-group.php:64
+#: modules/icon/icon.php:95 modules/subscribe-form/subscribe-form.php:182
+msgid "Background Color"
+msgstr "Цвет фона"
+
+#: includes/column-settings.php:51 includes/column-settings.php:108
+#: includes/row-settings.php:117 includes/row-settings.php:411
+#: modules/separator/separator.php:44
+msgid "Opacity"
+msgstr "Непрозрачность"
+
+#: includes/column-settings.php:63 includes/row-settings.php:366
+msgid "Border"
+msgstr "Рамка"
+
+#: includes/column-settings.php:67 includes/row-settings.php:65
+#: includes/row-settings.php:370 modules/callout/callout.php:474
+#: modules/content-slider/content-slider.php:331
+#: modules/content-slider/content-slider.php:378
+#: modules/content-slider/content-slider.php:596
+#: modules/content-slider/content-slider.php:729
+#: modules/slideshow/slideshow.php:339
+msgid "Type"
+msgstr "Тип"
+
+#: includes/column-settings.php:69 includes/row-settings.php:372
+msgid ""
+"The type of border to use. Double borders must have a width of at least 3px "
+"to render properly."
+msgstr ""
+"Выбирает тип рамки. Толщина двойной рамки должна быть как минимум 3 пикселя, "
+"чтобы отображаться корректно"
+
+#: includes/column-settings.php:71 includes/row-settings.php:374
+msgctxt "Border type."
+msgid "None"
+msgstr "Нет"
+
+#: includes/column-settings.php:72 includes/row-settings.php:375
+#: modules/separator/separator.php:75
+msgctxt "Border type."
+msgid "Solid"
+msgstr "Сплошная"
+
+#: includes/column-settings.php:73 includes/row-settings.php:376
+#: modules/separator/separator.php:76
+msgctxt "Border type."
+msgid "Dashed"
+msgstr "Пунктирная"
+
+#: includes/column-settings.php:74 includes/row-settings.php:377
+#: modules/separator/separator.php:77
+msgctxt "Border type."
+msgid "Dotted"
+msgstr "Точечная"
+
+#: includes/column-settings.php:75 includes/row-settings.php:378
+#: modules/separator/separator.php:78
+msgctxt "Border type."
+msgid "Double"
+msgstr "Двойная"
+
+#: includes/column-settings.php:119 includes/row-settings.php:422
+msgid "Top Width"
+msgstr "Толщина сверху"
+
+#: includes/column-settings.php:131 includes/row-settings.php:434
+msgid "Bottom Width"
+msgstr "Толщина снизу"
+
+#: includes/column-settings.php:143 includes/row-settings.php:446
+msgid "Left Width"
+msgstr "Толщина слева"
+
+#: includes/column-settings.php:155 includes/row-settings.php:458
+msgid "Right Width"
+msgstr "Толщина справа"
+
+#: includes/column-settings.php:170 includes/module-settings.php:6
+#: includes/row-settings.php:473 modules/content-slider/content-slider.php:273
+msgid "Advanced"
+msgstr "Расширенные"
+
+#: includes/column-settings.php:173 includes/global-settings.php:41
+#: includes/global-settings.php:94 includes/module-settings.php:9
+#: includes/row-settings.php:476
+msgid "Margins"
+msgstr "Поля"
+
+#: includes/column-settings.php:177 includes/column-settings.php:230
+#: includes/module-settings.php:13 includes/row-settings.php:480
+#: includes/row-settings.php:533 modules/slideshow/slideshow.php:475
+msgid "Top"
+msgstr "Сверху"
+
+#: includes/column-settings.php:189 includes/column-settings.php:242
+#: includes/module-settings.php:25 includes/row-settings.php:492
+#: includes/row-settings.php:545 modules/slideshow/slideshow.php:474
+msgid "Bottom"
+msgstr "Снизу"
+
+#: includes/column-settings.php:201 includes/column-settings.php:254
+#: includes/module-settings.php:37 includes/row-settings.php:504
+#: includes/row-settings.php:557 modules/button/button.php:219
+#: modules/callout/callout.php:252
+#: modules/content-slider/content-slider.php:476 modules/cta/cta.php:125
+#: modules/heading/heading.php:89 modules/heading/heading.php:161
+#: modules/icon-group/icon-group.php:111 modules/icon/icon.php:134
+#: modules/photo/photo.php:417 modules/social-buttons/social-buttons.php:101
+msgid "Left"
+msgstr "Слева"
+
+#: includes/column-settings.php:213 includes/column-settings.php:266
+#: includes/module-settings.php:49 includes/row-settings.php:516
+#: includes/row-settings.php:569 modules/button/button.php:220
+#: modules/callout/callout.php:253
+#: modules/content-slider/content-slider.php:478 modules/cta/cta.php:127
+#: modules/heading/heading.php:91 modules/heading/heading.php:163
+#: modules/icon-group/icon-group.php:112 modules/icon/icon.php:135
+#: modules/photo/photo.php:419 modules/social-buttons/social-buttons.php:102
+msgid "Right"
+msgstr "Справа"
+
+#: includes/column-settings.php:226 includes/global-settings.php:49
+#: includes/row-settings.php:529 modules/button/button.php:233
+#: modules/callout/callout.php:598
+#: modules/content-slider/content-slider.php:703 modules/cta/cta.php:345
+#: modules/subscribe-form/subscribe-form.php:263
+msgid "Padding"
+msgstr "Отступ"
+
+#: includes/column-settings.php:279 includes/global-settings.php:103
+#: includes/module-settings.php:62 includes/row-settings.php:582
+msgid "Responsive Layout"
+msgstr "Отзывчивый макет"
+
+#: includes/column-settings.php:283 includes/module-settings.php:66
+#: includes/row-settings.php:586 modules/slideshow/slideshow.php:290
+msgid "Display"
+msgstr "Отображение"
+
+#: includes/column-settings.php:285 includes/module-settings.php:68
+#: includes/row-settings.php:588
+msgid "Always"
+msgstr "Всегда"
+
+#: includes/column-settings.php:286 includes/module-settings.php:69
+#: includes/row-settings.php:589
+msgid "Large Devices Only"
+msgstr "Только на больших экранах"
+
+#: includes/column-settings.php:287 includes/module-settings.php:70
+#: includes/row-settings.php:590
+msgid "Large &amp; Medium Devices Only"
+msgstr "Только на больших и средних экранах"
+
+#: includes/column-settings.php:288 includes/module-settings.php:71
+#: includes/row-settings.php:591
+msgid "Medium Devices Only"
+msgstr "Только на средних экранах"
+
+#: includes/column-settings.php:289 includes/module-settings.php:72
+#: includes/row-settings.php:592
+msgid "Medium &amp; Small Devices Only"
+msgstr "Только на средних и маленьких экранах"
+
+#: includes/column-settings.php:290 includes/module-settings.php:73
+#: includes/row-settings.php:593
+msgid "Small Devices Only"
+msgstr "Только на маленьких экранах"
+
+#: includes/column-settings.php:292
+msgid "Choose whether to show or hide this column at different device sizes."
+msgstr "Выберите, при каких размерах экрана отображается эта колонка"
+
+#: includes/column-settings.php:299
+msgid "Medium Device Width"
+msgstr "Ширина на средних экранах"
+
+#: includes/column-settings.php:300
+msgid "The width of this column on medium devices such as tablets."
+msgstr "Ширина этой колонки на экранах средней ширины, например, планшетов."
+
+#: includes/column-settings.php:302 includes/column-settings.php:330
+#: modules/callout/callout.php:283
+#: modules/content-slider/content-slider.php:448 modules/cta/cta.php:167
+#: modules/heading/heading.php:117 modules/heading/heading.php:144
+#: modules/heading/heading.php:174
+msgid "Default"
+msgstr "По умолчанию"
+
+#: includes/column-settings.php:303 includes/column-settings.php:331
+#: modules/button/button.php:193 modules/callout/callout.php:284
+#: modules/content-slider/content-slider.php:449 modules/cta/cta.php:168
+#: modules/heading/heading.php:118 modules/heading/heading.php:145
+#: modules/heading/heading.php:175
+#: modules/social-buttons/social-buttons.php:74
+msgid "Custom"
+msgstr "Задать"
+
+#: includes/column-settings.php:316
+msgid "Custom Medium Device Width"
+msgstr "Задайте ширину для средних экранов"
+
+#: includes/column-settings.php:327
+msgid "Small Device Width"
+msgstr "Ширина на маленьких экранах"
+
+#: includes/column-settings.php:328
+msgid "The width of this column on small devices such as phones."
+msgstr "Ширина этой колонки на экранах малой ширины, например, телефонов."
+
+#: includes/column-settings.php:344
+msgid "Custom Small Device Width"
+msgstr "Задайте ширину для маленьких экранов"
+
+#: includes/column-settings.php:356 includes/module-settings.php:115
+#: includes/row-settings.php:603
+msgid "CSS Selectors"
+msgstr "CSS селекторы"
+
+#: includes/column-settings.php:360 includes/loop-settings.php:28
+#: includes/module-settings.php:119 includes/row-settings.php:607
+msgid "ID"
+msgstr "ID"
+
+#: includes/column-settings.php:361
+msgid ""
+"A unique ID that will be applied to this column's HTML. Must start with a "
+"letter and only contain dashes, underscores, letters or numbers. No spaces."
+msgstr ""
+"Уникальный ID для HTML кода этой колонки. Должен начинаться с буквы и "
+"состоять из тире, символов подчёркивания, латинских букв и цифр, без "
+"пробелов."
+
+#: includes/column-settings.php:368
+msgid "CSS Class"
+msgstr "CSS класс"
+
+#: includes/column-settings.php:369
+msgid ""
+"A class that will be applied to this column's HTML. Must start with a letter "
+"and only contain dashes, underscores, letters or numbers. Separate multiple "
+"classes with spaces."
+msgstr ""
+"Класс для HTML кода этой колонки. Должен начинаться с буквы и состоять из "
+"тире, символов подчёркивания, латинских букв и цифр. Возможно указание "
+"нескольких классов, разделённых пробелами."
+
+#: includes/field-form.php:28
+#, php-format
+msgctxt "%s stands for form field label."
+msgid "Edit %s"
+msgstr "Редактировать %s"
+
+#: includes/field-icon.php:2 includes/icon-selector.php:2
+msgid "Select Icon"
+msgstr "Выберите иконку"
+
+#: includes/field-icon.php:5 includes/field-photo.php:13
+msgid "Replace"
+msgstr "Заменить"
+
+#: includes/field-icon.php:7 includes/js-config.php:61
+msgid "Remove"
+msgstr "Убрать"
+
+#: includes/field-link.php:3
+msgid "Select"
+msgstr "Выбрать"
+
+#: includes/field-link.php:5
+msgid "Enter a post title to search."
+msgstr "Введите название записи для поиска."
+
+#: includes/field-link.php:6 includes/field-suggest.php:7
+msgid "Start typing..."
+msgstr "Начинайте печатать..."
+
+#: includes/field-link.php:7 includes/icon-selector.php:28
+#: includes/js-config.php:19 includes/settings.php:63
+#: includes/template-selector.php:102 includes/ui.php:11
+msgid "Cancel"
+msgstr "Отмена"
+
+#: includes/field-multiple-photos.php:8
+#, php-format
+msgid "1 Photo Selected"
+msgid_plural "%d Photos Selected"
+msgstr[0] "Выбрана %d фотография"
+msgstr[1] "Выбрано %d фотографии"
+msgstr[2] "Выбрано %d фотографий"
+
+#: includes/field-multiple-photos.php:13
+msgid "Create Gallery"
+msgstr "Создать галерею"
+
+#: includes/field-multiple-photos.php:14
+msgid "Edit Gallery"
+msgstr "Редактировать галерею"
+
+#: includes/field-multiple-photos.php:15
+msgid "Add Photos"
+msgstr "Добавить фотографии"
+
+#: includes/field-photo.php:3 includes/js-config.php:66
+msgid "Select Photo"
+msgstr "Выбрать фотографию"
+
+#: includes/field-video.php:3 includes/js-config.php:68
+msgid "Select Video"
+msgstr "Выбрать видео"
+
+#: includes/field-video.php:17
+msgid "Replace Video"
+msgstr "Заменить видео"
+
+#: includes/global-settings.php:7 includes/template-settings.php:7
+#: includes/user-template-settings.php:7 modules/accordion/accordion.php:110
+#: modules/button/button.php:59 modules/callout/callout.php:209
+#: modules/contact-form/contact-form.php:58
+#: modules/content-slider/content-slider.php:190
+#: modules/content-slider/content-slider.php:314 modules/cta/cta.php:67
+#: modules/gallery/gallery.php:213 modules/heading/heading.php:26
+#: modules/html/html.php:26 modules/icon-group/icon-group.php:128
+#: modules/icon/icon.php:27 modules/map/map.php:26 modules/photo/photo.php:368
+#: modules/pricing-table/pricing-table.php:87
+#: modules/rich-text/rich-text.php:26 modules/separator/separator.php:27
+#: modules/sidebar/sidebar.php:27 modules/slideshow/slideshow.php:256
+#: modules/social-buttons/social-buttons.php:64
+#: modules/subscribe-form/subscribe-form.php:86 modules/tabs/tabs.php:77
+#: modules/testimonials/testimonials.php:30
+#: modules/testimonials/testimonials.php:200 modules/video/video.php:76
+#: modules/widget/widget.php:64 modules/woocommerce/woocommerce.php:50
+msgid "General"
+msgstr "Общие"
+
+#: includes/global-settings.php:8
+msgid "Note: These settings apply to all posts and pages."
+msgstr "Внимание: эти настройки действуют для всех записей и страниц."
+
+#: includes/global-settings.php:11
+msgid "Default Page Heading"
+msgstr "Стандартный заголовок страницы"
+
+#: includes/global-settings.php:15
+msgctxt ""
+"General settings form field label. Intended meaning: \"Show page heading?\""
+msgid "Show"
+msgstr "Отображать"
+
+#: includes/global-settings.php:26
+msgid ""
+"Choosing no will hide the default theme heading for the \"Page\" post type. "
+"You will also be required to enter some basic CSS for this to work if you "
+"choose no."
+msgstr ""
+"Если вы выберите &laquo;нет&raquo;, стандартный заголовок для материалов "
+"типа «Страница» будет спрятан. В этом случае вам также будет необходимо "
+"добавить немного базового CSS для корректной работы."
+
+#: includes/global-settings.php:30
+msgid "CSS Selector"
+msgstr "CSS селектор"
+
+#: includes/global-settings.php:32
+msgid "Enter a CSS selector for the default page heading to hide it."
+msgstr ""
+"Укажите CSS селектор стандартного заголовка страницы, чтобы спрятать его."
+
+#: includes/global-settings.php:37
+msgid "Rows"
+msgstr "Строки"
+
+#: includes/global-settings.php:57
+msgid "Max Width"
+msgstr "Максимальная ширина"
+
+#: includes/global-settings.php:62
+msgid ""
+"All rows will default to this width. You can override this and make a row "
+"full width in the settings for each row."
+msgstr ""
+"Значение ширины строк по умолчанию. Вы можете переписать это значение и "
+"задать строке полную ширину в настройках каждой строки."
+
+#: includes/global-settings.php:66
+msgid "Default Row Width"
+msgstr "Стандартная ширина строки"
+
+#: includes/global-settings.php:69 includes/global-settings.php:83
+#: includes/row-settings.php:19 includes/row-settings.php:37
+#: includes/row-settings.php:179
+msgid "Fixed"
+msgstr "Фиксированная"
+
+#: includes/global-settings.php:70 includes/global-settings.php:84
+#: includes/row-settings.php:20 includes/row-settings.php:38
+#: modules/button/button.php:192 modules/callout/callout.php:585
+msgid "Full Width"
+msgstr "Полной ширины"
+
+#: includes/global-settings.php:80
+msgid "Default Row Content Width"
+msgstr "Стандартная ширина содержимого строки"
+
+#: includes/global-settings.php:107
+msgctxt ""
+"General settings form field label. Intended meaning: \"Responsive layout "
+"enabled?\""
+msgid "Enabled"
+msgstr "Включен"
+
+#: includes/global-settings.php:121
+msgctxt ""
+"General settings form field label. Intended meaning: \"Enable auto spacing "
+"for responsive layouts?\""
+msgid "Enable Auto Spacing"
+msgstr "Включить авто-отступы"
+
+#: includes/global-settings.php:127
+msgid ""
+"When auto spacing is enabled, the builder will automatically adjust the "
+"margins and padding in your layout once the small device breakpoint is "
+"reached. Most users will want to leave this enabled."
+msgstr ""
+"Когда авто-отступы включены, конструктор автоматически настроит поля и "
+"отступы вашего макета для устройств с маленьким экраном. Для большинства "
+"пользователей эту опцию следует оставить включенной."
+
+#: includes/global-settings.php:131
+msgid "Medium Device Breakpoint"
+msgstr "Ширина, принимаемая за средний экран"
+
+#: includes/global-settings.php:136
+msgid ""
+"The browser width at which the layout will adjust for medium devices such as "
+"tablets."
+msgstr ""
+"Ширина браузера, при которой макет приспособится к экрану средней ширины, "
+"например, планшета."
+
+#: includes/global-settings.php:140
+msgid "Small Device Breakpoint"
+msgstr "Ширина, принимаемая за малый экран"
+
+#: includes/global-settings.php:145
+msgid ""
+"The browser width at which the layout will adjust for small devices such as "
+"phones."
+msgstr ""
+"Ширина браузера, при которой макет приспособится к экрану маленькой ширины, "
+"например, телефона."
+
+#: includes/icon-selector.php:5
+msgctxt "Select option for showing all icon libraries."
+msgid "All Libraries"
+msgstr "Все библиотеки"
+
+#: includes/js-config.php:18
+msgid "What would you like to do?"
+msgstr "Что вы хотите сделать?"
+
+#: includes/js-config.php:20
+msgid "Change Template"
+msgstr "Изменить шаблон"
+
+#: includes/js-config.php:21
+msgid ""
+"Warning! Changing the template will replace your existing layout. Do you "
+"really want to do this?"
+msgstr ""
+"Внимание! Изменение шаблона заменит существующий макет. Вы действительно "
+"хотите сделать это?"
+
+#: includes/js-config.php:22
+msgid "Column"
+msgstr "Колонка"
+
+#: includes/js-config.php:24
+msgid ""
+"Please select either a background layout or content layout before submitting."
+msgstr ""
+"Пожалуйста, укахите либо макет фона, либо макет содержимого перед "
+"подтверждением."
+
+#: includes/js-config.php:25
+msgid "Remove Account"
+msgstr "Удалить учетную запись"
+
+#: includes/js-config.php:26
+msgid ""
+"Are you sure you want to remove this account? Other modules that are "
+"connected to it will be affected."
+msgstr ""
+"Вы уверены, что хотите удалить эту учетную запись? Другие модули, которые "
+"подключаются к ней будут затронуты."
+
+#: includes/js-config.php:27
+msgid "Do you really want to delete this item?"
+msgstr "Вы действительно хотите удалить этот элемент?"
+
+#: includes/js-config.php:28
+msgid ""
+"Do you really want to delete this module? All content data will be "
+"permanently deleted."
+msgstr ""
+"Вы действительно хотите удалить этот модуль? Вся содержащаяся в нём "
+"информация будет потеряна."
+
+#: includes/js-config.php:29
+msgid ""
+"Do you really want to delete this row? All content data will be permanently "
+"deleted."
+msgstr ""
+"Вы действительно хотите удалить эту строку ? Вся содержащаяся в ней "
+"информация будет потеряна."
+
+#: includes/js-config.php:31
+msgid "Discard Draft"
+msgstr "Отказаться от черновика"
+
+#: includes/js-config.php:32
+msgid ""
+"Do you really want to discard this draft? All of your changes that are not "
+"published will be lost."
+msgstr ""
+"Вы действительно хотите отказаться от этого черновика? Все неопубликованные "
+"изменения будет потеряны."
+
+#: includes/js-config.php:33 includes/ui.php:44
+msgid "Done"
+msgstr "Готово"
+
+#: includes/js-config.php:34
+msgid "Save Draft"
+msgstr "Сохранить черновик"
+
+#: includes/js-config.php:35
+msgctxt "Duplicate page/post action label."
+msgid "Duplicate"
+msgstr "Дублировать"
+
+#: includes/js-config.php:36
+msgid "Duplicate This Page"
+msgstr "Дублировать эту страницу"
+
+#: includes/js-config.php:37
+msgid "Duplicate This Template"
+msgstr "Дублировать этот макет"
+
+#: includes/js-config.php:38
+msgid "Edit Global Settings"
+msgstr "Редактировать глобальные настройки"
+
+#: includes/js-config.php:39
+msgid "Drop a row layout or module to get started!"
+msgstr "Перенесите сюда макет строки или модуль для начала работы!"
+
+#: includes/js-config.php:40
+msgid ""
+"Beaver Builder caught the following JavaScript error. If Beaver Builder is "
+"not functioning as expected the cause is most likely this error. Please help "
+"us by disabling all plugins and testing Beaver Builder while reactivating "
+"each to determine if the issue is related to a third party plugin."
+msgstr ""
+"Beaver Builder столкнулся со следующей ошибкой JavaScript. Если Beaver "
+"Builder не функционирует как положено, скорее всего, причина в ней. "
+"Пожалуйста, помогите нам решить её, отключив все прочие плагины и продолжая "
+"тестировать работу Beaver Builder, поочерёдно включая их. Так можно будет "
+"определить, связана ли ошибка со сторонним плагином."
+
+#: includes/js-config.php:41
+msgid "Full Size"
+msgstr "Полного размера"
+
+#: includes/js-config.php:42
+msgid "Get Help"
+msgstr "Получить помощь"
+
+#: includes/js-config.php:43
+msgid "Getting Started Video"
+msgstr "Видео для начала работы"
+
+#: includes/js-config.php:44
+msgid "\"{message}\" on line {line} of {file}."
+msgstr "«{message}» на строке {line} в файле {file}."
+
+#: includes/js-config.php:45
+msgid "Insert"
+msgstr "Вставить"
+
+#: includes/js-config.php:46
+msgid "Large"
+msgstr "Большой"
+
+#: includes/js-config.php:47
+msgid "Manage Templates"
+msgstr "Управление шаблонами"
+
+#: includes/js-config.php:48
+msgid "Medium"
+msgstr "Средний"
+
+#: includes/js-config.php:49
+msgid "Module"
+msgstr "Модуль"
+
+#: includes/js-config.php:50
+msgid "Move"
+msgstr "Передвинуть"
+
+#: includes/js-config.php:51
+msgid "New Column"
+msgstr "Новая колонка"
+
+#: includes/js-config.php:52
+msgid "New Row"
+msgstr "Новая строка"
+
+#: includes/js-config.php:53
+msgid "No results found."
+msgstr "Не найдено результатов."
+
+#: includes/js-config.php:54
+msgid "No Thanks"
+msgstr "Нет, спасибо"
+
+#: includes/js-config.php:55
+msgid "OK"
+msgstr "Хорошо"
+
+#: includes/js-config.php:56 modules/photo/photo.php:454
+msgid "Photo Page"
+msgstr "Страница фотографии"
+
+#: includes/js-config.php:57
+msgid "Photo Selected"
+msgstr "Выбранная фотография"
+
+#: includes/js-config.php:58
+msgid "Photos Selected"
+msgstr "Выбранные фотографии"
+
+#: includes/js-config.php:59 modules/subscribe-form/includes/frontend.php:15
+msgid "Please Wait..."
+msgstr "Пожалуйста, подождите"
+
+#: includes/js-config.php:60
+msgid "Publish Changes"
+msgstr "Опубликовать изменения"
+
+#: includes/js-config.php:62
+msgid "Row"
+msgstr "Строка"
+
+#: includes/js-config.php:63 includes/row-settings.php:6
+msgid "Row Settings"
+msgstr "Настройки строки"
+
+#: includes/js-config.php:64
+msgid "Save Core Template"
+msgstr "Сохранить базовый шаблон"
+
+#: includes/js-config.php:65 includes/ui.php:10
+#: includes/user-template-settings.php:4
+msgid "Save Template"
+msgstr "Сохранить шаблон"
+
+#: includes/js-config.php:67
+msgid "Select Photos"
+msgstr "Выбрать фотографии"
+
+#: includes/js-config.php:70
+msgid "Please select an account before saving."
+msgstr "Пожалуйста, выберите учетную запись перед сохранением."
+
+#: includes/js-config.php:71
+msgid "Please connect an account before saving."
+msgstr "Пожалуйста, подключите учетную запись перед сохранением."
+
+#: includes/js-config.php:72
+msgid "Please select a list before saving."
+msgstr "Пожалуйста, выберите список перед сохранением."
+
+#: includes/js-config.php:73
+msgid "Take a Tour"
+msgstr "Обзор функций"
+
+#: includes/js-config.php:74
+msgid "Append New Layout"
+msgstr "Добавить к текущему макету"
+
+#: includes/js-config.php:75
+msgid "Replace Existing Layout"
+msgstr "Заменить текущий макет"
+
+#: includes/js-config.php:76
+msgid "Template Saved!"
+msgstr "Шаблон сохранен!"
+
+#: includes/js-config.php:77
+msgid "Thumbnail"
+msgstr "Миниатюра"
+
+#: includes/js-config.php:78
+msgid "Next"
+msgstr "Дальше"
+
+#: includes/js-config.php:79
+msgid "Get Started"
+msgstr "Начать работу"
+
+#: includes/js-config.php:80
+msgid "Choose a Template"
+msgstr "Выбор макета"
+
+#: includes/js-config.php:81
+msgid ""
+"Get started by choosing a layout template to customize, or build a page from "
+"scratch by selecting the blank layout template."
+msgstr ""
+"Начните работу, выбрав шаблон для редактирования, или начните с чистого "
+"листа, выбрав пустой шаблон."
+
+#: includes/js-config.php:82
+msgid "Add Rows"
+msgstr "Добавление строк"
+
+#: includes/js-config.php:83
+msgid ""
+"Add multi-column rows, adjust spacing, add backgrounds and more by dragging "
+"and dropping row layouts onto the page."
+msgstr ""
+"Добавляйте строки из нескольких столбцов, редактируйте отступы, меняйте фон "
+"и вносите прочие изменения, перетаскивая и отпуская шаблоны строк на "
+"страницу."
+
+#: includes/js-config.php:84 includes/ui.php:49
+msgid "Add Content"
+msgstr "Добавление элементов"
+
+#: includes/js-config.php:85
+msgid ""
+"Add new content by dragging and dropping modules or widgets into your row "
+"layouts or to create a new row layout."
+msgstr ""
+"Добавляйте новые элементы, перетаскивая и отпуская модули или виджеты в "
+"макеты существующих строк или в пустое место, чтобы создать новые строки."
+
+#: includes/js-config.php:86
+msgid "Edit Content"
+msgstr "Редактирование элементов"
+
+#: includes/js-config.php:87
+msgid ""
+"Move your mouse over rows, columns or modules to edit and interact with them."
+msgstr ""
+"Наведите курсор на строки, колонки или модули, чтобы редактировать и "
+"управлять ими."
+
+#: includes/js-config.php:88
+msgid ""
+"Use the action buttons to perform actions such as moving, editing, "
+"duplicating or deleting rows, columns and modules."
+msgstr ""
+"Используйте иконки действий для перемещения, редактирования, дублирования, "
+"доступа к настройкам отдельных колонок, или удаления строк, колонок и "
+"модулей."
+
+#: includes/js-config.php:89
+msgid "Add More Content"
+msgstr "Добавление новых элементов"
+
+#: includes/js-config.php:90
+msgid ""
+"Use the Add Content button to open the content panel and add new row "
+"layouts, modules or widgets."
+msgstr ""
+"Используйте кнопку «Добавить элементы», чтобы открыть панель элементов и "
+"добавлять новые строки и содержимое."
+
+#: includes/js-config.php:91
+msgid "Change Templates"
+msgstr "Изменение шаблонов"
+
+#: includes/js-config.php:92
+msgid ""
+"Use the Templates button to pick a new template or append one to your "
+"layout. Appending will insert a new template at the end of your existing "
+"page content."
+msgstr ""
+"Используйте кнопку «Шаблоны», чтобы выбрать новый шаблон или добавить новый "
+"шаблон к текущему макету. Добавление разместит новый шаблон в конце "
+"существующей страницы."
+
+#: includes/js-config.php:93
+msgid "Helpful Tools"
+msgstr "Полезные инструменты"
+
+#: includes/js-config.php:94
+msgid ""
+"The Tools button lets you duplicate a page, save a template or edit the "
+"global settings."
+msgstr ""
+"Кнопка «Инструменты» позволяет дублировать страницу, сохранять шаблон и "
+"редактировать глобальные настройки."
+
+#: includes/js-config.php:95
+msgid "Publish Your Changes"
+msgstr "Публикация изменений"
+
+#: includes/js-config.php:96
+msgid ""
+"Once you're finished, click the Done button to publish your changes, save a "
+"draft or revert back to the last published state."
+msgstr ""
+"Закончив редактирование, нажмите кнопку «Готово», чтобы опубликовать "
+"изменения, сохранить черновик, или вернуться к последней сохраненной версии."
+
+#: includes/js-config.php:97
+msgid "Let's Get Building!"
+msgstr "Запустить конструктор!"
+
+#: includes/js-config.php:98
+msgid ""
+"Now that you know the basics, you're ready to start building! If at any time "
+"you need help, click the help icon in the upper right corner to access the "
+"help menu. Happy building!"
+msgstr ""
+"Теперь, ознакомившись с основами, вы готовы приступить к работе. Если вам "
+"понадобится помощь, нажмите кнопку «Помощь» в правом верхнем углу для "
+"доступа к меню подсказок. Успешной работы!"
+
+#: includes/js-config.php:99
+msgid ""
+"The settings you are currently editing will not be saved if you navigate "
+"away from this page."
+msgstr ""
+"Настройки, которые вы редактируете сейчас, не будут сохранены при закрытии "
+"этой страницы."
+
+#: includes/js-config.php:100
+msgid "View the Knowledge Base"
+msgstr "Просмотреть базу знаний"
+
+#: includes/js-config.php:101
+msgid "Visit the Forums"
+msgstr "Посетить форум"
+
+#: includes/js-config.php:102
+msgid "Watch the Video"
+msgstr "Посмотреть видео"
+
+#: includes/js-config.php:103
+msgid ""
+"Welcome! It looks like this might be your first time using the builder. "
+"Would you like to take a tour?"
+msgstr ""
+"Добро пожаловать! Похоже, это ваш первый визит в конструктор страниц. Хотите "
+"ознакомиться с функциями?"
+
+#: includes/js-config.php:104
+msgid "Yes Please!"
+msgstr "Да, пожалуйста!"
+
+#: includes/loop-settings.php:20
+msgid "Post Type"
+msgstr "Тип материала"
+
+#: includes/loop-settings.php:26
+msgid "Order By"
+msgstr "Сортировка"
+
+#: includes/loop-settings.php:29 modules/post-grid/post-grid.php:155
+#: modules/woocommerce/woocommerce.php:189
+msgid "Date"
+msgstr "Дата"
+
+#: includes/loop-settings.php:30
+msgid "Date Last Modified"
+msgstr "Дата последней редактуры"
+
+#: includes/loop-settings.php:31 modules/pricing-table/pricing-table.php:90
+#: modules/pricing-table/pricing-table.php:94
+msgid "Title"
+msgstr "Название"
+
+#: includes/loop-settings.php:32 modules/post-grid/post-grid.php:146
+msgid "Author"
+msgstr "Автор"
+
+#: includes/loop-settings.php:33
+msgid "Comment Count"
+msgstr "Количество комментариев"
+
+#: includes/loop-settings.php:34
+msgid "Menu Order"
+msgstr "Порядок в меню"
+
+#: includes/loop-settings.php:35
+msgid "Random"
+msgstr "Случайный"
+
+#: includes/loop-settings.php:42
+msgid "Order"
+msgstr "Порядок"
+
+#: includes/loop-settings.php:44 modules/woocommerce/woocommerce.php:199
+msgid "Descending"
+msgstr "Убывание"
+
+#: includes/loop-settings.php:45 modules/woocommerce/woocommerce.php:198
+msgid "Ascending"
+msgstr "Возрастание"
+
+#: includes/loop-settings.php:52
+msgctxt "How many posts to skip."
+msgid "Offset"
+msgstr "Пропуск"
+
+#: includes/loop-settings.php:55
+msgid "Skip this many posts that match the specified criteria."
+msgstr "Столько постов, соответствующих критерию, будет пропущено."
+
+#: includes/loop-settings.php:62
+msgid "Filter"
+msgstr "Фильтр"
+
+#: includes/loop-settings.php:73
+#, php-format
+msgid "Enter a comma separated list of %s. Only these %s will be shown."
+msgstr ""
+"Введите разделенный запятыми список элементов типа «%s.». Только элементы "
+"типа «%s.» будут показаны."
+
+#: includes/loop-settings.php:86
+#, php-format
+msgid ""
+"Enter a comma separated list of %s. Only posts with these %s will be shown."
+msgstr ""
+"Введите разделенный запятыми список (%s). Будут показаны только материалы, "
+"соответствующие этому параметру (%s)."
+
+#: includes/loop-settings.php:100
+msgid "Authors"
+msgstr "Авторы"
+
+#: includes/loop-settings.php:101
+msgid ""
+"Enter a comma separated list of authors usernames. Only posts with these "
+"authors will be shown."
+msgstr ""
+"Введите разделенный запятыми список имен пользователей. Будут показаны "
+"только материалы этих пользователей."
+
+#: includes/module-settings.php:75
+msgid "Choose whether to show or hide this module at different device sizes."
+msgstr "Выберите, показывать ли этот модуль в зависимости от размера экрана."
+
+#: includes/module-settings.php:83
+msgid "Animation"
+msgstr "Анимация"
+
+#: includes/module-settings.php:89
+msgctxt "Animation style."
+msgid "None"
+msgstr "Нет"
+
+#: includes/module-settings.php:90
+msgctxt "Animation style."
+msgid "Fade In"
+msgstr "Проявление"
+
+#: includes/module-settings.php:91
+msgctxt "Animation style."
+msgid "Slide Left"
+msgstr "Выезд справа"
+
+#: includes/module-settings.php:92
+msgctxt "Animation style."
+msgid "Slide Right"
+msgstr "Выезд слева"
+
+#: includes/module-settings.php:93
+msgctxt "Animation style."
+msgid "Slide Up"
+msgstr "Выезд вверх"
+
+#: includes/module-settings.php:94
+msgctxt "Animation style."
+msgid "Slide Down"
+msgstr "Выезд вниз"
+
+#: includes/module-settings.php:102
+#: modules/content-slider/content-slider.php:229
+#: modules/testimonials/testimonials.php:91
+msgid "Delay"
+msgstr "Задержка"
+
+#: includes/module-settings.php:106 includes/row-settings.php:266
+#: includes/row-settings.php:297 modules/content-slider/content-slider.php:233
+#: modules/content-slider/content-slider.php:250
+#: modules/slideshow/slideshow.php:385 modules/slideshow/slideshow.php:410
+#: modules/slideshow/slideshow.php:581
+#: modules/testimonials/testimonials.php:95
+#: modules/testimonials/testimonials.php:112
+msgctxt "Value unit for form field of time in seconds. Such as: \"5 seconds\""
+msgid "seconds"
+msgstr "сек."
+
+#: includes/module-settings.php:107
+msgid "The amount of time in seconds before this animation starts."
+msgstr "Время в секундах до начала этой анимации."
+
+#: includes/module-settings.php:120
+msgid ""
+"A unique ID that will be applied to this module's HTML. Must start with a "
+"letter and only contain dashes, underscores, letters or numbers. No spaces."
+msgstr ""
+"Уникальный ID для присвоения HTML коду этого модуля. Должен начинаться с "
+"буквы и содержать только дефисы, знаки подчеркивания, цифры и латинские "
+"буквы, без пробелов."
+
+#: includes/module-settings.php:127 includes/row-settings.php:615
+msgid "Class"
+msgstr "Класс"
+
+#: includes/module-settings.php:128
+msgid ""
+"A class that will be applied to this module's HTML. Must start with a letter "
+"and only contain dashes, underscores, letters or numbers. Separate multiple "
+"classes with spaces."
+msgstr ""
+"Класс, для HTML кода этого модуля. Должен начинаться с буквы и содержать "
+"только дефисы, знаки подчеркивания, латинские буквы или цифры. Несколько "
+"классов разделяются пробелами."
+
+#: includes/row-settings.php:16 modules/button/button.php:188
+#: modules/content-slider/content-slider.php:483
+msgid "Width"
+msgstr "Ширина"
+
+#: includes/row-settings.php:27
+msgid ""
+"Full width rows span the width of the page from edge to edge. Fixed rows are "
+"no wider than the Row Max Width set in the Global Settings."
+msgstr ""
+"Строки полной ширины занимают всё пространство страницы от края до края. "
+"Фиксированные строки не превышают заданной максимальной ширины страницы."
+
+#: includes/row-settings.php:34
+msgid "Content Width"
+msgstr "Ширина содержимого"
+
+#: includes/row-settings.php:40
+msgid ""
+"Full width content spans the width of the page from edge to edge. Fixed "
+"content is no wider than the Row Max Width set in the Global Settings."
+msgstr ""
+"Содержимое полной ширины охватывает ширину страницы от края до края. "
+"Содержимое фиксированной ширины не выходит за пределы максимальной ширины "
+"страницы, которую можно задать в глобальных параметрах."
+
+#: includes/row-settings.php:61
+msgid "Background"
+msgstr "Фон"
+
+#: includes/row-settings.php:68 modules/content-slider/content-slider.php:338
+msgctxt "Background type."
+msgid "None"
+msgstr "Нет"
+
+#: includes/row-settings.php:69
+msgctxt "Background type."
+msgid "Color"
+msgstr "Цвет"
+
+#: includes/row-settings.php:70
+msgctxt "Background type."
+msgid "Photo"
+msgstr "Фото"
+
+#: includes/row-settings.php:71
+msgctxt "Background type."
+msgid "Video"
+msgstr "Видео"
+
+#: includes/row-settings.php:73
+msgctxt "Background type."
+msgid "Slideshow"
+msgstr "Слайд-шоу"
+
+#: includes/row-settings.php:77
+msgctxt "Background type."
+msgid "Parallax"
+msgstr "Параллакс"
+
+#: includes/row-settings.php:129 modules/content-slider/content-slider.php:359
+msgid "Background Photo"
+msgstr "Фоновая картинка"
+
+#: includes/row-settings.php:133 includes/row-settings.php:321
+#: modules/callout/callout.php:316 modules/callout/callout.php:332
+#: modules/callout/callout.php:336
+#: modules/content-slider/content-slider.php:335
+#: modules/content-slider/content-slider.php:404
+#: modules/content-slider/content-slider.php:745 modules/photo/photo.php:25
+#: modules/photo/photo.php:392
+msgid "Photo"
+msgstr "Фотография"
+
+#: includes/row-settings.php:140
+msgid "Repeat"
+msgstr "Повтор"
+
+#: includes/row-settings.php:143
+msgctxt "Background repeat."
+msgid "None"
+msgstr "Нет"
+
+#: includes/row-settings.php:144
+msgctxt "Background repeat."
+msgid "Tile"
+msgstr "Плитка"
+
+#: includes/row-settings.php:145
+msgctxt "Background repeat."
+msgid "Horizontal"
+msgstr "По горизонтали"
+
+#: includes/row-settings.php:146
+msgctxt "Background repeat."
+msgid "Vertical"
+msgstr "По вертикали"
+
+#: includes/row-settings.php:148
+msgid ""
+"Repeat applies to how the image should display in the row background. "
+"Choosing none will display the image as uploaded. Tile will repeat the image "
+"as many times as needed to fill the row horizontally and vertically. You can "
+"also specify the image to only repeat horizontally or vertically."
+msgstr ""
+"Тип повтора определяет отображение фона строки. При отсутствии повтора "
+"отображается исходная фотография,  «плитка» заполняет всё необходимое "
+"пространство по горизонтали и вертикали. Вы также можете выбрать повтор лишь "
+"в одном направлении."
+
+#: includes/row-settings.php:158
+msgid "Left Top"
+msgstr "Слева сверху"
+
+#: includes/row-settings.php:159
+msgid "Left Center"
+msgstr "Слева по центру"
+
+#: includes/row-settings.php:160
+msgid "Left Bottom"
+msgstr "Слева снизу"
+
+#: includes/row-settings.php:161
+msgid "Right Top"
+msgstr "Справа сверку"
+
+#: includes/row-settings.php:162
+msgid "Right Center"
+msgstr "Справа по центру"
+
+#: includes/row-settings.php:163
+msgid "Right Bottom"
+msgstr "Справа снизу"
+
+#: includes/row-settings.php:164
+msgid "Center Top"
+msgstr "По центру сверху"
+
+#: includes/row-settings.php:165 modules/button/button.php:218
+#: modules/callout/callout.php:251
+#: modules/content-slider/content-slider.php:477 modules/cta/cta.php:126
+#: modules/heading/heading.php:90 modules/heading/heading.php:162
+#: modules/icon-group/icon-group.php:110 modules/icon/icon.php:133
+#: modules/photo/photo.php:418 modules/social-buttons/social-buttons.php:100
+msgid "Center"
+msgstr "По центру"
+
+#: includes/row-settings.php:166
+msgid "Center Bottom"
+msgstr "По центру снизу"
+
+#: includes/row-settings.php:168
+msgid "Position will tell the image where it should sit in the row background."
+msgstr "Расположение фоновой картинки"
+
+#: includes/row-settings.php:175
+msgid "Attachment"
+msgstr "Привязка"
+
+#: includes/row-settings.php:178 modules/post-grid/post-grid.php:75
+msgid "Scroll"
+msgstr "Прокрутка"
+
+#: includes/row-settings.php:181
+msgid ""
+"Attachment will specify how the image reacts when scrolling a page. When "
+"scrolling is selected, the image will scroll with page scrolling. This is "
+"the default setting. Fixed will allow the image to scroll within the row "
+"background if fill is selected in the scale setting."
+msgstr ""
+"Привязка определяет, как изображение реагирует при прокрутке страницы. При "
+"выборе «прокрутки» изображение будет двигаться вместе со страницей. Это "
+"параметр по умолчанию. «Закрепленное» изображение будет прокручиваться "
+"внутри строки, если для заполнения выбран параметр «вместить»."
+
+#: includes/row-settings.php:188
+msgid "Scale"
+msgstr "Заполнение"
+
+#: includes/row-settings.php:191
+msgctxt "Background scale."
+msgid "None"
+msgstr "Нет"
+
+#: includes/row-settings.php:192
+msgid "Fit"
+msgstr "Вместить"
+
+#: includes/row-settings.php:193
+msgid "Fill"
+msgstr "Заполнить"
+
+#: includes/row-settings.php:195
+msgid ""
+"Scale applies to how the image should display in the row background. You can "
+"select either fill or fit to the row background."
+msgstr ""
+"Заполнение определяет размер фоновой картинки: исходный, умещающийся в "
+"пределах строки, или полностью заполняющий строку."
+
+#: includes/row-settings.php:203
+msgid "Background Video"
+msgstr "Фоновое видео"
+
+#: includes/row-settings.php:207 modules/content-slider/content-slider.php:336
+#: modules/video/video.php:19 modules/video/video.php:100
+msgid "Video"
+msgstr "Видео"
+
+#: includes/row-settings.php:208
+msgid ""
+"An HTML5 video to use as the background of this row. Supported types are "
+"MP4, WebM and Ogg."
+msgstr ""
+"HTML5 видео для фона этой строки. Поддерживаемые форматы: MP4, WebM и Ogg."
+
+#: includes/row-settings.php:215
+msgid "Fallback Photo"
+msgstr "Замещающая картинка"
+
+#: includes/row-settings.php:216
+msgid "A photo that will be displayed if the video fails to load."
+msgstr "Картинка на случай, если видео на загрузится."
+
+#: includes/row-settings.php:224
+msgid "Background Slideshow"
+msgstr "Фоновое слайд-шоу"
+
+#: includes/row-settings.php:228 modules/gallery/gallery.php:234
+#: modules/slideshow/slideshow.php:263
+msgid "Source"
+msgstr "Источник"
+
+#: includes/row-settings.php:231 modules/gallery/gallery.php:237
+#: modules/photo/photo.php:378 modules/slideshow/slideshow.php:266
+#: modules/video/video.php:86
+msgid "Media Library"
+msgstr "Медиафайлы"
+
+#: includes/row-settings.php:234 modules/gallery/gallery.php:240
+#: modules/slideshow/slideshow.php:269
+msgid ""
+"Pull images from the WordPress media library or a gallery on your SmugMug "
+"site by inserting the RSS feed URL from SmugMug. The RSS feed URL can be "
+"accessed by using the get a link function in your SmugMug gallery."
+msgstr ""
+"Выберите изображения из медиа библиотеки Вордпресс, или укажите адрес RSS "
+"потока из вашего профиля на SmugMug. Для получения адреса RSS потока "
+"используйте функцию «получить ссылку» в вашей галерее SmugMug."
+
+#: includes/row-settings.php:249 modules/gallery/gallery.php:252
+#: modules/slideshow/slideshow.php:281
+msgid "Photos"
+msgstr "Фотографии"
+
+#: includes/row-settings.php:256 modules/gallery/gallery.php:256
+#: modules/slideshow/slideshow.php:285
+msgid "Feed URL"
+msgstr "Адрес потока"
+
+#: includes/row-settings.php:263 includes/row-settings.php:328
+#: modules/slideshow/slideshow.php:382
+msgid "Speed"
+msgstr "Скорость"
+
+#: includes/row-settings.php:273 modules/content-slider/content-slider.php:237
+#: modules/slideshow/slideshow.php:389
+#: modules/testimonials/testimonials.php:99
+msgid "Transition"
+msgstr "Переход"
+
+#: includes/row-settings.php:276
+msgctxt "Slideshow transition type."
+msgid "None"
+msgstr "Нет"
+
+#: includes/row-settings.php:277 modules/content-slider/content-slider.php:241
+#: modules/slideshow/slideshow.php:393
+#: modules/testimonials/testimonials.php:103
+msgid "Fade"
+msgstr "Исчезание"
+
+#: includes/row-settings.php:278 modules/slideshow/slideshow.php:394
+msgid "Ken Burns"
+msgstr "Метод Кена Бернса"
+
+#: includes/row-settings.php:279 modules/slideshow/slideshow.php:395
+msgid "Slide Horizontal"
+msgstr "Наплыв по горизонтали"
+
+#: includes/row-settings.php:280 modules/slideshow/slideshow.php:396
+msgid "Slide Vertical"
+msgstr "Наплыв по вертикали"
+
+#: includes/row-settings.php:281 modules/slideshow/slideshow.php:397
+msgid "Blinds"
+msgstr "Жалюзи"
+
+#: includes/row-settings.php:282 modules/slideshow/slideshow.php:398
+msgid "Bars"
+msgstr "Полоски"
+
+#: includes/row-settings.php:283 modules/slideshow/slideshow.php:399
+msgid "Random Bars"
+msgstr "Случайные полоски"
+
+#: includes/row-settings.php:284 modules/slideshow/slideshow.php:400
+msgid "Boxes"
+msgstr "Плитки"
+
+#: includes/row-settings.php:285 modules/slideshow/slideshow.php:401
+msgid "Random Boxes"
+msgstr "Случайные плитки"
+
+#: includes/row-settings.php:286 modules/slideshow/slideshow.php:402
+msgid "Boxes Grow"
+msgstr "Растущие плитки"
+
+#: includes/row-settings.php:294 modules/content-slider/content-slider.php:246
+#: modules/slideshow/slideshow.php:407
+#: modules/testimonials/testimonials.php:108
+msgid "Transition Speed"
+msgstr "Скорость перехода"
+
+#: includes/row-settings.php:304 modules/slideshow/slideshow.php:414
+msgid "Randomize Photos"
+msgstr "Перемешать фотографии"
+
+#: includes/row-settings.php:317
+msgid "Background Parallax"
+msgstr "Параллакс-эффект"
+
+#: includes/row-settings.php:331
+msgid "Fast"
+msgstr "Быстро"
+
+#: includes/row-settings.php:332
+msgctxt "Speed."
+msgid "Medium"
+msgstr "Средне"
+
+#: includes/row-settings.php:333
+msgid "Slow"
+msgstr "Медленно"
+
+#: includes/row-settings.php:342
+msgid "Background Overlay"
+msgstr "Наложение"
+
+#: includes/row-settings.php:346
+msgid "Overlay Color"
+msgstr "Цвет наложения"
+
+#: includes/row-settings.php:354
+msgid "Overlay Opacity"
+msgstr "Непрозрачность наложения"
+
+#: includes/row-settings.php:595
+msgid "Choose whether to show or hide this row at different device sizes."
+msgstr "Выберите, показывать ли эту строки в зависимости от размера экрана."
+
+#: includes/row-settings.php:608
+msgid ""
+"A unique ID that will be applied to this row's HTML. Must start with a "
+"letter and only contain dashes, underscores, letters or numbers. No spaces."
+msgstr ""
+"Уникальный ID для HTML кода этой строки. Должен начинаться с буквы и "
+"состоять из тире, символов подчёркивания, латинских букв и цифр, без "
+"пробелов."
+
+#: includes/row-settings.php:616
+msgid ""
+"A class that will be applied to this row's HTML. Must start with a letter "
+"and only contain dashes, underscores, letters or numbers. Separate multiple "
+"classes with spaces."
+msgstr ""
+"Класс для HTML кода этой строки. Должен начинаться с буквы и состоять из "
+"тире, символов подчёркивания, латинских букв и цифр. Возможно указание "
+"нескольких классов, разделённых пробелами."
+
+#: includes/service-settings.php:32
+msgid "Service"
+msgstr "Сервис"
+
+#: includes/settings.php:62
+msgid "Save"
+msgstr "Сохранить"
+
+#: includes/template-selector.php:3
+msgid "Layout Templates"
+msgstr "Шаблоны"
+
+#: includes/template-selector.php:8
+msgid "Home Pages"
+msgstr "Главные страницы"
+
+#: includes/template-selector.php:9
+msgid "Content Pages"
+msgstr "Внутренние страницы"
+
+#: includes/template-selector.php:13
+msgid "Your Templates"
+msgstr "Ваши шаблоны"
+
+#: includes/template-selector.php:47 includes/template-selector.php:77
+msgctxt "Template name."
+msgid "Blank"
+msgstr "Пустая"
+
+#: includes/template-selector.php:72
+msgid ""
+"You haven't saved any templates yet! To do so, create a layout and save it "
+"as a template under <strong>Tools &rarr; Save Template</strong>."
+msgstr ""
+"Вы пока не сохранили ни одного шаблона. Чтобы сделать это, создайте макет и "
+"сохраните его как шаблон, выбрав: <strong>Инструменты &rarr; Сохранить "
+"шаблон</strong>."
+
+#: includes/template-settings.php:14 includes/user-template-settings.php:15
+msgctxt "Template name."
+msgid "Name"
+msgstr "Название"
+
+#: includes/template-settings.php:18
+msgid "Image Filename"
+msgstr "Имя файла изображения"
+
+#: includes/template-settings.php:19
+msgid ""
+"The filename of the image such as \"thumb.jpg\" that resides in the \"img/"
+"templates/\" directory."
+msgstr ""
+"Имя файла изображения, например «kartinka.jpg», которое будет сохранено в "
+"папке «img/templates/»."
+
+#: includes/ui.php:7
+#, php-format
+msgid "Template: %s"
+msgstr "Шаблон: %s"
+
+#: includes/ui.php:23
+msgid "Page Builder Demo"
+msgstr "Демо-версия Конструктора страниц"
+
+#: includes/ui.php:40
+msgid "Buy Now!"
+msgstr "Купить сейчас!"
+
+#: includes/ui.php:42
+msgid "Upgrade!"
+msgstr "Сделать апгрейд!"
+
+#: includes/ui.php:45
+msgid "Tools"
+msgstr "Инструменты"
+
+#: includes/ui.php:67
+msgid "Row Layouts"
+msgstr "Шаблоны строк"
+
+#: includes/ui.php:71
+msgid "1 Column"
+msgstr "1 колонка"
+
+#: includes/ui.php:72
+msgid "2 Columns"
+msgstr "2 колонки"
+
+#: includes/ui.php:73
+msgid "3 Columns"
+msgstr "3 колонки"
+
+#: includes/ui.php:74
+msgid "4 Columns"
+msgstr "4 колонки"
+
+#: includes/ui.php:75
+msgid "5 Columns"
+msgstr "5 колонок"
+
+#: includes/ui.php:76
+msgid "6 Columns"
+msgstr "6 колонок"
+
+#: includes/ui.php:77
+msgid "Left Sidebar"
+msgstr "Боковая панель слева"
+
+#: includes/ui.php:78
+msgid "Right Sidebar"
+msgstr "Боковая панель справа"
+
+#: includes/ui.php:79
+msgid "Left &amp; Right Sidebar"
+msgstr "Боковые панели слева и справа"
+
+#: includes/updater/classes/class-fl-updater.php:107
+msgid "<strong>UPDATE UNAVAILABLE!</strong>"
+msgstr "<strong>ОБНОВЛЕНИЕ НЕДОСТУПНО!</strong>"
+
+#: includes/updater/classes/class-fl-updater.php:109
+msgid "Please subscribe to enable automatic updates for this plugin."
+msgstr "Пожалуйста, подпишитесь для автоматического обновления этого плагина."
+
+#: includes/updater/classes/class-fl-updater.php:111
+#: includes/updater/includes/form.php:6
+msgid "Subscribe Now"
+msgstr "Подписаться сейчас"
+
+#: includes/updater/includes/form.php:5
+msgid ""
+"UPDATES UNAVAILABLE! Please subscribe or enter your licence key below to "
+"enable automatic updates."
+msgstr ""
+"ОБНОВЛЕНИЯ НЕДОСТУПНЫ! Пожалуйста, подпишитесь или введите ваш лицензионный "
+"ключ, чтобы включить автоматические обновления."
+
+#: includes/updater/includes/form.php:11
+msgid "Updates &amp; Support Subscription"
+msgstr "Подписка на обновление и поддержку"
+
+#: includes/updater/includes/form.php:14
+msgid "Active!"
+msgstr "Активна!"
+
+#: includes/updater/includes/form.php:16
+msgid "Not Active!"
+msgstr "Не активна!"
+
+#: includes/updater/includes/form.php:22
+msgid "Email address saved!"
+msgstr "Email сохранен!"
+
+#: includes/updater/includes/form.php:27
+#, php-format
+msgid "Enter your <a%s>licence key</a> to enable remote updates and support."
+msgstr ""
+"Введите ваш <a%s>лицензионный ключ</a> для включения удаленного обновления и "
+"поддержки."
+
+#: includes/updater/includes/form.php:39
+msgid "Save Subscription Settings"
+msgstr "Сохранить настройки подписки"
+
+#: includes/user-template-settings.php:8
+msgid ""
+"Save the current layout as a template that can be reused under "
+"<strong>Templates &rarr; Your Templates</strong>."
+msgstr ""
+"Сохранить текущий макет как шаблон, для дальнейшего использования через меню "
+"<strong>Шаблоны &rarr; Ваши шаблоны</strong>."
+
+#: modules/accordion/accordion.php:14
+msgid "Accordion"
+msgstr "Гармошка"
+
+#: modules/accordion/accordion.php:15
+msgid "Display a collapsible accordion of items."
+msgstr "Отображает складную «гармошку» элементов."
+
+#: modules/accordion/accordion.php:28 modules/tabs/tabs.php:28
+msgid "Items"
+msgstr "Элементы"
+
+#: modules/accordion/accordion.php:35 modules/tabs/tabs.php:35
+msgid "Item"
+msgstr "Элемент"
+
+#: modules/accordion/accordion.php:52 modules/tabs/tabs.php:61
+msgid "Border Color"
+msgstr "Цвет рамки"
+
+#: modules/accordion/accordion.php:62
+msgid "Label Size"
+msgstr "Размер ярлыка"
+
+#: modules/accordion/accordion.php:65
+msgctxt "Label size."
+msgid "Small"
+msgstr "Маленький"
+
+#: modules/accordion/accordion.php:66
+msgctxt "Label size."
+msgid "Medium"
+msgstr "Средний"
+
+#: modules/accordion/accordion.php:67
+msgctxt "Label size."
+msgid "Large"
+msgstr "Большой"
+
+#: modules/accordion/accordion.php:75
+msgid "Item Spacing"
+msgstr "Отступ между элементами"
+
+#: modules/accordion/accordion.php:86
+msgid "Collapse Inactive"
+msgstr "Свернуть неактивные"
+
+#: modules/accordion/accordion.php:92
+msgid ""
+"Choosing yes will keep only one item open at a time. Choosing no will allow "
+"multiple items to be open at the same time."
+msgstr ""
+"Если выбрано «да», элементы открываются по одному. Если выбрано «нет», может "
+"быть открыто сразу несколько элементов."
+
+#: modules/accordion/accordion.php:107 modules/tabs/tabs.php:74
+msgid "Add Item"
+msgstr "Добавить элемент"
+
+#: modules/accordion/accordion.php:117 modules/tabs/tabs.php:84
+msgid "Label"
+msgstr "Ярлык"
+
+#: modules/accordion/accordion.php:122 modules/post-grid/post-grid.php:195
+#: modules/post-grid/post-grid.php:199 modules/post-grid/post-grid.php:234
+#: modules/tabs/tabs.php:89
+msgid "Content"
+msgstr "Содержимое"
+
+#: modules/button/button.php:14 modules/callout/callout.php:479
+#: modules/content-slider/content-slider.php:601 modules/cta/cta.php:214
+#: modules/pricing-table/pricing-table.php:129
+#: modules/subscribe-form/subscribe-form.php:160
+msgid "Button"
+msgstr "Кнопка"
+
+#: modules/button/button.php:15
+msgid "A simple call to action button."
+msgstr "Простая кнопка для призыва к действию."
+
+#: modules/button/button.php:67 modules/cta/cta.php:222
+msgid "Click Here"
+msgstr "Нажмите здесь"
+
+#: modules/button/button.php:75 modules/callout/callout.php:317
+#: modules/callout/callout.php:365 modules/callout/callout.php:369
+#: modules/cta/cta.php:230 modules/icon-group/icon-group.php:34
+#: modules/icon-group/icon-group.php:135 modules/icon/icon.php:14
+#: modules/icon/icon.php:34
+msgid "Icon"
+msgstr "Иконка"
+
+#: modules/button/button.php:81 modules/button/button.php:85
+#: modules/callout/callout.php:445 modules/callout/callout.php:449
+#: modules/content-slider/content-slider.php:573
+#: modules/content-slider/content-slider.php:577
+#: modules/content-slider/content-slider.php:600 modules/cta/cta.php:240
+#: modules/heading/heading.php:43 modules/heading/heading.php:47
+#: modules/icon-group/icon-group.php:139 modules/icon/icon.php:43
+#: modules/slideshow/slideshow.php:343
+msgid "Link"
+msgstr "Ссылка"
+
+#: modules/button/button.php:86
+msgid "http://www.example.com"
+msgstr "http://www.primer.com"
+
+#: modules/button/button.php:93 modules/callout/callout.php:457
+#: modules/content-slider/content-slider.php:582 modules/cta/cta.php:247
+#: modules/heading/heading.php:54 modules/icon/icon.php:50
+#: modules/photo/photo.php:478
+msgid "Link Target"
+msgstr "Открытие ссылки"
+
+#: modules/button/button.php:96 modules/callout/callout.php:460
+#: modules/content-slider/content-slider.php:585 modules/cta/cta.php:250
+#: modules/heading/heading.php:57 modules/icon/icon.php:53
+#: modules/photo/photo.php:481
+msgid "Same Window"
+msgstr "В том же окне (вкладке)"
+
+#: modules/button/button.php:97 modules/callout/callout.php:461
+#: modules/content-slider/content-slider.php:586 modules/cta/cta.php:251
+#: modules/heading/heading.php:58 modules/icon/icon.php:54
+#: modules/photo/photo.php:482
+msgid "New Window"
+msgstr "В новом окне (вкладке)"
+
+#: modules/button/button.php:111 modules/cta/cta.php:187
+#: modules/heading/heading.php:72 modules/icon-group/icon-group.php:47
+#: modules/icon/icon.php:78
+msgid "Colors"
+msgstr "Цвета"
+
+#: modules/button/button.php:121 modules/callout/callout.php:409
+#: modules/callout/callout.php:514
+#: modules/content-slider/content-slider.php:636 modules/cta/cta.php:270
+#: modules/icon-group/icon-group.php:69 modules/icon/icon.php:100
+#: modules/subscribe-form/subscribe-form.php:188
+msgid "Background Hover Color"
+msgstr "Цвет фона при наведении"
+
+#: modules/button/button.php:130 modules/callout/callout.php:523
+#: modules/content-slider/content-slider.php:528
+#: modules/content-slider/content-slider.php:641
+#: modules/content-slider/content-slider.php:754 modules/cta/cta.php:191
+#: modules/cta/cta.php:279 modules/heading/heading.php:77
+#: modules/subscribe-form/subscribe-form.php:197
+msgid "Text Color"
+msgstr "Цвет текста"
+
+#: modules/button/button.php:136 modules/callout/callout.php:529
+#: modules/content-slider/content-slider.php:647 modules/cta/cta.php:285
+#: modules/subscribe-form/subscribe-form.php:203
+msgid "Text Hover Color"
+msgstr "Цвет текста при наведении"
+
+#: modules/button/button.php:153 modules/callout/callout.php:546
+#: modules/content-slider/content-slider.php:660 modules/cta/cta.php:302
+#: modules/subscribe-form/subscribe-form.php:220
+msgid "Flat"
+msgstr "Сплошной"
+
+#: modules/button/button.php:154 modules/callout/callout.php:417
+#: modules/callout/callout.php:547
+#: modules/content-slider/content-slider.php:661 modules/cta/cta.php:303
+#: modules/icon-group/icon-group.php:77 modules/icon/icon.php:108
+#: modules/subscribe-form/subscribe-form.php:221
+msgid "Gradient"
+msgstr "Градиент"
+
+#: modules/button/button.php:155 modules/callout/callout.php:548
+#: modules/content-slider/content-slider.php:662 modules/cta/cta.php:304
+#: modules/subscribe-form/subscribe-form.php:222
+msgid "Transparent"
+msgstr "Прозрачный"
+
+#: modules/button/button.php:165 modules/callout/callout.php:558
+#: modules/content-slider/content-slider.php:672 modules/cta/cta.php:314
+#: modules/pricing-table/pricing-table.php:67
+#: modules/subscribe-form/subscribe-form.php:232
+msgid "Border Size"
+msgstr "Толщина рамки"
+
+#: modules/button/button.php:174 modules/callout/callout.php:567
+#: modules/content-slider/content-slider.php:681 modules/cta/cta.php:203
+#: modules/cta/cta.php:323 modules/subscribe-form/subscribe-form.php:241
+msgid "Background Opacity"
+msgstr "Непрозрачность Фона"
+
+#: modules/button/button.php:184 modules/callout/callout.php:244
+#: modules/cta/cta.php:104 modules/heading/heading.php:82
+#: modules/icon-group/icon-group.php:87 modules/icon/icon.php:118
+#: modules/subscribe-form/subscribe-form.php:94
+msgid "Structure"
+msgstr "Структура"
+
+#: modules/button/button.php:191 modules/callout/callout.php:584
+msgctxt "Width."
+msgid "Auto"
+msgstr "Автоматически"
+
+#: modules/button/button.php:207
+msgid "Custom Width"
+msgstr "Заданная ширина"
+
+#: modules/button/button.php:215 modules/cta/cta.php:122
+#: modules/heading/heading.php:86 modules/heading/heading.php:141
+#: modules/icon-group/icon-group.php:107 modules/icon/icon.php:130
+#: modules/photo/photo.php:414 modules/social-buttons/social-buttons.php:97
+msgid "Alignment"
+msgstr "Выравнивание"
+
+#: modules/button/button.php:225 modules/callout/callout.php:590
+#: modules/content-slider/content-slider.php:695 modules/cta/cta.php:337
+#: modules/heading/heading.php:114 modules/heading/heading.php:171
+#: modules/subscribe-form/subscribe-form.php:255
+msgid "Font Size"
+msgstr "Размер шрифта"
+
+#: modules/button/button.php:241 modules/callout/callout.php:606
+#: modules/cta/cta.php:353 modules/subscribe-form/subscribe-form.php:271
+msgid "Round Corners"
+msgstr "Скругление краев"
+
+#: modules/callout/callout.php:14
+msgid "Callout"
+msgstr "Выноска"
+
+#: modules/callout/callout.php:15
+msgid "A heading and snippet of text with an optional link, icon and image."
+msgstr ""
+"Заголовок и отрывок текста (опционально: ссылка, иконка или изображение)."
+
+#: modules/callout/callout.php:216
+#: modules/content-slider/content-slider.php:413
+#: modules/content-slider/content-slider.php:428 modules/cta/cta.php:74
+#: modules/heading/heading.php:14 modules/heading/heading.php:33
+#: modules/testimonials/testimonials.php:56
+#: modules/testimonials/testimonials.php:61
+msgid "Heading"
+msgstr "Заголовок"
+
+#: modules/callout/callout.php:248
+msgid "Overall Alignment"
+msgstr "Общее выравнивание"
+
+#: modules/callout/callout.php:255
+msgid "The alignment that will apply to all elements within the callout."
+msgstr "Выравнивание всех элементов выноски"
+
+#: modules/callout/callout.php:263 modules/cta/cta.php:147
+msgid "Heading Structure"
+msgstr "Структура заголовка"
+
+#: modules/callout/callout.php:267
+#: modules/content-slider/content-slider.php:432 modules/cta/cta.php:151
+msgid "Heading Tag"
+msgstr "Тег заголовка"
+
+#: modules/callout/callout.php:280
+#: modules/content-slider/content-slider.php:445
+#: modules/content-slider/content-slider.php:459 modules/cta/cta.php:164
+#: modules/testimonials/testimonials.php:69
+msgid "Heading Size"
+msgstr "Размер заголовка"
+
+#: modules/callout/callout.php:294 modules/cta/cta.php:178
+msgid "Heading Custom Size"
+msgstr "Заданный размер заголовка"
+
+#: modules/callout/callout.php:312
+msgid "Image Type"
+msgstr "Тип изображения"
+
+#: modules/callout/callout.php:315
+msgctxt "Image type."
+msgid "None"
+msgstr "Нет"
+
+#: modules/callout/callout.php:340 modules/photo/photo.php:401
+#: modules/slideshow/slideshow.php:312
+msgid "Crop"
+msgstr "Обрезка"
+
+#: modules/callout/callout.php:343
+msgctxt "Crop"
+msgid "None"
+msgstr "Нет"
+
+#: modules/callout/callout.php:344 modules/photo/photo.php:405
+msgid "Landscape"
+msgstr "Пейзаж"
+
+#: modules/callout/callout.php:345 modules/photo/photo.php:406
+msgid "Panorama"
+msgstr "Панорама"
+
+#: modules/callout/callout.php:346 modules/photo/photo.php:407
+msgid "Portrait"
+msgstr "Портрет"
+
+#: modules/callout/callout.php:347 modules/photo/photo.php:408
+msgid "Square"
+msgstr "Квадрат"
+
+#: modules/callout/callout.php:348 modules/photo/photo.php:409
+msgid "Circle"
+msgstr "Круг"
+
+#: modules/callout/callout.php:356 modules/callout/callout.php:376
+msgid "Above Heading"
+msgstr "Над заголовком"
+
+#: modules/callout/callout.php:357 modules/callout/callout.php:377
+msgid "Below Heading"
+msgstr "Под заголовком"
+
+#: modules/callout/callout.php:358 modules/callout/callout.php:380
+msgid "Left of Text and Heading"
+msgstr "Слева от текста и заголовка"
+
+#: modules/callout/callout.php:359 modules/callout/callout.php:381
+msgid "Right of Text and Heading"
+msgstr "Справа от текста и заголовка"
+
+#: modules/callout/callout.php:378
+msgid "Left of Heading"
+msgstr "Слева от заголовка"
+
+#: modules/callout/callout.php:379
+msgid "Right of Heading"
+msgstr "Справа от заголовка"
+
+#: modules/callout/callout.php:387
+msgid "Icon Colors"
+msgstr "Цвет иконки"
+
+#: modules/callout/callout.php:396 modules/icon-group/icon-group.php:56
+#: modules/icon/icon.php:87
+msgid "Hover Color"
+msgstr "Цвет при наведении"
+
+#: modules/callout/callout.php:427
+msgid "Icon Structure"
+msgstr "Структура иконки"
+
+#: modules/callout/callout.php:431 modules/icon-group/icon-group.php:91
+#: modules/icon/icon.php:122 modules/post-grid/post-grid.php:136
+msgid "Size"
+msgstr "Размер"
+
+#: modules/callout/callout.php:442
+#: modules/content-slider/content-slider.php:570
+msgid "Call To Action"
+msgstr "Призыв к действию"
+
+#: modules/callout/callout.php:450
+msgid ""
+"The link applies to the entire module. If choosing a call to action type "
+"below, this link will also be used for the text or button."
+msgstr ""
+"Весь модуль будет ссылкой. Если выбрать тип призыва к действию ниже, ссылкой "
+"будут также текст или кнопка."
+
+#: modules/callout/callout.php:470
+#: modules/content-slider/content-slider.php:592 modules/cta/cta.php:14
+msgid "Call to Action"
+msgstr "Призыв к действию"
+
+#: modules/callout/callout.php:477
+#: modules/content-slider/content-slider.php:599
+msgctxt "Call to action."
+msgid "None"
+msgstr "Нет"
+
+#: modules/callout/callout.php:498
+#: modules/content-slider/content-slider.php:620
+#: modules/subscribe-form/subscribe-form.php:172
+msgid "Button Icon"
+msgstr "Иконка кнопки"
+
+#: modules/callout/callout.php:504
+#: modules/content-slider/content-slider.php:626 modules/cta/cta.php:260
+#: modules/subscribe-form/subscribe-form.php:178
+msgid "Button Colors"
+msgstr "Цвета кнопки"
+
+#: modules/callout/callout.php:539
+#: modules/content-slider/content-slider.php:653 modules/cta/cta.php:295
+#: modules/subscribe-form/subscribe-form.php:213
+msgid "Button Style"
+msgstr "Стиль кнопки"
+
+#: modules/callout/callout.php:577
+#: modules/content-slider/content-slider.php:691 modules/cta/cta.php:333
+#: modules/subscribe-form/subscribe-form.php:251
+msgid "Button Structure"
+msgstr "Структура кнопки"
+
+#: modules/callout/callout.php:581
+msgid "Button Width"
+msgstr "Ширина кнопки"
+
+#: modules/contact-form/contact-form.php:14
+msgid "Contact Form"
+msgstr "Контактная форма"
+
+#: modules/contact-form/contact-form.php:15
+msgid "A very simple contact form."
+msgstr "Простая контактная форма"
+
+#: modules/contact-form/contact-form.php:31
+msgid "Contact Form Submission"
+msgstr "Отправка контактной форма"
+
+#: modules/contact-form/contact-form.php:41
+msgid "Message"
+msgstr "Сообщение"
+
+#: modules/contact-form/contact-form.php:65
+msgid "Send To Email"
+msgstr "Отправить на Email"
+
+#: modules/contact-form/contact-form.php:67
+msgid "example@mail.com"
+msgstr "primer@adresa.com"
+
+#: modules/contact-form/contact-form.php:68
+msgid "The contact form will send to this e-mail"
+msgstr "Контактная форма будет отправлена на этот e-mail"
+
+#: modules/contact-form/contact-form.php:75
+#: modules/subscribe-form/subscribe-form.php:107
+msgid "Name Field"
+msgstr "Поле «Имя»"
+
+#: modules/contact-form/contact-form.php:78
+#: modules/contact-form/contact-form.php:87
+#: modules/contact-form/contact-form.php:96
+#: modules/contact-form/contact-form.php:105
+#: modules/post-grid/post-grid.php:116 modules/post-grid/post-grid.php:149
+#: modules/post-grid/post-grid.php:158 modules/post-grid/post-grid.php:188
+#: modules/post-grid/post-grid.php:202 modules/post-grid/post-grid.php:220
+#: modules/subscribe-form/subscribe-form.php:110
+msgid "Show"
+msgstr "Показывать"
+
+#: modules/contact-form/contact-form.php:79
+#: modules/contact-form/contact-form.php:88
+#: modules/contact-form/contact-form.php:97
+#: modules/contact-form/contact-form.php:106
+#: modules/post-grid/post-grid.php:117 modules/post-grid/post-grid.php:150
+#: modules/post-grid/post-grid.php:159 modules/post-grid/post-grid.php:189
+#: modules/post-grid/post-grid.php:203 modules/post-grid/post-grid.php:221
+#: modules/subscribe-form/subscribe-form.php:111
+msgid "Hide"
+msgstr "Прятать"
+
+#: modules/contact-form/contact-form.php:84
+msgid "Subject Field"
+msgstr "Поле «Тема»"
+
+#: modules/contact-form/contact-form.php:93
+msgid "Email Field"
+msgstr "Поле «Email»"
+
+#: modules/contact-form/contact-form.php:102
+msgid "Phone Field"
+msgstr "Поле «Телефон»"
+
+#: modules/contact-form/includes/frontend.php:5
+msgctxt "Contact form field label."
+msgid "Name"
+msgstr "Имя"
+
+#: modules/contact-form/includes/frontend.php:6
+#: modules/subscribe-form/includes/frontend.php:6
+msgid "Please enter your name."
+msgstr "Пожалуйста, укажите свое имя"
+
+#: modules/contact-form/includes/frontend.php:7
+msgid "Your name"
+msgstr "Ваше имя"
+
+#: modules/contact-form/includes/frontend.php:13
+#: modules/contact-form/includes/frontend.php:15
+msgid "Subject"
+msgstr "Тема"
+
+#: modules/contact-form/includes/frontend.php:14
+msgid "Please enter a subject."
+msgstr "Пожалуйста, укажите тему"
+
+#: modules/contact-form/includes/frontend.php:21
+msgid "Email"
+msgstr "Email"
+
+#: modules/contact-form/includes/frontend.php:22
+msgid "Please enter a valid email."
+msgstr "Пожалуйста, введите действительный адрес электронной почты."
+
+#: modules/contact-form/includes/frontend.php:23
+msgid "Your email"
+msgstr "Ваш email"
+
+#: modules/contact-form/includes/frontend.php:29
+msgid "Phone"
+msgstr "Телефон"
+
+#: modules/contact-form/includes/frontend.php:30
+msgid "Please enter a valid phone number."
+msgstr "Пожалуйста, укажите действительный телефонный номер."
+
+#: modules/contact-form/includes/frontend.php:31
+msgid "Your phone"
+msgstr "Ваш телефон"
+
+#: modules/contact-form/includes/frontend.php:36
+msgid "Your Message"
+msgstr "Ваше cообщение"
+
+#: modules/contact-form/includes/frontend.php:37
+msgid "Please enter a message."
+msgstr "Пожалуйста, введите ваше сообщение."
+
+#: modules/contact-form/includes/frontend.php:38
+msgid "Your message"
+msgstr "Ваше сообщение"
+
+#: modules/contact-form/includes/frontend.php:43
+msgid "Send"
+msgstr "Отправить"
+
+#: modules/contact-form/includes/frontend.php:44
+msgid "Message Sent!"
+msgstr "Сообщение отправлено"
+
+#: modules/contact-form/includes/frontend.php:45
+msgid "Message failed. Please try again."
+msgstr "Отправка не удалась. Пожалуйста, попробуйте еще раз."
+
+#: modules/content-slider/content-slider.php:14
+msgid "Content Slider"
+msgstr "Информационный слайдер"
+
+#: modules/content-slider/content-slider.php:15
+msgid "Displays multiple slides with an optional heading and call to action."
+msgstr ""
+"Отображает слайды с опциональными заголовками или призывами к действию."
+
+#: modules/content-slider/content-slider.php:197 modules/map/map.php:41
+#: modules/separator/separator.php:58 modules/slideshow/slideshow.php:294
+msgid "Height"
+msgstr "Высота"
+
+#: modules/content-slider/content-slider.php:202
+msgid ""
+"This setting is the minimum height of the content slider. Content will "
+"expand the height automatically."
+msgstr ""
+"Определение минимальной высоты слайдера. Высота будет автоматически "
+"увеличена, чтобы вместить содержимое."
+
+#: modules/content-slider/content-slider.php:206
+#: modules/slideshow/slideshow.php:373
+#: modules/testimonials/testimonials.php:82 modules/video/video.php:108
+msgid "Auto Play"
+msgstr "Автовоспроизведение"
+
+#: modules/content-slider/content-slider.php:220
+msgid "Show Play/Pause"
+msgstr "Показать кнопку воспроизведения/паузы"
+
+#: modules/content-slider/content-slider.php:240
+#: modules/testimonials/testimonials.php:102
+msgctxt "Transition type."
+msgid "Slide"
+msgstr "Смещение"
+
+#: modules/content-slider/content-slider.php:254
+#: modules/testimonials/testimonials.php:121
+msgid "Show Arrows"
+msgstr "Показать стрелки"
+
+#: modules/content-slider/content-slider.php:263
+#: modules/testimonials/testimonials.php:151
+msgid "Show Dots"
+msgstr "Показать точки"
+
+#: modules/content-slider/content-slider.php:277
+msgid "Max Content Width"
+msgstr "Максимальная ширина содержимого"
+
+#: modules/content-slider/content-slider.php:282
+msgid "The max width that the content area will be within your slides."
+msgstr "Максимальная ширина, которую примет содержимое ваших слайдов."
+
+#: modules/content-slider/content-slider.php:289
+msgid "Slides"
+msgstr "Слайды"
+
+#: modules/content-slider/content-slider.php:296
+msgid "Slide"
+msgstr "Слайд"
+
+#: modules/content-slider/content-slider.php:311
+msgid "Slide Settings"
+msgstr "Настройки слайда"
+
+#: modules/content-slider/content-slider.php:321
+msgid "Slide Label"
+msgstr "Ярлык"
+
+#: modules/content-slider/content-slider.php:322
+msgid ""
+"A label to identify this slide on the Slides tab of the Content Slider "
+"settings."
+msgstr "Ярлык для идентификации в списке слайдов данного модуля."
+
+#: modules/content-slider/content-slider.php:327
+msgid "Background Layout"
+msgstr "Свойства фона"
+
+#: modules/content-slider/content-slider.php:333
+msgid "This setting is for the entire background of your slide."
+msgstr "Настройка фона слайда"
+
+#: modules/content-slider/content-slider.php:368
+msgid "Background Video Code"
+msgstr "Код фонового видео"
+
+#: modules/content-slider/content-slider.php:374
+msgid "Content Layout"
+msgstr "Свойства содержимого"
+
+#: modules/content-slider/content-slider.php:380
+msgid ""
+"This allows you to add content over or in addition to the background "
+"selection above. The location of the content layout can be selected in the "
+"style tab."
+msgstr ""
+"Эта опция позволяет расположить содержимое поверх выбранного выше фона. "
+"Расположение содержимого определяется во вкладке «стиль»"
+
+#: modules/content-slider/content-slider.php:383
+msgid "Text &amp; Photo"
+msgstr "Текст и фото"
+
+#: modules/content-slider/content-slider.php:384
+msgid "Text &amp; Video"
+msgstr "Текст и видео"
+
+#: modules/content-slider/content-slider.php:385
+msgctxt "Content type."
+msgid "None"
+msgstr "Пустой"
+
+#: modules/content-slider/content-slider.php:408 modules/video/video.php:132
+msgid "Video Embed Code"
+msgstr "Код вставки видео"
+
+#: modules/content-slider/content-slider.php:468
+msgid "Text Position"
+msgstr "Положение текста"
+
+#: modules/content-slider/content-slider.php:474
+msgid ""
+"The position will move the content layout selections left, right or center "
+"over the background of the slide."
+msgstr ""
+"Выберите расположение текста относительно фона данного слайда по горизонтали."
+
+#: modules/content-slider/content-slider.php:491
+msgid "Top Margin"
+msgstr "Отступ сверху"
+
+#: modules/content-slider/content-slider.php:499
+msgid "Bottom Margin"
+msgstr "Отступ снизу"
+
+#: modules/content-slider/content-slider.php:507
+msgid "Left Margin"
+msgstr "Отступ слева"
+
+#: modules/content-slider/content-slider.php:515
+msgid "Right Margin"
+msgstr "Отступ справа"
+
+#: modules/content-slider/content-slider.php:524
+msgid "Text Colors"
+msgstr "Цвет текста"
+
+#: modules/content-slider/content-slider.php:534
+msgid "Text Shadow"
+msgstr "Тень текста"
+
+#: modules/content-slider/content-slider.php:543
+#: modules/content-slider/content-slider.php:760
+msgid "Text Background Color"
+msgstr "Цвет фона текста"
+
+#: modules/content-slider/content-slider.php:544
+msgid ""
+"The color applies to the overlay behind text over the background selections."
+msgstr "Цвет подложки для отделения текста от фонового изображения или видео."
+
+#: modules/content-slider/content-slider.php:549
+msgid "Text Background Opacity"
+msgstr "Непрозрачность подложки"
+
+#: modules/content-slider/content-slider.php:557
+msgid "Text Background Height"
+msgstr "Высота подложки"
+
+#: modules/content-slider/content-slider.php:559
+msgid ""
+"Auto will allow the overlay to fit however long the text content is. 100% "
+"will fit the overlay to the top and bottom of the slide."
+msgstr ""
+"Значение «автоматически» подстроится под ваш текст, «100%» заполнит весь "
+"слайд."
+
+#: modules/content-slider/content-slider.php:561
+msgctxt "Background height."
+msgid "Auto"
+msgstr "Автоматически"
+
+#: modules/content-slider/content-slider.php:578
+msgid ""
+"The link applies to the entire slide. If choosing a call to action type "
+"below, this link will also be used for the text or button."
+msgstr ""
+"Весь слайд будет ссылкой. Если ниже будет выбран тип призыва к действию, "
+"туда же будут ссылаться заголовок или кнопка."
+
+#: modules/content-slider/content-slider.php:711
+msgid "Border Radius"
+msgstr "Радиус закругления"
+
+#: modules/content-slider/content-slider.php:722
+msgctxt "Module settings form tab. Display on mobile devices."
+msgid "Mobile"
+msgstr "Для телефонов"
+
+#: modules/content-slider/content-slider.php:725
+msgid "Mobile Photo"
+msgstr "Фото для телефонов"
+
+#: modules/content-slider/content-slider.php:731
+msgid ""
+"You can choose a different photo that the slide will change to on mobile "
+"devices or no photo if desired."
+msgstr ""
+"Вы можете выбрать другое фото для этого слайда для отображения на телефонах, "
+"или отключить изображение, если желаете."
+
+#: modules/content-slider/content-slider.php:733
+msgid "Use Main Photo"
+msgstr "Использовать основное фото"
+
+#: modules/content-slider/content-slider.php:734
+msgid "Choose Another Photo"
+msgstr "Выбрать другое фото"
+
+#: modules/content-slider/content-slider.php:735
+msgid "No Photo"
+msgstr "Без фото"
+
+#: modules/content-slider/content-slider.php:750
+msgid "Mobile Text Colors"
+msgstr "Цвет текста для телефонов"
+
+#: modules/cta/cta.php:15
+msgid "Display a heading, subheading and a button."
+msgstr "Показать заголовок, подзаголовок и кнопку."
+
+#: modules/cta/cta.php:75
+msgid "Ready to find out more?"
+msgstr "Вы готовы узнать больше?"
+
+#: modules/cta/cta.php:90
+msgid "Drop us a line today for a free quote!"
+msgstr "Напишите нам сегодня для бесплатного цитирования!"
+
+#: modules/cta/cta.php:108 modules/gallery/gallery.php:220
+#: modules/post-grid/post-grid.php:44
+#: modules/subscribe-form/subscribe-form.php:98 modules/tabs/tabs.php:52
+#: modules/testimonials/testimonials.php:37
+#: modules/woocommerce/woocommerce.php:57
+msgid "Layout"
+msgstr "Макет"
+
+#: modules/cta/cta.php:111 modules/subscribe-form/subscribe-form.php:102
+msgid "Inline"
+msgstr "Строчный"
+
+#: modules/cta/cta.php:112 modules/subscribe-form/subscribe-form.php:101
+msgid "Stacked"
+msgstr "Блочный"
+
+#: modules/cta/cta.php:132 modules/icon-group/icon-group.php:99
+msgid "Spacing"
+msgstr "Отступ"
+
+#: modules/cta/cta.php:236
+msgid "Button Link"
+msgstr "Сслыка кнопки"
+
+#: modules/gallery/gallery.php:14 modules/post-grid/post-grid.php:55
+msgid "Gallery"
+msgstr "Галерея"
+
+#: modules/gallery/gallery.php:15
+msgid "Display multiple photos in a gallery view."
+msgstr "Отображать несколько фотографий в режиме галереи."
+
+#: modules/gallery/gallery.php:223
+msgid "Collage"
+msgstr "Коллаж"
+
+#: modules/gallery/gallery.php:224
+msgctxt "Gallery layout: thumbnails."
+msgid "Thumbs"
+msgstr "Миниатюры"
+
+#: modules/gallery/gallery.php:260
+msgid "Photo Size"
+msgstr "Размер фотографии"
+
+#: modules/gallery/gallery.php:263
+msgctxt "Photo size."
+msgid "Small"
+msgstr "Маленьки"
+
+#: modules/gallery/gallery.php:264
+msgctxt "Photo size."
+msgid "Medium"
+msgstr "Средний"
+
+#: modules/gallery/gallery.php:265
+msgctxt "Photo size."
+msgid "Large"
+msgstr "Большой"
+
+#: modules/gallery/gallery.php:270
+msgid "Photo Spacing"
+msgstr "Поля фотографии"
+
+#: modules/gallery/gallery.php:278
+msgid "Show Captions"
+msgstr "Показать заголовки"
+
+#: modules/gallery/gallery.php:281 modules/photo/photo.php:432
+msgid "Never"
+msgstr "Никогда"
+
+#: modules/gallery/gallery.php:282 modules/photo/photo.php:433
+msgid "On Hover"
+msgstr "При наведении"
+
+#: modules/gallery/gallery.php:283 modules/photo/photo.php:434
+msgid "Below Photo"
+msgstr "Под фотографией"
+
+#: modules/gallery/gallery.php:285
+msgid ""
+"The caption pulls from whatever text you put in the caption area in the "
+"media manager for each image. The caption is also pulled directly from "
+"SmugMug if you have captions set in your gallery."
+msgstr ""
+"Заголовок для каждого изображения берется из соответствующего поля в медиа "
+"библиотеке. Если вы пользуетесь SmugMug, заголовок берется оттуда, если "
+"заголовки там включены."
+
+#: modules/gallery/gallery.php:289 modules/slideshow/slideshow.php:335
+msgid "Click Action"
+msgstr "Действие при нажатии"
+
+#: modules/gallery/gallery.php:292
+msgctxt "Click action."
+msgid "None"
+msgstr "Нет"
+
+#: modules/gallery/gallery.php:293 modules/photo/photo.php:452
+msgid "Lightbox"
+msgstr "Лайтбокс"
+
+#: modules/gallery/gallery.php:294
+msgid "Photo Link"
+msgstr "Открытие ссылки"
+
+#: modules/heading/heading.php:15
+msgid "Display a title/page heading."
+msgstr "Отображать название/заголовок страницы"
+
+#: modules/heading/heading.php:101
+msgid "HTML Tag"
+msgstr "Тег HTML"
+
+#: modules/heading/heading.php:128 modules/heading/heading.php:188
+msgid "Custom Font Size"
+msgstr "Заданный размер шрифта"
+
+#: modules/heading/heading.php:137
+msgid "Mobile Structure"
+msgstr "Структура при просмотре с телефона"
+
+#: modules/heading/heading.php:158
+msgid "Custom Alignment"
+msgstr "Заданное выравнивание"
+
+#: modules/html/html.php:14
+msgid "HTML"
+msgstr "HTML"
+
+#: modules/html/html.php:15
+msgid "Display raw HTML code."
+msgstr "Отображать исходный HTML код."
+
+#: modules/icon-group/icon-group.php:14
+msgid "Icon Group"
+msgstr "Группа иконок"
+
+#: modules/icon-group/icon-group.php:15
+msgid "Display a group of linked Font Awesome icons."
+msgstr "Показать группу привязанных иконок Font Awesome."
+
+#: modules/icon-group/icon-group.php:125
+msgid "Add Icon"
+msgstr "Добавить иконку"
+
+#: modules/icon/icon.php:15
+msgid "Display an icon and optional title."
+msgstr "Показать иконку и дополнительный заголовок."
+
+#: modules/map/map.php:14
+msgid "Map"
+msgstr "Карта"
+
+#: modules/map/map.php:15
+msgid "Display a Google map."
+msgstr "Показать карту Google."
+
+#: modules/map/map.php:33
+msgid "Address"
+msgstr "Адрес"
+
+#: modules/map/map.php:34
+msgid "1865 Winchester Blvd #202 Campbell, CA 95008"
+msgstr "Дворцовая наб., 32, Санкт-Петербург, 190000"
+
+#: modules/photo/photo.php:26
+msgid "Upload a photo or display one from the media library."
+msgstr "Загрузить фото или выбрать его из медиа библиотеки."
+
+#: modules/photo/photo.php:375
+msgid "Photo Source"
+msgstr "Источник фото"
+
+#: modules/photo/photo.php:379 modules/photo/photo.php:451
+msgid "URL"
+msgstr "URL"
+
+#: modules/photo/photo.php:396
+msgid "Photo URL"
+msgstr "URL фотограии"
+
+#: modules/photo/photo.php:397
+msgid "http://www.example.com/my-photo.jpg"
+msgstr "http://www.primer.com/moye-photo.jpg"
+
+#: modules/photo/photo.php:404
+msgctxt "Crop."
+msgid "None"
+msgstr "Нет"
+
+#: modules/photo/photo.php:425 modules/photo/photo.php:439
+msgid "Caption"
+msgstr "Заголовок"
+
+#: modules/photo/photo.php:429
+msgid "Show Caption"
+msgstr "Показать заголовок"
+
+#: modules/photo/photo.php:448
+msgid "Link Type"
+msgstr "Тип ссылки"
+
+#: modules/photo/photo.php:450
+msgctxt "Link type."
+msgid "None"
+msgstr "Нет"
+
+#: modules/photo/photo.php:453
+msgid "Photo File"
+msgstr "Файл фотограии"
+
+#: modules/photo/photo.php:464
+msgid ""
+"Link type applies to how the image should be linked on click. You can choose "
+"a specific URL, the individual photo or a separate page with the photo."
+msgstr ""
+"Тип ссылки определяет, что происходит при нажатии на изображение. Вы можете "
+"указать ссылку на определенный адрес, отдельную фотографию или страницу с "
+"этой фотографией."
+
+#: modules/photo/photo.php:471 modules/slideshow/slideshow.php:356
+msgid "Link URL"
+msgstr "URL ссылки"
+
+#: modules/post-grid/includes/frontend.php:41
+msgid "No posts found."
+msgstr "Не найдено записей."
+
+#: modules/post-grid/includes/post-feed.php:14
+#: modules/post-grid/includes/post-grid.php:24
+#, php-format
+msgctxt "%s stands for author name."
+msgid "By %s"
+msgstr "Автор: %s"
+
+#: modules/post-grid/post-grid.php:14
+msgid "Posts"
+msgstr "Записи"
+
+#: modules/post-grid/post-grid.php:15
+msgid "Display a grid of your WordPress posts."
+msgstr "Показать список ваших записей Вордпресс."
+
+#: modules/post-grid/post-grid.php:51
+msgid "Layout Style"
+msgstr "Стиль отображения"
+
+#: modules/post-grid/post-grid.php:54 modules/post-grid/post-grid.php:88
+msgid "Grid"
+msgstr "Сетка"
+
+#: modules/post-grid/post-grid.php:56
+msgid "Feed"
+msgstr "Блог"
+
+#: modules/post-grid/post-grid.php:71
+msgid "Pagination Style"
+msgstr "Стиль постраничной навигации"
+
+#: modules/post-grid/post-grid.php:74
+msgid "Numbers"
+msgstr "Номера"
+
+#: modules/post-grid/post-grid.php:76
+msgctxt "Pagination style."
+msgid "None"
+msgstr "Нет"
+
+#: modules/post-grid/post-grid.php:81
+msgid "Posts Per Page"
+msgstr "Записей на странице"
+
+#: modules/post-grid/post-grid.php:92
+msgid "Post Width"
+msgstr "Ширина запией"
+
+#: modules/post-grid/post-grid.php:100
+msgid "Post Spacing"
+msgstr "Поля записей"
+
+#: modules/post-grid/post-grid.php:109
+msgid "Featured Image"
+msgstr "Миниатюра"
+
+#: modules/post-grid/post-grid.php:130
+msgid "Above Text"
+msgstr "Над текстом"
+
+#: modules/post-grid/post-grid.php:131
+msgid "Beside Text"
+msgstr "Рядом с текстом"
+
+#: modules/post-grid/post-grid.php:142
+msgid "Post Info"
+msgstr "Информация о записи"
+
+#: modules/post-grid/post-grid.php:169
+msgid "Date Format"
+msgstr "Формат даты"
+
+#: modules/post-grid/post-grid.php:185
+msgid "Comments"
+msgstr "Комментарии"
+
+#: modules/post-grid/post-grid.php:208
+msgid "Content Type"
+msgstr "Тип содержимого"
+
+#: modules/post-grid/post-grid.php:211
+msgid "Excerpt"
+msgstr "Отрывок"
+
+#: modules/post-grid/post-grid.php:212
+msgid "Full Text"
+msgstr "Полный текст"
+
+#: modules/post-grid/post-grid.php:217
+msgid "More Link"
+msgstr "Ссылка «дальше»"
+
+#: modules/post-grid/post-grid.php:226
+msgid "More Link Text"
+msgstr "Текст ссылки «дальше»"
+
+#: modules/post-grid/post-grid.php:227
+msgid "Read More"
+msgstr "Читать дальше"
+
+#: modules/pricing-table/pricing-table.php:14
+msgid "Pricing Table"
+msgstr "Таблица цен"
+
+#: modules/pricing-table/pricing-table.php:15
+msgid "A simple pricing table generator."
+msgstr "Генератор простой таблицы с ценами."
+
+#: modules/pricing-table/pricing-table.php:26
+msgid "Pricing Boxes"
+msgstr "Плитки с ценами"
+
+#: modules/pricing-table/pricing-table.php:33
+msgid "Pricing Box"
+msgstr "Плитка с ценой"
+
+#: modules/pricing-table/pricing-table.php:50
+msgid "Box Spacing"
+msgstr "Поля плиток"
+
+#: modules/pricing-table/pricing-table.php:53
+#: modules/testimonials/testimonials.php:40
+msgid "Wide"
+msgstr "Широкие"
+
+#: modules/pricing-table/pricing-table.php:54
+msgid "Tight"
+msgstr "Узкие"
+
+#: modules/pricing-table/pricing-table.php:59
+msgid "Features Min Height"
+msgstr "Минимальная высота характеристик"
+
+#: modules/pricing-table/pricing-table.php:63
+msgid ""
+"Use this to normalize the height of your boxes when they have different "
+"numbers of features."
+msgstr ""
+"Укажите, чтобы выровнять высоту ваших плиток, если в них указано разное "
+"количество характеристик."
+
+#: modules/pricing-table/pricing-table.php:70
+msgctxt "Border size."
+msgid "Wide"
+msgstr "Широкий"
+
+#: modules/pricing-table/pricing-table.php:71
+msgctxt "Border size."
+msgid "Tight"
+msgstr "Узкий"
+
+#: modules/pricing-table/pricing-table.php:84
+msgid "Add Pricing Box"
+msgstr "Добавить плитку с ценой"
+
+#: modules/pricing-table/pricing-table.php:98
+msgid "Title Size"
+msgstr "Размер заголовка"
+
+#: modules/pricing-table/pricing-table.php:107
+msgid "Price Box"
+msgstr "Поле с ценой"
+
+#: modules/pricing-table/pricing-table.php:111
+#: modules/woocommerce/woocommerce.php:190
+msgid "Price"
+msgstr "Цена"
+
+#: modules/pricing-table/pricing-table.php:115
+msgid "Duration"
+msgstr "Длительность"
+
+#: modules/pricing-table/pricing-table.php:116
+msgid "per Year"
+msgstr "в год"
+
+#: modules/pricing-table/pricing-table.php:120
+msgid "Price Size"
+msgstr "Размер цены"
+
+#: modules/pricing-table/pricing-table.php:133
+#: modules/subscribe-form/subscribe-form.php:167
+msgid "Button Text"
+msgstr "Текст на кнопке"
+
+#: modules/pricing-table/pricing-table.php:137
+msgid "Button URL"
+msgstr "URL кнопки"
+
+#: modules/pricing-table/pricing-table.php:142
+msgctxt "Price features displayed in pricing box."
+msgid "Features"
+msgstr "Характеристики"
+
+#: modules/pricing-table/pricing-table.php:147
+msgid "One feature per line. HTML is okay."
+msgstr "По одно характеристике на строку. Можно использовать HTML."
+
+#: modules/pricing-table/pricing-table.php:162
+msgid "Box Background"
+msgstr "Фон плитки"
+
+#: modules/pricing-table/pricing-table.php:167
+msgid "Box Foreground"
+msgstr "Основной цвет плитки"
+
+#: modules/pricing-table/pricing-table.php:173
+msgid "Accent Color"
+msgstr "Цвет акцента"
+
+#: modules/pricing-table/pricing-table.php:178
+msgid "Accent Text Color"
+msgstr "Цвет текста акцента"
+
+#: modules/pricing-table/pricing-table.php:182
+msgid "Box Top Margin"
+msgstr "Верхнее поле плитки"
+
+#: modules/rich-text/rich-text.php:15
+msgid "A WYSIWYG text editor."
+msgstr "Визуальный текстовый редактор."
+
+#: modules/separator/separator.php:14
+msgid "Separator"
+msgstr "Черта"
+
+#: modules/separator/separator.php:15
+msgid "A divider line to separate content."
+msgstr "Черта для разделения содержимого."
+
+#: modules/separator/separator.php:85
+msgid ""
+"The type of border to use. Double borders must have a height of at least 3px "
+"to render properly."
+msgstr "Тип используемой рамки. Минимальная ширина двойной рамки — 3 пикселя."
+
+#: modules/sidebar/includes/settings-general.php:5
+#: modules/sidebar/sidebar.php:14
+msgid "Sidebar"
+msgstr "Боковая панель"
+
+#: modules/sidebar/sidebar.php:15
+msgid ""
+"Display a WordPress sidebar that has been registered by the current theme."
+msgstr ""
+"Показать боковую панель Вордпресс, определенную в настройках выбранной темы."
+
+#: modules/slideshow/slideshow.php:14
+msgid "Slideshow"
+msgstr "Слайд-шоу"
+
+#: modules/slideshow/slideshow.php:15
+msgid "Display multiple photos in a slideshow view."
+msgstr "Показать несколько фотографий в режиме слайд-шоу."
+
+#: modules/slideshow/slideshow.php:302
+msgid "Skin Color"
+msgstr "Цвет оболочки"
+
+#: modules/slideshow/slideshow.php:305
+msgctxt "Color."
+msgid "Light"
+msgstr "Светлый"
+
+#: modules/slideshow/slideshow.php:306
+msgctxt "Color."
+msgid "Dark"
+msgstr "Темный"
+
+#: modules/slideshow/slideshow.php:308
+msgid ""
+"If your overall theme/images are lighter in color, light will display "
+"buttons in a darker color scheme and vice versa for dark."
+msgstr ""
+"Если ваша тема и фотографии в основном светлых оттенков, выберите светлую "
+"оболочку с темными иконками, или наоборот, если ваша тема и фотографии "
+"темные."
+
+#: modules/slideshow/slideshow.php:318
+msgid ""
+"Crop set to no will fit the slideshow images to the height you specify and "
+"keep the width proportional, whereas crop set to yes will fit the slideshow "
+"images to all sides of the content area while cropping the left and right to "
+"fit the height you specify."
+msgstr ""
+"Если кадрирование отключено, изображения будут подогнаны под указанную "
+"высоту, и будет подобрана пропорциональная ширина. При включенном "
+"кадрировании изображение полностью заполнит слайд, но правый и левый края "
+"могут быть обрублены, чтобы уместиться в указанной высоте."
+
+#: modules/slideshow/slideshow.php:322
+msgid "Disable Right-Click"
+msgstr "Отключить правый клик"
+
+#: modules/slideshow/slideshow.php:342
+msgctxt "Click action type."
+msgid "None"
+msgstr "Нет"
+
+#: modules/slideshow/slideshow.php:366
+msgid "Playback"
+msgstr "Воспроизведение"
+
+#: modules/slideshow/slideshow.php:392
+msgctxt "Slideshow transition."
+msgid "None"
+msgstr "Нет"
+
+#: modules/slideshow/slideshow.php:429
+msgid "Controls"
+msgstr "Управление"
+
+#: modules/slideshow/slideshow.php:436 modules/slideshow/slideshow.php:485
+msgid "Navigation Arrows"
+msgstr "Стрелки навигации"
+
+#: modules/slideshow/slideshow.php:442
+msgid ""
+"Navigational arrows allow the visitor to freely move through the images in "
+"your slideshow. These are larger arrows that overlay your slideshow images "
+"and are separate from the control bar navigational arrows."
+msgstr ""
+"Стрелки навигации позволяют посетителю свободно перемещаться между "
+"изображениями в слайд-шоу. Это крупные стрелки, которые перекрывают "
+"изображения в слайд-шоу и отделены от стрелок навигации по панели управления."
+
+#: modules/slideshow/slideshow.php:447
+msgid "Control Bar"
+msgstr "Панель управления"
+
+#: modules/slideshow/slideshow.php:451
+msgid "Nav Type"
+msgstr "Тип навигации"
+
+#: modules/slideshow/slideshow.php:454
+msgctxt "Nav type."
+msgid "None"
+msgstr "Нет"
+
+#: modules/slideshow/slideshow.php:455
+msgid "Buttons"
+msgstr "Кнопки"
+
+#: modules/slideshow/slideshow.php:456 modules/slideshow/slideshow.php:586
+msgid "Thumbs"
+msgstr "Миниатюры"
+
+#: modules/slideshow/slideshow.php:471
+msgid "Nav Position"
+msgstr "Расположение навигации"
+
+#: modules/slideshow/slideshow.php:481
+msgid "Control Bar Buttons"
+msgstr "Кнопки панели управления"
+
+#: modules/slideshow/slideshow.php:494
+msgid "Play Button"
+msgstr "Кнопка воспроизведения"
+
+#: modules/slideshow/slideshow.php:503
+msgid "Fullscreen Button"
+msgstr "Кнопка полноэкранного режима"
+
+#: modules/slideshow/slideshow.php:512
+msgid "Photo Count"
+msgstr "Счетчик фотографий"
+
+#: modules/slideshow/slideshow.php:521
+msgid "Thumbs Button"
+msgstr "Кнопка миниатюр"
+
+#: modules/slideshow/slideshow.php:530
+msgid "Caption Button"
+msgstr "Кнопка заголовка"
+
+#: modules/slideshow/slideshow.php:539
+msgid "Social Button"
+msgstr "Кнопка соцсетей"
+
+#: modules/slideshow/slideshow.php:549
+msgid "Control Bar Overlay"
+msgstr "Наложение панели управления"
+
+#: modules/slideshow/slideshow.php:553
+msgid "Overlay Enabled"
+msgstr "Наложение включено"
+
+#: modules/slideshow/slideshow.php:564
+msgid ""
+"Control bar overlay specifies if the control bar buttons you choose overlay "
+"your slideshow images or site below the slideshow completely."
+msgstr ""
+"Наложение панели управления определяет, где отображаются выбранные кнопки: "
+"поверх слайд-шоу или под ним."
+
+#: modules/slideshow/slideshow.php:568
+msgid "Overlay Hide"
+msgstr "Прятать наложение"
+
+#: modules/slideshow/slideshow.php:574
+msgid ""
+"Overlay hide will hide the control bar after however many seconds you "
+"specify below. They will reappear upon mouse over."
+msgstr ""
+"Элементы управления будут спрятаны после указанной задержки, пока "
+"пользователь не наведет на слайд-шоу курсор."
+
+#: modules/slideshow/slideshow.php:578
+msgid "Overlay Hide Delay"
+msgstr "Задержка скрытия"
+
+#: modules/slideshow/slideshow.php:590
+msgid "Thumbs Size"
+msgstr "Размер миниатюр"
+
+#: modules/slideshow/slideshow.php:599
+msgid "Social"
+msgstr "Соцсети"
+
+#: modules/slideshow/slideshow.php:603
+msgid "Facebook Button"
+msgstr "Кнопка Facebook"
+
+#: modules/slideshow/slideshow.php:615
+msgid "Twitter Button"
+msgstr "Кнопка Twitter"
+
+#: modules/slideshow/slideshow.php:627
+msgid "Google Plus Button"
+msgstr "Кнопка Google Plus"
+
+#: modules/slideshow/slideshow.php:639
+msgid "Pinterest Button"
+msgstr "Кнопка Pinterest"
+
+#: modules/social-buttons/social-buttons.php:14
+msgid "Social Buttons"
+msgstr "Кнопки соцсетей"
+
+#: modules/social-buttons/social-buttons.php:15
+msgid "Displays social buttons."
+msgstr "Показывать кнопки соцсетей"
+
+#: modules/social-buttons/social-buttons.php:71
+msgid "Target URL"
+msgstr "Адрес URL"
+
+#: modules/social-buttons/social-buttons.php:75
+msgid "Current Page"
+msgstr "Данная страница"
+
+#: modules/social-buttons/social-buttons.php:82
+msgid ""
+"The Target URL field correlates to the page you would like your social icons "
+"to interface with. For example, if you show Facebook, the user will \"Like\" "
+"whatever you put in this field."
+msgstr ""
+"Адрес URL определяет, к какой странице относятся кнопки соцсетей. Например "
+"Facebook показывается, пользователь поставит «Like» тому, что указано в этом "
+"поле."
+
+#: modules/social-buttons/social-buttons.php:89
+msgid "Custom URL"
+msgstr "Укажите URL"
+
+#: modules/social-buttons/social-buttons.php:107
+msgid "Show Facebook"
+msgstr "Показать Facebook"
+
+#: modules/social-buttons/social-buttons.php:116
+msgid "Show Twitter"
+msgstr "Показать Twitter"
+
+#: modules/social-buttons/social-buttons.php:125
+msgid "Show Google+"
+msgstr "Показать Google+"
+
+#: modules/subscribe-form/includes/frontend.php:5
+msgctxt "First and last name."
+msgid "Name"
+msgstr "Имя"
+
+#: modules/subscribe-form/includes/frontend.php:12
+msgid "Please enter a valid email address."
+msgstr "Пожалуйста, введите действительный адрес email."
+
+#: modules/subscribe-form/includes/frontend.php:40
+msgid "Something went wrong. Please check your entries and try again."
+msgstr ""
+"Что-то пошло не так. Пожалуйста, проверьте ваши записи и повторите попытку."
+
+#: modules/subscribe-form/subscribe-form.php:18
+msgid "Subscribe Form"
+msgstr "Форма подписки"
+
+#: modules/subscribe-form/subscribe-form.php:19
+msgid "Adds a simple subscribe form to your layout."
+msgstr "Добавляет простую форму подписки в ваш макет."
+
+#: modules/subscribe-form/subscribe-form.php:72
+msgid "There was an error subscribing. Please try again."
+msgstr "При подписке произошла ошибка. Пожалуйста, попробуйте еще раз."
+
+#: modules/subscribe-form/subscribe-form.php:117
+msgid "Success"
+msgstr "Успех"
+
+#: modules/subscribe-form/subscribe-form.php:121
+msgid "Success Action"
+msgstr "Действие при успешной подписке"
+
+#: modules/subscribe-form/subscribe-form.php:123
+msgid "Show Message"
+msgstr "Показать сообщение"
+
+#: modules/subscribe-form/subscribe-form.php:124
+msgid "Redirect"
+msgstr "Перенаправить"
+
+#: modules/subscribe-form/subscribe-form.php:143
+msgid ""
+"Thanks for subscribing! Please check your email for further instructions."
+msgstr ""
+"Спасибо за оформление подписки! Пожалуйста, проверьте свой email для "
+"дальнейших инструкций."
+
+#: modules/subscribe-form/subscribe-form.php:150
+msgid "Success URL"
+msgstr "Адрес перенаправления"
+
+#: modules/subscribe-form/subscribe-form.php:168
+msgid "Subscribe!"
+msgstr "Подписаться!"
+
+#: modules/tabs/tabs.php:14
+msgid "Tabs"
+msgstr "Вкладки"
+
+#: modules/tabs/tabs.php:15
+msgid "Display a collection of tabbed content."
+msgstr "Показать содержимое во вкладках."
+
+#: modules/tabs/tabs.php:55
+msgid "Horizontal"
+msgstr "Горизонтально"
+
+#: modules/tabs/tabs.php:56
+msgid "Vertical"
+msgstr "Вертикально"
+
+#: modules/testimonials/testimonials.php:14
+#: modules/testimonials/testimonials.php:60
+#: modules/testimonials/testimonials.php:174
+msgid "Testimonials"
+msgstr "Отзывы"
+
+#: modules/testimonials/testimonials.php:15
+msgid "An animated tesimonials area."
+msgstr "Область анимированных отзывов."
+
+#: modules/testimonials/testimonials.php:41
+msgid "Compact"
+msgstr "Компактно"
+
+#: modules/testimonials/testimonials.php:51
+msgid "Wide is for 1 column rows, compact is for multi-column rows."
+msgstr ""
+"«Широко» подходит для строк с одной колонкой, «компактно» — для строк в "
+"несколько колонок."
+
+#: modules/testimonials/testimonials.php:78
+msgid "Slider Settings"
+msgstr "Настройки слайдера"
+
+#: modules/testimonials/testimonials.php:135
+msgid "Arrow Color"
+msgstr "Цвет стрелок"
+
+#: modules/testimonials/testimonials.php:165
+msgid "Dot Color"
+msgstr "Цвет точек"
+
+#: modules/testimonials/testimonials.php:181
+msgid "Testimonial"
+msgstr "Отзыв"
+
+#: modules/testimonials/testimonials.php:197
+msgid "Add Testimonial"
+msgstr "Добавить отзыв"
+
+#: modules/video/video.php:20
+msgid "Render a WordPress or embedable video."
+msgstr "Отобразить встраиваемое видео Вордпресс."
+
+#: modules/video/video.php:83
+msgid "Video Type"
+msgstr "Источник"
+
+#: modules/video/video.php:87
+msgid "Embed"
+msgstr "Код вставки"
+
+#: modules/video/video.php:104
+msgctxt "Video preview/fallback image."
+msgid "Poster"
+msgstr "Постре"
+
+#: modules/video/video.php:120
+msgid "Loop"
+msgstr "Зациклить"
+
+#: modules/widget/includes/frontend.php:35
+#: modules/widget/includes/settings-general.php:46
+#, php-format
+msgctxt "%s stands for widget slug."
+msgid "%s no longer exists."
+msgstr "%s больше не существует."
+
+#: modules/widget/widget.php:14
+msgid "Widget"
+msgstr "Виджет"
+
+#: modules/widget/widget.php:15
+msgid "Display a WordPress widget."
+msgstr "Показать виджет Вордпресс."
+
+#: modules/woocommerce/woocommerce.php:16
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: modules/woocommerce/woocommerce.php:17
+msgid "Display products or categories from your WooCommerce store."
+msgstr "Показать товары или категории из вашего магазина WooCommerce."
+
+#: modules/woocommerce/woocommerce.php:61
+msgid "Single Product"
+msgstr "Один продукт"
+
+#: modules/woocommerce/woocommerce.php:62
+#: modules/woocommerce/woocommerce.php:113
+msgid "Multiple Products"
+msgstr "Несколько продуктов"
+
+#: modules/woocommerce/woocommerce.php:63
+msgid "\"Add to Cart\" Button"
+msgstr "Кнопка «Добавить в корзину»"
+
+#: modules/woocommerce/woocommerce.php:64
+msgid "Categories"
+msgstr "Категории"
+
+#: modules/woocommerce/woocommerce.php:65
+msgid "Cart"
+msgstr "Корзина"
+
+#: modules/woocommerce/woocommerce.php:66
+msgid "Checkout"
+msgstr "Расплатиться"
+
+#: modules/woocommerce/woocommerce.php:67
+msgid "Order Tracking"
+msgstr "Отслеживание заказа"
+
+#: modules/woocommerce/woocommerce.php:68
+msgid "My Account"
+msgstr "Моя учетная запись"
+
+#: modules/woocommerce/woocommerce.php:87
+msgid "Product ID"
+msgstr "ID товара"
+
+#: modules/woocommerce/woocommerce.php:90
+msgid ""
+"As you add products in the WooCommerce Products area, each will be assigned "
+"a unique ID. You can find this unique product ID by visiting the Products "
+"area and rolling over the product. The unique ID will be the first attribute."
+msgstr ""
+"Когда вы добавляете товары во меню товаров WooCommerce, каждому "
+"присваивается уникальный идентификатор. Вы можете узнать его, открыв меню "
+"товаров и найдя интересующий вас товар. Идентификатор будет указан как "
+"первый параметр."
+
+#: modules/woocommerce/woocommerce.php:94
+msgid "Parent Category ID"
+msgstr "ID родительской категории"
+
+#: modules/woocommerce/woocommerce.php:97
+msgid ""
+"As you add product categories in the WooCommerce Products area, each will be "
+"assigned a unique ID. This ID can be found by hovering on the category in "
+"the categories area under Products and looking in the URL that is displayed "
+"in your browser. The ID will be the only number value in the URL."
+msgstr ""
+"Когда вы добавляете категории товаров в меню товаров WooCommerce, каждой из "
+"них присваивается уникальный идентификатор. Этот идентификатор может быть "
+"найден при наведении на категорию в меню категорий в меню товаров. При "
+"наведении в браузере будет отображен URL выбранной категории. ID будет "
+"единственным числовым значением в URL."
+
+#: modules/woocommerce/woocommerce.php:101
+#: modules/woocommerce/woocommerce.php:172
+msgid "Columns"
+msgstr "Колонки"
+
+#: modules/woocommerce/woocommerce.php:117
+msgid "Products Source"
+msgstr "Источник товара"
+
+#: modules/woocommerce/woocommerce.php:120
+msgid "Products IDs"
+msgstr "ID товара"
+
+#: modules/woocommerce/woocommerce.php:121
+msgid "Product Category"
+msgstr "Категория товара"
+
+#: modules/woocommerce/woocommerce.php:122
+msgid "Recent Products"
+msgstr "Недавние товары"
+
+#: modules/woocommerce/woocommerce.php:123
+msgid "Featured Products"
+msgstr "Продвигаемые товары"
+
+#: modules/woocommerce/woocommerce.php:124
+msgid "Sale Products"
+msgstr "Товары по распродаже"
+
+#: modules/woocommerce/woocommerce.php:125
+msgid "Best Selling Products"
+msgstr "Самые продаваемые товары"
+
+#: modules/woocommerce/woocommerce.php:126
+msgid "Top Rated Products"
+msgstr "Наиболее оцененные товары"
+
+#: modules/woocommerce/woocommerce.php:154
+msgid "Product IDs"
+msgstr "Идентификаторы товаров"
+
+#: modules/woocommerce/woocommerce.php:156
+msgid ""
+"As you add products in the WooCommerce Products area, each will be assigned "
+"a unique ID. You can find this unique product ID by visiting the Products "
+"area and rolling over the product. The unique ID will be the first attribute "
+"and you can add several here separated by a comma."
+msgstr ""
+"Когда вы добавляете товары во меню товаров WooCommerce, каждому "
+"присваивается уникальный идентификатор. Вы можете узнать его, открыв меню "
+"товаров и найдя интересующий вас товар. Идентификатор будет указан как "
+"первый параметр."
+
+#: modules/woocommerce/woocommerce.php:160
+msgid "Category Slug"
+msgstr "Ярлык категории"
+
+#: modules/woocommerce/woocommerce.php:162
+msgid ""
+"As you add product categories in the WooCommerce Products area, each will be "
+"assigned a unique slug or you can edit and add your own. These slugs can be "
+"found in the Categories area under WooCommerce Products. Several can be "
+"added here separated by a comma."
+msgstr ""
+"Когда вы добавляете категории товаров в меню товаров WooCommerce, каждой "
+"присваивается ярлык, который вы можете редактировать или указать "
+"собственный. Эти ярлыки могут быть найдены в меню категорий в меню товаров "
+"WooCommerce. Здесь можно добавить несколько ярлыков, разделенных запятыми."
+
+#: modules/woocommerce/woocommerce.php:166
+msgid "Number of Products"
+msgstr "Число товаров"
+
+#: modules/woocommerce/woocommerce.php:183
+msgid "Sort By"
+msgstr "Сортировка"
+
+#: modules/woocommerce/woocommerce.php:186
+msgctxt "Sort by."
+msgid "Default"
+msgstr "По умолчанию"
+
+#: modules/woocommerce/woocommerce.php:187
+msgid "Popularity"
+msgstr "Популярность"
+
+#: modules/woocommerce/woocommerce.php:188
+msgid "Rating"
+msgstr "Оценки"
+
+#: modules/woocommerce/woocommerce.php:195
+msgid "Sort Direction"
+msgstr "Направление сортировки"
+
+#~ msgid "List"
+#~ msgstr "Список"
+
+#~ msgid "Client"
+#~ msgstr "Клиент"
+
+#~ msgid "Offset"
+#~ msgstr "Смещение"
+
+#~ msgctxt "%s stands for custom branded \"Page Builder\" name."
+#~ msgid ""
+#~ "Switching to Text Editor mode will disable your %s layout until it is "
+#~ "enabled again. Any edits made while in Text Editor mode will not be made "
+#~ "on your %s layout. Do you want to continue?"
+#~ msgstr ""
+#~ "Переключение к Текстовому редактору отключит текущий макет, пока %s не "
+#~ "будет снова включен. Любое редактирование, произведенное в текстовом "
+#~ "редакторе, не повлияет на текущий макет %s. Вы хотите продолжить?"
+
+#~ msgid "Price: Low to High"
+#~ msgstr "Цена: по возрастанию"
+
+#~ msgid "Price: High to Low"
+#~ msgstr "Цена: по убыванию"

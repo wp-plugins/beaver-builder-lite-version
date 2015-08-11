@@ -1,0 +1,26 @@
+/* Rows
+------------------------------------------------------ */
+
+.fl-row-content-wrap {
+	border-left: none !important;
+	border-right: none !important;
+	margin: 0 !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.fl-row .fl-bg-video,
+.fl-row .fl-bg-slideshow {
+	left: 0 !important;
+	right: 0 !important;
+}
+
+/* Columns
+------------------------------------------------------ */
+
+.fl-col-content {
+	border-left: none !important;
+	border-right: none !important;
+	margin: 0 !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
