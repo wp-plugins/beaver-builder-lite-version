@@ -1,0 +1,943 @@
+<h4>1.6.2.1 - 08/25/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Replaced image arrows with SVG arrows in the Content Slider module.</li>
+	<li>Added a setting to the Post Slider module for selecting the thumbnail size.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a rendering issue with widgets that output styles in wp_enqueue_script.</li>
+	<li>Fixed an issue with the edit_url method so all urls get set_url_scheme.</li>
+	<li>Fixed styling issues with the Menu module.</li>
+	<li>Fixed styling issues with the Posts module.</li>
+	<li>Fixed broken arrows in the Posts Slider module.</li>
+</ul>
+
+<h4>1.6.2 - 08/16/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>The Menu module is now out of beta! Be sure to check out <a href="https://www.wpbeaverbuilder.com/the-menu-module-is-now-in-beta/" target="_blank">the blog post</a> for more info on how that works.</li>
+	<li>Added opacity settings for menu background colors in the Menu module.</li>
+	<li>Added vertical and horizontal spacing settings for menu items in the Menu module.</li>
+	<li>Added Polish translation.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed an issue with the Menu module when an empty menu is selected.</li>
+	<li>Fixed an issue with the Menu module when resizing from desktop to mobile.</li>
+	<li>Fixed an issue with the width of the Menu module accordion layout.</li>
+	<li>Fixed an issue with widgets such as the Master Slider widget that only register their scripts in the wp_enqueue_scripts action instead of enqueuing them there.</li>
+</ul>
+
+<h4>1.6.1.1 - 08/11/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Tested WordPress 4.3 compatibility.</li>
+	<li>Updated translation files.</li>
+	<li>The CSS class fl-scroll-link can now be added to links to have them scroll to an element on the page.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with toggling settings tabs in the Posts module.</li>
+	<li>Fixed a bug with images in the Posts module gallery layout getting stretched on mobile.</li>
+</ul>
+
+<h4>1.6.1 - 08/03/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added the Posts Carousel module.</li>
+	<li>Added the Posts Slider module.</li>
+	<li>Added style options to the Posts module gallery layout.</li>
+	<li>The builder is now compatible with scheduled posts.</li>
+	<li>The fullscreen slideshow button now shows at smaller sizes.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with row margins not working when a slideshow or video background is present.</li>
+</ul>
+
+<h4>1.6.0.3 - 07/21/2015</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with the fl_builder_global_posts filter not returning all posts.</li>       
+	<li>Fixed a bug with all checkboxes being checked in some widgets when saving.</li>       
+	<li>Fixed a bug with floating content breaking out of tabs.</li>       
+	<li>Fixed a bug with autosuggest fields breaking when posts have special characters in the title.</li>       
+</ul>
+
+<h4>1.6.0.2 - 07/08/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added support for comma separated selectors in CSS preview fields.</li>
+	<li>Added support for an array of rules in CSS preview fields.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Added exclude_from_search for the templates post type so templates don't so in searches.</li>
+	<li>Fixed a bug with nested modules such as buttons causing errors when they are disabled using fl_builder_register_module.</li>
+	<li>Fixed a bug with slideshow and gallery templates.</li>
+	<li>Fixed a bug with the Posts module that made it so two on the same page couldn't have different post widths.</li>
+	<li>Fixed a bug that prevented two accordions on the same page from having open sections at the same time.</li>
+	<li>Fixed a bug causing the Facebook comments popup in the Social Buttons module from showing.</li>
+</ul>
+
+<h4>1.6.0.1 - 06/28/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added fl_builder_layout_style_dependencies filter.</li> 
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with importing templates that have slideshows or galleries.</li>      
+	<li>Fixed a bug with row margins when the background is set to a slideshow or video.</li>  
+</ul>
+
+<h4>1.6.0 - 06/22/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added link, hover and heading color settings to rows and columns.</li>   
+	<li>Tab and accordion items now open when linked to from another page.</li>  
+	<li>Accordion items now have an active class when open.</li>  
+	<li>Column layouts now support RTL languages.</li> 
+	<li>Added an email address option to the Subscribe Form module so signups can be sent to your email address.</li> 
+	<li>Added support for MailChimp groups to the Subscribe Form module.</li> 
+	<li>Added ActiveCampaign integration.</li> 
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with the window closing when publishing changes.</li>    
+	<li>Fixed a bug with getting the correct ID for the current post.</li>  
+	<li>Fixed a bug with row borders showing when none are set and the background is a slideshow.</li>  
+	<li>Fixed a bug with the multiple photos field when used in a nested form.</li> 
+</ul>
+
+<h4>1.5.9 - 06/01/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Accordion and tab items can now be linked to. Please see this <a href="https://www.wpbeaverbuilder.com/knowledge-base/linking-to-tabs-and-accordions/">knowledge base entry</a> for more info.</li>
+	<li>Button icons can now be added after the button text.</li>
+	<li>Added background color overlay for columns.</li>
+	<li>Added Dutch translation.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed issues with modules, widgets and shortcodes that create secondary loops causing the page to become unresponsive.</li>
+    <li>Fixed a bug with widgets that use checkbox groups.</li>
+    <li>Fixed a bug with the pricing table module that caused some styling not to show.</li>
+    <li>The map module no longer scrolls as you scroll the page.</li>
+	<li>CSS tweak to prevent the text editor from breaking when the body's position is set to relative.</li>
+	<li>CSS tweak for photos to prevent extra space below them.</li>
+	<li>CSS tweak to make fixed background photos scroll on iOS to prevent them from getting blown up too big.</li>
+	<li>CSS tweak to fix a FireFox bug with callouts.</li>
+    <li>Added jQuery as a dependency for fl-builder-layout-(POST_ID).js so it's included after jquery.js if jquery.js is moved to wp_footer.</li>
+</ul>
+
+<h4>1.5.8 - 05/17/2015</h4>
+<p>Please see <a href="https://www.wpbeaverbuilder.com/?p=14686" target="_blank">the blog post</a> for more info on this release.</p>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>User defined templates can now be categorized and ordered.</li>
+	<li>Revisions are now enabled for user defined templates.</li>
+    <li>Added a setting to enable the templates admin interface for editing templates in the WordPress admin.</li>
+    <li>Added a setting for Agency members to override core templates.</li>
+    <li>Added Hatchbuck integration to the Subscribe Form module.</li>
+    <li>Photo backgrounds can now be added to columns.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a CSS z-index bug with the Content Slider module's next/prev buttons.</li>
+</ul>
+
+<h4>1.5.7.2 - 05/12/2015</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug with shortcodes not being rendered when the Posts module is present on a page.</li>
+</ul>
+
+<h4>1.5.7.1 - 05/10/2015</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a FireFox and IE bug with the Photo module introduced in 1.5.7.</li>
+    <li>Fixed a CSS bug with the height of the Content Slider module when multiple sliders are on the same page.</li>
+    <li>Fixed a bug that prevented shortcodes from being escaped with double brackets.</li>
+    <li>Fixed a bug that caused the Video module to freeze the builder with videos that are uploaded to WordPress.</li>
+</ul>
+
+<h4>1.5.7 - 05/04/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added Infusionsoft integration.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug causing MailPoet to be unavailable in the Subscribe Form module.</li>
+    <li>Fixed a bug causing the builder's admin settings to be unavailable when DISALLOW_FILE_MODS is set to true.</li>
+    <li>Fixed a bug with new lines in photo captions breaking the Slideshow module.</li>
+    <li>Fixed a CSS bug with photo captions that are shown on hover.</li>
+    <li>Fixed floating content issues with the Accordion module.</li>
+</ul>
+
+<h4>1.5.6 - 04/26/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added SendinBlue integration.</li>
+    <li>Added filters for MailChimp single optin and disabling the welcome message.</li>
+    <li>Most of the builder's PHP and JavaScript files now have much better inline documentation of classes, properties and methods (we still need to do the modules).</li>
+</ul>
+<p><strong>Tweaks</strong></p>
+<ul>
+    <li>Removed phone number validation from the Contact Form module to support international phone numbers.</li>
+    <li>Updated FontAwesome.</li>
+    <li>Tweaked the Heading module CSS to prevent Dynamik from overriding our styles.</li>
+    <li>Added CSS to fix margins issue with the WordPress editor link lightbox and some third party themes.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug that didn't allow backslashes to be saved.</li>
+    <li>Fixed a bug that prevented namespaced widgets from working.</li>
+    <li>Fixed a bug with the Posts module that prevented the date from being hidden in the gallery layout.</li>
+</ul>
+
+<h4>1.5.5 - 04/12/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>The Subscribe Form module is here! Please see <a href="https://www.wpbeaverbuilder.com/build-your-email-lists-with-beaver-builders-new-subscribe-form-module/">the blog post</a> for complete details.</li>
+    <li>Added four new templates.</li>
+</ul>
+
+<h4>1.5.4 - 04/08/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added offset setting to the Posts module.</li>
+    <li>Added getting started video to the help button.</li>
+    <li>Added auto spacing setting to the global settings for turning off auto spacing on responsive layouts.</li>
+    <li>Added SVG support to the photo field for sites that have SVG enabled as an mime type.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug with switching back to the WordPress editor.</li>
+    <li>Fixed a bug with textarea text color being overridden by row text color.</li>
+    <li>Fixed an issue with varnish by removing the question mark from the URL when publishing.</li>
+    <li>Removed FLBuilderModel::delete_asset_cache_domain_change as it's causing issues and we now have the clear cache button.</li>
+</ul>
+
+<h4>1.5.3 - 03/31/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added admin settings section for clearing the builder's CSS and JavaScript cache.</li>
+    <li>Added a setting to show the full content in the posts module.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>CSS fix for three column layouts in the WooCommerce module.</li>
+    <li>Fixed a preview bug with row background overlay colors.</li>
+    <li>Fixed an issue with the PHP glob function not returning an array on some systems.</li>
+    <li>Fixed CSS conflicts with third party themes and the WordPress editor.</li>
+</ul>
+
+<h4>1.5.2 - 03/24/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added logic to the accordion module that scrolls a section into view on mobile if it's not visible.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Rolling back part of the last update that removed the style tag from columns. This is due to the fact that many existing sites have old CSS cached that doesn't contain the column width. We'll be releasing this change again in the near future to give sites time to update their cache with the new CSS.</li>
+	<li>Icons in accordion titles don't get replaced anymore when clicked.</li>
+	<li>Fixed an unescaped translation string JavaScript bug.</li>
+</ul>
+
+<h4>1.5.1 - 03/22/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added German translation.</li>
+    <li>Added Russian translation.</li>
+	<li>Smooth scrolling now works for all links on a page including links in the header on third party themes.</li>
+	<li>Added phone and subject fields to the contact form module.</li>
+	<li>Added settings to the contact form module for showing and hiding fields.</li>
+	<li>Builder cache now clears itself if the domain name of a website changes.</li>
+	<li>Modules in the backend are now categorized the same as they are on the frontend.</li>
+	<li>Moved column width from the style attribute in the markup to the generated css file.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with text editor refresh previews.</li>
+	<li>Added position:static to the body tag when the builder is active to fix issues with WordPress editor popups when the body is set to position:relative.</li>
+	<li>Fixed bugs with setting the product order in the WooCommerce module.</li>
+	<li>CSS fix for row/column colors overriding the color of elements in the heading module such as em tags.</li>
+	<li>Added ignore_sticky_posts to post module queries to prevent sticky posts from showing when not desired.</li>
+	<li>Smooth scrolling is only applied to rows, columns and modules to avoid conflicts with third party scripts.</li>
+	<li>Autosuggest fields such as links now work on pre WordPress 4.0.</li>
+</ul>
+
+<h4>1.5.0 - 03/02/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Updated Slovak translation.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with the JavaScript for smooth scrolling links.</li>
+	<li>Fixed a spelling error in the help tour. Thanks Gerard!</li>
+</ul>
+
+<h4>1.4.9 - 03/01/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added a help button to the builder interface that gives users access to a tour, video (coming soon), forums and documentation.</li>
+    <li>Added network settings for white labeling the help button. Agency members can customize or disable all help button features such as adding their own video or knowledge base links. Unfortunately, the tour is too complex to make customizable, but it can be disabled and is disabled by default while in simple editing mode.</li>
+    <li>Added a welcome message for the first time a user launchs the builder on a site asking if they would like to view the tour.</li>
+    <li>Added a new style setting to the button module for creating flat, gradient or transparent buttons.</li>
+    <li>Added Arabic and Spanish translations.</li>
+    <li>Added display:inline to builder images to prevent themes that set images to display:block from breaking alignment.</li>
+    <li>Added JavaScript logic for smooth scrolling of all anchor links in a builder layout.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Row overlay actions are now fixed to the bottom of the overlay if the actions are hidden by the builder header or are off the page.</li>
+    <li>Fixed a bug with background video fallbacks not showing on mobile.</li>
+    <li>Fixed a bug with custom modules on Windows servers.</li>
+    <li>Fixed a CSS bug with the callout module when the photo sits to the left of the text.</li>
+    <li>Fixed a bug that prevented the builder from working with domain masking.</li>
+    <li>Fixed a bug caused by W3 Total Cache's HTML minification by disabling minify while the builder is active.</li>
+</ul>
+
+<h4>1.4.8 - 02/22/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added a background color overlay setting for rows. A huge thanks to <a href="http://favolla.com.br/" target="_blank">Diego de Oliveira</a> for this contribution!</li>
+    <li>Added global settings for default row width.</li>
+    <li>Added a confirmation popup for switching back to text editor mode.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug with custom icons that only happens on certain sites as PHP's glob function doesn't always return an array.</li>
+    <li>Fixed an admin settings JavaScript error caused by unescaped translation strings.</li>
+    <li>Fixed a bug causing row background slideshows to show up on archive pages.</li>
+</ul>
+
+<h4>1.4.7 - 02/16/2015</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug that broke the builder's admin settings page on the standard version.</li>
+</ul>
+
+<h4>1.4.6 - 02/15/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added the ability to upload Icomoon and Fontello font icons under Settings > Page Builder > Icons.</li>
+    <li>Added the ability to disable core font icons.</li>
+    <li>Added an ID field to row, column and module settings.</li>
+    <li>Added French translation.</li>
+    <li>Added Itailian translation.</li>
+    <li>Added fl_builder_upgrade_url filter. This filter can be used by theme developers to add their affiliate link to the upgrade buttons in the lite version.</li>
+    <li>Added fl_builder_settings_form_defaults filter for overriding default form settings.</li>
+    <li>Enhanced SSL check for servers behind load balancers.</li>
+    <li>Single repeater fields can now be duplicated.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Row text color no longer overrides heading text color.</li>
+    <li>Preview text for form fields now shows the option label for select inputs instead of the option value.</li>
+</ul>
+
+<h4>1.4.5 - 01/26/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added a search field to the icon selector.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug introduced in 1.4.4 that caused PHP warnings when creating new pages.</li>
+</ul>
+
+<h4>1.4.4 - 01/26/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Major improvements to how translations are handled. A huge thanks to Oliver Juhas of <a href="http://www.webmandesign.eu/" target="_blank">WebMan Design</a> for making that happen. <strong>Please Note:</strong> Older translations are not compatible with this update need to be redone. Please get in touch with us if you're interested in helping with that.</li>
+    <li>Widgets in the builder now run the widget update method.</li>
+    <li>Content for the tabs module now scrolls into view on smaller devices.</li>
+    <li>Added filters for working with custom css classes on rows, columns and modules.</li>
+    <li>Updated class filenames to follow WordPress standards.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed icon hover color.</li>
+    <li>Fixed a bug with slideshows showing up in the header on archive pages.</li>
+    <li>Fixed a bug causing the heading module color to not work when linked.</li>
+    <li>Fixed a bug with overriding modules in a theme when the name of the wp-content directory is changed.</li>
+</ul>
+
+<h4>1.4.3 - 01/11/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added Foundation Icons and WordPress Dashicons to the icon selector.</li>
+    <li>Added icons for buttons in the Callout, Call To Action, and Content Slider modules.</li>
+    <li>Added support for right-to-left languages.</li>
+    <li>Read more text can now be customized in posts module.</li>
+    <li>Module ids are now accessible in frontend.php using the $id variable.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug with WordPress installs where core files are installed in a subdirectoy and the index file is in the root.</li>
+</ul>
+
+<h4>1.4.2</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixes for widgets that load in JavaScripts or forget to reset the loop.</li>
+    <li>Minor adjustments to how data is passed to the server to prevent 406 errors.</li>
+</ul>
+
+<h4>1.4.1</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added a new responsive breakpoint in the global settings for medium devices.</li>
+    <li>Added new column width settings for medium and small devices.</li>
+    <li>Added the ability to hide rows, columns and modules at a number of new breakpoints.</li>
+    <li>Improved the UI/UX for editing user defined templates.</li>
+    <li>User defined templates are now ordered by title instead of id.</li>
+    <li>Optimized the loading of images for the gallery module's collage layout.</li>
+    <li>White label settings for Agency members are now available on single site installs.</li>
+    <li>Updated the custom modules docs and examples with info on the new link field type.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug that kept some third party widgets from being styled correctly.</li>
+    <li>Fixed bugs that caused a secondary layout on a page to be editable when it shouldn't be.</li>
+    <li>Replaced the word update with save in AJAX requests to prevent mod security from blocking them.</li>
+    <li>Fixed a bug where publishing a layout in multiple tabs caused it to disappear.</li>
+    <li>Fixed a bug causing the builder to break in rare cases when canceling out of a preview.</li>
+</ul>
+
+<h4>1.4.0</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug introduced in 1.3.9 with moving modules into the main layout to create a new row.</li>
+    <li>Fixed classname conflicts with the pricing table module that broke the builder in some cases.</li>
+</ul>
+
+<h4>1.3.9</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Clicking a Beaver Builder theme header link now asks if you want to publish before launching the builder on a new page.</li>
+    <li>Added support for multiple builder layouts on the same page.</li>
+    <li>Color picker hex inputs now accept the # symbol.</li>
+    <li>Added a new link field that allows you to search for a post of any type to link to.</li>
+    <li>Added white labeling to the plugins page.</li>
+    <li>Added an admin setting for disabling advanced editing functionality such as adding, deleting and moving modules.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a compatibility issue with themes that use older versions of Option Tree.</li>
+    <li>Removed deprecated like_escape function from FLBuilderLoop class.</li>
+</ul>
+
+<h4>1.3.8</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Single photos can now be opened in a lightbox by choosing lightbox in the photo module's link settings.</li>
+    <li>Added the ability to define custom fields through actions. Developers should review the custom module docs and examples for detailed info on how that works.</li>
+    <li>Added the ability to duplicate rows.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug that made it so you could only have one text or code editor within a builder settings panel. Thanks to Nicholas Joannes for the fix!</li>
+    <li>Reworked the load order and definitions for the main builder JavaScript class to prevent issues with some minification plugins.</li>
+    <li>Fixed a bug with generating new builder node ids that was affecting templates in some cases.</li>
+</ul>
+
+<h4>1.3.7</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added circle crop option to the photo module.</li>
+    <li>Added icon setting for white labeling.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug with the posts module that kept shortcodes from rendering.</li>
+    <li>Fixed a bug that made it impossible to append the same template twice.</li>
+    <li>Fixed a bug that broke photo cropping.</li>
+</ul>
+
+<h4>1.3.6</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>The Pricing Table module is here!</li>
+    <li>Added page builder icon to admin bar link.</li>
+    <li>Added data sanitization to admin settings for better security.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Minor code refactoring and bug fixes.</li>
+    <li>WebKit scrollbar CSS fix.</li>
+</ul>
+
+<h4>1.3.5</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Reworked the FLBuilderModel class to drastically lower the number of database operations.</li>
+    <li>Updated Swedish translation.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug with revision support that was causing layout data to be lost in some cases.</li>
+	<li>Fixed a bug causing the builder to be active for BuddyPress pages.</li>
+	<li>Fixed a bug with the post module's category filtering when a custom post type is present that uses standard categories.</li>
+	<li>Fixed post module layout bug caused by images not being fully loaded before layout happens.</li>
+	<li>Fixed oversized parallax backgrounds for tablets.</li>
+	<li>Fixed a bug with nested settings forms that was causing apostrophes to render incorrectly.</li>
+	<li>Replaced jQuery finish call with stop for legacy support.</li>
+	<li>Small CSS fix for the builder logo on third party themes.</li>
+</ul>
+
+<h4>1.3.4</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>The tabs module is here!</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug caused by widgets that embed jQuery inline.</li>
+	<li>Fixed a bug caused by the recent update that broke the ability to switch back to the text editor on the post edit screen.</li>
+</ul>
+
+<h4>1.3.3</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Live previews are here! We've done away with the "Save &amp; Preview" button as changes will now take effect as soon as you edit a setting. Clicking the cancel button from within a settings panel will now revert any changes made while that panel was active. Developers should test their custom modules before updating and check out the new custom module docs for more information on the live preview APIs.</li>
+    <li>Updated custom module docs and examples.</li>
+	<li>Updated layout template PSD files.</li>
+	<li>Optimized AJAX requests for adding new rows and columns.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Reworked handling of post data to prevent mod_security 406 and 503 errors.</li>
+</ul>
+
+<h4>1.3.2</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Updated custom module docs for developer members.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Removed do_shortcode from the builder's render content method as it isn't necessary and causes issues.</li>
+	<li>Fixed a bug where the builder was removing third party editor buttons from the post edit screen's editor.</li>
+	<li>Fixed path to blank builder template thumbnail.</li>
+	<li>Reworked the FLBuilderModel::generate_node_id method to account for duplicate ids being generated, specifically on Windows servers.</li>
+	<li>Fixed a bug with row ordering caused by plugins that insert script tags within the builder's content area.</li>
+	<li>Fixed bug where password protected posts show that the builder is inactive even when it's active.</li>
+</ul>
+
+<h4>1.3.1</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Relaunching as Beaver Builder! Check out the new site at <a href="http://www.wpbeaverbuilder.com" target="_blank">www.wpbeaverbuilder.com</a>.</li>
+	<li>Developer members can now white label the builder under Settings > Page Builder > Branding.</li>
+</ul>
+
+<h4>1.3.0</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Multiple accordian items can now be open at the same time.</li>
+	<li>Added Swedish translation.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Added a version number to builder assets to prevent caching when the builder is active.</li>
+    <li>Fixed an issue with editing the same page in multiple tabs.</li>
+    <li>Renamed JSMin class to avoid conflicts with W3TC.</li>
+    <li>Reworked how builder edit URLs are generated.</li>
+    <li>Reworked the fix for shortcodes that load jquery since it's already loaded when the builder is active.</li>
+</ul>
+
+<h4>1.2.9</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Updated Font Awesome.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed Chrome layout bug with the template selector.</li>
+    <li>Added back wp_reset_postdata() to the Posts module.</li>
+    <li>Fixed a bug where the column size field didn't accept decimals.</li>
+    <li>Fixed a bug with the Text Editor module when the visual editor is disabled in the user settings.</li>
+    <li>Now forcing auto height and width for builder photos.</li>
+</ul>
+
+<h4>1.2.8</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Post meta is now used to store data instead of a custom database table.</li>
+	<li>Post revisions are now supported. NOTE: Old revisions will not contain builder data. Only revisions saved after updating to 1.2.8 or later will contain builder data.</li>
+	<li>Modules can now be overridden from within a theme directory.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Scripts and styles enqueued by shortcodes are now rendered in the builder's ajax layout method.</li>
+    <li>Fixed an issue with shortcodes when the posts module is present.</li>
+    <li>Fixed an issue with WordPress widgets that no longer exist.</li>
+    <li>Fixed color picker hex input width so all characters are visible.</li>
+    <li>Increased the memory limit for photo crop operations.</li>
+</ul>
+
+<h4>1.2.7</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a pagination bug with the posts module when used on a homepage.</li>
+    <li>Fixed a compatibility issue with shortcodes that incorrectly output html.</li>
+	<li>Added compatibility for password protected pages.</li>
+</ul>
+
+<h4>1.2.6</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added new homepage layout templates.</li>
+	<li>Refined existing homepage layout templates.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>The custom post type for user templates doesn't show up in the admin UI anymore.</li>
+</ul>
+
+<h4>1.2.5</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added new gallery layout to the posts module.</li>
+	<li>Added new blog gallery template.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Custom image sizes now show up correctly in the photo module.</li>
+    <li>The WordPress heartbeat API is only used when available.</li>
+    <li>Fixed a FireFox scrolling issue with the modules panel.</li>
+    <li>Cleaned up the WordPress link dialog layout for the text module.</li>
+</ul>
+
+<h4>1.2.4</h4>
+<ul>
+	<li>Ok, let's try this again. The posts module is here! :)</li>
+	<li>Added updated Italian translation files.</li>
+</ul>
+
+<h4>1.2.3</h4>
+<ul>
+	<li>The posts module is here! Add a feed or grid of posts to any page on your website!</li>
+	<li>Added five new layout templates.</li>
+</ul>
+
+<h4>1.2.2</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Media is now attached to the current post when using the media uploader within the builder.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug that kept iframes from being exported to the WordPress editor.</li>
+    <li>Fixed a bug where private posts were published when saving a layout.</li>
+    <li>Fixed initial flash of all testimonials when the testimonials module is loading.</li>
+    <li>Fixed woocommerce css issues.</li>
+</ul>
+
+<h4>1.2.1</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Updated custom module docs and examples.</li>
+	<li>Added an "all" option for toggling which modules are active.</li>
+	<li>Added an admin settings section for enabling or disabling templates.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed a bug with custom module settings sections that have no fields. </li>
+    <li>Removed module animations for touch.</li>
+</ul>
+
+<h4>1.2.0</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added support for core MCE plugins.</li>
+	<li>Added new translations.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Builder settings are now loaded after the text domain.</li>
+	<li>Fixed an infinite loop bug caused by widgets that call the_content filter.</li>
+</ul>
+
+<h4>1.1.9</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Reworked the builder ui to make templates more prominent.</li>
+	<li>Separated built in templates into home pages and content pages.</li>
+	<li>Templates can now be appended to an existing layout.</li>
+	<li>Added custom class and responsive visibility settings to rows, columns and modules.</li>
+	<li>Added border settings for rows.</li>
+	<li>Columns now have their own settings panel.</li>
+	<li>Added column settings button to module actions.</li>
+	<li>Removed column width from module settings as it's now available in the column settings.</li>
+	<li>Added help tooltips to row, column and module actions.</li>
+	<li>The row and module settings spacing tab has been renamed to advanced.</li>
+	<li>Added CSS animations for modules under the advanced settings tab.</li>
+	<li>Added opacity to seperator module.</li>
+	<li>License activation has been moved from Settings &gt; FastLine Themes to Settings &gt; Page Builder &gt; License.</li>
+	<li>The builder is now disabled by default for posts.</li>
+	<li>Added new font awesome icons.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Layout templates are no longer visible on the admin menus page.</li>
+	<li>Fixed a few bugs with the content slider module and upgraded bxslider.</li>
+	<li>Removed the builder's the_content filter while content is being rendered. That prevents modules, widgets or shortcodes that call apply_filters from causing an infinite loop.</li>
+</ul>
+
+<h4>1.1.8</h4>
+<p>The FastLine Page Builder is now licensed under the GNU General Public License v2.0.</p>
+
+<h4>1.1.7</h4>
+<p><strong>Enhancements</strong></p>
+<ul>    
+    <li>Added scheme.org markup to the photo and video modules.</li>
+    <li>Added autoembed to the video module.</li>
+    <li>Added support for WPML's copy and duplicate functionality.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>    
+    <li>Added a workaround for wp_upload_dir since it doesn't support SSL.</li>
+</ul>
+
+<h4>1.1.6</h4>
+<p>The builder is now compatible with WP Minify.</p>
+
+<h4>1.1.5</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>    
+    <li>Fixed an issue with themes that load in an older version of jQuery after wp_head is called.</li>
+    <li>Fixed a bug with parallax backgrounds in Chrome.</li>
+    <li>External scripts such as YUI3 are now loaded via HTTPS if the site is using HTTPS.</li>
+</ul>
+
+<h4>1.1.4</h4>
+<p><strong>Enhancements</strong></p>
+<ul>    
+    <li>Added video, slideshow and parallax row backgrounds.</li>
+    <li>Video shortcode embeds are now responsive.</li>
+    <li>Added poster, loop and autoplay options to the video module when using videos from the media library.</li>
+    <li>Developer members now have access to documentation and examples for building custom modules.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>    
+    <li>Fixed a bug where posts in secondary loops were showing that the builder was active even when it wasn't.</li>
+    <li>Fixed another jQuery conflict caused by 3rd party plugins.</li>
+    <li>Fixed a bug with the gallery module that was causing full size photos to be loaded.</li>
+    <li>3rd party editor plugins are now removed from the builder to prevent JavaScript conflicts.</li>
+    <li>Fixed a bug that was causing button colors not to stick.</li>
+</ul>
+
+<h4>1.1.3</h4>
+<p><strong>Enhancements</strong></p>
+<ul>    
+    <li>Added the ability for users to save, import and export their own templates.</li>
+    <li>Added custom width option for buttons.</li>
+    <li>Added fl_builder_global_posts filter for loading layout assets globally.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>    
+    <li>Reworked how shortcodes are handled to fix compatibility issues with shortcodes that create secondary loops.</li>
+    <li>Various minor bug fixes.</li>
+</ul>
+
+<h4>1.1.2</h4>
+<p><strong>Enhancements</strong></p>
+<ul>    
+    <li>Split modules up into two groups, Basic Modules and Advanced Modules.</li>
+    <li>Added Italian translation. Thanks Davide Pante!</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>    
+    <li>In the last update we added higher z-indexes to the builder interface to deal with theme compatibility issues. That broke the media uploader and has been fixed.</li>
+</ul>
+
+<h4>1.1.1</h4>
+<ul>    
+    <li>Fixed a webkit issue that was breaking the builder lightbox when displayed over an HTML5 video.</li>
+    <li>Fixed a bug with shortcodes that create custom loops.</li>
+    <li>Assets for all posts on a category page are now loaded.</li>
+    <li>Fixed an issue where WordPress widgets, such as Gravity Forms, were loading in jQuery a second time.</li>
+    <li>Added higher z-indexes to the builder interface to deal with theme compatibility issues.</li>
+</ul>
+
+<h4>1.1.0</h4>
+<p><strong>Enhancements</strong></p>
+<ul>    
+    <li>Added support for plugins that duplicate posts.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>    
+    <li>Fixed a compatibility issue with the WP-simpleviewer plugin.</li>
+    <li>Fixed a bug with orphaned modules when duplicating a layout.</li>
+    <li>Fixed a bug with 404 pages and launching the builder on an unsaved post.</li>
+</ul>
+
+<h4>1.0.9</h4>
+<p><strong>Enhancements</strong></p>
+<ul>    
+    <li>Enhancements that allow developers to create custom modules as plugins.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>    
+    <li>Fixed a bug that was breaking the builder when disabling a module that has been inserted into a layout.</li>
+    <li>Minor bug fixes for the CTA module.</li>
+</ul>
+
+<h4>1.0.8</h4>
+<p><strong>Enhancements</strong></p>
+<ul>    
+    <li>Stripped down builder content is now exported to the default WordPress editor.</li>
+    <li>Added new settings tab for enabling or disabling builder modules.</li>
+    <li>Builder layouts are now reimported on plugin activation, even if you use the uninstall feature on the settings page. </li>
+    <li>Minor tweaks to the button module CSS to prevent third party themes from overriding colors.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>    
+    <li>Fixed a bug with the CSS for the contact form.</li>
+</ul>
+
+<h4>1.0.7</h4>
+<ul>    
+    <li>Fixed a JavaScript bug that was breaking the builder in WordPress 3.9.</li>
+    <li>Fixed a bug with third party video embeds.</li>
+    <li>Now using fitVids.js for responsive video embeds.</li>
+</ul>
+
+<h4>1.0.6</h4>
+<p><strong>Enhancements</strong></p>
+<ul>    
+    <li>Added warning for leaving the page when editing settings.</li>
+    <li>Builder layouts are now locked when editing using the built in WordPress post locking system.</li>
+    <li>Video module now excepts formats other than MP4.</li>
+    <li>Video module is now responsive for media library embeds.</li>
+    <li>Removed manage subscription link from plugins page. Subscriptions can be managed under Settings > FastLine Themes.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>    
+    <li>Fixed a bug with widget modules. Now when you uninstall a custom widget that was inserted into the builder, it doesn't break.</li>
+    <li>Fixed an issue with button css being overriden by third party themes.</li>
+</ul>
+
+<h4>1.0.5</h4>
+<p><strong>Enhancements</strong></p>
+<ul>    
+    <li>Added three new layout templates.</li>
+    <li>Added new icon group module.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>    
+    <li>Fixed an issue with single quotes in fields within nested forms.</li>
+    <li>Added wp_reset_query to ensure the correct post is being loaded.</li>
+</ul>
+
+<h4>1.0.4</h4>
+<p><strong>Enhancements</strong></p>
+<ul>    
+    <li>Added new Accordion module.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>    
+    <li>Added nocache headers for when the builder is active to prevent the draft layout from being cached. This keeps the builder from breaking when the browser's back button is used.</li>
+</ul>
+
+<h4>1.0.3</h4>
+<p>Fixed a bug with the text editor and html modules that was introduced in the last update.</p>
+
+<h4>1.0.2</h4>
+<p><strong>Enhancements</strong></p>
+<ul>    
+    <li>Updated Font Awesome to include new icons in 4.0.3.</li>
+    <li>Added custom post type support under Settings > Page Builder.</li>
+    <li>Minor enhancements to the drag and drop experience.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>    
+    <li>Fixed a bug with column resizing.</li>
+    <li>Fixed bug where publishing a draft doesn't set the post slug.</li>
+    <li>Photo module now accepts relative urls for links.</li>
+    <li>Fixed theme compatibility issue with drag and drop.</li>
+    <li>Fixed an issue with JSMin being redeclared by other plugins.</li>
+    <li>Reworked how the builder handles loading in jQuery.</li>
+</ul>
+
+<h4>1.0.1</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Major enhancements to the drag and drop experience.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed text editor module for the upcoming WordPress 3.9 release.</li>
+    <li>Fixed a bug with deleting rows that contain a single column.</li>
+</ul>
+
+<h4>1.0</h4>
+<p>Version 1.0 is here!</p>
+<ul>
+    <li>Builder layouts are now only enabled once the publish button is clicked within the builder, not when the builder button is clicked from the post edit screen or admin toolbar. This allows people to work on builder layouts while still keeping their original WP editor content.</li>
+    <li>Changed 'Discard Changes' to 'Discard Draft' so users know they are discarding the current draft layout.</li>
+    <li>Existing post content is now migrated to a text module when launching the builder.</li>
+    <li>Publishing a builder layout now publishes the parent post if it is a draft.</li>
+    <li>Default page title is now only hidden for pages, not blog posts.</li>
+</ul>
+
+<h4>0.8.7</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Modules can now be dropped into column positions to create new column groups.</li>
+    <li>Added new pre-built layouts.</li>
+    <li>Added "click action" setting to the gallery module so users can turn off the lightbox if their theme is using a custom one.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Row overlay height now resets when column groups are deleted.</li>
+    <li>Fixed caching issue that kept WordPress widgets from updating.</li>
+    <li>Fixed a bug with the content slider module that flashed all of the slides before loading.</li>
+</ul>
+
+<h4>0.8.6</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added contact form module.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Added jQuery migrate so the builder is compatible with plugins running on older versions of jQuery.</li>
+</ul>
+
+<h4>0.8.5</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+    <li>Added new pre-built layout templates.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Row backgrounds now revert to background-attachment scroll on mobile.</li>
+    <li>Fixed alignment bug with icon module.</li>
+    <li>Fixed slideshow resize bug when exiting fullscreen.</li>
+    <li>Fixed bug with row drag helper position.</li>
+</ul>
+
+<h4>0.8.4</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+    <li>Fixed bug with shortcodes not rendering.</li>
+    <li>Fixed module duplication bug.</li>
+    <li>Fixed bug with textareas in the HTML module.</li>
+</ul>
+
+<h4>0.8.3</h4>
+<p>Fixed lightbox button hover bug for builder gallery module.</p>
+
+<h4>0.8.2</h4>
+<p>Responsive module margins now only reset if negative or greater than the default.</p>
+
+<h4>0.8.1</h4>
+<p>Initial beta release.</p>
