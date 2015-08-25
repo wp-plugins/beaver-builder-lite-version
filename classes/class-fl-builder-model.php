@@ -155,14 +155,7 @@ final class FLBuilderModel {
 			$post = get_post( $post_id );
 		}
 
-		$url = add_query_arg( 'fl_builder', '', get_permalink( $post->ID ) );
-
-		if ( 'draft' == $post->post_status ) {
-			return set_url_scheme( $url );
-		}
-		else {
-			return $url;
-		}
+		return set_url_scheme( add_query_arg( 'fl_builder', '', get_permalink( $post->ID ) ) );
 	}
 
 	/**

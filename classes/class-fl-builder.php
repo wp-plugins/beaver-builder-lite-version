@@ -577,19 +577,21 @@ final class FLBuilder {
 	{
 		global $wp_scripts;
 		global $wp_styles;
+		
+		// Do the wp_enqueue_scripts action here to register any scripts or 
+		// styles that might need to be registered for shortcodes or widgets.
+		ob_start();
+		do_action( 'wp_enqueue_scripts' );
+		ob_end_clean();
 
-		// Deregister scripts and styles so we can capture those
-		// registered by content functions such as shortcodes.
+		// Dequeue scripts and styles so we can capture only those
+		// enqueued by shortcodes or widgets.
 		if(isset($wp_scripts)) {
 			$wp_scripts->queue = array();
 		}
 		if(isset($wp_styles)) {
 			$wp_styles->queue = array();
 		}
-
-		// Enqueue jQuery again so it's not added by any
-		// third party shortcodes or plugins.
-		wp_enqueue_script('jquery');
 
 		// Render the layout.
 		ob_start();
@@ -601,8 +603,7 @@ final class FLBuilder {
 		echo do_shortcode($html);
 		$html = ob_get_clean();
 
-		// Print scripts and styles registered by content
-		// functions such as shortcodes.
+		// Print scripts and styles enqueued by shortcodes or widgets.
 		ob_start();
 
 		if(isset($wp_scripts)) {
