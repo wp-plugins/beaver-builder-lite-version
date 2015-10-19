@@ -1,0 +1,12 @@
+/* Responsive Utilities
+------------------------------------------------------ */
+
+.fl-visible-desktop,
+.fl-visible-mobile {
+	display: none;
+}
+.fl-visible-desktop-medium,
+.fl-visible-medium,
+.fl-visible-medium-mobile {
+	display: block;
+}
