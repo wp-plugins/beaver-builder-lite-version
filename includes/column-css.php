@@ -6,56 +6,59 @@
 .fl-node-<?php echo $col->node; ?> {
 	color: #<?php echo $col->settings->text_color; ?>;
 }
+.fl-builder-content .fl-node-<?php echo $col->node; ?> *:not(input) {
+	color: inherit;
+}
 <?php endif; ?>
 
 <?php if(!empty($col->settings->link_color)) : // Link Color ?>
-.fl-node-<?php echo $col->node; ?> a {
+.fl-builder-content .fl-node-<?php echo $col->node; ?> a {
 	color: #<?php echo $col->settings->link_color; ?>;
 }
 <?php elseif(!empty($col->settings->text_color)) : ?>
-.fl-node-<?php echo $col->node; ?> a {
+.fl-builder-content .fl-node-<?php echo $col->node; ?> a {
 	color: #<?php echo $col->settings->text_color; ?>;
 }
 <?php endif; ?>
 
 <?php if(!empty($col->settings->hover_color)) : // Link Hover Color ?>
-.fl-node-<?php echo $col->node; ?> a:hover {
+.fl-builder-content .fl-node-<?php echo $col->node; ?> a:hover {
 	color: #<?php echo $col->settings->hover_color; ?>;
 }
 <?php elseif(!empty($col->settings->text_color)) : ?>
-.fl-node-<?php echo $col->node; ?> a:hover {
+.fl-builder-content .fl-node-<?php echo $col->node; ?> a:hover {
 	color: #<?php echo $col->settings->text_color; ?>;
 }
 <?php endif; ?>
 
 <?php if(!empty($col->settings->heading_color)) : // Heading Color ?>
-.fl-node-<?php echo $col->node; ?> h1,
-.fl-node-<?php echo $col->node; ?> h2,
-.fl-node-<?php echo $col->node; ?> h3,
-.fl-node-<?php echo $col->node; ?> h4,
-.fl-node-<?php echo $col->node; ?> h5,
-.fl-node-<?php echo $col->node; ?> h6,
-.fl-node-<?php echo $col->node; ?> h1 a,
-.fl-node-<?php echo $col->node; ?> h2 a,
-.fl-node-<?php echo $col->node; ?> h3 a,
-.fl-node-<?php echo $col->node; ?> h4 a,
-.fl-node-<?php echo $col->node; ?> h5 a,
-.fl-node-<?php echo $col->node; ?> h6 a {
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h1,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h2,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h3,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h4,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h5,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h6,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h1 a,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h2 a,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h3 a,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h4 a,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h5 a,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h6 a {
 	color: #<?php echo $col->settings->heading_color; ?>;
 }
 <?php elseif(!empty($col->settings->text_color)) : ?>
-.fl-node-<?php echo $col->node; ?> h1,
-.fl-node-<?php echo $col->node; ?> h2,
-.fl-node-<?php echo $col->node; ?> h3,
-.fl-node-<?php echo $col->node; ?> h4,
-.fl-node-<?php echo $col->node; ?> h5,
-.fl-node-<?php echo $col->node; ?> h6,
-.fl-node-<?php echo $col->node; ?> h1 a,
-.fl-node-<?php echo $col->node; ?> h2 a,
-.fl-node-<?php echo $col->node; ?> h3 a,
-.fl-node-<?php echo $col->node; ?> h4 a,
-.fl-node-<?php echo $col->node; ?> h5 a,
-.fl-node-<?php echo $col->node; ?> h6 a {
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h1,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h2,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h3,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h4,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h5,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h6,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h1 a,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h2 a,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h3 a,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h4 a,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h5 a,
+.fl-builder-content .fl-node-<?php echo $col->node; ?> h6 a {
 	color: #<?php echo $col->settings->text_color; ?>;
 }
 <?php endif; ?>

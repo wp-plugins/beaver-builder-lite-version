@@ -197,4 +197,20 @@ final class FLBuilderLoop {
 		
 		return $data;
 	}
+
+	/**
+	 * Displays the date for the current post in the loop.
+	 *
+	 * @since 1.6.5
+	 * @param string $format The date format to use.
+	 * @return void
+	 */
+	static public function post_date( $format = 'default' )
+	{
+		if ( 'default' == $format ) {
+			$format = get_option( 'date_format' );
+		}
+		
+		the_time( $format );
+	}
 }

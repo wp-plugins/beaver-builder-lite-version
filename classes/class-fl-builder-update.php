@@ -68,8 +68,13 @@ final class FLBuilderUpdate {
 			self::v_1_4_6();
 		}
 		
+		// Update to 1.6.3 or greater.
+		if ( version_compare( $saved_version, '1.6.3', '<' ) ) {
+			self::v_1_6_3();
+		}
+		
 		// Clear all asset cache.
-		FLBuilderModel::delete_all_asset_cache();
+		FLBuilderModel::delete_asset_cache_for_all_posts();
 	}
 
 	/** 
@@ -399,6 +404,30 @@ final class FLBuilderUpdate {
 		
 		if ( file_exists( $path ) ) {
 			$filesystem->rmdir( $path, true );
+		}
+	}
+	
+	/** 
+	 * Update to version 1.6.3 or later.
+	 *
+	 * @since 1.6.3
+	 * @access private
+	 * @return void
+	 */
+	static private function v_1_6_3()
+	{
+		$posts = get_posts( array(
+			'post_type' 	 => 'fl-builder-template',
+			'posts_per_page' => '-1'
+		) );
+		
+		foreach ( $posts as $post ) {
+			
+			$type = wp_get_post_terms( $post->ID, 'fl-builder-template-type' );
+			
+			if ( 0 === count( $type ) ) {
+				wp_set_post_terms( $post->ID, 'layout', 'fl-builder-template-type' );
+			}
 		}
 	}
 }

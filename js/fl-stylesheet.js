@@ -148,7 +148,7 @@
 				
 				$('body').append(this._sheetElement);
 			
-				this._sheet = document.styleSheets[document.styleSheets.length - 1];
+				this._sheet = this._sheetElement[0].sheet;
 			}
 		},
 		

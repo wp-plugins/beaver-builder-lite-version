@@ -551,9 +551,11 @@ final class FLBuilderAdminSettings {
 	{
 		if ( isset( $_POST['fl-editing-nonce'] ) && wp_verify_nonce( $_POST['fl-editing-nonce'], 'editing' ) ) {
 			
-			$capability = sanitize_text_field( $_POST['fl-editing-capability'] );
+			$capability 			= sanitize_text_field( $_POST['fl-editing-capability'] );
+			$templates_capability 	= sanitize_text_field( $_POST['fl-global-templates-editing-capability'] );
 			
 			FLBuilderModel::update_admin_settings_option( '_fl_builder_editing_capability', $capability, true );
+			FLBuilderModel::update_admin_settings_option( '_fl_builder_global_templates_editing_capability', $templates_capability, true );
 		}
 	}
 	
@@ -658,7 +660,7 @@ final class FLBuilderAdminSettings {
 				self::clear_cache_for_all_sites();
 			}
 			else {
-				FLBuilderModel::delete_all_asset_cache();
+				FLBuilderModel::delete_asset_cache_for_all_posts();
 			}
 		}
 	}
@@ -684,7 +686,7 @@ final class FLBuilderAdminSettings {
 		// Loop through the blog ids and clear the cache.
 		foreach ( $blog_ids as $id ) {
 			switch_to_blog( $id );
-			FLBuilderModel::delete_all_asset_cache();
+			FLBuilderModel::delete_asset_cache_for_all_posts();
 		}
 		
 		// Revert to the original blog.

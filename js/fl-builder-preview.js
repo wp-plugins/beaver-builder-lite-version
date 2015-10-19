@@ -24,6 +24,16 @@
 	};
 
 	/**
+	 * Stores all the fonts and weights of all font fields. 
+	 * This is used to render the stylesheet with Google Fonts.
+	 *
+	 * @since 1.6.3
+	 * @access private
+	 * @property {Array} _fontsList
+	 */  
+	FLBuilderPreview._fontsList = {};
+
+	/**
 	 * Prototype for new instances.
 	 *
 	 * @since 1.3.3
@@ -109,7 +119,7 @@
 		 * @property {String} _xhr
 		 */  
 		_xhr                : null,
-	
+
 		/**
 		 * Initializes a builder preview.
 		 *
@@ -274,7 +284,7 @@
 		_saveState: function() 
 		{
 			var post    = $('#fl-post-id').val(),
-				css     = $('#fl-builder-layout-' + post + '-css').attr('href'),
+				css     = $('link[href*="/cache/' + post + '"]').attr('href'),
 				js      = $('script[src*="/cache/' + post + '"]').attr('src'),
 				html    = $(FLBuilder._contentClass).html();
 				
@@ -302,7 +312,7 @@
 
 			// Make a new preview request.
 			this._xhr = FLBuilder.ajax({
-				action          : 'fl_builder_render_preview',
+				action          : 'fl_builder_render_layout',
 				node_id         : nodeId,
 				node_preview    : settings
 			}, $.proxy(this._renderPreview, this));
@@ -319,7 +329,7 @@
 			var heading         = typeof e == 'undefined' ? [] : $(e.target).closest('tr').find('th'),
 				widgetHeading   = $('.fl-builder-widget-settings .fl-builder-settings-title'),
 				lightboxHeading = $('.fl-builder-settings .fl-lightbox-header'),
-				loaderSrc       = flBuilderUrl + 'img/ajax-loader-small.gif',
+				loaderSrc       = FLBuilderLayoutConfig.paths.pluginUrl + 'img/ajax-loader-small.gif',
 				loader          = $('<img class="fl-builder-preview-loader" src="' + loaderSrc + '" />');
 			
 			$('.fl-builder-preview-loader').remove();
@@ -569,7 +579,7 @@
 				bgOverlayColor              : $(this.classes.settings + ' input[name=bg_overlay_color]'),
 				bgOverlayOpacity            : $(this.classes.settings + ' input[name=bg_overlay_opacity]')
 			});
-			
+		
 			// Events
 			this.elements.bgType.on(                'change', $.proxy(this._bgTypeChange, this));
 			this.elements.bgColor.on(               'change', $.proxy(this._bgColorChange, this));
@@ -666,7 +676,7 @@
 			}
 			else {
 			
-				rgb    = this.hexToRgb(this.elements.bgColor.val()),
+				rgb    = this.hexToRgb( this.elements.bgColor.val() ),
 				alpha  = this.parseFloat(this.elements.bgOpacity.val())/100,
 				value  = 'rgba(' + rgb.join() + ', ' + alpha + ')';
 					
@@ -1255,11 +1265,13 @@
 			// Elements
 			$.extend(this.elements, {
 				width          : $(this.classes.settings + ' select[name=width]'),
+				height         : $(this.classes.settings + ' select[name=full_height]'),
 				contentWidth   : $(this.classes.settings + ' select[name=content_width]')
 			});
 			
 			// Events
 			this.elements.width.on(         'change', $.proxy(this._rowWidthChange, this));
+			this.elements.height.on(        'change', $.proxy(this._rowHeightChange, this));
 			this.elements.contentWidth.on(  'change', $.proxy(this._rowContentWidthChange, this));
 			
 			// Common Elements
@@ -1290,6 +1302,26 @@
 			else {
 				row.removeClass('fl-row-full-width');
 				row.addClass('fl-row-fixed-width');
+			}
+		},
+
+		/**
+		 * Fires when the height field of a row changes.
+		 *
+		 * @since 1.6.3
+		 * @access private
+		 * @method _rowHeightChange
+		 * @param {Object} e An event object.
+		 */
+		_rowHeightChange: function(e)
+		{
+			var row = this.elements.node;
+			
+			if(this.elements.height.val() == 'full') {
+				row.addClass('fl-row-full-height');
+			}
+			else {
+				row.removeClass('fl-row-full-height');
 			}
 		},
 		
@@ -1329,11 +1361,13 @@
 		{
 			// Elements
 			$.extend(this.elements, {
-				size : $(this.classes.settings + ' input[name=size]')
+				size         : $(this.classes.settings + ' input[name=size]'),
+				columnHeight : $(this.classes.settings + ' select[name=equal_height]'),
 			});
 			
 			// Events
-			this.elements.size.on('keyup', $.proxy(this._colSizeChange, this));
+			this.elements.size.on(   		'keyup', $.proxy( this._colSizeChange, this ) );
+			this.elements.columnHeight.on( 'change', $.proxy( this._colHeightChange, this ) );
 			
 			// Common Elements
 			this._initNodeTextColor();
@@ -1393,6 +1427,26 @@
 			sibling.css('width', (100 - siblingsWidth - size) + '%');
 			this.elements.node.css('width', size + '%');
 		},
+
+		/**
+		 * Fires when the equal height field of a column changes.
+		 *
+		 * @since 1.6.3
+		 * @access private
+		 * @method _colHeightChange
+		 */
+		_colHeightChange: function()
+		{
+
+			var parent = this.elements.node.parent('.fl-col-group');
+			
+			if(this.elements.columnHeight.val() == 'yes') {
+				parent.addClass('fl-col-group-equal-height');
+			}
+			else {
+				parent.removeClass('fl-col-group-equal-height');
+			}
+		},
 		
 		/* Module Settings
 		----------------------------------------------------------*/
@@ -1445,6 +1499,9 @@
 				}
 				if(preview.type == 'widget') {
 					this._initFieldWidgetPreview(field);
+				}
+				if(preview.type == 'font') {
+					this._initFieldFontPreview(field);
 				}
 			}
 		},
@@ -1520,6 +1577,7 @@
 				case 'suggest':
 					field.find('.as-values').on('change', callback);
 				break;
+
 			}
 		},
 		
@@ -1556,7 +1614,7 @@
 				break;
 			}
 		},
-		
+
 		/**
 		 * Runs a real time preview for text fields.
 		 *
@@ -1644,6 +1702,135 @@
 				editor.on('change', callback);
 				editor.on('keyup', callback);
 			}
+		},
+
+		/**
+		 * Initializes a font preview for a field.
+		 *
+		 * @since 1.3.3
+		 * @access private
+		 * @method _initFieldFontPreview
+		 * @param {Object} field The field to preview.
+		 */
+		_initFieldFontPreview: function(field)
+		{
+			var fieldType = field.data('type'),
+				preview   = field.data('preview');
+
+			// store field id
+			preview['id'] = field.attr( 'id' );
+
+			var callback  = $.proxy(this._previewFont, this, preview);
+			
+			if( fieldType == 'font' ){
+				field.find('.fl-font-field').on('change', 'select', callback);
+			}
+
+		},
+
+		/**
+		 * Gets the selected font and weight, and make the necessary updates for live preview.
+		 *
+		 * @since 1.6.3
+		 * @access private
+		 * @see _getPreviewSelector
+		 * @see _buildFontStylesheet
+		 * @see updateCSSRule
+		 *
+		 * @method _previewFont
+		 * @param  {Object} preview An object with data about the current field and css selector.
+		 * @param  {[type]} e       The current field.
+		 */
+		_previewFont: function( preview, e ){
+			var parent     = $( e.delegateTarget ),
+				font       = parent.find( '.fl-font-field-font' ),
+				selected   = $( font ).find( ':selected' ),
+				fontGroup  = selected.parent().attr( 'label' ),
+				weight     = parent.find( '.fl-font-field-weight' ),
+				uniqueID   = preview.id + '-' + this.nodeId,
+				selector = this._getPreviewSelector( this.classes.node, preview.selector );
+
+			// If the selected font is a Google Font, build the font stylesheet
+			if( fontGroup == 'Google' ){
+				this._buildFontStylesheet( uniqueID, font.val(), weight.val() );
+			}
+
+			if( font.val() == 'Default' ){
+				this.updateCSSRule( selector, 'font-family', '' );
+				this.updateCSSRule( selector, 'font-weight', '' );
+			} else {
+				// Updated CSS rules
+				this.updateCSSRule( selector, 'font-family', font.val() );
+				this.updateCSSRule( selector, 'font-weight', weight.val() );				
+			}
+
+		},
+
+		/**
+		 * Gets all fonts store insite FLBuilderPreview._fontsList and renders the respective 
+		 * link tag with Google Fonts.
+		 *
+		 * @since 1.6.3
+		 * @access private
+		 *
+		 * @method _buildFontStylesheet
+		 * @param  {String} id     The field unique ID.
+		 * @param  {String} font   The selected font.
+		 * @param  {String} weight The selected weight.
+		 */
+		_buildFontStylesheet: function( id, font, weight ){
+			var url     = '//fonts.googleapis.com/css?family=',
+				href    = '',
+				fontObj = {},
+				fontArray = {};
+
+			// build the font family / weight object
+			fontObj[ font ] = [ weight ];
+
+			// adds to the list of fonts for this font setting
+		    FLBuilderPreview._fontsList[ id ] = fontObj;
+
+			// iterate over the keys of the FLBuilderPreview._fontsList object      
+			Object.keys( FLBuilderPreview._fontsList ).forEach( function( fieldFont ) {
+			
+				var field = FLBuilderPreview._fontsList[ fieldFont ];
+
+				// iterate over the font / weight object
+				Object.keys( field ).forEach( function( key ) {
+
+					// get the weights of this font
+					var weights = field[ key ];
+					fontArray[ key ] = fontArray[ key ] || [];
+
+					// remove duplicates from the values array
+					weights = weights.filter( function( weight ) {
+				        return fontArray[ key ].indexOf( weight ) < 0;
+				    });
+
+					fontArray[ key ] = fontArray[ key ].concat( weights );						
+						
+				});
+
+			});
+
+			$.each( fontArray, function( font, weight ){
+				href += font + ':' + weight.join() + '|';
+			} );
+
+			// remove last character and replace spaces with plus signs
+			href = url + href.slice( 0, -1 ).replace( ' ', '+' );
+
+			if( $( '#fl-builder-google-fonts-preview' ).length < 1 ){
+				$( '<link>' )
+					.attr( 'id', 'fl-builder-google-fonts-preview' )
+					.attr( 'type', 'text/css' )
+					.attr( 'rel', 'stylesheet' )
+					.attr( 'href', href )
+					.appendTo('head');			
+			} else{
+				$( '#fl-builder-google-fonts-preview' ).attr( 'href', href );
+			}
+
 		},
 		
 		/**

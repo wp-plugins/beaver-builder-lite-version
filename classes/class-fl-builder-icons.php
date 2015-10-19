@@ -303,9 +303,9 @@ final class FLBuilderIcons {
 		$fields = FLBuilderModel::get_settings_form_fields( $module->form );
 		
 		foreach ( $fields as $name => $field ) {
-			if ( isset( $field['multiple'] ) && true === $field['multiple'] ) {
+			if ( isset( $field['form'] ) ) {
 				$form = FLBuilderModel::$settings_forms[ $field['form'] ];
-				self::enqueue_styles_for_module_multiple( $module, $form['tabs'], $name );
+				self::enqueue_styles_for_nested_module_form( $module, $form['tabs'], $name );
 			}
 			else if ( $field['type'] == 'icon' && isset( $module->settings->$name ) ) {
 				self::enqueue_styles_for_icon( $module->settings->$name );
@@ -314,16 +314,16 @@ final class FLBuilderIcons {
 	}
 
 	/**
-	 * Enqueue the stylesheet(s) for icons in a multiple field.
+	 * Enqueue the stylesheet(s) for icons in a nested form field.
 	 *
 	 * @since 1.4.6
 	 * @access private
 	 * @param object $module The module to enqueue for.
-	 * @param array $form The multiple field form.
-	 * @param string $setting The multiple field setting key.
+	 * @param array $form The nested form.
+	 * @param string $setting The nested form setting key.
 	 * @return void
 	 */
-	static private function enqueue_styles_for_module_multiple( $module, $form, $setting )
+	static private function enqueue_styles_for_nested_module_form( $module, $form, $setting )
 	{
 		$fields = FLBuilderModel::get_settings_form_fields( $form );
 		

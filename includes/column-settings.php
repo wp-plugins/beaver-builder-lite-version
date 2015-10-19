@@ -19,6 +19,19 @@ FLBuilder::register_settings_form('col', array(
 							'preview'         => array(
 								'type'            => 'none'
 							)
+						),
+						'equal_height'  => array(
+							'type'          => 'select',
+							'label'         => __('Equalize Column Heights', 'fl-builder'),
+							'help'   		=> __('Setting this to yes will make all of the columns in this group the same height regardless of how much content is in each of them.', 'fl-builder'),
+							'default'       => 'no',
+							'options'       => array(
+								'no'          => __( 'No', 'fl-builder' ),
+								'yes'         => __( 'Yes', 'fl-builder' ),
+							),
+							'preview'         => array(
+								'type'            => 'none'
+							)
 						)
 					)
 				),

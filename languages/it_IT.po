@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Beaver Builder Plugin (Agency Version) v1.4.5\n"
+"Project-Id-Version: Beaver Builder Plugin (Agency Version) v1.6.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-08-03 15:34:12+0000\n"
-"Last-Translator: admin <hantarex@gmail.com>\n"
+"PO-Revision-Date: 2015-09-01 12:21:03+0000\n"
+"Last-Translator: Alessandro Curci <hantarex@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr ""
 #@ fl-builder
 msgctxt "%s stands for custom branded \"Page Builder\" name."
 msgid "%s Settings"
-msgstr "impostazioni %s"
+msgstr "Impostazioni %s"
 
 #: includes/admin-settings.php:12
 #: includes/multisite-settings.php:12
@@ -795,6 +795,37 @@ msgstr "Errore! Si prega di inserire un numero di ID del sito."
 msgid "Error! A site with that ID doesn't exist."
 msgstr "Errore! Non esiste un sito con quell'ID."
 
+#: includes/ui.php:7
+#, php-format
+#@ fl-builder
+msgid "Template: %s"
+msgstr "Modello: %s"
+
+#: includes/ui.php:39
+#@ fl-builder
+msgid "Upgrade!"
+msgstr "Aggiorna!"
+
+#: includes/ui.php:37
+#@ fl-builder
+msgid "Buy Now!"
+msgstr "Acquista ora!"
+
+#: includes/ui.php:41
+#@ fl-builder
+msgid "Done"
+msgstr "Fatto"
+
+#: includes/ui.php:42
+#@ fl-builder
+msgid "Tools"
+msgstr "Strumenti"
+
+#: includes/ui.php:46
+#@ fl-builder
+msgid "Add Content"
+msgstr "Aggiungi contenuto"
+
 #: classes/class-fl-builder.php:699
 #, php-format
 #@ fl-builder
@@ -937,13 +968,28 @@ msgctxt "Custom taxonomy label."
 msgid "New Category Name"
 msgstr "Nome nuova categoria"
 
+#: classes/class-fl-builder.php:1172
+#@ fl-builder
+msgctxt "Custom taxonomy label."
+msgid "Type"
+msgstr "Tipo"
+
+#: classes/class-fl-builder.php:1448 classes/class-fl-builder.php:1527
+#: classes/class-fl-builder.php:1735 includes/ui-js-templates.php:110
+#: includes/ui-panel-node-templates.php:18
+#: includes/ui-panel-node-templates.php:49
+#@ fl-builder
+msgctxt "Indicator for global node templates."
+msgid "Global"
+msgstr "Globale"
+
 #: classes/class-fl-builder.php:1113
 #: includes/js-config.php:58
 #, php-format
 #@ fl-builder
 msgctxt "%s stands for module name."
 msgid "%s Settings"
-msgstr "impostazioni %s"
+msgstr "Impostazioni %s"
 
 #: includes/admin-posts.php:3
 #: modules/rich-text/rich-text.php:14
@@ -1025,12 +1071,28 @@ msgstr "Impostazioni di modifica"
 msgid "Override network settings?"
 msgstr "Eseguire l'override delle impostazioni di rete?"
 
+#: includes/admin-settings-editing.php:16
+#@ fl-builder
+msgid "Editing Capability"
+msgstr "Capacità di modifica"
+
 #: includes/admin-settings.php:228
 #: includes/multisite-settings.php:150
 #, php-format
 #@ fl-builder
 msgid "Set the <a%s>capability</a> required for users to access advanced builder editing such as adding, deleting or moving modules."
 msgstr "Imposta la <a%s>capacità</a> necessaria degli utenti per accedere al builder avanzato e aggiungere, eliminare o spostare i moduli."
+
+#: includes/admin-settings-editing.php:21
+#@ fl-builder
+msgid "Global Templates Editing Capability"
+msgstr "Capacità di modifica modelli globali"
+
+#: includes/admin-settings-editing.php:22
+#, php-format
+#@ fl-builder
+msgid "Set the <a%s>capability</a> required for users to global templates."
+msgstr "Imposta la <a%s>capacità</a> richiesta agli utenti per i modelli blobali"
 
 #: includes/admin-settings.php:234
 #: includes/multisite-settings.php:156
@@ -1219,6 +1281,21 @@ msgstr "Inserisci l'ID di un sito nella rete i cui templates dovrebbero prevaler
 #@ fl-builder
 msgid "Use this setting to override core builder templates with your templates."
 msgstr "Usa questa impostazione per prevalere sui modelli core del builder con i tuoi modelli. "
+
+#: includes/admin-settings-templates-override.php:17
+#@ fl-builder
+msgid "You may also choose to show your row and module templates as sections within the builder panel. A new section will be created for each row or module category that you have defined."
+msgstr "Puoi anche scegliere di mostrare i tuoi modelli di riga e modulo come sezioni nel pannello del builder. Sarà creata una nuova sezione per ogni riga o categoria di modulo che hai definito."
+
+#: includes/admin-settings-templates-override.php:21
+#@ fl-builder
+msgid "Show Row Templates?"
+msgstr "Visualizza i modelli di riga?"
+
+#: includes/admin-settings-templates-override.php:27
+#@ fl-builder
+msgid "Show Module Templates?"
+msgstr "Visualizza i modelli dei moduli?"
 
 #: includes/admin-settings.php:125
 #: includes/multisite-settings.php:82
@@ -2346,412 +2423,6 @@ msgctxt "Select option for showing all icon libraries."
 msgid "All Libraries"
 msgstr "Tutte le librerie"
 
-#: includes/js-config.php:16
-#@ fl-builder
-msgid "What would you like to do?"
-msgstr "Che cosa vorresti fare?"
-
-#: includes/js-config.php:18
-#@ fl-builder
-msgid "Change Template"
-msgstr "Cambiare modello"
-
-#: includes/js-config.php:19
-#@ fl-builder
-msgid "Warning! Changing the template will replace your existing layout. Do you really want to do this?"
-msgstr "ATTENZIONE! Cambiare il modello sostituirà il layout esistente. Vuoi davvero fare questo?"
-
-#: includes/js-config.php:20
-#@ fl-builder
-msgid "Column"
-msgstr "Colonna"
-
-#: includes/js-config.php:22
-#@ fl-builder
-msgid "Please select either a background layout or content layout before submitting."
-msgstr "Si prega di selezionare un layout di sfondo o un layout contenuto prima di inviare."
-
-#: includes/js-config.php:25
-#@ fl-builder
-msgid "Remove Account"
-msgstr "Rimuovi account"
-
-#: includes/js-config.php:26
-#@ fl-builder
-msgid "Are you sure you want to remove this account? Other modules that are connected to it will be affected."
-msgstr "Sei sicuro di voler rimuovere questo account? I moduli che gli sono connessi saranno influenzati."
-
-#: includes/js-config.php:23
-#@ fl-builder
-msgid "Do you really want to delete this item?"
-msgstr "Vuoi davvero eliminare questo elemento?"
-
-#: includes/js-config.php:24
-#@ fl-builder
-msgid "Do you really want to delete this module? All content data will be permanently deleted."
-msgstr "Vuoi davvero eliminare questo modulo? Tutti i dati contenuti verranno eliminati definitivamente."
-
-#: includes/js-config.php:25
-#@ fl-builder
-msgid "Do you really want to delete this row? All content data will be permanently deleted."
-msgstr "Vuoi davvero eliminare questa riga? Tutti i dati contenuti verranno eliminati definitivamente."
-
-#: includes/js-config.php:31
-#@ fl-builder
-msgid "Discard Changes"
-msgstr "Scarta modifiche"
-
-#: includes/js-config.php:32
-#@ fl-builder
-msgid "Do you really want to discard these changes? All of your changes that are not published will be lost."
-msgstr "Vuoi veramente scartare queste modifiche? Tutti i cambiamenti che non sono pubblicati saranno persi."
-
-#: includes/ui.php:41
-#@ fl-builder
-msgid "Done"
-msgstr "Fatto"
-
-#: includes/js-config.php:29
-#@ fl-builder
-msgid "Save Draft"
-msgstr "Salva bozza"
-
-#: includes/js-config.php:30
-#@ fl-builder
-msgctxt "Duplicate page/post action label."
-msgid "Duplicate"
-msgstr "Duplica"
-
-#: includes/js-config.php:31
-#@ fl-builder
-msgid "Duplicate This Page"
-msgstr "Duplica questa pagina"
-
-#: includes/js-config.php:32
-#@ fl-builder
-msgid "Duplicate This Template"
-msgstr "Duplica questo modello"
-
-#: includes/js-config.php:33
-#@ fl-builder
-msgid "Edit Global Settings"
-msgstr "Modifica impostazioni globali"
-
-#: includes/js-config.php:34
-#@ fl-builder
-msgid "Drop a row layout or module to get started!"
-msgstr "Trascina un layout di riga o un modulo per iniziare!"
-
-#: includes/js-config.php:40
-#@ fl-builder
-msgid "Beaver Builder caught the following JavaScript error. If Beaver Builder is not functioning as expected the cause is most likely this error. Please help us by disabling all plugins and testing Beaver Builder while reactivating each to determine if the issue is related to a third party plugin."
-msgstr "Beaver Builder ha intercettato il seguente errore JavaScript. Se Beaver Builder non funziona come previsto la causa è probabilmente questo errore. Vi preghiamo di aiutarci disabilitando tutti i plugin e provando Beaver Builder dopo averli riattivati uno ad uno per determinare se il problema è legato a un plugin di terze parti."
-
-#: includes/js-config.php:35
-#@ fl-builder
-msgid "Full Size"
-msgstr "Tutta larghezza"
-
-#: includes/js-config.php:42
-#@ fl-builder
-msgid "Get Help"
-msgstr "Richiedi assistenza"
-
-#: includes/js-config.php:43
-#@ fl-builder
-msgid "Getting Started Video"
-msgstr "Video per iniziare"
-
-#: includes/js-config.php:44
-#@ fl-builder
-msgid "\"{message}\" on line {line} of {file}."
-msgstr "\"{message}\" nella riga {line} di {file}."
-
-#: includes/js-config.php:36
-#@ fl-builder
-msgid "Insert"
-msgstr "Inserisci"
-
-#: includes/js-config.php:37
-#@ fl-builder
-msgid "Large"
-msgstr "Grande"
-
-#: includes/js-config.php:38
-#@ fl-builder
-msgid "Manage Templates"
-msgstr "Gestione modelli"
-
-#: includes/js-config.php:39
-#@ fl-builder
-msgid "Medium"
-msgstr "Medio"
-
-#: includes/js-config.php:40
-#@ fl-builder
-msgid "Module"
-msgstr "Modulo"
-
-#: includes/js-config.php:41
-#@ fl-builder
-msgid "Move"
-msgstr "Sposta"
-
-#: includes/js-config.php:42
-#@ fl-builder
-msgid "New Column"
-msgstr "Nuova colonna"
-
-#: includes/js-config.php:43
-#@ fl-builder
-msgid "New Row"
-msgstr "Nuova riga"
-
-#: includes/js-config.php:44
-#@ fl-builder
-msgid "No results found."
-msgstr "Nessun risultato trovato."
-
-#: includes/js-config.php:54
-#@ fl-builder
-msgid "No Thanks"
-msgstr "No grazie"
-
-#: includes/js-config.php:45
-#@ fl-builder
-msgid "OK"
-msgstr "OK"
-
-#: includes/js-config.php:46
-#: modules/photo/photo.php:454
-#@ fl-builder
-msgid "Photo Page"
-msgstr "Pagina di foto"
-
-#: includes/js-config.php:47
-#@ fl-builder
-msgid "Photo Selected"
-msgstr "Foto selezionata"
-
-#: includes/js-config.php:48
-#@ fl-builder
-msgid "Photos Selected"
-msgstr "Foto selezionate"
-
-#: includes/js-config.php:59
-#: modules/subscribe-form/includes/frontend.php:15
-#@ fl-builder
-msgid "Please Wait..."
-msgstr "Si prega di attendere..."
-
-#: includes/js-config.php:49
-#@ fl-builder
-msgid "Publish Changes"
-msgstr "Pubblica le modifiche"
-
-#: includes/js-config.php:51
-#@ fl-builder
-msgid "Row"
-msgstr "Riga"
-
-#: includes/js-config.php:52
-#: includes/row-settings.php:6
-#@ fl-builder
-msgid "Row Settings"
-msgstr "Impostazioni di riga"
-
-#: includes/js-config.php:53
-#@ fl-builder
-msgid "Save Core Template"
-msgstr "Salva il modello Core"
-
-#: includes/js-config.php:54
-#: includes/ui.php:10
-#: includes/user-template-settings.php:4
-#@ fl-builder
-msgid "Save Template"
-msgstr "Salva modello"
-
-#: includes/js-config.php:56
-#@ fl-builder
-msgid "Select Photos"
-msgstr "Seleziona foto"
-
-#: includes/js-config.php:70
-#@ fl-builder
-msgid "Please select an account before saving."
-msgstr "Si prega di selezionare un'account prima di salvare."
-
-#: includes/js-config.php:71
-#@ fl-builder
-msgid "Please connect an account before saving."
-msgstr "Si prega di connettere un account prima di salvare."
-
-#: includes/js-config.php:72
-#@ fl-builder
-msgid "Please select a list before saving."
-msgstr "Si prega di selezionare una lista prima di salvare."
-
-#: includes/js-config.php:73
-#@ fl-builder
-msgid "Take a Tour"
-msgstr "Inizia visita guidata"
-
-#: includes/js-config.php:59
-#@ fl-builder
-msgid "Append New Layout"
-msgstr "Aggiungi nuovo Layout"
-
-#: includes/js-config.php:60
-#@ fl-builder
-msgid "Replace Existing Layout"
-msgstr "Sostituisci Layout esistente"
-
-#: includes/js-config.php:61
-#@ fl-builder
-msgid "Template Saved!"
-msgstr "Modello salvato!"
-
-#: includes/js-config.php:62
-#@ fl-builder
-msgid "Thumbnail"
-msgstr "Miniatura"
-
-#: includes/js-config.php:78
-#@ fl-builder
-msgid "Next"
-msgstr "Avanti"
-
-#: includes/js-config.php:79
-#@ fl-builder
-msgid "Get Started"
-msgstr "Inizia"
-
-#: includes/js-config.php:80
-#@ fl-builder
-msgid "Choose a Template"
-msgstr "Scegli un modello"
-
-#: includes/js-config.php:81
-#@ fl-builder
-msgid "Get started by choosing a layout template to customize, or build a page from scratch by selecting the blank layout template."
-msgstr "Inizia scegliendo un modello di layout da personalizzare, o costruisci una pagina da zero selezionando il modello di layout vuoto."
-
-#: includes/js-config.php:82
-#@ fl-builder
-msgid "Add Rows"
-msgstr "Aggiungi righe"
-
-#: includes/js-config.php:83
-#@ fl-builder
-msgid "Add multi-column rows, adjust spacing, add backgrounds and more by dragging and dropping row layouts onto the page."
-msgstr "Aggiungi righe multi-colonna, aggiusta gli spazi, aggiungi sfondi e altro trascinando e rilasciando layout di riga nella pagina."
-
-#: includes/ui.php:46
-#@ fl-builder
-msgid "Add Content"
-msgstr "Aggiungi contenuto"
-
-#: includes/js-config.php:85
-#@ fl-builder
-msgid "Add new content by dragging and dropping modules or widgets into your row layouts or to create a new row layout."
-msgstr "Aggiungi nuovo contenuto trascinando e rilasciando moduli o widget nei tuoi layout di riga o crea un nuovo layout di riga."
-
-#: includes/js-config.php:86
-#@ fl-builder
-msgid "Edit Content"
-msgstr "Modifica contenuto"
-
-#: includes/js-config.php:87
-#@ fl-builder
-msgid "Move your mouse over rows, columns or modules to edit and interact with them."
-msgstr "Muovi il mouse su righe, colonne o moduli per modificare e interagire con esse."
-
-#: includes/js-config.php:88
-#@ fl-builder
-msgid "Use the action buttons to perform actions such as moving, editing, duplicating or deleting rows, columns and modules."
-msgstr "Usa i bottoni di azione per compiere azioni come muovere, modificare, duplicare, o cancellare righe, colonne e moduli."
-
-#: includes/js-config.php:89
-#@ fl-builder
-msgid "Add More Content"
-msgstr "Aggiungi contenuto"
-
-#: includes/js-config.php:90
-#@ fl-builder
-msgid "Use the Add Content button to open the content panel and add new row layouts, modules or widgets."
-msgstr "Usa il pulsante Aggiungi contenuto per aprire il pannello contenuti e aggiungere nuove righe di layout, moduli o widgets."
-
-#: includes/js-config.php:91
-#@ fl-builder
-msgid "Change Templates"
-msgstr "Cambia modello"
-
-#: includes/js-config.php:92
-#@ fl-builder
-msgid "Use the Templates button to pick a new template or append one to your layout. Appending will insert a new template at the end of your existing page content."
-msgstr "Usa il pulsante Modelli per scegliere un nuovo modello o appenderne uno al tuo layout. Appendi inserirà il nuovo modello alla fine del contenuto di pagina esistente."
-
-#: includes/js-config.php:93
-#@ fl-builder
-msgid "Helpful Tools"
-msgstr "Strumenti utili"
-
-#: includes/js-config.php:94
-#@ fl-builder
-msgid "The Tools button lets you duplicate a page, save a template or edit the global settings."
-msgstr "Il pulsante Strumenti ti permette di duplicare una pagina, salvare un modello o modificare le impostazioni globali."
-
-#: includes/js-config.php:95
-#@ fl-builder
-msgid "Publish Your Changes"
-msgstr "Pubblica le modifiche"
-
-#: includes/js-config.php:96
-#@ fl-builder
-msgid "Once you're finished, click the Done button to publish your changes, save a draft or revert back to the last published state."
-msgstr "Quando hai finito, clicca sul pulsante Fatto per pubblicare le tue modifiche, salvare una bozza o ritornare all'ultima versione pubblicata."
-
-#: includes/js-config.php:97
-#@ fl-builder
-msgid "Let's Get Building!"
-msgstr "Andiamo a costruire!"
-
-#: includes/js-config.php:98
-#@ fl-builder
-msgid "Now that you know the basics, you're ready to start building! If at any time you need help, click the help icon in the upper right corner to access the help menu. Happy building!"
-msgstr "Ora che conosci le basi, sei pronto per iniziare a costruire! Se in qualsiasi momento hai bisogno di aiuto, clicca l'icona aiuto nell'angolo in alto a destra per accedere al menu di aiuto. Buona costruzione!"
-
-#: includes/js-config.php:63
-#@ fl-builder
-msgid "The settings you are currently editing will not be saved if you navigate away from this page."
-msgstr "Le impostazioni che stai modificando attualmente non verranno salvate se navighi via da questa pagina."
-
-#: includes/js-config.php:100
-#@ fl-builder
-msgid "View the Knowledge Base"
-msgstr "Leggi la documentazione"
-
-#: includes/js-config.php:101
-#@ fl-builder
-msgid "Visit the Forums"
-msgstr "Visita i forum"
-
-#: includes/js-config.php:102
-#@ fl-builder
-msgid "Watch the Video"
-msgstr "Visualizza il video"
-
-#: includes/js-config.php:103
-#@ fl-builder
-msgid "Welcome! It looks like this might be your first time using the builder. Would you like to take a tour?"
-msgstr "Benvenuto! Sembra che questa potrebbe essere la prima volta che utilizzi il builder. Vuoi fare un giro?"
-
-#: includes/js-config.php:104
-#@ fl-builder
-msgid "Yes Please!"
-msgstr "Si grazie!"
-
 #: includes/loop-settings.php:19
 #@ fl-builder
 msgid "Post Type"
@@ -2943,6 +2614,36 @@ msgstr "Classe"
 #@ fl-builder
 msgid "A class that will be applied to this module's HTML. Must start with a letter and only contain dashes, underscores, letters or numbers. Separate multiple classes with spaces."
 msgstr "Una classe che sarà applicata al codice HTML di questo modulo. Deve iniziare con una lettera e contenere solo trattini, underscore, lettere o numeri. Separa classi multiple con spazio."
+
+#: includes/node-template-settings.php:4
+#, php-format
+#@ fl-builder
+msgctxt "%s stands for the type of node template being saved."
+msgid "Save %s Template"
+msgstr "Salva il modello %s"
+
+#: includes/user-template-settings.php:15
+#@ fl-builder
+msgctxt "Template name."
+msgid "Name"
+msgstr "Nome"
+
+#: includes/node-template-settings.php:18
+#@ fl-builder
+msgctxt "Whether this is a global template or not."
+msgid "Global"
+msgstr "Globale"
+
+#: includes/node-template-settings.php:19
+#@ fl-builder
+msgid "Global templates can be added to multiple pages and edited in one place."
+msgstr "I modelli globali possono essere aggiunti a più pagine e modificati in un singolo posto. "
+
+#: includes/js-config.php:52
+#: includes/row-settings.php:6
+#@ fl-builder
+msgid "Row Settings"
+msgstr "Impostazioni di riga"
 
 #: includes/row-settings.php:16
 #: modules/button/button.php:146
@@ -3219,6 +2920,11 @@ msgstr "Servizio"
 msgid "Save"
 msgstr "Salva"
 
+#: includes/settings.php:69
+#@ fl-builder
+msgid "Save As..."
+msgstr "Salva come..."
+
 #: includes/template-selector.php:3
 #@ fl-builder
 msgid "Layout Templates"
@@ -3241,12 +2947,6 @@ msgctxt "Template name."
 msgid "Blank"
 msgstr "Vuoto"
 
-#: includes/user-template-settings.php:15
-#@ fl-builder
-msgctxt "Template name."
-msgid "Name"
-msgstr "Nome"
-
 #: includes/template-settings.php:18
 #@ fl-builder
 msgid "Image Filename"
@@ -3257,31 +2957,446 @@ msgstr "Nome del file immagine"
 msgid "The filename of the image such as \"thumb.jpg\" that resides in the \"img/templates/\" directory."
 msgstr "Il nome del file immagine come \"thumb.jpg\" che risiede nella directory \"img/templates/\"."
 
-#: includes/ui.php:7
-#, php-format
+#: includes/js-config.php:16
 #@ fl-builder
-msgid "Template: %s"
-msgstr "Modello: %s"
+msgid "What would you like to do?"
+msgstr "Che cosa vorresti fare?"
 
-#: includes/ui.php:42
+#: includes/js-config.php:18
 #@ fl-builder
-msgid "Tools"
-msgstr "Strumenti"
+msgid "Change Template"
+msgstr "Cambiare modello"
 
-#: includes/ui.php:23
+#: includes/js-config.php:19
 #@ fl-builder
-msgid "Page Builder Demo"
-msgstr "Dimostrazione del Page Builder"
+msgid "Warning! Changing the template will replace your existing layout. Do you really want to do this?"
+msgstr "ATTENZIONE! Cambiare il modello sostituirà il layout esistente. Vuoi davvero fare questo?"
 
-#: includes/ui.php:37
+#: includes/js-config.php:20
 #@ fl-builder
-msgid "Buy Now!"
-msgstr "Acquista ora!"
+msgid "Column"
+msgstr "Colonna"
 
-#: includes/ui.php:39
+#: includes/js-config.php:22
 #@ fl-builder
-msgid "Upgrade!"
-msgstr "Aggiorna!"
+msgid "Please select either a background layout or content layout before submitting."
+msgstr "Si prega di selezionare un layout di sfondo o un layout contenuto prima di inviare."
+
+#: includes/js-config.php:25
+#@ fl-builder
+msgid "Remove Account"
+msgstr "Rimuovi account"
+
+#: includes/js-config.php:26
+#@ fl-builder
+msgid "Are you sure you want to remove this account? Other modules that are connected to it will be affected."
+msgstr "Sei sicuro di voler rimuovere questo account? I moduli che gli sono connessi saranno influenzati."
+
+#: includes/js-config.php:23
+#@ fl-builder
+msgid "Do you really want to delete this item?"
+msgstr "Vuoi davvero eliminare questo elemento?"
+
+#: includes/js-config.php:24
+#@ fl-builder
+msgid "Do you really want to delete this module? All content data will be permanently deleted."
+msgstr "Vuoi davvero eliminare questo modulo? Tutti i dati contenuti verranno eliminati definitivamente."
+
+#: includes/js-config.php:25
+#@ fl-builder
+msgid "Do you really want to delete this row? All content data will be permanently deleted."
+msgstr "Vuoi davvero eliminare questa riga? Tutti i dati contenuti verranno eliminati definitivamente."
+
+#: includes/ui-js-config.php:33
+#@ fl-builder
+msgid "WARNING! You are about to delete a global template that may be linked to other pages. Do you really want to delete this template and unlink it?"
+msgstr "ATTENZIONE! Stai per eliminare un modello globale che può essere collegato ad altre pagine. Vuoi veramente eliminare questo modello e scollegarlo?"
+
+#: includes/js-config.php:31
+#@ fl-builder
+msgid "Discard Changes"
+msgstr "Scarta modifiche"
+
+#: includes/js-config.php:32
+#@ fl-builder
+msgid "Do you really want to discard these changes? All of your changes that are not published will be lost."
+msgstr "Vuoi veramente scartare queste modifiche? Tutti i cambiamenti che non sono pubblicati saranno persi."
+
+#: includes/js-config.php:29
+#@ fl-builder
+msgid "Save Draft"
+msgstr "Salva bozza"
+
+#: includes/ui-js-config.php:38 includes/ui-js-templates.php:14
+#: includes/ui-js-templates.php:54
+#@ fl-builder
+msgid "Duplicate"
+msgstr "Duplica"
+
+#: includes/js-config.php:31
+#@ fl-builder
+msgid "Duplicate This Page"
+msgstr "Duplica questa pagina"
+
+#: includes/js-config.php:32
+#@ fl-builder
+msgid "Duplicate This Template"
+msgstr "Duplica questo modello"
+
+#: includes/js-config.php:33
+#@ fl-builder
+msgid "Edit Global Settings"
+msgstr "Modifica impostazioni globali"
+
+#: includes/js-config.php:34
+#@ fl-builder
+msgid "Drop a row layout or module to get started!"
+msgstr "Trascina un layout di riga o un modulo per iniziare!"
+
+#: includes/js-config.php:40
+#@ fl-builder
+msgid "Beaver Builder caught the following JavaScript error. If Beaver Builder is not functioning as expected the cause is most likely this error. Please help us by disabling all plugins and testing Beaver Builder while reactivating each to determine if the issue is related to a third party plugin."
+msgstr "Beaver Builder ha intercettato il seguente errore JavaScript. Se Beaver Builder non funziona come previsto la causa è probabilmente questo errore. Vi preghiamo di aiutarci disabilitando tutti i plugin e provando Beaver Builder dopo averli riattivati uno ad uno per determinare se il problema è legato a un plugin di terze parti."
+
+#: includes/js-config.php:35
+#@ fl-builder
+msgid "Full Size"
+msgstr "Tutta larghezza"
+
+#: includes/js-config.php:42
+#@ fl-builder
+msgid "Get Help"
+msgstr "Richiedi assistenza"
+
+#: includes/js-config.php:44
+#@ fl-builder
+msgid "\"{message}\" on line {line} of {file}."
+msgstr "\"{message}\" nella riga {line} di {file}."
+
+#: includes/js-config.php:36
+#@ fl-builder
+msgid "Insert"
+msgstr "Inserisci"
+
+#: includes/js-config.php:37
+#@ fl-builder
+msgid "Large"
+msgstr "Grande"
+
+#: includes/js-config.php:38
+#@ fl-builder
+msgid "Manage Templates"
+msgstr "Gestione modelli"
+
+#: includes/js-config.php:39
+#@ fl-builder
+msgid "Medium"
+msgstr "Medio"
+
+#: includes/js-config.php:40
+#@ fl-builder
+msgid "Module"
+msgstr "Modulo"
+
+#: includes/ui-js-config.php:52
+#@ fl-builder
+msgid "Module Template Saved!"
+msgstr "Modello del modulo salvato!"
+
+#: includes/js-config.php:41
+#@ fl-builder
+msgid "Move"
+msgstr "Sposta"
+
+#: includes/js-config.php:42
+#@ fl-builder
+msgid "New Column"
+msgstr "Nuova colonna"
+
+#: includes/js-config.php:43
+#@ fl-builder
+msgid "New Row"
+msgstr "Nuova riga"
+
+#: includes/js-config.php:44
+#@ fl-builder
+msgid "No results found."
+msgstr "Nessun risultato trovato."
+
+#: includes/ui-js-config.php:57 includes/ui-panel-node-templates.php:11
+#@ fl-builder
+msgid "No saved rows found."
+msgstr "Nessuna riga salvata trovata."
+
+#: includes/ui-js-config.php:58 includes/ui-panel-node-templates.php:42
+#@ fl-builder
+msgid "No saved modules found."
+msgstr "Nessun modulo salvato trovato."
+
+#: includes/js-config.php:45
+#@ fl-builder
+msgid "OK"
+msgstr "OK"
+
+#: includes/js-config.php:46
+#: modules/photo/photo.php:454
+#@ fl-builder
+msgid "Photo Page"
+msgstr "Pagina di foto"
+
+#: includes/js-config.php:47
+#@ fl-builder
+msgid "Photo Selected"
+msgstr "Foto selezionata"
+
+#: includes/js-config.php:48
+#@ fl-builder
+msgid "Photos Selected"
+msgstr "Foto selezionate"
+
+#: includes/js-config.php:59
+#: modules/subscribe-form/includes/frontend.php:15
+#@ fl-builder
+msgid "Please Wait..."
+msgstr "Si prega di attendere..."
+
+#: includes/js-config.php:49
+#@ fl-builder
+msgid "Publish Changes"
+msgstr "Pubblica le modifiche"
+
+#: includes/js-config.php:51
+#@ fl-builder
+msgid "Row"
+msgstr "Riga"
+
+#: includes/ui-js-config.php:68
+#@ fl-builder
+msgid "Row Template Saved!"
+msgstr "Modello di riga salvato!"
+
+#: includes/js-config.php:53
+#@ fl-builder
+msgid "Save Core Template"
+msgstr "Salva il modello Core"
+
+#: includes/js-config.php:54
+#: includes/ui.php:10
+#: includes/user-template-settings.php:4
+#@ fl-builder
+msgid "Save Template"
+msgstr "Salva modello"
+
+#: includes/js-config.php:56
+#@ fl-builder
+msgid "Select Photos"
+msgstr "Seleziona foto"
+
+#: includes/js-config.php:70
+#@ fl-builder
+msgid "Please select an account before saving."
+msgstr "Si prega di selezionare un'account prima di salvare."
+
+#: includes/js-config.php:71
+#@ fl-builder
+msgid "Please connect an account before saving."
+msgstr "Si prega di connettere un account prima di salvare."
+
+#: includes/js-config.php:72
+#@ fl-builder
+msgid "Please select a list before saving."
+msgstr "Si prega di selezionare una lista prima di salvare."
+
+#: includes/js-config.php:73
+#@ fl-builder
+msgid "Take a Tour"
+msgstr "Inizia visita guidata"
+
+#: includes/js-config.php:59
+#@ fl-builder
+msgid "Append New Layout"
+msgstr "Aggiungi nuovo Layout"
+
+#: includes/js-config.php:60
+#@ fl-builder
+msgid "Replace Existing Layout"
+msgstr "Sostituisci Layout esistente"
+
+#: includes/js-config.php:61
+#@ fl-builder
+msgid "Template Saved!"
+msgstr "Modello salvato!"
+
+#: includes/js-config.php:62
+#@ fl-builder
+msgid "Thumbnail"
+msgstr "Miniatura"
+
+#: includes/js-config.php:78
+#@ fl-builder
+msgid "Next"
+msgstr "Avanti"
+
+#: includes/js-config.php:79
+#@ fl-builder
+msgid "Get Started"
+msgstr "Inizia"
+
+#: includes/js-config.php:80
+#@ fl-builder
+msgid "Choose a Template"
+msgstr "Scegli un modello"
+
+#: includes/js-config.php:81
+#@ fl-builder
+msgid "Get started by choosing a layout template to customize, or build a page from scratch by selecting the blank layout template."
+msgstr "Inizia scegliendo un modello di layout da personalizzare, o costruisci una pagina da zero selezionando il modello di layout vuoto."
+
+#: includes/js-config.php:82
+#@ fl-builder
+msgid "Add Rows"
+msgstr "Aggiungi righe"
+
+#: includes/js-config.php:83
+#@ fl-builder
+msgid "Add multi-column rows, adjust spacing, add backgrounds and more by dragging and dropping row layouts onto the page."
+msgstr "Aggiungi righe multi-colonna, aggiusta gli spazi, aggiungi sfondi e altro trascinando e rilasciando layout di riga nella pagina."
+
+#: includes/js-config.php:85
+#@ fl-builder
+msgid "Add new content by dragging and dropping modules or widgets into your row layouts or to create a new row layout."
+msgstr "Aggiungi nuovo contenuto trascinando e rilasciando moduli o widget nei tuoi layout di riga o crea un nuovo layout di riga."
+
+#: includes/js-config.php:86
+#@ fl-builder
+msgid "Edit Content"
+msgstr "Modifica contenuto"
+
+#: includes/js-config.php:87
+#@ fl-builder
+msgid "Move your mouse over rows, columns or modules to edit and interact with them."
+msgstr "Muovi il mouse su righe, colonne o moduli per modificare e interagire con esse."
+
+#: includes/js-config.php:88
+#@ fl-builder
+msgid "Use the action buttons to perform actions such as moving, editing, duplicating or deleting rows, columns and modules."
+msgstr "Usa i bottoni di azione per compiere azioni come muovere, modificare, duplicare, o cancellare righe, colonne e moduli."
+
+#: includes/js-config.php:89
+#@ fl-builder
+msgid "Add More Content"
+msgstr "Aggiungi contenuto"
+
+#: includes/js-config.php:90
+#@ fl-builder
+msgid "Use the Add Content button to open the content panel and add new row layouts, modules or widgets."
+msgstr "Usa il pulsante Aggiungi contenuto per aprire il pannello contenuti e aggiungere nuove righe di layout, moduli o widgets."
+
+#: includes/js-config.php:91
+#@ fl-builder
+msgid "Change Templates"
+msgstr "Cambia modello"
+
+#: includes/js-config.php:92
+#@ fl-builder
+msgid "Use the Templates button to pick a new template or append one to your layout. Appending will insert a new template at the end of your existing page content."
+msgstr "Usa il pulsante Modelli per scegliere un nuovo modello o appenderne uno al tuo layout. Appendi inserirà il nuovo modello alla fine del contenuto di pagina esistente."
+
+#: includes/js-config.php:93
+#@ fl-builder
+msgid "Helpful Tools"
+msgstr "Strumenti utili"
+
+#: includes/js-config.php:94
+#@ fl-builder
+msgid "The Tools button lets you duplicate a page, save a template or edit the global settings."
+msgstr "Il pulsante Strumenti ti permette di duplicare una pagina, salvare un modello o modificare le impostazioni globali."
+
+#: includes/js-config.php:95
+#@ fl-builder
+msgid "Publish Your Changes"
+msgstr "Pubblica le modifiche"
+
+#: includes/js-config.php:96
+#@ fl-builder
+msgid "Once you're finished, click the Done button to publish your changes, save a draft or revert back to the last published state."
+msgstr "Quando hai finito, clicca sul pulsante Fatto per pubblicare le tue modifiche, salvare una bozza o ritornare all'ultima versione pubblicata."
+
+#: includes/js-config.php:97
+#@ fl-builder
+msgid "Let's Get Building!"
+msgstr "Andiamo a costruire!"
+
+#: includes/js-config.php:98
+#@ fl-builder
+msgid "Now that you know the basics, you're ready to start building! If at any time you need help, click the help icon in the upper right corner to access the help menu. Happy building!"
+msgstr "Ora che conosci le basi, sei pronto per iniziare a costruire! Se in qualsiasi momento hai bisogno di aiuto, clicca l'icona aiuto nell'angolo in alto a destra per accedere al menu di aiuto. Buona costruzione!"
+
+#: includes/js-config.php:63
+#@ fl-builder
+msgid "The settings you are currently editing will not be saved if you navigate away from this page."
+msgstr "Le impostazioni che stai modificando attualmente non verranno salvate se navighi via da questa pagina."
+
+#: includes/js-config.php:100
+#@ fl-builder
+msgid "View the Knowledge Base"
+msgstr "Leggi la documentazione"
+
+#: includes/js-config.php:101
+#@ fl-builder
+msgid "Visit the Forums"
+msgstr "Visita i forum"
+
+#: includes/js-config.php:102
+#@ fl-builder
+msgid "Watch the Video"
+msgstr "Visualizza il video"
+
+#: includes/ui-js-templates.php:5 includes/ui-js-templates.php:29
+#: includes/ui-js-templates.php:45
+#@ fl-builder
+msgid "Global"
+msgstr "Globale"
+
+#: includes/ui-js-templates.php:7 includes/ui-js-templates.php:47
+#@ fl-builder
+msgid "Locked"
+msgstr "Bloccato"
+
+#: includes/ui-js-templates.php:52
+#@ fl-builder
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: includes/js-config.php:103
+#@ fl-builder
+msgid "Welcome! It looks like this might be your first time using the builder. Would you like to take a tour?"
+msgstr "Benvenuto! Sembra che questa potrebbe essere la prima volta che utilizzi il builder. Vuoi fare un giro?"
+
+#: includes/js-config.php:54
+#@ fl-builder
+msgid "No Thanks"
+msgstr "No grazie"
+
+#: includes/js-config.php:104
+#@ fl-builder
+msgid "Yes Please!"
+msgstr "Si grazie!"
+
+#: includes/js-config.php:43
+#@ fl-builder
+msgid "Getting Started Video"
+msgstr "Video per iniziare"
+
+#: includes/ui-panel-node-templates.php:6
+#@ fl-builder
+msgid "Saved Rows"
+msgstr "Righe salvate"
+
+#: includes/ui-panel-node-templates.php:37
+#@ fl-builder
+msgid "Saved Modules"
+msgstr "Moduli salvati"
 
 #: includes/ui.php:64
 #@ fl-builder
@@ -3351,8 +3466,8 @@ msgstr "Abbonati ora"
 
 #: includes/updater/includes/form.php:5
 #@ fl-builder
-msgid "UPDATES UNAVAILABLE! Please subscribe or enter your licence key below to enable automatic updates."
-msgstr "AGGIORNAMENTI NON DISPONIBILI! Abbonati o inserisci la tua chiave di licenza per abilitare gli aggiornamenti automatici."
+msgid "UPDATES UNAVAILABLE! Please subscribe or enter your license key below to enable automatic updates."
+msgstr "AGGIORNAMENTI NON DISPONIBILI! Si prega di iscriversi o inserire di seguito il codice di licenza per abilitare gli aggiornamenti automatici."
 
 #: includes/updater/includes/form.php:11
 #@ fl-builder
@@ -3377,8 +3492,8 @@ msgstr "Indirizzo email salvato!"
 #: includes/updater/includes/form.php:27
 #, php-format
 #@ fl-builder
-msgid "Enter your <a%s>licence key</a> to enable remote updates and support."
-msgstr "Inserisci la tua <a%s>chiave di licenza</a> per abilitare gli aggiornamenti remoti e il supporto."
+msgid "Enter your <a%s>license key</a> to enable remote updates and support."
+msgstr "Inserisci la tua <a%s>chiave di licenza</a> per abilitare gli aggiornamenti remoti e ottenere supporto."
 
 #: includes/updater/includes/form.php:39
 #@ fl-builder
@@ -3777,9 +3892,9 @@ msgstr "Nessuna"
 msgid "Crop"
 msgstr "Ritaglio"
 
-#: modules/callout/callout.php:341
+#: modules/callout/callout.php:344 modules/photo/photo.php:420
 #@ fl-builder
-msgctxt "Crop"
+msgctxt "Photo Crop."
 msgid "None"
 msgstr "Nessuno"
 
@@ -4577,6 +4692,197 @@ msgstr "Indirizzo"
 msgid "1865 Winchester Blvd #202 Campbell, CA 95008"
 msgstr "1865 Winchester Blvd #202 Campbell, CA 95008"
 
+#: modules/menu/menu.php:14 modules/menu/menu.php:24 modules/menu/menu.php:62
+#: modules/menu/menu.php:69
+#@ fl-builder
+msgid "Menu"
+msgstr "Menu"
+
+#: modules/menu/menu.php:15
+#@ fl-builder
+msgid "Renders a WordPress menu."
+msgstr "Visualizza un menu WordPress."
+
+#: modules/menu/menu.php:25
+#@ fl-builder
+msgid "Select a WordPress menu that you created in the admin under Appearance > Menus."
+msgstr "Seleziona un menu WordPress che hai creato nel menu di amministrazione sotto Aspetto > Menu."
+
+#: modules/menu/menu.php:42
+#@ fl-builder
+msgid "No Menus Found"
+msgstr "Nessun menu trovato"
+
+#: modules/tabs/tabs.php:55
+#@ fl-builder
+msgid "Horizontal"
+msgstr "Orizzontale"
+
+#: modules/tabs/tabs.php:56
+#@ fl-builder
+msgid "Vertical"
+msgstr "Verticale"
+
+#: modules/menu/menu.php:96 modules/menu/menu.php:134
+#@ fl-builder
+msgid "Expanded"
+msgstr "Espanso"
+
+#: modules/menu/menu.php:112
+#@ fl-builder
+msgid "Submenu Icon"
+msgstr "Icona sottomenu"
+
+#: modules/menu/menu.php:115 modules/menu/menu.php:125
+#@ fl-builder
+msgid "Arrows"
+msgstr "Freccia"
+
+#: modules/menu/menu.php:116 modules/menu/menu.php:126
+#@ fl-builder
+msgid "Plus sign"
+msgstr "Segno più"
+
+#: modules/menu/menu.php:117 modules/menu/menu.php:223
+#@ fl-builder
+msgid "None"
+msgstr "Nessuna"
+
+#: modules/menu/menu.php:122
+#@ fl-builder
+msgid "Submenu Icon click"
+msgstr "Click icona sottomenu"
+
+#: modules/menu/menu.php:131
+#@ fl-builder
+msgid "Mobile Style"
+msgstr "Stile mobile"
+
+#: modules/menu/menu.php:135
+#@ fl-builder
+msgid "Hamburger Icon"
+msgstr "Icona lista"
+
+#: modules/menu/menu.php:136
+#@ fl-builder
+msgid "Hamburger Icon + label"
+msgstr "Icona lista + etichetta"
+
+#: modules/menu/menu.php:137
+#@ fl-builder
+msgid "Menu Button"
+msgstr "Pulsante menu"
+
+#: modules/menu/menu.php:153
+#@ fl-builder
+msgid "Menu Alignment"
+msgstr "Allineamento menu"
+
+#: modules/menu/menu.php:164
+#@ fl-builder
+msgid "Submenu Drop Shadow"
+msgstr "Ombra sottomenu"
+
+#: modules/menu/menu.php:206
+#@ fl-builder
+msgid "Link Size"
+msgstr "Dimensione link"
+
+#: modules/menu/menu.php:220
+#@ fl-builder
+msgid "Link Format"
+msgstr "Formato link"
+
+#: modules/menu/menu.php:224
+#@ fl-builder
+msgid "Uppercase"
+msgstr "Maiuscolo"
+
+#: modules/menu/menu.php:225
+#@ fl-builder
+msgid "Lowercase"
+msgstr "Minuscolo"
+
+#: modules/menu/menu.php:226
+#@ fl-builder
+msgid "Capitalize"
+msgstr "Capitalizza"
+
+#: modules/menu/menu.php:236
+#@ fl-builder
+msgid "Link Weight"
+msgstr "Peso link"
+
+#: modules/menu/menu.php:239
+#@ fl-builder
+msgid "Normal"
+msgstr "Normale"
+
+#: modules/menu/menu.php:240
+#@ fl-builder
+msgid "Bold"
+msgstr "Grassetto"
+
+#: modules/menu/menu.php:241
+#@ fl-builder
+msgid "Light"
+msgstr "Leggero"
+
+#: modules/menu/menu.php:251
+#@ fl-builder
+msgid "Horizontal Spacing"
+msgstr "Spaziatura orizontale"
+
+#: modules/menu/menu.php:274
+#@ fl-builder
+msgid "Vertical Spacing"
+msgstr "Spaziatura verticale"
+
+#: modules/menu/menu.php:299
+#@ fl-builder
+msgid "Backgrounds"
+msgstr "Sfondi"
+
+#: modules/menu/menu.php:303
+#@ fl-builder
+msgid "Menu Background Color"
+msgstr "Colore sfondo menu"
+
+#: modules/menu/menu.php:313 modules/menu/menu.php:331
+#@ fl-builder
+msgid "Menu Background Opacity"
+msgstr "Opacità sfondo menu"
+
+#: modules/menu/menu.php:321
+#@ fl-builder
+msgid "Submenu Background Color"
+msgstr "Colore sfondo menu"
+
+#: modules/menu/menu.php:340
+#@ fl-builder
+msgid "Link Background Hover Color"
+msgstr "Colore hover sfondo del link"
+
+#: modules/separator/separator.php:14
+#@ fl-builder
+msgid "Separator"
+msgstr "Separatore"
+
+#: modules/menu/menu.php:355
+#@ fl-builder
+msgid "Show Separators"
+msgstr "Visualizza separatori"
+
+#: modules/menu/menu.php:369
+#@ fl-builder
+msgid "Separator Color"
+msgstr "Colore separatore"
+
+#: modules/menu/menu.php:374
+#@ fl-builder
+msgid "Separator Opacity"
+msgstr "Opacità separatore"
+
 #: modules/photo/photo.php:26
 #@ fl-builder
 msgid "Upload a photo or display one from the media library."
@@ -4602,12 +4908,6 @@ msgstr "URL foto"
 #@ fl-builder
 msgid "http://www.example.com/my-photo.jpg"
 msgstr "http://www.example.com/my-photo.jpg"
-
-#: modules/photo/photo.php:404
-#@ fl-builder
-msgctxt "Crop."
-msgid "None"
-msgstr "Nessuno"
 
 #: modules/photo/photo.php:425
 #: modules/photo/photo.php:439
@@ -5074,11 +5374,6 @@ msgstr "Margine superiore del box"
 msgid "A WYSIWYG text editor."
 msgstr "Un editor di testo WYSIWYG."
 
-#: modules/separator/separator.php:14
-#@ fl-builder
-msgid "Separator"
-msgstr "Separatore"
-
 #: modules/separator/separator.php:15
 #@ fl-builder
 msgid "A divider line to separate content."
@@ -5418,16 +5713,6 @@ msgstr "Schede"
 msgid "Display a collection of tabbed content."
 msgstr "Mostra una raccolta di contenuti a schede."
 
-#: modules/tabs/tabs.php:55
-#@ fl-builder
-msgid "Horizontal"
-msgstr "Orizzontale"
-
-#: modules/tabs/tabs.php:56
-#@ fl-builder
-msgid "Vertical"
-msgstr "Verticale"
-
 #: modules/testimonials/testimonials.php:14
 #: modules/testimonials/testimonials.php:60
 #: modules/testimonials/testimonials.php:174
@@ -5721,6 +6006,18 @@ msgstr "L'attaccatura specificherà come reagisce l'immagine durante lo scorrime
 msgid "Client"
 msgstr "Client"
 
+#: modules/callout/callout.php:341
+#@ fl-builder
+msgctxt "Crop"
+msgid "None"
+msgstr "Nessuno"
+
+#: modules/photo/photo.php:404
+#@ fl-builder
+msgctxt "Crop."
+msgid "None"
+msgstr "Nessuno"
+
 #: classes/class-fl-builder.php:767
 #@ fl-builder
 msgctxt "Custom post type label."
@@ -5799,11 +6096,23 @@ msgstr "Scarta bozza"
 msgid "Do you really want to discard this draft? All of your changes that are not published will be lost."
 msgstr "Vuoi davvero eliminare questa bozza? Tutte le modifiche che non sono pubblicate saranno perse."
 
+#: includes/js-config.php:30
+#@ fl-builder
+msgctxt "Duplicate page/post action label."
+msgid "Duplicate"
+msgstr "Duplica"
+
 #: includes/admin-settings.php:138
 #: includes/multisite-settings.php:88
 #@ fl-builder
 msgid "Enable or disable templates using the options below."
 msgstr "Abilitare o disabilitare i modelli utilizzando le opzioni qui sotto."
+
+#: includes/updater/includes/form.php:27
+#, php-format
+#@ fl-builder
+msgid "Enter your <a%s>licence key</a> to enable remote updates and support."
+msgstr "Inserisci la tua <a%s>chiave di licenza</a> per abilitare gli aggiornamenti remoti e il supporto."
 
 #: includes/global-settings.php:121
 #@ fl-builder
@@ -5840,6 +6149,11 @@ msgstr "Lista"
 msgid "Offset"
 msgstr "Offset"
 
+#: includes/ui.php:23
+#@ fl-builder
+msgid "Page Builder Demo"
+msgstr "Dimostrazione del Page Builder"
+
 #: includes/row-settings.php:168
 #@ fl-builder
 msgid "Position will tell the image where it should sit in the row background."
@@ -5871,4 +6185,9 @@ msgstr "La scala si applica a come si dovrebbe visualizzare l'immagine sullo sfo
 msgctxt "The first %s stands for custom branded \"Page Builder\" name. The second %s stands for the post type name."
 msgid "%s is currently active for this %s."
 msgstr "%s è attualmente attivo per questo %s."
+
+#: includes/updater/includes/form.php:5
+#@ fl-builder
+msgid "UPDATES UNAVAILABLE! Please subscribe or enter your licence key below to enable automatic updates."
+msgstr "AGGIORNAMENTI NON DISPONIBILI! Abbonati o inserisci la tua chiave di licenza per abilitare gli aggiornamenti automatici."
 

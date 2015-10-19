@@ -417,7 +417,7 @@ FLBuilder::register_module('FLPhotoModule', array(
 						'label'         => __('Crop', 'fl-builder'),
 						'default'       => '',
 						'options'       => array(
-							''              => _x( 'None', 'Crop.', 'fl-builder' ),
+							''              => _x( 'None', 'Photo Crop.', 'fl-builder' ),
 							'landscape'     => __('Landscape', 'fl-builder'),
 							'panorama'      => __('Panorama', 'fl-builder'),
 							'portrait'      => __('Portrait', 'fl-builder'),

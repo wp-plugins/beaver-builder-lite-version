@@ -75,6 +75,19 @@
 		},
 		
 		/**
+		 * Checks to see if the current device is mobile.
+		 *
+		 * @since 1.6.5
+		 * @access private
+		 * @method _isMobile
+		 * @return {Boolean}
+		 */ 
+		_isMobile: function()
+		{
+			return /Mobile|Android|Silk\/|Kindle|BlackBerry|Opera Mini|Opera Mobi|webOS/i.test( navigator.userAgent );
+		},
+		
+		/**
 		 * Initializes builder body classes.
 		 *
 		 * @since 1.0
@@ -89,6 +102,11 @@
 			// Add the builder touch body class.
 			if(FLBuilderLayout._isTouch()) {
 				$('body').addClass('fl-builder-touch');
+			}
+			
+			// Add the builder mobile body class.
+			if(FLBuilderLayout._isMobile()) {
+				$('body').addClass('fl-builder-mobile');
 			}
 		},
 		
@@ -105,7 +123,7 @@
 			var win = $(window);
 			
 			// Init parallax backgrounds.
-			if($('.fl-row-bg-parallax').length > 0 && !FLBuilderLayout._isTouch()) {
+			if($('.fl-row-bg-parallax').length > 0 && !FLBuilderLayout._isMobile()) {
 				FLBuilderLayout._scrollParallaxBackgrounds();
 				FLBuilderLayout._initParallaxBackgrounds();
 				win.on('scroll.fl-bg-parallax', FLBuilderLayout._scrollParallaxBackgrounds);
@@ -113,6 +131,7 @@
 			
 			// Init video backgrounds.
 			if($('.fl-bg-video').length > 0) {
+				FLBuilderLayout._initBgVideos();
 				FLBuilderLayout._resizeBgVideos();
 				win.on('resize.fl-bg-video', FLBuilderLayout._resizeBgVideos);
 			}
@@ -188,6 +207,110 @@
 		},
 		
 		/**
+		 * Initializes all video backgrounds.
+		 *
+		 * @since 1.6.3.3
+		 * @access private
+		 * @method _initBgVideos
+		 */ 
+		_initBgVideos: function()
+		{
+			$('.fl-bg-video').each(FLBuilderLayout._initBgVideo);
+		},
+		
+		/**
+		 * Initializes a video background.
+		 *
+		 * @since 1.6.3.3
+		 * @access private
+		 * @method _initBgVideo
+		 */ 
+		_initBgVideo: function()
+		{
+			var wrap 		= $( this ),
+				width  		= wrap.data( 'width' ),
+				height  	= wrap.data( 'height' ),
+				mp4  		= wrap.data( 'mp4' ),
+				mp4Type  	= wrap.data( 'mp4-type' ),
+				webm  		= wrap.data( 'webm' ),
+				webmType  	= wrap.data( 'webm-type' ),
+				fallback  	= wrap.data( 'fallback' ),
+				fallbackTag = '',
+				videoTag	= null,
+				mp4Tag    	= null,
+				webmTag    	= null; 
+			
+			// Append the video tag for non-mobile.
+			if ( ! FLBuilderLayout._isMobile() ) {
+				
+				videoTag  = $( '<video autoplay loop muted preload></video>' );
+				
+				// MP4 Source Tag
+				if ( 'undefined' != typeof mp4 ) {
+					
+					mp4Tag = $( '<source />' );
+					mp4Tag.attr( 'src', mp4 );
+					mp4Tag.attr( 'type', mp4Type );
+					
+					if ( 'undefined' == typeof webm ) {
+						mp4Tag.on( 'error', FLBuilderLayout._videoBgSourceError );
+					}
+					
+					videoTag.append( mp4Tag );
+				}
+				
+				// WebM Source Tag
+				if ( 'undefined' != typeof webm ) {
+					
+					webmTag = $( '<source />' );
+					webmTag.attr( 'src', webm );
+					webmTag.attr( 'type', webmType );
+					
+					if ( 'undefined' != typeof mp4 ) {
+						webmTag.on( 'error', FLBuilderLayout._videoBgSourceError );
+					}
+					
+					videoTag.append( webmTag );
+				}
+				
+				wrap.append( videoTag );
+			}
+			// Append the fallback tag for mobile.
+			else if ( '' != fallback ) {
+				fallbackTag = $( '<div></div>' );
+				fallbackTag.addClass( 'fl-bg-video-fallback' );
+				fallbackTag.css( 'background-image', 'url(' + fallback + ')' );
+				wrap.append( fallbackTag );
+			}
+		},
+		
+		/**
+		 * Fires when there is an error loading a video 
+		 * background source and shows the fallback.
+		 *
+		 * @since 1.6.3.3
+		 * @access private
+		 * @method _videoBgSourceError
+		 * @param {Object} e An event object.
+		 */ 
+		_videoBgSourceError: function( e )
+		{
+			var source 		= $( e.target ),
+				wrap   		= source.closest( '.fl-bg-video' ),
+				vid		    = wrap.find( 'video' ),
+				fallback  	= wrap.data( 'fallback' ),
+				fallbackTag = '';
+				
+			if ( '' != fallback ) {
+				fallbackTag = $( '<div></div>' );
+				fallbackTag.addClass( 'fl-bg-video-fallback' );
+				fallbackTag.css( 'background-image', 'url(' + fallback + ')' );
+				wrap.append( fallbackTag );
+				vid.remove();
+			}
+		},
+		
+		/**
 		 * Fires when the window is resized to resize
 		 * all video backgrounds.
 		 *
@@ -218,8 +341,8 @@
 				wrapHeight  = wrap.outerHeight(),
 				wrapWidth   = wrap.outerWidth(),
 				vid         = wrap.find('video'),
-				vidHeight   = vid.data('height'),
-				vidWidth    = vid.data('width'),
+				vidHeight   = wrap.data('height'),
+				vidWidth    = wrap.data('width'),
 				newWidth    = wrapWidth,
 				newHeight   = Math.round(vidHeight * wrapWidth/vidWidth),
 				newLeft     = 0,
@@ -262,7 +385,7 @@
 		 */ 
 		_initModuleAnimations: function()
 		{
-			if($('.fl-builder-edit').length === 0 && typeof jQuery.fn.waypoint !== 'undefined' && !FLBuilderLayout._isTouch()) {
+			if($('.fl-builder-edit').length === 0 && typeof jQuery.fn.waypoint !== 'undefined' && !FLBuilderLayout._isMobile()) {
 				$('.fl-animation').waypoint({
 					offset: '80%',
 					handler: FLBuilderLayout._doModuleAnimation
@@ -401,7 +524,8 @@
 		 */ 
 		_scrollToElementOnLinkClick: function( e, callback )
 		{
-			var element = $( '#' + $( this ).attr( 'href' ).split( '#' ).pop() ),
+			var config  = FLBuilderLayoutConfig.anchorLinkAnimations,
+				element = $( '#' + $( this ).attr( 'href' ).split( '#' ).pop() ),
 				dest    = 0,
 				win     = $( window ),
 				doc     = $( document );
@@ -412,10 +536,10 @@
 					dest = doc.height() - win.height();
 				} 
 				else {
-					dest = element.offset().top - 100;
+					dest = element.offset().top - config.offset;
 				}
 	
-				$( 'html, body' ).animate( { scrollTop: dest }, 1000, 'swing', callback );
+				$( 'html, body' ).animate( { scrollTop: dest }, config.duration, config.easing, callback );
 				
 				e.preventDefault();
 			}

@@ -1,3 +1,90 @@
+<h4>1.6.4 - 10/13/2015</h4>
+<p>This update adds a number of new features. Be sure to check out <a href="https://www.wpbeaverbuilder.com/beaver-builder-1-6-4-featuring-a-new-color-picker-full-height-rows-the-number-counter-module-and-more/" target="_blank">the blog post</a> for detailed info on what was added.
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added an all new modern color picker that allows you to save color presets.</li>
+	<li>Added the ability to create full height rows.</li>
+	<li>Added the ability to create equal height columns.</li>
+	<li>Added a column settings dropdown that allows you to edit, delete and insert new columns.</li>
+	<li>Added the ability to resize columns by dragging.</li>
+	<li>Added the Number Counter module.</li>
+	<li>Added a new font setting to the Heading module for picking custom font families.</li>
+	<li>Misc UI improvements.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with saving a template where hitting enter loads a 404 page.</li>
+	<li>Fixed a bug with the Content Slider module's mobile images not showing.</li>
+	<li>Removed generic lightbox button styling that caused issues with third party themes.</li>
+</ul>
+
+<h4>1.6.3.4 - 10/10/2015</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a content rendering issue that can cause an infinite loop with certain shortcodes or widgets.</li>
+</ul>
+
+<h4>1.6.3.3 - 10/06/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added a default option to the date format setting in the post modules. When set to default, the date format set in wp-admin will be used.</li>
+	<li>Added FLBuilderLayoutConfig JS global with path vars and anchor link animation vars. Allows you to override anchor link animation settings.</li>
+	<li>Added the ability to add MP4 and WebM videos to row backgrounds.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with widgets that have nested settings arrays.</li>
+	<li>Fixed a bug with the Post Carousel moduel's image size setting.</li>
+	<li>Fixed a bug with white text in inputs fields.</li>
+	<li>Fixed a bug with plugins like Soil that remove the ID attribute from link tags.</li>
+	<li>Fixed a bug with row background videos when caching is enabled.</li>
+	<li>Fixed a bug with multiple fields.</li>
+	<li>Fixed a bug with the Content Slider module where text/photo content renders below the video when the background is set to a video.</li>
+	<li>Fixed a bug that caused row actions to be inaccessible when negative margins are present.</li>
+</ul>
+
+<h4>1.6.3.2 - 09/14/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Updated Font Awesome.</li>
+	<li>Added Mobile Width setting to the Menu Module.</li>
+	<li>The $id variable is now always available in a module's frontend.php file.</li>
+	<li>Added fl_builder_layout_style_media filter.</li>
+	<li>Added fl_builder_render_css filter.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Added more specificity to link color selectors in the Menu module to prevent them from being overridden by themes.</li>
+	<li>Reworked parallax logic so it works on touch screen laptops.</li>
+</ul>
+
+<h4>1.6.3.1 - 09/03/2015</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed an issue with deleting rows and resizing columns.</li>
+	<li>CSS tweak to fix overlay global tag when a row color is set.</li>
+	<li>CSS tweak to fix media modal close button.</li>
+</ul>
+
+<h4>1.6.3 - 09/01/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Rows and modules can now be saved as either standard or global templates! Be sure to check out <a href="https://www.wpbeaverbuilder.com/row-and-module-templates-are-now-in-beta/" target="_blank">the blog post</a> for more info on how that works.</li>
+	<li>Agency members now have the option to add categorized sections of their row and module templates to the builder's panel.</li>
+	<li>Added a new admin setting under Settings > Page Builder > Editing to disable the ability to edit global rows and modules.</li>
+	<li>Duplicating global row and module templates now converts them to standard templates.</li>
+	<li>The text editor font size setting now uses px instead of pt.</li>
+	<li>Added additional sizes to the text editor font size setting.</li>
+	<li>Added access to the $settings object in the fl_builder_control_ action.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Added AJAX check for the builder's init method to prevent issues with WooCommerce AJAX.</li>
+	<li>Added more specificity to selectors for row and column colors to prevent themes from overriding them.</li>
+	<li>Fixed Menu module typo.</li>
+	<li>Fixed linking issues with the content slider.</li>
+</ul>
+
 <h4>1.6.2.1 - 08/25/2015</h4>
 <p><strong>Enhancements</strong></p>
 <ul>

@@ -26,12 +26,11 @@
 	visibility: visible;
 }
 .fl-nanoscroller > .fl-nanoscroller-pane {
-	background : #bebebe;
 	position   : absolute;
-	width      : 10px;
-	right      : 0;
-	top        : 0;
-	bottom     : 0;
+	width      : 8px;
+	right      : 2px;
+	top        : 2px;
+	bottom     : 2px;
 	visibility : hidden\9; /* Target only IE7 and IE8 with this hack */
 	opacity    : .01; 
 	-webkit-transition    : .2s;
@@ -41,6 +40,7 @@
 }
 .fl-nanoscroller > .fl-nanoscroller-pane > .fl-nanoscroller-slider {
 	background: #444;
+	border-radius: 10px;
 	background: rgba(0,0,0,.5);
 	position              : relative;
 }

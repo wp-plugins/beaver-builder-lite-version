@@ -36,7 +36,7 @@
 		include $field_file;
 	}
 	else {
-		do_action('fl_builder_control_' . $field['type'], $name, $value, $field);
+		do_action('fl_builder_control_' . $field['type'], $name, $value, $field, $settings);
 	}
 		
 	?>

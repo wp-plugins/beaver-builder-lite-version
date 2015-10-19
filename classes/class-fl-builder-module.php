@@ -219,6 +219,18 @@ class FLBuilderModule {
 	}
 
 	/** 
+	 * Enqueues the needed styles for any font fields
+	 * in this module.
+	 *
+	 * @since 1.6.3
+	 * @return void
+	 */      
+	public function enqueue_font_styles()
+	{
+		FLBuilderFonts::add_fonts_for_module( $this );
+	}
+
+	/** 
 	 * Should be overridden by subclasses to enqueue
 	 * additional css/js using the add_css and add_js methods.
 	 *

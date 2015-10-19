@@ -29,6 +29,7 @@
 			this._bind();
 			this._initNav();
 			this._initOverrides();
+			this._templatesOverrideChange();
 			this._initHelpButtonSettings();
 		},
 		
@@ -42,16 +43,17 @@
 		_bind: function()
 		{
 			$('.fl-settings-nav a').on('click', FLBuilderAdminSettings._navClicked);
+			$('.fl-override-ms-cb').on('click', FLBuilderAdminSettings._overrideCheckboxClicked);
 			$('.fl-module-all-cb').on('click', FLBuilderAdminSettings._moduleAllCheckboxClicked);
 			$('.fl-module-cb').on('click', FLBuilderAdminSettings._moduleCheckboxClicked);
-			$('.fl-override-ms-cb').on('click', FLBuilderAdminSettings._overrideCheckboxClicked);
+			$('input[name=fl-templates-override]').on('keyup click', FLBuilderAdminSettings._templatesOverrideChange);
 			$('input[name=fl-upload-icon]').on('click', FLBuilderAdminSettings._showIconUploader);
 			$('.fl-delete-icon-set').on('click', FLBuilderAdminSettings._deleteCustomIconSet);
-			$('#uninstall-form').on('submit', FLBuilderAdminSettings._uninstallFormSubmit);
 			$('input[name=fl-help-button-enabled]').on('click', FLBuilderAdminSettings._initHelpButtonSettings);
 			$('input[name=fl-help-video-enabled]').on('click', FLBuilderAdminSettings._initHelpButtonSettings);
 			$('input[name=fl-knowledge-base-enabled]').on('click', FLBuilderAdminSettings._initHelpButtonSettings);
 			$('input[name=fl-forums-enabled]').on('click', FLBuilderAdminSettings._initHelpButtonSettings);
+			$('#uninstall-form').on('submit', FLBuilderAdminSettings._uninstallFormSubmit);
 		},
 		
 		/**
@@ -92,48 +94,6 @@
 				$('.fl-settings-form').hide();
 				$(this).addClass('fl-active');
 				$('#fl-'+ $(this).attr('href').split('#').pop() +'-form').fadeIn();
-			}
-		},
-		
-		/**
-		 * Fires when the "all" checkbox in the list of enabled
-		 * modules is clicked.
-		 *
-		 * @since 1.0
-		 * @access private
-		 * @method _moduleAllCheckboxClicked
-		 */
-		_moduleAllCheckboxClicked: function()
-		{
-			if($(this).is(':checked')) {
-				$('.fl-module-cb').prop('checked', true);
-			}
-		},
-		
-		/**
-		 * Fires when a checkbox in the list of enabled
-		 * modules is clicked.
-		 *
-		 * @since 1.0
-		 * @access private
-		 * @method _moduleCheckboxClicked
-		 */
-		_moduleCheckboxClicked: function()
-		{
-			var allChecked = true;
-					
-			$('.fl-module-cb').each(function() {
-				
-				if(!$(this).is(':checked')) {
-					allChecked = false;
-				}
-			});
-			
-			if(allChecked) {
-				$('.fl-module-all-cb').prop('checked', true);
-			}
-			else {
-				$('.fl-module-all-cb').prop('checked', false);
 			}
 		},
 		
@@ -187,6 +147,72 @@
 			else {
 				content.hide();
 			}
+		},
+		
+		/**
+		 * Fires when the "all" checkbox in the list of enabled
+		 * modules is clicked.
+		 *
+		 * @since 1.0
+		 * @access private
+		 * @method _moduleAllCheckboxClicked
+		 */
+		_moduleAllCheckboxClicked: function()
+		{
+			if($(this).is(':checked')) {
+				$('.fl-module-cb').prop('checked', true);
+			}
+		},
+		
+		/**
+		 * Fires when a checkbox in the list of enabled
+		 * modules is clicked.
+		 *
+		 * @since 1.0
+		 * @access private
+		 * @method _moduleCheckboxClicked
+		 */
+		_moduleCheckboxClicked: function()
+		{
+			var allChecked = true;
+					
+			$('.fl-module-cb').each(function() {
+				
+				if(!$(this).is(':checked')) {
+					allChecked = false;
+				}
+			});
+			
+			if(allChecked) {
+				$('.fl-module-all-cb').prop('checked', true);
+			}
+			else {
+				$('.fl-module-all-cb').prop('checked', false);
+			}
+		},
+		
+		/**
+		 * Fires when the templates override setting is changed.
+		 *
+		 * @since 1.6.3
+		 * @access private
+		 * @method _templatesOverrideChange
+		 */
+		_templatesOverrideChange: function()
+		{
+			var input 			= $('input[name=fl-templates-override]'),
+				val 			= input.val(),
+				overrideNodes 	= $( '.fl-templates-override-nodes' ),
+				toggle 			= false;
+				
+			if ( 'checkbox' == input.attr( 'type' ) ) {
+				toggle = input.is( ':checked' );
+			}
+			else {
+				toggle = '' != val;
+			}
+			
+			overrideNodes.toggle( toggle );
 		},
 		
 		/**

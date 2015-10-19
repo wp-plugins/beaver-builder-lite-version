@@ -207,7 +207,7 @@
 			body.append( '<div class="fl-builder-tour-mask"></div>' );
 			body.on( 'fl-builder.template-selector-loaded', FLBuilderTour._templateSelectorLoaded );
 			
-			if ( 0 === $( '.fl-row' ).length ) {
+			if ( 0 === $( '.fl-row' ).length && 'module' != FLBuilderConfig.userTemplateType ) {
 				$( '.fl-builder-content' ).append( '<div class="fl-builder-tour-demo-content fl-row fl-row-fixed-width fl-row-bg-none"> <div class="fl-row-content-wrap"> <div class="fl-row-content fl-row-fixed-width fl-node-content"> <div class="fl-col-group"> <div class="fl-col" style="width:100%"> <div class="fl-col-content fl-node-content"> <div class="fl-module fl-module-rich-text" data-type="rich-text" data-name="Text Editor"> <div class="fl-module-content fl-node-content"> <div class="fl-rich-text"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pellentesque ut lorem non cursus. Sed mauris nunc, porttitor iaculis lorem a, sollicitudin lacinia sapien. Proin euismod orci lacus, et sollicitudin leo posuere ac. In hac habitasse platea dictumst. Maecenas elit magna, consequat in turpis suscipit, ultrices rhoncus arcu. Phasellus finibus sapien nec elit tempus venenatis. Maecenas tincidunt sapien non libero maximus, in aliquam felis tincidunt. Mauris mollis ultricies facilisis. Duis condimentum dignissim tortor sit amet facilisis. Aenean gravida lacus eu risus molestie egestas. Donec ut dolor dictum, fringilla metus malesuada, viverra nunc. Maecenas ut purus ac justo aliquet lacinia. Cras vestibulum elementum tincidunt. Maecenas mattis tortor neque, consectetur dignissim neque tempor nec.</p></div> </div> </div> </div> </div> </div> </div> </div> </div>' );
 				FLBuilder._setupEmptyLayout();
 				FLBuilder._highlightEmptyCols();

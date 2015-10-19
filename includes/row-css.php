@@ -2,56 +2,59 @@
 .fl-node-<?php echo $row->node; ?> {
 	color: #<?php echo $row->settings->text_color; ?>;
 }
+.fl-builder-content .fl-node-<?php echo $row->node; ?> *:not(input) {
+	color: inherit;
+}
 <?php endif; ?>
 
 <?php if(!empty($row->settings->link_color)) : // Link Color ?>
-.fl-node-<?php echo $row->node; ?> a {
+.fl-builder-content .fl-node-<?php echo $row->node; ?> a {
 	color: #<?php echo $row->settings->link_color; ?>;
 }
 <?php elseif(!empty($row->settings->text_color)) : ?>
-.fl-node-<?php echo $row->node; ?> a {
+.fl-builder-content .fl-node-<?php echo $row->node; ?> a {
 	color: #<?php echo $row->settings->text_color; ?>;
 }
 <?php endif; ?>
 
 <?php if(!empty($row->settings->hover_color)) : // Link Hover Color ?>
-.fl-node-<?php echo $row->node; ?> a:hover {
+.fl-builder-content .fl-node-<?php echo $row->node; ?> a:hover {
 	color: #<?php echo $row->settings->hover_color; ?>;
 }
 <?php elseif(!empty($row->settings->text_color)) : ?>
-.fl-node-<?php echo $row->node; ?> a:hover {
+.fl-builder-content .fl-node-<?php echo $row->node; ?> a:hover {
 	color: #<?php echo $row->settings->text_color; ?>;
 }
 <?php endif; ?>
 
 <?php if(!empty($row->settings->heading_color)) : // Heading Color ?>
-.fl-node-<?php echo $row->node; ?> h1,
-.fl-node-<?php echo $row->node; ?> h2,
-.fl-node-<?php echo $row->node; ?> h3,
-.fl-node-<?php echo $row->node; ?> h4,
-.fl-node-<?php echo $row->node; ?> h5,
-.fl-node-<?php echo $row->node; ?> h6,
-.fl-node-<?php echo $row->node; ?> h1 a,
-.fl-node-<?php echo $row->node; ?> h2 a,
-.fl-node-<?php echo $row->node; ?> h3 a,
-.fl-node-<?php echo $row->node; ?> h4 a,
-.fl-node-<?php echo $row->node; ?> h5 a,
-.fl-node-<?php echo $row->node; ?> h6 a {
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h1,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h2,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h3,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h4,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h5,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h6,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h1 a,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h2 a,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h3 a,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h4 a,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h5 a,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h6 a {
 	color: #<?php echo $row->settings->heading_color; ?>;
 }
 <?php elseif(!empty($row->settings->text_color)) : ?>
-.fl-node-<?php echo $row->node; ?> h1,
-.fl-node-<?php echo $row->node; ?> h2,
-.fl-node-<?php echo $row->node; ?> h3,
-.fl-node-<?php echo $row->node; ?> h4,
-.fl-node-<?php echo $row->node; ?> h5,
-.fl-node-<?php echo $row->node; ?> h6,
-.fl-node-<?php echo $row->node; ?> h1 a,
-.fl-node-<?php echo $row->node; ?> h2 a,
-.fl-node-<?php echo $row->node; ?> h3 a,
-.fl-node-<?php echo $row->node; ?> h4 a,
-.fl-node-<?php echo $row->node; ?> h5 a,
-.fl-node-<?php echo $row->node; ?> h6 a {
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h1,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h2,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h3,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h4,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h5,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h6,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h1 a,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h2 a,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h3 a,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h4 a,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h5 a,
+.fl-builder-content .fl-node-<?php echo $row->node; ?> h6 a {
 	color: #<?php echo $row->settings->text_color; ?>;
 }
 <?php endif; ?>
@@ -87,7 +90,7 @@
 	background-attachment: fixed;
 	background-size: cover;
 }
-.fl-builder-touch .fl-node-<?php echo $row->node; ?> .fl-row-content-wrap {
+.fl-builder-mobile .fl-node-<?php echo $row->node; ?> .fl-row-content-wrap {
 	background-image: url(<?php echo $row->settings->bg_parallax_image_src; ?>);
 	background-attachment: scroll;
 	background-position: center center;
