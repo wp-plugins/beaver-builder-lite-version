@@ -1,0 +1,49 @@
+/* Responsive Utilities
+------------------------------------------------------ */
+
+.fl-visible-desktop,
+.fl-visible-desktop-medium,
+.fl-visible-medium {
+	display: none;
+}
+.fl-visible-medium-mobile,
+.fl-visible-mobile {
+	display: block;
+}
+
+/* Rows
+------------------------------------------------------ */
+
+.fl-row-content-wrap {
+	background-attachment: scroll !important;
+}
+.fl-row-bg-parallax .fl-row-content-wrap {
+	background-attachment: scroll !important;
+	background-position: center center !important;
+}
+
+/* Columns
+------------------------------------------------------ */
+
+.fl-col {
+	clear: both;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto !important;
+}
+.fl-col-small {
+	max-width: 400px;
+}
+.fl-col-group.fl-col-group-equal-height {
+	display: block;
+}
+.fl-col-group.fl-col-group-equal-height.fl-col-group-custom-width {
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.fl-block-col-resize {
+	display:none;
+}
