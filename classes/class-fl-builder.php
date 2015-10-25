@@ -8,14 +8,6 @@
 final class FLBuilder {
 
 	/**
-	 * Stores the ID of the post that is currently being rendered.
-	 *
-	 * @since 1.5.9
-	 * @var int $post_rendering
-	 */
-	static private $post_rendering = null;
-
-	/**
 	 * Localization
 	 *
 	 * Load the translation file for current language. Checks the default WordPress
@@ -814,26 +806,6 @@ final class FLBuilder {
 	}
 
 	/**
-	 * Called by the_content filter with a priority of 1 to
-	 * reset the internal post_rendering flag when a new post
-	 * starts to render.
-	 *
-	 * @since 1.6.3.3
-	 * @param string $content The existing content.
-	 * @return string
-	 */
-	static public function render_content_init( $content )
-	{
-		global $post;
-		
-		if ( $post->ID == FLBuilderModel::get_post_id() ) {
-			self::$post_rendering = null;
-		}
-		
-		return $content;
-	}
-
-	/**
 	 * Renders the content for a builder layout while in the loop. 
 	 * This method should only be called by the_content filter as 
 	 * defined in fl-builder.php. To output builder content, use 
@@ -845,31 +817,15 @@ final class FLBuilder {
 	 */
 	static public function render_content( $content )
 	{
-		global $wp_filter;
-
 		$post_id        = FLBuilderModel::get_post_id();
 		$enabled        = FLBuilderModel::is_builder_enabled();
-		$rendering		= $post_id === self::$post_rendering;
 		$ajax           = defined( 'DOING_AJAX' );
 		$in_loop        = in_the_loop();
 		$is_global      = in_array( $post_id, FLBuilderModel::get_global_posts() );
 
-		if( $enabled && ! $rendering && ! $ajax && ( $in_loop || $is_global ) ) {
-			
-			// Store this post ID so we know it is currently being rendered
-			// in case another method or function calls apply filters on the 
-			// content after this method has run which creates an infinite loop.
-			self::$post_rendering = $post_id;
-			
-			// Store a reference to the current the_content filters array since 
-			// any modules or widgets that call apply_filters on the_content cause 
-			// the array pointer to move to the end. That makes it so the builder
-			// content doesn't receive filters after this method runs as it should.
-			$filters = $wp_filter['the_content'];
-			
-			// Remove the builder's render_content filter so it's not called again
-			// by modules or widgets that call apply_filters on the content.
-			remove_filter( 'the_content', 'FLBuilder::render_content_init', 1 );
+		if( $enabled && ! $ajax && ( $in_loop || $is_global ) ) {
+
+			// Remove the builder's render_content filter so it's not called again.
 			remove_filter( 'the_content', 'FLBuilder::render_content' );
 			
 			// Render the content.
@@ -879,11 +835,33 @@ final class FLBuilder {
 			echo '</div>';
 			$content = ob_get_clean();
 			
-			// Restore the original the_content filters array.
-			$wp_filter['the_content'] = $filters;
+			// Do shortcodes here since letting the WP filter run can cause an infinite loop.
+			$pattern = get_shortcode_regex();
+			$content = preg_replace_callback( "/$pattern/s", 'FLBuilder::double_escape_shortcodes', $content );
+			$content = do_shortcode( $content );
+			
+			// Reapply the builder's render_content filter.
+			add_filter( 'the_content', 'FLBuilder::render_content' );
 		}
 
 		return $content;
+	}
+
+	/**
+	 * Escaped shortcodes need to be double escaped or they will
+	 * be parsed by WP's shortcodes filter.
+	 *
+	 * @since 1.6.4.1
+	 * @param array $matches The existing content.
+	 * @return string
+	 */
+	static public function double_escape_shortcodes( $matches )
+	{
+		if ( $matches[1] == '[' && $matches[6] == ']' ) {
+			return '[' . $matches[0] . ']';
+		}
+		
+		return $matches[0];
 	}
 
 	/**

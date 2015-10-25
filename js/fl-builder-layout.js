@@ -425,12 +425,14 @@
 		 */ 
 		_initHash: function()
 		{
-			var hash 			= window.location.hash.replace( '#', '' ),
+			var hash 			= window.location.hash.replace( '#', '' ).split( '/' ).shift(),
 				element 		= null,
 				tabs			= null,
 				responsiveLabel	= null,
 				tabIndex		= null,
 				label			= null;
+				
+				console.log( hash );
 			
 			if ( '' != hash ) {
 				

@@ -27,7 +27,7 @@ if(isset($widget_slug) && isset($wp_widget_factory->widgets[$widget_slug])) {
 
 	// Render the widget
 	wp_cache_flush($widget_slug, 'widget');
-	the_widget($widget_slug, $widget_settings, array('widget_id' => $module->node));
+	the_widget($widget_slug, $widget_settings, array('widget_id' => 'fl_builder_widget_' . $module->node));
 }
 else if(isset($widget_slug) && FLBuilderModel::is_builder_active()) {
 

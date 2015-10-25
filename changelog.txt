@@ -1,3 +1,19 @@
+<h4>1.6.4.1 - 10/21/2015</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Images in the Content Slider module now have alt tags.</li>
+	<li>Updated various translations.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a content rendering bug that caused pages to become unresponsive with some shortcodes.</li>
+	<li>Fixed an edge case multisite domain mapping issue with scripts/styles loading under the incorrect domain.</li>
+	<li>Fixed an issue making it so you couldn't have fixed width content in a full height row.</li>
+	<li>Fixed an issue with widgets such as the GeoDirectory plugin that output the widget_id as a JavaScript variable name.</li>
+	<li>Fixed a post date bug with the feed layout in the Posts module.</li>
+	<li>Fixed a bug caused by plugins that use a forward slash in the browser hash.</li>
+</ul>
+
 <h4>1.6.4 - 10/13/2015</h4>
 <p>This update adds a number of new features. Be sure to check out <a href="https://www.wpbeaverbuilder.com/beaver-builder-1-6-4-featuring-a-new-color-picker-full-height-rows-the-number-counter-module-and-more/" target="_blank">the blog post</a> for detailed info on what was added.
 <p><strong>Enhancements</strong></p>

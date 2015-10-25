@@ -1,5 +1,5 @@
 === Beaver Builder - WordPress Page Builder ===
-Contributors: justinbusa, RobbyMcCullough, billyyoung
+Contributors: justinbusa, RobbyMcCullough, billyyoung, hinampaksh, diegoliv, webmandesign
 Tags: builder, layout builder, page builder, landing page builder, landing pages, website builder, site builder, front-end builder, drag and drop builder, editor, front-end editor, visual composer, page layout
 Requires at least: 3.6
 Tested up to: 4.3

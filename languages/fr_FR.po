@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: {FL_BUILDER_NAME}\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-31 19:54-0300\n"
-"PO-Revision-Date: 2015-08-31 20:38-0300\n"
+"PO-Revision-Date: 2015-10-16 20:51-0300\n"
 "Last-Translator: Gerard Godin <gerard@getgointernetcoaching.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -101,7 +101,8 @@ msgstr ""
 #: classes/class-fl-builder-admin-settings.php:620
 msgid "Error! Please enter an iframe for the video embed code."
 msgstr ""
-"Erreur! Entrez un &laquo; iframe &raquo; pour le code d'encastrage du vidéo"
+"Erreur! Entrez un &laquo; iframe &raquo; pour le code d'encastrement de la "
+"vidéo"
 
 #: classes/class-fl-builder-admin-settings.php:638
 msgid "Error! You must have at least one feature of the help button enabled."
@@ -447,7 +448,7 @@ msgstr "Erreur d'abonnement à \"Constant Contact\". %s"
 #: classes/class-fl-builder-service-email-address.php:39
 #: classes/class-fl-builder-service-madmimi.php:69
 msgid "Error: You must provide an email address."
-msgstr "Erreur : Vous devez fournir un courriel."
+msgstr "Erreur : Vous devez fournir une adresse email."
 
 #: classes/class-fl-builder-service-email-address.php:63
 #: classes/class-fl-builder-service-madmimi.php:110
@@ -645,7 +646,7 @@ msgstr ""
 
 #: classes/class-fl-builder-service-madmimi.php:111
 msgid "The email address associated with your Mad Mimi account."
-msgstr "L'adresse courriel associée à votre compte \"Mad Mimi\"."
+msgstr "L'adresse email associée à votre compte \"Mad Mimi\"."
 
 #: classes/class-fl-builder-service-madmimi.php:122
 msgid ""
@@ -997,16 +998,16 @@ msgstr "Lancer %s"
 
 #: includes/admin-settings-branding.php:7
 msgid "White label the page builder by entering a custom name below."
-msgstr "Personalisez la marque en entrant un autre nom à votre choix."
+msgstr "Personnalisez la marque en entrant un autre nom à votre choix."
 
 #: includes/admin-settings-branding.php:10
 msgid ""
 "Additionally, you may also add a custom icon by entering the URL of an image "
 "below. Leave the field blank if you do not wish to use an icon."
 msgstr ""
-"De plus, vous pouvez aussi ajouter une icône personalisée en entrant ici "
-"l'adresse web (URL) son image. Laissez le champ vide si vous ne désirez pas "
-"utiliser d'icône."
+"De plus, vous pouvez aussi ajouter une icône personnalisée en entrant ici "
+"l'adresse web (URL) de son image. Laissez le champ vide si vous ne désirez "
+"pas utiliser d'icône."
 
 #: includes/admin-settings-branding.php:14
 msgid "Save Branding"
@@ -1072,8 +1073,8 @@ msgid ""
 "Set the <a%s>capability</a> required for users to access advanced builder "
 "editing such as adding, deleting or moving modules."
 msgstr ""
-"Ajuster les <a%s>permissions</a> requises afin de permettre l'accès aux "
-"usagers aux fonctions avancées du constructeur, tel que l'ajout, la "
+"Ajuster les <a%s>permissions</a> requises afin de permettre aux utilisateurs "
+"d’accéder aux fonctions avancées du constructeur, telles que l'ajout, la "
 "suppression, ou le déplacement des extensions."
 
 #: includes/admin-settings-editing.php:21
@@ -1117,7 +1118,7 @@ msgstr "Activer les vidéos d'assistance"
 
 #: includes/admin-settings-help-button.php:39
 msgid "Help Video Embed Code"
-msgstr "Code d'encastrage du vidéo"
+msgstr "Code d’encastrement de la vidéo"
 
 #: includes/admin-settings-help-button.php:45
 msgid "Knowledge Base"
@@ -1190,7 +1191,7 @@ msgid ""
 "to uninstall the page builder and all of its data."
 msgstr ""
 "Prière de taper &laquo; uninstall &raquo; dans la boîte afin de confirmer "
-"que vous voulez vraiment désinstaller Beaver Builder et toutes ces données."
+"que vous voulez vraiment désinstaller Beaver Builder et toutes ses données."
 
 #: includes/admin-settings-modules.php:3
 msgid "Enabled Modules"
@@ -1233,8 +1234,8 @@ msgstr "Exemple : page, article, produit"
 #: includes/admin-settings-post-types.php:38
 msgid "Select the post types you would like the builder to work with."
 msgstr ""
-"Choisir le &laquo; post type &raquo; que vous aimeriez utiliser avec le "
-"Beaver Builder."
+"Choisir le &laquo; post type &raquo; que vous aimeriez utiliser avec Beaver "
+"Builder."
 
 #: includes/admin-settings-post-types.php:70
 msgid "Save Post Types"
@@ -1355,10 +1356,10 @@ msgid ""
 "Upgrade today for access to premium features such as advanced modules, "
 "templates, support and more!"
 msgstr ""
-"Vous utilisez présentement la version allégée de l'extension Beaver Builder. "
-"Mettez à niveau aujourd'hui vers la version Pro ou Agence, selon vos besoin, "
-"afin d'accéder à la fonctionnalité haut de gamme tel que les extension "
-"avancées, les gabarits, le soutien technique, et bien plus! "
+"Vous utilisez actuellement la version allégée de l'extension Beaver Builder. "
+"Mettez à niveau aujourd'hui vers la version Pro ou Agence, selon vos "
+"besoins, afin d'accéder aux fonctionnalités haut de gamme telles que les "
+"extensions avancées, les gabarits, le soutien technique, et bien plus!"
 
 #: includes/admin-settings-upgrade.php:7
 msgid "Upgrade Now"
@@ -1828,7 +1829,7 @@ msgstr "Aucune"
 #: modules/separator/separator.php:75
 msgctxt "Border type."
 msgid "Solid"
-msgstr "Solide"
+msgstr "Continue"
 
 #: includes/column-settings.php:221 includes/row-settings.php:400
 #: modules/separator/separator.php:76
@@ -1947,7 +1948,7 @@ msgstr "Grands appareils seulement"
 #: includes/column-settings.php:435 includes/module-settings.php:70
 #: includes/row-settings.php:614
 msgid "Large &amp; Medium Devices Only"
-msgstr "Grand &amp; moyens appareils seulement"
+msgstr "Grands &amp; moyens appareils seulement"
 
 #: includes/column-settings.php:436 includes/module-settings.php:71
 #: includes/row-settings.php:615
@@ -1957,7 +1958,7 @@ msgstr "Moyens appareils seulement"
 #: includes/column-settings.php:437 includes/module-settings.php:72
 #: includes/row-settings.php:616
 msgid "Medium &amp; Small Devices Only"
-msgstr "Moyen et petit appareils seulement"
+msgstr "Moyens et petits appareils seulement"
 
 #: includes/column-settings.php:438 includes/module-settings.php:73
 #: includes/row-settings.php:617
@@ -1994,11 +1995,11 @@ msgstr "Par défaut"
 #: modules/heading/heading.php:175 modules/post-slider/post-slider.php:603
 #: modules/social-buttons/social-buttons.php:74
 msgid "Custom"
-msgstr "Personalisé"
+msgstr "Personnalisé"
 
 #: includes/column-settings.php:464
 msgid "Custom Medium Device Width"
-msgstr "Largeur personalisée de petit appareil"
+msgstr "Largeur personnalisée pour appareils moyens"
 
 #: includes/column-settings.php:475
 msgid "Small Device Width"
@@ -2007,11 +2008,11 @@ msgstr "Largeur de petit appareil"
 #: includes/column-settings.php:476
 msgid "The width of this column on small devices such as phones."
 msgstr ""
-"La largeur de cette colonne sur de petits appareils tels les téléphones."
+"La largeur de cette colonne sur de petits appareils tels que les téléphones."
 
 #: includes/column-settings.php:492
 msgid "Custom Small Device Width"
-msgstr "largeur personalisée de petit appareil"
+msgstr "largeur personnalisée pour petits appareils"
 
 #: includes/column-settings.php:504 includes/module-settings.php:115
 #: includes/row-settings.php:627
@@ -2110,11 +2111,11 @@ msgstr "Sélectionner la photo"
 
 #: includes/field-video.php:3 includes/ui-js-config.php:73
 msgid "Select Video"
-msgstr "Sélectionner le vidéo"
+msgstr "Sélectionner la vidéo"
 
 #: includes/field-video.php:17
 msgid "Replace Video"
-msgstr "Remplacer le vidéo"
+msgstr "Remplacer la vidéo"
 
 #: includes/global-settings.php:7 includes/node-template-settings.php:7
 #: includes/template-settings.php:7 includes/user-template-settings.php:7
@@ -2371,12 +2372,12 @@ msgstr "Ouverture en fondu"
 #: includes/module-settings.php:91
 msgctxt "Animation style."
 msgid "Slide Left"
-msgstr "Glissement de la gauche"
+msgstr "Glissement à gauche"
 
 #: includes/module-settings.php:92
 msgctxt "Animation style."
 msgid "Slide Right"
-msgstr "Glissement de la droite"
+msgstr "Glissement à droite"
 
 #: includes/module-settings.php:93
 msgctxt "Animation style."
@@ -2412,7 +2413,7 @@ msgstr "secondes"
 
 #: includes/module-settings.php:107
 msgid "The amount of time in seconds before this animation starts."
-msgstr "Le montant de temps en secondes avant que l'animation débute."
+msgstr "La durée en secondes avant que l'animation débute."
 
 #: includes/module-settings.php:120
 msgid ""
@@ -2842,7 +2843,7 @@ msgstr "Dupliquer"
 
 #: includes/ui-js-config.php:39
 msgid "Duplicate This Page"
-msgstr "Reproduire cette page"
+msgstr "Duplicate This Page"
 
 #: includes/ui-js-config.php:40
 msgid "Duplicate This Template"
@@ -2865,13 +2866,13 @@ msgid ""
 "us by disabling all plugins and testing Beaver Builder while reactivating "
 "each to determine if the issue is related to a third party plugin."
 msgstr ""
-"Beaver Builder a capturé l'erreur Javascript suivante. Si beaver Builder ne "
+"Beaver Builder a capturé l'erreur Javascript suivante. Si Beaver Builder ne "
 "fonctionne pas correctement en ce moment, cette erreur en est probablement "
-"la cause. Aidez-nous en désactivant tous les extensions et en les réactivant "
-"une par une tout en testant si Beaver Builder revient à son fonctionnement "
-"normal. Ceci permettra de déterminer laquelle de vos extensions est "
-"incompatible avec Beaver Builder et nous pourrons ainsi travailler à "
-"résoudre le problème."
+"la cause. Aidez-nous en désactivant toutes les extensions et en les "
+"réactivant une par une tout en testant si Beaver Builder revient à son "
+"fonctionnement normal. Ceci permettra de déterminer laquelle de vos "
+"extensions est incompatible avec Beaver Builder et nous pourrons ainsi "
+"travailler à résoudre le problème."
 
 #: includes/ui-js-config.php:44
 msgid "Full Size"
@@ -2924,7 +2925,7 @@ msgstr "Nouvelle rangée"
 
 #: includes/ui-js-config.php:56
 msgid "No results found."
-msgstr "Aucuns résultats trouvés"
+msgstr "Aucun résultat trouvé"
 
 #: includes/ui-js-config.php:57 includes/ui-panel-node-templates.php:11
 msgid "No saved rows found."
@@ -3066,8 +3067,9 @@ msgid ""
 "Use the action buttons to perform actions such as moving, editing, "
 "duplicating or deleting rows, columns and modules."
 msgstr ""
-"Utiliser les boutons d'actions afin de déplacer, éditer, dupliquer ou "
-"effacer des rangées, colonnes ou modules."
+"Utilisez les boutons d'actions afin de déplacer, éditer, dupliquer, accéder "
+"aux paramètres individuels des colonnes, ou bien effacer des rangées, "
+"colonnes ou modules."
 
 #: includes/ui-js-config.php:93
 msgid "Add More Content"
@@ -3105,7 +3107,7 @@ msgid ""
 "The Tools button lets you duplicate a page, save a template or edit the "
 "global settings."
 msgstr ""
-"Le bouton Outils permet de dupliquer une page, sauvegarder un gabarit. ou "
+"Le bouton Outils permet de dupliquer une page, sauvegarder un gabarit ou "
 "d'éditer les paramètres globaux."
 
 #: includes/ui-js-config.php:99
@@ -3145,7 +3147,7 @@ msgstr ""
 
 #: includes/ui-js-config.php:104
 msgid "View the Knowledge Base"
-msgstr "Visualiser la base de connaissances"
+msgstr "Visualiser la base de connaissance"
 
 #: includes/ui-js-config.php:105
 msgid "Visit the Forums"
@@ -3153,7 +3155,7 @@ msgstr "Visiter les forums"
 
 #: includes/ui-js-config.php:106
 msgid "Watch the Video"
-msgstr "Visionner le vidéo"
+msgstr "Visionner la vidéo"
 
 #: includes/ui-js-templates.php:5 includes/ui-js-templates.php:29
 #: includes/ui-js-templates.php:45
@@ -3173,7 +3175,7 @@ msgid ""
 "Welcome! It looks like this might be your first time using the builder. "
 "Would you like to take a tour?"
 msgstr ""
-"Bienvenue! Il semble que ce soit la première fois que vous utilisé Beaver "
+"Bienvenue! Il semble que ce soit la première fois que vous utilisez Beaver "
 "Builder. Aimeriez-vous une visite guidée?"
 
 #: includes/ui-js-templates.php:88
@@ -3273,7 +3275,7 @@ msgstr "Désactivé!"
 
 #: includes/updater/includes/form.php:22
 msgid "Email address saved!"
-msgstr "Adresse courriel sauvegardée"
+msgstr "Adresse email sauvegardée"
 
 #: includes/updater/includes/form.php:27
 #, php-format
@@ -3483,7 +3485,7 @@ msgstr "Transparent"
 #: modules/pricing-table/pricing-table.php:67
 #: modules/subscribe-form/subscribe-form.php:242
 msgid "Border Size"
-msgstr "Grosseur de la bordure"
+msgstr "Taille de la bordure"
 
 #: modules/button/button.php:183 modules/callout/callout.php:578
 #: modules/content-slider/content-slider.php:691 modules/cta/cta.php:204
@@ -3505,7 +3507,7 @@ msgstr "Auto"
 
 #: modules/button/button.php:216
 msgid "Custom Width"
-msgstr "Largeur personalisé "
+msgstr "Largeur personnalisée "
 
 #: modules/button/button.php:224 modules/cta/cta.php:123
 #: modules/heading/heading.php:86 modules/heading/heading.php:141
@@ -3519,7 +3521,7 @@ msgstr "Alignement"
 #: modules/heading/heading.php:114 modules/heading/heading.php:171
 #: modules/subscribe-form/subscribe-form.php:265
 msgid "Font Size"
-msgstr "Grosseur de la police"
+msgstr "Taille de la police"
 
 #: modules/button/button.php:250 modules/callout/callout.php:617
 #: modules/cta/cta.php:363 modules/subscribe-form/subscribe-form.php:281
@@ -3573,7 +3575,7 @@ msgstr "Grandeur de l'en-tête"
 
 #: modules/callout/callout.php:295 modules/cta/cta.php:179
 msgid "Heading Custom Size"
-msgstr "Grandeur personalisée de l'en-tête"
+msgstr "Taille personnalisée de l'en-tête"
 
 #: modules/callout/callout.php:313
 msgid "Image Type"
@@ -3660,7 +3662,7 @@ msgstr "Structure de l'icône"
 #: modules/icon/icon.php:122 modules/post-carousel/post-carousel.php:269
 #: modules/post-grid/post-grid.php:139 modules/post-slider/post-slider.php:477
 msgid "Size"
-msgstr "Grandeur personalisée de l'en-tête"
+msgstr "Taille personnalisée de l'en-tête"
 
 #: modules/callout/callout.php:443
 #: modules/content-slider/content-slider.php:571
@@ -3743,15 +3745,15 @@ msgstr "Message"
 
 #: modules/contact-form/contact-form.php:65
 msgid "Send To Email"
-msgstr "Envoyez à un courriel"
+msgstr "Adresse email"
 
 #: modules/contact-form/contact-form.php:67
 msgid "example@mail.com"
-msgstr "exemple@courriel.com"
+msgstr "exemple@adresse.com"
 
 #: modules/contact-form/contact-form.php:68
 msgid "The contact form will send to this e-mail"
-msgstr "Le formulaire de contact enverra à cette adresse courriel"
+msgstr "Le formulaire de contact enverra à cette adresse email"
 
 #: modules/contact-form/contact-form.php:75
 #: modules/subscribe-form/subscribe-form.php:108
@@ -3822,7 +3824,7 @@ msgstr "Nom"
 #: modules/contact-form/includes/frontend.php:6
 #: modules/subscribe-form/includes/frontend.php:6
 msgid "Please enter your name."
-msgstr "Prière d'entrer une adresse courriel valide"
+msgstr "Prière d'entrer une adresse email valide"
 
 #: modules/contact-form/includes/frontend.php:7
 msgid "Your name"
@@ -3839,11 +3841,11 @@ msgstr "Entrez un sujet."
 
 #: modules/contact-form/includes/frontend.php:22
 msgid "Please enter a valid email."
-msgstr "Prière d'entrer une adresse courriel valide"
+msgstr "Prière d'entrer une adresse email valide"
 
 #: modules/contact-form/includes/frontend.php:23
 msgid "Your email"
-msgstr "Votre courriel"
+msgstr "Adresse email"
 
 #: modules/contact-form/includes/frontend.php:29
 msgid "Phone"
@@ -3978,7 +3980,7 @@ msgstr "Ce réglage est pour l'arrière-plan complet de votre diapositive."
 
 #: modules/content-slider/content-slider.php:369
 msgid "Background Video Code"
-msgstr "Code pour le vidéo d'arrière-plan"
+msgstr "Code pour la vidéo d'arrière-plan"
 
 #: modules/content-slider/content-slider.php:375
 msgid "Content Layout"
@@ -4009,7 +4011,7 @@ msgstr "Aucune"
 
 #: modules/content-slider/content-slider.php:409 modules/video/video.php:132
 msgid "Video Embed Code"
-msgstr "Code d'encastrage du vidéo"
+msgstr "Code d'encastrement de la vidéo"
 
 #: modules/content-slider/content-slider.php:469
 msgid "Text Position"
@@ -4020,12 +4022,12 @@ msgid ""
 "The position will move the content layout selections left, right or center "
 "over the background of the slide."
 msgstr ""
-"La position déplacera les sélections de présentation vers la gauche, droite "
-"ou centrée sur l'arrière-plan de la diapositive."
+"La position déplacera les sélections de présentation vers la gauche, la "
+"droite ou au centre de l'arrière-plan de la diapositive."
 
 #: modules/content-slider/content-slider.php:492
 msgid "Top Margin"
-msgstr "Haut"
+msgstr "Marge du haut"
 
 #: modules/content-slider/content-slider.php:500
 msgid "Bottom Margin"
@@ -4080,9 +4082,9 @@ msgid ""
 "Auto will allow the overlay to fit however long the text content is. 100% "
 "will fit the overlay to the top and bottom of the slide."
 msgstr ""
-"Auto permettra la superposition de s'ajuster, qu'importes la longueur du "
-"contenu de texte. Un réglage à 100 % adaptera la superposition au haut et au "
-"bas de la diapositive."
+"Auto permettra à la superposition de s'ajuster, qu'importes la longueur du "
+"texte. Un réglage à 100 % adaptera la superposition en haut et en bas de la "
+"diapositive."
 
 #: modules/content-slider/content-slider.php:562
 #: modules/post-slider/post-slider.php:749
@@ -4268,7 +4270,7 @@ msgstr "Balise HTML"
 
 #: modules/heading/heading.php:128 modules/heading/heading.php:188
 msgid "Custom Font Size"
-msgstr "Grandeur de police personalisée"
+msgstr "Taille de police personnalisée"
 
 #: modules/heading/heading.php:137
 msgid "Mobile Structure"
@@ -4276,7 +4278,7 @@ msgstr "Structure pour mobile"
 
 #: modules/heading/heading.php:158
 msgid "Custom Alignment"
-msgstr "Alignement personalisé"
+msgstr "Alignement personnalisé"
 
 #: modules/html/html.php:14
 msgid "HTML"
@@ -4288,7 +4290,7 @@ msgstr "Montrer le code HTML pur"
 
 #: modules/icon-group/icon-group.php:14
 msgid "Icon Group"
-msgstr "Group d'icônes"
+msgstr "Groupe d'icônes"
 
 #: modules/icon-group/icon-group.php:15
 msgid "Display a group of linked Font Awesome icons."
@@ -4337,7 +4339,7 @@ msgstr ""
 
 #: modules/menu/menu.php:42
 msgid "No Menus Found"
-msgstr "Aucuns menus trouvés"
+msgstr "Aucun menu trouvé"
 
 #: modules/menu/menu.php:93 modules/tabs/tabs.php:55
 msgid "Horizontal"
@@ -4397,7 +4399,7 @@ msgstr "Ombre du sous-menu"
 
 #: modules/menu/menu.php:206
 msgid "Link Size"
-msgstr "Grosseur de lien"
+msgstr "Taille du lien"
 
 #: modules/menu/menu.php:220
 msgid "Link Format"
@@ -4676,7 +4678,7 @@ msgstr "Couleurs de l'icône de post"
 
 #: modules/post-grid/includes/frontend.php:41
 msgid "No posts found."
-msgstr "Aucuns articles trouvés"
+msgstr "Aucun article trouvé"
 
 #: modules/post-grid/post-grid.php:15
 msgid "Display a grid of your WordPress posts."
@@ -4840,7 +4842,7 @@ msgstr "Ajouter une boîte de prix"
 
 #: modules/pricing-table/pricing-table.php:98
 msgid "Title Size"
-msgstr "Grosseur du titre"
+msgstr "Taille du titre"
 
 #: modules/pricing-table/pricing-table.php:107
 msgid "Price Box"
@@ -4861,7 +4863,7 @@ msgstr "par année"
 
 #: modules/pricing-table/pricing-table.php:120
 msgid "Price Size"
-msgstr "Grosseur du prix"
+msgstr "Taille du prix"
 
 #: modules/pricing-table/pricing-table.php:133
 #: modules/subscribe-form/subscribe-form.php:168
@@ -4899,7 +4901,7 @@ msgstr "Couleur d'accentuation du texte"
 
 #: modules/pricing-table/pricing-table.php:182
 msgid "Box Top Margin"
-msgstr "Haut"
+msgstr "Marge du haut de la boîte"
 
 #: modules/rich-text/rich-text.php:15
 msgid "A WYSIWYG text editor."
@@ -5099,7 +5101,7 @@ msgstr "Différer la disparition de la superposition"
 
 #: modules/slideshow/slideshow.php:598
 msgid "Thumbs Size"
-msgstr "Grosseur de la bordure"
+msgstr "Taille des vignettes"
 
 #: modules/slideshow/slideshow.php:607
 msgid "Social"
@@ -5149,7 +5151,7 @@ msgstr ""
 
 #: modules/social-buttons/social-buttons.php:89
 msgid "Custom URL"
-msgstr "Lien personalisé"
+msgstr "Lien personnalisé"
 
 #: modules/social-buttons/social-buttons.php:107
 msgid "Show Facebook"
@@ -5170,7 +5172,7 @@ msgstr "Nom complet"
 
 #: modules/subscribe-form/includes/frontend.php:12
 msgid "Please enter a valid email address."
-msgstr "Entrer un courriel valide."
+msgstr "Entrer une adresse email valide."
 
 #: modules/subscribe-form/includes/frontend.php:41
 msgid "Something went wrong. Please check your entries and try again."
@@ -5204,7 +5206,7 @@ msgstr "Redirection"
 msgid ""
 "Thanks for subscribing! Please check your email for further instructions."
 msgstr ""
-"Merci de vous être abonné! Vérifiez votre courriel pour plus d'instructions."
+"Merci de vous être abonné! Vérifiez vos emails pour plus d'instructions."
 
 #: modules/subscribe-form/subscribe-form.php:151
 msgid "Success URL"
@@ -5264,7 +5266,7 @@ msgstr "Ajouter un témoignage"
 
 #: modules/video/video.php:20
 msgid "Render a WordPress or embedable video."
-msgstr "Afficher un vidéo local ou encastré."
+msgstr "Afficher une vidéo locale ou encastrée."
 
 #: modules/video/video.php:83
 msgid "Video Type"
@@ -5386,7 +5388,7 @@ msgstr "Catégorie produit"
 
 #: modules/woocommerce/woocommerce.php:122
 msgid "Recent Products"
-msgstr "Produits récent"
+msgstr "Produits récents"
 
 #: modules/woocommerce/woocommerce.php:123
 msgid "Featured Products"
@@ -5398,7 +5400,7 @@ msgstr "Produits en vente"
 
 #: modules/woocommerce/woocommerce.php:125
 msgid "Best Selling Products"
-msgstr "Produits meilleurs vendeurs"
+msgstr "Produits les mieux vendus"
 
 #: modules/woocommerce/woocommerce.php:126
 msgid "Top Rated Products"
